@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Undergraduate EE Curriculum Portal</title>
+    <link rel="stylesheet" href="../assets/portal.css">
+    <script defer src="../assets/portal.js"></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <div class="wrap" style="padding-top: 14px;">
+        <section class="hero"><span class="kicker">Undergraduate program</span>
+            <h2>Undergraduate EE Curriculum Portal</h2>
+            <p class="muted">Dynamic dashboards connected to <code>ee_curriculum_with_sos_pis.json</code> and
+                <code>ee_program_clo_so_pi_mapping.json</code>.
+            </p>
+        </section>
+        <section id="stats" class="grid four"></section>
+        <section class="grid three" style="margin-top:14px"><a class="card" href="master-dashboard.html">
+                <h2>Master Dashboard</h2>
+                <p class="muted">Program snapshot and searchable curriculum cards.</p>
+            </a><a class="card" href="course-dashboard.html">
+                <h2>Course Dashboard</h2>
+                <p class="muted">Per-course CLO–SO–PI mapping, teaching strategy, and assessment methods.</p>
+            </a><a class="card" href="so-leader-dashboard.html">
+                <h2>SO Leader Dashboard</h2>
+                <p class="muted">Outcome-level PI coverage, gaps, risks, and related course evidence.</p>
+            </a></section>
+        <script>document.addEventListener('DOMContentLoaded', async () => { try { const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json'); const courses = data.curriculum.courses || []; const clos = courses.flatMap(c => c.clos || []); const mappedSO = clos.filter(c => (c.mapped_sos || []).length).length; portal.renderStats(byId('stats'), { Courses: courses.length, CLOs: clos.length, 'Mapped CLOs': mappedSO, 'SO coverage': new Set(clos.flatMap(c => c.mapped_sos || [])).size }); } catch (e) { byId('stats').innerHTML = '<div class="alert">Could not load JSON.</div>' } })</script>
+        
+        <section class="section">
+            <h2>Visual CLO–SO Mapping</h2>
+            <p>
+                This visual explains how Course Learning Outcomes are connected to Student Outcomes and Performance
+                Indicators.
+            </p>
+
+            <div class="mapping-visual">
+                <div class="map-box">Course Learning Outcomes<br><span>CLOs</span></div>
+                <div class="map-arrow">→</div>
+                <div class="map-box">Student Outcomes<br><span>SOs</span></div>
+                <div class="map-arrow">→</div>
+                <div class="map-box">Performance Indicators<br><span>PIs</span></div>
+            </div>
+        </section>
+        
+    </div>
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PSU College of Engineering Curriculum Intelligence Portal</title>
+  <style>
+    .badge {
+      border: 1px solid rgba(242, 162, 58, .35);
+      background: rgba(242, 162, 58, .12);
+      color: #ffd59b;
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 13px;
+      font-weight: 700
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .035));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow)
+    }
+
+    .hero-main {
+      padding: 34px
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.02;
+      margin: 0 0 18px;
+      letter-spacing: -1.7px
+    }
+
+    .lead {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 840px;
+      margin: 0
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 16px;
+      padding: 14px 18px;
+      font-weight: 800;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .06)
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--coe-orange), #ffbf63);
+      color: #1d1203;
+      border: 0
+    }
+
+    .quick {
+      padding: 26px;
+      display: grid;
+      gap: 14px
+    }
+
+    .kpi {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(0, 0, 0, .16)
+    }
+
+    .kpi b {
+      display: block;
+      font-size: 28px;
+      color: white
+    }
+
+    .kpi span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px
+    }
+
+    .links {
+      display: grid;
+      gap: 10px;
+      margin-top: auto
+    }
+
+    .link {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .045);
+      border-radius: 14px;
+      transition: .15s
+    }
+
+    .link:hover {
+      transform: translateY(-1px);
+      border-color: rgba(242, 162, 58, .42);
+      background: rgba(242, 162, 58, .08)
+    }
+
+    .tag {
+      font-size: 12px;
+      color: var(--cyan);
+      font-weight: 800
+    }
+
+    .process {
+      margin-top: 18px;
+      padding: 24px
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 14px
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .04);
+      border-radius: 16px;
+      padding: 16px;
+      min-height: 110px
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffd59b
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45
+    }
+
+    footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center
+    }
+
+    @media(max-width:900px) {
+
+      .hero,
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .logos .ce {
+        height: 30px;
+        max-width: 250px
+      }
+
+      .logos .psu {
+        height: 40px
+      }
+    }
+
+    @media(max-width:560px) {
+      .steps {
+        grid-template-columns: 1fr
+      }
+
+      .hero-main {
+        padding: 24px
+      }
+
+      .logos {
+        width: 100%;
+        justify-content: center
+      }
+
+      .badge {
+        width: 100%;
+        text-align: center
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/portal.css">
+  <script defer src="assets/portal.js"></script>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <main class="wrap" style="padding-top: 0;">
+
+    <section class="hero">
+      <div class="panel hero-main">
+        <h1>Curriculum Intelligence Portal</h1>
+        <p class="lead">One unified place for curriculum visualization, CLO mapping, assessment alignment, program
+          dashboards,
+          concentration planning, SO/PI coverage, and continuous improvement evidence.</p>
+        <div class="actions">
+          <a class="btn primary" href="msc-ee/">Open MSc EE Portal</a>
+          <a class="btn primary" href="undergraduate-ee/">Open Undergraduate EE Portal</a>
+        </div>
+      </div>
+      <aside class="quick feature-stack">
+
+        <div class="feature-card blue">
+          <div class="feature-icon">◎</div>
+          <div>
+            <h3>Unified Curriculum Management Ecosystem</h3>
+            <div class="feature-tags">
+              <span>Shared Mapping</span>
+              <span>Integrated Dashboards</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-card purple">
+          <div class="feature-icon">✦</div>
+          <div>
+            <h3>AI-Assisted Curriculum Intelligence</h3>
+            <div class="feature-tags">
+              <span>CLO → SO Analysis</span>
+              <span>Interactive Reports</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <div class="panel card">
+        <h2>MSc Electrical Engineering</h2>
+        <p>Program overview, course specifications, concentration areas, electives, CLO–PLO mapping, and course-level
+          dashboards.</p>
+        <div class="links">
+          <a class="link" href="msc-ee/program-dashboard.html"><span>Program Dashboard</span><span
+              class="tag">MSc</span></a>
+          <a class="link" href="msc-ee/course-dashboard.html"><span>Course Dashboard</span><span
+              class="tag">Courses</span></a>
+          <a class="link" href="msc-ee/concentration-dashboard.html"><span>Concentration & Electives
+              Dashboard</span><span class="tag">Tracks</span></a>
+        </div>
+      </div>
+
+      <div class="panel card">
+        <h2>Undergraduate Electrical Engineering</h2>
+        <p>ABET-oriented curriculum mapping, course CLOs, Student Outcomes, Performance Indicators, and SO leader
+          gap/risk monitoring.</p>
+        <div class="links">
+          <a class="link" href="undergraduate-ee/master-dashboard.html"><span>Master Dashboard</span><span
+              class="tag">EE</span></a>
+          <a class="link" href="undergraduate-ee/course-dashboard.html"><span>Course Dashboard</span><span
+              class="tag">CLO</span></a>
+          <a class="link" href="undergraduate-ee/so-leader-dashboard.html"><span>SO Leader Dashboard</span><span
+              class="tag">Risks</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel process">
+      <h2 style="margin:0">Unified workflow</h2>
+      <div class="steps">
+        <div class="step"><strong>1. Excel / Course Specs</strong><span>Collect curriculum, CLOs, teaching strategies,
+            assessment methods, and mappings.</span></div>
+        <div class="step"><strong>2. JSON Data Layer</strong><span>Convert the information into clean structured
+            datasets.</span></div>
+        <div class="step"><strong>3. AI-Assisted Review</strong><span>Check alignment, gaps, risks, and consistency
+            across courses and outcomes.</span></div>
+        <div class="step"><strong>4. HTML Dashboards</strong><span>Publish interactive dashboards for faculty,
+            committees, and program leaders.</span></div>
+      </div>
+      <p>
+        This visual summarizes the workflow used to transform curriculum mapping data into interactive dashboards.
+      </p>
+
+      <div class="visual-card">
+        <img src="../assets/workflow.png" alt="From Excel to Intelligent Dashboard workflow">
+      </div>
+    </section>
+    <section class="section">
+      <h2>Additional Curriculum Resources</h2>
+      <p>
+        Supporting portals and strategic resources developed by the Curriculum Committee.
+      </p>
+      <div class="grid two cards">
+        <a class="card" href="online-teaching-support/index.html">
+          <h3>Online Teaching Support</h3>
+          <p>Digital teaching workflows, hardware recommendations, and faculty experience sharing.</p>
+          <span class="tag">Open Section</span>
+        </a>
+
+        <a class="card" href="curriculum-vision/index.html">
+          <h3>Curriculum Vision & Strategy</h3>
+          <p>The philosophy, digital transformation roadmap, and future direction of the Curriculum Committee.</p>
+          <span class="tag">Open Section</span>
+        </a>
+      </div>
+    </section>
+    <div id="footer-placeholder"></div>
+
+  </main>
+</body>
+
+</html>

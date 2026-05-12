@@ -1,0 +1,3158 @@
+[
+  {
+    "code": "EE 511",
+    "title": "Advanced Engineering Mathematics",
+    "track": "Core",
+    "credits": 3,
+    "prereq": "N.A.",
+    "coreq": "N.A.",
+    "re": "Required",
+    "description": "This course equips graduate students with advanced mathematical tools to model, analyze, and solve engineering problems. Students apply analytical and numerical methods to dynamic and multidimensional systems, supporting advanced study and research in areas such as communications, IoT, robotics, and energy systems.",
+    "objectives": [
+      "Develop advanced mathematical tools for modeling and analysis of engineering systems.",
+      "Apply analytical and numerical methods to solve complex engineering problems.",
+      "Interpret mathematical results to assess system behavior and performance."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain advanced mathematical concepts and methods used in modeling and analysis of engineering systems.",
+        "plos": "2, 5"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe the theoretical foundations of analytical and numerical techniques applied to differential equations, linear algebra, and transform methods.",
+        "plos": "2, 5"
+      },
+      {
+        "no": "2.1",
+        "text": "Formulate appropriate mathematical models for dynamic and multidimensional engineering systems.",
+        "plos": "3, 4"
+      },
+      {
+        "no": "2.2",
+        "text": "Solve advanced engineering problems using suitable analytical and numerical methods.",
+        "plos": "1, 3"
+      },
+      {
+        "no": "2.3",
+        "text": "Analyze and interpret mathematical results to assess system behavior, stability, and performance.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "3.1",
+        "text": "Apply advanced mathematical tools independently and responsibly while recognizing modeling assumptions, limitations, and practical constraints.",
+        "plos": "7"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Mathematical Modeling and Ordinary Differential Equations",
+        "hours": "9"
+      },
+      {
+        "name": "Systems of Differential Equations and Stability Analysis",
+        "hours": "9"
+      },
+      {
+        "name": "Linear Algebra and Eigenvalue Problems",
+        "hours": "9"
+      },
+      {
+        "name": "Fourier Analysis and Transform Methods",
+        "hours": "9"
+      },
+      {
+        "name": "Vector Calculus, Partial Differential Equations, and Numerical Methods",
+        "hours": "9"
+      }
+    ],
+    "textbooks": [
+      "Advanced Engineering Mathematics By Erwin Kreyszig, Herbert Kreyszig,and Edward J. Norminton. 10th Edition. Wiley, 2011, ISBN-10:0470458364, ISBN-13: 978-0470458365"
+    ],
+    "references": [
+      "Advanced Engineering Mathematics by Dennis Zill, 7th Edition, Jones & Bartlett Learning, 2020, ISBN-10: 1284206246\n\nApplied Statistics and Probability for Engineers by Douglas C.\nMontgomery and George C. Runger, 7th Edition, Wiley, 2020, ISBN-10: 1119746353, ISBN-13: 978-1119746355"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "2, 5",
+      "MPLO2": "2, 5",
+      "MPLO5": "3, 4",
+      "MPLO6": "1, 3",
+      "MPLO7": "3, 5",
+      "MPLO9": "7"
+    }
+  },
+  {
+    "code": "EE 512",
+    "title": "Advanced Embedded Systems and Microcontrollers",
+    "track": "Core",
+    "credits": 3,
+    "prereq": "N.A.",
+    "coreq": "N.A.",
+    "re": "Required",
+    "description": "This course develops advanced skills in designing and programming modern embedded systems. Students integrate hardware and software under real-time constraints to build reliable and efficient embedded solutions for robotics, IoT, communications, and energy-aware applications.",
+    "objectives": [
+      "Understand advanced embedded architectures and microcontroller operation.",
+      "Develop embedded software under real-time and resource constraints.",
+      "Design and integrate hardware–software embedded solutions.",
+      "Evaluate performance, reliability, and scalability of embedded systems."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain the architecture, operation, and internal subsystems of modern microcontrollers and embedded processing platforms.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe real-time concepts, scheduling mechanisms, and hardware–software interaction in embedded systems.",
+        "plos": "2, 5"
+      },
+      {
+        "no": "2.1",
+        "text": "Design and implement embedded software solutions for microcontroller-based systems under real-time and resource constraints.",
+        "plos": "1, 3, 4"
+      },
+      {
+        "no": "2.2",
+        "text": "Integrate sensors, actuators, and communication interfaces into embedded system designs.",
+        "plos": "1, 3, 4"
+      },
+      {
+        "no": "2.3",
+        "text": "Analyze and evaluate embedded system performance with respect to timing, power consumption, reliability, and scalability.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "3.1",
+        "text": "Apply embedded system design principles independently and responsibly while adhering to professional and ethical engineering practices.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Advanced Microcontroller Architectures and Embedded Processing Units",
+        "hours": "5"
+      },
+      {
+        "name": "Memory Systems, Interrupts, and Low-Level Hardware Control",
+        "hours": "5"
+      },
+      {
+        "name": "Embedded C/C++ Programming and Register-Level Design",
+        "hours": "5"
+      },
+      {
+        "name": "Real-Time Embedded Systems and Scheduling Algorithms",
+        "hours": "5"
+      },
+      {
+        "name": "Timers, PWM, and Motor / Actuator Control",
+        "hours": "5"
+      },
+      {
+        "name": "Sensor Interfacing and Data Acquisition Systems",
+        "hours": "5"
+      },
+      {
+        "name": "Embedded Communication Protocols (UART, SPI, I²C, CAN)",
+        "hours": "5"
+      },
+      {
+        "name": "Power Management, Energy-Aware Embedded Design, and Reliability",
+        "hours": "5"
+      },
+      {
+        "name": "Embedded System Integration, Debugging, and Performance Optimization",
+        "hours": "5"
+      }
+    ],
+    "textbooks": [
+      "Ünsalan et al., Embedded System Design with ARM Cortex-M Microcontrollers: Applications with C, C++ and MicroPython, Springer 2022"
+    ],
+    "references": [
+      "Noergaard, T., Embedded Systems Architecture: A Comprehensive Guide for Engineers and Programmers, Elsevier."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO2": "2, 5",
+      "MPLO5": "1, 3, 4",
+      "MPLO6": "1, 3, 4",
+      "MPLO7": "3, 5",
+      "MPLO9": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 513",
+    "title": "Modelling and Simulation of Engineering Systems",
+    "track": "Core",
+    "credits": 3,
+    "prereq": "N.A.",
+    "coreq": "N.A.",
+    "re": "Required",
+    "description": "This course enables students to model and simulate complex electrical engineering systems using analytical and numerical techniques. Students build, validate, and document simulation models using computational tools to support engineering analysis and design decisions.",
+    "objectives": [
+      "Understand system modeling and numerical simulation techniques.",
+      "Develop simulation models for engineering systems.",
+      "Interpret simulation results for engineering decision-making."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain system modelling approaches and numerical simulation concepts used in electrical engineering.",
+        "plos": "1"
+      },
+      {
+        "no": "2.1",
+        "text": "Develop and simulate engineering system models using computational tools and interpret results.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "3.1",
+        "text": "Prepare professional, ethical, and reproducible simulation documentation and reports.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Modelling foundations for EE systems; signals, LTI review; state-space representation.",
+        "hours": "10"
+      },
+      {
+        "name": "Numerical integration for dynamic systems (Euler, Runge–Kutta); stability and step-size effects.",
+        "hours": "10"
+      },
+      {
+        "name": "Discrete-time modelling and simulation; sampling; difference equations.",
+        "hours": "10"
+      },
+      {
+        "name": "Circuit and power electronic system modelling (averaged/switching concepts); solver choices.",
+        "hours": "10"
+      },
+      {
+        "name": "Electromechanical system models (motor-load, sensors/actuators) and coupled-domain examples.",
+        "hours": "10"
+      },
+      {
+        "name": "System-level case studies, mini-project development, and presentations.",
+        "hours": "10"
+      }
+    ],
+    "textbooks": [
+      "• Katsuhiko Ogata, System Dynamics (selected chapters)\n• Chapra & Canale, Numerical Methods for Engineers (selected chapters)\n• MATLAB/Simulink (MathWorks) documentation and examples"
+    ],
+    "references": [
+      "• Selected journal/tutorial notes on model validation and computational methods\n• Instructor notes and curated case studies"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO5": "3, 5",
+      "MPLO9": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 514",
+    "title": "Research Methods",
+    "track": "Core",
+    "credits": 3,
+    "prereq": "N.A.",
+    "coreq": "N.A.",
+    "re": "Required",
+    "description": "This course prepares students to design and conduct graduate-level engineering research. Students develop research questions, apply appropriate methodologies, analyze data ethically, and communicate results effectively to support thesis work and scholarly publication.",
+    "objectives": [
+      "Understand research methodologies and scientific inquiry processes.",
+      "Formulate research problems based on literature review.",
+      "Apply appropriate research design and data analysis methods.",
+      "Practice ethical research conduct and scholarly communication."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain research methodologies, experimental design principles, and data analysis techniques used in engineering research.",
+        "plos": "2, 5"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe ethical standards, research integrity principles, and academic publishing practices.",
+        "plos": "1, 2, 7"
+      },
+      {
+        "no": "2.1",
+        "text": "Formulate clear research problems, objectives, and questions based on critical literature review.",
+        "plos": "3, 6"
+      },
+      {
+        "no": "2.2",
+        "text": "Design and apply appropriate qualitative and quantitative research methods to engineering problems.",
+        "plos": "4"
+      },
+      {
+        "no": "2.3",
+        "text": "Analyze and interpret research data and results using suitable analytical tools.",
+        "plos": "5"
+      },
+      {
+        "no": "3.1",
+        "text": "Demonstrate independent research practice, ethical responsibility, and commitment to lifelong learning.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to Research and Scientific Inquiry in Engineering",
+        "hours": "5"
+      },
+      {
+        "name": "Research Problem Identification and Formulation",
+        "hours": "5"
+      },
+      {
+        "name": "Literature Review Techniques and Scholarly Information Sources",
+        "hours": "5"
+      },
+      {
+        "name": "Research Methodologies and Experimental Design",
+        "hours": "5"
+      },
+      {
+        "name": "Qualitative and Quantitative Research Methods",
+        "hours": "5"
+      },
+      {
+        "name": "Data Collection Methods and Research Instruments",
+        "hours": "5"
+      },
+      {
+        "name": "Data Analysis, Interpretation, and Validation",
+        "hours": "5"
+      },
+      {
+        "name": "Research Ethics, Integrity, and Responsible Conduct of Research",
+        "hours": "5"
+      },
+      {
+        "name": "Academic Writing, Publishing, and Research Communication",
+        "hours": "5"
+      }
+    ],
+    "textbooks": [
+      "Engineering Research: Design, Methods, and Publication, Herman Tang ISBN: 978-1-119-62453-0, December 2020"
+    ],
+    "references": [
+      "Thiel DV. Research Methods for Engineers. Cambridge University Press; 2014."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "2, 5",
+      "MPLO2": "1, 2, 7",
+      "MPLO5": "3, 6",
+      "MPLO6": "4",
+      "MPLO7": "5",
+      "MPLO9": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 521",
+    "title": "Renewable Energy Systems",
+    "track": "Electrical Power and Energy systems",
+    "credits": 3,
+    "prereq": "EE 511, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course introduces renewable energy technologies and their integration into power systems. Students analyze system performance, grid challenges, and economic and environmental impacts of large-scale renewable energy deployment.",
+    "objectives": [
+      "Understand principles of renewable energy resources and technologies.",
+      "Analyze performance of renewable energy systems.",
+      "Evaluate grid integration challenges and sustainability aspects."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain the principles and characteristics of major renewable energy resources.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe energy conversion technologies used in renewable energy systems.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze performance and operational characteristics of renewable energy systems.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Evaluate grid integration issues related to renewable generation.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "2.3",
+        "text": "Communicate technical analyses of renewable energy systems in written form.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Apply standards, reports, and technical references related to renewable energy.",
+        "plos": "7"
+      },
+      {
+        "no": "3.2",
+        "text": "Demonstrate awareness of sustainability, environmental, and ethical considerations.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to energy systems and renewable resources",
+        "hours": "6"
+      },
+      {
+        "name": "Solar energy systems: principles, technologies, and performance",
+        "hours": "6"
+      },
+      {
+        "name": "Wind energy systems: aerodynamics, turbines, and power characteristics",
+        "hours": "6"
+      },
+      {
+        "name": "Hydropower and geothermal energy systems",
+        "hours": "6"
+      },
+      {
+        "name": "Biomass and emerging renewable technologies",
+        "hours": "6"
+      },
+      {
+        "name": "Grid integration of renewable energy systems",
+        "hours": "6"
+      },
+      {
+        "name": "Economic, environmental, and sustainability considerations",
+        "hours": "9"
+      },
+      {
+        "name": "Student Project Presentations",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Boyle, G., Renewable Energy: Power for a Sustainable Future, Oxford University Press."
+    ],
+    "references": [
+      "Selected state-of-the-art papers from IEEE Transactions on Sustainable Energy and IEEE PES publications."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO2": "2",
+      "MPLO5": "3",
+      "MPLO6": "3, 5",
+      "MPLO7": "6",
+      "MPLO9": "7",
+      "MPLO10": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 522",
+    "title": "Energy Storage Systems & Hydrogen Technologies",
+    "track": "Electrical Power and Energy systems",
+    "credits": 3,
+    "prereq": "EE 511, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course examines energy storage and hydrogen technologies for modern power systems. Students analyze storage performance, hydrogen integration, and system-level impacts on renewable integration, grid flexibility, reliability, and decarbonization.",
+    "objectives": [
+      "Understand principles of energy storage and hydrogen systems.",
+      "Analyze performance and applications of storage technologies.",
+      "Evaluate system-level integration and safety considerations."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain the principles and classifications of energy storage systems.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe hydrogen production, storage, and conversion technologies.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze performance characteristics of energy storage technologies.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Evaluate system-level applications of storage and hydrogen in power systems.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "2.3",
+        "text": "Communicate technical analyses related to storage and hydrogen systems.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Apply standards, reports, and technical references related to storage and hydrogen technologies.",
+        "plos": "7"
+      },
+      {
+        "no": "3.2",
+        "text": "Demonstrate awareness of safety, environmental, and ethical considerations.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to energy storage and hydrogen in modern power systems",
+        "hours": "6"
+      },
+      {
+        "name": "Electrical energy storage: batteries and supercapacitors",
+        "hours": "6"
+      },
+      {
+        "name": "Mechanical and thermal energy storage technologies",
+        "hours": "6"
+      },
+      {
+        "name": "Electrochemical energy storage performance and degradation",
+        "hours": "6"
+      },
+      {
+        "name": "Hydrogen production technologies and energy pathways",
+        "hours": "9"
+      },
+      {
+        "name": "Hydrogen storage, transportation, and safety considerations",
+        "hours": "6"
+      },
+      {
+        "name": "System-level applications of storage and hydrogen",
+        "hours": "6"
+      },
+      {
+        "name": "Student Project Presentations",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Dunn, B., Kamath, H., & Tarascon, J.-M., Electrical Energy Storage for the Grid, Science.\nZüttel, A., Borgschulte, A., & Schlapbach, L., Hydrogen as a Future Energy Carrier, Wiley."
+    ],
+    "references": [
+      "Selected papers from IEEE Transactions on Energy Conversion, IEEE Transactions on Sustainable Energy, and International Journal of Hydrogen Energy."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO2": "2",
+      "MPLO5": "3",
+      "MPLO6": "3, 5",
+      "MPLO7": "6",
+      "MPLO9": "7",
+      "MPLO10": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 523",
+    "title": "Smart Grid & Energy Management Systems",
+    "track": "Electrical Power and Energy systems",
+    "credits": 3,
+    "prereq": "EE 511, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course develops knowledge of smart grids and energy management systems. Students analyze grid modernization, distributed resources, and operational strategies to support efficient, reliable, and sustainable power system operation.",
+    "objectives": [
+      "Understand smart grid architecture and enabling technologies.",
+      "Analyze energy management strategies for modern power systems.",
+      "Evaluate operational, cybersecurity, and reliability issues."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain smart grid concepts, architecture, and enabling technologies.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe energy management system functions and operational objectives.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze smart grid operation with distributed energy resources.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "2.2",
+        "text": "Evaluate energy management strategies for modern power system operation.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "2.3",
+        "text": "Communicate technical analyses related to smart grids and energy management systems.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Apply standards and technical references related to smart grids and EMS.",
+        "plos": "7"
+      },
+      {
+        "no": "3.2",
+        "text": "Demonstrate awareness of cybersecurity, privacy, and ethical considerations.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to smart grids and power system modernization",
+        "hours": "6"
+      },
+      {
+        "name": "Smart grid architecture, components, and communication concepts",
+        "hours": "6"
+      },
+      {
+        "name": "Advanced metering infrastructure and monitoring systems",
+        "hours": "6"
+      },
+      {
+        "name": "Energy management systems: objectives and operational frameworks",
+        "hours": "6"
+      },
+      {
+        "name": "Distributed energy resources, microgrids, and coordination strategies",
+        "hours": "9"
+      },
+      {
+        "name": "Demand-side management and demand response",
+        "hours": "6"
+      },
+      {
+        "name": "Cybersecurity, data management, and interoperability in smart grids",
+        "hours": "6"
+      },
+      {
+        "name": "Student Project Presentations",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Ekanayake, J. B., Jenkins, N., Liyanage, K. M., Wu, J., & Yokoyama, A. .Smart grid: technology and applications. John Wiley & Sons.\nSmart Grid: Fundamentals of Design and Analysis, IEEE Press Series on Power Engineering, by James Momoh"
+    ],
+    "references": [
+      "Selected state-of-the-art papers from IEEE Transactions on Smart Grid and other IEEE PES publications."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO2": "2",
+      "MPLO5": "3, 5",
+      "MPLO6": "3, 5",
+      "MPLO7": "6",
+      "MPLO9": "7",
+      "MPLO10": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 524",
+    "title": "Power Electronics & Electric Drives",
+    "track": "Electrical Power and Energy systems",
+    "credits": 3,
+    "prereq": "EE 511, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course trains students to analyze and design power electronic converters and electric drives. Students evaluate devices, converters, inverters, and motor drives using simulation-based methods aligned with real engineering specifications.",
+    "objectives": [
+      "Understand power electronic devices, converters, and modulation techniques.",
+      "Design and analyze power converters and motor drives.",
+      "Evaluate efficiency, harmonics, and performance trade-offs."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain power conversion concepts and switching characteristics of MOSFET, IGBT, SiC, and GaN devices.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe converter and inverter topologies and modulation methods including SPWM and SVPWM.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze and design DC–DC converters and size passive components to meet specifications.",
+        "plos": "3, 4"
+      },
+      {
+        "no": "2.2",
+        "text": "Evaluate rectifier, PFC, and inverter performance in terms of harmonics, power factor, and efficiency.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "2.3",
+        "text": "Apply basic drive control structures for DC, induction, and PMSM/BLDC motor drives.",
+        "plos": "5"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction: role of power electronics in energy conversion; review of power devices and switching characteristics. Power semiconductor devices and gate drives: MOSFET, IGBT, SiC/GaN, gate driver design",
+        "hours": "4"
+      },
+      {
+        "name": "DC-DC converters: buck/boost/buck-boost, isolated topologies; CCM/DCM analysis; design of inductors, capacitors, and filters.",
+        "hours": "8"
+      },
+      {
+        "name": "AC-DC rectifiers and power factor correction (PFC): diode/thyristor rectifiers, active PFC, harmonic standards.",
+        "hours": "8"
+      },
+      {
+        "name": "DC-AC inverters and modulation: single/three-phase inverters, SPWM/SVPWM, dead-time effects, output filters.",
+        "hours": "8"
+      },
+      {
+        "name": "Introduction to electric drives: motor fundamentals, torque-speed characteristics, drive requirements, sizing and selection.",
+        "hours": "8"
+      },
+      {
+        "name": "DC motor drives and power stage design; current and speed control; regenerative braking.",
+        "hours": "8"
+      },
+      {
+        "name": "Induction motor drives: V/f control, field-oriented control (FOC), vector control structure; sensorless concepts (overview).",
+        "hours": "8"
+      },
+      {
+        "name": "PMSM/BLDC drives: modeling, current control, FOC, SVPWM integration, commutation and torque ripple mitigation.",
+        "hours": "8"
+      }
+    ],
+    "textbooks": [
+      "• N. Mohan, T. M. Undeland, W. P. Robbins, Power Electronics: Converters, Applications, and Design.\n• M. H. Rashid, Power Electronics: Circuits, Devices & Applications.\n• R. Krishnan, Electric Motor Drives: Modeling, Analysis, and Control.\n• B. K. Bose, Modern Power Electronics and AC Drives."
+    ],
+    "references": [
+      "• R. Erickson and D. Maksimovic, Fundamentals of Power Electronics.\n• Selected IEEE Transactions papers (Power Electronics; Industry Applications).\n• Manufacturer application notes (Infineon, TI, ST, Wolfspeed) for gate drives, protection, and reference designs."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "2",
+      "MPLO5": "3, 4",
+      "MPLO6": "3, 5",
+      "MPLO7": "5"
+    }
+  },
+  {
+    "code": "EE 525",
+    "title": "Power Systems Reliability",
+    "track": "Electrical Power and Energy systems",
+    "credits": 3,
+    "prereq": "EE 511, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course develops the ability to analyze and assess power system reliability. Students model system components, evaluate reliability indices, and interpret results to support planning and operational decisions in modern power systems.",
+    "objectives": [
+      "Understand reliability concepts and failure modeling in power systems.",
+      "Analyze reliability indices and system performance.",
+      "Apply reliability assessment techniques responsibly."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain fundamental concepts of power system reliability and failure modeling.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe reliability indices and analytical evaluation techniques used in power systems.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze reliability of power system components and subsystems.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Evaluate system-level reliability performance using analytical methods.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "2.3",
+        "text": "Communicate reliability analysis results clearly in written form.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Apply standards, technical references, and data sources for reliability assessment.",
+        "plos": "7"
+      },
+      {
+        "no": "3.2",
+        "text": "Demonstrate professional responsibility in interpreting and reporting reliability results.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction & Fundamentals of Power Systems",
+        "hours": "3"
+      },
+      {
+        "name": "Introduction to power systems and reliability fundamentals",
+        "hours": "3"
+      },
+      {
+        "name": "Reliability modeling of power system components",
+        "hours": "9"
+      },
+      {
+        "name": "Power generation system reliability and adequacy assessment",
+        "hours": "6"
+      },
+      {
+        "name": "Composite power system reliability and transmission considerations",
+        "hours": "6"
+      },
+      {
+        "name": "Power distribution system reliability and customer-oriented indices",
+        "hours": "6"
+      },
+      {
+        "name": "Substation reliability and failure modes",
+        "hours": "6"
+      },
+      {
+        "name": "Reliability indices, numerical examples, and practical case studies",
+        "hours": "6"
+      },
+      {
+        "name": "Student Project Presentations",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Billinton, R., & Allan, R. N., Reliability Evaluation of Power Systems, Springer.\nBillinton, R., & Allan, R. N., Reliability Evaluation of Engineering Systems, Springer."
+    ],
+    "references": [
+      "Selected state-of-the-art papers from IEEE Transactions on Power Systems and IEEE PES publications."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO2": "2",
+      "MPLO5": "3",
+      "MPLO6": "3, 5",
+      "MPLO7": "6",
+      "MPLO9": "7",
+      "MPLO10": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 526",
+    "title": "Advanced Control Systems",
+    "track": "Electrical Power and Energy systems",
+    "credits": 3,
+    "prereq": "EE 511, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course trains students to model, analyze, and control complex multivariable systems using classical, modern, and optimal control techniques. Students design controllers and observers and validate performance through MATLAB/Simulink simulations for real-world applications.",
+    "objectives": [
+      "Analyze dynamic systems using advanced modeling techniques.",
+      "Design feedback controllers to meet stability and performance specifications.",
+      "Evaluate control system robustness using analytical and simulation tools."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Describe complex dynamic systems using different model representation techniques.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze the stability, performance, and robustness of closed-loop control systems.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Design feedback controllers to improve transient and steady-state performance of a system to given specifications.",
+        "plos": "4"
+      },
+      {
+        "no": "2.3",
+        "text": "Simulate closed-loop control systems in MATLAB/Simulink.",
+        "plos": "5"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Overview of feedback control systems",
+        "hours": "3"
+      },
+      {
+        "name": "Modeling of dynamic systems in the frequency domain",
+        "hours": "6"
+      },
+      {
+        "name": "Stability analysis techniques in the frequency domain",
+        "hours": "3"
+      },
+      {
+        "name": "PID control design",
+        "hours": "6"
+      },
+      {
+        "name": "State-space modelling of dynamic systems",
+        "hours": "3"
+      },
+      {
+        "name": "State feedback control design",
+        "hours": "3"
+      },
+      {
+        "name": "Output feedback control design",
+        "hours": "6"
+      },
+      {
+        "name": "Optimal control",
+        "hours": "6"
+      },
+      {
+        "name": "Model predictive control",
+        "hours": "6"
+      },
+      {
+        "name": "Revision",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Karl Johan Åstrøm and R. Murry, “Feedback Systems: An Introduction for Scientists and Engineers”, 2020"
+    ],
+    "references": [
+      "Richard C. Dorf.  “Modern Control Systems”, 14th Ed. Pearson, 2021."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "2",
+      "MPLO5": "3",
+      "MPLO6": "4",
+      "MPLO7": "5"
+    }
+  },
+  {
+    "code": "EE 527",
+    "title": "Special Topics in Electrical & Renewable Energy Systems",
+    "track": "Electrical Power and Energy systems",
+    "credits": 3,
+    "prereq": "EE 511, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course examines advanced topics in electrical and renewable energy systems, focusing on integrating renewable generation into modern power networks. Students analyze grid-interface technologies, inverter-based resources, microgrids, power quality, stability, and protection issues. Through simulations and case studies, the course links theory to real engineering standards, smart grid applications, energy management strategies, and techno-economic evaluation of renewable systems.",
+    "objectives": [
+      "Understand advanced and emerging renewable energy technologies.",
+      "Analyze grid-integration challenges using modeling and simulation.",
+      "Apply standards and professional practices in renewable systems."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Describe renewable energy system components, grid-interface requirements, and relevant standards.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Explain inverter-based resources, microgrids, and smart grid concepts for renewable integration.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Model and simulate renewable generation and grid-interface converters to evaluate performance metrics.",
+        "plos": "5"
+      },
+      {
+        "no": "2.2",
+        "text": "Analyze grid integration issues and recommend mitigation strategies based on standards and performance criteria.",
+        "plos": "3"
+      },
+      {
+        "no": "3.1",
+        "text": "Communicate technical findings professionally and ethically in written reports.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Renewable energy systems overview: PV/wind basics, variability, grid codes, performance metrics",
+        "hours": "20"
+      },
+      {
+        "name": "Grid-interface and control: converters/inverters, inverter-based resources, microgrids, energy management",
+        "hours": "25"
+      },
+      {
+        "name": "Special topics & case studies: power quality/harmonics, stability, protection, smart grids, emerging tech (HVDC/FACTS)",
+        "hours": "15"
+      }
+    ],
+    "textbooks": [
+      "• F. Blaabjerg (Ed.), Control of Power Electronic Converters and Systems, Academic Press.\n• B. K. Bose, Power Electronics and Renewable Energy Systems, Prentice Hall.\n• R. Teodorescu, M. Liserre, P. Rodriguez, Grid Converters for Photovoltaic and Wind Power Systems, Wiley.\n• IEEE Std 1547 (Interconnection and Interoperability of Distributed Energy Resources) and applicable IEC/IEEE grid codes/standards."
+    ],
+    "references": [
+      "• A. Yazdani and R. Iravani, Voltage-Sourced Converters in Power Systems, IEEE/Wiley.\n• M. H. Rashid, Power Electronics: Circuits, Devices and Applications, Pearson.\n• Selected recent review papers and standards notes provided by the instructor."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "2",
+      "MPLO5": "5",
+      "MPLO6": "3",
+      "MPLO9": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 531",
+    "title": "Wireless Communications",
+    "track": "Intelligent Communications and Networks",
+    "credits": 3,
+    "prereq": "EE 511",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course develops a rigorous understanding of modern wireless communication systems by analyzing channel modeling, propagation effects, and fading phenomena. Students evaluate link capacity, digital modulation performance, and reliability enhancement techniques such as diversity and multiuser MIMO. The course also introduces 4G and 5G standards and uses simulation tools to support the design and analysis of contemporary cellular networks.",
+    "objectives": [
+      "Analyze wireless channel models and link behavior.",
+      "Design and evaluate digital wireless communication systems.",
+      "Apply modern wireless standards and simulation tools."
+    ],
+    "clos": [
+      {
+        "no": "2.1",
+        "text": "Model and characterize wireless channels using path loss, shadowing, and statistical and wideband fading models to predict link behavior.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Analyze and compare digital wireless links in terms of error performance, channel capacity, diversity techniques, and multiuser MIMO systems.",
+        "plos": "3"
+      },
+      {
+        "no": "2.3",
+        "text": "Apply 4G/5G standards and simulation tools to design and evaluate modern wireless communication systems.",
+        "plos": "3"
+      },
+      {
+        "no": "2.4",
+        "text": "Communicate technical findings through clear written reports and oral presentations.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Identify and apply advanced wireless communication resources to support continuous learning ongoing learning and project development.",
+        "plos": "7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Overview of Wireless Communications",
+        "hours": "3"
+      },
+      {
+        "name": "Path Loss and Shadowing Models, Millimeter wave propagation",
+        "hours": "6"
+      },
+      {
+        "name": "Statistical Fading Models",
+        "hours": "6"
+      },
+      {
+        "name": "Wideband Fading Models",
+        "hours": "3"
+      },
+      {
+        "name": "Capacity of Wireless Channels",
+        "hours": "3"
+      },
+      {
+        "name": "Performance of Digital Communication",
+        "hours": "9"
+      },
+      {
+        "name": "Diversity",
+        "hours": "6"
+      },
+      {
+        "name": "Multiuser-user MIMO systems",
+        "hours": "6"
+      },
+      {
+        "name": "Introduction to 4G and 5G standards and simulators",
+        "hours": "3"
+      },
+      {
+        "name": "Revision",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Goldsmith, Andrea. 2012. Wireless Communications. 2nd ed. Cambridge University Press. ISBN 978-0-511-84122-4."
+    ],
+    "references": [
+      "Yang, Hong-Chuan. 2017. Introduction to Digital Wireless Communications. The Institution of Engineering and Technology. ISBN 978-1-78561-160-5."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO5": "3",
+      "MPLO6": "3",
+      "MPLO7": "3",
+      "MPLO8": "6",
+      "MPLO9": "7, 8"
+    }
+  },
+  {
+    "code": "EE 532",
+    "title": "Optical Communications",
+    "track": "Intelligent Communications and Networks",
+    "credits": 3,
+    "prereq": "EE 511",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course introduces optical communication systems and networks by examining their fundamental components, including optical sources, receivers, filters, and isolators. Students analyze fiber types and key signal impairments such as attenuation, scattering, and dispersion. The course also explores TDM and WDM network architectures and discusses emerging trends shaping future optical communication networks.",
+    "objectives": [
+      "Understand optical communication system fundamentals.",
+      "Analyze optical components and transmission impairments.",
+      "Design optical communication links and networks."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain the fundamentals of optical communication systems and networks.",
+        "plos": "1"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze optical components used in communication systems.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Design optical communication systems considering fiber impairments and network architectures.",
+        "plos": "4"
+      },
+      {
+        "no": "2.3",
+        "text": "Communicate technical findings through written reports and oral presentations.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Identify and apply advanced optical communication resources to support ongoing learning.",
+        "plos": "7"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Overview of Optical Communication",
+        "hours": "3"
+      },
+      {
+        "name": "Waveguide modes",
+        "hours": "3"
+      },
+      {
+        "name": "Step- and graded-index optical fibers.",
+        "hours": "3"
+      },
+      {
+        "name": "Multimode and single mode fibers",
+        "hours": "3"
+      },
+      {
+        "name": "Signal Attenuation.",
+        "hours": "3"
+      },
+      {
+        "name": "Material and modal dispersion",
+        "hours": "3"
+      },
+      {
+        "name": "Broadening of optical pulses in fibers",
+        "hours": "3"
+      },
+      {
+        "name": "Optical Transmitters and Receivers",
+        "hours": "3"
+      },
+      {
+        "name": "Optical Amplifiers",
+        "hours": "3"
+      },
+      {
+        "name": "Digital fiber communication systems.",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Optical Fiber Communications, Gerd Keiser, McGraw Hill, Fourth Edition, McGraw-Hill Companies Inc. 2011. ISBN 978-0-07-338071-1."
+    ],
+    "references": [],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO5": "3",
+      "MPLO6": "4",
+      "MPLO7": "6",
+      "MPLO9": "7"
+    }
+  },
+  {
+    "code": "EE 533",
+    "title": "Digital Signal Processing",
+    "track": "Intelligent Communications and Networks",
+    "credits": 3,
+    "prereq": "EE 511",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course delivers advanced training in digital signal processing by combining theory, algorithm design, and practical implementation. Students analyze discrete-time signals, design digital filters, apply spectral and multirate techniques, and implement DSP algorithms using MATLAB. The course prepares graduates for research and professional practice in signal processing, communications, and control systems.",
+    "objectives": [
+      "Understand advanced DSP concepts and transforms.",
+      "Design digital filters and DSP algorithms.",
+      "Apply computational tools for DSP analysis."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Apply spectral estimation and transform techniques to real signals.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "1.2",
+        "text": "Analyze discrete-time signals and systems using advanced DSP concepts such as DTFT, Z-transform, and filter theory.",
+        "plos": ""
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze discrete-time signals and systems using advanced DSP concepts such as DTFT, Z-transform, and filter theory.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Evaluate DSP algorithms using computational tools.",
+        "plos": "5"
+      },
+      {
+        "no": "2.3",
+        "text": "Interpret DSP analysis results and draw engineering conclusions.",
+        "plos": "5"
+      },
+      {
+        "no": "2.4",
+        "text": "Design digital filters that meet specified frequency-domain requirements.",
+        "plos": "4"
+      },
+      {
+        "no": "3.1",
+        "text": "Acquire and apply new DSP knowledge independently for advanced applications.",
+        "plos": "7"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Review of Discrete-Time Signals and Systems",
+        "hours": "3"
+      },
+      {
+        "name": "Discrete-Time Fourier Transform (DTFT)",
+        "hours": "6"
+      },
+      {
+        "name": "Z-Transform and System Analysis",
+        "hours": "6"
+      },
+      {
+        "name": "Digital Filter Design (FIR & IIR)",
+        "hours": "6"
+      },
+      {
+        "name": "Spectral Analysis and FFT Algorithms",
+        "hours": "6"
+      },
+      {
+        "name": "Multirate Signal Processing",
+        "hours": "6"
+      },
+      {
+        "name": "DSP Applications in Communications",
+        "hours": "6"
+      },
+      {
+        "name": "MATLAB-Based DSP Implementation & Case Studies",
+        "hours": "6"
+      }
+    ],
+    "textbooks": [
+      "B. P Lathi (2017) Linear systems and signals, 3rd Edition,  Oxford University Press, USA\nA. V. Oppenheim & R. W. Schafer, Discrete-Time Signal Processing, 3rd ed., Pearson, 2010."
+    ],
+    "references": [
+      "MATLAB Signal Processing Toolbox Documentation"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO5": "3",
+      "MPLO6": "5",
+      "MPLO7": "5",
+      "MPLO8": "4",
+      "MPLO9": "7"
+    }
+  },
+  {
+    "code": "EE 534",
+    "title": "Digital Communications",
+    "track": "Intelligent Communications and Networks",
+    "credits": 3,
+    "prereq": "EE 511",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course offers an advanced study of digital communication systems by covering modulation, channel modeling, noise analysis, receiver design, and error performance evaluation. Students use analytical methods and MATLAB-based simulations to assess communication links under realistic conditions. The course supports graduate-level research and advanced design in both wireless and wired digital communication systems.",
+    "objectives": [
+      "Analyze digital communication systems.",
+      "Design modulation and coding schemes.",
+      "Evaluate system performance under noise and interference."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Analyze digital communication systems using advanced theoretical and mathematical tools.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "2.1",
+        "text": "Design and evaluate modulation and demodulation schemes under noise and distortion.",
+        "plos": "4, 5"
+      },
+      {
+        "no": "2.2",
+        "text": "Model communication channels and assess their impact on system performance.",
+        "plos": "5"
+      },
+      {
+        "no": "2.3",
+        "text": "Interpret performance metrics such as bit error rate and capacity for system optimization.",
+        "plos": "5"
+      },
+      {
+        "no": "2.4",
+        "text": "Communicate technical findings effectively in written and oral forms.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Integrate new communication techniques from the literature into engineering analyses.",
+        "plos": "7"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Review of Signals and Systems, Probability Concepts",
+        "hours": "3"
+      },
+      {
+        "name": "Baseband Digital Modulation Techniques (ASK/FSK/PSK/QAM)",
+        "hours": "6"
+      },
+      {
+        "name": "Optimum Receivers: Matched Filter and Correlator",
+        "hours": "3"
+      },
+      {
+        "name": "Error Probability Analysis (AWGN/Flat Fading)",
+        "hours": "6"
+      },
+      {
+        "name": "Channel Coding Basics and Performance Metrics",
+        "hours": "3"
+      },
+      {
+        "name": "Digital Demodulation and Synchronization",
+        "hours": "6"
+      },
+      {
+        "name": "Communication Channel Models",
+        "hours": "6"
+      },
+      {
+        "name": "Simulation Tools for Digital Communication",
+        "hours": "3"
+      },
+      {
+        "name": "Advanced Topics: Multi-Carrier & MIMO",
+        "hours": "6"
+      },
+      {
+        "name": "Student Presentation/Case Studies",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Lathi, Modern Digital and Analog Communication Systems, Fifth Edition, Oxford University Press, 2018.\nJ. G. Proakis & M. Salehi, Digital Communications, 5th Edition, McGraw-Hill."
+    ],
+    "references": [
+      "MATLAB Communication and DSP Toolbox Documentation"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO5": "4, 5",
+      "MPLO6": "5",
+      "MPLO7": "5",
+      "MPLO8": "6",
+      "MPLO9": "7"
+    }
+  },
+  {
+    "code": "EE 535",
+    "title": "Electromagnetic Fields",
+    "track": "Intelligent Communications and Networks",
+    "credits": 3,
+    "prereq": "EE 511",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course builds a strong theoretical foundation in electromagnetics by studying Maxwell’s equations, wave propagation, and electromagnetic interaction with materials. Students analyze reflection, transmission, radiation, anisotropic media, metamaterials, periodic structures, and dielectric waveguides, enabling them to solve advanced electromagnetic field problems relevant to modern engineering applications.",
+    "objectives": [
+      "Analyze electromagnetic wave propagation and field behavior.",
+      "Apply Maxwell’s equations to guided and radiating structures.",
+      "Evaluate electromagnetic systems using analytical methods."
+    ],
+    "clos": [
+      {
+        "no": "2.1",
+        "text": "Analyze plane-wave propagation and electromagnetic interaction with materials, including anisotropic media and metamaterials.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Evaluate and design guided-wave and radiating structures using vector potentials and radiation equations.",
+        "plos": "4, 5"
+      },
+      {
+        "no": "2.3",
+        "text": "Apply Maxwell’s equations and the wave equation to solve electromagnetic field problems.",
+        "plos": "3"
+      },
+      {
+        "no": "2.4",
+        "text": "Communicate electromagnetic analysis results through professional reports and presentations.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Identify and apply advanced electromagnetic resources to support continuous learning.",
+        "plos": "7"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Review of Maxwell’s equations and EM fundamentals",
+        "hours": "3"
+      },
+      {
+        "name": "Electrical properties of materials, now including metamaterials",
+        "hours": "6"
+      },
+      {
+        "name": "The wave equation and its solutions",
+        "hours": "6"
+      },
+      {
+        "name": "Wave propagation in isotropic media",
+        "hours": "6"
+      },
+      {
+        "name": "Polarization",
+        "hours": "3"
+      },
+      {
+        "name": "Reflection and transmission, including metamaterials",
+        "hours": "6"
+      },
+      {
+        "name": "Electromagnetic vector potentials and radiation integrals",
+        "hours": "6"
+      },
+      {
+        "name": "Dielectric slab waveguides",
+        "hours": "6"
+      },
+      {
+        "name": "Periodic structures",
+        "hours": "6"
+      },
+      {
+        "name": "Revision",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "C.A. Balanis, Balanis’s Advanced Engineering Electromagnetics, 3rd Ed. (John Wiley & Sons, New York, NY, 2024)"
+    ],
+    "references": [],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO5": "3",
+      "MPLO6": "4, 5",
+      "MPLO7": "3",
+      "MPLO8": "6",
+      "MPLO9": "7"
+    }
+  },
+  {
+    "code": "EE 536",
+    "title": "Network and Communication Protocols",
+    "track": "Intelligent Communications and Networks",
+    "credits": 3,
+    "prereq": "EE 511",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course examines modern network architectures and communication protocols that support reliable and efficient data exchange. Students analyze protocol layering, core protocol operations, and mechanisms for error control, congestion management, routing, and security. The course also explores emerging wired and wireless networking technologies and evaluates protocol performance using analytical and simulation-based tools.",
+    "objectives": [
+      "Understand protocol layering and network architectures.",
+      "Analyze protocol mechanisms for reliability and efficiency.",
+      "Evaluate protocol performance in wired and wireless networks."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain and analyze the operation of communication protocols across OSI and TCP/IP layers.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe advanced protocol mechanisms used in modern wired and wireless networks.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Evaluate protocol mechanisms for error control, flow control, congestion control, routing, and multiple access.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "2.2",
+        "text": "Assess protocol performance using analytical and simulation-based methods.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "2.3",
+        "text": "Communicate protocol analysis and technical findings clearly in written and oral forms.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Identify and apply networking standards and technical documentation to support lifelong learning.",
+        "plos": "7"
+      },
+      {
+        "no": "3.2",
+        "text": "Demonstrate professional responsibility and ethical conduct in networking analysis.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to computer networks and protocol layering (OSI and TCP/IP models)",
+        "hours": "8"
+      },
+      {
+        "name": "Physical and data link layer protocols: framing, error detection and correction, multiple access mechanisms",
+        "hours": "8"
+      },
+      {
+        "name": "Transport layer protocols: TCP and UDP, flow control, congestion control, and performance issues",
+        "hours": "8"
+      },
+      {
+        "name": "Application layer protocols and network services",
+        "hours": "7"
+      },
+      {
+        "name": "Wireless and mobile communication protocols and cross-layer considerations",
+        "hours": "7"
+      },
+      {
+        "name": "Protocol performance evaluation using analytical metrics and simulation/measurement tools (e.g., Wireshark, ns-3)",
+        "hours": "7"
+      }
+    ],
+    "textbooks": [
+      "Kurose, J. F., & Ross, K. W. (2021). Computer Networking: A Top-Down Approach, 8th ed. (Global Edition). Pearson. ISBN-13: 978-1292405469."
+    ],
+    "references": [
+      "Tanenbaum, A. S., Feamster, N., & Wetherall, D. J. (2021). Computer Networks, 6th ed. Pearson. ISBN-13: 978-0137523214.\nFall, K. R., & Stevens, W. R. (2011). TCP/IP Illustrated, Volume 1: The Protocols, 2nd ed. Addison-Wesley Professional. ISBN-13: 978-0321336316."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO2": "2",
+      "MPLO5": "3, 5",
+      "MPLO6": "3, 5",
+      "MPLO7": "6",
+      "MPLO9": "7",
+      "MPLO10": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 537",
+    "title": "Special Topics in Intelligent Communication Networks",
+    "track": "Intelligent Communications and Networks",
+    "credits": 3,
+    "prereq": "EE 511",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course explores intelligent communication networks by integrating AI and machine learning into network design, optimization, management, and security. Students study applications in 5G/6G, IoT, SDN, NFV, edge computing, and autonomous networks, while developing research-oriented skills through analysis, simulation, and project-based evaluation of intelligent networking solutions.",
+    "objectives": [
+      "Understand advanced communication and networking concepts.",
+      "Analyze intelligent and adaptive communication techniques.",
+      "Apply simulation and performance evaluation methods."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Analyze communication networks using advanced theoretical and mathematical tools.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "2.1",
+        "text": "Design and evaluate modulation and demodulation schemes under noise and distortion.",
+        "plos": "4, 5"
+      },
+      {
+        "no": "2.2",
+        "text": "Model communication channels and assess their impact on system performance.",
+        "plos": "5"
+      },
+      {
+        "no": "2.3",
+        "text": "Interpret performance metrics such as BER and capacity for system optimization.",
+        "plos": "5"
+      },
+      {
+        "no": "2.4",
+        "text": "Communicate technical findings effectively in written and oral forms.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Integrate new communication techniques from the literature into engineering analyses.",
+        "plos": "7"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to Intelligent Communication Networks",
+        "hours": "3"
+      },
+      {
+        "name": "Review of Modern Communication Network Architectures (5G/6G, IoT)",
+        "hours": "3"
+      },
+      {
+        "name": "Software-Defined Networking (SDN) and Network Function Virtualization (NFV)",
+        "hours": "6"
+      },
+      {
+        "name": "Machine Learning for Communication Networks",
+        "hours": "6"
+      },
+      {
+        "name": "Intelligent Resource Allocation and Optimization",
+        "hours": "6"
+      },
+      {
+        "name": "Edge, Fog, and Cloud-Assisted Networking",
+        "hours": "6"
+      },
+      {
+        "name": "Autonomous and Self-Organizing Networks",
+        "hours": "6"
+      },
+      {
+        "name": "Network Security and Privacy in Intelligent Networks",
+        "hours": "3"
+      },
+      {
+        "name": "Research Case Studies and Recent Advances",
+        "hours": "3"
+      },
+      {
+        "name": "Student Project Presentations and Discussions",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Nobuyoshi Terashima, Intelligent Communication Systems, Elsevier, 2002.\nHatim Chergui, Explainable AI for Communications and Networking, Elsevier, 1st Edition, 2025."
+    ],
+    "references": [
+      "T. S. Rappaport et al., Wireless Communications (Principles & advanced topics)\n“Artificial Intelligence: A Modern Approach” (Russell & Norvig)"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO5": "4, 5",
+      "MPLO6": "5",
+      "MPLO7": "5",
+      "MPLO8": "6",
+      "MPLO9": "7"
+    }
+  },
+  {
+    "code": "EE 541",
+    "title": "Industrial Automation Robots",
+    "track": "Robotics and Automation",
+    "credits": 3,
+    "prereq": "EE 512, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course examines industrial automation robots by focusing on their design, control, and integration in manufacturing systems. Students study robot kinematics, dynamics, sensors, actuators, and PLC programming using IEC 61499. Through modeling and practical implementation, the course develops skills in optimizing performance, efficiency, and reliability of automated industrial processes.",
+    "objectives": [
+      "Understand industrial robot kinematics, dynamics, and control.",
+      "Develop PLC-based automation solutions.",
+      "Simulate and optimize industrial automation systems."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain the principles of industrial robot kinematics, dynamics, sensors, actuators, control strategies, and the role of PLCs in automation systems.",
+        "plos": "1"
+      },
+      {
+        "no": "2.1",
+        "text": "Develop PLC programs using IEC 61499 for controlling industrial robots and automation processes.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Analyze robotic automation systems to optimize performance and efficiency in practical applications.",
+        "plos": "3"
+      },
+      {
+        "no": "2.3",
+        "text": "Simulate industrial automation systems using digital twin tools to design, test, and validate automation processes.",
+        "plos": "5"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to industrial automation and robotics",
+        "hours": "3"
+      },
+      {
+        "name": "Robot kinematics and dynamics",
+        "hours": "6"
+      },
+      {
+        "name": "Sensors and actuators in robotics",
+        "hours": "3"
+      },
+      {
+        "name": "Robot control strategies",
+        "hours": "6"
+      },
+      {
+        "name": "PLC fundamentals and IEC 61499 overview",
+        "hours": "3"
+      },
+      {
+        "name": "PLC programming for industrial robots",
+        "hours": "6"
+      },
+      {
+        "name": "Industrial communication networks and protocols",
+        "hours": "3"
+      },
+      {
+        "name": "Integration of robots with PLC systems",
+        "hours": "6"
+      },
+      {
+        "name": "Digital twin and simulation using Factory IO Software",
+        "hours": "6"
+      },
+      {
+        "name": "Case study",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "I. Karabegović and L. Banjanović-Mehmedović, “Industrial Robots Design, Applications and Technology”, 2020, Nova Science Publishers"
+    ],
+    "references": [
+      "J.R. Westcott, A.K. Gupta, S.K. Arora, “Industrial Automation and Robotics”, 2nd edition, 2023, Laxmi Publications Pvt Ltd."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO5": "3",
+      "MPLO6": "3",
+      "MPLO7": "5"
+    }
+  },
+  {
+    "code": "EE 542",
+    "title": "Robotic Navigation and Localization",
+    "track": "Robotics and Automation",
+    "credits": 3,
+    "prereq": "EE 512, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course trains students to design, implement, and evaluate a complete mobile robot navigation system using ROS2. Students integrate SLAM, localization, and the Nav2 stack in Gazebo and RViz2, tune system parameters, and validate performance in realistic indoor scenarios. The course emphasizes systematic debugging, reproducible experiments, and quantitative benchmarking of navigation accuracy, robustness, and efficiency.",
+    "objectives": [
+      "Implement and validate mobile robot navigation pipelines.",
+      "Apply SLAM and localization techniques.",
+      "Benchmark navigation performance using quantitative metrics."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain coordinate frames, motion models, sensor models, and SLAM principles used in mobile robot navigation and localisation.",
+        "plos": "1"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze localisation and navigation performance using experimental data and quantitative performance metrics.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Design and implement a complete ROS2-based mobile robot navigation pipeline integrating SLAM, localisation, planning, and control.",
+        "plos": "4"
+      },
+      {
+        "no": "2.3",
+        "text": "Optimize navigation system performance through systematic parameter tuning under defined constraints.",
+        "plos": "4"
+      },
+      {
+        "no": "2.4",
+        "text": "Evaluate robotic navigation solutions using advanced analytical, computational, and experimental benchmarking methods.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "3.1",
+        "text": "Communicate navigation system design, experimental methodology, and results clearly, professionally, and ethically.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Course orientation, safety, grading, and full navigation pipeline overview (what SLAM, AMCL, Nav2 do together)",
+        "hours": "3"
+      },
+      {
+        "name": "Basic understanding of ROS2",
+        "hours": "6"
+      },
+      {
+        "name": "Coordinate frames and TF2 in practice",
+        "hours": "6"
+      },
+      {
+        "name": "2D SLAM mapping with slam_toolbox: building a map, saving maps, map quality checks, and basic tuning",
+        "hours": "9"
+      },
+      {
+        "name": "Map-based localisation with AMCL: localisation setup, parameter tuning, kidnapped robot recovery, stability checks",
+        "hours": "9"
+      },
+      {
+        "name": "Nav2 essentials: bringup, costmaps, planners, controllers, recovery behaviours; tuning for corridor/classroom environments",
+        "hours": "9"
+      },
+      {
+        "name": "Real UGV deployment and benchmarking (Field): two supervised runs, log collection, metrics, and a short evidence-based report",
+        "hours": "6"
+      }
+    ],
+    "textbooks": [
+      "Thrun, Burgard, Fox, Probabilistic Robotics (core estimation mindset).\nSiegwart, Nourbakhsh, Scaramuzza, Introduction to Autonomous Mobile Robots\nBarfoot, State Estimation for Robotics (excellent for factor graphs + optimisation)"
+    ],
+    "references": [],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO5": "3",
+      "MPLO6": "4",
+      "MPLO7": "4",
+      "MPLO8": "3, 5",
+      "MPLO9": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 543",
+    "title": "Robotic Operating System (ROS)",
+    "track": "Robotics and Automation",
+    "credits": 3,
+    "prereq": "EE 512, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course introduces ROS 2 as the standard middleware for robotics software development. Students build modular robotic applications using nodes, topics, services, and actions, and implement control logic in Python. Through hands-on labs, students create ROS 2 packages, simulate robots in Gazebo, visualize data in RViz, and debug distributed robotic systems.",
+    "objectives": [
+      "Understand ROS2 architecture and core concepts.",
+      "Develop and debug ROS-based robotic applications.",
+      "Integrate sensing and actuation in simulated robotic systems."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain the architecture of ROS 2 and its core components.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe the workflow for developing, building, and launching ROS 2 applications.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "2.1",
+        "text": "Develop ROS 2 nodes in Python to implement robotic behaviors involving sensing, actuation, and communication.",
+        "plos": "4"
+      },
+      {
+        "no": "2.2",
+        "text": "Implement a simulated robot system using ROS 2.",
+        "plos": "4"
+      },
+      {
+        "no": "2.3",
+        "text": "Analyze and debug ROS 2-based robotic systems using diagnostic tools.",
+        "plos": "3"
+      },
+      {
+        "no": "3.1",
+        "text": "Demonstrate initiative and self-learning using ROS documentation and professional resources.",
+        "plos": "6, 7"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to Robotics Software and ROS",
+        "hours": "3"
+      },
+      {
+        "name": "ROS 2 Basics – Nodes and Topics",
+        "hours": "3"
+      },
+      {
+        "name": "ROS 2 Services and Actions; Console Tools",
+        "hours": "3"
+      },
+      {
+        "name": "ROS 2 Packages and Workspace Management",
+        "hours": "3"
+      },
+      {
+        "name": "Working with ROS 2 Parameters and Configuration",
+        "hours": "3"
+      },
+      {
+        "name": "Mid-Course Theory Check – Basic Robotics Concepts",
+        "hours": "3"
+      },
+      {
+        "name": "Simulation with Gazebo and Launching a Robot",
+        "hours": "3"
+      },
+      {
+        "name": "Sensors and Perception in ROS 2",
+        "hours": "3"
+      },
+      {
+        "name": "Midterm Practical Exam",
+        "hours": "3"
+      },
+      {
+        "name": "Robot Control – Navigation Basics",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "ROS 2 from Scratch by Edouard Renard (Packt, 2024)\nMastering ROS 2 for Robotics Programming (4th Edition) by Lentin Joseph & Jonathan Cacace\nA Concise Introduction to Robot Programming with ROS 2 (2nd Edition) by Francisco Martín Rico, 2025"
+    ],
+    "references": [
+      "Robot Operating System (ROS) for Absolute Beginners by Lentin Joseph, 2018\nProgramming Robots with ROS: A Practical Introduction to the ROS Framework by Quigley, Gerkey, and Smart (O’Reilly, 2015)\nROS Robotics By Example (2nd Ed.) by Carol Fairchild & Dr. Thomas Harman, 2017"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "1, 2",
+      "MPLO5": "4",
+      "MPLO6": "4",
+      "MPLO7": "3",
+      "MPLO9": "6, 7"
+    }
+  },
+  {
+    "code": "EE 544",
+    "title": "Digital Twin Systems and Applications",
+    "track": "Robotics and Automation",
+    "credits": 3,
+    "prereq": "EE 512, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course introduces digital twins as real-time virtual representations of physical systems. Students design end-to-end digital twin pipelines by modeling physical processes, integrating sensor data, and applying analytics and machine learning. Through projects and case studies, students use digital twins to monitor, predict, and optimize system behavior in robotics and industrial applications.",
+    "objectives": [
+      "Understand digital twin concepts and architectures.",
+      "Design and implement digital twin pipelines.",
+      "Evaluate physical and virtual system performance."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain the core concepts, architecture, and components of digital twin systems.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Discuss the capabilities, limitations, and application domains of digital twins.",
+        "plos": "2, 6"
+      },
+      {
+        "no": "2.1",
+        "text": "Design and implement an end-to-end digital twin pipeline integrating sensor data.",
+        "plos": "3, 4"
+      },
+      {
+        "no": "2.2",
+        "text": "Build and validate a digital replica of a physical system using real measurements.",
+        "plos": "4, 5"
+      },
+      {
+        "no": "2.3",
+        "text": "Analyze digital twin and physical system performance using quantitative metrics.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "3.1",
+        "text": "Apply data-driven or AI-based methods within digital twins responsibly.",
+        "plos": "5, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to Digital Twins",
+        "hours": "3"
+      },
+      {
+        "name": "System Modeling for Twins – Part I (Physical Modeling)",
+        "hours": "6"
+      },
+      {
+        "name": "System Modeling for Twins – Part II (Data-Driven Modeling)",
+        "hours": "9"
+      },
+      {
+        "name": "Digital Twin Architecture and Platforms",
+        "hours": "3"
+      },
+      {
+        "name": "Enabling IoT Technologies",
+        "hours": "3"
+      },
+      {
+        "name": "Synchronizing Models with Data – Data Assimilation",
+        "hours": "6"
+      },
+      {
+        "name": "Midterm Assessment & Case Studies",
+        "hours": "3"
+      },
+      {
+        "name": "Analytics and Machine Learning for Twins",
+        "hours": "6"
+      },
+      {
+        "name": "Visualization and User Interaction",
+        "hours": "3"
+      },
+      {
+        "name": "Special Topic – Digital Twins in Robotics",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Digital Twin Driven Smart Manufacturing by Fei Tao, Meng Zhang, A.Y.C. Nee (2019)\nThe Digital Twin (Springer, 2023, Editor: Noel Crespi)"
+    ],
+    "references": [],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "2, 6",
+      "MPLO5": "3, 4",
+      "MPLO6": "4, 5",
+      "MPLO7": "3, 5",
+      "MPLO9": "5, 7, 8"
+    }
+  },
+  {
+    "code": "EE 545",
+    "title": "Computer Vision and Deep Learning",
+    "track": "Robotics and Automation",
+    "credits": 3,
+    "prereq": "EE 512, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course trains students to design robotic perception systems using computer vision and deep learning. Students implement classical vision algorithms and modern neural networks for tasks such as classification, detection, and segmentation, evaluate model performance, diagnose failure modes, and integrate vision pipelines into robotics and automation workflows.",
+    "objectives": [
+      "Understand image formation and classical vision techniques.",
+      "Develop deep learning models for vision tasks.",
+      "Integrate vision systems into robotics applications."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain image formation, camera models, and classical computer vision operations for robotic perception.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Explain deep learning principles for computer vision, including CNN architectures and evaluation metrics.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "2.1",
+        "text": "Design and implement computer vision pipelines using Python and OpenCV.",
+        "plos": "4"
+      },
+      {
+        "no": "2.2",
+        "text": "Build and fine-tune deep learning models for image classification and object detection.",
+        "plos": "3, 4"
+      },
+      {
+        "no": "2.3",
+        "text": "Evaluate computer vision and deep learning models using appropriate performance metrics.",
+        "plos": "5"
+      },
+      {
+        "no": "3.1",
+        "text": "Apply responsible and ethical practices in vision and deep learning applications.",
+        "plos": "7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to Computer Vision and Deep Learning",
+        "hours": "3"
+      },
+      {
+        "name": "Image Formation and Camera Models",
+        "hours": "3"
+      },
+      {
+        "name": "Image Processing and Filtering",
+        "hours": "3"
+      },
+      {
+        "name": "Feature Detection and Description",
+        "hours": "3"
+      },
+      {
+        "name": "Multi-View Geometry and 3D Vision",
+        "hours": "3"
+      },
+      {
+        "name": "Machine Learning for Vision & Intro to Neural Networks",
+        "hours": "3"
+      },
+      {
+        "name": "Deep Learning for Images – Convolutional Neural Networks",
+        "hours": "3"
+      },
+      {
+        "name": "Advanced Neural Network Models – Vision Transformers",
+        "hours": "3"
+      },
+      {
+        "name": "Object Detection and Segmentation",
+        "hours": "3"
+      },
+      {
+        "name": "Video Analytics and Tracking – Motion estimation",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Richard Szeliski, “Computer Vision: Algorithms and Applications”, 2nd Edition, Springer, 2022 – Comprehensive reference for classical vision techniques (available free online)\nIan Goodfellow, Yoshua Bengio, Aaron Courville, “Deep Learning”, MIT Press, 2016 – Chapters on neural network foundations and CNNs\n(Recommended for Robotics) Richard Hartley & Andrew Zisserman, “Multiple View Geometry in Computer Vision”, 2nd Edition, Cambridge Univ. Press, 2004 – for in-depth study of projective geometry, camera calibration, and 3D reconstruction"
+    ],
+    "references": [
+      "D. Forsyth & J. Ponce, “Computer Vision: A Modern Approach,” 2nd Ed., 2012 – Additional reading for image processing and recognition algorithms.\nJoseph Redmon et al., research paper “YOLO: You Only Look Once” (2016) – example of a modern object detection approach (project reference)."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "1, 2",
+      "MPLO5": "4",
+      "MPLO6": "3, 4",
+      "MPLO7": "5",
+      "MPLO9": "7, 8"
+    }
+  },
+  {
+    "code": "EE 546",
+    "title": "Machine Learning for Engineering Applications",
+    "track": "Robotics and Automation",
+    "credits": 3,
+    "prereq": "EE 512, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course introduces machine learning techniques for solving engineering problems across energy systems, communications, robotics, and IoT. Students apply supervised, unsupervised, deep learning, and reinforcement learning methods using Python tools. The course emphasizes practical implementation, model evaluation, and data-driven decision making in modern electrical engineering applications.",
+    "objectives": [
+      "Understand machine learning models and training principles.",
+      "Apply ML techniques to engineering problems.",
+      "Evaluate ML solutions in terms of performance and limitations."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain machine learning paradigms, models, and training principles.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Explain how machine learning models are applied to engineering data.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "2.1",
+        "text": "Formulate engineering problems as appropriate machine learning tasks.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Implement and train machine learning models using Python-based frameworks.",
+        "plos": "4"
+      },
+      {
+        "no": "2.3",
+        "text": "Evaluate machine learning solutions using performance metrics, limitations, and interpretability criteria.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "3.1",
+        "text": "Demonstrate ethical practice, autonomy, and self-directed learning in ML-based engineering solutions.",
+        "plos": "7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to subject, need for ML, Applications",
+        "hours": "2"
+      },
+      {
+        "name": "Mathematical Foundations",
+        "hours": "4"
+      },
+      {
+        "name": "Supervised Learning I (Regression and Model evaluation)",
+        "hours": "6"
+      },
+      {
+        "name": "Supervised Learning II (Classification)",
+        "hours": "6"
+      },
+      {
+        "name": "Unsupervised Learning (Clustering, Dimensionality reduction)",
+        "hours": "4"
+      },
+      {
+        "name": "Neural Networks & Deep Learning",
+        "hours": "6"
+      },
+      {
+        "name": "Generative Models",
+        "hours": "4"
+      },
+      {
+        "name": "Reinforcement Learning (MDPs, Q-learning)",
+        "hours": "3"
+      },
+      {
+        "name": "ML in Network and Communication Systems",
+        "hours": "3"
+      },
+      {
+        "name": "ML in Renewable Energy and Power Systems",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Tom Mitchell, Machine Learning (1997)\nK. Murphy, Probabilistic Machine Learning – An Introduction (2022)\nY. Eldar et al., Machine Learning and Wireless Communications (2022)"
+    ],
+    "references": [
+      "C. Bishop, Pattern Recognition and Machine Learning (Springer 2006)\nD. Tse & P. Viswanath, Fundamentals of Wireless Communication (Cambridge University Press – 2005)"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "1, 2",
+      "MPLO5": "3",
+      "MPLO6": "4",
+      "MPLO7": "3, 5",
+      "MPLO9": "7, 8"
+    }
+  },
+  {
+    "code": "EE 547",
+    "title": "Special Topics in Robotics and Automation",
+    "track": "Robotics and Automation",
+    "credits": 3,
+    "prereq": "EE 512, EE 513",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course examines advanced and emerging topics in robotics and automation. Students analyze current research, study modern control and intelligent systems, and apply advanced automation techniques through simulations and case studies to address complex problems in contemporary robotic systems.",
+    "objectives": [
+      "Understand emerging robotics and automation technologies.",
+      "Apply advanced control and intelligent techniques.",
+      "Analyze complex automation systems using case studies."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain advanced concepts, emerging technologies, and current research trends in robotics and industrial automation.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Apply modern control strategies, intelligent systems, and automation techniques in practical and research-based projects.",
+        "plos": "4"
+      },
+      {
+        "no": "2.2",
+        "text": "Analyze complex robotics and automation problems using case studies, simulations, and digital twin tools.",
+        "plos": "3"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Overview of Advanced Robotics and Automation Trends",
+        "hours": "3"
+      },
+      {
+        "name": "Robot Control Architectures and Systems",
+        "hours": "6"
+      },
+      {
+        "name": "Sensor Integration and Perception for Robotics",
+        "hours": "6"
+      },
+      {
+        "name": "Motion Planning and Path Optimization",
+        "hours": "3"
+      },
+      {
+        "name": "PLCs and IEC 61499 for Advanced Automation",
+        "hours": "6"
+      },
+      {
+        "name": "Human-Robot Interaction and Collaborative Robots",
+        "hours": "3"
+      },
+      {
+        "name": "Digital Twin and Simulation Techniques",
+        "hours": "6"
+      },
+      {
+        "name": "Machine Learning and AI in Robotics",
+        "hours": "6"
+      },
+      {
+        "name": "Case Studies",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "B. Siciliano, O. Khatib, “Springer Handbook of Robotics”, 2nd Ed, 2016, Springer."
+    ],
+    "references": [
+      "M.P. Groover, “Automation, Production Systems, and Computer-Integrated Manufacturing”, 5th Ed, 2020 Pearson."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "2",
+      "MPLO5": "4",
+      "MPLO6": "3"
+    }
+  },
+  {
+    "code": "EE 551",
+    "title": "Advanced Computer Architecture",
+    "track": "Embedded systems and IoT",
+    "credits": 3,
+    "prereq": "EE 512",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course develops advanced understanding of modern computer architectures. Students analyze RISC-V instruction sets, pipelined and superscalar processors, memory hierarchies, and multicore systems, and evaluate architectural trade-offs affecting performance, power, scalability, and efficiency in contemporary computing platforms.",
+    "objectives": [
+      "Understand modern processor and system architectures.",
+      "Analyze architectural trade-offs affecting performance and power.",
+      "Evaluate architectures using quantitative metrics."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain advanced instruction set architecture and microarchitecture concepts.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe memory hierarchy organization",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze computer architecture performance using quantitative metrics",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Compare architectural design alternatives with respect to performance, power consumption, and scalability constraints.",
+        "plos": "5"
+      },
+      {
+        "no": "2.3",
+        "text": "Apply architectural principles to assess and optimize system-level behavior for modern computing workloads.",
+        "plos": "5"
+      },
+      {
+        "no": "3.1",
+        "text": "Demonstrate independent analytical thinking and commitment to continuous learning in the field of computer architecture.",
+        "plos": "7"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Overview of Modern Computer Architecture and Performance Metrics (CPI, Throughput, Amdahl’s Law)",
+        "hours": "5"
+      },
+      {
+        "name": "Instruction Set Architecture (ISA) Design: RISC-V Principles and Comparison with x86",
+        "hours": "5"
+      },
+      {
+        "name": "RISC-V Instruction Formats, Addressing Modes, and Privileged Architecture",
+        "hours": "5"
+      },
+      {
+        "name": "Pipelined Processor Design and Pipeline Hazards (Data, Control, Structural)",
+        "hours": "5"
+      },
+      {
+        "name": "Advanced Microarchitecture: Superscalar Execution and Out-of-Order Processing",
+        "hours": "5"
+      },
+      {
+        "name": "Branch Prediction, Speculation, and Instruction-Level Parallelism",
+        "hours": "5"
+      },
+      {
+        "name": "Multicore and Multithreaded Architectures",
+        "hours": "5"
+      },
+      {
+        "name": "Memory Hierarchy Design: Caches, Virtual Memory, and TLBs",
+        "hours": "5"
+      },
+      {
+        "name": "Architectural Trade-offs: Performance, Power, Energy Efficiency, and Scalability",
+        "hours": "5"
+      }
+    ],
+    "textbooks": [
+      "Digital Design and Computer Architecture: RISC-V Edition (Harris & Harris). 2021 Risc-V edition, Morgan Kaufman"
+    ],
+    "references": [
+      "Computer Organization and Design RISC-V Edition: The Hardware Software Interface, by Petterson and Hennesy"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "2",
+      "MPLO5": "3",
+      "MPLO6": "5",
+      "MPLO7": "5",
+      "MPLO9": "7"
+    }
+  },
+  {
+    "code": "EE 552",
+    "title": "Hardware Testing and Verification",
+    "track": "Embedded systems and IoT",
+    "credits": 3,
+    "prereq": "EE 512",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course prepares students to verify and validate embedded hardware systems using systematic testing methodologies. Students develop test plans, perform hardware–software co-verification, apply debugging and instrumentation tools, and evaluate system reliability to ensure deployment-ready embedded and IoT designs.",
+    "objectives": [
+      "Understand verification and testing methodologies.",
+      "Design structured test plans and verification strategies.",
+      "Apply debugging and validation techniques responsibly."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain advanced concepts, methodologies, and workflows for hardware verification, validation, and testing in embedded systems.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "2.1",
+        "text": "Design structured and optimized test plans and verification strategies for embedded hardware platforms within defined technical constraints.",
+        "plos": "4"
+      },
+      {
+        "no": "2.2",
+        "text": "Apply hardware–software co-verification, debugging, and experimental testing techniques using modern tools.",
+        "plos": "3, 5"
+      },
+      {
+        "no": "3.1",
+        "text": "Demonstrate professional communication, ethical responsibility, and self-directed learning in hardware testing and verification activities.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to Hardware Verification & Testing",
+        "hours": "3"
+      },
+      {
+        "name": "Verification vs Validation vs Testing",
+        "hours": "3"
+      },
+      {
+        "name": "Embedded System Design Flow & Test Planning",
+        "hours": "6"
+      },
+      {
+        "name": "Functional Verification of Embedded Hardware",
+        "hours": "6"
+      },
+      {
+        "name": "Hardware–Software Co-Verification",
+        "hours": "6"
+      },
+      {
+        "name": "Fault Models and Failure Analysis",
+        "hours": "6"
+      },
+      {
+        "name": "Debugging Interfaces and Instrumentation Tools",
+        "hours": "6"
+      },
+      {
+        "name": "Reliability and Stress Testing",
+        "hours": "6"
+      },
+      {
+        "name": "Embedded & IoT Case Studies",
+        "hours": "3"
+      },
+      {
+        "name": "Revision",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "NPTEL – Embedded Systems: Design Verification and Test"
+    ],
+    "references": [
+      "Malvin A Breuer, Diagnosis and Reliable Design of Digital System, Computer Science Press \nBart Broekman, Edwi Notenboom, Testing Embedded Software, Pearson Education\nDaniel W lewis, Fundamentals of Embedded Software: where C and Assembly meet, Prentice Hall"
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO5": "4",
+      "MPLO6": "3, 5",
+      "MPLO9": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 553",
+    "title": "Cloud Computing",
+    "track": "Embedded systems and IoT",
+    "credits": 3,
+    "prereq": "EE 512",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course introduces cloud computing architectures and services with a focus on IoT and embedded applications. Students deploy and manage cloud resources using Python, design scalable data pipelines, integrate IoT devices, and apply DevOps practices to build secure, cost-effective cloud solutions.",
+    "objectives": [
+      "Understand cloud architectures and service models.",
+      "Design and deploy cloud-based engineering solutions.",
+      "Evaluate scalability, performance, and cost trade-offs."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain cloud computing concepts, architectures, and service models including IaaS, PaaS, and SaaS.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe virtualization, multi-tenant infrastructures, and cloud deployment models.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Configure cloud resources using Python-based tools for compute, storage, and networking services.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Design and implement cloud-based data pipelines for IoT applications including ingestion, processing, storage, and monitoring.",
+        "plos": "4"
+      },
+      {
+        "no": "2.3",
+        "text": "Evaluate cloud-based solutions using performance, scalability, cost, and monitoring metrics and apply DevOps practices.",
+        "plos": "5"
+      },
+      {
+        "no": "3.1",
+        "text": "Demonstrate professional responsibility by applying ethical, secure, cost-aware, and self-directed practices in cloud solution development.",
+        "plos": "7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction & Fundamentals",
+        "hours": "3"
+      },
+      {
+        "name": "Virtualization & Data Centers",
+        "hours": "3"
+      },
+      {
+        "name": "Cloud Compute & REST APIs",
+        "hours": "3"
+      },
+      {
+        "name": "Storage & Databases",
+        "hours": "3"
+      },
+      {
+        "name": "Serverless & Container Orchestration",
+        "hours": "3"
+      },
+      {
+        "name": "Cloud Networking & Security",
+        "hours": "3"
+      },
+      {
+        "name": "Data Analytics in the Cloud",
+        "hours": "3"
+      },
+      {
+        "name": "IoT Data Integration",
+        "hours": "3"
+      },
+      {
+        "name": "Machine Learning Cloud Services",
+        "hours": "6"
+      },
+      {
+        "name": "DevOps/CI-CD",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Fox et al., Engineering Software as a Service (Agile Cloud)\nKleppmann, Designing Data-Intensive Applications"
+    ],
+    "references": [],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO2": "2",
+      "MPLO5": "3",
+      "MPLO6": "4",
+      "MPLO7": "5",
+      "MPLO9": "7, 8"
+    }
+  },
+  {
+    "code": "EE 554",
+    "title": "Internet of Things (IoT)",
+    "track": "Embedded systems and IoT",
+    "credits": 3,
+    "prereq": "EE 512",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course develops advanced knowledge of IoT systems from an electrical engineering perspective. Students design and evaluate IoT solutions that integrate sensing, embedded platforms, communication protocols, and cloud services, while addressing scalability, performance, and security challenges.",
+    "objectives": [
+      "Understand IoT architectures and communication protocols.",
+      "Design integrated IoT solutions.",
+      "Address ethical, security, and standardization issues."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Explain IoT architectures, system components, and design principles.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Describe communication protocols, data models, and platforms used in modern IoT systems.",
+        "plos": "2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze IoT system requirements and constraints for different application domains.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Design and evaluate IoT solutions integrating sensing, embedded devices, communication protocols, and cloud services.",
+        "plos": "4"
+      },
+      {
+        "no": "2.3",
+        "text": "Communicate IoT system designs and performance analyses clearly in written and oral forms.",
+        "plos": "6"
+      },
+      {
+        "no": "3.1",
+        "text": "Identify and apply relevant standards, technical documentation, and emerging technologies to support continuous learning in IoT.",
+        "plos": "1, 7"
+      },
+      {
+        "no": "3.2",
+        "text": "Demonstrate professional responsibility and ethical awareness when designing and deploying IoT systems.",
+        "plos": "6, 7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Sensors, actuators, and embedded IoT platforms",
+        "hours": "6"
+      },
+      {
+        "name": "IoT communication technologies and protocols (MQTT, CoAP, HTTP, LPWAN, etc.)",
+        "hours": "8"
+      },
+      {
+        "name": "Data acquisition, edge computing, and cloud integration",
+        "hours": "7"
+      },
+      {
+        "name": "IoT system design, interoperability, and scalability",
+        "hours": "6"
+      },
+      {
+        "name": "Security, privacy, and reliability in IoT systems",
+        "hours": "6"
+      },
+      {
+        "name": "IoT case studies and emerging trends",
+        "hours": "6"
+      }
+    ],
+    "textbooks": [
+      "Bahga, A., & Madisetti, V. (2014). Internet of Things: A Hands-On Approach. VPT.\nMinerva, R., Biru, A., & Rotondi, D. (2015). Towards a Definition of the Internet of Things (IoT). IEEE."
+    ],
+    "references": [
+      "Gubbi, J., Buyya, R., Marusic, S., & Palaniswami, M. (2013). Internet of Things (IoT): A Vision, Architectural Elements, and Future Directions. Elsevier."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "2",
+      "MPLO5": "3",
+      "MPLO6": "4",
+      "MPLO7": "6",
+      "MPLO9": "1, 7",
+      "MPLO10": "6, 7, 8"
+    }
+  },
+  {
+    "code": "EE 555",
+    "title": "Sensor Fusion and State Estimation",
+    "track": "Embedded systems and IoT",
+    "credits": 3,
+    "prereq": "EE 512",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course trains students to analyze and implement state estimation and sensor fusion techniques for dynamic systems. Students apply Kalman filtering methods using MATLAB simulations and evaluate estimator performance under uncertainty for robotics, navigation, and control applications.",
+    "objectives": [
+      "Develop theoretical understanding of state estimation and sensor fusion for dynamic systems.",
+      "Analyze and implement estimation algorithms such as Kalman filters and their variants using MATLAB simulations to evaluate performance under uncertainty and noise.",
+      "Apply state estimation and sensor fusion methods to real-world engineering problems in areas such as control systems, robotics, navigation, and autonomous systems."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Describe advanced principles and methodologies of state estimation and sensor fusion for dynamic systems, including stochastic modeling and Kalman filtering.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "2.1",
+        "text": "Analyze state estimation and sensor fusion problems using MATLAB-based computational models.",
+        "plos": "3"
+      },
+      {
+        "no": "2.2",
+        "text": "Evaluate estimation and sensor fusion techniques under uncertainty and measurement noise using analytical and simulation-based methods.",
+        "plos": "5"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Introduction to State Estimation and Sensor Fusion",
+        "hours": "3"
+      },
+      {
+        "name": "Probability, Random Variables, and Noise",
+        "hours": "3"
+      },
+      {
+        "name": "Linear Systems and Observability",
+        "hours": "3"
+      },
+      {
+        "name": "Kalman Filter: Theory and Implementation",
+        "hours": "6"
+      },
+      {
+        "name": "Extended Kalman Filter (EKF)",
+        "hours": "6"
+      },
+      {
+        "name": "Unscented Kalman Filter (UKF)",
+        "hours": "6"
+      },
+      {
+        "name": "Particle Filters and Nonlinear Estimation",
+        "hours": "3"
+      },
+      {
+        "name": "Simultaneous localization and mapping (SLAM)",
+        "hours": "3"
+      },
+      {
+        "name": "Sensors and filter validation",
+        "hours": "3"
+      },
+      {
+        "name": "Case Study",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Jitendra R. Raol, “Multi-Sensor Data Fusion with MATLAB”, 2010, CRC Press.\nPaul Zarchan, Howard Musoff, “Fundamentals of Kalman Filtering: A Practical Approach”, 4th Edition, 2014, AIAA Education Series."
+    ],
+    "references": [
+      "Mathworks, “Sensor Fusion and Tracking for Autonomous Systems”."
+    ],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1, 2",
+      "MPLO5": "3",
+      "MPLO6": "5"
+    }
+  },
+{
+  "code": "EE 556",
+  "title": "Advanced Engineering Design Project",
+  "track": "Embedded systems and IoT",
+  "credits": 3,
+  "prereq": "EE 511, EE 512, EE 513",
+  "coreq": "N.A.",
+  "re": "Elective",
+  "description": "This course develops graduate students’ ability to design innovative electrical engineering systems that satisfy technical, economic, environmental, safety, and societal constraints. Students apply advanced engineering methods to conceive, evaluate, prototype, and validate integrated solutions in areas such as smart systems, communications, power electronics, robotics, and embedded intelligence.",
+  "objectives": [
+    "Apply structured engineering design methodologies to solve open-ended problems and generate innovative concepts.",
+    "Evaluate design alternatives using appropriate engineering criteria and realistic technical, economic, environmental, and operational constraints.",
+    "Design, build, and validate integrated engineering systems through prototyping, experimentation, and simulation.",
+    "Communicate professional design solutions effectively through technical reports, presentations, and documentation."
+  ],
+  "clos": [
+    {
+      "no": "1.1",
+      "text": "Explain advanced engineering design methodologies, innovation processes, and systems engineering principles.",
+      "plos": "1, 2"
+    },
+    {
+      "no": "1.2",
+      "text": "Describe technical, economic, sustainability, manufacturability, safety, and ethical constraints in engineering design.",
+      "plos": "2, 5, 7"
+    },
+    {
+      "no": "2.1",
+      "text": "Formulate design requirements and technical specifications from stakeholder needs.",
+      "plos": "3, 4"
+    },
+    {
+      "no": "2.2",
+      "text": "Develop and compare multiple engineering design alternatives using analytical and simulation tools.",
+      "plos": "3, 4, 5"
+    },
+    {
+      "no": "2.3",
+      "text": "Implement and test prototypes or proof-of-concept systems.",
+      "plos": "4, 5"
+    },
+    {
+      "no": "3.1",
+      "text": "Demonstrate leadership, teamwork, ethical responsibility, and independent decision-making during design projects.",
+      "plos": "6, 7, 8"
+    }
+  ],
+  "topics": [
+    {
+      "name": "Engineering Design Process & Systems Thinking",
+      "hours": "5"
+    },
+    {
+      "name": "Needs Analysis & Requirements Engineering",
+      "hours": "5"
+    },
+    {
+      "name": "Concept Generation & Innovation Tools",
+      "hours": "5"
+    },
+    {
+      "name": "Multi-Criteria Design Trade-offs",
+      "hours": "5"
+    },
+    {
+      "name": "Design Using Simulation & Digital Twins",
+      "hours": "5"
+    },
+    {
+      "name": "Prototyping (Hardware/Software)",
+      "hours": "5"
+    },
+    {
+      "name": "Reliability, Safety & Sustainability",
+      "hours": "5"
+    },
+    {
+      "name": "Cost, Manufacturability & Scalability",
+      "hours": "5"
+    },
+    {
+      "name": "Final Integrated Design Project",
+      "hours": "5"
+    }
+  ],
+  "textbooks": [
+    "Pahl, G., Beitz, W., Feldhusen, J., & Grote, K.-H. (2007). Engineering Design: A Systematic Approach (3rd ed.). Springer."
+  ],
+  "references": [
+    "Clarkson, P. J., & Eckert, C. (Eds.). (2023). The Design and Development Process: Perspectives, Approaches and Models. Springer."
+  ],
+  "dept": "Department of Communications and Networks Engineering",
+  "program": "MSc EE",
+  "version": "1",
+  "revision": "16/4/2026",
+  "plos": {
+    "MPLO1": "1, 2",
+    "MPLO2": "2, 5, 7",
+    "MPLO3": "3, 4",
+    "MPLO4": "3, 4, 5",
+    "MPLO5": "4, 5",
+    "MPLO6": "6, 7, 8"
+  }
+},  
+  {
+    "code": "EE 556",
+    "title": "Special Topics in Embedded Systems and IoT",
+    "track": "Embedded systems and IoT",
+    "credits": 3,
+    "prereq": "EE 512",
+    "coreq": "N.A.",
+    "re": "Elective",
+    "description": "This course explores advanced topics in embedded systems and IoT technologies, with emphasis on emerging architectures, security, energy efficiency, and system-level trade-offs.",
+    "objectives": [
+      "Explore advanced and emerging embedded and IoT technologies.",
+      "Design secure and energy-aware embedded solutions.",
+      "Evaluate system trade-offs and lifecycle considerations."
+    ],
+    "clos": [
+      {
+        "no": "1.1",
+        "text": "Describe state estimation and sensor fusion problems using MATLAB-based computational models.",
+        "plos": "1"
+      },
+      {
+        "no": "1.2",
+        "text": "Explain estimation and sensor fusion techniques under uncertainty and measurement noise using analytical and simulation-based methods.",
+        "plos": "1, 2"
+      },
+      {
+        "no": "2.1",
+        "text": "Design and implement secure, resource-constrained embedded IoT solutions incorporating embedded intelligence and lifecycle management.",
+        "plos": "4"
+      },
+      {
+        "no": "2.2",
+        "text": "Analyze and optimize system-level trade-offs such as latency, energy, accuracy, reliability, and security in edge and IoT applications.",
+        "plos": "3"
+      },
+      {
+        "no": "2.3",
+        "text": "Evaluate embedded and IoT solutions using experimental measurements, benchmarking metrics, and comparative analysis.",
+        "plos": "5"
+      },
+      {
+        "no": "3.1",
+        "text": "Demonstrate professional responsibility and autonomy by applying ethical, security, privacy, and self-directed learning practices.",
+        "plos": "7, 8"
+      }
+    ],
+    "topics": [
+      {
+        "name": "Modern Embedded Software & RTOS",
+        "hours": "9"
+      },
+      {
+        "name": "Embedded Intelligence",
+        "hours": "9"
+      },
+      {
+        "name": "Midterm Exam & Review",
+        "hours": "3"
+      },
+      {
+        "name": "Advanced Topics in Embedded Systems",
+        "hours": "3"
+      },
+      {
+        "name": "Interoperability & Standards",
+        "hours": "3"
+      },
+      {
+        "name": "Edge Computing & Analytics",
+        "hours": "6"
+      },
+      {
+        "name": "Emerging & Rotating Topics",
+        "hours": "12"
+      },
+      {
+        "name": "Final Exam / Presentation",
+        "hours": "3"
+      }
+    ],
+    "textbooks": [
+      "Embedded Systems: Zephyr Project Documentation\nWarden & Situnayake, TinyML (O’Reilly)"
+    ],
+    "references": [],
+    "dept": "Department of Communications and Networks Engineering",
+    "program": "MSc EE",
+    "version": "1",
+    "revision": "16/4/2026",
+    "plos": {
+      "MPLO1": "1",
+      "MPLO2": "1, 2",
+      "MPLO5": "4",
+      "MPLO6": "3",
+      "MPLO7": "5",
+      "MPLO9": "7, 8"
+    }
+  }
+]

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta name="robots" content="noindex, nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSc EE Unified Portal — Dynamic JSON View</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1020;
+  --panel:#121a2d;
+  --panel2:#18233b;
+  --ink:#e9eefb;
+  --muted:#98a6c7;
+  --line:rgba(255,255,255,.08);
+  --blue:#5aa2ff;
+  --purple:#8b7cff;
+  --gold:#f5b942;
+  --green:#35c38f;
+  --red:#ff6b6b;
+  --pink:#ef5da8;
+  --shadow:0 18px 50px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',sans-serif;background:radial-gradient(circle at top right, rgba(90,162,255,.12), transparent 28%),linear-gradient(180deg,#0a0f1e,#0b1020 30%,#0d1324);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.container{max-width:1380px;margin:0 auto;padding:0 24px}
+header{padding:34px 0 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,16,32,.86);backdrop-filter:blur(12px);z-index:20}
+.nav{display:flex;justify-content:space-between;gap:16px;align-items:center}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,var(--blue),var(--purple));display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 0 30px rgba(90,162,255,.3)}
+.brand h1{margin:0;font-size:24px;line-height:1.1}
+.brand p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.navlinks{display:flex;flex-wrap:wrap;gap:10px}
+.navlinks a{padding:10px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px}
+.hero{padding:56px 0 28px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:22px;align-items:stretch}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
+.hero-main{padding:34px}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(90,162,255,.12);color:#b9d4ff;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.hero h2{font-size:48px;line-height:1.06;margin:18px 0 14px;letter-spacing:-1.2px}
+.hero p{font-size:17px;line-height:1.7;color:var(--muted);max-width:780px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{padding:13px 18px;border-radius:14px;font-weight:700;font-size:14px;border:1px solid var(--line);background:var(--panel2)}
+.btn.primary{background:linear-gradient(135deg,var(--blue),var(--purple));border:none;color:white}
+.hero-side{padding:24px;display:grid;gap:14px}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.stat{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.stat .num{font-size:30px;font-weight:800;background:linear-gradient(135deg,var(--blue),#c09cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat .lbl{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+.callout{padding:18px;border-radius:18px;background:rgba(53,195,143,.08);border:1px solid rgba(53,195,143,.18)}
+.callout h3{margin:0 0 8px;font-size:16px}
+.callout p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+section{padding:20px 0}
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}
+.section-title h3{margin:0;font-size:28px}
+.section-title p{margin:0;color:var(--muted);max-width:700px;line-height:1.6}
+.track-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.track{padding:0;overflow:hidden}
+.track-head{padding:22px;border-bottom:2px solid var(--accent)}
+.track-head .icon{font-size:30px;margin-bottom:10px}
+.track-head h4{margin:0 0 8px;font-size:18px;min-height:44px}
+.track-head p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.track-body{padding:20px}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.pill{font-size:11px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.05);color:#cdd7f6;border:1px solid var(--line)}
+.course-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.course-item{padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);font-size:13px;color:#dbe3fb}
+.course-item span{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.examples{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.example{padding:24px}
+.example h4{margin:0 0 8px;font-size:22px}
+.example .tag{display:inline-block;margin-bottom:12px;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.example p{margin:0 0 16px;color:var(--muted);line-height:1.65}
+.path{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.badge{padding:7px 10px;border-radius:999px;font-size:12px;font-weight:600;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.outcome{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line);font-size:14px;line-height:1.6}
+.portal-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.linkcard{padding:22px}
+.linkcard h4{margin:0 0 8px;font-size:21px}
+.linkcard p{margin:0 0 16px;color:var(--muted);line-height:1.65}
+.linkstack{display:grid;gap:12px}
+.deep-link{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.deep-link small{display:block;color:var(--muted);margin-top:3px}
+.deep-link .go{color:#b9d4ff;font-weight:700;white-space:nowrap}
+.footer{padding:34px 0 48px;color:var(--muted);font-size:13px}
+.note{padding:18px 20px;border-radius:18px;background:rgba(245,185,66,.09);border:1px solid rgba(245,185,66,.2);line-height:1.7;color:#f6e3b0}
+@media (max-width:1150px){.hero-grid,.portal-grid,.examples{grid-template-columns:1fr}.track-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.track-grid{grid-template-columns:1fr}.hero h2{font-size:34px}.nav{flex-direction:column;align-items:flex-start}.navlinks{display:none}.container{padding:0 16px}}
+
+.dynamic-note{margin-top:12px;font-size:12px;color:var(--muted)}.top-mini{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.top-mini a{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}</style>
+</head>
+<body><header><div class="container nav"><div class="brand"><div class="logo">⚡</div><div><h1>MSc EE Unified Portal</h1><p>Dynamic view connected to the central MSc EE JSON file</p></div></div><div class="navlinks"><a href="index.html">MSc Home</a><a href="#tracks">Tracks</a><a href="#examples">Student Examples</a><a href="#portal-links">Dashboards</a></div></div></header>
+<main class="container"><section class="hero"><div class="hero-grid"><div class="panel hero-main"><div class="kicker">Flexible program design</div><h2>One program, four focus areas, and room for cross-disciplinary specialization.</h2><p>This portal presents the MSc in Electrical Engineering as a flexible ecosystem. Students may build depth in one concentration area, or shape a research theme that combines courses from different areas such as AI, robotics, embedded systems, communications, and sustainable energy.</p><div class="cta"><a class="btn primary" href="#examples">View student pathway examples</a><a class="btn" href="concentration-view.html">Open Concentration View</a><a class="btn" href="course-view-v4.html">Open Course Dashboard V4 Style</a></div><div class="dynamic-note">Content is loaded from <code>../data/msc_ee_courses_full.json</code>.</div></div><div class="panel hero-side"><div class="stat-grid" id="heroStats"></div><div class="callout"><h3>Advising message</h3><p>The program is not restricted to a single rigid concentration. A student can pursue a pure track pathway or define a specific topic that strategically draws from multiple focus areas.</p></div></div></div></section>
+<section id="tracks"><div class="section-title"><h3>Focus Areas</h3><p>Each concentration area has a distinct identity, but students are also free to combine courses across areas when a research topic requires it.</p></div><div class="track-grid" id="trackGrid"></div></section>
+<section id="examples"><div class="section-title"><h3>Student Pathway Examples</h3><p>Two advising models: depth in one focus area, or a cross-disciplinary pathway built around a research problem.</p></div><div class="examples"><div class="panel example"><span class="tag" style="background:rgba(239,68,68,.12);color:#fca5a5">Focused specialist</span><h4>Deep specialization in one focus area</h4><p>A student can select electives mainly from one concentration area to develop strong depth.</p><div class="path" id="focusedPath"></div><div class="outcome">Outcome: a coherent specialization profile suitable for focused thesis work.</div></div><div class="panel example"><span class="tag" style="background:rgba(90,162,255,.12);color:#b9d4ff">Cross-disciplinary innovator</span><h4>Research theme across several areas</h4><p>A student can combine courses from several focus areas to support a specific research theme, such as smart autonomous systems.</p><div class="path" id="mixedPath"></div><div class="outcome">Outcome: a customized study plan aligned with interdisciplinary graduate research.</div></div></div></section>
+<section id="portal-links"><div class="section-title"><h3>Dynamic MSc Views</h3><p>These views keep your original visual language while reading from the central JSON file.</p></div><div class="portal-grid"><div class="panel linkcard"><h4>Curriculum Intelligence Views</h4><p>Use these dashboards for advising, committee review, and curriculum exploration.</p><div class="linkstack"><a class="deep-link" href="index.html"><span><b>MSc Program Main View</b><small>Central MSc entry page</small></span><span class="go">Open →</span></a><a class="deep-link" href="concentration-view.html"><span><b>Concentration Areas View</b><small>Four-track visual elective guide</small></span><span class="go">Open →</span></a><a class="deep-link" href="course-view-v4.html"><span><b>Course Dashboard V4 Style</b><small>Searchable course details and CLO/PLO mappings</small></span><span class="go">Open →</span></a></div></div><div class="panel linkcard"><h4>Data-first workflow</h4><p>Update the JSON once. The portal pages refresh automatically from the same source of truth.</p><div class="note">Single source of truth: <code>data/msc_ee_courses_full.json</code>. Use GitHub Pages or a local server for dynamic loading.</div></div></div></section>
+<div class="footer">MSc EE Unified Portal — dynamic JSON edition.</div></main>
+<script>
+const DATA_URL = '../data/msc_ee_courses_full.json';
+async function loadCourses(){
+  const res = await fetch(DATA_URL);
+  if(!res.ok) throw new Error('Could not load '+DATA_URL);
+  return await res.json();
+}
+function esc(s){return String(s ?? '').replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function uniq(a){return [...new Set(a.filter(Boolean))];}
+function trackMeta(track){
+  const map={
+    'Electrical Power and Energy systems':{icon:'⚡',color:'#f59e0b',interest:'You are interested in smart grids, renewable energy integration, hydrogen technologies, reliability, control, and electric drives.',short:'Smart grids, renewable integration, hydrogen technologies, drives, and energy sustainability.',tags:['Renewables','Smart Grid','Hydrogen']},
+    'Intelligent Communications and Networks':{icon:'📡',color:'#10b981',interest:'You are interested in 5G/6G, wireless communications, optical networks, digital signal processing, and advanced protocols.',short:'Wireless systems, optical links, DSP, digital communications, and advanced networks.',tags:['5G/6G','DSP','Networks']},
+    'Robotics and Automation':{icon:'🤖',color:'#ef4444',interest:'You are interested in automation, robotics, navigation, localization, ROS, computer vision, and intelligent control.',short:'Autonomous systems, ROS, navigation, digital twins, and intelligent perception.',tags:['ROS2','Navigation','Vision']},
+    'Embedded systems and IoT':{icon:'🧠',color:'#ec4899',interest:'You are interested in embedded intelligence, IoT systems, edge AI, cybersecurity, sensor fusion, and smart connected devices.',short:'Embedded intelligence, edge AI, IoT systems, sensor fusion, and secure connected systems.',tags:['IoT','Edge AI','Sensors']},
+    'Core':{icon:'📘',color:'#388bfd',interest:'Required foundation courses supporting research, modelling, embedded systems, mathematics, and graduate research practice.',short:'Graduate foundations in mathematics, modelling, embedded systems, and research methods.',tags:['Required','Foundation','Research']}
+  };
+  return map[track] || {icon:'📚',color:'#8b7cff',interest:'Courses grouped under this focus area.',short:'Specialized MSc EE course group.',tags:['MSc EE']};
+}
+function coursesByTrack(courses, includeCore=false){
+  const groups={};
+  courses.forEach(c=>{ if(includeCore || c.track !== 'Core') (groups[c.track] ||= []).push(c); });
+  return groups;
+}
+
+function render(courses){
+ const tracks=Object.keys(coursesByTrack(courses,false));
+ document.getElementById('heroStats').innerHTML=`<div class="stat"><div class="num">${tracks.length}</div><div class="lbl">Focus Areas</div></div><div class="stat"><div class="num">${courses.length}</div><div class="lbl">Courses</div></div><div class="stat"><div class="num">2</div><div class="lbl">Path Models</div></div><div class="stat"><div class="num">∞</div><div class="lbl">Theme Combinations</div></div>`;
+ document.getElementById('trackGrid').innerHTML=tracks.map(t=>{const m=trackMeta(t); const list=courses.filter(c=>c.track===t).slice(0,3); return `<article class="panel track" style="--accent:${m.color}"><div class="track-head"><div class="icon">${m.icon}</div><h4>${esc(t)}</h4><p>${esc(m.short)}</p></div><div class="track-body"><div class="pillrow">${m.tags.map(x=>`<span class="pill">${esc(x)}</span>`).join('')}</div><div class="course-list">${list.map(c=>`<div class="course-item">${esc(c.code)} — ${esc(c.title)}<span>${esc((c.description||'').slice(0,90))}...</span></div>`).join('')}</div></div></article>`;}).join('');
+ const robotics=courses.filter(c=>c.track==='Robotics and Automation').slice(0,3);
+ const mixed=['EE 542','EE 555','EE 531'].map(code=>courses.find(c=>c.code===code)).filter(Boolean);
+ document.getElementById('focusedPath').innerHTML=robotics.map(c=>`<span class="badge">${esc(c.code)}: ${esc(c.title)}</span>`).join('');
+ document.getElementById('mixedPath').innerHTML=mixed.map(c=>`<span class="badge">${esc(c.code)}: ${esc(c.title)}</span>`).join('');
+}
+loadCourses().then(render).catch(e=>{document.querySelector('main').insertAdjacentHTML('afterbegin',`<div class="note">Could not load JSON. Run with <code>python -m http.server 8000</code> or publish to GitHub Pages.</div>`)});
+</script>
+<footer class="portal-footer">
+  <div><strong>Curriculum Committee, Department of Communications and Networks Engineering, &copy; 2026</strong></div>
+  <div>College of Engineering - Prince Sultan University, Riyadh KSA 11586</div>
+</footer>
+
+</body></html>

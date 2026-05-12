@@ -1,0 +1,2015 @@
+{
+  "program": "Electrical Engineering",
+  "curriculum": {
+    "generated_on": "2026-02-05T18:53:29",
+    "program": "Electrical Engineering",
+    "courses": [
+      {
+        "course_code": "EE 101",
+        "course_title": "Computer Programming for Engineering",
+        "type": "College",
+        "required_or_elective": "Required",
+        "performance_level": "I",
+        "year": "1",
+        "level": "1",
+        "credit_hours": "4",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Define fundamental concepts of programming along with problem-solving techniques and analytical thinking.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Explain the various logic using various operators and expressions.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Write a programming code in Python.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Examine program code using Python",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 201",
+        "course_title": "Introduction to Circuits",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "I",
+        "year": "2",
+        "level": "3",
+        "credit_hours": "4",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Recognize the main concepts of electrical parameters and their interrelations.\nExplain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Analyze DC/AC electric circuits using Ohm`s law, Kirchhoff's circuit laws, and voltage/current divider rules.\nAnalyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Analyze DC/AC electric circuits using different analysis techniques such as Mesh, Nodal, and Thevenin.\nAnalyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Analyze sinusoidal signals, reactance, admittance, and power using phasor forms.\nInvestigate electric circuits through experiments and simulations",
+            "mapped_sos": [
+              "SO1",
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI12",
+              "PI62",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Demonstrate DC/AC electric circuits using hardware boards and simulation in group activities.\nContribute to team tasks and objectives in electric circuits laboratory activities",
+            "mapped_sos": [
+              "SO5"
+            ],
+            "pi_codes": [
+              "PI51"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 10,
+            "clo_text": "Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions",
+            "mapped_sos": [
+              "SO4"
+            ],
+            "pi_codes": [
+              "PI41",
+              "PI42"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 211",
+        "course_title": "Electronic Fundamentals",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "I",
+        "year": "2",
+        "level": "4",
+        "credit_hours": "4",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Solve fundamental electronic circuit problems involving diodes, BJTs, and operational amplifiers using principles of electronics and circuit theory.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Explain the operation and applications of semiconductor devices and amplifiers using appropriate technical language and circuit representations.",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Design basic electronic circuits such as rectifiers, transistor amplifiers, and operational-amplifier applications to satisfy given performance requirements.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI23",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Perform laboratory experiments on electronic circuits and analyze the resulting data to verify theoretical concepts.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI62",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Collaborate effectively in laboratory activities to build, test, and troubleshoot electronic circuits.",
+            "mapped_sos": [
+              "SO5"
+            ],
+            "pi_codes": [
+              "PI51"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Demonstrate experimentally basic electronic circuits and their applications",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 221",
+        "course_title": "Logic Design",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "I",
+        "year": "2",
+        "level": "3",
+        "credit_hours": "4",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices.",
+            "mapped_sos": [
+              "SO1",
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI12",
+              "PI21"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Explain different binary number systems and arithmetic.",
+            "mapped_sos": [
+              "SO2",
+              "SO5"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI51"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Explain Boolean expressions using Karnaugh Map.",
+            "mapped_sos": [
+              "SO2",
+              "SO5"
+            ],
+            "pi_codes": [
+              "PI23",
+              "PI51"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Analyze and design combinational logic circuit.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI62",
+              "PI63"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 7,
+            "clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI62",
+              "PI63"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 10,
+            "clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 231",
+        "course_title": "Signals and Systems",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "I",
+        "year": "2",
+        "level": "4",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Describe different properties of continuous and discrete-time signals and systems.  \nDescribe continuous- and discrete-time signals and systems using standard properties and classification criteria.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Recognize the sampling theory.\nDescribe sampling theory principles for converting continuous-time signals to discrete-time signals.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Analyze continuous and discrete linear time-invariant (LTI) systems.",
+            "mapped_sos": [
+              "SO1",
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI12",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Explain Z- transform and its applications for LTI systems. \nAnalyze LTI systems using Z-transform concepts to interpret results and draw engineering conclusions.",
+            "mapped_sos": [
+              "SO1",
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI12",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Explain Continuous and Discrete-time Fourier Transform and its applications for LTI systems\nExplain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results.",
+            "mapped_sos": [
+              "SO1",
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI12",
+              "PI63"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 7,
+            "clo_text": "Write MatLab code and sampling theory and develop discrete system. \nWrite MATLAB code to implement sampling-based discrete-time systems and evaluate their performance using independently learned tools or functions.",
+            "mapped_sos": [
+              "SO6",
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI63",
+              "PI64",
+              "PI71"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 202",
+        "course_title": "Circuit Analysis",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "I",
+        "year": "2",
+        "level": "4",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Recognize the application of the basic electric circuit components in different electrical applications.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Analyze first-order and second-order transient reponse of electrical circuits.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Apply the Laplace transform in circuit analysis.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Analyze frequency selective circuits",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 7,
+            "clo_text": "Analyze three-phase networks and two-port networks.",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI71"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 312",
+        "course_title": "Electronic Engineering",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "P",
+        "year": "3",
+        "level": "5",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Identify the feature of various amplifier circuits, active filters, and oscillators.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Analyze the model of BJT amplifiers and their frequency response.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Analyze the DC and AC model of various FET amplifiers.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Design CMOS circuit such as NAND Gates, Tranmsission Gates and memory elements",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 322",
+        "course_title": "Microprocessors Design",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "P",
+        "year": "3",
+        "level": "5",
+        "credit_hours": "4",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Describe the types and operation of a typical microprocessors/microcontrollers.\nExplain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.\nModel digital components of microprocessor-based systems using HDL at the RTL level.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI61",
+              "PI62",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D & D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.\nDesign arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI23",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures. \nDesign control units and sequential systems using finite state machines for system control applications.",
+            "mapped_sos": [
+              "SO4"
+            ],
+            "pi_codes": [
+              "PI41",
+              "PI42"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Demonstrate the ability to configure hardware and software microprocessor-based systems\nImplement and verify an integrated digital system combining datapath and control components on FPGA hardware.",
+            "mapped_sos": [
+              "SO2",
+              "SO3",
+              "SO5",
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI23",
+              "PI24",
+              "PI31",
+              "PI32",
+              "PI51",
+              "PI52",
+              "PI71",
+              "PI72"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 341",
+        "course_title": "Electromagnetics Fundamental",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "P",
+        "year": "3",
+        "level": "5",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Explain the concept of electric field and magnetic field.\nExplain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Analyze Maxwell’s equations to find the electric and magnetic field components in different media.\nApply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Develop an ability to apply Gauss’ law, Ampere’s Law, Biot-Savart law, Faraday’s law and Maxwell’s equations in the analysis of electromagnetic systems.\nAnalyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 7,
+            "clo_text": "Present an oral technical presentation on an electromagnetics application",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI32"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Acquire new knowledge on an electromagnetics application using appropriate learning strategies.",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI71"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 332",
+        "course_title": "Control Systems",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "P",
+        "year": "3",
+        "level": "6",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Recognize feedback in control systems and stability concept",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Apply the Laplace Transform in modelling the LTI control systems",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Evaluate the beahaviour of LTI in time domain",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Design a stable control system according to the required specification",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Demonstrate the concepts of stable and well-performed control systems",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 351",
+        "course_title": "Communication Systems",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "P",
+        "year": "3",
+        "level": "6",
+        "credit_hours": "4",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Recognize different analog modulation and demodulation techniques.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Explain the linear model of the distortionless channel.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Analyze the impact of various channels on communication systems.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 7,
+            "clo_text": "Demonstrate the pulse modulation techniques.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI61",
+              "PI62",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 10,
+            "clo_text": "",
+            "mapped_sos": [
+              "SO2",
+              "SO3",
+              "SO5",
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI23",
+              "PI24",
+              "PI31",
+              "PI32",
+              "PI51",
+              "PI52",
+              "PI61",
+              "PI62",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "",
+            "assessment_methods": ""
+          }
+        ]
+      },
+      {
+        "course_code": "EE 305",
+        "course_title": "Power Electronics",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "P",
+        "year": "3",
+        "level": "6",
+        "credit_hours": "4",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Recognize the characteristics of various semiconductor devices and power converter configurations.",
+            "mapped_sos": [
+              "SO1",
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12",
+              "PI21"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Analyze the various configurations of AC-DC converter.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Analyze the various configurations of DC-DC converter.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Analyze the various configurations of DC-AC converter.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 7,
+            "clo_text": "Analyze the various configurations of AC-AC converter.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Demonstrate various power electronics circuits, application, and analyze the waveform through simulation and experimental work",
+            "mapped_sos": [
+              "SO3",
+              "SO4",
+              "SO5",
+              "SO6",
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32",
+              "PI41",
+              "PI42",
+              "PI51",
+              "PI52",
+              "PI61",
+              "PI71"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 304",
+        "course_title": "Electrical Machines",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "P",
+        "year": "3",
+        "level": "6",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Explain the concepts of electromechanical energy conversion systems",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Describe the construction, principle of operation, and characteristics of dc machines, ac machines and transformers",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of d.c. machines",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI23",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of a.c. machines",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI23",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Show the importance of sustainability in electrical machines and transformers",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI71",
+              "PI72"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 403",
+        "course_title": "Power Systems",
+        "type": "Program",
+        "required_or_elective": "Required",
+        "performance_level": "M",
+        "year": "4",
+        "level": "7",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Explain the basic concepts, components, and principles of power\nsystems",
+            "mapped_sos": [
+              "SO1",
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI21"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Describe the different types of power generators and their characteristics",
+            "mapped_sos": [
+              "SO1",
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI21"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Analyse both symmetrical and unsymmetrical conditions in power systems.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Analyze the behavior of power systems under steady-state and transient conditions",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Demonstrate effective technical communication of power system analysis and results.",
+            "mapped_sos": [
+              "SO4"
+            ],
+            "pi_codes": [
+              "PI41",
+              "PI42"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 10,
+            "clo_text": "Demonstrate the ability to independently acquire and apply new knowledge related to power systems.",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI71",
+              "PI72"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 490",
+        "course_title": "Senior Design Project",
+        "type": "Capstone",
+        "required_or_elective": "Required",
+        "performance_level": "M",
+        "year": "4",
+        "level": "7",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Identify, gather and synthesize relevant information needed to define and solve an open-ended design problem.\nIdentify relevant technical information and engineering principles needed to define and solve an open-ended design problem.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 3,
+            "clo_text": "Apply the engineering design process to define, formulate and solve a conceptual design problem considering human factors, safety, environmental, economic, and societal constraints.\nApply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI23",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Use lateral and critical thinking to generate creative alternative concepts and identify a preferred solution to a design problem. \nGenerate alternative concepts and select a preferred solution for a design problem.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI23"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Use engineering tools and drawing skills to check and visually communicate design problem-solving.\nCommunicate design solutions visually using engineering tools and drawings.",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Communicate effectively and define engineering design problems and keep a well build log file and keep a journal of ideas and activities associated with the design project.\nCommunicate design solutions using written, visual, and oral technical methods.",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 7,
+            "clo_text": "Validate design solutions through experimentation/testing, data collection, analysis, and engineering conclusions.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI61",
+              "PI62",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 8,
+            "clo_text": "Recognize the engineering profession and the importance of ethical and legal factors in professional duties\nEvaluate ethical and legal responsibilities and their impact on engineering decisions.",
+            "mapped_sos": [
+              "SO4"
+            ],
+            "pi_codes": [
+              "PI41",
+              "PI42"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Establish requirements, scopes, plan tasks, and meet objectives through effective teamwork.\nCollaborate to establish goals, plan tasks, and meet project objectives within a team.",
+            "mapped_sos": [
+              "SO5"
+            ],
+            "pi_codes": [
+              "PI51",
+              "PI52"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 10,
+            "clo_text": "Acquire new knowledge, tools, standards, or technologies as needed to complete the design project.",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI71",
+              "PI72"
+            ],
+            "teaching_strategy": "",
+            "assessment_methods": ""
+          }
+        ]
+      },
+      {
+        "course_code": "EE 492",
+        "course_title": "Cooperative Training",
+        "type": "COOP",
+        "required_or_elective": "Required",
+        "performance_level": "M",
+        "year": "4",
+        "level": "8",
+        "credit_hours": "10",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Demonstrate a comprehensive understanding of their academic studies through general education and their areas of specializations.",
+            "mapped_sos": [
+              "SO1",
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI12",
+              "PI71",
+              "PI72"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Define and recognize complex electrical engineering problems encountered in industry, utilizing theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.\nIdentify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Demonstrate effective communication skills to a range of audiences.",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Examine advanced technical skills in electrical engineering, including  design, analysis, and troubleshooting, to successfully complete assigned tasks and projects within cooperative work environments.\nApply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
+            "mapped_sos": [
+              "SO1",
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI12",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Collaborate effectively within multidisciplinary teams to plan tasks, meet objectives, and support a professional work environment.",
+            "mapped_sos": [
+              "SO5"
+            ],
+            "pi_codes": [
+              "PI51",
+              "PI52"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Demonstrate the ability to work as an individual and as a part of a multi-disciplinary team",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 10,
+            "clo_text": "Demonstrate professional and ethical responsibility\nDemonstrate professional and ethical responsibility in engineering practice and decision-making.",
+            "mapped_sos": [
+              "SO4"
+            ],
+            "pi_codes": [
+              "PI41",
+              "PI42"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 414",
+        "course_title": "Electrical and Electronic Measurements",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 415",
+        "course_title": "Opto-Electronics",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 416",
+        "course_title": "VLSI Circuits Design",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 423",
+        "course_title": "Data Communication Networks",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 424",
+        "course_title": "Digital Communications",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 425",
+        "course_title": "Wireless Communications Systems",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 426",
+        "course_title": "Antenna and wave propagation",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Describe electomagnetic wave radiation mechanism.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Recognize various antennas types",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Design antennas for various applications.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21",
+              "PI22",
+              "PI23",
+              "PI24"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Design and analyze antenna arrays.",
+            "mapped_sos": [
+              "SO1",
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12",
+              "PI21",
+              "PI23"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Calculate antenna parameters like gain, input impedance, radiated power and radiation resistance.",
+            "mapped_sos": [
+              "SO1",
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI12",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Describe electromagnetic interference, radiation hazards, and the effect of EM fields on the environment.",
+            "mapped_sos": [
+              "SO4",
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI41",
+              "PI42",
+              "PI71"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 433",
+        "course_title": "Mechatronics",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 434",
+        "course_title": "PLC Microcontrollers",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Describe fundamental automation and control concepts related to programmable logic controllers and relay ladder logic.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Explain PLC hardware structure, programming concepts, and industrial applications using appropriate technical terminology, ladder diagrams, and documentation.",
+            "mapped_sos": [
+              "SO1",
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12",
+              "PI31",
+              "PI32"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Conduct laboratory experiments involving PLC programming, testing, and monitoring to evaluate system behavior and performance.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI61",
+              "PI62",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Apply new PLC functions, instructions, and communication concepts using manuals, software tools, and self-directed learning resources.",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI71",
+              "PI72"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 435",
+        "course_title": "Robotics and Automation",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 436",
+        "course_title": "Artifitial Intellegince",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Describe electomagnetic wave radiation mechanism.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 2,
+            "clo_text": "Recognize various antennas types",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Design antennas for various applications.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Design and analyze antenna arrays.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 6,
+            "clo_text": "Calculate antenna parameters like gain, input impedance, radiated power and radiation resistance.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Describe electromagnetic interference, radiation hazards, and the effect of EM fields on the environment.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 442",
+        "course_title": "Digital Signal Processing",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      },
+      {
+        "course_code": "EE 456",
+        "course_title": "Renewable Energy Engineering",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": [
+          {
+            "clo_number": 1,
+            "clo_text": "Explain the basic concepts, components, and principles of Renewable Energy sources",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 4,
+            "clo_text": "Design and develop the photovoltaic and wind energy systems.",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 5,
+            "clo_text": "Explain the Fuel Cell systems and energy storage devices.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 9,
+            "clo_text": "Illustrate the importance of energy transition and sustainability",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI71"
+            ],
+            "teaching_strategy": "Lectures, tutorials, group discussions",
+            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          }
+        ]
+      },
+      {
+        "course_code": "EE 499",
+        "course_title": "Special Topics In Electrical and Electronics Engineering",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "3",
+        "clos": []
+      }
+    ]
+  },
+  "abet": {
+    "version": "1.0",
+    "generated_on": "2026-02-05T19:28:05",
+    "student_outcomes": {
+      "SO1": {
+        "statement": "Ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics.",
+        "pis": [
+          "PI11",
+          "PI12"
+        ],
+        "abet_illustration": "Complex Engineering Problems – Complex engineering problems include one or more of the following characteristics: involving wide-ranging or conflicting technical issues; having no obvious solution; addressing problems not encompassed by current standards and codes; involving diverse groups of stakeholders; including many component parts or sub-problems; involving multiple disciplines; or having significant consequences in a range of contexts."
+      },
+      "SO2": {
+        "statement": "An ability to apply engineering design to produce solutions that meet specified needs with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors.",
+        "pis": [
+          "PI21",
+          "PI22",
+          "PI23",
+          "PI24"
+        ],
+        "abet_illustration": "Engineering design is a process of devising a system, component, or process to meet desired needs and specifications within constraints. It is an iterative, creative, decision-making process in which the basic sciences, mathematics, and engineering sciences are applied to convert resources into solutions. Engineering design involves identifying opportunities, developing requirements, performing analysis and synthesis, generating multiple solutions, evaluating solutions against requirements, considering risks, and making trade-offs, for the purpose of obtaining a high-quality solution under the given circumstances. Examples of possible constraints include aesthetics, codes, constructability, cost, ergonomics, extensibility, functionality, interoperability, legal considerations, maintainability, manufacturability, marketability, policy, regulations, schedule, standards, sustainability, or usability. This does not mean that each of these elements must have a significant effect on the design — it means the program must show that students consider these elements as they engage in design."
+      },
+      "SO3": {
+        "statement": "An ability to communicate effectively with a range of audiences",
+        "pis": [
+          "PI31",
+          "PI32"
+        ],
+        "abet_illustration": "The “range of audiences” should include at least two distinct audiences relevant to the discipline or program’s mission. It is the program’s responsibility to determine the range of audiences (e.g., faculty, students, non-technical audiences, public sector, external clients, etc.)."
+      },
+      "SO4": {
+        "statement": "An ability to recognize ethical and professional responsibilities in engineering situations and make informed judgments, which must consider the impact of engineering solutions in global, economic, environmental, and societal contexts.",
+        "pis": [
+          "PI41",
+          "PI42"
+        ],
+        "abet_illustration": "Make informed judgments that consider the impact of engineering solutions in global, economic, environmental, and societal contexts. It is not necessary for every engineering situation to require that each context be a major consideration; consideration of impact as the judgment is made is key."
+      },
+      "SO5": {
+        "statement": "An ability to function effectively on a team whose members together provide leadership, create a collaborative and inclusive environment, establish goals, plan tasks, and meet objectives.",
+        "pis": [
+          "PI51",
+          "PI52"
+        ],
+        "abet_illustration": "Student Outcome #5 requires students to function effectively on collaborative and inclusive teams and carry out project management tasks. Evidence may include instruments and artifacts such as Gantt charts, schedules, scrum, goal setting, decision matrices, and inclusiveness/collaboration measures."
+      },
+      "SO6": {
+        "statement": "An ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions.",
+        "pis": [
+          "PI61",
+          "PI62",
+          "PI63",
+          "PI64"
+        ],
+        "abet_illustration": "Student Outcome #6 requires the ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions. There is no requirement that students be able to design an experiment. The components do not have to be addressed in series and may be satisfied in the context of more than one system."
+      },
+      "SO7": {
+        "statement": "An ability to acquire and apply new knowledge as needed, using appropriate learning strategies.",
+        "pis": [
+          "PI71",
+          "PI72"
+        ],
+        "abet_illustration": ""
+      }
+    },
+    "performance_indicators": {
+      "PI11": {
+        "so": "SO1",
+        "statement": "Identify, formulate, and solve complex electrical engineering problems",
+        "course_level_guidance": "For senior-level courses that include complex engineering problems."
+      },
+      "PI12": {
+        "so": "SO1",
+        "statement": "Apply principles of mathematics, science, and electrical engineering to solve engineering problems and compute required quantities",
+        "course_level_guidance": "For low-level courses such as circuits, electronics, signals, etc. Also for senior-level courses that include complex engineering problems (together with PI11)."
+      },
+      "PI21": {
+        "so": "SO2",
+        "statement": "Apply engineering design to produce a solution that meets specified needs",
+        "course_level_guidance": ""
+      },
+      "PI22": {
+        "so": "SO2",
+        "statement": "Design solutions that consider public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors.",
+        "course_level_guidance": ""
+      },
+      "PI23": {
+        "so": "SO2",
+        "statement": "Identify and justify multiple realistic constraints relevant to the project design",
+        "course_level_guidance": ""
+      },
+      "PI24": {
+        "so": "SO2",
+        "statement": "Identify and apply appropriate engineering standards and codes relevant to the project design.",
+        "course_level_guidance": ""
+      },
+      "PI31": {
+        "so": "SO3",
+        "statement": "Communicate technical ideas in written technical reports, including engineering graphs and drawings",
+        "course_level_guidance": ""
+      },
+      "PI32": {
+        "so": "SO3",
+        "statement": "Conduct effective oral technical presentations to a range of audiences",
+        "course_level_guidance": ""
+      },
+      "PI41": {
+        "so": "SO4",
+        "statement": "Recognize ethical and professional responsibilities in engineering situations",
+        "course_level_guidance": ""
+      },
+      "PI42": {
+        "so": "SO4",
+        "statement": "Make informed judgments considering the impact of engineering solutions in global, societal, economic, and environmental contexts",
+        "course_level_guidance": ""
+      },
+      "PI51": {
+        "so": "SO5",
+        "statement": "Work effectively as a team member and contribute reliably to team tasks and objectives",
+        "course_level_guidance": "For low-level and senior-level courses."
+      },
+      "PI52": {
+        "so": "SO5",
+        "statement": "Provide leadership in planning and managing team work and support a collaborative, inclusive team environment",
+        "course_level_guidance": "For senior-level courses that include a design project."
+      },
+      "PI61": {
+        "so": "SO6",
+        "statement": "Develop appropriate experimentation",
+        "course_level_guidance": "For senior-level courses that include experiment development."
+      },
+      "PI62": {
+        "so": "SO6",
+        "statement": "Conduct experimentation and collect data",
+        "course_level_guidance": ""
+      },
+      "PI63": {
+        "so": "SO6",
+        "statement": "Analyze and interpret data",
+        "course_level_guidance": ""
+      },
+      "PI64": {
+        "so": "SO6",
+        "statement": "Use engineering judgment to draw conclusions",
+        "course_level_guidance": "Requires inclusion in lab manuals."
+      },
+      "PI71": {
+        "so": "SO7",
+        "statement": "Acquire new knowledge using appropriate learning strategies",
+        "course_level_guidance": ""
+      },
+      "PI72": {
+        "so": "SO7",
+        "statement": "Apply newly acquired knowledge to engineering tasks",
+        "course_level_guidance": ""
+      }
+    }
+  }
+}

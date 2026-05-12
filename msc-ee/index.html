@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MSc EE Curriculum Portal</title>
+    <link rel="stylesheet" href="../assets/portal.css">
+    <script defer src="../assets/portal.js"></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <div class="wrap" style="padding-top: 14px;">
+        <section class="hero"><span class="kicker">Graduate program</span>
+            <h2>MSc EE Curriculum Portal</h2>
+            <p class="muted">Dynamic dashboards connected to <code>data/msc_ee_courses_full.json</code>.</p>
+        </section>
+        <section id="stats" class="grid four"></section>
+        <section class="grid three" style="margin-top:14px"><a class="card" href="program-dashboard.html">
+                <h2>Program Dashboard</h2>
+                <p class="muted">Overview, tracks, credits, CLOs, and course distribution.</p>
+            </a><a class="card" href="course-dashboard.html">
+                <h2>Course Dashboard</h2>
+                <p class="muted">Search courses and inspect CLOs, topics, objectives, textbooks, and mappings.</p>
+            </a><a class="card" href="concentration-dashboard.html">
+                <h2>Concentration Dashboard</h2>
+                <p class="muted">Group courses by track/focus area and elective pathway.</p>
+            </a></section>
+        <section class="grid three" style="margin-top:14px"><a class="card" href="unified-advising-view.html">
+                <h2>Unified Advising View</h2>
+                <p class="muted">Original V5 landing style, now powered by the MSc JSON file.</p>
+            </a><a class="card" href="concentration-view.html">
+                <h2>Concentration View — Original Style</h2>
+                <p class="muted">Four-track elective guide with the visual design you liked.</p>
+            </a><a class="card" href="course-view-v4.html">
+                <h2>Course Dashboard V4 Style</h2>
+                <p class="muted">Detailed searchable course dashboard, dynamically loaded from JSON.</p>
+            </a></section>
+        <script>document.addEventListener('DOMContentLoaded', async () => { try { const courses = await portal.loadJSON('../data/msc_ee_courses_full.json'); portal.renderStats(document.getElementById('stats'), portal.countMsc(courses)); } catch (e) { document.getElementById('stats').innerHTML = '<div class="alert">Could not load JSON. Use a local server or GitHub Pages.</div>' } })</script>
+        <div class="footer">One source of truth: JSON data files. Refresh the page after updating JSON.</div>
+    </div>
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>
