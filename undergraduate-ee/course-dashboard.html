@@ -1,6 +1,505 @@
 <!doctype html><html lang="en"><head>
-  <meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undergraduate EE Course Dashboard</title><link rel="stylesheet" href="../assets/portal.css"><script defer src="../assets/portal.js"></script></head><body><div id="header-placeholder"></div><div class="wrap" style="padding-top: 14px;"><div class="title" style="margin-bottom: 24px;"><h1>Undergraduate EE Course Dashboard</h1><p>PSU College of Engineering Curriculum Intelligence Portal</p></div>
-<section class="hero"><span class="kicker">Undergraduate EE</span><h2>Course-level CLO–SO–PI Dashboard</h2><p class="muted">Per-course mapping generated from the JSON file.</p></section><div class="layout"><aside class="card sidebar"><h2>Courses</h2><div class="toolbar"><input id="search" class="input" placeholder="Search…"><select id="trackFilter" class="select"></select><span id="resultCount" class="pill"></span></div><div id="courseList" class="course-list"></div></aside><main id="detail" class="grid"></main></div><script>document.addEventListener('DOMContentLoaded',async()=>{try{const data=await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json'); const courses=data.curriculum.courses||[]; portal.setupCourseBrowser(courses,{linkPrefix:'course-dashboard.html?course='}); const wanted=portal.getParam('course')||portal.normCourse(courses[0]).code; const raw=courses.find(x=>portal.normCourse(x).code===wanted)||courses[0]; const c=portal.normCourse(raw); byId('detail').innerHTML=`<section class="card"><div class="code">${portal.esc(c.code)}</div><h2>${portal.esc(c.title)}</h2><div>${portal.badge(c.track)}${portal.badge(c.re)}${portal.badge('Level '+c.level)}${portal.badge(c.credits+' credits')}</div></section><section class="card"><h2>CLO–SO–PI Mapping</h2><div class="table-wrap"><table><thead><tr><th>CLO</th><th>Text</th><th>SO</th><th>PI</th><th>Teaching Strategy</th><th>Assessment</th></tr></thead><tbody>${(raw.clos||[]).map(x=>`<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.esc(x.clo_text)}</td><td>${(x.mapped_sos||[]).map(s=>portal.badge(s)).join('')}</td><td>${(x.pi_codes||[]).map(s=>portal.badge(s)).join('')}</td><td>${portal.esc(x.teaching_strategy)}</td><td>${portal.esc(x.assessment_methods)}</td></tr>`).join('')}</tbody></table></div></section>`;}catch(e){byId('detail').innerHTML='<div class="alert">Could not load JSON.</div>'}})</script>
+  <meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undergraduate EE Course Dashboard</title><link rel="stylesheet" href="../assets/portal.css"><script defer src="../assets/portal.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.3/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js"></script>
+  <style>
+    /* ── Print Button ── */
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border: 1px solid rgba(242,162,58,.5);
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(242,162,58,.15), rgba(255,213,110,.08));
+      color: #ffd56e;
+      font: 700 14px var(--sans);
+      cursor: pointer;
+      transition: all .25s ease;
+      margin-top: 14px;
+      backdrop-filter: blur(8px);
+    }
+    .print-btn:hover {
+      background: linear-gradient(135deg, rgba(242,162,58,.35), rgba(255,213,110,.18));
+      border-color: var(--orange);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(242,162,58,.25);
+    }
+    .print-btn:active { transform: translateY(0); }
+    .print-btn svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+
+    /* ── Modal Overlay ── */
+    .print-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.65);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+    .print-modal-overlay.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ── Modal Card ── */
+    .print-modal {
+      background: linear-gradient(180deg, #162235 0%, #0e1928 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px 34px 28px;
+      max-width: 480px;
+      width: 92%;
+      box-shadow: 0 32px 80px rgba(0,0,0,.55);
+      transform: translateY(16px) scale(.97);
+      transition: transform .3s ease;
+    }
+    .print-modal-overlay.visible .print-modal {
+      transform: translateY(0) scale(1);
+    }
+    .print-modal h3 {
+      margin: 0 0 6px;
+      font-size: 22px;
+      color: var(--text);
+    }
+    .print-modal .modal-sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0 0 22px;
+      line-height: 1.5;
+    }
+
+    /* ── Checkbox Group ── */
+    .print-options {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .print-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+      cursor: pointer;
+      transition: all .2s ease;
+      user-select: none;
+    }
+    .print-option:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(242,162,58,.35);
+    }
+    .print-option input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--line);
+      border-radius: 6px;
+      background: rgba(255,255,255,.06);
+      cursor: pointer;
+      position: relative;
+      flex-shrink: 0;
+      transition: all .2s ease;
+    }
+    .print-option input[type="checkbox"]:checked {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+    .print-option input[type="checkbox"]:checked::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 13px;
+      font-weight: 900;
+      color: #111;
+    }
+    .print-option .opt-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .print-option .opt-desc {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── Modal Actions ── */
+    .print-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    .modal-btn {
+      padding: 10px 22px;
+      border-radius: 999px;
+      font: 700 13px var(--sans);
+      cursor: pointer;
+      border: 1px solid var(--line);
+      transition: all .2s ease;
+    }
+    .modal-btn.cancel {
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+    }
+    .modal-btn.cancel:hover {
+      background: rgba(255,255,255,.12);
+      color: var(--text);
+    }
+    .modal-btn.generate {
+      background: linear-gradient(135deg, var(--orange), #ffd56e);
+      color: #101522;
+      border-color: transparent;
+    }
+    .modal-btn.generate:hover {
+      box-shadow: 0 4px 18px rgba(242,162,58,.4);
+      transform: translateY(-1px);
+    }
+    .modal-btn.generate:active { transform: translateY(0); }
+
+    /* ── Select All Toggle ── */
+    .select-all-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .select-all-row label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .select-all-row input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--line);
+      border-radius: 5px;
+      background: rgba(255,255,255,.06);
+      cursor: pointer;
+      position: relative;
+      transition: all .2s ease;
+    }
+    .select-all-row input[type="checkbox"]:checked {
+      background: var(--cyan);
+      border-color: var(--cyan);
+    }
+    .select-all-row input[type="checkbox"]:checked::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12px;
+      font-weight: 900;
+      color: #111;
+    }
+  </style>
+</head><body><div id="header-placeholder"></div><div class="wrap" style="padding-top: 14px;"><div class="title" style="margin-bottom: 24px;"><h1>Undergraduate EE Course Dashboard</h1><p>PSU College of Engineering Curriculum Intelligence Portal</p></div>
+<section class="hero"><span class="kicker">Undergraduate EE</span><h2>Course-level CLO–SO–PI Dashboard</h2><p class="muted">Per-course mapping generated from the JSON file.</p></section><div class="layout"><aside class="card sidebar"><h2>Courses</h2><div class="toolbar"><input id="search" class="input" placeholder="Search…"><select id="trackFilter" class="select"></select><span id="resultCount" class="pill"></span></div><div id="courseList" class="course-list"></div></aside><main id="detail" class="grid"></main></div>
+
+<!-- Print Modal Overlay -->
+<div class="print-modal-overlay" id="printModalOverlay">
+  <div class="print-modal">
+    <h3>📄 Export Course Report</h3>
+    <p class="modal-sub">Select the sections you want to include in the PDF report for the currently selected course.</p>
+    <div class="select-all-row">
+      <label><input type="checkbox" id="printSelectAll" checked> Select All</label>
+    </div>
+    <div class="print-options">
+      <label class="print-option">
+        <input type="checkbox" name="printOpt" value="courseInfo" checked>
+        <div><div class="opt-label">Course Information</div><div class="opt-desc">Code, title, track, credits, level</div></div>
+      </label>
+      <label class="print-option">
+        <input type="checkbox" name="printOpt" value="cloText" checked>
+        <div><div class="opt-label">CLO Descriptions</div><div class="opt-desc">Full text of each Course Learning Outcome</div></div>
+      </label>
+      <label class="print-option">
+        <input type="checkbox" name="printOpt" value="soMapping" checked>
+        <div><div class="opt-label">SO Mapping</div><div class="opt-desc">Student Outcomes mapped to each CLO</div></div>
+      </label>
+      <label class="print-option">
+        <input type="checkbox" name="printOpt" value="piMapping" checked>
+        <div><div class="opt-label">PI Mapping</div><div class="opt-desc">Performance Indicator codes per CLO</div></div>
+      </label>
+      <label class="print-option">
+        <input type="checkbox" name="printOpt" value="teachingStrategy" checked>
+        <div><div class="opt-label">Teaching Strategies</div><div class="opt-desc">Teaching methods for each CLO</div></div>
+      </label>
+      <label class="print-option">
+        <input type="checkbox" name="printOpt" value="assessmentMethods" checked>
+        <div><div class="opt-label">Assessment Methods</div><div class="opt-desc">Assessment approach for each CLO</div></div>
+      </label>
+    </div>
+    <div class="print-actions">
+      <button class="modal-btn cancel" id="printCancelBtn">Cancel</button>
+      <button class="modal-btn generate" id="printGenerateBtn">⬇ Generate PDF</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Store course data globally for the print feature ──
+let _printCourseRaw = null;
+let _printCourseNorm = null;
+
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json');
+    const courses = data.curriculum.courses || [];
+    portal.setupCourseBrowser(courses, { linkPrefix: 'course-dashboard.html?course=' });
+    const wanted = portal.getParam('course') || portal.normCourse(courses[0]).code;
+    const raw = courses.find(x => portal.normCourse(x).code === wanted) || courses[0];
+    const c = portal.normCourse(raw);
+
+    // Store for print
+    _printCourseRaw = raw;
+    _printCourseNorm = c;
+
+    byId('detail').innerHTML = `<section class="card"><div class="code">${portal.esc(c.code)}</div><h2>${portal.esc(c.title)}</h2><div>${portal.badge(c.track)}${portal.badge(c.re)}${portal.badge('Level ' + c.level)}${portal.badge(c.credits + ' credits')}</div><button class="print-btn" id="printReportBtn" title="Export course report as PDF"><svg viewBox="0 0 24 24"><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>Print Report</button></section><section class="card"><h2>CLO–SO–PI Mapping</h2><div class="table-wrap"><table><thead><tr><th>CLO</th><th>Text</th><th>SO</th><th>PI</th><th>Teaching Strategy</th><th>Assessment</th></tr></thead><tbody>${(raw.clos || []).map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.esc(x.clo_text)}</td><td>${(x.mapped_sos || []).map(s => portal.badge(s)).join('')}</td><td>${(x.pi_codes || []).map(s => portal.badge(s)).join('')}</td><td>${portal.esc(x.teaching_strategy)}</td><td>${portal.esc(x.assessment_methods)}</td></tr>`).join('')}</tbody></table></div></section>`;
+
+    // Attach print button handler
+    byId('printReportBtn').addEventListener('click', () => {
+      byId('printModalOverlay').classList.add('visible');
+    });
+
+  } catch (e) {
+    byId('detail').innerHTML = '<div class="alert">Could not load JSON.</div>';
+  }
+});
+
+// ── Modal Logic ──
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('printModalOverlay');
+  const cancelBtn = document.getElementById('printCancelBtn');
+  const generateBtn = document.getElementById('printGenerateBtn');
+  const selectAll = document.getElementById('printSelectAll');
+  const checkboxes = () => document.querySelectorAll('input[name="printOpt"]');
+
+  // Close modal
+  cancelBtn.addEventListener('click', () => overlay.classList.remove('visible'));
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('visible'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('visible'); });
+
+  // Select all toggle
+  selectAll.addEventListener('change', () => {
+    checkboxes().forEach(cb => cb.checked = selectAll.checked);
+  });
+  // Update select-all state when individual options change
+  document.querySelector('.print-options').addEventListener('change', () => {
+    const cbs = checkboxes();
+    selectAll.checked = [...cbs].every(cb => cb.checked);
+  });
+
+  // Generate PDF
+  generateBtn.addEventListener('click', () => {
+    if (!_printCourseRaw || !_printCourseNorm) { alert('Course data is still loading. Please try again.'); return; }
+    const selected = new Set([...checkboxes()].filter(cb => cb.checked).map(cb => cb.value));
+    if (selected.size === 0) {
+      alert('Please select at least one section to include.');
+      return;
+    }
+    generateCoursePDF(_printCourseNorm, _printCourseRaw, selected);
+    overlay.classList.remove('visible');
+  });
+});
+
+// ── PDF Generation ──
+function generateCoursePDF(c, raw, sections) {
+  if (!window.jspdf || !window.jspdf.jsPDF) { alert('PDF library failed to load. Please check your internet connection and refresh.'); return; }
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
+  const pageW = doc.internal.pageSize.getWidth();
+  const pageH = doc.internal.pageSize.getHeight();
+  const margin = 16;
+  let y = margin;
+
+  // ── Colors ──
+  const PSU_BLUE = [20, 61, 102];
+  const ORANGE = [242, 162, 58];
+  const DARK = [14, 25, 40];
+  const LIGHT_BG = [245, 247, 250];
+
+  // ── Header Bar ──
+  doc.setFillColor(...PSU_BLUE);
+  doc.rect(0, 0, pageW, 22, 'F');
+  doc.setFillColor(...ORANGE);
+  doc.rect(0, 22, pageW, 2, 'F');
+
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(15);
+  doc.setTextColor(255, 255, 255);
+  doc.text('PSU College of Engineering — Curriculum Intelligence Portal', margin, 14);
+
+  y = 32;
+
+  // ── Course Info Section ──
+  if (sections.has('courseInfo')) {
+    doc.setFillColor(...LIGHT_BG);
+    doc.roundedRect(margin, y, pageW - margin * 2, 32, 4, 4, 'F');
+    doc.setDrawColor(...PSU_BLUE);
+    doc.setLineWidth(0.5);
+    doc.roundedRect(margin, y, pageW - margin * 2, 32, 4, 4, 'S');
+
+    doc.setFontSize(18);
+    doc.setTextColor(...DARK);
+    doc.setFont('helvetica', 'bold');
+    doc.text(c.code + ' — ' + c.title, margin + 8, y + 13);
+
+    doc.setFontSize(10);
+    doc.setTextColor(100, 100, 100);
+    doc.setFont('helvetica', 'normal');
+    const infoLine = [
+      'Track: ' + (c.track || 'N/A'),
+      'Type: ' + (c.re || 'N/A'),
+      'Level: ' + (c.level || 'N/A'),
+      'Credits: ' + (c.credits || 'N/A'),
+      'Year: ' + (c.year || 'N/A')
+    ].join('   |   ');
+    doc.text(infoLine, margin + 8, y + 23);
+
+    y += 40;
+  }
+
+  // ── Build CLO Table ──
+  const clos = raw.clos || [];
+  if (clos.length === 0) {
+    doc.setFontSize(12);
+    doc.setTextColor(...DARK);
+    doc.text('No CLOs available for this course.', margin, y + 8);
+    doc.save(c.code.replace(/\s+/g, '_') + '_Report.pdf');
+    return;
+  }
+
+  // Determine columns based on selections
+  const headers = [];
+  const columnStyles = {};
+  let colIdx = 0;
+
+  headers.push('CLO');
+  columnStyles[colIdx] = { cellWidth: 14, fontStyle: 'bold', halign: 'center' };
+  colIdx++;
+
+  if (sections.has('cloText')) {
+    headers.push('CLO Description');
+    columnStyles[colIdx] = { cellWidth: 'auto' };
+    colIdx++;
+  }
+  if (sections.has('soMapping')) {
+    headers.push('SO');
+    columnStyles[colIdx] = { cellWidth: 28, halign: 'center' };
+    colIdx++;
+  }
+  if (sections.has('piMapping')) {
+    headers.push('PI Codes');
+    columnStyles[colIdx] = { cellWidth: 38, halign: 'center' };
+    colIdx++;
+  }
+  if (sections.has('teachingStrategy')) {
+    headers.push('Teaching Strategy');
+    columnStyles[colIdx] = { cellWidth: 50 };
+    colIdx++;
+  }
+  if (sections.has('assessmentMethods')) {
+    headers.push('Assessment Methods');
+    columnStyles[colIdx] = { cellWidth: 50 };
+    colIdx++;
+  }
+
+  const rows = clos.map(x => {
+    const row = [String(x.clo_number)];
+    if (sections.has('cloText')) row.push(x.clo_text || '');
+    if (sections.has('soMapping')) row.push((x.mapped_sos || []).join(', '));
+    if (sections.has('piMapping')) row.push((x.pi_codes || []).join(', '));
+    if (sections.has('teachingStrategy')) row.push(x.teaching_strategy || '');
+    if (sections.has('assessmentMethods')) row.push(x.assessment_methods || '');
+    return row;
+  });
+
+  // Section title
+  doc.setFontSize(13);
+  doc.setTextColor(...PSU_BLUE);
+  doc.setFont('helvetica', 'bold');
+  doc.text('CLO–SO–PI Mapping Table', margin, y + 4);
+  y += 8;
+
+  doc.autoTable({
+    startY: y,
+    head: [headers],
+    body: rows,
+    margin: { left: margin, right: margin },
+    styles: {
+      font: 'helvetica',
+      fontSize: 8.5,
+      cellPadding: 4,
+      lineColor: [200, 200, 210],
+      lineWidth: 0.3,
+      textColor: [30, 30, 40],
+      overflow: 'linebreak'
+    },
+    headStyles: {
+      fillColor: PSU_BLUE,
+      textColor: [255, 255, 255],
+      fontStyle: 'bold',
+      fontSize: 9,
+      halign: 'center'
+    },
+    alternateRowStyles: {
+      fillColor: [240, 243, 248]
+    },
+    columnStyles: columnStyles,
+    didDrawPage: function (data) {
+      // Footer on every page
+      const pageNum = doc.internal.getCurrentPageInfo().pageNumber;
+      const totalPages = doc.internal.getNumberOfPages();
+      doc.setFillColor(...PSU_BLUE);
+      doc.rect(0, pageH - 10, pageW, 10, 'F');
+      doc.setFontSize(8);
+      doc.setTextColor(255, 255, 255);
+      doc.text('Generated by PSU Curriculum Intelligence Portal', margin, pageH - 4);
+      doc.text('Page ' + pageNum + ' of ' + totalPages, pageW - margin - 20, pageH - 4);
+      const now = new Date();
+      doc.text(now.toLocaleDateString() + '  ' + now.toLocaleTimeString(), pageW / 2 - 15, pageH - 4);
+    }
+  });
+
+  // Fix total page count on all pages
+  const totalPages = doc.internal.getNumberOfPages();
+  for (let i = 1; i <= totalPages; i++) {
+    doc.setPage(i);
+    doc.setFillColor(...PSU_BLUE);
+    doc.rect(0, pageH - 10, pageW, 10, 'F');
+    doc.setFontSize(8);
+    doc.setTextColor(255, 255, 255);
+    doc.text('Generated by PSU Curriculum Intelligence Portal', margin, pageH - 4);
+    doc.text('Page ' + i + ' of ' + totalPages, pageW - margin - 20, pageH - 4);
+    const now = new Date();
+    doc.text(now.toLocaleDateString() + '  ' + now.toLocaleTimeString(), pageW / 2 - 15, pageH - 4);
+  }
+
+  doc.save(c.code.replace(/\s+/g, '_') + '_Report.pdf');
+}
+</script>
 <div class="footer">One source of truth: JSON data files. Refresh the page after updating JSON.</div></div>
 <div id="footer-placeholder"></div>
 
