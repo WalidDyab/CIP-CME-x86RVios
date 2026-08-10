@@ -139,7 +139,7 @@
           "pi_statement": "Recognize ethical and professional responsibilities in engineering situations",
           "course_level": null,
           "rubric": "Rubric",
-          "abet_illustration": "make informed judgements that consider the impact of engineering solutions in global, economic, environmental, and societal contexts. It is not necessary for every engineering situation to require that each of these contexts be a major consideration. Consideration of the impact as the judgement is made is key."
+          "abet_illustration": "make informed judgements that consider the impact of engineering solutions in global, economic, environmental, and societal contexts. It is not necessary for every engineering situation to require that each of these contexts be a major consideration. Consideration of the impact as the judgement is made is key. "
         },
         {
           "pi_code": "PI42",
@@ -162,7 +162,7 @@
           "pi_statement": "Work effectively as a team member and contribute reliably to team tasks and objectives",
           "course_level": "-For low-level and senior-level courses",
           "rubric": "Rubric",
-          "abet_illustration": "Student Outcome #5 requires that students be able to function effectively on collaborative and inclusive teams as well as carry out project management tasks. Programs have a variety of methods for demonstrating that students have these abilities. There are many texts on project management available for use. Gantt charts, schedules, scrum, goal setting, and decision matrices might be useful to demonstrate project management tasks. Inclusiveness and collaboration can be characterized using existing instruments in the literature."
+          "abet_illustration": "Student Outcome #5 requires that students be able to function effectively on collaborative and inclusive teams as well as carry out project management tasks. Programs have a variety of methods for demonstrating that students have these abilities. There are many texts on project management available for use. Gantt charts, schedules, scrum, goal setting, and decision matrices might be useful to demonstrate project management tasks. Inclusiveness and collaboration can be characterized using existing instruments in the literature. "
         },
         {
           "pi_code": "PI52",
@@ -185,7 +185,7 @@
           "pi_statement": "Develop appropriate experimentation",
           "course_level": "– For senior-level courses that include experiement development",
           "rubric": "Rubric",
-          "abet_illustration": "Student Outcome #6 requires in part that students have the ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions. There is no requirement that students be able to design an experiment. \n\nThe components of Outcome 6 do not have to be addressed in series, and the outcome may be satisfied in the context of more than one system."
+          "abet_illustration": "Student Outcome #6 requires in part that students have the ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions. There is no requirement that students be able to design an experiment. \n\nThe components of Outcome 6 do not have to be addressed in series, and the outcome may be satisfied in the context of more than one system. "
         },
         {
           "pi_code": "PI62",
@@ -251,23 +251,15 @@
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
           "clo_text": "Define fundamental concepts of programming along with problem-solving techniques and analytical thinking.",
-          "aligned_sos": [
-            "SO1"
-          ],
-          "aligned_pis": [
-            "PI11"
-          ]
+          "aligned_sos": [],
+          "aligned_pis": []
         },
         {
           "domain": "Skills",
           "clo_id": 2.1,
           "clo_text": "Explain the various logic using various operators and expressions.",
-          "aligned_sos": [
-            "SO2"
-          ],
-          "aligned_pis": [
-            "PI24"
-          ]
+          "aligned_sos": [],
+          "aligned_pis": []
         },
         {
           "domain": null,
@@ -284,18 +276,10 @@
           "aligned_pis": []
         }
       ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO2"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI24"
-      ],
+      "overall_aligned_sos": [],
+      "overall_aligned_pis": [],
       "instructor": "Dr. Muddesar Iqbal",
-      "mapping_pi_levels": {
-        "PI23": "I"
-      }
+      "mapping_pi_levels": {}
     },
     {
       "course_code": "EE 201",
@@ -392,13 +376,13 @@
       ],
       "instructor": "Dr. Maged Esmail",
       "mapping_pi_levels": {
-        "PI11": "I",
-        "PI32": "I",
+        "PI12": "I",
         "PI41": "I",
         "PI42": "I",
-        "PI61": "I",
+        "PI51": "I",
         "PI62": "I",
-        "PI63": "I"
+        "PI63": "I",
+        "PI64": "I"
       }
     },
     {
@@ -472,38 +456,39 @@
       ],
       "overall_aligned_sos": [
         "SO1",
-        "SO2",
         "SO3",
-        "SO5",
-        "SO6"
+        "SO2",
+        "SO6",
+        "SO5"
       ],
       "overall_aligned_pis": [
         "PI11",
         "PI12",
+        "PI31",
+        "PI32",
         "PI21",
         "PI22",
         "PI23",
         "PI24",
-        "PI31",
-        "PI32",
-        "PI51",
         "PI62",
         "PI63",
-        "PI64"
+        "PI64",
+        "PI51"
       ],
       "instructor": "Dr. Mahmoud Abdelreheem",
       "mapping_pi_levels": {
         "PI11": "I",
         "PI12": "I",
+        "PI31": "I",
+        "PI32": "I",
         "PI21": "I",
         "PI22": "I",
         "PI23": "I",
         "PI24": "I",
-        "PI31": "I",
-        "PI42": "I",
-        "PI61": "I",
         "PI62": "I",
-        "PI63": "I"
+        "PI63": "I",
+        "PI64": "I",
+        "PI51": "I"
       }
     },
     {
@@ -617,14 +602,14 @@
       ],
       "instructor": "Dr. Walid Dyab",
       "mapping_pi_levels": {
-        "PI11": "I",
         "PI12": "I",
         "PI21": "I",
         "PI22": "I",
-        "PI42": "I",
-        "PI61": "I",
+        "PI23": "I",
+        "PI51": "I",
         "PI62": "I",
-        "PI63": "I"
+        "PI63": "I",
+        "PI64": "I"
       }
     },
     {
@@ -724,10 +709,10 @@
       ],
       "instructor": "Dr. Moustafa Nasralla",
       "mapping_pi_levels": {
-        "PI11": "I",
-        "PI62": "I",
+        "PI12": "I",
         "PI63": "I",
-        "PI64": "I"
+        "PI64": "I",
+        "PI71": "I"
       }
     },
     {
@@ -811,9 +796,10 @@
       "instructor": "Dr. Mahagan Sagar Bhaskar",
       "mapping_pi_levels": {
         "PI11": "I",
-        "PI62": "I",
+        "PI12": "I",
         "PI63": "I",
-        "PI64": "I"
+        "PI64": "I",
+        "PI71": "I"
       }
     },
     {
@@ -887,10 +873,11 @@
       "instructor": "Dr. Mahagan Sagar Bhaskar",
       "mapping_pi_levels": {
         "PI11": "P",
-        "PI12": "I",
+        "PI12": "P",
         "PI21": "I",
-        "PI62": "I",
-        "PI63": "I"
+        "PI22": "I",
+        "PI63": "I",
+        "PI64": "I"
       }
     },
     {
@@ -902,40 +889,40 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Describe the types and operation of a typical microprocessors/microcontrollers.\nExplain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses.",
+          "clo_text": "Describe the types and operation of a typical microprocessors/microcontrollers.",
           "aligned_sos": [
-            "SO1"
+            "SO3"
           ],
           "aligned_pis": [
-            "PI11",
-            "PI12"
+            "PI31",
+            "PI32"
           ]
         },
         {
           "domain": null,
           "clo_id": 1.2,
-          "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.\nModel digital components of microprocessor-based systems using HDL at the RTL level.",
+          "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
           "aligned_sos": [],
           "aligned_pis": []
         },
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D & D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.\nDesign arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits.",
+          "clo_text": "Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D & D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.",
           "aligned_sos": [],
           "aligned_pis": []
         },
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures. \nDesign control units and sequential systems using finite state machines for system control applications.",
+          "clo_text": "Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures.",
           "aligned_sos": [],
           "aligned_pis": []
         },
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
-          "clo_text": "Demonstrate the ability to configure hardware and software microprocessor-based systems\nImplement and verify an integrated digital system combining datapath and control components on FPGA hardware.",
+          "clo_text": "Demonstrate the ability to configure hardware and software microprocessor-based systems",
           "aligned_sos": [
             "SO2",
             "SO5",
@@ -952,30 +939,31 @@
         }
       ],
       "overall_aligned_sos": [
-        "SO1",
         "SO2",
+        "SO3",
         "SO5",
         "SO6"
       ],
       "overall_aligned_pis": [
-        "PI11",
-        "PI12",
         "PI21",
         "PI22",
         "PI23",
         "PI24",
+        "PI31",
+        "PI32",
         "PI52",
         "PI61"
       ],
       "instructor": "Dr. Walid Dyab",
       "mapping_pi_levels": {
-        "PI11": "P",
-        "PI12": "P",
         "PI21": "P",
         "PI22": "P",
         "PI23": "P",
-        "PI51": "P",
-        "PI52": "P"
+        "PI24": "P",
+        "PI31": "P",
+        "PI32": "P",
+        "PI52": "P",
+        "PI61": "P"
       }
     },
     {
@@ -1026,7 +1014,7 @@
         },
         {
           "domain": null,
-          "clo_id": null,
+          "clo_id": 2.4,
           "clo_text": "Present an oral technical presentation on an electromagnetics application",
           "aligned_sos": [
             "SO3"
@@ -1037,7 +1025,7 @@
         },
         {
           "domain": "Values, autonomy and responsibility",
-          "clo_id": null,
+          "clo_id": 3.1,
           "clo_text": "Acquire new knowledge on an electromagnetics application using appropriate learning strategies.",
           "aligned_sos": [
             "SO7"
@@ -1059,9 +1047,9 @@
       ],
       "instructor": "Dr. Maged Esmail",
       "mapping_pi_levels": {
-        "PI11": "P",
-        "PI31": "P",
-        "PI64": "P"
+        "PI12": "P",
+        "PI32": "P",
+        "PI71": "P"
       }
     },
     {
@@ -1144,8 +1132,9 @@
       "mapping_pi_levels": {
         "PI11": "P",
         "PI12": "P",
-        "PI62": "P",
-        "PI63": "P"
+        "PI21": "P",
+        "PI63": "P",
+        "PI64": "P"
       }
     },
     {
@@ -1244,12 +1233,13 @@
         "PI23": "P",
         "PI24": "P",
         "PI31": "P",
-        "PI42": "P",
+        "PI32": "P",
         "PI51": "P",
         "PI52": "P",
         "PI61": "P",
         "PI62": "P",
-        "PI63": "P"
+        "PI63": "P",
+        "PI64": "P"
       }
     },
     {
@@ -1326,7 +1316,7 @@
         },
         {
           "domain": "Values, autonomy and responsibility",
-          "clo_id": null,
+          "clo_id": 3.1,
           "clo_text": "Demonstrate various power electronics circuits, application, and analyze the waveform through simulation and experimental work",
           "aligned_sos": [
             "SO3",
@@ -1376,7 +1366,7 @@
         "PI11": "P",
         "PI12": "P",
         "PI21": "P",
-        "PI23": "P",
+        "PI22": "P",
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
@@ -1384,7 +1374,8 @@
         "PI42": "P",
         "PI51": "P",
         "PI52": "P",
-        "PI64": "P"
+        "PI61": "P",
+        "PI71": "P"
       }
     },
     {
@@ -1480,8 +1471,9 @@
         "PI21": "P",
         "PI22": "P",
         "PI23": "P",
-        "PI64": "P",
-        "PI71": "P"
+        "PI24": "P",
+        "PI71": "P",
+        "PI72": "P"
       }
     },
     {
@@ -1589,12 +1581,13 @@
       ],
       "instructor": "Dr. Ahmed Alnakhli",
       "mapping_pi_levels": {
-        "PI12": "M",
+        "PI11": "M",
         "PI21": "M",
-        "PI32": "M",
+        "PI22": "M",
         "PI41": "M",
-        "PI64": "M",
-        "PI71": "M"
+        "PI42": "M",
+        "PI71": "M",
+        "PI72": "M"
       }
     },
     {
@@ -1762,7 +1755,8 @@
         "PI62": "M",
         "PI63": "M",
         "PI64": "M",
-        "PI71": "M"
+        "PI71": "M",
+        "PI72": "M"
       }
     },
     {
@@ -1825,7 +1819,7 @@
         },
         {
           "domain": null,
-          "clo_id": null,
+          "clo_id": 2.3,
           "clo_text": "Collaborate effectively within multidisciplinary teams to plan tasks, meet objectives, and support a professional work environment.",
           "aligned_sos": [
             "SO5"
@@ -1880,16 +1874,17 @@
       "instructor": "Dr. Moustafa Nasralla",
       "mapping_pi_levels": {
         "PI11": "M",
-        "PI24": "M",
+        "PI12": "M",
         "PI31": "M",
         "PI32": "M",
         "PI41": "M",
         "PI42": "M",
         "PI51": "M",
-        "PI62": "M",
+        "PI52": "M",
         "PI63": "M",
         "PI64": "M",
-        "PI71": "M"
+        "PI71": "M",
+        "PI72": "M"
       }
     },
     {
@@ -1897,50 +1892,7 @@
       "course_id": 27,
       "course_title": "Electrical and Electronic Measurements",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -1951,50 +1903,7 @@
       "course_id": 28,
       "course_title": "Opto-Electronics",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -2005,50 +1914,7 @@
       "course_id": 29,
       "course_title": "VLSI Circuits Design",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": "Dr. Walid Dyab",
@@ -2059,50 +1925,7 @@
       "course_id": 30,
       "course_title": "Data Communication Networks",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -2113,50 +1936,7 @@
       "course_id": 31,
       "course_title": "Digital Communications",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -2167,50 +1947,7 @@
       "course_id": 32,
       "course_title": "Wireless Communications Systems",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -2331,11 +2068,12 @@
         "PI21": "M",
         "PI22": "M",
         "PI23": "M",
-        "PI32": "M",
+        "PI24": "M",
         "PI41": "M",
-        "PI62": "M",
+        "PI42": "M",
         "PI63": "M",
-        "PI64": "M"
+        "PI64": "M",
+        "PI71": "M"
       }
     },
     {
@@ -2343,50 +2081,7 @@
       "course_id": 34,
       "course_title": "Mechatronics",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -2470,14 +2165,15 @@
       "instructor": "Dr. Mahmpoud Abdelreheem",
       "mapping_pi_levels": {
         "PI11": "M",
-        "PI24": "M",
+        "PI12": "M",
         "PI31": "M",
-        "PI52": "M",
+        "PI32": "M",
         "PI61": "M",
         "PI62": "M",
         "PI63": "M",
         "PI64": "M",
-        "PI71": "M"
+        "PI71": "M",
+        "PI72": "M"
       }
     },
     {
@@ -2485,50 +2181,7 @@
       "course_id": 36,
       "course_title": "Robotics and Automation",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -2593,50 +2246,7 @@
       "course_id": 38,
       "course_title": "Digital Signal Processing",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.3,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 3.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -2711,9 +2321,10 @@
       "instructor": "Dr. Ahmed Alnakhli",
       "mapping_pi_levels": {
         "PI11": "M",
-        "PI24": "M",
+        "PI12": "M",
         "PI31": "M",
-        "PI64": "M"
+        "PI32": "M",
+        "PI71": "M"
       }
     },
     {
@@ -2721,36 +2332,7 @@
       "course_id": 40,
       "course_title": "Special Topics In Electrical and Electronics Engineering",
       "performance_level": "M",
-      "clos": [
-        {
-          "domain": "Knowledge and understanding",
-          "clo_id": 1.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Skills",
-          "clo_id": 2.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 2.2,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": null,
-          "aligned_sos": [],
-          "aligned_pis": []
-        }
-      ],
+      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
@@ -2762,12 +2344,8 @@
       "course_code": "EE 101",
       "course_title": "Computer Programming for Engineering",
       "instructor": "Dr. Muddesar Iqbal",
-      "aligned_sos": [
-        "SO2"
-      ],
-      "pi_levels": {
-        "PI23": "I"
-      }
+      "aligned_sos": [],
+      "pi_levels": {}
     },
     {
       "course_code": "EE 201",
@@ -2775,18 +2353,18 @@
       "instructor": "Dr. Maged Esmail",
       "aligned_sos": [
         "SO1",
-        "SO3",
         "SO4",
+        "SO5",
         "SO6"
       ],
       "pi_levels": {
-        "PI11": "I",
-        "PI32": "I",
+        "PI12": "I",
         "PI41": "I",
         "PI42": "I",
-        "PI61": "I",
+        "PI51": "I",
         "PI62": "I",
-        "PI63": "I"
+        "PI63": "I",
+        "PI64": "I"
       }
     },
     {
@@ -2795,23 +2373,24 @@
       "instructor": "Dr. Mahmoud Abdelreheem",
       "aligned_sos": [
         "SO1",
-        "SO2",
         "SO3",
-        "SO4",
-        "SO6"
+        "SO2",
+        "SO6",
+        "SO5"
       ],
       "pi_levels": {
         "PI11": "I",
         "PI12": "I",
+        "PI31": "I",
+        "PI32": "I",
         "PI21": "I",
         "PI22": "I",
         "PI23": "I",
         "PI24": "I",
-        "PI31": "I",
-        "PI42": "I",
-        "PI61": "I",
         "PI62": "I",
-        "PI63": "I"
+        "PI63": "I",
+        "PI64": "I",
+        "PI51": "I"
       }
     },
     {
@@ -2821,18 +2400,18 @@
       "aligned_sos": [
         "SO1",
         "SO2",
-        "SO4",
+        "SO5",
         "SO6"
       ],
       "pi_levels": {
-        "PI11": "I",
         "PI12": "I",
         "PI21": "I",
         "PI22": "I",
-        "PI42": "I",
-        "PI61": "I",
+        "PI23": "I",
+        "PI51": "I",
         "PI62": "I",
-        "PI63": "I"
+        "PI63": "I",
+        "PI64": "I"
       }
     },
     {
@@ -2841,13 +2420,14 @@
       "instructor": "Dr. Moustafa Nasralla",
       "aligned_sos": [
         "SO1",
-        "SO6"
+        "SO6",
+        "SO7"
       ],
       "pi_levels": {
-        "PI11": "I",
-        "PI62": "I",
+        "PI12": "I",
         "PI63": "I",
-        "PI64": "I"
+        "PI64": "I",
+        "PI71": "I"
       }
     },
     {
@@ -2856,13 +2436,15 @@
       "instructor": "Dr. Mahagan Sagar Bhaskar",
       "aligned_sos": [
         "SO1",
-        "SO6"
+        "SO6",
+        "SO7"
       ],
       "pi_levels": {
         "PI11": "I",
-        "PI62": "I",
+        "PI12": "I",
         "PI63": "I",
-        "PI64": "I"
+        "PI64": "I",
+        "PI71": "I"
       }
     },
     {
@@ -2876,10 +2458,11 @@
       ],
       "pi_levels": {
         "PI11": "P",
-        "PI12": "I",
+        "PI12": "P",
         "PI21": "I",
-        "PI62": "I",
-        "PI63": "I"
+        "PI22": "I",
+        "PI63": "I",
+        "PI64": "I"
       }
     },
     {
@@ -2887,18 +2470,20 @@
       "course_title": "Microprocessors Design",
       "instructor": "Dr. Walid Dyab",
       "aligned_sos": [
-        "SO1",
         "SO2",
-        "SO5"
+        "SO3",
+        "SO5",
+        "SO6"
       ],
       "pi_levels": {
-        "PI11": "P",
-        "PI12": "P",
         "PI21": "P",
         "PI22": "P",
         "PI23": "P",
-        "PI51": "P",
-        "PI52": "P"
+        "PI24": "P",
+        "PI31": "P",
+        "PI32": "P",
+        "PI52": "P",
+        "PI61": "P"
       }
     },
     {
@@ -2908,12 +2493,12 @@
       "aligned_sos": [
         "SO1",
         "SO3",
-        "SO6"
+        "SO7"
       ],
       "pi_levels": {
-        "PI11": "P",
-        "PI31": "P",
-        "PI64": "P"
+        "PI12": "P",
+        "PI32": "P",
+        "PI71": "P"
       }
     },
     {
@@ -2922,13 +2507,15 @@
       "instructor": "Dr. Mahmoud Abdelreheem",
       "aligned_sos": [
         "SO1",
+        "SO2",
         "SO6"
       ],
       "pi_levels": {
         "PI11": "P",
         "PI12": "P",
-        "PI62": "P",
-        "PI63": "P"
+        "PI21": "P",
+        "PI63": "P",
+        "PI64": "P"
       }
     },
     {
@@ -2939,7 +2526,6 @@
         "SO1",
         "SO2",
         "SO3",
-        "SO4",
         "SO5",
         "SO6"
       ],
@@ -2951,12 +2537,13 @@
         "PI23": "P",
         "PI24": "P",
         "PI31": "P",
-        "PI42": "P",
+        "PI32": "P",
         "PI51": "P",
         "PI52": "P",
         "PI61": "P",
         "PI62": "P",
-        "PI63": "P"
+        "PI63": "P",
+        "PI64": "P"
       }
     },
     {
@@ -2969,13 +2556,14 @@
         "SO3",
         "SO4",
         "SO5",
-        "SO6"
+        "SO6",
+        "SO7"
       ],
       "pi_levels": {
         "PI11": "P",
         "PI12": "P",
         "PI21": "P",
-        "PI23": "P",
+        "PI22": "P",
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
@@ -2983,7 +2571,8 @@
         "PI42": "P",
         "PI51": "P",
         "PI52": "P",
-        "PI64": "P"
+        "PI61": "P",
+        "PI71": "P"
       }
     },
     {
@@ -2993,7 +2582,6 @@
       "aligned_sos": [
         "SO1",
         "SO2",
-        "SO6",
         "SO7"
       ],
       "pi_levels": {
@@ -3002,8 +2590,9 @@
         "PI21": "P",
         "PI22": "P",
         "PI23": "P",
-        "PI64": "P",
-        "PI71": "P"
+        "PI24": "P",
+        "PI71": "P",
+        "PI72": "P"
       }
     },
     {
@@ -3013,18 +2602,17 @@
       "aligned_sos": [
         "SO1",
         "SO2",
-        "SO3",
         "SO4",
-        "SO6",
         "SO7"
       ],
       "pi_levels": {
-        "PI12": "M",
+        "PI11": "M",
         "PI21": "M",
-        "PI32": "M",
+        "PI22": "M",
         "PI41": "M",
-        "PI64": "M",
-        "PI71": "M"
+        "PI42": "M",
+        "PI71": "M",
+        "PI72": "M"
       }
     },
     {
@@ -3057,7 +2645,8 @@
         "PI62": "M",
         "PI63": "M",
         "PI64": "M",
-        "PI71": "M"
+        "PI71": "M",
+        "PI72": "M"
       }
     },
     {
@@ -3066,7 +2655,6 @@
       "instructor": "Dr. Moustafa Nasralla",
       "aligned_sos": [
         "SO1",
-        "SO2",
         "SO3",
         "SO4",
         "SO5",
@@ -3075,16 +2663,17 @@
       ],
       "pi_levels": {
         "PI11": "M",
-        "PI24": "M",
+        "PI12": "M",
         "PI31": "M",
         "PI32": "M",
         "PI41": "M",
         "PI42": "M",
         "PI51": "M",
-        "PI62": "M",
+        "PI52": "M",
         "PI63": "M",
         "PI64": "M",
-        "PI71": "M"
+        "PI71": "M",
+        "PI72": "M"
       }
     },
     {
@@ -3136,9 +2725,9 @@
       "aligned_sos": [
         "SO1",
         "SO2",
-        "SO3",
         "SO4",
-        "SO6"
+        "SO6",
+        "SO7"
       ],
       "pi_levels": {
         "PI11": "M",
@@ -3146,11 +2735,12 @@
         "PI21": "M",
         "PI22": "M",
         "PI23": "M",
-        "PI32": "M",
+        "PI24": "M",
         "PI41": "M",
-        "PI62": "M",
+        "PI42": "M",
         "PI63": "M",
-        "PI64": "M"
+        "PI64": "M",
+        "PI71": "M"
       }
     },
     {
@@ -3166,22 +2756,21 @@
       "instructor": "Dr. Mahmpoud Abdelreheem",
       "aligned_sos": [
         "SO1",
-        "SO2",
         "SO3",
-        "SO5",
         "SO6",
         "SO7"
       ],
       "pi_levels": {
         "PI11": "M",
-        "PI24": "M",
+        "PI12": "M",
         "PI31": "M",
-        "PI52": "M",
+        "PI32": "M",
         "PI61": "M",
         "PI62": "M",
         "PI63": "M",
         "PI64": "M",
-        "PI71": "M"
+        "PI71": "M",
+        "PI72": "M"
       }
     },
     {
@@ -3211,15 +2800,15 @@
       "instructor": "Dr. Ahmed Alnakhli",
       "aligned_sos": [
         "SO1",
-        "SO2",
         "SO3",
-        "SO6"
+        "SO7"
       ],
       "pi_levels": {
         "PI11": "M",
-        "PI24": "M",
+        "PI12": "M",
         "PI31": "M",
-        "PI64": "M"
+        "PI32": "M",
+        "PI71": "M"
       }
     },
     {

@@ -17,24 +17,16 @@
           {
             "clo_number": 1,
             "clo_text": "Define fundamental concepts of programming along with problem-solving techniques and analytical thinking.",
-            "mapped_sos": [
-              "SO1"
-            ],
-            "pi_codes": [
-              "PI11"
-            ],
+            "mapped_sos": [],
+            "pi_codes": [],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
             "clo_number": 4,
             "clo_text": "Explain the various logic using various operators and expressions.",
-            "mapped_sos": [
-              "SO2"
-            ],
-            "pi_codes": [
-              "PI24"
-            ],
+            "mapped_sos": [],
+            "pi_codes": [],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
@@ -576,80 +568,56 @@
         "clos": [
           {
             "clo_number": 1,
-            "clo_text": "Describe the types and operation of a typical microprocessors/microcontrollers.\nExplain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses.",
+            "clo_text": "Describe the types and operation of a typical microprocessors/microcontrollers.",
             "mapped_sos": [
-              "SO1"
+              "SO3"
             ],
             "pi_codes": [
-              "PI11",
-              "PI12"
+              "PI31",
+              "PI32"
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
             "clo_number": 2,
-            "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.\nModel digital components of microprocessor-based systems using HDL at the RTL level.",
-            "mapped_sos": [
-              "SO6"
-            ],
-            "pi_codes": [
-              "PI61",
-              "PI62",
-              "PI63",
-              "PI64"
-            ],
+            "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
+            "mapped_sos": [],
+            "pi_codes": [],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
             "clo_number": 4,
-            "clo_text": "Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D & D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.\nDesign arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits.",
-            "mapped_sos": [
-              "SO2"
-            ],
-            "pi_codes": [
-              "PI21",
-              "PI22",
-              "PI23",
-              "PI24"
-            ],
+            "clo_text": "Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D & D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.",
+            "mapped_sos": [],
+            "pi_codes": [],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
             "clo_number": 5,
-            "clo_text": "Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures. \nDesign control units and sequential systems using finite state machines for system control applications.",
-            "mapped_sos": [
-              "SO4"
-            ],
-            "pi_codes": [
-              "PI41",
-              "PI42"
-            ],
+            "clo_text": "Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures.",
+            "mapped_sos": [],
+            "pi_codes": [],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
             "clo_number": 9,
-            "clo_text": "Demonstrate the ability to configure hardware and software microprocessor-based systems\nImplement and verify an integrated digital system combining datapath and control components on FPGA hardware.",
+            "clo_text": "Demonstrate the ability to configure hardware and software microprocessor-based systems",
             "mapped_sos": [
               "SO2",
-              "SO3",
               "SO5",
-              "SO7"
+              "SO6"
             ],
             "pi_codes": [
               "PI21",
               "PI22",
               "PI23",
               "PI24",
-              "PI31",
-              "PI32",
-              "PI51",
               "PI52",
-              "PI71",
-              "PI72"
+              "PI61"
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
@@ -893,32 +861,6 @@
             "pi_codes": [],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
-          },
-          {
-            "clo_number": 10,
-            "clo_text": "",
-            "mapped_sos": [
-              "SO2",
-              "SO3",
-              "SO5",
-              "SO6"
-            ],
-            "pi_codes": [
-              "PI21",
-              "PI22",
-              "PI23",
-              "PI24",
-              "PI31",
-              "PI32",
-              "PI51",
-              "PI52",
-              "PI61",
-              "PI62",
-              "PI63",
-              "PI64"
-            ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
           }
         ]
       },
@@ -1233,7 +1175,7 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
-            "clo_number": 3,
+            "clo_number": 4,
             "clo_text": "Apply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
             "mapped_sos": [
               "SO2"
@@ -1248,7 +1190,7 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
-            "clo_number": 4,
+            "clo_number": 5,
             "clo_text": "Generate alternative concepts and select a preferred solution for a design problem.",
             "mapped_sos": [
               "SO2"
@@ -1261,7 +1203,7 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
-            "clo_number": 5,
+            "clo_number": 6,
             "clo_text": "Communicate design solutions visually using engineering tools and drawings.",
             "mapped_sos": [
               "SO3"
@@ -1273,7 +1215,7 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
-            "clo_number": 6,
+            "clo_number": 7,
             "clo_text": "Communicate design solutions using written, visual, and oral technical methods.",
             "mapped_sos": [
               "SO3"
@@ -1286,7 +1228,7 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
-            "clo_number": 7,
+            "clo_number": 8,
             "clo_text": "Validate design solutions through experimentation/testing, data collection, analysis, and engineering conclusions.",
             "mapped_sos": [
               "SO6"
@@ -1301,7 +1243,7 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
-            "clo_number": 8,
+            "clo_number": 9,
             "clo_text": "Evaluate ethical and legal responsibilities and their impact on engineering decisions.",
             "mapped_sos": [
               "SO4"
@@ -1314,7 +1256,7 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
-            "clo_number": 9,
+            "clo_number": 10,
             "clo_text": "Collaborate to establish goals, plan tasks, and meet project objectives within a team.",
             "mapped_sos": [
               "SO5"
@@ -1323,11 +1265,11 @@
               "PI51",
               "PI52"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": "",
+            "assessment_methods": ""
           },
           {
-            "clo_number": 10,
+            "clo_number": 11,
             "clo_text": "Acquire new knowledge, tools, standards, or technologies as needed to complete the design project.",
             "mapped_sos": [
               "SO7"
