@@ -306,7 +306,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Recognize the main concepts of electrical parameters and their interrelations.\nExplain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.",
+          "clo_text": "Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.",
           "aligned_sos": [
             "SO1"
           ],
@@ -317,7 +317,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Analyze DC/AC electric circuits using Ohm`s law, Kirchhoff's circuit laws, and voltage/current divider rules.\nAnalyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
+          "clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
           "aligned_sos": [
             "SO1"
           ],
@@ -328,7 +328,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Analyze DC/AC electric circuits using different analysis techniques such as Mesh, Nodal, and Thevenin.\nAnalyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.",
+          "clo_text": "Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.",
           "aligned_sos": [
             "SO1"
           ],
@@ -339,7 +339,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
-          "clo_text": "Analyze sinusoidal signals, reactance, admittance, and power using phasor forms.\nInvestigate electric circuits through experiments and simulations",
+          "clo_text": "Investigate electric circuits through experiments and simulations",
           "aligned_sos": [
             "SO1",
             "SO6"
@@ -354,7 +354,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
-          "clo_text": "Demonstrate DC/AC electric circuits using hardware boards and simulation in group activities.\nContribute to team tasks and objectives in electric circuits laboratory activities",
+          "clo_text": "Contribute to team tasks and objectives in electric circuits laboratory activities",
           "aligned_sos": [
             "SO5"
           ],
@@ -468,13 +468,6 @@
           "aligned_pis": [
             "PI51"
           ]
-        },
-        {
-          "domain": "Values, autonomy and responsibility",
-          "clo_id": 3.1,
-          "clo_text": "Demonstrate experimentally basic electronic circuits and their applications",
-          "aligned_sos": [],
-          "aligned_pis": []
         }
       ],
       "overall_aligned_sos": [
@@ -643,7 +636,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Describe different properties of continuous and discrete-time signals and systems.  \nDescribe continuous- and discrete-time signals and systems using standard properties and classification criteria.",
+          "clo_text": "Describe continuous- and discrete-time signals and systems using standard properties and classification criteria.",
           "aligned_sos": [
             "SO1"
           ],
@@ -654,7 +647,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
-          "clo_text": "Recognize the sampling theory.\nDescribe sampling theory principles for converting continuous-time signals to discrete-time signals.",
+          "clo_text": "Describe sampling theory principles for converting continuous-time signals to discrete-time signals.",
           "aligned_sos": [
             "SO1"
           ],
@@ -679,7 +672,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Explain Z- transform and its applications for LTI systems. \nAnalyze LTI systems using Z-transform concepts to interpret results and draw engineering conclusions.",
+          "clo_text": "Analyze LTI systems using Z-transform concepts to interpret results and draw engineering conclusions.",
           "aligned_sos": [
             "SO1",
             "SO6"
@@ -693,7 +686,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
-          "clo_text": "Explain Continuous and Discrete-time Fourier Transform and its applications for LTI systems\nExplain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results.",
+          "clo_text": "Explain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results.",
           "aligned_sos": [
             "SO1",
             "SO6"
@@ -706,7 +699,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
-          "clo_text": "Write MatLab code and sampling theory and develop discrete system. \nWrite MATLAB code to implement sampling-based discrete-time systems and evaluate their performance using independently learned tools or functions.",
+          "clo_text": "Write MATLAB code to implement sampling-based discrete-time systems and evaluate their performance using independently learned tools or functions.",
           "aligned_sos": [
             "SO6",
             "SO7"
@@ -994,7 +987,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Explain the concept of electric field and magnetic field.\nExplain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.",
+          "clo_text": "Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.",
           "aligned_sos": [
             "SO1"
           ],
@@ -1005,7 +998,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Analyze Maxwell’s equations to find the electric and magnetic field components in different media.\nApply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
+          "clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
           "aligned_sos": [
             "SO1"
           ],
@@ -1016,7 +1009,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Develop an ability to apply Gauss’ law, Ampere’s Law, Biot-Savart law, Faraday’s law and Maxwell’s equations in the analysis of electromagnetic systems.\nAnalyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.",
+          "clo_text": "Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.",
           "aligned_sos": [
             "SO1"
           ],
@@ -1613,7 +1606,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Identify, gather and synthesize relevant information needed to define and solve an open-ended design problem.\nIdentify relevant technical information and engineering principles needed to define and solve an open-ended design problem.",
+          "clo_text": "Identify relevant technical information and engineering principles needed to define and solve an open-ended design problem.",
           "aligned_sos": [
             "SO1"
           ],
@@ -1625,7 +1618,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Apply the engineering design process to define, formulate and solve a conceptual design problem considering human factors, safety, environmental, economic, and societal constraints.\nApply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
+          "clo_text": "Apply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
           "aligned_sos": [
             "SO2"
           ],
@@ -1639,7 +1632,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Use lateral and critical thinking to generate creative alternative concepts and identify a preferred solution to a design problem. \nGenerate alternative concepts and select a preferred solution for a design problem.",
+          "clo_text": "Generate alternative concepts and select a preferred solution for a design problem.",
           "aligned_sos": [
             "SO2"
           ],
@@ -1651,7 +1644,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
-          "clo_text": "Use engineering tools and drawing skills to check and visually communicate design problem-solving.\nCommunicate design solutions visually using engineering tools and drawings.",
+          "clo_text": "Communicate design solutions visually using engineering tools and drawings.",
           "aligned_sos": [
             "SO3"
           ],
@@ -1662,7 +1655,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
-          "clo_text": "Communicate effectively and define engineering design problems and keep a well build log file and keep a journal of ideas and activities associated with the design project.\nCommunicate design solutions using written, visual, and oral technical methods.",
+          "clo_text": "Communicate design solutions using written, visual, and oral technical methods.",
           "aligned_sos": [
             "SO3"
           ],
@@ -1688,7 +1681,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
-          "clo_text": "Recognize the engineering profession and the importance of ethical and legal factors in professional duties\nEvaluate ethical and legal responsibilities and their impact on engineering decisions.",
+          "clo_text": "Evaluate ethical and legal responsibilities and their impact on engineering decisions.",
           "aligned_sos": [
             "SO4"
           ],
@@ -1700,7 +1693,7 @@
         {
           "domain": null,
           "clo_id": 3.2,
-          "clo_text": "Establish requirements, scopes, plan tasks, and meet objectives through effective teamwork.\nCollaborate to establish goals, plan tasks, and meet project objectives within a team.",
+          "clo_text": "Collaborate to establish goals, plan tasks, and meet project objectives within a team.",
           "aligned_sos": [
             "SO5"
           ],
@@ -1795,7 +1788,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
-          "clo_text": "Define and recognize complex electrical engineering problems encountered in industry, utilizing theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.\nIdentify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
+          "clo_text": "Identify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
           "aligned_sos": [
             "SO1"
           ],
@@ -1819,7 +1812,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Examine advanced technical skills in electrical engineering, including  design, analysis, and troubleshooting, to successfully complete assigned tasks and projects within cooperative work environments.\nApply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
+          "clo_text": "Apply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
           "aligned_sos": [
             "SO1",
             "SO6"
@@ -1852,7 +1845,7 @@
         {
           "domain": null,
           "clo_id": 3.2,
-          "clo_text": "Demonstrate professional and ethical responsibility\nDemonstrate professional and ethical responsibility in engineering practice and decision-making.",
+          "clo_text": "Demonstrate professional and ethical responsibility in engineering practice and decision-making.",
           "aligned_sos": [
             "SO4"
           ],
@@ -2408,7 +2401,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Describe fundamental automation and control concepts related to programmable logic controllers and relay ladder logic.",
+          "clo_text": "Analyze and solve basic automation and control problems using programmable logic controllers and relay ladder logic.",
           "aligned_sos": [
             "SO1"
           ],
@@ -2422,12 +2415,9 @@
           "clo_id": 1.2,
           "clo_text": "Explain PLC hardware structure, programming concepts, and industrial applications using appropriate technical terminology, ladder diagrams, and documentation.",
           "aligned_sos": [
-            "SO1",
             "SO3"
           ],
           "aligned_pis": [
-            "PI11",
-            "PI12",
             "PI31",
             "PI32"
           ]
@@ -2449,7 +2439,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
-          "clo_text": "Apply new PLC functions, instructions, and communication concepts using manuals, software tools, and self-directed learning resources.",
+          "clo_text": "Acquire and apply new PLC functions, instructions, and communication concepts using manuals, software tools, and self-directed learning resources.",
           "aligned_sos": [
             "SO7"
           ],
