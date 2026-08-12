@@ -1,6 +1,7 @@
+
 {
   "program": "Electrical Engineering",
-  "source_file": "EE Program CLO-SO-PI Mapping (1).xlsx",
+  "source_file": "EE Program CLO-SO-PI Mapping(20260812-060939).xlsx",
   "generated_from_workbook": true,
   "sheets": [
     "PIs",
@@ -50,9 +51,9 @@
           "so_code": "SO1",
           "so_statement": "Ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics.",
           "pi_statement": "Identify, formulate, and solve complex electrical engineering problems",
-          "course_level": "– For senior-level courses that include complex engineering problems.",
+          "course_level": "â€“ For senior-level courses that include complex engineering problems.",
           "rubric": "Rubric",
-          "abet_illustration": "Complex Engineering Problems – Complex engineering problems include one or more of the following characteristics: \n-involving wide-ranging or conflicting technical issues, \n-having no obvious solution, \n-addressing problems not encompassed by current standards and codes, \n-involving diverse groups of stakeholders, \n-including many component parts or sub-problems, \n-involving multiple disciplines, \n-or having significant consequences in a range of contexts."
+          "abet_illustration": "Complex Engineering Problems â€“ Complex engineering problems include one or more of the following characteristics: \n-involving wide-ranging or conflicting technical issues, \n-having no obvious solution, \n-addressing problems not encompassed by current standards and codes, \n-involving diverse groups of stakeholders, \n-including many component parts or sub-problems, \n-involving multiple disciplines, \n-or having significant consequences in a range of contexts."
         },
         {
           "pi_code": "PI12",
@@ -75,7 +76,7 @@
           "pi_statement": "Apply engineering design to produce a solution that meets specified needs",
           "course_level": null,
           "rubric": "Rubric",
-          "abet_illustration": "Engineering design is a process of devising a system, component, or process to meet desired needs and specifications within constraints. It is an iterative, creative, decision-making process in which the basic sciences, mathematics, and engineering sciences are applied to convert resources into solutions. Engineering design involves identifying opportunities, developing requirements, performing analysis and synthesis, generating multiple solutions, evaluating solutions against requirements, considering risks, and making trade-offs, for the purpose of obtaining a high-quality solution under the given circumstances. For illustrative purposes only, examples of possible constraints include aesthetics, codes, constructability, cost, ergonomics, extensibility, functionality, interoperability, legal considerations, maintainability, manufacturability, marketability, policy, regulations, schedule, standards, sustainability, or usability.\n\n This does not mean that each of these elements  (factors) must have a significant effect on the design — it just means that the program must show that students consider these elements as they engage in design."
+          "abet_illustration": "Engineering design is a process of devising a system, component, or process to meet desired needs and specifications within constraints. It is an iterative, creative, decision-making process in which the basic sciences, mathematics, and engineering sciences are applied to convert resources into solutions. Engineering design involves identifying opportunities, developing requirements, performing analysis and synthesis, generating multiple solutions, evaluating solutions against requirements, considering risks, and making trade-offs, for the purpose of obtaining a high-quality solution under the given circumstances. For illustrative purposes only, examples of possible constraints include aesthetics, codes, constructability, cost, ergonomics, extensibility, functionality, interoperability, legal considerations, maintainability, manufacturability, marketability, policy, regulations, schedule, standards, sustainability, or usability.\n\n This does not mean that each of these elements  (factors) must have a significant effect on the design â€” it just means that the program must show that students consider these elements as they engage in design."
         },
         {
           "pi_code": "PI22",
@@ -116,8 +117,9 @@
           "pi_statement": "Communicate technical ideas in written technical reports, including engineering graphs and drawings",
           "course_level": null,
           "rubric": "Rubric",
-          "abet_illustration": "-The guidance indicates that the “range of audiences” should include at least two distinct audiences (and they should be relevant to the discipline or program’s mission). \n-It is the program's responsibility to determine the range of audiences. For example, if a program stresses preparing students for graduate school, it might have students prepare a journal paper. There are many other possible audiences: faculty, students, non-technical, the public sector, etc. For example, students in biomedical engineering programs might communicate with doctors. In the major design experience, students might communicate with external clients. It is the program's responsibility to determine the most meaningful audiences for its students."
+          "abet_illustration": "-The guidance indicates that the â€œrange of audiencesâ€ should include at least two distinct audiences (and they should be relevant to the discipline or programâ€™s mission). \n-It is the program's responsibility to determine the range of audiences. For example, if a program stresses preparing students for graduate school, it might have students prepare a journal paper. There are many other possible audiences: faculty, students, non-technical, the public sector, etc. For example, students in biomedical engineering programs might communicate with doctors. In the major design experience, students might communicate with external clients. It is the program's responsibility to determine the most meaningful audiences for its students."
         },
+
         {
           "pi_code": "PI32",
           "so_code": "SO3",
@@ -169,7 +171,7 @@
           "so_code": "SO5",
           "so_statement": "An ability to function effectively on a team whose members together provide leadership, create a collaborative and inclusive environment, establish goals, plan tasks, and meet objectives.",
           "pi_statement": "Provide leadership in planning and managing team work and support a collaborative, inclusive team environment",
-          "course_level": "– For senior-level courses that include design project.",
+          "course_level": "â€“ For senior-level courses that include design project.",
           "rubric": null,
           "abet_illustration": null
         }
@@ -183,7 +185,7 @@
           "so_code": "SO6",
           "so_statement": "An ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions.",
           "pi_statement": "Develop appropriate experimentation",
-          "course_level": "– For senior-level courses that include experiement development",
+          "course_level": "â€“ For senior-level courses that include experiement development",
           "rubric": "Rubric",
           "abet_illustration": "Student Outcome #6 requires in part that students have the ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions. There is no requirement that students be able to design an experiment. \n\nThe components of Outcome 6 do not have to be addressed in series, and the outcome may be satisfied in the context of more than one system. "
         },
@@ -238,6 +240,7 @@
           "abet_illustration": null
         }
       ]
+
     }
   ],
   "courses": [
@@ -246,46 +249,100 @@
       "course_id": 11,
       "course_title": "Computer Programming for Engineering",
       "performance_level": "I",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO3"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI31",
+        "PI32"
+      ],
+      "instructor": "Dr. Muddesar Iqbal",
+      "mapping_pi_levels": {
+        "PI11": "I",
+        "PI31": "I",
+        "PI32": "I"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
           "clo_text": "Define fundamental concepts of programming along with problem-solving techniques and analytical thinking.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI11"
+          ]
         },
         {
           "domain": "Skills",
           "clo_id": 2.1,
           "clo_text": "Explain the various logic using various operators and expressions.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "aligned_sos": [
+            "SO3"
+          ],
+          "aligned_pis": [
+            "PI31",
+            "PI32"
+          ]
         },
         {
           "domain": null,
           "clo_id": 2.2,
           "clo_text": "Write a programming code in Python.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "aligned_sos": [
+            "SO3"
+          ],
+          "aligned_pis": [
+            "PI31",
+            "PI32"
+          ]
         },
         {
           "domain": null,
           "clo_id": 2.3,
           "clo_text": "Examine program code using Python",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI11"
+          ]
         }
-      ],
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
-      "instructor": "Dr. Muddesar Iqbal",
-      "mapping_pi_levels": {}
+      ]
     },
     {
       "course_code": "EE 201",
       "course_id": 12,
       "course_title": "Introduction to Circuits",
       "performance_level": "I",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO4",
+        "SO5",
+        "SO6"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI41",
+        "PI42",
+        "PI51",
+        "PI62",
+        "PI63",
+        "PI64"
+      ],
+      "instructor": "Dr. Maged Esmail",
+      "mapping_pi_levels": {
+        "PI12": "I",
+        "PI41": "I",
+        "PI42": "I",
+        "PI51": "I",
+        "PI62": "I",
+        "PI63": "I",
+        "PI64": "I"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -301,9 +358,10 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
+          "clo_text": "Analyze DC resistive circuits using Kirchhoffâ€™s laws, nodal and mesh analysis, and basic network theorems.",
           "aligned_sos": [
             "SO1"
+
           ],
           "aligned_pis": [
             "PI12"
@@ -358,38 +416,49 @@
             "PI42"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO4",
-        "SO5",
-        "SO6"
-      ],
-      "overall_aligned_pis": [
-        "PI12",
-        "PI41",
-        "PI42",
-        "PI51",
-        "PI62",
-        "PI63",
-        "PI64"
-      ],
-      "instructor": "Dr. Maged Esmail",
-      "mapping_pi_levels": {
-        "PI12": "I",
-        "PI41": "I",
-        "PI42": "I",
-        "PI51": "I",
-        "PI62": "I",
-        "PI63": "I",
-        "PI64": "I"
-      }
+      ]
     },
     {
       "course_code": "EE 211",
       "course_id": 13,
       "course_title": "Electronic Fundamentals",
       "performance_level": "I",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO5",
+        "SO6"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI23",
+        "PI24",
+        "PI31",
+        "PI32",
+        "PI51",
+        "PI62",
+        "PI63",
+        "PI64"
+      ],
+      "instructor": "Dr. Mahmoud Abdelreheem",
+      "mapping_pi_levels": {
+        "PI11": "I",
+        "PI12": "I",
+        "PI21": "I",
+        "PI22": "I",
+        "PI23": "I",
+        "PI24": "I",
+        "PI31": "I",
+        "PI32": "I",
+        "PI51": "I",
+        "PI62": "I",
+        "PI63": "I",
+        "PI64": "I"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -413,6 +482,7 @@
           "aligned_pis": [
             "PI31",
             "PI32"
+
           ]
         },
         {
@@ -453,49 +523,40 @@
             "PI51"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO3",
-        "SO2",
-        "SO6",
-        "SO5"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI31",
-        "PI32",
-        "PI21",
-        "PI22",
-        "PI23",
-        "PI24",
-        "PI62",
-        "PI63",
-        "PI64",
-        "PI51"
-      ],
-      "instructor": "Dr. Mahmoud Abdelreheem",
-      "mapping_pi_levels": {
-        "PI11": "I",
-        "PI12": "I",
-        "PI31": "I",
-        "PI32": "I",
-        "PI21": "I",
-        "PI22": "I",
-        "PI23": "I",
-        "PI24": "I",
-        "PI62": "I",
-        "PI63": "I",
-        "PI64": "I",
-        "PI51": "I"
-      }
+      ]
     },
     {
       "course_code": "EE 221",
       "course_id": 14,
       "course_title": "Logic Design",
       "performance_level": "I",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO5",
+        "SO6"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI23",
+        "PI51",
+        "PI62",
+        "PI63",
+        "PI64"
+      ],
+      "instructor": "Dr. Walid Dyab",
+      "mapping_pi_levels": {
+        "PI12": "I",
+        "PI21": "I",
+        "PI22": "I",
+        "PI23": "I",
+        "PI51": "I",
+        "PI62": "I",
+        "PI63": "I",
+        "PI64": "I"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -542,6 +603,7 @@
           "clo_id": 2.3,
           "clo_text": "Analyze and design combinational logic circuit.",
           "aligned_sos": [
+
             "SO6"
           ],
           "aligned_pis": [
@@ -583,40 +645,31 @@
             "PI64"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO2",
-        "SO5",
-        "SO6"
-      ],
-      "overall_aligned_pis": [
-        "PI12",
-        "PI21",
-        "PI22",
-        "PI23",
-        "PI51",
-        "PI62",
-        "PI63",
-        "PI64"
-      ],
-      "instructor": "Dr. Walid Dyab",
-      "mapping_pi_levels": {
-        "PI12": "I",
-        "PI21": "I",
-        "PI22": "I",
-        "PI23": "I",
-        "PI51": "I",
-        "PI62": "I",
-        "PI63": "I",
-        "PI64": "I"
-      }
+      ]
     },
     {
       "course_code": "EE 231",
       "course_id": 15,
       "course_title": "Signals and Systems",
       "performance_level": "I",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI63",
+        "PI64",
+        "PI71"
+      ],
+      "instructor": "Dr. Moustafa Nasralla",
+      "mapping_pi_levels": {
+        "PI12": "I",
+        "PI63": "I",
+        "PI64": "I",
+        "PI71": "I"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -671,6 +724,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+
           "clo_text": "Explain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results.",
           "aligned_sos": [
             "SO1",
@@ -695,31 +749,33 @@
             "PI71"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO6",
-        "SO7"
-      ],
-      "overall_aligned_pis": [
-        "PI12",
-        "PI63",
-        "PI64",
-        "PI71"
-      ],
-      "instructor": "Dr. Moustafa Nasralla",
-      "mapping_pi_levels": {
-        "PI12": "I",
-        "PI63": "I",
-        "PI64": "I",
-        "PI71": "I"
-      }
+      ]
     },
     {
       "course_code": "EE 202",
       "course_id": 16,
       "course_title": "Circuit Analysis",
       "performance_level": "I",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI63",
+        "PI64",
+        "PI71"
+      ],
+      "instructor": "Dr. Mahagan Sagar Bhaskar",
+      "mapping_pi_levels": {
+        "PI11": "I",
+        "PI12": "I",
+        "PI63": "I",
+        "PI64": "I",
+        "PI71": "I"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -780,33 +836,36 @@
             "PI71"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO6",
-        "SO7"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI63",
-        "PI64",
-        "PI71"
-      ],
-      "instructor": "Dr. Mahagan Sagar Bhaskar",
-      "mapping_pi_levels": {
-        "PI11": "I",
-        "PI12": "I",
-        "PI63": "I",
-        "PI64": "I",
-        "PI71": "I"
-      }
+      ]
     },
     {
       "course_code": "EE 312",
       "course_id": 17,
       "course_title": "Electronic Engineering",
       "performance_level": "P",
+      "overall_aligned_sos": [
+        "SO1",
+
+        "SO2",
+        "SO6"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI63",
+        "PI64"
+      ],
+      "instructor": "Dr. Mahagan Sagar Bhaskar",
+      "mapping_pi_levels": {
+        "PI11": "P",
+        "PI12": "P",
+        "PI21": "P",
+        "PI22": "P",
+        "PI63": "P",
+        "PI64": "P"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -856,44 +915,76 @@
             "PI22"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO2",
-        "SO6"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI21",
-        "PI22",
-        "PI63",
-        "PI64"
-      ],
-      "instructor": "Dr. Mahagan Sagar Bhaskar",
-      "mapping_pi_levels": {
-        "PI11": "P",
-        "PI12": "P",
-        "PI21": "I",
-        "PI22": "I",
-        "PI63": "I",
-        "PI64": "I"
-      }
+      ]
     },
     {
       "course_code": "EE 322",
       "course_id": 18,
       "course_title": "Microprocessors Design",
       "performance_level": "P",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO4",
+        "SO5",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI23",
+        "PI24",
+        "PI31",
+        "PI32",
+        "PI41",
+        "PI42",
+        "PI51",
+        "PI52",
+        "PI61",
+        "PI62",
+        "PI63",
+        "PI64",
+        "PI71",
+        "PI72"
+      ],
+      "instructor": "Dr. Walid Dyab",
+      "mapping_pi_levels": {
+        "PI11": "P",
+        "PI12": "P",
+        "PI21": "P",
+        "PI22": "P",
+        "PI23": "P",
+        "PI24": "P",
+        "PI31": "P",
+        "PI32": "P",
+        "PI41": "P",
+        "PI42": "P",
+        "PI51": "P",
+        "PI52": "P",
+        "PI61": "P",
+
+        "PI62": "P",
+        "PI63": "P",
+        "PI64": "P",
+        "PI71": "P",
+        "PI72": "P"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Describe the types and operation of a typical microprocessors/microcontrollers.",
+          "clo_text": "Explain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses.",
           "aligned_sos": [
+            "SO1",
             "SO3"
           ],
           "aligned_pis": [
+            "PI11",
+            "PI12",
             "PI31",
             "PI32"
           ]
@@ -901,32 +992,83 @@
         {
           "domain": null,
           "clo_id": 1.2,
-          "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.\nModel digital components of microprocessor-based systems using HDL at the RTL level.",
+          "aligned_sos": [
+            "SO1",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI71",
+            "PI72"
+          ]
         },
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D & D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "clo_text": "Design arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits.",
+          "aligned_sos": [
+            "SO2",
+            "SO4",
+            "SO5",
+            "SO6",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24",
+            "PI41",
+            "PI42",
+            "PI51",
+            "PI52",
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64",
+            "PI71",
+            "PI72"
+          ]
         },
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "clo_text": "Design control units and sequential systems using finite state machines for system control applications.",
+          "aligned_sos": [
+            "SO2",
+            "SO4",
+            "SO5",
+            "SO6",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24",
+            "PI41",
+            "PI42",
+            "PI51",
+            "PI52",
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64",
+            "PI71",
+            "PI72"
+          ]
         },
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
-          "clo_text": "Demonstrate the ability to configure hardware and software microprocessor-based systems",
+          "clo_text": "Implement and verify an integrated digital system combining datapath and control components on FPGA hardware.",
           "aligned_sos": [
             "SO2",
             "SO5",
-            "SO6"
+            "SO6",
+            "SO7"
           ],
           "aligned_pis": [
             "PI21",
@@ -934,43 +1076,38 @@
             "PI23",
             "PI24",
             "PI52",
-            "PI61"
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64",
+            "PI71",
+            "PI72"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO2",
-        "SO3",
-        "SO5",
-        "SO6"
-      ],
-      "overall_aligned_pis": [
-        "PI21",
-        "PI22",
-        "PI23",
-        "PI24",
-        "PI31",
-        "PI32",
-        "PI52",
-        "PI61"
-      ],
-      "instructor": "Dr. Walid Dyab",
-      "mapping_pi_levels": {
-        "PI21": "P",
-        "PI22": "P",
-        "PI23": "P",
-        "PI24": "P",
-        "PI31": "P",
-        "PI32": "P",
-        "PI52": "P",
-        "PI61": "P"
-      }
+      ]
     },
     {
+
       "course_code": "EE 341",
       "course_id": 19,
       "course_title": "Electromagnetics Fundamental",
       "performance_level": "P",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO3",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI32",
+        "PI71"
+      ],
+      "instructor": "Dr. Maged Esmail",
+      "mapping_pi_levels": {
+        "PI12": "P",
+        "PI32": "P",
+        "PI71": "P"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -986,7 +1123,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
+          "clo_text": "Apply Maxwellâ€™s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
           "aligned_sos": [
             "SO1"
           ],
@@ -1034,29 +1171,33 @@
             "PI71"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO3",
-        "SO7"
-      ],
-      "overall_aligned_pis": [
-        "PI12",
-        "PI32",
-        "PI71"
-      ],
-      "instructor": "Dr. Maged Esmail",
-      "mapping_pi_levels": {
-        "PI12": "P",
-        "PI32": "P",
-        "PI71": "P"
-      }
+      ]
     },
     {
       "course_code": "EE 332",
       "course_id": 20,
       "course_title": "Control Systems",
       "performance_level": "P",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO6"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI63",
+        "PI64"
+      ],
+      "instructor": "Dr. Mahmoud Abdelreheem",
+      "mapping_pi_levels": {
+        "PI11": "P",
+        "PI12": "P",
+        "PI21": "P",
+        "PI63": "P",
+        "PI64": "P"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -1067,6 +1208,7 @@
           ],
           "aligned_pis": [
             "PI11"
+
           ]
         },
         {
@@ -1115,33 +1257,53 @@
             "PI12"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO2",
-        "SO6"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI21",
-        "PI63",
-        "PI64"
-      ],
-      "instructor": "Dr. Mahmoud Abdelreheem",
-      "mapping_pi_levels": {
-        "PI11": "P",
-        "PI12": "P",
-        "PI21": "P",
-        "PI63": "P",
-        "PI64": "P"
-      }
+      ]
     },
     {
       "course_code": "EE 351",
       "course_id": 21,
       "course_title": "Communication Systems",
       "performance_level": "P",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO5",
+        "SO6"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI23",
+        "PI24",
+        "PI31",
+        "PI32",
+        "PI51",
+        "PI52",
+        "PI61",
+        "PI62",
+        "PI63",
+        "PI64"
+      ],
+      "instructor": "Dr. Mourad Rizk",
+      "mapping_pi_levels": {
+        "PI11": "P",
+        "PI12": "P",
+        "PI21": "P",
+        "PI22": "P",
+        "PI23": "P",
+        "PI24": "P",
+        "PI31": "P",
+        "PI32": "P",
+        "PI51": "P",
+        "PI52": "P",
+        "PI61": "P",
+        "PI62": "P",
+        "PI63": "P",
+        "PI64": "P"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -1167,6 +1329,7 @@
           ]
         },
         {
+
           "domain": null,
           "clo_id": 2.2,
           "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
@@ -1208,45 +1371,74 @@
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
           "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "aligned_sos": [
+            "SO2",
+            "SO3",
+            "SO5",
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24",
+            "PI31",
+            "PI32",
+            "PI51",
+            "PI52",
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64"
+          ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO6"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI61",
-        "PI62",
-        "PI63",
-        "PI64"
-      ],
-      "instructor": "Dr. Mourad Rizk",
-      "mapping_pi_levels": {
-        "PI11": "P",
-        "PI12": "P",
-        "PI21": "P",
-        "PI22": "P",
-        "PI23": "P",
-        "PI24": "P",
-        "PI31": "P",
-        "PI32": "P",
-        "PI51": "P",
-        "PI52": "P",
-        "PI61": "P",
-        "PI62": "P",
-        "PI63": "P",
-        "PI64": "P"
-      }
+      ]
     },
     {
       "course_code": "EE 305",
       "course_id": 22,
       "course_title": "Power Electronics",
       "performance_level": "P",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO4",
+        "SO5",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI24",
+        "PI31",
+        "PI32",
+        "PI41",
+        "PI42",
+        "PI51",
+        "PI52",
+        "PI61",
+        "PI71"
+      ],
+      "instructor": "Dr. Ahmed Alnakhli",
+      "mapping_pi_levels": {
+        "PI11": "P",
+        "PI12": "P",
+        "PI21": "P",
+        "PI22": "P",
+        "PI24": "P",
+        "PI31": "P",
+        "PI32": "P",
+        "PI41": "P",
+        "PI42": "P",
+        "PI51": "P",
+        "PI52": "P",
+        "PI61": "P",
+        "PI71": "P"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -1258,6 +1450,7 @@
           ],
           "aligned_pis": [
             "PI11",
+
             "PI12",
             "PI21"
           ]
@@ -1336,14 +1529,16 @@
             "PI71"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "course_code": "EE 304",
+      "course_id": 23,
+      "course_title": "Electrical Machines",
+      "performance_level": "P",
       "overall_aligned_sos": [
         "SO1",
         "SO2",
-        "SO3",
-        "SO4",
-        "SO5",
-        "SO6",
         "SO7"
       ],
       "overall_aligned_pis": [
@@ -1351,38 +1546,22 @@
         "PI12",
         "PI21",
         "PI22",
+        "PI23",
         "PI24",
-        "PI31",
-        "PI32",
-        "PI41",
-        "PI42",
-        "PI51",
-        "PI52",
-        "PI61",
-        "PI71"
+        "PI71",
+        "PI72"
       ],
-      "instructor": "Dr. Ahmed Alnakhli",
+      "instructor": "Dr. Mahagan Sagar Bhaskar",
       "mapping_pi_levels": {
         "PI11": "P",
         "PI12": "P",
         "PI21": "P",
         "PI22": "P",
+        "PI23": "P",
         "PI24": "P",
-        "PI31": "P",
-        "PI32": "P",
-        "PI41": "P",
-        "PI42": "P",
-        "PI51": "P",
-        "PI52": "P",
-        "PI61": "P",
-        "PI71": "P"
-      }
-    },
-    {
-      "course_code": "EE 304",
-      "course_id": 23,
-      "course_title": "Electrical Machines",
-      "performance_level": "P",
+        "PI71": "P",
+        "PI72": "P"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -1392,6 +1571,7 @@
             "SO1"
           ],
           "aligned_pis": [
+
             "PI11",
             "PI12"
           ]
@@ -1448,39 +1628,42 @@
             "PI72"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO2",
-        "SO7"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI21",
-        "PI22",
-        "PI23",
-        "PI24",
-        "PI71",
-        "PI72"
-      ],
-      "instructor": "Dr. Mahagan Sagar Bhaskar",
-      "mapping_pi_levels": {
-        "PI11": "P",
-        "PI12": "P",
-        "PI21": "P",
-        "PI22": "P",
-        "PI23": "P",
-        "PI24": "P",
-        "PI71": "P",
-        "PI72": "P"
-      }
+      ]
     },
     {
       "course_code": "EE 403",
       "course_id": 24,
       "course_title": "Power Systems",
       "performance_level": "M",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO4",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI21",
+        "PI22",
+        "PI23",
+        "PI24",
+        "PI41",
+        "PI42",
+        "PI71",
+        "PI72"
+      ],
+      "instructor": "Dr. Ahmed Alnakhli",
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI21": "M",
+        "PI22": "M",
+        "PI23": "M",
+        "PI24": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI71": "M",
+        "PI72": "M"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -1509,6 +1692,7 @@
           ]
         },
         {
+
           "domain": "Skills",
           "clo_id": 2.1,
           "clo_text": "Analyse both symmetrical and unsymmetrical conditions in power systems.",
@@ -1536,8 +1720,19 @@
           "domain": null,
           "clo_id": 2.3,
           "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "aligned_sos": [
+            "SO2",
+            "SO4",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI23",
+            "PI24",
+            "PI41",
+            "PI42",
+            "PI71",
+            "PI72"
+          ]
         },
         {
           "domain": "Values, autonomy and responsibility",
@@ -1563,38 +1758,64 @@
             "PI72"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO2",
-        "SO4",
-        "SO7"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI21",
-        "PI22",
-        "PI41",
-        "PI42",
-        "PI71",
-        "PI72"
-      ],
-      "instructor": "Dr. Ahmed Alnakhli",
-      "mapping_pi_levels": {
-        "PI11": "M",
-        "PI21": "M",
-        "PI22": "M",
-        "PI41": "M",
-        "PI42": "M",
-        "PI71": "M",
-        "PI72": "M"
-      }
+      ]
     },
     {
       "course_code": "EE 490",
       "course_id": 25,
       "course_title": "Senior Design Project",
       "performance_level": "M",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO4",
+        "SO5",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI23",
+        "PI24",
+        "PI31",
+        "PI32",
+        "PI41",
+        "PI42",
+        "PI51",
+        "PI52",
+        "PI61",
+        "PI62",
+        "PI63",
+        "PI64",
+        "PI71",
+        "PI72"
+      ],
+      "instructor": "Dr. Moustafa Nasralla",
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI21": "M",
+        "PI22": "M",
+        "PI23": "M",
+        "PI24": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI51": "M",
+        "PI52": "M",
+        "PI61": "M",
+        "PI62": "M",
+        "PI63": "M",
+        "PI64": "M",
+        "PI71": "M",
+
+        "PI72": "M"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -1611,7 +1832,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Apply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
+          "clo_text": "Apply the engineering design process to define, formulate and solve a conceptual design problem considering human factors, safety, environmental, economic, and societal constraints.\nApply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
           "aligned_sos": [
             "SO2"
           ],
@@ -1625,7 +1846,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Generate alternative concepts and select a preferred solution for a design problem.",
+          "clo_text": "Use lateral and critical thinking to generate creative alternative concepts and identify a preferred solution to a design problem. \nGenerate alternative concepts and select a preferred solution for a design problem.",
           "aligned_sos": [
             "SO2"
           ],
@@ -1707,10 +1928,16 @@
             "PI72"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "course_code": "EE 492",
+      "course_id": 26,
+      "course_title": "Cooperative Training",
+
+      "performance_level": "M",
       "overall_aligned_sos": [
         "SO1",
-        "SO2",
         "SO3",
         "SO4",
         "SO5",
@@ -1720,18 +1947,12 @@
       "overall_aligned_pis": [
         "PI11",
         "PI12",
-        "PI21",
-        "PI22",
-        "PI23",
-        "PI24",
         "PI31",
         "PI32",
         "PI41",
         "PI42",
         "PI51",
         "PI52",
-        "PI61",
-        "PI62",
         "PI63",
         "PI64",
         "PI71",
@@ -1741,29 +1962,17 @@
       "mapping_pi_levels": {
         "PI11": "M",
         "PI12": "M",
-        "PI21": "M",
-        "PI22": "M",
-        "PI23": "M",
-        "PI24": "M",
         "PI31": "M",
         "PI32": "M",
         "PI41": "M",
         "PI42": "M",
         "PI51": "M",
         "PI52": "M",
-        "PI61": "M",
-        "PI62": "M",
         "PI63": "M",
         "PI64": "M",
         "PI71": "M",
         "PI72": "M"
-      }
-    },
-    {
-      "course_code": "EE 492",
-      "course_id": 26,
-      "course_title": "Cooperative Training",
-      "performance_level": "M",
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -1782,7 +1991,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
-          "clo_text": "Identify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
+          "clo_text": "Define and recognize complex electrical engineering problems encountered in industry, utilizing theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.\nIdentify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
           "aligned_sos": [
             "SO1"
           ],
@@ -1806,7 +2015,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Apply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
+          "clo_text": "Examine advanced technical skills in electrical engineering, including  design, analysis, and troubleshooting, to successfully complete assigned tasks and projects within cooperative work environments.\nApply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
           "aligned_sos": [
             "SO1",
             "SO6"
@@ -1846,118 +2055,262 @@
           "aligned_pis": [
             "PI41",
             "PI42"
+
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO3",
-        "SO4",
-        "SO5",
-        "SO6",
-        "SO7"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI31",
-        "PI32",
-        "PI41",
-        "PI42",
-        "PI51",
-        "PI52",
-        "PI63",
-        "PI64",
-        "PI71",
-        "PI72"
-      ],
-      "instructor": "Dr. Moustafa Nasralla",
-      "mapping_pi_levels": {
-        "PI11": "M",
-        "PI12": "M",
-        "PI31": "M",
-        "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
-        "PI51": "M",
-        "PI52": "M",
-        "PI63": "M",
-        "PI64": "M",
-        "PI71": "M",
-        "PI72": "M"
-      }
+      ]
     },
     {
       "course_code": "EE 414",
       "course_id": 27,
       "course_title": "Electrical and Electronic Measurements",
       "performance_level": "M",
-      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
-      "mapping_pi_levels": {}
+      "mapping_pi_levels": {},
+      "clos": []
     },
     {
       "course_code": "EE 415",
       "course_id": 28,
       "course_title": "Opto-Electronics",
       "performance_level": "M",
-      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
-      "mapping_pi_levels": {}
+      "mapping_pi_levels": {},
+      "clos": []
     },
     {
       "course_code": "EE 416",
       "course_id": 29,
       "course_title": "VLSI Circuits Design",
       "performance_level": "M",
-      "clos": [],
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO4",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI23",
+        "PI24",
+        "PI31",
+        "PI32",
+        "PI41",
+        "PI42",
+        "PI71",
+        "PI72"
+      ],
       "instructor": "Dr. Walid Dyab",
-      "mapping_pi_levels": {}
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI21": "M",
+        "PI22": "M",
+        "PI23": "M",
+        "PI24": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI71": "M",
+        "PI72": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "clo_text": "Explain the workflow of VLSI design methodologies and the key steps involved in the fabrication of ASICs and FPGAs.",
+          "aligned_sos": [
+            "SO1",
+            "SO3",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI31",
+            "PI32",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 1.2,
+          "clo_text": "Identify the main players in the VLSI industry",
+          "aligned_sos": [
+            "SO1",
+            "SO4",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI41",
+            "PI42",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 1.3,
+          "clo_text": "Differentiate between different packaging of VLSI circuits",
+          "aligned_sos": [
+            "SO1",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "clo_text": "Design VLSI circuits using HDL.",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "clo_text": "Perform functional and timing analysis of HDL designs",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.3,
+          "clo_text": "Execute post-synthesis analysis to ensure the design meets specified performance criteria.",
+          "aligned_sos": [
+            "SO2",
+            "SO4"
+          ],
+          "aligned_pis": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24",
+            "PI41",
+            "PI42"
+          ]
+        },
+        {
+          "domain": "Values, autonomy and responsibility",
+          "clo_id": 3.1,
+          "clo_text": "Uphold ethical standards in VLSI design, including compliance with regulations, accurate reporting, intellectual property rights, and environmental considerations.",
+          "aligned_sos": [
+            "SO4",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI41",
+            "PI42",
+            "PI71",
+            "PI72"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 423",
       "course_id": 30,
       "course_title": "Data Communication Networks",
       "performance_level": "M",
-      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
-      "mapping_pi_levels": {}
+      "mapping_pi_levels": {},
+      "clos": []
     },
     {
       "course_code": "EE 424",
       "course_id": 31,
       "course_title": "Digital Communications",
       "performance_level": "M",
-      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
-      "mapping_pi_levels": {}
+      "mapping_pi_levels": {},
+      "clos": []
     },
     {
       "course_code": "EE 425",
       "course_id": 32,
       "course_title": "Wireless Communications Systems",
       "performance_level": "M",
-      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
-      "mapping_pi_levels": {}
+      "mapping_pi_levels": {},
+      "clos": []
     },
     {
       "course_code": "EE 426",
       "course_id": 33,
       "course_title": "Antenna and wave propagation",
       "performance_level": "M",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO4",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI22",
+        "PI23",
+        "PI24",
+        "PI41",
+        "PI42",
+        "PI63",
+        "PI64",
+        "PI71"
+      ],
+      "instructor": "Dr. Mourad Rizk",
+
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI21": "M",
+        "PI22": "M",
+        "PI23": "M",
+        "PI24": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI63": "M",
+        "PI64": "M",
+        "PI71": "M"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
@@ -2040,63 +2393,61 @@
             "PI71"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO2",
-        "SO4",
-        "SO6",
-        "SO7"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI21",
-        "PI22",
-        "PI23",
-        "PI24",
-        "PI41",
-        "PI42",
-        "PI63",
-        "PI64",
-        "PI71"
-      ],
-      "instructor": "Dr. Mourad Rizk",
-      "mapping_pi_levels": {
-        "PI11": "M",
-        "PI12": "M",
-        "PI21": "M",
-        "PI22": "M",
-        "PI23": "M",
-        "PI24": "M",
-        "PI41": "M",
-        "PI42": "M",
-        "PI63": "M",
-        "PI64": "M",
-        "PI71": "M"
-      }
+      ]
     },
     {
       "course_code": "EE 433",
       "course_id": 34,
       "course_title": "Mechatronics",
       "performance_level": "M",
-      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
-      "mapping_pi_levels": {}
+      "mapping_pi_levels": {},
+      "clos": []
     },
     {
       "course_code": "EE 434",
       "course_id": 35,
       "course_title": "PLC Microcontrollers",
       "performance_level": "M",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO3",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+
+        "PI11",
+        "PI12",
+        "PI31",
+        "PI32",
+        "PI61",
+        "PI62",
+        "PI63",
+        "PI64",
+        "PI71",
+        "PI72"
+      ],
+      "instructor": "Dr. Mahmoud Abdelreheem",
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI61": "M",
+        "PI62": "M",
+        "PI63": "M",
+        "PI64": "M",
+        "PI71": "M",
+        "PI72": "M"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Analyze and solve basic automation and control problems using programmable logic controllers and relay ladder logic.",
+          "clo_text": "Describe fundamental automation and control concepts related to programmable logic controllers and relay ladder logic.",
           "aligned_sos": [
             "SO1"
           ],
@@ -2110,9 +2461,12 @@
           "clo_id": 1.2,
           "clo_text": "Explain PLC hardware structure, programming concepts, and industrial applications using appropriate technical terminology, ladder diagrams, and documentation.",
           "aligned_sos": [
+            "SO1",
             "SO3"
           ],
           "aligned_pis": [
+            "PI11",
+            "PI12",
             "PI31",
             "PI32"
           ]
@@ -2134,7 +2488,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
-          "clo_text": "Acquire and apply new PLC functions, instructions, and communication concepts using manuals, software tools, and self-directed learning resources.",
+          "clo_text": "Apply new PLC functions, instructions, and communication concepts using manuals, software tools, and self-directed learning resources.",
           "aligned_sos": [
             "SO7"
           ],
@@ -2143,10 +2497,18 @@
             "PI72"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "course_code": "EE 435",
+      "course_id": 36,
+      "course_title": "Robotics and Automation",
+      "performance_level": "M",
       "overall_aligned_sos": [
         "SO1",
         "SO3",
+        "SO4",
+        "SO5",
         "SO6",
         "SO7"
       ],
@@ -2155,6 +2517,10 @@
         "PI12",
         "PI31",
         "PI32",
+        "PI41",
+        "PI42",
+        "PI51",
+        "PI52",
         "PI61",
         "PI62",
         "PI63",
@@ -2162,103 +2528,260 @@
         "PI71",
         "PI72"
       ],
-      "instructor": "Dr. Mahmpoud Abdelreheem",
+      "instructor": "Dr. Muddesar Iqbal",
       "mapping_pi_levels": {
         "PI11": "M",
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI51": "M",
+        "PI52": "M",
         "PI61": "M",
+
         "PI62": "M",
         "PI63": "M",
         "PI64": "M",
         "PI71": "M",
         "PI72": "M"
-      }
-    },
-    {
-      "course_code": "EE 435",
-      "course_id": 36,
-      "course_title": "Robotics and Automation",
-      "performance_level": "M",
-      "clos": [],
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
-      "instructor": null,
-      "mapping_pi_levels": {}
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "clo_text": "Describe the basic theory underlying modern robotics",
+          "aligned_sos": [
+            "SO1",
+            "SO3",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI31",
+            "PI32",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "clo_text": "Analyze the kinematics and dynamics of robot manipulators",
+          "aligned_sos": [
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "clo_text": "Design appropriate controllers and trajectory generation solutions for manipulators",
+          "aligned_sos": [
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64"
+          ]
+        },
+        {
+          "domain": "Values, autonomy and responsibility",
+          "clo_id": 3.1,
+          "clo_text": "Comply to safety considerations in the design and operation of robotic systems",
+          "aligned_sos": [
+            "SO4",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI41",
+            "PI42",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 3.2,
+          "clo_text": "Contribute responsibly to team-based planning and problem-solving in a group robotics project.",
+          "aligned_sos": [
+            "SO4",
+            "SO5"
+          ],
+          "aligned_pis": [
+            "PI41",
+            "PI42",
+            "PI51",
+            "PI52"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 436",
       "course_id": 37,
       "course_title": "Artifitial Intellegince",
       "performance_level": "M",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO3",
+        "SO4",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI31",
+        "PI32",
+        "PI41",
+        "PI42",
+        "PI61",
+        "PI62",
+        "PI63",
+        "PI64",
+        "PI71",
+        "PI72"
+      ],
+      "instructor": "Dr. Muddesar Iqbal",
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI61": "M",
+
+        "PI62": "M",
+        "PI63": "M",
+        "PI64": "M",
+        "PI71": "M",
+        "PI72": "M"
+      },
       "clos": [
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Describe electomagnetic wave radiation mechanism.",
-          "aligned_sos": [],
-          "aligned_pis": []
-        },
-        {
-          "domain": null,
-          "clo_id": 1.2,
-          "clo_text": "Recognize various antennas types",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "clo_text": "Describe the theoretical foundations of supervised, unsupervised, and deep learning techniques",
+          "aligned_sos": [
+            "SO1",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI71",
+            "PI72"
+          ]
         },
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Design antennas for various applications.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "clo_text": "Analyse and prepare data for AI applications in engineering contexts.",
+          "aligned_sos": [
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64"
+          ]
         },
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Design and analyze antenna arrays.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "clo_text": "Design AI models using appropriate metrics and interpret their results.",
+          "aligned_sos": [
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64"
+          ]
         },
         {
           "domain": null,
           "clo_id": 2.3,
-          "clo_text": "Calculate antenna parameters like gain, input impedance, radiated power and radiation resistance.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "clo_text": "Write Programming Code to Implement AI models.",
+          "aligned_sos": [
+            "SO3",
+            "SO4"
+          ],
+          "aligned_pis": [
+            "PI31",
+            "PI32",
+            "PI41",
+            "PI42"
+          ]
         },
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
-          "clo_text": "Describe electromagnetic interference, radiation hazards, and the effect of EM fields on the environment.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "clo_text": "Use AI concepts in engineering applications such as energy prediction, automation, and intelligent control systems",
+          "aligned_sos": [
+            "SO4",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI41",
+            "PI42",
+            "PI71",
+            "PI72"
+          ]
         }
-      ],
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
-      "instructor": "Dr. Muddesar Iqbal",
-      "mapping_pi_levels": {}
+      ]
     },
     {
       "course_code": "EE 442",
       "course_id": 38,
       "course_title": "Digital Signal Processing",
       "performance_level": "M",
-      "clos": [],
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
       "instructor": null,
-      "mapping_pi_levels": {}
+      "mapping_pi_levels": {},
+      "clos": []
     },
     {
       "course_code": "EE 456",
       "course_id": 39,
       "course_title": "Renewable Energy Engineering",
       "performance_level": "M",
+      "overall_aligned_sos": [
+        "SO1",
+        "SO3",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI31",
+        "PI32",
+        "PI71"
+      ],
+      "instructor": "Dr. Ahmed Alnakhli",
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI71": "M"
+      },
       "clos": [
         {
+
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
           "clo_text": "Explain the basic concepts, components, and principles of Renewable Energy sources",
@@ -2305,38 +2828,133 @@
             "PI71"
           ]
         }
-      ],
-      "overall_aligned_sos": [
-        "SO1",
-        "SO3",
-        "SO7"
-      ],
-      "overall_aligned_pis": [
-        "PI11",
-        "PI12",
-        "PI31",
-        "PI32",
-        "PI71"
-      ],
-      "instructor": "Dr. Ahmed Alnakhli",
-      "mapping_pi_levels": {
-        "PI11": "M",
-        "PI12": "M",
-        "PI31": "M",
-        "PI32": "M",
-        "PI71": "M"
-      }
+      ]
     },
     {
       "course_code": "EE 499",
       "course_id": 40,
       "course_title": "Special Topics In Electrical and Electronics Engineering",
       "performance_level": "M",
-      "clos": [],
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
-      "instructor": null,
-      "mapping_pi_levels": {}
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI12",
+        "PI21",
+        "PI31",
+        "PI32",
+        "PI71",
+        "PI72"
+      ],
+      "instructor": "Dr. Walid Dyab",
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI21": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI71": "M",
+        "PI72": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "clo_text": "Explain advanced concepts and principles related to a selected contemporary topic in electrical and electronics engineering.",
+          "aligned_sos": [
+            "SO1",
+            "SO3",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI31",
+            "PI32",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "clo_text": "Analyze engineering problems associated with the selected topic using appropriate theoretical and computational methods.",
+          "aligned_sos": [
+            "SO1",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "clo_text": "Apply relevant engineering tools, techniques, or methodologies to investigate problems related to the selected topic.",
+          "aligned_sos": [
+            "SO1",
+            "SO7"
+          ],
+
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.3,
+          "clo_text": "Evaluate alternative approaches, technologies, or solutions within the selected topic using appropriate technical criteria.",
+          "aligned_sos": [
+            "SO1",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI11",
+            "PI12",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.4,
+          "clo_text": "Develop a solution, model, system, or study addressing a problem related to the selected topic.",
+          "aligned_sos": [
+            "SO2",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI21",
+            "PI71",
+            "PI72"
+          ]
+        },
+        {
+          "domain": "Values, autonomy and responsibility",
+          "clo_id": 3.1,
+          "clo_text": "Demonstrate professional responsibility and independent learning in communicating developments related to the selected topic.",
+          "aligned_sos": [
+            "SO3",
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI31",
+            "PI32",
+            "PI71",
+            "PI72"
+          ]
+        }
+      ]
     }
   ],
   "mapping_overview": [
@@ -2344,8 +2962,15 @@
       "course_code": "EE 101",
       "course_title": "Computer Programming for Engineering",
       "instructor": "Dr. Muddesar Iqbal",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO3"
+      ],
+      "pi_levels": {
+        "PI11": "I",
+        "PI31": "I",
+        "PI32": "I"
+      }
     },
     {
       "course_code": "EE 201",
@@ -2373,24 +2998,24 @@
       "instructor": "Dr. Mahmoud Abdelreheem",
       "aligned_sos": [
         "SO1",
-        "SO3",
         "SO2",
-        "SO6",
-        "SO5"
+        "SO3",
+        "SO5",
+        "SO6"
       ],
       "pi_levels": {
         "PI11": "I",
         "PI12": "I",
-        "PI31": "I",
-        "PI32": "I",
         "PI21": "I",
         "PI22": "I",
         "PI23": "I",
         "PI24": "I",
+        "PI31": "I",
+        "PI32": "I",
+        "PI51": "I",
         "PI62": "I",
         "PI63": "I",
-        "PI64": "I",
-        "PI51": "I"
+        "PI64": "I"
       }
     },
     {
@@ -2398,6 +3023,7 @@
       "course_title": "Logic Design",
       "instructor": "Dr. Walid Dyab",
       "aligned_sos": [
+
         "SO1",
         "SO2",
         "SO5",
@@ -2459,10 +3085,10 @@
       "pi_levels": {
         "PI11": "P",
         "PI12": "P",
-        "PI21": "I",
-        "PI22": "I",
-        "PI63": "I",
-        "PI64": "I"
+        "PI21": "P",
+        "PI22": "P",
+        "PI63": "P",
+        "PI64": "P"
       }
     },
     {
@@ -2470,20 +3096,33 @@
       "course_title": "Microprocessors Design",
       "instructor": "Dr. Walid Dyab",
       "aligned_sos": [
+        "SO1",
         "SO2",
         "SO3",
+        "SO4",
         "SO5",
-        "SO6"
+        "SO6",
+        "SO7"
       ],
       "pi_levels": {
+        "PI11": "P",
+        "PI12": "P",
         "PI21": "P",
         "PI22": "P",
         "PI23": "P",
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
+        "PI41": "P",
+        "PI42": "P",
+        "PI51": "P",
         "PI52": "P",
-        "PI61": "P"
+        "PI61": "P",
+        "PI62": "P",
+        "PI63": "P",
+        "PI64": "P",
+        "PI71": "P",
+        "PI72": "P"
       }
     },
     {
@@ -2505,6 +3144,7 @@
       "course_code": "EE 332",
       "course_title": "Control Systems",
       "instructor": "Dr. Mahmoud Abdelreheem",
+
       "aligned_sos": [
         "SO1",
         "SO2",
@@ -2609,6 +3249,8 @@
         "PI11": "M",
         "PI21": "M",
         "PI22": "M",
+        "PI23": "M",
+        "PI24": "M",
         "PI41": "M",
         "PI42": "M",
         "PI71": "M",
@@ -2623,6 +3265,7 @@
         "SO1",
         "SO2",
         "SO3",
+
         "SO4",
         "SO5",
         "SO6",
@@ -2694,8 +3337,27 @@
       "course_code": "EE 416",
       "course_title": "VLSI Circuits Design",
       "instructor": "Dr. Walid Dyab",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO4",
+        "SO7"
+      ],
+      "pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI21": "M",
+        "PI22": "M",
+        "PI23": "M",
+        "PI24": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI71": "M",
+        "PI72": "M"
+      }
     },
     {
       "course_code": "EE 423",
@@ -2724,6 +3386,7 @@
       "instructor": "Dr. Mourad Rizk",
       "aligned_sos": [
         "SO1",
+
         "SO2",
         "SO4",
         "SO6",
@@ -2753,7 +3416,7 @@
     {
       "course_code": "EE 434",
       "course_title": "PLC Microcontrollers",
-      "instructor": "Dr. Mahmpoud Abdelreheem",
+      "instructor": "Dr. Mahmoud Abdelreheem",
       "aligned_sos": [
         "SO1",
         "SO3",
@@ -2776,16 +3439,57 @@
     {
       "course_code": "EE 435",
       "course_title": "Robotics and Automation",
-      "instructor": null,
-      "aligned_sos": [],
-      "pi_levels": {}
+      "instructor": "Dr. Muddesar Iqbal",
+      "aligned_sos": [
+        "SO1",
+        "SO3",
+        "SO4",
+        "SO5",
+        "SO6",
+        "SO7"
+      ],
+      "pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI51": "M",
+        "PI52": "M",
+        "PI61": "M",
+        "PI62": "M",
+        "PI63": "M",
+        "PI64": "M",
+        "PI71": "M",
+        "PI72": "M"
+      }
     },
     {
       "course_code": "EE 436",
       "course_title": "Artifitial Intellegince",
       "instructor": "Dr. Muddesar Iqbal",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO3",
+        "SO4",
+        "SO6",
+        "SO7"
+      ],
+      "pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI41": "M",
+        "PI42": "M",
+        "PI61": "M",
+        "PI62": "M",
+        "PI63": "M",
+        "PI64": "M",
+        "PI71": "M",
+        "PI72": "M"
+      }
     },
     {
       "course_code": "EE 442",
@@ -2803,6 +3507,7 @@
         "SO3",
         "SO7"
       ],
+
       "pi_levels": {
         "PI11": "M",
         "PI12": "M",
@@ -2814,9 +3519,22 @@
     {
       "course_code": "EE 499",
       "course_title": "Special Topics In Electrical and Electronics Engineering",
-      "instructor": null,
-      "aligned_sos": [],
-      "pi_levels": {}
+      "instructor": "Dr. Walid Dyab",
+      "aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO7"
+      ],
+      "pi_levels": {
+        "PI11": "M",
+        "PI12": "M",
+        "PI21": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI71": "M",
+        "PI72": "M"
+      }
     }
   ]
 }
