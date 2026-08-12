@@ -1,4 +1,3 @@
-
 {
   "program": "Electrical Engineering",
   "curriculum": {
@@ -119,7 +118,6 @@
             "mapped_sos": [
               "SO1",
               "SO6"
-
             ],
             "pi_codes": [
               "PI12",
@@ -240,7 +238,6 @@
         "course_code": "EE 221",
         "course_title": "Logic Design",
         "type": "Program",
-
         "required_or_elective": "Required",
         "performance_level": "I",
         "year": "2",
@@ -361,7 +358,6 @@
             "pi_codes": [
               "PI12"
             ],
-
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
@@ -482,7 +478,6 @@
             ],
             "pi_codes": [
               "PI63",
-
               "PI64"
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
@@ -603,12 +598,11 @@
               "PI32"
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
-
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
             "clo_number": 2,
-            "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.\nModel digital components of microprocessor-based systems using HDL at the RTL level.",
+            "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
             "mapped_sos": [
               "SO1",
               "SO7"
@@ -621,6 +615,21 @@
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+          },
+          {
+            "clo_number": 3,
+            "clo_text": "Model digital components of microprocessor-based systems using HDL at the RTL level.",
+            "mapped_sos": [
+              "SO1",
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI11",
+              "PI12",
+              "PI21"
+            ],
+            "teaching_strategy": "",
+            "assessment_methods": ""
           },
           {
             "clo_number": 4,
@@ -724,7 +733,6 @@
               "SO1"
             ],
             "pi_codes": [
-
               "PI12"
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
@@ -845,7 +853,6 @@
               "PI21"
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
-
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
@@ -966,7 +973,6 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           }
         ]
-
       },
       {
         "course_code": "EE 305",
@@ -1087,7 +1093,6 @@
           {
             "clo_number": 1,
             "clo_text": "Explain the concepts of electromechanical energy conversion systems",
-
             "mapped_sos": [
               "SO1"
             ],
@@ -1208,7 +1213,6 @@
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
-
             "clo_number": 5,
             "clo_text": "Analyze the behavior of power systems under steady-state and transient conditions",
             "mapped_sos": [
@@ -1329,7 +1333,6 @@
               "PI31"
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
-
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
@@ -1450,7 +1453,6 @@
               "PI32"
             ],
             "teaching_strategy": "Lectures, tutorials, group discussions",
-
             "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
           },
           {
@@ -1571,7 +1573,6 @@
               "PI71",
               "PI72"
             ],
-
             "teaching_strategy": "",
             "assessment_methods": ""
           },
@@ -1692,7 +1693,6 @@
       },
       {
         "course_code": "EE 426",
-
         "course_title": "Antenna and wave propagation",
         "type": "Program",
         "required_or_elective": "Elective",
@@ -1813,7 +1813,6 @@
         "clos": [
           {
             "clo_number": 1,
-
             "clo_text": "Describe fundamental automation and control concepts related to programmable logic controllers and relay ladder logic.",
             "mapped_sos": [
               "SO1"
@@ -1934,7 +1933,6 @@
             "clo_number": 9,
             "clo_text": "Comply to safety considerations in the design and operation of robotic systems",
             "mapped_sos": [
-
               "SO4",
               "SO7"
             ],
@@ -2055,7 +2053,6 @@
           }
         ]
       },
-
       {
         "course_code": "EE 442",
         "course_title": "Digital Signal Processing",
@@ -2176,7 +2173,6 @@
             "assessment_methods": ""
           },
           {
-
             "clo_number": 5,
             "clo_text": "Apply relevant engineering tools, techniques, or methodologies to investigate problems related to the selected topic.",
             "mapped_sos": [
@@ -2297,7 +2293,6 @@
           "PI63",
           "PI64"
         ],
-
         "abet_illustration": "Student Outcome #6 requires the ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions. There is no requirement that students be able to design an experiment. The components do not have to be addressed in series and may be satisfied in the context of more than one system."
       },
       "SO7": {
