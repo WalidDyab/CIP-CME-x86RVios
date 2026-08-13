@@ -187,6 +187,14 @@
     .clo-method-list { margin: 0; padding-left: 18px; }
     .clo-method-list li + li { margin-top: 5px; }
 
+    /* Course catalogue information */
+    .course-information { min-width: 0; }
+    .course-information-content { display: grid; gap: 16px; }
+    .course-information-block h3 { margin: 0 0 6px; font-size: 14px; color: var(--cyan); }
+    .course-information-block p { margin: 0; line-height: 1.65; white-space: normal; overflow-wrap: anywhere; }
+    .course-information-list { margin: 0; padding-left: 22px; display: grid; gap: 7px; }
+    .course-information-list li { line-height: 1.55; overflow-wrap: anywhere; }
+
     /* ── Select All Toggle ── */
     .select-all-row {
       display: flex;
@@ -286,6 +294,15 @@ let _printCourseNorm = null;
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json');
+    let metadataCourses = [];
+    let metadataLoadFailed = false;
+    try {
+      const metadata = await portal.loadJSON('../data/ee_course_metadata.json');
+      metadataCourses = metadata.courses || [];
+    } catch (metadataError) {
+      metadataLoadFailed = true;
+      console.error('Could not load course metadata JSON.', metadataError);
+    }
     const courses = data.curriculum.courses || [];
     portal.setupCourseBrowser(courses, { linkPrefix: 'course-dashboard.html?course=' });
     const wanted = portal.getParam('course') || portal.normCourse(courses[0]).code;
@@ -296,9 +313,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     _printCourseRaw = raw;
     _printCourseNorm = c;
 
+    const normalizeMetadataCode = value => String(value || '').toUpperCase().replace(/\s+/g, '');
+    const metadataByCode = new Map(metadataCourses.map(course => [normalizeMetadataCode(course.course_code), course]));
+    const metadataList = (values, ordered = false) => {
+      const tag = ordered ? 'ol' : 'ul';
+      return `<${tag} class="course-information-list">${(values || []).map(value => `<li>${portal.esc(value)}</li>`).join('')}</${tag}>`;
+    };
+    const renderCourseInformation = courseCode => {
+      if (metadataLoadFailed) return '<section class="card course-information"><h2>Course Information</h2><div class="alert">Course information could not be loaded.</div></section>';
+      const metadata = metadataByCode.get(normalizeMetadataCode(courseCode));
+      if (!metadata) return '<section class="card course-information"><h2>Course Information</h2><p class="muted">Additional course information is not available for this course.</p></section>';
+      const blocks = [];
+      if (metadata.course_description) blocks.push(`<div class="course-information-block"><h3>Course Description</h3><p>${portal.esc(metadata.course_description)}</p></div>`);
+      if (metadata.prerequisite_text) blocks.push(`<div class="course-information-block"><h3>Prerequisite(s)</h3><p>${portal.esc(metadata.prerequisite_text)}</p></div>`);
+      if (metadata.corequisite_text) blocks.push(`<div class="course-information-block"><h3>Co-requisite(s)</h3><p>${portal.esc(metadata.corequisite_text)}</p></div>`);
+      if ((metadata.course_objectives || []).length) blocks.push(`<div class="course-information-block"><h3>Course Objectives</h3>${metadataList(metadata.course_objectives, true)}</div>`);
+      if ((metadata.textbooks || []).length) blocks.push(`<div class="course-information-block"><h3>Textbook</h3>${metadataList(metadata.textbooks)}</div>`);
+      if ((metadata.references || []).length) blocks.push(`<div class="course-information-block"><h3>References</h3>${metadataList(metadata.references)}</div>`);
+      return `<section class="card course-information"><h2>Course Information</h2><div class="course-information-content">${blocks.join('')}</div></section>`;
+    };
     const methodList = values => `<ul class="clo-method-list">${(values || []).map(value => `<li>${portal.esc(value)}</li>`).join('')}</ul>`;
     const methodsSection = (raw.clos || []).length ? `<section class="card"><h2>Teaching Strategies and Assessment Methods</h2><div class="table-wrap"><table class="clo-methods-table"><thead><tr><th>CLO ID</th><th>CLO Wording</th><th>Teaching Strategies</th><th>Assessment Methods</th></tr></thead><tbody>${raw.clos.map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.esc(x.clo_text)}</td><td>${methodList(x.teaching_strategy)}</td><td>${methodList(x.assessment_methods)}</td></tr>`).join('')}</tbody></table></div></section>` : '';
     byId('detail').innerHTML = `<section class="card"><div class="code">${portal.esc(c.code)}</div><h2>${portal.esc(c.title)}</h2><div>${portal.badge(c.track)}${portal.badge(c.re)}${portal.badge('Level ' + c.level)}${portal.badge(c.credits + ' credits')}</div><button class="print-btn" id="printReportBtn" title="Export course report as PDF"><svg viewBox="0 0 24 24"><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>Print Report</button></section><section class="card"><h2>CLO–SO–PI Mapping</h2><div class="table-wrap"><table class="clo-main-table"><thead><tr><th>CLO ID</th><th>NQF Domain</th><th>CLO Wording</th><th>SO</th><th>PIs</th></tr></thead><tbody>${(raw.clos || []).map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.badge(x.nqf_domain)}</td><td>${portal.esc(x.clo_text)}</td><td>${(x.mapped_sos || []).map(s => portal.badge(s)).join('')}</td><td>${(x.pi_codes || []).map(s => portal.badge(s)).join('')}</td></tr>`).join('')}</tbody></table></div></section>${methodsSection}`;
+
+    byId('detail').firstElementChild.insertAdjacentHTML('afterend', renderCourseInformation(c.code));
 
     // Attach print button handler
     byId('printReportBtn').addEventListener('click', () => {
