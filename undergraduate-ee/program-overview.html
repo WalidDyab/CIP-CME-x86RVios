@@ -7,6 +7,18 @@
   <title>EE Program Overview | Curriculum Intelligence Portal</title>
   <link rel="stylesheet" href="../assets/portal.css?v=heatmap-reference-20260813">
   <script defer src="../assets/portal.js"></script>
+  <style>
+    .overview-course-sections { display: grid; gap: 22px; }
+    .overview-course-group h3 { margin: 0 0 11px; }
+    .overview-course-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .overview-special-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .overview-course-grid .course-card { min-width: 0; height: 100%; }
+    .overview-course-grid .course-title { min-height: 2.5em; }
+    .overview-course-grid .desc { overflow-wrap: anywhere; }
+    @media (max-width: 1100px) { .overview-course-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .overview-special-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 780px) { .overview-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px) { .overview-course-grid, .overview-special-grid { grid-template-columns: minmax(0, 1fr); } .overview-course-grid .course-title { min-height: 0; } }
+  </style>
 </head>
 <body>
   <div id="header-placeholder"></div>
@@ -48,7 +60,7 @@
         <select id="trackFilter" class="select"></select>
         <span id="resultCount" class="pill"></span>
       </div>
-      <div id="courseList" class="course-list"></div>
+      <div id="courseList" class="overview-course-sections"></div>
     </section>
     <div class="footer">One source of truth: JSON data files. Refresh the page after updating JSON.</div>
   </main>
@@ -76,7 +88,37 @@
           Required: courses.filter(course => course.required_or_elective === 'Required').length,
           Electives: courses.filter(course => course.required_or_elective === 'Elective').length
         });
-        portal.setupCourseBrowser(courses, { linkPrefix: 'course-dashboard.html?course=' });
+        const courseList = byId('courseList');
+        const search = byId('search');
+        const trackFilter = byId('trackFilter');
+        const normalizedCourses = courses.map(course => ({ raw: course, normalized: portal.normCourse(course) }));
+        const filterValues = ['All', ...new Set(normalizedCourses.flatMap(({ normalized }) => [normalized.track, normalized.re, normalized.level]).filter(Boolean))].sort();
+        trackFilter.innerHTML = filterValues.map(value => `<option>${portal.esc(value)}</option>`).join('');
+        const specialTypes = new Set(['Capstone', 'COOP']);
+        const courseCard = ({ normalized: course }) => {
+          return `<a class="course-card" href="course-dashboard.html?course=${encodeURIComponent(course.code)}"><div class="code">${portal.esc(course.code)}</div><div class="course-title">${portal.esc(course.title)}</div><div>${portal.badge(course.re || 'Course')}${portal.badge(course.track || 'General')}${course.credits ? portal.badge(course.credits + ' cr') : ''}</div><p class="desc">${portal.esc(course.desc || course.clos[0]?.clo_text || '')}</p></a>`;
+        };
+        const courseGroup = (title, group, special = false) => group.length ? `<section class="overview-course-group"><h3>${portal.esc(title)}</h3><div class="overview-course-grid${special ? ' overview-special-grid' : ''}">${group.map(courseCard).join('')}</div></section>` : '';
+        const renderCourseGroups = () => {
+          const query = search.value.toLowerCase();
+          const selectedFilter = trackFilter.value;
+          const visible = normalizedCourses.filter(({ normalized: course }) => {
+            const text = [course.code, course.title, course.track, course.re, course.desc, JSON.stringify(course.clos)].join(' ').toLowerCase();
+            return (!query || text.includes(query)) && (selectedFilter === 'All' || course.track === selectedFilter || course.re === selectedFilter || course.level === selectedFilter);
+          });
+          const required = visible.filter(({ normalized: course }) => course.re === 'Required' && !specialTypes.has(course.track));
+          const special = visible.filter(({ normalized: course }) => course.re === 'Required' && specialTypes.has(course.track));
+          const electives = visible.filter(({ normalized: course }) => course.re === 'Elective');
+          byId('resultCount').textContent = visible.length + ' courses';
+          courseList.innerHTML = [
+            courseGroup('Required Courses', required),
+            courseGroup('Senior Design and Capstone', special, true),
+            courseGroup('Program Electives', electives)
+          ].join('') || '<div class="alert">No matching courses.</div>';
+        };
+        search.addEventListener('input', renderCourseGroups);
+        trackFilter.addEventListener('change', () => setTimeout(renderCourseGroups, 0));
+        renderCourseGroups();
 
         const pis = ['PI11', 'PI12', 'PI21', 'PI22', 'PI23', 'PI24', 'PI31', 'PI32', 'PI41', 'PI42', 'PI51', 'PI52', 'PI61', 'PI62', 'PI63', 'PI64', 'PI71', 'PI72'];
         const soPIs = {
