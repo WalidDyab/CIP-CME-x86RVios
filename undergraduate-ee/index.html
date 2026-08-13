@@ -20,8 +20,8 @@
             </p>
         </section>
         <section id="stats" class="grid four"></section>
-        <section class="grid three" style="margin-top:14px"><a class="card" href="master-dashboard.html">
-                <h2>Master Dashboard</h2>
+        <section class="grid four" style="margin-top:14px"><a class="card" href="program-overview.html">
+                <h2>Program Overview</h2>
                 <p class="muted">Program snapshot and searchable curriculum cards.</p>
             </a><a class="card" href="course-dashboard.html">
                 <h2>Course Dashboard</h2>
@@ -29,6 +29,9 @@
             </a><a class="card" href="so-leader-dashboard.html">
                 <h2>SO Leader Dashboard</h2>
                 <p class="muted">Outcome-level PI coverage, gaps, risks, and related course evidence.</p>
+            </a><a class="card" href="teaching-assessment-methods.html">
+                <h2>Teaching &amp; Assessment</h2>
+                <p class="muted">Approved teaching strategy and assessment method pools, including course-specific exceptions.</p>
             </a></section>
         <script>document.addEventListener('DOMContentLoaded', async () => { try { const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json'); const courses = data.curriculum.courses || []; const clos = courses.flatMap(c => c.clos || []); const mappedSO = clos.filter(c => (c.mapped_sos || []).length).length; portal.renderStats(byId('stats'), { Courses: courses.length, CLOs: clos.length, 'Mapped CLOs': mappedSO, 'SO coverage': new Set(clos.flatMap(c => c.mapped_sos || [])).size }); } catch (e) { byId('stats').innerHTML = '<div class="alert">Could not load JSON.</div>' } })</script>
         

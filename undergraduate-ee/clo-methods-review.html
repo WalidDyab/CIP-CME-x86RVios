@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Undergraduate EE CLO Teaching and Assessment Review</title>
+  <link rel="stylesheet" href="../assets/portal.css">
+  <script defer src="../assets/portal.js"></script>
+  <style>
+    .review-table { min-width: 1500px; }
+    .review-table th:nth-child(1) { width: 8%; }
+    .review-table th:nth-child(2) { width: 6%; }
+    .review-table th:nth-child(3) { width: 28%; }
+    .review-table th:nth-child(4) { width: 8%; }
+    .review-table th:nth-child(5) { width: 12%; }
+    .review-table th:nth-child(6) { width: 18%; }
+    .review-table th:nth-child(7) { width: 20%; }
+    .review-table td { vertical-align: top; line-height: 1.45; white-space: normal; }
+    .method-list { margin: 0; padding-left: 18px; }
+    .method-list li + li { margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="wrap">
+    <section class="hero">
+      <span class="kicker">Undergraduate EE · Inspection output</span>
+      <h2>CLO Teaching and Assessment Review</h2>
+      <p class="muted">Complete controlled-vocabulary assignments for every populated undergraduate CLO.</p>
+    </section>
+    <section class="card">
+      <div class="toolbar">
+        <input id="search" class="input" placeholder="Search course, CLO, SO, PI, strategy, or assessment…" aria-label="Search review table">
+        <span id="count" class="pill"></span>
+      </div>
+      <div id="review"></div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json');
+      const rows = (data.curriculum.courses || []).flatMap(course => (course.clos || []).map(clo => ({course, clo})));
+      const list = values => `<ul class="method-list">${(values || []).map(value => `<li>${portal.esc(value)}</li>`).join('')}</ul>`;
+      const render = () => {
+        const query = (byId('search').value || '').toLowerCase();
+        const filtered = rows.filter(({course, clo}) => !query || [course.course_code, course.course_title, clo.clo_number, clo.clo_text, ...(clo.mapped_sos || []), ...(clo.pi_codes || []), ...(clo.teaching_strategy || []), ...(clo.assessment_methods || [])].join(' ').toLowerCase().includes(query));
+        byId('count').textContent = `${filtered.length} of ${rows.length} CLOs`;
+        byId('review').innerHTML = `<div class="table-wrap"><table class="review-table"><thead><tr><th>Course</th><th>CLO ID</th><th>CLO Wording</th><th>SOs</th><th>PIs</th><th>Teaching Strategies</th><th>Assessment Methods</th></tr></thead><tbody>${filtered.map(({course, clo}) => `<tr><td><span class="code">${portal.esc(course.course_code)}</span><br>${portal.esc(course.course_title)}</td><td class="code">${portal.esc(clo.clo_number)}</td><td>${portal.esc(clo.clo_text)}</td><td>${(clo.mapped_sos || []).map(portal.badge).join('')}</td><td>${(clo.pi_codes || []).map(portal.badge).join('')}</td><td>${list(clo.teaching_strategy)}</td><td>${list(clo.assessment_methods)}</td></tr>`).join('')}</tbody></table></div>`;
+      };
+      byId('search').addEventListener('input', render);
+      render();
+    });
+  </script>
+</body>
+</html>

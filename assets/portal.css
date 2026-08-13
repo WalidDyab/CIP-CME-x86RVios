@@ -13,7 +13,33 @@
     --shadow: 0 18px 50px rgba(0, 0, 0, .35);
     --radius: 20px;
     --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif
+    --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+    --so1: #70AD47;
+    --so2: #5B9BD5;
+    --so3: #FFC000;
+    --so4: #A5A5A5;
+    --so5: #ED7D31;
+    --so6: #4472C4;
+    --so7: #44546A;
+    --pi11: #E2EFD9;
+    --pi12: #A8D08D;
+    --pi21: #DEEAF6;
+    --pi22: #BDD6EE;
+    --pi23: #9CC2E5;
+    --pi24: #2E75B5;
+    --pi31: #FEF2CB;
+    --pi32: #FFD965;
+    --pi41: #ECECEC;
+    --pi42: #C8C8C8;
+    --pi51: #FBE4D5;
+    --pi52: #F4B083;
+    --pi61: #D9E2F3;
+    --pi62: #B4C6E7;
+    --pi63: #8EAADB;
+    --pi64: #2F5496;
+    --pi71: #D6DCE4;
+    --pi72: #8496B0;
+    --heatmap-unmapped: #FFFFFF
 }
 
 * {
@@ -515,27 +541,36 @@ select option:hover {
 .heatmap-table {
     border-collapse: collapse;
     width: 100%;
+    background: #fff;
+    color: #111;
 }
 .heatmap-table th, .heatmap-table td {
     text-align: center;
     vertical-align: middle;
-    padding: 12px;
-    border: 1px solid var(--line);
+    padding: 5px 7px;
+    border: 1px solid #333;
+    height: 30px;
+    line-height: 1.15;
+    font-size: 12px;
 }
-.heatmap-table th:first-child, .heatmap-table td:first-child {
-    text-align: left;
+.heatmap-table .course-column {
+    text-align: center;
     position: sticky;
     left: 0;
     z-index: 20;
-    background: #152033;
+    background: #fff;
+    color: #111;
     white-space: nowrap;
-    padding-right: 24px;
+    width: 84px;
+    min-width: 84px;
+    max-width: 84px;
+    padding: 5px 7px;
 }
 .heatmap-table th {
     background: #0d1624;
     z-index: 25;
 }
-.heatmap-table th:first-child {
+.heatmap-table th.course-column {
     z-index: 30;
 }
 .heatmap-wrap {
@@ -548,6 +583,77 @@ select option:hover {
 .cell-i { background: rgba(242, 162, 58, 0.15); color: #ffd59b; font-weight: 700; }
 .cell-p { background: rgba(242, 162, 58, 0.5); color: #fff; font-weight: 800; }
 .cell-m { background: rgba(242, 162, 58, 0.9); color: #111; font-weight: 900; }
+.cell-mixed { font-weight: 900; }
+.cell-unmapped { background: var(--heatmap-unmapped); color: #111; }
+.heatmap-table .so-so1 { background: var(--so1); color: #fff; }
+.heatmap-table .so-so2 { background: var(--so2); color: #fff; }
+.heatmap-table .so-so3 { background: var(--so3); color: #fff; }
+.heatmap-table .so-so4 { background: var(--so4); color: #fff; }
+.heatmap-table .so-so5 { background: var(--so5); color: #fff; }
+.heatmap-table .so-so6 { background: var(--so6); color: #fff; }
+.heatmap-table .so-so7 { background: var(--so7); color: #fff; }
+.heatmap-table .pi-pi11 { background: var(--pi11); color: #111; }
+.heatmap-table .pi-pi12 { background: var(--pi12); color: #111; }
+.heatmap-table .pi-pi21 { background: var(--pi21); color: #111; }
+.heatmap-table .pi-pi22 { background: var(--pi22); color: #111; }
+.heatmap-table .pi-pi23 { background: var(--pi23); color: #111; }
+.heatmap-table .pi-pi24 { background: var(--pi24); color: #fff; }
+.heatmap-table .pi-pi31 { background: var(--pi31); color: #111; }
+.heatmap-table .pi-pi32 { background: var(--pi32); color: #111; }
+.heatmap-table .pi-pi41 { background: var(--pi41); color: #111; }
+.heatmap-table .pi-pi42 { background: var(--pi42); color: #111; }
+.heatmap-table .pi-pi51 { background: var(--pi51); color: #111; }
+.heatmap-table .pi-pi52 { background: var(--pi52); color: #111; }
+.heatmap-table .pi-pi61 { background: var(--pi61); color: #111; }
+.heatmap-table .pi-pi62 { background: var(--pi62); color: #111; }
+.heatmap-table .pi-pi63 { background: var(--pi63); color: #111; }
+.heatmap-table .pi-pi64 { background: var(--pi64); color: #fff; }
+.heatmap-table .pi-pi71 { background: var(--pi71); color: #111; }
+.heatmap-table .pi-pi72 { background: var(--pi72); color: #fff; }
+.heatmap-table td[class*="pi-pi"],
+.heatmap-table td[class*="so-so"] { font-weight: 800; }
+.heatmap-table .so-group-row th { border-bottom-width: 2px; }
+.heatmap-table .elective-separator td {
+    height: 28px;
+    padding: 5px 8px;
+    background: #D9D9D9;
+    color: #111;
+    font-weight: 800;
+    text-align: left;
+    letter-spacing: .03em;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+.heatmap-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+.heatmap-heading h3 { margin: 0; }
+.heatmap-export-surface {
+    position: fixed;
+    left: -100000px;
+    top: 0;
+    display: inline-block;
+    padding: 28px;
+    background: #fff;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+.heatmap-export-surface h2 {
+    margin: 0 0 16px;
+    color: #111;
+    font-size: 22px;
+}
+.heatmap-export-surface .heatmap-table {
+    width: auto;
+    min-width: max-content;
+}
+.heatmap-export-surface .course-column {
+    position: static;
+}
+.level-code { background: transparent; color: var(--text); font-weight: 900; }
 .legend {
     display: flex;
     gap: 16px;

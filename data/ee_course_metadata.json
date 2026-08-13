@@ -1,0 +1,345 @@
+{
+  "metadata": {
+    "source": "course-additional-data.xlsx",
+    "scope": "Undergraduate EE non-elective courses"
+  },
+  "courses": [
+    {
+      "course_code": "EE 101",
+      "course_title": "Computer Programming for Engineering",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course covers the concept of programming languages in Python. It enables the student to understand and write basic coding based on various operators, functions, logic statements, Strings, tuples, etc., in the Python programming language. In addition, the course covers the basic concept of files and exceptions.",
+      "course_objectives": [
+        "Understand the basics Linux, Microprocessor and Microcontroller Programming concepts.",
+        "Understand the basics of the computer programming language python.",
+        "Write a basic code in the computer programming language python."
+      ],
+      "textbooks": [
+        "E Balagurusamy, \"Problem Solving and Python Programming\", McGraw Hill Education, 2018."
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "prerequisites": [
+        "PHYS 205",
+        "MATH 113"
+      ],
+      "prerequisite_text": "PHYS 205, Math113",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This module provides a comprehensive introduction to both DC and AC circuit principles. Students will begin by reviewing fundamental concepts, including current, voltage, and power. The course then explores series and parallel circuits and delves into Ohm’s Law, Kirchhoff’s Laws, source transformations, bridge networks, and delta/star transformations. Key analysis methods and network theorems are also covered. Additionally, the module revisits inductors and capacitors, introduces sinusoidal sources and the concept of phasors, and details methods for analyzing AC circuits. Practical experience is emphasized through hands-on use of electrical measurement tools such as voltmeters, ammeters, wattmeters, function generators, and oscilloscopes.",
+      "course_objectives": [
+        "Understand the basic linear electric circuits, theories, and concepts.",
+        "Understand circuit theorems and laws of circuit analysis in DC and AC circuits.",
+        "Gain hands-on experience and develop skills in using measurement tools like voltmeters, ammeters, and oscilloscopes while linking theory to practice."
+      ],
+      "textbooks": [
+        "Robert L. Boylestad - Introductory Circuit Analysis (2016, Pearson), 13th Edition"
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "prerequisites": [
+        "EE 201"
+      ],
+      "prerequisite_text": "EE 201",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course provides a comprehensive introduction to essential semiconductor devices and amplifiers. It covers diodes, including special-purpose types, and explores Bipolar Junction Transistors (BJTs) with a focus on their operation, characteristics, and various biasing methods. Students will study transistor amplifier configurations such as common emitter, common collector, and common base, as well as classes of power amplifiers. The course also delves into operational amplifiers (Op-Amps), addressing their parameters, feedback mechanisms, and various practical circuit applications.",
+      "course_objectives": [
+        "Understand diode and BJT fundamentals and applications.",
+        "Analyze and design various transistor amplifier configurations.",
+        "Master operational amplifier parameters and feedback effects."
+      ],
+      "textbooks": [
+        "Electronic Devices (Conventional Current Version): Pearson New International Edition, Author(s): Floyd, Thomas L., Publisher: Pearson (Intl), Edition: 9th, Pages: 952, Print ISBN: 9781292025643, 1292025646eText ISBN: 9781292038070"
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "prerequisites": [
+        "EE 101"
+      ],
+      "prerequisite_text": "EE 101",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This module enables students to understand concepts in binary numbers, number base conversion, complements and codes, definition of Boolean Algebra, Boolean functions, digital logic gates, integrated circuits, Karnaugh map methods, combinational logic circuits, sequential logic circuits and Memory modules. Design and analysis of sequential logic circuits such as: Shift Registers, Counters, Synchronous and Asynchronous Sequential Circuits, State Diagrams, State Tables, Students will be able to develop, measure, and test different types of Sequential Circuits using D-type, T-type, and JK-type Flip-Flops.",
+      "course_objectives": [
+        "Provide students with a solid foundation in the principles and techniques of digital logic design.",
+        "Develop students’ ability to analyze, design, and implement combinational and sequential digital circuits using standard logic devices and design tools.",
+        "Introduce students to practical digital system design through simulation and hardware-based implementation using modern development platforms."
+      ],
+      "textbooks": [
+        "Digital Systems: Principles and Applications, 12/E, 2017, Neal Widmer, Greg Moss, Ronald J. Tocci. ISBN-10: 0135103827, ISBN 13: 978-0-13-422013-0, Publisher: Prentice Hall"
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "prerequisites": [
+        "MATH 225",
+        "EE 201"
+      ],
+      "prerequisite_text": "MATH225, EE 201",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course covers basic concepts and methods related to continuous and discrete-time signals and systems. The course includes: signals and systems and their properties, linear time-invariant systems, stability analysis, sampling of continuous-time signals, z-transform, continuous and discrete-time Fourier transform, discrete Fourier transform and fast Fourier Transform.",
+      "course_objectives": [
+        "Introduce the fundamental concepts of continuous-time and discrete-time signals and systems, including classification, representation, and basic transformations.",
+        "Equip students with analytical tools such as convolution, Fourier analysis, and Laplace and Z-transforms to model and analyze linear systems.",
+        "Develop students’ ability to interpret and apply signal processing techniques in engineering contexts, supported by mathematical reasoning and computational tools."
+      ],
+      "textbooks": [
+        "Signals, Systems, & Transforms (5th Global Edition), Phillips, Charles; Parr, John; Riskin, Published by Pearson Education (2014). ISBN: 9781292015286"
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 202",
+      "course_title": "Circuit Analysis",
+      "prerequisites": [
+        "EE 201",
+        "MATH 225"
+      ],
+      "prerequisite_text": "EE 201, MATH 225",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "The course begins by reviewing the behaviors of inductor and capacitor storing elements. It then covers the characteristics and behavior of first-order RL/RC circuits, as well as second-order RLC circuits. Additionally, the course explains the conversion of time-domain circuits to the s-domain using the Laplace transform. Furthermore, it delves into frequency response and resonance, providing a basic understanding of filter circuits. The course also includes the study of electrical configurations involving three phases of networks and the analysis of two-port networks.",
+      "course_objectives": [
+        "Understand RL, RC, and RLC circuit behaviors and analysis.",
+        "Mastery of time-domain to s-domain circuit conversion and analysis.",
+        "Knowledge of frequency response and filter circuits."
+      ],
+      "textbooks": [
+        "Ravish R. Singh, \"Electrical Networks\" Tata McGraw-Hill Education, July 2009."
+      ],
+      "references": [
+        "Alexander C.K and Sadiku MNO (2014). Fundamentals of Electric Circuits. 11th Edition, McGraw-Hill.",
+        "James William Nilsson and Susan A. Riedel, \"Electrical Circuits\", 11th edition, Pearson Education, 2019."
+      ]
+    },
+    {
+      "course_code": "EE 312",
+      "course_title": "Electronic Engineering",
+      "prerequisites": [
+        "EE 211"
+      ],
+      "prerequisite_text": "EE 211",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course enables the students to understand the DC and AC analysis, and modelling of multistage configuration based on BJT, FET, MOSFET. This course also helps to analyze and design the different electronic circuitries- CMOS circuit such as NAND Gates, Transmission Gates and memory elements.",
+      "course_objectives": [
+        "Identify the design characteristics of BJT, FET, MOSFET amplifiers, filters and oscillators.",
+        "Analyzing BJT multistage models and Frequency response.",
+        "Analyzing DC and AC model the different configurations of FET/MOSFET"
+      ],
+      "textbooks": [
+        "Robert L. Boylestad Louis Nashelsky, ‘Electronic Devices and Circuit Theory”, Eleventh Edition, Pearson, 2013."
+      ],
+      "references": [
+        "T. L. Floyd, Electronic Devices, Ninth Edition, publisher: Prentice Hall.",
+        "Dennis L. Egglesto, “Basic Electronics for Scientists and Essential References Engineers”, Cambridge Press, 2011.",
+        "Jimmie J. Cathey, “Theory And Problems Of Electronic Devices And Circuits”, Schaum’s Outline, Second Edition, McGraw- Hill, 2022."
+      ]
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "prerequisites": [
+        "EE 211",
+        "EE 221",
+        "CEE 201"
+      ],
+      "prerequisite_text": "EE 211, EE 221, CEE 201",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "The course will focus primarily on basic embedded system concepts and the student will learn the basics of designing, interfacing, configuring, and programming embedded systems. One of popular microcontroller is selected to implement the techniques learned in class. By the end of the course the student will have mastered the basics of embedded system design and programming.",
+      "course_objectives": [
+        "To understand embedded hardware and software design fundamentals.",
+        "To develop an embedded system from the ground up, starting with electronic components and data sheets, and progressing through construction of hardware and implementation of firmware.",
+        "To develop the opportunity to experience embedded system design in a manner similar to that practiced in industry."
+      ],
+      "textbooks": [
+        "David Harris and Sarah Harris, “Digital Design and Computer Architecture” RISC-V Edition, Elsevier 2021"
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "prerequisites": [
+        "MATH 215",
+        "MATH 225",
+        "EE 201"
+      ],
+      "prerequisite_text": "MATH 215, MATH225, EE 201",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This module is designed to introduce the electromagnetic fields. Coulomb's law, Gauss's law, electrical potential, dielectric materials capacitance, boundary value problems, Biot-Savart law, Ampere's law, Lorentz force equation, magnetic materials, magnetic inductance, time varying fields and Maxwell's equations",
+      "course_objectives": [
+        "Provide knowledge about the contribution of electromagnetics to the fields of electrical and communication engineering.",
+        "Provide the technical foundation required for more advanced future courses in applied electromagnetics engineering"
+      ],
+      "textbooks": [
+        "W.H. Hayt, Jr. and J.A. Buck, “Engineering Electromagnetics,” 9th edition, McGraw Hill, 2018"
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 332",
+      "course_title": "Control Systems",
+      "prerequisites": [
+        "EE 231",
+        "MATH 223"
+      ],
+      "prerequisite_text": "EE 231, MATH 223",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "Introduction to feedback control systems. Block diagram and signal flow graph representation. Mathematical modeling of physical systems. Stability of linear control systems. Time-domain and frequency-domain analysis tools and performance assessment. Lead and lag compensatory design. Proportional, integral, and derivative control.",
+      "course_objectives": [
+        "Introduce the fundamental principles of feedback control systems, including modeling, analysis, and stability of linear time-invariant systems.",
+        "Equip students with techniques to analyze system performance in both time and frequency domains using classical control methods.",
+        "Develop students’ ability to design, simulate, and evaluate control systems using software tools and apply control strategies to practical engineering problems."
+      ],
+      "textbooks": [
+        "Modern Control Modern Control Engineering, (5th Edition) By: Katsuhiko Ogata."
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "prerequisites": [
+        "EE 211",
+        "EE 231"
+      ],
+      "prerequisite_text": "EE 211, EE 231",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "In this course, we focus on signal transforms and continuous-wave modulation, which is the basic operation of analog communication systems. Initially, we give the students an insight and understanding of signals classifications, Fourier series, Fourier transform, spectrum analysis, and explore their applications in the context of analog communication systems. We then cover thoroughly amplitude modulation including the generation and reception of double-side band, single side-band, and vestigial side-band. We also cover the angle modulations (phase and frequency), the generation both the narrow and wide-band angle modulation.",
+      "course_objectives": [
+        "Introduce topics of signal spectrum analysis, modulation/demodulation, pulse modulation techniques, and design tradeoffs.",
+        "Evaluate the characteristics of different classes of signals, and produce their representation in both time and frequency domains.",
+        "Provide knowledge of analog modulation techniques and their comparative analysis and applications suitability."
+      ],
+      "textbooks": [
+        "Lathi, Modern Digital and Analog Communication Systems, Fifth Edition, Oxford University Press, 2018."
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "prerequisites": [
+        "EE 211"
+      ],
+      "prerequisite_text": "EE 211",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course is an introduction to Power Electronics. It enables the student to understand the basic Power Electronics components, operations, design, and the analysis of basic power electronics converter circuits. The course is focused on the applications of the power converter in various sectors, e.g., industrial, electric grid, renewable energy, microgrid, electric vehicle, etc. In addition, the course covers the basic characteristics, control schemes, and applications of power semiconductor devices and circuits.",
+      "course_objectives": [
+        "Provide knowledge about power semiconductor devices and circuits",
+        "Understand the types, modes of operation and design of various power converters.",
+        "To connect the dots between power electronics and various energy sectors e.g. industrial, electric grid, renewable energy, microgrid, electric vehicle etc."
+      ],
+      "textbooks": [
+        "Rashid M.H., ‘Power Electronics Handbook’, Academic Press, 2001."
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 304",
+      "course_title": "Electrical Machines",
+      "prerequisites": [
+        "EE 202",
+        "EE 341"
+      ],
+      "prerequisite_text": "EE202, EE341",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "The students will learn the fundamentals of electrical machinery. They will learn to analyze the voltage-current, torque-speed characteristics of the different machines. The students also will be able to understand the transformers, principles, and operation",
+      "course_objectives": [
+        "Describe the working principle of a Transformer, DC motor and a AC Motor.",
+        "List and describe the main components of a Motors and Transformers.",
+        "Describe the operation of, and factors affecting output power, torque, speed and direction of rotation of DC, AC motors."
+      ],
+      "textbooks": [
+        "BL Theraja, \" A Textbook of Electrical Technology - Volume II\", S. Chand, 2023."
+      ],
+      "references": [
+        "Electric Machines by Nagrath and Kothari | 5th Edition, McGrawHill, 2017",
+        "Electric Machinery Fundamentals 5th Edition, McGraw Hill, 5 th Edition by Stephen Chapman, 2011.",
+        "Fundamentals of Electric machines by B. R. Gupta, New age International, 2009"
+      ]
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "prerequisites": [
+        "EE 304"
+      ],
+      "prerequisite_text": "EE 304",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course provides an introduction to power systems used in electrical engineering. Examples include different types of generation systems, load flow studies and infinite bus systems with exploring their applications in substations and power plants.",
+      "course_objectives": [
+        "The fundamental concepts of analysis and control of power systems;",
+        "The understanding of problems commonly encountered in power system engineering practice; and",
+        "The modeling, analysis and control techniques applied to solve some practical problems in power systems."
+      ],
+      "textbooks": [
+        "D. P. Kothari, I. J. Nagrath, Power System Engineering, 2019, 3rd edition, McGraw-Hill Education"
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "prerequisites": [
+        "ENG 301",
+        "CEE 201"
+      ],
+      "prerequisite_text": "ENG 301, CEE 201, Completion of 90 Credit Hours",
+      "corequisites": [
+        "ETHC 305"
+      ],
+      "corequisite_text": "ETHC305",
+      "course_description": "Project groups deliver their products that have progressed through the design, analysis, testing and evaluation stages. The project teams produce a polished professional report that describes the design process, implementation and testing, verification and validation, and a critical appraisal of the project. An oral presentation and graphic works are complementary project deliverables",
+      "course_objectives": [
+        "Apply engineering knowledge and design methodology to develop a functional solution to a real-world electrical engineering problem.",
+        "Demonstrate effective teamwork, project management, and professional communication skills through all phases of the design process.",
+        "Evaluate design outcomes with consideration for ethical, environmental, societal, and economic factors, and present the final product through comprehensive technical documentation and oral presentations."
+      ],
+      "textbooks": [
+        "Exploring Engineering: An Introduction to Engineering and Design / Philip Kosky, ISBN 978-0-12-374723-5"
+      ],
+      "references": []
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "prerequisites": [],
+      "prerequisite_text": "Compltion of 128 Credit Hours",
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "Cooperative Education is a planned learning experience, for which credits are earned, that integrates classroom theory and learning experiences at a workplace. The experience enables students to apply and refine the knowledge and skills acquired in a related curriculum course. The Co-op is a supervised work experience in a position in the government or the private sector which aimed to assist students in making the transition from the classroom to industry. Students are required to finish 28 weeks on the job to earn 10-credit hours for the course",
+      "course_objectives": [
+        "Provide students with real-world professional experience in electrical engineering environments to apply theoretical knowledge to practical problems.",
+        "Develop students’ professional skills, including communication, teamwork, time management, and ethical responsibility, through structured workplace engagement.",
+        "Expose students to the standards, practices, and challenges of industry to enhance their readiness for full-time employment and lifelong learning."
+      ],
+      "textbooks": [],
+      "references": []
+    }
+  ]
+}

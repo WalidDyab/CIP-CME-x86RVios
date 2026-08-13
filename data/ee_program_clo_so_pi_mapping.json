@@ -1,6 +1,6 @@
 {
   "program": "Electrical Engineering",
-  "source_file": "EE Program CLO-SO-PI Mapping(20260812-060939).xlsx",
+  "source_file": "EE Program CLO-SO-PI Mapping.xlsx",
   "generated_from_workbook": true,
   "sheets": [
     "PIs",
@@ -24,6 +24,7 @@
     "EE 414",
     "EE 415",
     "EE 416",
+    "EE 417",
     "EE 423",
     "EE 424",
     "EE 425",
@@ -33,6 +34,7 @@
     "EE 435",
     "EE 436",
     "EE 442",
+    "EE 454",
     "EE 456",
     "EE 499"
   ],
@@ -50,9 +52,9 @@
           "so_code": "SO1",
           "so_statement": "Ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics.",
           "pi_statement": "Identify, formulate, and solve complex electrical engineering problems",
-          "course_level": "â€“ For senior-level courses that include complex engineering problems.",
+          "course_level": "– For senior-level courses that include complex engineering problems.",
           "rubric": "Rubric",
-          "abet_illustration": "Complex Engineering Problems â€“ Complex engineering problems include one or more of the following characteristics: \n-involving wide-ranging or conflicting technical issues, \n-having no obvious solution, \n-addressing problems not encompassed by current standards and codes, \n-involving diverse groups of stakeholders, \n-including many component parts or sub-problems, \n-involving multiple disciplines, \n-or having significant consequences in a range of contexts."
+          "abet_illustration": "Complex Engineering Problems – Complex engineering problems include one or more of the following characteristics: \n-involving wide-ranging or conflicting technical issues, \n-having no obvious solution, \n-addressing problems not encompassed by current standards and codes, \n-involving diverse groups of stakeholders, \n-including many component parts or sub-problems, \n-involving multiple disciplines, \n-or having significant consequences in a range of contexts."
         },
         {
           "pi_code": "PI12",
@@ -75,7 +77,7 @@
           "pi_statement": "Apply engineering design to produce a solution that meets specified needs",
           "course_level": null,
           "rubric": "Rubric",
-          "abet_illustration": "Engineering design is a process of devising a system, component, or process to meet desired needs and specifications within constraints. It is an iterative, creative, decision-making process in which the basic sciences, mathematics, and engineering sciences are applied to convert resources into solutions. Engineering design involves identifying opportunities, developing requirements, performing analysis and synthesis, generating multiple solutions, evaluating solutions against requirements, considering risks, and making trade-offs, for the purpose of obtaining a high-quality solution under the given circumstances. For illustrative purposes only, examples of possible constraints include aesthetics, codes, constructability, cost, ergonomics, extensibility, functionality, interoperability, legal considerations, maintainability, manufacturability, marketability, policy, regulations, schedule, standards, sustainability, or usability.\n\n This does not mean that each of these elements  (factors) must have a significant effect on the design â€” it just means that the program must show that students consider these elements as they engage in design."
+          "abet_illustration": "Engineering design is a process of devising a system, component, or process to meet desired needs and specifications within constraints. It is an iterative, creative, decision-making process in which the basic sciences, mathematics, and engineering sciences are applied to convert resources into solutions. Engineering design involves identifying opportunities, developing requirements, performing analysis and synthesis, generating multiple solutions, evaluating solutions against requirements, considering risks, and making trade-offs, for the purpose of obtaining a high-quality solution under the given circumstances. For illustrative purposes only, examples of possible constraints include aesthetics, codes, constructability, cost, ergonomics, extensibility, functionality, interoperability, legal considerations, maintainability, manufacturability, marketability, policy, regulations, schedule, standards, sustainability, or usability.\n\n This does not mean that each of these elements  (factors) must have a significant effect on the design — it just means that the program must show that students consider these elements as they engage in design."
         },
         {
           "pi_code": "PI22",
@@ -116,7 +118,7 @@
           "pi_statement": "Communicate technical ideas in written technical reports, including engineering graphs and drawings",
           "course_level": null,
           "rubric": "Rubric",
-          "abet_illustration": "-The guidance indicates that the â€œrange of audiencesâ€ should include at least two distinct audiences (and they should be relevant to the discipline or programâ€™s mission). \n-It is the program's responsibility to determine the range of audiences. For example, if a program stresses preparing students for graduate school, it might have students prepare a journal paper. There are many other possible audiences: faculty, students, non-technical, the public sector, etc. For example, students in biomedical engineering programs might communicate with doctors. In the major design experience, students might communicate with external clients. It is the program's responsibility to determine the most meaningful audiences for its students."
+          "abet_illustration": "-The guidance indicates that the “range of audiences” should include at least two distinct audiences (and they should be relevant to the discipline or program’s mission). \n-It is the program's responsibility to determine the range of audiences. For example, if a program stresses preparing students for graduate school, it might have students prepare a journal paper. There are many other possible audiences: faculty, students, non-technical, the public sector, etc. For example, students in biomedical engineering programs might communicate with doctors. In the major design experience, students might communicate with external clients. It is the program's responsibility to determine the most meaningful audiences for its students."
         },
         {
           "pi_code": "PI32",
@@ -169,7 +171,7 @@
           "so_code": "SO5",
           "so_statement": "An ability to function effectively on a team whose members together provide leadership, create a collaborative and inclusive environment, establish goals, plan tasks, and meet objectives.",
           "pi_statement": "Provide leadership in planning and managing team work and support a collaborative, inclusive team environment",
-          "course_level": "â€“ For senior-level courses that include design project.",
+          "course_level": "– For senior-level courses that include design project.",
           "rubric": null,
           "abet_illustration": null
         }
@@ -183,7 +185,7 @@
           "so_code": "SO6",
           "so_statement": "An ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions.",
           "pi_statement": "Develop appropriate experimentation",
-          "course_level": "â€“ For senior-level courses that include experiement development",
+          "course_level": "– For senior-level courses that include experiement development",
           "rubric": "Rubric",
           "abet_illustration": "Student Outcome #6 requires in part that students have the ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions. There is no requirement that students be able to design an experiment. \n\nThe components of Outcome 6 do not have to be addressed in series, and the outcome may be satisfied in the context of more than one system. "
         },
@@ -265,6 +267,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Define fundamental concepts of programming along with problem-solving techniques and analytical thinking.",
           "aligned_sos": [
             "SO1"
@@ -276,6 +279,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Explain the various logic using various operators and expressions.",
           "aligned_sos": [
             "SO3"
@@ -288,6 +292,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Write a programming code in Python.",
           "aligned_sos": [
             "SO3"
@@ -300,6 +305,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Examine program code using Python",
           "aligned_sos": [
             "SO1"
@@ -344,6 +350,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.",
           "aligned_sos": [
             "SO1"
@@ -355,7 +362,8 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Analyze DC resistive circuits using Kirchhoffâ€™s laws, nodal and mesh analysis, and basic network theorems.",
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
           "aligned_sos": [
             "SO1"
           ],
@@ -366,6 +374,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.",
           "aligned_sos": [
             "SO1"
@@ -377,6 +386,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Investigate electric circuits through experiments and simulations",
           "aligned_sos": [
             "SO1",
@@ -392,6 +402,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Contribute to team tasks and objectives in electric circuits laboratory activities",
           "aligned_sos": [
             "SO5"
@@ -403,6 +414,7 @@
         {
           "domain": null,
           "clo_id": 3.2,
+          "nqf_domain": "Values",
           "clo_text": "Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions",
           "aligned_sos": [
             "SO4"
@@ -442,8 +454,8 @@
       ],
       "instructor": "Dr. Mahmoud Abdelreheem",
       "mapping_pi_levels": {
-        "PI11": "I",
-        "PI12": "I",
+        "PI11": "P",
+        "PI12": "P",
         "PI21": "I",
         "PI22": "I",
         "PI23": "I",
@@ -459,6 +471,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Solve fundamental electronic circuit problems involving diodes, BJTs, and operational amplifiers using principles of electronics and circuit theory.",
           "aligned_sos": [
             "SO1"
@@ -471,6 +484,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain the operation and applications of semiconductor devices and amplifiers using appropriate technical language and circuit representations.",
           "aligned_sos": [
             "SO3"
@@ -483,6 +497,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Design basic electronic circuits such as rectifiers, transistor amplifiers, and operational-amplifier applications to satisfy given performance requirements.",
           "aligned_sos": [
             "SO2"
@@ -497,6 +512,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Perform laboratory experiments on electronic circuits and analyze the resulting data to verify theoretical concepts.",
           "aligned_sos": [
             "SO6"
@@ -510,6 +526,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Collaborate effectively in laboratory activities to build, test, and troubleshoot electronic circuits.",
           "aligned_sos": [
             "SO5"
@@ -556,6 +573,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices.",
           "aligned_sos": [
             "SO1",
@@ -569,6 +587,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Explain different binary number systems and arithmetic.",
           "aligned_sos": [
             "SO2",
@@ -583,6 +602,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Explain Boolean expressions using Karnaugh Map.",
           "aligned_sos": [
             "SO2",
@@ -596,6 +616,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze and design combinational logic circuit.",
           "aligned_sos": [
             "SO6"
@@ -608,6 +629,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers.",
           "aligned_sos": [
             "SO6"
@@ -620,6 +642,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects.",
           "aligned_sos": [
             "SO6"
@@ -631,6 +654,7 @@
         {
           "domain": null,
           "clo_id": 3.2,
+          "nqf_domain": "Values",
           "clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects.",
           "aligned_sos": [
             "SO6"
@@ -668,6 +692,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe continuous- and discrete-time signals and systems using standard properties and classification criteria.",
           "aligned_sos": [
             "SO1"
@@ -679,6 +704,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe sampling theory principles for converting continuous-time signals to discrete-time signals.",
           "aligned_sos": [
             "SO1"
@@ -690,6 +716,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze continuous and discrete linear time-invariant (LTI) systems.",
           "aligned_sos": [
             "SO1",
@@ -704,6 +731,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze LTI systems using Z-transform concepts to interpret results and draw engineering conclusions.",
           "aligned_sos": [
             "SO1",
@@ -718,6 +746,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Explain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results.",
           "aligned_sos": [
             "SO1",
@@ -731,6 +760,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
+          "nqf_domain": "Skills",
           "clo_text": "Write MATLAB code to implement sampling-based discrete-time systems and evaluate their performance using independently learned tools or functions.",
           "aligned_sos": [
             "SO6",
@@ -773,6 +803,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Recognize the application of the basic electric circuit components in different electrical applications.",
           "aligned_sos": [
             "SO1"
@@ -785,6 +816,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze first-order and second-order transient reponse of electrical circuits.",
           "aligned_sos": [
             "SO6"
@@ -797,6 +829,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Apply the Laplace transform in circuit analysis.",
           "aligned_sos": [
             "SO6"
@@ -809,6 +842,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze frequency selective circuits",
           "aligned_sos": [
             "SO6"
@@ -821,6 +855,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze three-phase networks and two-port networks.",
           "aligned_sos": [
             "SO7"
@@ -853,8 +888,8 @@
       "mapping_pi_levels": {
         "PI11": "P",
         "PI12": "P",
-        "PI21": "P",
-        "PI22": "P",
+        "PI21": "I",
+        "PI22": "I",
         "PI63": "P",
         "PI64": "P"
       },
@@ -862,6 +897,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Identify the feature of various amplifier circuits, active filters, and oscillators.",
           "aligned_sos": [
             "SO1"
@@ -874,6 +910,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the model of BJT amplifiers and their frequency response.",
           "aligned_sos": [
             "SO6"
@@ -886,6 +923,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the DC and AC model of various FET amplifiers.",
           "aligned_sos": [
             "SO6"
@@ -898,6 +936,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Design CMOS circuit such as NAND Gates, Tranmsission Gates and memory elements",
           "aligned_sos": [
             "SO2"
@@ -953,8 +992,8 @@
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
-        "PI41": "P",
-        "PI42": "P",
+        "PI41": "I",
+        "PI42": "I",
         "PI51": "P",
         "PI52": "P",
         "PI61": "P",
@@ -968,6 +1007,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses.",
           "aligned_sos": [
             "SO1",
@@ -983,6 +1023,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
           "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
           "aligned_sos": [
             "SO1",
@@ -998,6 +1039,7 @@
         {
           "domain": null,
           "clo_id": 1.3,
+          "nqf_domain": "Knowledge",
           "clo_text": "Model digital components of microprocessor-based systems using HDL at the RTL level.",
           "aligned_sos": [
             "SO1",
@@ -1012,6 +1054,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Design arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits.",
           "aligned_sos": [
             "SO2",
@@ -1040,6 +1083,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Design control units and sequential systems using finite state machines for system control applications.",
           "aligned_sos": [
             "SO2",
@@ -1068,6 +1112,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Implement and verify an integrated digital system combining datapath and control components on FPGA hardware.",
           "aligned_sos": [
             "SO2",
@@ -1116,6 +1161,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.",
           "aligned_sos": [
             "SO1"
@@ -1127,7 +1173,8 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Apply Maxwellâ€™s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
+          "nqf_domain": "Skills",
+          "clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
           "aligned_sos": [
             "SO1"
           ],
@@ -1138,6 +1185,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.",
           "aligned_sos": [
             "SO1"
@@ -1149,6 +1197,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
           "aligned_sos": [],
           "aligned_pis": []
@@ -1156,6 +1205,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
+          "nqf_domain": "Skills",
           "clo_text": "Present an oral technical presentation on an electromagnetics application",
           "aligned_sos": [
             "SO3"
@@ -1167,6 +1217,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Acquire new knowledge on an electromagnetics application using appropriate learning strategies.",
           "aligned_sos": [
             "SO7"
@@ -1206,6 +1257,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Recognize feedback in control systems and stability concept",
           "aligned_sos": [
             "SO1"
@@ -1217,6 +1269,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Apply the Laplace Transform in modelling the LTI control systems",
           "aligned_sos": [
             "SO1"
@@ -1228,6 +1281,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Evaluate the beahaviour of LTI in time domain",
           "aligned_sos": [
             "SO6"
@@ -1240,6 +1294,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Design a stable control system according to the required specification",
           "aligned_sos": [
             "SO2"
@@ -1251,6 +1306,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Demonstrate the concepts of stable and well-performed control systems",
           "aligned_sos": [
             "SO1"
@@ -1301,7 +1357,7 @@
         "PI31": "P",
         "PI32": "P",
         "PI51": "P",
-        "PI52": "P",
+        "PI52": "I",
         "PI61": "P",
         "PI62": "P",
         "PI63": "P",
@@ -1311,6 +1367,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Recognize different analog modulation and demodulation techniques.",
           "aligned_sos": [
             "SO1"
@@ -1323,6 +1380,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Explain the linear model of the distortionless channel.",
           "aligned_sos": [
             "SO1"
@@ -1334,6 +1392,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
           "aligned_sos": [
             "SO1"
@@ -1346,6 +1405,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the impact of various channels on communication systems.",
           "aligned_sos": [
             "SO1"
@@ -1358,6 +1418,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
+          "nqf_domain": "Skills",
           "clo_text": "Demonstrate the pulse modulation techniques.",
           "aligned_sos": [
             "SO6"
@@ -1372,6 +1433,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
           "aligned_sos": [
             "SO2",
@@ -1434,10 +1496,10 @@
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
-        "PI41": "P",
-        "PI42": "P",
+        "PI41": "I",
+        "PI42": "I",
         "PI51": "P",
-        "PI52": "P",
+        "PI52": "I",
         "PI61": "P",
         "PI71": "P"
       },
@@ -1445,6 +1507,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Recognize the characteristics of various semiconductor devices and power converter configurations.",
           "aligned_sos": [
             "SO1",
@@ -1459,6 +1522,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the various configurations of AC-DC converter.",
           "aligned_sos": [
             "SO2"
@@ -1472,6 +1536,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the various configurations of DC-DC converter.",
           "aligned_sos": [
             "SO2"
@@ -1485,6 +1550,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the various configurations of DC-AC converter.",
           "aligned_sos": [
             "SO2"
@@ -1498,6 +1564,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the various configurations of AC-AC converter.",
           "aligned_sos": [
             "SO2"
@@ -1511,6 +1578,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Demonstrate various power electronics circuits, application, and analyze the waveform through simulation and experimental work",
           "aligned_sos": [
             "SO3",
@@ -1567,6 +1635,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain the concepts of electromechanical energy conversion systems",
           "aligned_sos": [
             "SO1"
@@ -1579,6 +1648,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe the construction, principle of operation, and characteristics of dc machines, ac machines and transformers",
           "aligned_sos": [
             "SO1"
@@ -1591,6 +1661,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of d.c. machines",
           "aligned_sos": [
             "SO2"
@@ -1605,6 +1676,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of a.c. machines",
           "aligned_sos": [
             "SO2"
@@ -1619,6 +1691,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Show the importance of sustainability in electrical machines and transformers",
           "aligned_sos": [
             "SO7"
@@ -1655,20 +1728,21 @@
       "instructor": "Dr. Ahmed Alnakhli",
       "mapping_pi_levels": {
         "PI11": "M",
-        "PI21": "M",
-        "PI22": "M",
-        "PI23": "M",
-        "PI24": "M",
-        "PI41": "M",
-        "PI42": "M",
-        "PI71": "M",
-        "PI72": "M"
+        "PI21": "P",
+        "PI22": "P",
+        "PI23": "P",
+        "PI24": "P",
+        "PI41": "P",
+        "PI42": "P",
+        "PI71": "P",
+        "PI72": "P"
       },
       "clos": [
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
-          "clo_text": "Explain the basic concepts, components, and principles of power\nsystems",
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the basic concepts, components, and principles of power systems",
           "aligned_sos": [
             "SO1",
             "SO2"
@@ -1681,6 +1755,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe the different types of power generators and their characteristics",
           "aligned_sos": [
             "SO1",
@@ -1694,6 +1769,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyse both symmetrical and unsymmetrical conditions in power systems.",
           "aligned_sos": [
             "SO2"
@@ -1706,6 +1782,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the behavior of power systems under steady-state and transient conditions",
           "aligned_sos": [
             "SO2"
@@ -1718,6 +1795,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
           "aligned_sos": [
             "SO2",
@@ -1736,6 +1814,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Demonstrate effective technical communication of power system analysis and results.",
           "aligned_sos": [
             "SO4"
@@ -1748,6 +1827,7 @@
         {
           "domain": null,
           "clo_id": 3.2,
+          "nqf_domain": "Values",
           "clo_text": "Demonstrate the ability to independently acquire and apply new knowledge related to power systems.",
           "aligned_sos": [
             "SO7"
@@ -1818,6 +1898,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Identify relevant technical information and engineering principles needed to define and solve an open-ended design problem.",
           "aligned_sos": [
             "SO1"
@@ -1830,7 +1911,8 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
-          "clo_text": "Apply the engineering design process to define, formulate and solve a conceptual design problem considering human factors, safety, environmental, economic, and societal constraints.\nApply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
           "aligned_sos": [
             "SO2"
           ],
@@ -1844,7 +1926,8 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Use lateral and critical thinking to generate creative alternative concepts and identify a preferred solution to a design problem. \nGenerate alternative concepts and select a preferred solution for a design problem.",
+          "nqf_domain": "Skills",
+          "clo_text": "Generate alternative concepts and select a preferred solution for a design problem.",
           "aligned_sos": [
             "SO2"
           ],
@@ -1856,6 +1939,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Communicate design solutions visually using engineering tools and drawings.",
           "aligned_sos": [
             "SO3"
@@ -1867,6 +1951,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
+          "nqf_domain": "Skills",
           "clo_text": "Communicate design solutions using written, visual, and oral technical methods.",
           "aligned_sos": [
             "SO3"
@@ -1879,6 +1964,7 @@
         {
           "domain": null,
           "clo_id": 2.5,
+          "nqf_domain": "Skills",
           "clo_text": "Validate design solutions through experimentation/testing, data collection, analysis, and engineering conclusions.",
           "aligned_sos": [
             "SO6"
@@ -1893,6 +1979,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Evaluate ethical and legal responsibilities and their impact on engineering decisions.",
           "aligned_sos": [
             "SO4"
@@ -1905,6 +1992,7 @@
         {
           "domain": null,
           "clo_id": 3.2,
+          "nqf_domain": "Values",
           "clo_text": "Collaborate to establish goals, plan tasks, and meet project objectives within a team.",
           "aligned_sos": [
             "SO5"
@@ -1917,6 +2005,7 @@
         {
           "domain": null,
           "clo_id": 3.3,
+          "nqf_domain": "Values",
           "clo_text": "Acquire new knowledge, tools, standards, or technologies as needed to complete the design project.",
           "aligned_sos": [
             "SO7"
@@ -1974,6 +2063,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Demonstrate a comprehensive understanding of their academic studies through general education and their areas of specializations.",
           "aligned_sos": [
             "SO1",
@@ -1988,7 +2078,8 @@
         {
           "domain": null,
           "clo_id": 1.2,
-          "clo_text": "Define and recognize complex electrical engineering problems encountered in industry, utilizing theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.\nIdentify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
+          "nqf_domain": "Knowledge",
+          "clo_text": "Identify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
           "aligned_sos": [
             "SO1"
           ],
@@ -2000,6 +2091,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Demonstrate effective communication skills to a range of audiences.",
           "aligned_sos": [
             "SO3"
@@ -2012,7 +2104,8 @@
         {
           "domain": null,
           "clo_id": 2.2,
-          "clo_text": "Examine advanced technical skills in electrical engineering, including  design, analysis, and troubleshooting, to successfully complete assigned tasks and projects within cooperative work environments.\nApply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
+          "nqf_domain": "Skills",
+          "clo_text": "Apply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
           "aligned_sos": [
             "SO1",
             "SO6"
@@ -2026,6 +2119,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Collaborate effectively within multidisciplinary teams to plan tasks, meet objectives, and support a professional work environment.",
           "aligned_sos": [
             "SO5"
@@ -2038,6 +2132,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Demonstrate the ability to work as an individual and as a part of a multi-disciplinary team",
           "aligned_sos": [],
           "aligned_pis": []
@@ -2045,6 +2140,7 @@
         {
           "domain": null,
           "clo_id": 3.2,
+          "nqf_domain": "Values",
           "clo_text": "Demonstrate professional and ethical responsibility in engineering practice and decision-making.",
           "aligned_sos": [
             "SO4"
@@ -2063,7 +2159,7 @@
       "performance_level": "M",
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
-      "instructor": null,
+      "instructor": "Dr. Maged Esmail",
       "mapping_pi_levels": {},
       "clos": []
     },
@@ -2074,7 +2170,7 @@
       "performance_level": "M",
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
-      "instructor": null,
+      "instructor": "Dr. Maged Esmail",
       "mapping_pi_levels": {},
       "clos": []
     },
@@ -2123,6 +2219,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain the workflow of VLSI design methodologies and the key steps involved in the fabrication of ASICs and FPGAs.",
           "aligned_sos": [
             "SO1",
@@ -2141,6 +2238,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
           "clo_text": "Identify the main players in the VLSI industry",
           "aligned_sos": [
             "SO1",
@@ -2159,6 +2257,7 @@
         {
           "domain": null,
           "clo_id": 1.3,
+          "nqf_domain": "Knowledge",
           "clo_text": "Differentiate between different packaging of VLSI circuits",
           "aligned_sos": [
             "SO1",
@@ -2174,6 +2273,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Design VLSI circuits using HDL.",
           "aligned_sos": [
             "SO2"
@@ -2188,6 +2288,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Perform functional and timing analysis of HDL designs",
           "aligned_sos": [
             "SO2"
@@ -2202,6 +2303,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Execute post-synthesis analysis to ensure the design meets specified performance criteria.",
           "aligned_sos": [
             "SO2",
@@ -2219,6 +2321,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Uphold ethical standards in VLSI design, including compliance with regulations, accurate reporting, intellectual property rights, and environmental considerations.",
           "aligned_sos": [
             "SO4",
@@ -2234,41 +2337,52 @@
       ]
     },
     {
-      "course_code": "EE 423",
+      "course_code": "EE 417",
       "course_id": 30,
+      "course_title": "Communication Electronics",
+      "performance_level": "M",
+      "overall_aligned_sos": [],
+      "overall_aligned_pis": [],
+      "instructor": "Dr. Moustafa Nasralla",
+      "mapping_pi_levels": {},
+      "clos": []
+    },
+    {
+      "course_code": "EE 423",
+      "course_id": 31,
       "course_title": "Data Communication Networks",
       "performance_level": "M",
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
-      "instructor": null,
+      "instructor": "Dr. Moustafa Nasralla",
       "mapping_pi_levels": {},
       "clos": []
     },
     {
       "course_code": "EE 424",
-      "course_id": 31,
+      "course_id": 32,
       "course_title": "Digital Communications",
       "performance_level": "M",
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
-      "instructor": null,
+      "instructor": "Dr. Walid Dyab",
       "mapping_pi_levels": {},
       "clos": []
     },
     {
       "course_code": "EE 425",
-      "course_id": 32,
+      "course_id": 33,
       "course_title": "Wireless Communications Systems",
       "performance_level": "M",
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
-      "instructor": null,
+      "instructor": "Dr. Walid Dyab",
       "mapping_pi_levels": {},
       "clos": []
     },
     {
       "course_code": "EE 426",
-      "course_id": 33,
+      "course_id": 34,
       "course_title": "Antenna and wave propagation",
       "performance_level": "M",
       "overall_aligned_sos": [
@@ -2291,7 +2405,7 @@
         "PI64",
         "PI71"
       ],
-      "instructor": "Dr. Mourad Rizk",
+      "instructor": "Dr. Walid Dyab",
       "mapping_pi_levels": {
         "PI11": "M",
         "PI12": "M",
@@ -2309,6 +2423,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe electomagnetic wave radiation mechanism.",
           "aligned_sos": [
             "SO1"
@@ -2321,6 +2436,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
           "clo_text": "Recognize various antennas types",
           "aligned_sos": [
             "SO1"
@@ -2333,6 +2449,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Design antennas for various applications.",
           "aligned_sos": [
             "SO2"
@@ -2347,6 +2464,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Design and analyze antenna arrays.",
           "aligned_sos": [
             "SO1",
@@ -2362,6 +2480,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Calculate antenna parameters like gain, input impedance, radiated power and radiation resistance.",
           "aligned_sos": [
             "SO1",
@@ -2376,6 +2495,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Describe electromagnetic interference, radiation hazards, and the effect of EM fields on the environment.",
           "aligned_sos": [
             "SO4",
@@ -2391,18 +2511,18 @@
     },
     {
       "course_code": "EE 433",
-      "course_id": 34,
+      "course_id": 35,
       "course_title": "Mechatronics",
       "performance_level": "M",
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
-      "instructor": null,
+      "instructor": "Dr. Mahmoud Abdelreheem",
       "mapping_pi_levels": {},
       "clos": []
     },
     {
       "course_code": "EE 434",
-      "course_id": 35,
+      "course_id": 36,
       "course_title": "PLC Microcontrollers",
       "performance_level": "M",
       "overall_aligned_sos": [
@@ -2429,10 +2549,10 @@
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI61": "M",
-        "PI62": "M",
-        "PI63": "M",
-        "PI64": "M",
+        "PI61": "P",
+        "PI62": "P",
+        "PI63": "P",
+        "PI64": "P",
         "PI71": "M",
         "PI72": "M"
       },
@@ -2440,6 +2560,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe fundamental automation and control concepts related to programmable logic controllers and relay ladder logic.",
           "aligned_sos": [
             "SO1"
@@ -2452,6 +2573,7 @@
         {
           "domain": null,
           "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain PLC hardware structure, programming concepts, and industrial applications using appropriate technical terminology, ladder diagrams, and documentation.",
           "aligned_sos": [
             "SO1",
@@ -2467,6 +2589,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Conduct laboratory experiments involving PLC programming, testing, and monitoring to evaluate system behavior and performance.",
           "aligned_sos": [
             "SO6"
@@ -2481,6 +2604,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Apply new PLC functions, instructions, and communication concepts using manuals, software tools, and self-directed learning resources.",
           "aligned_sos": [
             "SO7"
@@ -2494,7 +2618,7 @@
     },
     {
       "course_code": "EE 435",
-      "course_id": 36,
+      "course_id": 37,
       "course_title": "Robotics and Automation",
       "performance_level": "M",
       "overall_aligned_sos": [
@@ -2527,8 +2651,8 @@
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
+        "PI41": "P",
+        "PI42": "P",
         "PI51": "M",
         "PI52": "M",
         "PI61": "M",
@@ -2542,6 +2666,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe the basic theory underlying modern robotics",
           "aligned_sos": [
             "SO1",
@@ -2560,6 +2685,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze the kinematics and dynamics of robot manipulators",
           "aligned_sos": [
             "SO6"
@@ -2574,6 +2700,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Design appropriate controllers and trajectory generation solutions for manipulators",
           "aligned_sos": [
             "SO6"
@@ -2588,6 +2715,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Comply to safety considerations in the design and operation of robotic systems",
           "aligned_sos": [
             "SO4",
@@ -2603,6 +2731,7 @@
         {
           "domain": null,
           "clo_id": 3.2,
+          "nqf_domain": "Values",
           "clo_text": "Contribute responsibly to team-based planning and problem-solving in a group robotics project.",
           "aligned_sos": [
             "SO4",
@@ -2619,7 +2748,7 @@
     },
     {
       "course_code": "EE 436",
-      "course_id": 37,
+      "course_id": 38,
       "course_title": "Artifitial Intellegince",
       "performance_level": "M",
       "overall_aligned_sos": [
@@ -2649,8 +2778,8 @@
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
+        "PI41": "P",
+        "PI42": "P",
         "PI61": "M",
         "PI62": "M",
         "PI63": "M",
@@ -2662,6 +2791,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Describe the theoretical foundations of supervised, unsupervised, and deep learning techniques",
           "aligned_sos": [
             "SO1",
@@ -2677,6 +2807,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyse and prepare data for AI applications in engineering contexts.",
           "aligned_sos": [
             "SO6"
@@ -2691,6 +2822,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Design AI models using appropriate metrics and interpret their results.",
           "aligned_sos": [
             "SO6"
@@ -2705,6 +2837,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Write Programming Code to Implement AI models.",
           "aligned_sos": [
             "SO3",
@@ -2720,6 +2853,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Use AI concepts in engineering applications such as energy prediction, automation, and intelligent control systems",
           "aligned_sos": [
             "SO4",
@@ -2736,18 +2870,29 @@
     },
     {
       "course_code": "EE 442",
-      "course_id": 38,
+      "course_id": 39,
       "course_title": "Digital Signal Processing",
       "performance_level": "M",
       "overall_aligned_sos": [],
       "overall_aligned_pis": [],
-      "instructor": null,
+      "instructor": "Dr. Walid Dyab",
+      "mapping_pi_levels": {},
+      "clos": []
+    },
+    {
+      "course_code": "EE 454",
+      "course_id": 40,
+      "course_title": "Power System Planning",
+      "performance_level": "M",
+      "overall_aligned_sos": [],
+      "overall_aligned_pis": [],
+      "instructor": "Dr. Ahmed Alnakhli",
       "mapping_pi_levels": {},
       "clos": []
     },
     {
       "course_code": "EE 456",
-      "course_id": 39,
+      "course_id": 41,
       "course_title": "Renewable Energy Engineering",
       "performance_level": "M",
       "overall_aligned_sos": [
@@ -2774,6 +2919,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain the basic concepts, components, and principles of Renewable Energy sources",
           "aligned_sos": [
             "SO1"
@@ -2786,6 +2932,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Design and develop the photovoltaic and wind energy systems.",
           "aligned_sos": [
             "SO3"
@@ -2798,6 +2945,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Explain the Fuel Cell systems and energy storage devices.",
           "aligned_sos": [
             "SO1"
@@ -2810,6 +2958,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Illustrate the importance of energy transition and sustainability",
           "aligned_sos": [
             "SO7"
@@ -2822,7 +2971,7 @@
     },
     {
       "course_code": "EE 499",
-      "course_id": 40,
+      "course_id": 42,
       "course_title": "Special Topics In Electrical and Electronics Engineering",
       "performance_level": "M",
       "overall_aligned_sos": [
@@ -2854,6 +3003,7 @@
         {
           "domain": "Knowledge and understanding",
           "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
           "clo_text": "Explain advanced concepts and principles related to a selected contemporary topic in electrical and electronics engineering.",
           "aligned_sos": [
             "SO1",
@@ -2872,6 +3022,7 @@
         {
           "domain": "Skills",
           "clo_id": 2.1,
+          "nqf_domain": "Skills",
           "clo_text": "Analyze engineering problems associated with the selected topic using appropriate theoretical and computational methods.",
           "aligned_sos": [
             "SO1",
@@ -2887,6 +3038,7 @@
         {
           "domain": null,
           "clo_id": 2.2,
+          "nqf_domain": "Skills",
           "clo_text": "Apply relevant engineering tools, techniques, or methodologies to investigate problems related to the selected topic.",
           "aligned_sos": [
             "SO1",
@@ -2902,6 +3054,7 @@
         {
           "domain": null,
           "clo_id": 2.3,
+          "nqf_domain": "Skills",
           "clo_text": "Evaluate alternative approaches, technologies, or solutions within the selected topic using appropriate technical criteria.",
           "aligned_sos": [
             "SO1",
@@ -2917,6 +3070,7 @@
         {
           "domain": null,
           "clo_id": 2.4,
+          "nqf_domain": "Skills",
           "clo_text": "Develop a solution, model, system, or study addressing a problem related to the selected topic.",
           "aligned_sos": [
             "SO2",
@@ -2931,6 +3085,7 @@
         {
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
+          "nqf_domain": "Values",
           "clo_text": "Demonstrate professional responsibility and independent learning in communicating developments related to the selected topic.",
           "aligned_sos": [
             "SO3",
@@ -2993,8 +3148,8 @@
         "SO6"
       ],
       "pi_levels": {
-        "PI11": "I",
-        "PI12": "I",
+        "PI11": "P",
+        "PI12": "P",
         "PI21": "I",
         "PI22": "I",
         "PI23": "I",
@@ -3073,8 +3228,8 @@
       "pi_levels": {
         "PI11": "P",
         "PI12": "P",
-        "PI21": "P",
-        "PI22": "P",
+        "PI21": "I",
+        "PI22": "I",
         "PI63": "P",
         "PI64": "P"
       }
@@ -3101,8 +3256,8 @@
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
-        "PI41": "P",
-        "PI42": "P",
+        "PI41": "I",
+        "PI42": "I",
         "PI51": "P",
         "PI52": "P",
         "PI61": "P",
@@ -3166,7 +3321,7 @@
         "PI31": "P",
         "PI32": "P",
         "PI51": "P",
-        "PI52": "P",
+        "PI52": "I",
         "PI61": "P",
         "PI62": "P",
         "PI63": "P",
@@ -3194,10 +3349,10 @@
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
-        "PI41": "P",
-        "PI42": "P",
+        "PI41": "I",
+        "PI42": "I",
         "PI51": "P",
-        "PI52": "P",
+        "PI52": "I",
         "PI61": "P",
         "PI71": "P"
       }
@@ -3234,14 +3389,14 @@
       ],
       "pi_levels": {
         "PI11": "M",
-        "PI21": "M",
-        "PI22": "M",
-        "PI23": "M",
-        "PI24": "M",
-        "PI41": "M",
-        "PI42": "M",
-        "PI71": "M",
-        "PI72": "M"
+        "PI21": "P",
+        "PI22": "P",
+        "PI23": "P",
+        "PI24": "P",
+        "PI41": "P",
+        "PI42": "P",
+        "PI71": "P",
+        "PI72": "P"
       }
     },
     {
@@ -3308,14 +3463,14 @@
     {
       "course_code": "EE 414",
       "course_title": "Electrical and Electronic Measurements",
-      "instructor": null,
+      "instructor": "Dr. Maged Esmail",
       "aligned_sos": [],
       "pi_levels": {}
     },
     {
       "course_code": "EE 415",
       "course_title": "Opto-Electronics",
-      "instructor": null,
+      "instructor": "Dr. Maged Esmail",
       "aligned_sos": [],
       "pi_levels": {}
     },
@@ -3346,30 +3501,37 @@
       }
     },
     {
+      "course_code": "EE 417",
+      "course_title": "Communication Electronics",
+      "instructor": "Dr. Moustafa Nasralla",
+      "aligned_sos": [],
+      "pi_levels": {}
+    },
+    {
       "course_code": "EE 423",
       "course_title": "Data Communication Networks",
-      "instructor": null,
+      "instructor": "Dr. Moustafa Nasralla",
       "aligned_sos": [],
       "pi_levels": {}
     },
     {
       "course_code": "EE 424",
       "course_title": "Digital Communications",
-      "instructor": null,
+      "instructor": "Dr. Walid Dyab",
       "aligned_sos": [],
       "pi_levels": {}
     },
     {
       "course_code": "EE 425",
       "course_title": "Wireless Communications Systems",
-      "instructor": null,
+      "instructor": "Dr. Walid Dyab",
       "aligned_sos": [],
       "pi_levels": {}
     },
     {
       "course_code": "EE 426",
       "course_title": "Antenna and wave propagation",
-      "instructor": "Dr. Mourad Rizk",
+      "instructor": "Dr. Walid Dyab",
       "aligned_sos": [
         "SO1",
         "SO2",
@@ -3394,7 +3556,7 @@
     {
       "course_code": "EE 433",
       "course_title": "Mechatronics",
-      "instructor": null,
+      "instructor": "Dr. Mahmoud Abdelreheem",
       "aligned_sos": [],
       "pi_levels": {}
     },
@@ -3413,10 +3575,10 @@
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI61": "M",
-        "PI62": "M",
-        "PI63": "M",
-        "PI64": "M",
+        "PI61": "P",
+        "PI62": "P",
+        "PI63": "P",
+        "PI64": "P",
         "PI71": "M",
         "PI72": "M"
       }
@@ -3438,8 +3600,8 @@
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
+        "PI41": "P",
+        "PI42": "P",
         "PI51": "M",
         "PI52": "M",
         "PI61": "M",
@@ -3466,8 +3628,8 @@
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
+        "PI41": "P",
+        "PI42": "P",
         "PI61": "M",
         "PI62": "M",
         "PI63": "M",
@@ -3479,7 +3641,14 @@
     {
       "course_code": "EE 442",
       "course_title": "Digital Signal Processing",
-      "instructor": null,
+      "instructor": "Dr. Walid Dyab",
+      "aligned_sos": [],
+      "pi_levels": {}
+    },
+    {
+      "course_code": "EE 454",
+      "course_title": "Power System Planning",
+      "instructor": "Dr. Ahmed Alnakhli",
       "aligned_sos": [],
       "pi_levels": {}
     },

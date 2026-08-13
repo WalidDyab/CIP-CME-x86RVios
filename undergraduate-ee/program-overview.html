@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EE Program Overview | Curriculum Intelligence Portal</title>
+  <link rel="stylesheet" href="../assets/portal.css?v=heatmap-reference-20260813">
+  <script defer src="../assets/portal.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="wrap" style="padding-top:14px">
+    <div class="title" style="margin-bottom:24px">
+      <h1>EE Program Overview</h1>
+      <p>PSU College of Engineering Curriculum Intelligence Portal</p>
+    </div>
+    <section class="hero">
+      <span class="kicker">Undergraduate EE</span>
+      <h2>Program Overview</h2>
+      <p class="muted">Searchable program snapshot generated from the undergraduate EE JSON files.</p>
+    </section>
+    <section id="stats" class="grid four"></section>
+    <section class="card" style="margin-top:14px">
+      <h2>Course–SO–PI Performance Heatmaps</h2>
+      <p class="muted">These heatmaps use the PI-specific Introduced (I), Practiced (P), and Mastered (M) levels from the authoritative mapping JSON.</p>
+      <button id="toggleHeatmapBtn" class="btn primary" style="margin:10px 0">Show Heatmaps</button>
+      <div id="heatmapSection" class="hidden">
+        <div class="heatmap-heading"><h3>PI Heatmap</h3><button id="exportPiBtn" class="btn">Export PNG</button></div>
+        <p class="muted">Each cell displays the course-specific level for that PI. Unmapped cells remain blank.</p>
+        <div id="piHeatmapContainer"></div>
+        <div class="heatmap-heading" style="margin-top:24px"><h3>SO Heatmap</h3><button id="exportSoBtn" class="btn">Export PNG</button></div>
+        <p class="muted">SO cells are derived from their mapped PIs. When PI levels differ within an SO, every distinct level is shown.</p>
+        <div id="soHeatmapContainer"></div>
+        <div class="legend">
+          <div class="legend-item"><div class="legend-box level-code">I</div><span>Introduced</span></div>
+          <div class="legend-item"><div class="legend-box level-code">P</div><span>Practiced</span></div>
+          <div class="legend-item"><div class="legend-box level-code">M</div><span>Mastered</span></div>
+          <div class="legend-item"><div class="legend-box level-code">I/P</div><span>Mixed PI levels</span></div>
+          <div class="legend-item"><div class="legend-box cell-unmapped"></div><span>Unmapped</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="card" style="margin-top:14px">
+      <h2>Courses</h2>
+      <div class="toolbar">
+        <input id="search" class="input" placeholder="Search course, CLO, SO, PI…">
+        <select id="trackFilter" class="select"></select>
+        <span id="resultCount" class="pill"></span>
+      </div>
+      <div id="courseList" class="course-list"></div>
+    </section>
+    <div class="footer">One source of truth: JSON data files. Refresh the page after updating JSON.</div>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const [data, mappingData] = await Promise.all([
+          portal.loadJSON('../data/ee_curriculum_with_sos_pis.json'),
+          portal.loadJSON('../data/ee_program_clo_so_pi_mapping.json')
+        ]);
+        const courses = data.curriculum.courses || [];
+        const mappingCourses = mappingData.courses || [];
+        const curriculumByCode = new Map(courses.map(course => [course.course_code, course]));
+        const overviewByCourse = new Map((mappingData.mapping_overview || []).map(row => [row.course_code, row.pi_levels || {}]));
+        mappingCourses.forEach(course => {
+          if (JSON.stringify(course.mapping_pi_levels || {}) !== JSON.stringify(overviewByCourse.get(course.course_code) || {})) {
+            throw new Error(`PI-level mapping mismatch for ${course.course_code}`);
+          }
+        });
+        const clos = courses.flatMap(course => course.clos || []);
+        portal.renderStats(byId('stats'), {
+          Courses: courses.length,
+          CLOs: clos.length,
+          Required: courses.filter(course => course.required_or_elective === 'Required').length,
+          Electives: courses.filter(course => course.required_or_elective === 'Elective').length
+        });
+        portal.setupCourseBrowser(courses, { linkPrefix: 'course-dashboard.html?course=' });
+
+        const pis = ['PI11', 'PI12', 'PI21', 'PI22', 'PI23', 'PI24', 'PI31', 'PI32', 'PI41', 'PI42', 'PI51', 'PI52', 'PI61', 'PI62', 'PI63', 'PI64', 'PI71', 'PI72'];
+        const soPIs = {
+          SO1: ['PI11', 'PI12'], SO2: ['PI21', 'PI22', 'PI23', 'PI24'],
+          SO3: ['PI31', 'PI32'], SO4: ['PI41', 'PI42'], SO5: ['PI51', 'PI52'],
+          SO6: ['PI61', 'PI62', 'PI63', 'PI64'], SO7: ['PI71', 'PI72']
+        };
+        const sos = Object.keys(soPIs);
+        const courseCell = course => `<td class="course-column" title="${portal.esc(course.course_title)}"><strong>${portal.esc(course.course_code)}</strong></td>`;
+        const renderTable = (columns, cellRenderer, headerRows = '', headerClass = () => '') => {
+          let html = `<div class="heatmap-wrap"><table class="heatmap-table"><thead>${headerRows}<tr>${headerRows ? '' : '<th class="course-column">Course</th>'}`;
+          columns.forEach(column => html += `<th class="${headerClass(column)}">${portal.esc(column)}</th>`);
+          html += '</tr></thead><tbody>';
+          let electiveSeparatorAdded = false;
+          mappingCourses.forEach(course => {
+            const classification = curriculumByCode.get(course.course_code)?.required_or_elective;
+            if (!electiveSeparatorAdded && classification === 'Elective') {
+              html += `<tr class="elective-separator"><td colspan="${columns.length + 1}">PROGRAM ELECTIVE COURSES</td></tr>`;
+              electiveSeparatorAdded = true;
+            }
+            html += `<tr>${courseCell(course)}`;
+            columns.forEach(column => html += cellRenderer(course, column));
+            html += '</tr>';
+          });
+          return html + '</tbody></table></div>';
+        };
+        const renderHeatmaps = () => {
+          const piGroupHeader = `<tr class="so-group-row"><th class="course-column" rowspan="2">Course</th>${sos.map(so => `<th class="so-${so.toLowerCase()}" colspan="${soPIs[so].length}">${so}</th>`).join('')}</tr>`;
+          byId('piHeatmapContainer').innerHTML = renderTable(pis, (course, pi) => {
+            const level = (course.mapping_pi_levels || {})[pi] || '';
+            return level ? `<td class="pi-${pi.toLowerCase()}">${portal.esc(level)}</td>` : '<td class="cell-unmapped"></td>';
+          }, piGroupHeader, pi => `pi-${pi.toLowerCase()}`);
+          byId('soHeatmapContainer').innerHTML = renderTable(sos, (course, so) => {
+            const levelsByPI = soPIs[so].filter(pi => (course.mapping_pi_levels || {})[pi]).map(pi => [pi, course.mapping_pi_levels[pi]]);
+            if (!levelsByPI.length) return '<td class="cell-unmapped"></td>';
+            const levels = [...new Set(levelsByPI.map(([, level]) => level))].sort((a, b) => ['I', 'P', 'M'].indexOf(a) - ['I', 'P', 'M'].indexOf(b));
+            const details = levelsByPI.map(([pi, level]) => `${pi}=${level}`).join(', ');
+            return `<td class="so-${so.toLowerCase()}${levels.length > 1 ? ' cell-mixed' : ''}" title="${portal.esc(details)}">${portal.esc(levels.join(' / '))}</td>`;
+          }, '', so => `so-${so.toLowerCase()}`);
+        };
+
+        const exportHeatmapPng = async (containerId, title, filename, exportButton) => {
+          const table = byId(containerId).querySelector('table');
+          if (!table) return;
+          const originalText = exportButton.textContent;
+          exportButton.disabled = true;
+          exportButton.textContent = 'Exporting...';
+          try {
+            const exportSurface = document.createElement('div');
+            exportSurface.className = 'heatmap-export-surface';
+            exportSurface.innerHTML = `<h2>${portal.esc(title)}</h2>`;
+            exportSurface.appendChild(table.cloneNode(true));
+            document.body.appendChild(exportSurface);
+            const exportTable = exportSurface.querySelector('table');
+            const tableRect = exportTable.getBoundingClientRect();
+            const margin = 28;
+            const titleHeight = 48;
+            const width = Math.ceil(tableRect.width + margin * 2);
+            const height = Math.ceil(tableRect.height + margin * 2 + titleHeight);
+            const scale = 2;
+            const exportCanvas = document.createElement('canvas');
+            exportCanvas.width = width * scale;
+            exportCanvas.height = height * scale;
+            const context = exportCanvas.getContext('2d');
+            context.scale(scale, scale);
+            context.fillStyle = '#ffffff';
+            context.fillRect(0, 0, width, height);
+            context.fillStyle = '#111111';
+            context.font = '700 22px Arial, sans-serif';
+            context.textAlign = 'left';
+            context.textBaseline = 'middle';
+            context.fillText(title, margin, margin + 12);
+            exportTable.querySelectorAll('th, td').forEach(cell => {
+              const rect = cell.getBoundingClientRect();
+              const style = getComputedStyle(cell);
+              const x = margin + rect.left - tableRect.left;
+              const y = margin + titleHeight + rect.top - tableRect.top;
+              context.fillStyle = style.backgroundColor;
+              context.fillRect(x, y, rect.width, rect.height);
+              context.strokeStyle = '#333333';
+              context.lineWidth = 1;
+              context.strokeRect(x + .5, y + .5, rect.width - 1, rect.height - 1);
+              context.fillStyle = style.color;
+              context.font = `${style.fontWeight} ${style.fontSize} Arial, sans-serif`;
+              context.textBaseline = 'middle';
+              const separator = cell.parentElement.classList.contains('elective-separator');
+              context.textAlign = separator ? 'left' : 'center';
+              const textX = separator ? x + 8 : x + rect.width / 2;
+              context.fillText(cell.textContent.trim(), textX, y + rect.height / 2);
+            });
+            exportSurface.remove();
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = exportCanvas.toDataURL('image/png');
+            link.click();
+            exportButton.dataset.exportWidth = String(exportCanvas.width);
+            exportButton.dataset.exportHeight = String(exportCanvas.height);
+            exportButton.dataset.exportStatus = 'complete';
+          } catch (error) {
+            document.querySelector('.heatmap-export-surface')?.remove();
+            exportButton.dataset.exportStatus = 'failed';
+            exportButton.dataset.exportError = error.message;
+            alert(`PNG export failed: ${error.message}`);
+          } finally {
+            exportButton.disabled = false;
+            exportButton.textContent = originalText;
+          }
+        };
+
+        let heatmapRendered = false;
+        const button = byId('toggleHeatmapBtn');
+        const section = byId('heatmapSection');
+        button.addEventListener('click', () => {
+          const opening = section.classList.contains('hidden');
+          section.classList.toggle('hidden');
+          button.textContent = opening ? 'Hide Heatmaps' : 'Show Heatmaps';
+          if (opening && !heatmapRendered) {
+            renderHeatmaps();
+            byId('exportPiBtn').addEventListener('click', event => exportHeatmapPng('piHeatmapContainer', 'Undergraduate EE PI Heatmap', 'EE_PI_Heatmap.png', event.currentTarget));
+            byId('exportSoBtn').addEventListener('click', event => exportHeatmapPng('soHeatmapContainer', 'Undergraduate EE SO Heatmap', 'EE_SO_Heatmap.png', event.currentTarget));
+            heatmapRendered = true;
+          }
+        });
+      } catch (error) {
+        console.error(error);
+        byId('stats').innerHTML = '<div class="alert">Could not load or validate the undergraduate mapping data.</div>';
+      }
+    });
+  </script>
+</body>
+</html>

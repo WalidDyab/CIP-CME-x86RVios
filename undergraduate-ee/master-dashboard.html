@@ -1,122 +1,15 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Undergraduate EE Master Dashboard</title>
-  <link rel="stylesheet" href="../assets/portal.css">
-  <script defer src="../assets/portal.js"></script>
+  <meta http-equiv="refresh" content="0; url=program-overview.html">
+  <link rel="canonical" href="program-overview.html">
+  <title>EE Program Overview | Curriculum Intelligence Portal</title>
+  <script>location.replace('program-overview.html' + location.search + location.hash)</script>
 </head>
-
 <body>
-  <div id="header-placeholder"></div>
-  <div class="wrap" style="padding-top: 14px;">
-    <div class="title" style="margin-bottom: 24px;">
-      <h1>Undergraduate EE Master Dashboard</h1>
-      <p>PSU College of Engineering Curriculum Intelligence Portal</p>
-    </div>
-
-    <section class="hero"><span class="kicker">Undergraduate EE</span>
-      <h2>Master Dashboard</h2>
-      <p class="muted">Searchable program snapshot generated from the undergraduate EE JSON file.</p>
-    </section>
-    <section id="stats" class="grid four"></section>
-    <section class="card" style="margin-top:14px">
-      <h2>Course–SO Performance Heatmap</h2>
-      <p class="muted">This heatmap visualizes how undergraduate EE courses contribute to Student Outcomes using the
-        Introduced (I), Practiced (P), and Mastered (M) curriculum progression model.</p>
-      <button id="toggleHeatmapBtn" class="btn primary" style="margin-top: 10px; margin-bottom: 10px;">Show
-        Heatmap</button>
-      <div id="heatmapSection" class="hidden">
-        <div id="heatmapContainer"></div>
-        <div class="legend">
-          <div class="legend-item">
-            <div class="legend-box cell-i">I</div> <span>Introduced</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-box cell-p">P</div> <span>Practiced</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-box cell-m">M</div> <span>Mastered</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script>
-      document.addEventListener('DOMContentLoaded', async () => {
-        try {
-          const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json');
-          const courses = data.curriculum.courses || [];
-          const clos = courses.flatMap(c => c.clos || []);
-          portal.renderStats(byId('stats'), {
-            Courses: courses.length,
-            CLOs: clos.length,
-            Required: courses.filter(c => c.required_or_elective === 'Required').length,
-            Electives: courses.filter(c => c.required_or_elective === 'Elective').length
-          });
-          portal.setupCourseBrowser(courses, { linkPrefix: 'course-dashboard.html?course=' });
-
-          const btn = document.getElementById('toggleHeatmapBtn');
-          const sec = document.getElementById('heatmapSection');
-          let heatmapRendered = false;
-          btn.onclick = () => {
-            if (sec.classList.contains('hidden')) {
-              sec.classList.remove('hidden');
-              btn.textContent = 'Hide Heatmap';
-              if (!heatmapRendered) {
-                const sos = ["SO1", "SO2", "SO3", "SO4", "SO5", "SO6", "SO7"];
-                let html = '<div class="heatmap-wrap"><table class="heatmap-table"><thead><tr><th>Course</th>';
-                sos.forEach(so => html += '<th>' + so + '</th>');
-                html += '</tr></thead><tbody>';
-                courses.forEach(c => {
-                  let courseSOs = new Set();
-                  (c.clos || []).forEach(clo => {
-                    (clo.mapped_sos || []).forEach(so => courseSOs.add(so));
-                  });
-                  html += '<tr><td><strong>' + portal.esc(c.course_code) + '</strong><br><span class="muted small">' + portal.esc(c.course_title) + '</span></td>';
-                  sos.forEach(so => {
-                    if (courseSOs.has(so)) {
-                      let pLevel = c.performance_level || '';
-                      let pClass = '';
-                      if (pLevel === 'I') pClass = 'cell-i';
-                      else if (pLevel === 'P') pClass = 'cell-p';
-                      else if (pLevel === 'M') pClass = 'cell-m';
-                      html += '<td class="' + pClass + '">' + portal.esc(pLevel) + '</td>';
-                    } else {
-                      html += '<td></td>';
-                    }
-                  });
-                  html += '</tr>';
-                });
-                html += '</tbody></table></div>';
-                document.getElementById('heatmapContainer').innerHTML = html;
-                heatmapRendered = true;
-              }
-            } else {
-              sec.classList.add('hidden');
-              btn.textContent = 'Show Heatmap';
-            }
-          };
-        } catch (e) {
-          byId('stats').innerHTML = '<div class="alert">Could not load JSON.</div>';
-        }
-      });
-    </script>
-
-
-    <section class="card" style="margin-top:14px">
-      <h2>Courses</h2>
-      <div class="toolbar"><input id="search" class="input" placeholder="Search course, CLO, SO, PI…"><select
-          id="trackFilter" class="select"></select><span id="resultCount" class="pill"></span></div>
-      <div id="courseList" class="course-list"></div>
-    </section>
-
-    <div class="footer">One source of truth: JSON data files. Refresh the page after updating JSON.</div>
-  </div>
-  <div id="footer-placeholder"></div>
-
+  <p>Redirecting to <a href="program-overview.html">EE Program Overview</a>.</p>
 </body>
-
 </html>

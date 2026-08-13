@@ -15,7 +15,8 @@
         "credit_hours": "4",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Define fundamental concepts of programming along with problem-solving techniques and analytical thinking.",
             "mapped_sos": [
               "SO1"
@@ -23,11 +24,21 @@
             "pi_codes": [
               "PI11"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Explain the various logic using various operators and expressions.",
             "mapped_sos": [
               "SO3"
@@ -36,11 +47,21 @@
               "PI31",
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Write a programming code in Python.",
             "mapped_sos": [
               "SO3"
@@ -49,11 +70,20 @@
               "PI31",
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Examine program code using Python",
             "mapped_sos": [
               "SO1"
@@ -61,8 +91,16 @@
             "pi_codes": [
               "PI11"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           }
         ]
       },
@@ -77,7 +115,8 @@
         "credit_hours": "4",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.",
             "mapped_sos": [
               "SO1"
@@ -85,23 +124,41 @@
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
-            "clo_text": "Analyze DC resistive circuits using Kirchhoffâ€™s laws, nodal and mesh analysis, and basic network theorems.",
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
             "mapped_sos": [
               "SO1"
             ],
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.",
             "mapped_sos": [
               "SO1"
@@ -109,11 +166,20 @@
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Oral Technical Presentation",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Investigate electric circuits through experiments and simulations",
             "mapped_sos": [
               "SO1",
@@ -125,11 +191,21 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Quizzes"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Contribute to team tasks and objectives in electric circuits laboratory activities",
             "mapped_sos": [
               "SO5"
@@ -137,11 +213,21 @@
             "pi_codes": [
               "PI51"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Collaborative/Team-Based Learning",
+              "Laboratory Experimentation"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Teamwork/Peer Assessment",
+              "Design Project Assignment",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 10,
+            "clo_number": 3.2,
+            "nqf_domain": "Values",
             "clo_text": "Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions",
             "mapped_sos": [
               "SO4"
@@ -150,8 +236,18 @@
               "PI41",
               "PI42"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Case-Based Learning and Technical Discussion",
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Quizzes",
+              "Simulation/Computational Assignments"
+            ]
           }
         ]
       },
@@ -166,7 +262,8 @@
         "credit_hours": "4",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Solve fundamental electronic circuit problems involving diodes, BJTs, and operational amplifiers using principles of electronics and circuit theory.",
             "mapped_sos": [
               "SO1"
@@ -175,11 +272,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 2,
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain the operation and applications of semiconductor devices and amplifiers using appropriate technical language and circuit representations.",
             "mapped_sos": [
               "SO3"
@@ -188,11 +294,21 @@
               "PI31",
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Design basic electronic circuits such as rectifiers, transistor amplifiers, and operational-amplifier applications to satisfy given performance requirements.",
             "mapped_sos": [
               "SO2"
@@ -203,11 +319,21 @@
               "PI23",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Perform laboratory experiments on electronic circuits and analyze the resulting data to verify theoretical concepts.",
             "mapped_sos": [
               "SO6"
@@ -217,11 +343,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Prototype/System Demonstration",
+              "Quizzes"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Collaborate effectively in laboratory activities to build, test, and troubleshoot electronic circuits.",
             "mapped_sos": [
               "SO5"
@@ -229,8 +364,17 @@
             "pi_codes": [
               "PI51"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Collaborative/Team-Based Learning",
+              "Laboratory Experimentation"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Prototype/System Demonstration",
+              "Teamwork/Peer Assessment",
+              "Design Project Assignment"
+            ]
           }
         ]
       },
@@ -245,7 +389,8 @@
         "credit_hours": "4",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices.",
             "mapped_sos": [
               "SO1",
@@ -255,11 +400,21 @@
               "PI12",
               "PI21"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Explain different binary number systems and arithmetic.",
             "mapped_sos": [
               "SO2",
@@ -270,11 +425,20 @@
               "PI22",
               "PI51"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Explain Boolean expressions using Karnaugh Map.",
             "mapped_sos": [
               "SO2",
@@ -284,11 +448,20 @@
               "PI23",
               "PI51"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze and design combinational logic circuit.",
             "mapped_sos": [
               "SO6"
@@ -297,11 +470,22 @@
               "PI62",
               "PI63"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 7,
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers.",
             "mapped_sos": [
               "SO6"
@@ -310,11 +494,22 @@
               "PI62",
               "PI63"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects.",
             "mapped_sos": [
               "SO6"
@@ -322,11 +517,21 @@
             "pi_codes": [
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Collaborative/Team-Based Learning",
+              "Laboratory Experimentation"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Teamwork/Peer Assessment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 10,
+            "clo_number": 3.2,
+            "nqf_domain": "Values",
             "clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects.",
             "mapped_sos": [
               "SO6"
@@ -334,8 +539,18 @@
             "pi_codes": [
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Collaborative/Team-Based Learning",
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration",
+              "Teamwork/Peer Assessment"
+            ]
           }
         ]
       },
@@ -350,7 +565,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe continuous- and discrete-time signals and systems using standard properties and classification criteria.",
             "mapped_sos": [
               "SO1"
@@ -358,11 +574,20 @@
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 2,
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe sampling theory principles for converting continuous-time signals to discrete-time signals.",
             "mapped_sos": [
               "SO1"
@@ -370,11 +595,20 @@
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze continuous and discrete linear time-invariant (LTI) systems.",
             "mapped_sos": [
               "SO1",
@@ -385,11 +619,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze LTI systems using Z-transform concepts to interpret results and draw engineering conclusions.",
             "mapped_sos": [
               "SO1",
@@ -400,11 +643,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Explain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results.",
             "mapped_sos": [
               "SO1",
@@ -414,11 +666,21 @@
               "PI12",
               "PI63"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 7,
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
             "clo_text": "Write MATLAB code to implement sampling-based discrete-time systems and evaluate their performance using independently learned tools or functions.",
             "mapped_sos": [
               "SO6",
@@ -429,8 +691,18 @@
               "PI64",
               "PI71"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration",
+              "Homework and Classwork Assignments"
+            ]
           }
         ]
       },
@@ -445,7 +717,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Recognize the application of the basic electric circuit components in different electrical applications.",
             "mapped_sos": [
               "SO1"
@@ -454,11 +727,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze first-order and second-order transient reponse of electrical circuits.",
             "mapped_sos": [
               "SO6"
@@ -467,11 +749,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Apply the Laplace transform in circuit analysis.",
             "mapped_sos": [
               "SO6"
@@ -480,11 +771,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze frequency selective circuits",
             "mapped_sos": [
               "SO6"
@@ -493,11 +793,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 7,
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze three-phase networks and two-port networks.",
             "mapped_sos": [
               "SO7"
@@ -505,8 +814,16 @@
             "pi_codes": [
               "PI71"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           }
         ]
       },
@@ -521,7 +838,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Identify the feature of various amplifier circuits, active filters, and oscillators.",
             "mapped_sos": [
               "SO1"
@@ -530,11 +848,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the model of BJT amplifiers and their frequency response.",
             "mapped_sos": [
               "SO6"
@@ -543,11 +870,21 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Quizzes"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the DC and AC model of various FET amplifiers.",
             "mapped_sos": [
               "SO6"
@@ -556,11 +893,21 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Quizzes"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Design CMOS circuit such as NAND Gates, Tranmsission Gates and memory elements",
             "mapped_sos": [
               "SO2"
@@ -569,8 +916,17 @@
               "PI21",
               "PI22"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           }
         ]
       },
@@ -585,7 +941,8 @@
         "credit_hours": "4",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses.",
             "mapped_sos": [
               "SO1",
@@ -597,11 +954,20 @@
               "PI31",
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration"
+            ]
           },
           {
-            "clo_number": 2,
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
             "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
             "mapped_sos": [
               "SO1",
@@ -613,11 +979,21 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 3,
+            "clo_number": 1.3,
+            "nqf_domain": "Knowledge",
             "clo_text": "Model digital components of microprocessor-based systems using HDL at the RTL level.",
             "mapped_sos": [
               "SO1",
@@ -628,11 +1004,20 @@
               "PI12",
               "PI21"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Design arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits.",
             "mapped_sos": [
               "SO2",
@@ -657,11 +1042,22 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion",
+              "Laboratory Experimentation"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Design control units and sequential systems using finite state machines for system control applications.",
             "mapped_sos": [
               "SO2",
@@ -686,11 +1082,22 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion",
+              "Laboratory Experimentation"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Implement and verify an integrated digital system combining datapath and control components on FPGA hardware.",
             "mapped_sos": [
               "SO2",
@@ -711,8 +1118,18 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Laboratory Experimentation",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration"
+            ]
           }
         ]
       },
@@ -727,7 +1144,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.",
             "mapped_sos": [
               "SO1"
@@ -735,23 +1153,41 @@
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
-            "clo_text": "Apply Maxwellâ€™s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
             "mapped_sos": [
               "SO1"
             ],
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.",
             "mapped_sos": [
               "SO1"
@@ -759,19 +1195,37 @@
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
             "mapped_sos": [],
             "pi_codes": [],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 7,
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
             "clo_text": "Present an oral technical presentation on an electromagnetics application",
             "mapped_sos": [
               "SO3"
@@ -779,11 +1233,21 @@
             "pi_codes": [
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Acquire new knowledge on an electromagnetics application using appropriate learning strategies.",
             "mapped_sos": [
               "SO7"
@@ -791,8 +1255,17 @@
             "pi_codes": [
               "PI71"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Oral Technical Presentation"
+            ]
           }
         ]
       },
@@ -807,7 +1280,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Recognize feedback in control systems and stability concept",
             "mapped_sos": [
               "SO1"
@@ -815,11 +1289,20 @@
             "pi_codes": [
               "PI11"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Apply the Laplace Transform in modelling the LTI control systems",
             "mapped_sos": [
               "SO1"
@@ -827,11 +1310,20 @@
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Evaluate the beahaviour of LTI in time domain",
             "mapped_sos": [
               "SO6"
@@ -840,11 +1332,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Design a stable control system according to the required specification",
             "mapped_sos": [
               "SO2"
@@ -852,11 +1353,21 @@
             "pi_codes": [
               "PI21"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Demonstrate the concepts of stable and well-performed control systems",
             "mapped_sos": [
               "SO1"
@@ -865,8 +1376,16 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Prototype/System Demonstration",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           }
         ]
       },
@@ -881,7 +1400,8 @@
         "credit_hours": "4",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Recognize different analog modulation and demodulation techniques.",
             "mapped_sos": [
               "SO1"
@@ -890,11 +1410,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Explain the linear model of the distortionless channel.",
             "mapped_sos": [
               "SO1"
@@ -902,11 +1431,21 @@
             "pi_codes": [
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Simulation and Computer-Based Learning",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
             "mapped_sos": [
               "SO1"
@@ -915,11 +1454,21 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Flipped Classroom",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation",
+              "Quizzes"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the impact of various channels on communication systems.",
             "mapped_sos": [
               "SO1"
@@ -928,11 +1477,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation",
+              "Quizzes",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 7,
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
             "clo_text": "Demonstrate the pulse modulation techniques.",
             "mapped_sos": [
               "SO6"
@@ -943,11 +1501,21 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
             "mapped_sos": [
               "SO2",
@@ -969,8 +1537,18 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Laboratory Experimentation",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Oral Technical Presentation"
+            ]
           }
         ]
       },
@@ -985,7 +1563,8 @@
         "credit_hours": "4",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Recognize the characteristics of various semiconductor devices and power converter configurations.",
             "mapped_sos": [
               "SO1",
@@ -996,11 +1575,20 @@
               "PI12",
               "PI21"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the various configurations of AC-DC converter.",
             "mapped_sos": [
               "SO2"
@@ -1010,11 +1598,20 @@
               "PI22",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the various configurations of DC-DC converter.",
             "mapped_sos": [
               "SO2"
@@ -1024,11 +1621,20 @@
               "PI22",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the various configurations of DC-AC converter.",
             "mapped_sos": [
               "SO2"
@@ -1038,11 +1644,20 @@
               "PI22",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 7,
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the various configurations of AC-AC converter.",
             "mapped_sos": [
               "SO2"
@@ -1052,11 +1667,20 @@
               "PI22",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Demonstrate various power electronics circuits, application, and analyze the waveform through simulation and experimental work",
             "mapped_sos": [
               "SO3",
@@ -1075,8 +1699,18 @@
               "PI61",
               "PI71"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration",
+              "Oral Technical Presentation"
+            ]
           }
         ]
       },
@@ -1091,7 +1725,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain the concepts of electromechanical energy conversion systems",
             "mapped_sos": [
               "SO1"
@@ -1100,11 +1735,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 2,
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe the construction, principle of operation, and characteristics of dc machines, ac machines and transformers",
             "mapped_sos": [
               "SO1"
@@ -1113,11 +1757,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Prototype/System Demonstration",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of d.c. machines",
             "mapped_sos": [
               "SO2"
@@ -1128,11 +1781,20 @@
               "PI23",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of a.c. machines",
             "mapped_sos": [
               "SO2"
@@ -1143,11 +1805,20 @@
               "PI23",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Show the importance of sustainability in electrical machines and transformers",
             "mapped_sos": [
               "SO7"
@@ -1156,8 +1827,17 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Oral Technical Presentation"
+            ]
           }
         ]
       },
@@ -1172,8 +1852,9 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
-            "clo_text": "Explain the basic concepts, components, and principles of power\nsystems",
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Explain the basic concepts, components, and principles of power systems",
             "mapped_sos": [
               "SO1",
               "SO2"
@@ -1182,11 +1863,20 @@
               "PI11",
               "PI21"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 2,
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe the different types of power generators and their characteristics",
             "mapped_sos": [
               "SO1",
@@ -1196,11 +1886,20 @@
               "PI11",
               "PI21"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyse both symmetrical and unsymmetrical conditions in power systems.",
             "mapped_sos": [
               "SO2"
@@ -1209,11 +1908,20 @@
               "PI21",
               "PI22"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the behavior of power systems under steady-state and transient conditions",
             "mapped_sos": [
               "SO2"
@@ -1222,11 +1930,20 @@
               "PI21",
               "PI22"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
             "mapped_sos": [
               "SO2",
@@ -1241,11 +1958,22 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments",
+              "Quizzes"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Demonstrate effective technical communication of power system analysis and results.",
             "mapped_sos": [
               "SO4"
@@ -1254,11 +1982,22 @@
               "PI41",
               "PI42"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Case-Based Learning and Technical Discussion",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Prototype/System Demonstration",
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation",
+              "Major and Final Exams",
+              "Design Project Assignment"
+            ]
           },
           {
-            "clo_number": 10,
+            "clo_number": 3.2,
+            "nqf_domain": "Values",
             "clo_text": "Demonstrate the ability to independently acquire and apply new knowledge related to power systems.",
             "mapped_sos": [
               "SO7"
@@ -1267,8 +2006,16 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Prototype/System Demonstration",
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams"
+            ]
           }
         ]
       },
@@ -1283,7 +2030,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Identify relevant technical information and engineering principles needed to define and solve an open-ended design problem.",
             "mapped_sos": [
               "SO1"
@@ -1292,12 +2040,23 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           },
           {
-            "clo_number": 4,
-            "clo_text": "Apply the engineering design process to define, formulate and solve a conceptual design problem considering human factors, safety, environmental, economic, and societal constraints.\nApply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Apply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
             "mapped_sos": [
               "SO2"
             ],
@@ -1307,12 +2066,23 @@
               "PI23",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           },
           {
-            "clo_number": 5,
-            "clo_text": "Use lateral and critical thinking to generate creative alternative concepts and identify a preferred solution to a design problem. \nGenerate alternative concepts and select a preferred solution for a design problem.",
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Generate alternative concepts and select a preferred solution for a design problem.",
             "mapped_sos": [
               "SO2"
             ],
@@ -1320,11 +2090,22 @@
               "PI21",
               "PI23"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Communicate design solutions visually using engineering tools and drawings.",
             "mapped_sos": [
               "SO3"
@@ -1332,11 +2113,22 @@
             "pi_codes": [
               "PI31"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           },
           {
-            "clo_number": 7,
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
             "clo_text": "Communicate design solutions using written, visual, and oral technical methods.",
             "mapped_sos": [
               "SO3"
@@ -1345,11 +2137,22 @@
               "PI31",
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           },
           {
-            "clo_number": 8,
+            "clo_number": 2.5,
+            "nqf_domain": "Skills",
             "clo_text": "Validate design solutions through experimentation/testing, data collection, analysis, and engineering conclusions.",
             "mapped_sos": [
               "SO6"
@@ -1360,11 +2163,22 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Evaluate ethical and legal responsibilities and their impact on engineering decisions.",
             "mapped_sos": [
               "SO4"
@@ -1373,11 +2187,22 @@
               "PI41",
               "PI42"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           },
           {
-            "clo_number": 10,
+            "clo_number": 3.2,
+            "nqf_domain": "Values",
             "clo_text": "Collaborate to establish goals, plan tasks, and meet project objectives within a team.",
             "mapped_sos": [
               "SO5"
@@ -1386,11 +2211,22 @@
               "PI51",
               "PI52"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           },
           {
-            "clo_number": 11,
+            "clo_number": 3.3,
+            "nqf_domain": "Values",
             "clo_text": "Acquire new knowledge, tools, standards, or technologies as needed to complete the design project.",
             "mapped_sos": [
               "SO7"
@@ -1399,8 +2235,18 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Project Studio",
+              "Laboratory Demonstrations",
+              "Oral Discussions",
+              "Team Meetings"
+            ],
+            "assessment_methods": [
+              "Written Reports (Proposal, Interim, and Final)",
+              "Oral Presentations",
+              "Weekly Progress Assessment"
+            ]
           }
         ]
       },
@@ -1415,7 +2261,8 @@
         "credit_hours": "10",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Demonstrate a comprehensive understanding of their academic studies through general education and their areas of specializations.",
             "mapped_sos": [
               "SO1",
@@ -1426,12 +2273,19 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Field Experience"
+            ],
+            "assessment_methods": [
+              "Employer Assessment",
+              "Final Report",
+              "Final Oral Presentation"
+            ]
           },
           {
-            "clo_number": 2,
-            "clo_text": "Define and recognize complex electrical engineering problems encountered in industry, utilizing theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.\nIdentify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Identify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
             "mapped_sos": [
               "SO1"
             ],
@@ -1439,11 +2293,18 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Field Experience"
+            ],
+            "assessment_methods": [
+              "Employer Assessment",
+              "Final Report",
+              "Final Oral Presentation"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Demonstrate effective communication skills to a range of audiences.",
             "mapped_sos": [
               "SO3"
@@ -1452,12 +2313,19 @@
               "PI31",
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Field Experience"
+            ],
+            "assessment_methods": [
+              "Employer Assessment",
+              "Final Report",
+              "Final Oral Presentation"
+            ]
           },
           {
-            "clo_number": 5,
-            "clo_text": "Examine advanced technical skills in electrical engineering, including  design, analysis, and troubleshooting, to successfully complete assigned tasks and projects within cooperative work environments.\nApply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Apply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
             "mapped_sos": [
               "SO1",
               "SO6"
@@ -1467,11 +2335,18 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Field Experience"
+            ],
+            "assessment_methods": [
+              "Employer Assessment",
+              "Final Report",
+              "Final Oral Presentation"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Collaborate effectively within multidisciplinary teams to plan tasks, meet objectives, and support a professional work environment.",
             "mapped_sos": [
               "SO5"
@@ -1480,19 +2355,33 @@
               "PI51",
               "PI52"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Field Experience"
+            ],
+            "assessment_methods": [
+              "Employer Assessment",
+              "Final Report",
+              "Final Oral Presentation"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Demonstrate the ability to work as an individual and as a part of a multi-disciplinary team",
             "mapped_sos": [],
             "pi_codes": [],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Field Experience"
+            ],
+            "assessment_methods": [
+              "Employer Assessment",
+              "Final Report",
+              "Final Oral Presentation"
+            ]
           },
           {
-            "clo_number": 10,
+            "clo_number": 3.2,
+            "nqf_domain": "Values",
             "clo_text": "Demonstrate professional and ethical responsibility in engineering practice and decision-making.",
             "mapped_sos": [
               "SO4"
@@ -1501,8 +2390,14 @@
               "PI41",
               "PI42"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Field Experience"
+            ],
+            "assessment_methods": [
+              "Employer Assessment",
+              "Final Report",
+              "Final Oral Presentation"
+            ]
           }
         ]
       },
@@ -1539,7 +2434,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain the workflow of VLSI design methodologies and the key steps involved in the fabrication of ASICs and FPGAs.",
             "mapped_sos": [
               "SO1",
@@ -1554,11 +2450,22 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Independent/Self-Directed Learning",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration",
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 2,
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
             "clo_text": "Identify the main players in the VLSI industry",
             "mapped_sos": [
               "SO1",
@@ -1573,11 +2480,22 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Flipped Classroom",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Design Project Assignment",
+              "Quizzes",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 3,
+            "clo_number": 1.3,
+            "nqf_domain": "Knowledge",
             "clo_text": "Differentiate between different packaging of VLSI circuits",
             "mapped_sos": [
               "SO1",
@@ -1589,11 +2507,21 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Design VLSI circuits using HDL.",
             "mapped_sos": [
               "SO2"
@@ -1604,11 +2532,20 @@
               "PI23",
               "PI24"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Perform functional and timing analysis of HDL designs",
             "mapped_sos": [
               "SO2"
@@ -1619,11 +2556,21 @@
               "PI23",
               "PI24"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Execute post-synthesis analysis to ensure the design meets specified performance criteria.",
             "mapped_sos": [
               "SO2",
@@ -1637,11 +2584,22 @@
               "PI41",
               "PI42"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Case-Based Learning and Technical Discussion",
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Quizzes",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Uphold ethical standards in VLSI design, including compliance with regulations, accurate reporting, intellectual property rights, and environmental considerations.",
             "mapped_sos": [
               "SO4",
@@ -1653,10 +2611,31 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           }
         ]
+      },
+      {
+        "course_code": "EE 417",
+        "course_title": "Communication Electronics",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "",
+        "clos": []
       },
       {
         "course_code": "EE 423",
@@ -1702,7 +2681,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe electomagnetic wave radiation mechanism.",
             "mapped_sos": [
               "SO1"
@@ -1711,11 +2691,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 2,
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
             "clo_text": "Recognize various antennas types",
             "mapped_sos": [
               "SO1"
@@ -1724,11 +2713,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Design antennas for various applications.",
             "mapped_sos": [
               "SO2"
@@ -1739,11 +2737,21 @@
               "PI23",
               "PI24"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Design and analyze antenna arrays.",
             "mapped_sos": [
               "SO1",
@@ -1755,11 +2763,20 @@
               "PI21",
               "PI23"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Calculate antenna parameters like gain, input impedance, radiated power and radiation resistance.",
             "mapped_sos": [
               "SO1",
@@ -1770,11 +2787,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Describe electromagnetic interference, radiation hazards, and the effect of EM fields on the environment.",
             "mapped_sos": [
               "SO4",
@@ -1785,8 +2811,18 @@
               "PI42",
               "PI71"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Flipped Classroom",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Design Project Assignment",
+              "Quizzes",
+              "Simulation/Computational Assignments"
+            ]
           }
         ]
       },
@@ -1812,7 +2848,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe fundamental automation and control concepts related to programmable logic controllers and relay ladder logic.",
             "mapped_sos": [
               "SO1"
@@ -1821,11 +2858,21 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Simulation and Computer-Based Learning",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 2,
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain PLC hardware structure, programming concepts, and industrial applications using appropriate technical terminology, ladder diagrams, and documentation.",
             "mapped_sos": [
               "SO1",
@@ -1837,11 +2884,22 @@
               "PI31",
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration",
+              "Oral Technical Presentation"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Conduct laboratory experiments involving PLC programming, testing, and monitoring to evaluate system behavior and performance.",
             "mapped_sos": [
               "SO6"
@@ -1852,11 +2910,21 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Apply new PLC functions, instructions, and communication concepts using manuals, software tools, and self-directed learning resources.",
             "mapped_sos": [
               "SO7"
@@ -1865,8 +2933,18 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Independent/Self-Directed Learning",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation",
+              "Design Project Assignment",
+              "Quizzes"
+            ]
           }
         ]
       },
@@ -1881,7 +2959,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe the basic theory underlying modern robotics",
             "mapped_sos": [
               "SO1",
@@ -1896,11 +2975,21 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Independent/Self-Directed Learning",
+              "Flipped Classroom"
+            ],
+            "assessment_methods": [
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze the kinematics and dynamics of robot manipulators",
             "mapped_sos": [
               "SO6"
@@ -1911,11 +3000,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Design appropriate controllers and trajectory generation solutions for manipulators",
             "mapped_sos": [
               "SO6"
@@ -1926,11 +3024,21 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Comply to safety considerations in the design and operation of robotic systems",
             "mapped_sos": [
               "SO4",
@@ -1942,11 +3050,22 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments",
+              "Oral Technical Presentation"
+            ]
           },
           {
-            "clo_number": 10,
+            "clo_number": 3.2,
+            "nqf_domain": "Values",
             "clo_text": "Contribute responsibly to team-based planning and problem-solving in a group robotics project.",
             "mapped_sos": [
               "SO4",
@@ -1958,8 +3077,17 @@
               "PI51",
               "PI52"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Collaborative/Team-Based Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Teamwork/Peer Assessment",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Design Project Assignment",
+              "Oral Technical Presentation"
+            ]
           }
         ]
       },
@@ -1974,7 +3102,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Describe the theoretical foundations of supervised, unsupervised, and deep learning techniques",
             "mapped_sos": [
               "SO1",
@@ -1986,11 +3115,21 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyse and prepare data for AI applications in engineering contexts.",
             "mapped_sos": [
               "SO6"
@@ -2001,11 +3140,20 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Quizzes",
+              "Homework and Classwork Assignments"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Design AI models using appropriate metrics and interpret their results.",
             "mapped_sos": [
               "SO6"
@@ -2016,11 +3164,22 @@
               "PI63",
               "PI64"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Quizzes"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Write Programming Code to Implement AI models.",
             "mapped_sos": [
               "SO3",
@@ -2032,11 +3191,22 @@
               "PI41",
               "PI42"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Case-Based Learning and Technical Discussion",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration",
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Use AI concepts in engineering applications such as energy prediction, automation, and intelligent control systems",
             "mapped_sos": [
               "SO4",
@@ -2048,8 +3218,17 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Oral Technical Presentation"
+            ]
           }
         ]
       },
@@ -2065,6 +3244,17 @@
         "clos": []
       },
       {
+        "course_code": "EE 454",
+        "course_title": "Power System Planning",
+        "type": "Program",
+        "required_or_elective": "Elective",
+        "performance_level": "M",
+        "year": "0",
+        "level": "0",
+        "credit_hours": "",
+        "clos": []
+      },
+      {
         "course_code": "EE 456",
         "course_title": "Renewable Energy Engineering",
         "type": "Program",
@@ -2075,7 +3265,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain the basic concepts, components, and principles of Renewable Energy sources",
             "mapped_sos": [
               "SO1"
@@ -2084,11 +3275,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Design and develop the photovoltaic and wind energy systems.",
             "mapped_sos": [
               "SO3"
@@ -2097,11 +3297,20 @@
               "PI31",
               "PI32"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Prototype/System Demonstration"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Explain the Fuel Cell systems and energy storage devices.",
             "mapped_sos": [
               "SO1"
@@ -2110,11 +3319,20 @@
               "PI11",
               "PI12"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Illustrate the importance of energy transition and sustainability",
             "mapped_sos": [
               "SO7"
@@ -2122,8 +3340,17 @@
             "pi_codes": [
               "PI71"
             ],
-            "teaching_strategy": "Lectures, tutorials, group discussions",
-            "assessment_methods": "HW assignments, quizzes, major exams, and final exam"
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Flipped Classroom",
+              "Interactive Lectures"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           }
         ]
       },
@@ -2138,7 +3365,8 @@
         "credit_hours": "3",
         "clos": [
           {
-            "clo_number": 1,
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
             "clo_text": "Explain advanced concepts and principles related to a selected contemporary topic in electrical and electronics engineering.",
             "mapped_sos": [
               "SO1",
@@ -2153,11 +3381,21 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Independent/Self-Directed Learning",
+              "Flipped Classroom"
+            ],
+            "assessment_methods": [
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration"
+            ]
           },
           {
-            "clo_number": 4,
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
             "clo_text": "Analyze engineering problems associated with the selected topic using appropriate theoretical and computational methods.",
             "mapped_sos": [
               "SO1",
@@ -2169,11 +3407,21 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment",
+              "Quizzes"
+            ]
           },
           {
-            "clo_number": 5,
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
             "clo_text": "Apply relevant engineering tools, techniques, or methodologies to investigate problems related to the selected topic.",
             "mapped_sos": [
               "SO1",
@@ -2185,11 +3433,20 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 6,
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
             "clo_text": "Evaluate alternative approaches, technologies, or solutions within the selected topic using appropriate technical criteria.",
             "mapped_sos": [
               "SO1",
@@ -2201,11 +3458,20 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           },
           {
-            "clo_number": 7,
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
             "clo_text": "Develop a solution, model, system, or study addressing a problem related to the selected topic.",
             "mapped_sos": [
               "SO2",
@@ -2216,11 +3482,21 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation"
+            ]
           },
           {
-            "clo_number": 9,
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
             "clo_text": "Demonstrate professional responsibility and independent learning in communicating developments related to the selected topic.",
             "mapped_sos": [
               "SO3",
@@ -2232,8 +3508,18 @@
               "PI71",
               "PI72"
             ],
-            "teaching_strategy": "",
-            "assessment_methods": ""
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Oral Technical Presentation",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
           }
         ]
       }
@@ -2249,7 +3535,7 @@
           "PI11",
           "PI12"
         ],
-        "abet_illustration": "Complex Engineering Problems â€“ Complex engineering problems include one or more of the following characteristics: involving wide-ranging or conflicting technical issues; having no obvious solution; addressing problems not encompassed by current standards and codes; involving diverse groups of stakeholders; including many component parts or sub-problems; involving multiple disciplines; or having significant consequences in a range of contexts."
+        "abet_illustration": "Complex Engineering Problems – Complex engineering problems include one or more of the following characteristics: involving wide-ranging or conflicting technical issues; having no obvious solution; addressing problems not encompassed by current standards and codes; involving diverse groups of stakeholders; including many component parts or sub-problems; involving multiple disciplines; or having significant consequences in a range of contexts."
       },
       "SO2": {
         "statement": "An ability to apply engineering design to produce solutions that meet specified needs with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors.",
@@ -2259,7 +3545,7 @@
           "PI23",
           "PI24"
         ],
-        "abet_illustration": "Engineering design is a process of devising a system, component, or process to meet desired needs and specifications within constraints. It is an iterative, creative, decision-making process in which the basic sciences, mathematics, and engineering sciences are applied to convert resources into solutions. Engineering design involves identifying opportunities, developing requirements, performing analysis and synthesis, generating multiple solutions, evaluating solutions against requirements, considering risks, and making trade-offs, for the purpose of obtaining a high-quality solution under the given circumstances. Examples of possible constraints include aesthetics, codes, constructability, cost, ergonomics, extensibility, functionality, interoperability, legal considerations, maintainability, manufacturability, marketability, policy, regulations, schedule, standards, sustainability, or usability. This does not mean that each of these elements must have a significant effect on the design â€” it means the program must show that students consider these elements as they engage in design."
+        "abet_illustration": "Engineering design is a process of devising a system, component, or process to meet desired needs and specifications within constraints. It is an iterative, creative, decision-making process in which the basic sciences, mathematics, and engineering sciences are applied to convert resources into solutions. Engineering design involves identifying opportunities, developing requirements, performing analysis and synthesis, generating multiple solutions, evaluating solutions against requirements, considering risks, and making trade-offs, for the purpose of obtaining a high-quality solution under the given circumstances. Examples of possible constraints include aesthetics, codes, constructability, cost, ergonomics, extensibility, functionality, interoperability, legal considerations, maintainability, manufacturability, marketability, policy, regulations, schedule, standards, sustainability, or usability. This does not mean that each of these elements must have a significant effect on the design — it means the program must show that students consider these elements as they engage in design."
       },
       "SO3": {
         "statement": "An ability to communicate effectively with a range of audiences",
@@ -2267,7 +3553,7 @@
           "PI31",
           "PI32"
         ],
-        "abet_illustration": "The â€œrange of audiencesâ€ should include at least two distinct audiences relevant to the discipline or programâ€™s mission. It is the programâ€™s responsibility to determine the range of audiences (e.g., faculty, students, non-technical audiences, public sector, external clients, etc.)."
+        "abet_illustration": "The “range of audiences” should include at least two distinct audiences relevant to the discipline or program’s mission. It is the program’s responsibility to determine the range of audiences (e.g., faculty, students, non-technical audiences, public sector, external clients, etc.)."
       },
       "SO4": {
         "statement": "An ability to recognize ethical and professional responsibilities in engineering situations and make informed judgments, which must consider the impact of engineering solutions in global, economic, environmental, and societal contexts.",
