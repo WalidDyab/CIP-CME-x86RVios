@@ -10,14 +10,20 @@
   <style>
     .overview-course-sections { display: grid; gap: 22px; }
     .overview-course-group h3 { margin: 0 0 11px; }
-    .overview-course-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .overview-course-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 12px; }
     .overview-special-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .overview-course-grid .course-card { min-width: 0; height: 100%; }
-    .overview-course-grid .course-title { min-height: 2.5em; }
-    .overview-course-grid .desc { overflow-wrap: anywhere; }
+    .overview-course-grid .course-card { min-width: 0; height: 310px; box-sizing: border-box; display: flex; flex-direction: column; }
+    .overview-course-grid .course-title { height: 2.8em; margin: 7px 0 9px; line-height: 1.4; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+    .overview-card-badges { min-height: 58px; align-content: flex-start; }
+    .overview-card-requirements { height: 3.1em; margin: 8px 0; color: var(--muted); font-size: 12px; line-height: 1.5; overflow: hidden; }
+    .overview-card-requirement { margin: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; overflow-wrap: anywhere; }
+    .overview-card-requirements.has-corequisite { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 1px; }
+    .overview-card-requirements.has-corequisite .overview-card-requirement { -webkit-line-clamp: 1; line-clamp: 1; }
+    .overview-card-requirement strong { color: var(--text); }
+    .overview-course-grid .desc { min-height: 4.65em; margin: auto 0 0; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
     @media (max-width: 1100px) { .overview-course-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .overview-special-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 780px) { .overview-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 520px) { .overview-course-grid, .overview-special-grid { grid-template-columns: minmax(0, 1fr); } .overview-course-grid .course-title { min-height: 0; } }
+    @media (max-width: 520px) { .overview-course-grid, .overview-special-grid { grid-template-columns: minmax(0, 1fr); } }
   </style>
 </head>
 <body>
@@ -30,12 +36,12 @@
     <section class="hero">
       <span class="kicker">Undergraduate EE</span>
       <h2>Program Overview</h2>
-      <p class="muted">Searchable program snapshot generated from the undergraduate EE JSON files.</p>
+      <p class="muted">Searchable overview of the undergraduate EE program.</p>
     </section>
     <section id="stats" class="grid four"></section>
     <section class="card" style="margin-top:14px">
       <h2>Course–SO–PI Performance Heatmaps</h2>
-      <p class="muted">These heatmaps use the PI-specific Introduced (I), Practiced (P), and Mastered (M) levels from the authoritative mapping JSON.</p>
+      <p class="muted">These heatmaps show the approved PI-specific Introduced (I), Practiced (P), and Mastered (M) levels.</p>
       <button id="toggleHeatmapBtn" class="btn primary" style="margin:10px 0">Show Heatmaps</button>
       <div id="heatmapSection" class="hidden">
         <div class="heatmap-heading"><h3>PI Heatmap</h3><button id="exportPiBtn" class="btn">Export PNG</button></div>
@@ -62,7 +68,7 @@
       </div>
       <div id="courseList" class="overview-course-sections"></div>
     </section>
-    <div class="footer">One source of truth: JSON data files. Refresh the page after updating JSON.</div>
+    <div class="footer">Undergraduate Electrical Engineering Curriculum Intelligence Portal</div>
   </main>
   <div id="footer-placeholder"></div>
   <script>
@@ -95,8 +101,19 @@
         const filterValues = ['All', ...new Set(normalizedCourses.flatMap(({ normalized }) => [normalized.track, normalized.re, normalized.level]).filter(Boolean))].sort();
         trackFilter.innerHTML = filterValues.map(value => `<option>${portal.esc(value)}</option>`).join('');
         const specialTypes = new Set(['Capstone', 'COOP']);
-        const courseCard = ({ normalized: course }) => {
-          return `<a class="course-card" href="course-dashboard.html?course=${encodeURIComponent(course.code)}"><div class="code">${portal.esc(course.code)}</div><div class="course-title">${portal.esc(course.title)}</div><div>${portal.badge(course.re || 'Course')}${portal.badge(course.track || 'General')}${course.credits ? portal.badge(course.credits + ' cr') : ''}</div><p class="desc">${portal.esc(course.desc || course.clos[0]?.clo_text || '')}</p></a>`;
+        const availableValue = value => {
+          const text = String(value ?? '').trim();
+          return text && text !== '0' ? text : '';
+        };
+        const courseCard = ({ raw, normalized: course }) => {
+          const year = availableValue(raw.year);
+          const level = availableValue(raw.level);
+          const yearLevel = [year ? `Year ${year}` : '', level ? `Level ${level}` : ''].filter(Boolean).join(' / ');
+          const prerequisite = raw.prerequisite_text || 'None';
+          const corequisite = course.code === 'EE 490' && raw.corequisite_text ? raw.corequisite_text : '';
+          const description = raw.course_description || 'Description not available';
+          const requirements = `<div class="overview-card-requirements${corequisite ? ' has-corequisite' : ''}"><p class="overview-card-requirement" title="${portal.esc(prerequisite)}"><strong>Prerequisite:</strong> ${portal.esc(prerequisite)}</p>${corequisite ? `<p class="overview-card-requirement" title="${portal.esc(corequisite)}"><strong>Co-requisite:</strong> ${portal.esc(corequisite)}</p>` : ''}</div>`;
+          return `<a class="course-card" href="course-dashboard.html?course=${encodeURIComponent(course.code)}&layout=full"><div class="code">${portal.esc(course.code)}</div><div class="course-title" title="${portal.esc(course.title)}">${portal.esc(course.title)}</div><div class="overview-card-badges">${portal.badge(course.re || 'Course')}${portal.badge(course.track || 'General')}${yearLevel ? portal.badge(yearLevel) : ''}${course.credits ? portal.badge(course.credits + ' cr') : ''}</div>${requirements}<p class="desc" title="${portal.esc(description)}">${portal.esc(description)}</p></a>`;
         };
         const courseGroup = (title, group, special = false) => group.length ? `<section class="overview-course-group"><h3>${portal.esc(title)}</h3><div class="overview-course-grid${special ? ' overview-special-grid' : ''}">${group.map(courseCard).join('')}</div></section>` : '';
         const renderCourseGroups = () => {

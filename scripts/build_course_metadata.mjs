@@ -3,6 +3,7 @@ import { FileBlob, SpreadsheetFile } from '@oai/artifact-tool';
 
 const workbookPath = 'data/course-additional-data.xlsx';
 const curriculumPath = 'data/ee_curriculum_with_sos_pis.json';
+const electiveCataloguePath = 'data/ee_elective_catalogue_metadata.json';
 const outputPath = 'data/ee_course_metadata.json';
 
 const cleanText = (value) => {
@@ -49,6 +50,14 @@ for (const header of requiredHeaders) {
 const curriculum = JSON.parse(await fs.readFile(curriculumPath, 'utf8'));
 const curriculumCourses = curriculum.curriculum?.courses ?? [];
 const currentByCode = new Map(curriculumCourses.map((course) => [normalizeCourseCode(course.course_code), course]));
+const electiveCatalogue = JSON.parse(await fs.readFile(electiveCataloguePath, 'utf8'));
+let existingOutputCourses = [];
+try {
+  existingOutputCourses = JSON.parse(await fs.readFile(outputPath, 'utf8')).courses ?? [];
+} catch (error) {
+  if (error.code !== 'ENOENT') throw error;
+}
+const existingOutputByCode = new Map(existingOutputCourses.map((course) => [normalizeCourseCode(course.course_code), course]));
 
 const courses = [];
 const validationRows = [];
@@ -61,6 +70,8 @@ for (const row of values.slice(1)) {
 
   const prerequisiteText = isMissing(row[column['Pre-req.:']]) ? null : cleanText(row[column['Pre-req.:']]);
   const corequisiteText = isMissing(row[column['Co-req.:']]) ? null : cleanText(row[column['Co-req.:']]);
+  const existingDescription = cleanText(current.course_description ?? current.description) || null;
+  const workbookDescription = isMissing(row[column['Course Description']]) ? null : cleanText(row[column['Course Description']]);
   const objectives = ['Objective', 'Objective 2', 'Objective 3']
     .map((name) => row[column[name]])
     .filter((value) => !isMissing(value))
@@ -78,7 +89,7 @@ for (const row of values.slice(1)) {
     prerequisite_text: prerequisiteText,
     corequisites: corequisiteText ? extractCourseCodes(corequisiteText) : [],
     corequisite_text: corequisiteText,
-    course_description: isMissing(row[column['Course Description']]) ? null : cleanText(row[column['Course Description']]),
+    course_description: existingDescription || workbookDescription,
     course_objectives: objectives,
     textbooks,
     references,
@@ -93,10 +104,58 @@ for (const row of values.slice(1)) {
   });
 }
 
+const electiveMergeAudit = [];
+for (const catalogueCourse of electiveCatalogue.courses ?? []) {
+  const courseCode = normalizeCourseCode(catalogueCourse.course_code);
+  const current = currentByCode.get(courseCode);
+  if (!current) throw new Error(`Unresolved elective catalogue course code: ${courseCode}`);
+
+  const catalogueDescription = cleanText(catalogueCourse.course_description) || null;
+  const catalogueOutcomes = (catalogueCourse.catalogue_learning_outcomes ?? []).map(cleanText).filter(Boolean);
+  const existing = existingOutputByCode.get(courseCode);
+  const currentPortalDescription = cleanText(current.course_description ?? current.description) || null;
+  let record = courses.find((course) => normalizeCourseCode(course.course_code) === courseCode);
+
+  if (!record && existing) record = structuredClone(existing);
+  if (!record && (catalogueDescription || catalogueOutcomes.length || currentPortalDescription)) {
+    record = {
+      course_code: cleanText(current.course_code),
+      course_title: cleanText(current.course_title),
+      prerequisites: [],
+      prerequisite_text: null,
+      corequisites: [],
+      corequisite_text: null,
+      course_description: currentPortalDescription,
+      course_objectives: [],
+      textbooks: [],
+      references: [],
+    };
+  }
+
+  if (!record) {
+    electiveMergeAudit.push({ course_code: courseCode, status: 'No usable catalogue data' });
+    continue;
+  }
+
+  const descriptionBefore = cleanText(record.course_description) || null;
+  const outcomesBefore = Array.isArray(record.catalogue_learning_outcomes) ? record.catalogue_learning_outcomes.filter(Boolean) : [];
+  if (!descriptionBefore && catalogueDescription) record.course_description = catalogueDescription;
+  if (!outcomesBefore.length && catalogueOutcomes.length) record.catalogue_learning_outcomes = catalogueOutcomes;
+  if (!courses.includes(record)) courses.push(record);
+
+  electiveMergeAudit.push({
+    course_code: courseCode,
+    description: descriptionBefore ? 'Preserved' : catalogueDescription ? 'Filled previously empty field' : 'No usable catalogue data',
+    catalogue_learning_outcomes: outcomesBefore.length ? 'Preserved' : catalogueOutcomes.length ? 'Filled previously empty field' : 'No usable catalogue data',
+  });
+}
+
 const output = {
   metadata: {
     source: 'course-additional-data.xlsx',
     scope: 'Undergraduate EE non-elective courses',
+    elective_catalogue_source: 'Electives-Catalogue.pdf',
+    merge_policy: 'Fill missing fields only; existing portal values take precedence',
   },
   courses,
 };
@@ -115,7 +174,8 @@ for (const course of courses) {
 console.log(JSON.stringify({
   sheet_names: workbook.worksheets.items.map((item) => item.name),
   headers,
-  workbook_courses: courses.length,
+  workbook_courses: validationRows.length,
+  metadata_courses: courses.length,
   matched_courses: validationRows.length,
   unmatched_courses: 0,
   title_matches: validationRows,
@@ -128,4 +188,5 @@ console.log(JSON.stringify({
     references: courses.filter((course) => course.references.length).length,
   },
   external_or_unresolved_requirement_codes: externalRequirements,
+  elective_merge_audit: electiveMergeAudit,
 }, null, 2));

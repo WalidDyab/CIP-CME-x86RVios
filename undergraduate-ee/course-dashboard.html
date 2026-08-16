@@ -195,6 +195,24 @@
     .course-information-list { margin: 0; padding-left: 22px; display: grid; gap: 7px; }
     .course-information-list li { line-height: 1.55; overflow-wrap: anywhere; }
 
+    /* Course topics and contact hours */
+    .course-topics-table { width: 100%; table-layout: fixed; }
+    .course-topics-table th:nth-child(1), .course-topics-table td:nth-child(1) { width: 9%; text-align: center; }
+    .course-topics-table th:nth-child(2), .course-topics-table td:nth-child(2) { width: 73%; }
+    .course-topics-table th:nth-child(3), .course-topics-table td:nth-child(3) { width: 18%; text-align: center; }
+    .course-topics-table td:nth-child(2) { white-space: normal; overflow-wrap: anywhere; line-height: 1.5; }
+    .course-topics-table tfoot th,
+    .course-topics-table tfoot td { font-weight: 800; color: var(--text); background: rgba(255,255,255,.055); border-bottom: 0; }
+    .course-topics-table tfoot th { text-align: right; }
+
+    /* Full-width course selection */
+    .course-dashboard-selector { margin-bottom: 14px; }
+    .course-dashboard-selector .toolbar { align-items: center; }
+    .course-dashboard-selector label { color: var(--muted); font-size: 13px; font-weight: 700; white-space: nowrap; }
+    .course-dashboard-selector .select { flex: 1; min-width: 240px; }
+    .course-dashboard-content { min-width: 0; width: 100%; }
+    .course-dashboard-content > .card { min-width: 0; max-width: 100%; }
+
     /* ── Select All Toggle ── */
     .select-all-row {
       display: flex;
@@ -243,7 +261,7 @@
     }
   </style>
 </head><body><div id="header-placeholder"></div><div class="wrap" style="padding-top: 14px;"><div class="title" style="margin-bottom: 24px;"><h1>Undergraduate EE Course Dashboard</h1><p>PSU College of Engineering Curriculum Intelligence Portal</p></div>
-<section class="hero"><span class="kicker">Undergraduate EE</span><h2>Course-level CLO–SO–PI Dashboard</h2><p class="muted">Per-course mapping generated from the JSON file.</p></section><div class="layout"><aside class="card sidebar"><h2>Courses</h2><div class="toolbar"><input id="search" class="input" placeholder="Search…"><select id="trackFilter" class="select"></select><span id="resultCount" class="pill"></span></div><div id="courseList" class="course-list"></div></aside><main id="detail" class="grid"></main></div>
+<section class="hero"><span class="kicker">Undergraduate EE</span><h2>Course-level CLO–SO–PI Dashboard</h2><p class="muted">Review course information, learning outcomes, and approved program mappings.</p></section><section class="card course-dashboard-selector"><div class="toolbar"><label for="courseSelect">Select course</label><select id="courseSelect" class="select"></select></div></section><main id="detail" class="grid course-dashboard-content"></main>
 
 <!-- Print Modal Overlay -->
 <div class="print-modal-overlay" id="printModalOverlay">
@@ -294,49 +312,53 @@ let _printCourseNorm = null;
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json');
-    let metadataCourses = [];
-    let metadataLoadFailed = false;
-    try {
-      const metadata = await portal.loadJSON('../data/ee_course_metadata.json');
-      metadataCourses = metadata.courses || [];
-    } catch (metadataError) {
-      metadataLoadFailed = true;
-      console.error('Could not load course metadata JSON.', metadataError);
-    }
     const courses = data.curriculum.courses || [];
-    portal.setupCourseBrowser(courses, { linkPrefix: 'course-dashboard.html?course=' });
     const wanted = portal.getParam('course') || portal.normCourse(courses[0]).code;
     const raw = courses.find(x => portal.normCourse(x).code === wanted) || courses[0];
     const c = portal.normCourse(raw);
+    const courseSelect = byId('courseSelect');
+    courseSelect.innerHTML = courses.map(course => {
+      const normalized = portal.normCourse(course);
+      return `<option value="${portal.esc(normalized.code)}">${portal.esc(normalized.code)} — ${portal.esc(normalized.title)}</option>`;
+    }).join('');
+    courseSelect.value = c.code;
+    courseSelect.addEventListener('change', () => {
+      const nextUrl = new URL(location.href);
+      nextUrl.searchParams.set('course', courseSelect.value);
+      nextUrl.searchParams.set('layout', 'full');
+      location.href = nextUrl.toString();
+    });
 
     // Store for print
     _printCourseRaw = raw;
     _printCourseNorm = c;
 
-    const normalizeMetadataCode = value => String(value || '').toUpperCase().replace(/\s+/g, '');
-    const metadataByCode = new Map(metadataCourses.map(course => [normalizeMetadataCode(course.course_code), course]));
     const metadataList = (values, ordered = false) => {
       const tag = ordered ? 'ol' : 'ul';
       return `<${tag} class="course-information-list">${(values || []).map(value => `<li>${portal.esc(value)}</li>`).join('')}</${tag}>`;
     };
-    const renderCourseInformation = courseCode => {
-      if (metadataLoadFailed) return '<section class="card course-information"><h2>Course Information</h2><div class="alert">Course information could not be loaded.</div></section>';
-      const metadata = metadataByCode.get(normalizeMetadataCode(courseCode));
-      if (!metadata) return '<section class="card course-information"><h2>Course Information</h2><p class="muted">Additional course information is not available for this course.</p></section>';
+    const renderCourseInformation = course => {
+      const courseDescription = course.course_description;
       const blocks = [];
-      if (metadata.course_description) blocks.push(`<div class="course-information-block"><h3>Course Description</h3><p>${portal.esc(metadata.course_description)}</p></div>`);
-      if (metadata.prerequisite_text) blocks.push(`<div class="course-information-block"><h3>Prerequisite(s)</h3><p>${portal.esc(metadata.prerequisite_text)}</p></div>`);
-      if (metadata.corequisite_text) blocks.push(`<div class="course-information-block"><h3>Co-requisite(s)</h3><p>${portal.esc(metadata.corequisite_text)}</p></div>`);
-      if ((metadata.course_objectives || []).length) blocks.push(`<div class="course-information-block"><h3>Course Objectives</h3>${metadataList(metadata.course_objectives, true)}</div>`);
-      if ((metadata.textbooks || []).length) blocks.push(`<div class="course-information-block"><h3>Textbook</h3>${metadataList(metadata.textbooks)}</div>`);
-      if ((metadata.references || []).length) blocks.push(`<div class="course-information-block"><h3>References</h3>${metadataList(metadata.references)}</div>`);
+      if (courseDescription) blocks.push(`<div class="course-information-block"><h3>Course Description</h3><p>${portal.esc(courseDescription)}</p></div>`);
+      if (course.prerequisite_text) blocks.push(`<div class="course-information-block"><h3>Prerequisite(s)</h3><p>${portal.esc(course.prerequisite_text)}</p></div>`);
+      if (course.corequisite_text) blocks.push(`<div class="course-information-block"><h3>Co-requisite(s)</h3><p>${portal.esc(course.corequisite_text)}</p></div>`);
+      if ((course.course_objectives || []).length) blocks.push(`<div class="course-information-block"><h3>Course Objectives</h3>${metadataList(course.course_objectives, true)}</div>`);
+      if ((course.textbooks || []).length) blocks.push(`<div class="course-information-block"><h3>Textbook</h3>${metadataList(course.textbooks)}</div>`);
+      if ((course.references || []).length) blocks.push(`<div class="course-information-block"><h3>References</h3>${metadataList(course.references)}</div>`);
+      if (!blocks.length) return '<section class="card course-information"><h2>Course Information</h2><p class="muted">Additional course information is not available for this course.</p></section>';
       return `<section class="card course-information"><h2>Course Information</h2><div class="course-information-content">${blocks.join('')}</div></section>`;
+    };
+    const renderCourseTopics = course => {
+      const topics = Array.isArray(course.course_topics) ? course.course_topics : [];
+      if (course.course_code === 'EE 490' || course.course_code === 'EE 492' || !topics.length) return '';
+      return `<section class="card course-topics"><h2>Course Topics and Contact Hours</h2><div class="table-wrap"><table class="course-topics-table"><thead><tr><th scope="col">No.</th><th scope="col">Course Topic</th><th scope="col">Contact Hours</th></tr></thead><tbody>${topics.map(topic => `<tr><td>${portal.esc(topic.topic_number)}</td><td>${portal.esc(topic.topic_title)}</td><td>${portal.esc(topic.contact_hours)}</td></tr>`).join('')}</tbody><tfoot><tr><th scope="row" colspan="2">Total Contact Hours</th><td>${portal.esc(course.total_topic_contact_hours)}</td></tr></tfoot></table></div></section>`;
     };
     const methodList = values => `<ul class="clo-method-list">${(values || []).map(value => `<li>${portal.esc(value)}</li>`).join('')}</ul>`;
     const methodsSection = (raw.clos || []).length ? `<section class="card"><h2>Teaching Strategies and Assessment Methods</h2><div class="table-wrap"><table class="clo-methods-table"><thead><tr><th>CLO ID</th><th>CLO Wording</th><th>Teaching Strategies</th><th>Assessment Methods</th></tr></thead><tbody>${raw.clos.map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.esc(x.clo_text)}</td><td>${methodList(x.teaching_strategy)}</td><td>${methodList(x.assessment_methods)}</td></tr>`).join('')}</tbody></table></div></section>` : '';
-    byId('detail').innerHTML = `<section class="card"><div class="code">${portal.esc(c.code)}</div><h2>${portal.esc(c.title)}</h2><div>${portal.badge(c.track)}${portal.badge(c.re)}${portal.badge('Level ' + c.level)}${portal.badge(c.credits + ' credits')}</div><button class="print-btn" id="printReportBtn" title="Export course report as PDF"><svg viewBox="0 0 24 24"><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>Print Report</button></section><section class="card"><h2>CLO–SO–PI Mapping</h2><div class="table-wrap"><table class="clo-main-table"><thead><tr><th>CLO ID</th><th>NQF Domain</th><th>CLO Wording</th><th>SO</th><th>PIs</th></tr></thead><tbody>${(raw.clos || []).map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.badge(x.nqf_domain)}</td><td>${portal.esc(x.clo_text)}</td><td>${(x.mapped_sos || []).map(s => portal.badge(s)).join('')}</td><td>${(x.pi_codes || []).map(s => portal.badge(s)).join('')}</td></tr>`).join('')}</tbody></table></div></section>${methodsSection}`;
+    byId('detail').innerHTML = `<section class="card"><div class="code">${portal.esc(c.code)}</div><h2>${portal.esc(c.title)}</h2><div>${portal.badge(c.track)}${portal.badge(c.re)}${portal.badge('Level ' + c.level)}${portal.badge(c.credits + ' credits')}</div><button class="print-btn" id="printReportBtn" title="Export course report as PDF"><svg viewBox="0 0 24 24"><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>Print Report</button></section><section class="card"><h2>CLO–SO–PI Mapping</h2><div class="table-wrap"><table class="clo-main-table"><thead><tr><th>CLO ID</th><th>NQF Domain</th><th>CLO Wording</th><th>SO</th><th>PIs</th></tr></thead><tbody>${(raw.clos || []).map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.badge(x.nqf_domain)}</td><td>${portal.esc(x.clo_text)}</td><td>${(x.mapped_sos || []).map(s => portal.badge(s)).join('')}</td><td>${(x.pi_codes || []).map(s => portal.badge(s)).join('')}</td></tr>`).join('')}</tbody></table></div></section>${methodsSection}${renderCourseTopics(raw)}`;
 
-    byId('detail').firstElementChild.insertAdjacentHTML('afterend', renderCourseInformation(c.code));
+    byId('detail').firstElementChild.insertAdjacentHTML('afterend', renderCourseInformation(raw));
 
     // Attach print button handler
     byId('printReportBtn').addEventListener('click', () => {
@@ -344,7 +366,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
   } catch (e) {
-    byId('detail').innerHTML = '<div class="alert">Could not load JSON.</div>';
+    byId('detail').innerHTML = '<div class="alert">Could not load course information.</div>';
   }
 });
 
@@ -560,7 +582,7 @@ function generateCoursePDF(c, raw, sections) {
   doc.save(c.code.replace(/\s+/g, '_') + '_Report.pdf');
 }
 </script>
-<div class="footer">One source of truth: JSON data files. Refresh the page after updating JSON.</div></div>
+<div class="footer">Undergraduate Electrical Engineering Curriculum Intelligence Portal</div></div>
 <div id="footer-placeholder"></div>
 
 </body></html>

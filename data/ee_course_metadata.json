@@ -1,7 +1,9 @@
 {
   "metadata": {
     "source": "course-additional-data.xlsx",
-    "scope": "Undergraduate EE non-elective courses"
+    "scope": "Undergraduate EE non-elective courses",
+    "elective_catalogue_source": "Electives-Catalogue.pdf",
+    "merge_policy": "Fill missing fields only; existing portal values take precedence"
   },
   "courses": [
     {
@@ -340,6 +342,249 @@
       ],
       "textbooks": [],
       "references": []
+    },
+    {
+      "course_code": "EE 414",
+      "course_title": "Electrical and Electronic Measurements",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "The Electrical and Electronics Measurements course covers fundamental principles, instruments, and techniques used to measure electrical and electronic parameters accurately. Students will learn about voltmeters, ammeters, wattmeters, oscilloscopes, and digital measurement systems, along with sensor and transducer applications. Emphasis is placed on error analysis, precision, and modern data acquisition techniques. Through theoretical learning and practical lab sessions, students gain hands-on experience with industry-standard measurement tools, preparing them for real-world applications in electrical and electronic systems.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Explain fundamental concepts such as accuracy, precision, sensitivity, and error analysis in electrical and electronic measurements.",
+        "Demonstrate proficiency in using instruments like voltmeters, ammeters, wattmeters, oscilloscopes, and digital multimeters for accurate measurements.",
+        "Evaluate measurement data, identify errors, and apply corrective techniques to improve accuracy in electrical and electronic systems.",
+        "Utilize modern data acquisition systems, sensors, and transducers for real-world applications in power systems, electronics, and automation."
+      ]
+    },
+    {
+      "course_code": "EE 415",
+      "course_title": "Opto-Electronics",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "Overview of semiconductor fundamentals; Heterojunction structures; Light-emitting devices: principles, spectral characteristics, and modulation bandwidth; Photodetectors: operational principles, noise analysis, and sensitivity; Optical waveguides; Fundamentals of optical fibers, including attenuation and dispersion; Optical amplification technologies; WDM and DWDM systems along with their components; Key elements of optical networking; Emerging trends and advancements in optoelectronics.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Understand light sources and detectors",
+        "Design and evaluate optical network solutions",
+        "Analyze optical signal impairments"
+      ]
+    },
+    {
+      "course_code": "EE 416",
+      "course_title": "VLSI Circuits Design",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course offers an introduction to Very Large Scale Integration (VLSI) design, exposing students to the complexities of creating integrated circuits with cutting-edge technologies. It begins with an exploration of VLSI systems, outlining key design and fabrication stages, including ASIC and FPGA development and processes like photolithography. Participants will explore significant industry players and evolving market trends and gain practical skills through extensive use of HDLs like VHDL and Verilog for circuit design and simulation. The curriculum also covers functional and timing analysis, post-synthesis optimization, and various packaging technologies. Additionally, the course addresses professional ethics in VLSI design, stressing regulatory adherence, intellectual property integrity, accurate reporting, and environmental awareness, equipping students for the technical and ethical challenges in the semiconductor industry.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Explain the workflow of VLSI design methodologies and the key steps involved in the fabrication of ASICs and FPGAs.",
+        "Identify the main players in the VLSI industry",
+        "Design VLSI circuits using HDL.",
+        "Perform functional and timing analysis of HDL designs",
+        "Execute post-synthesis analysis to ensure the design meets specified performance criteria.",
+        "Differentiate between different packaging of VLSI circuits",
+        "Uphold ethical standards in VLSI design, including compliance with regulations, accurate reporting, intellectual property rights, and environmental considerations."
+      ]
+    },
+    {
+      "course_code": "EE 423",
+      "course_title": "Data Communication Networks",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course provides a comprehensive understanding of data communication networks with a strong focus on data communication and networking techniques for smart system applications such smart grids, energy systems for smart homes, buildings and factories. It covers network architectures, protocols, and data transmission principles, emphasizing wireless and wired communication technologies essential for Smart systems applications. The course covers several protocols operating at different layers of OSI and TCP/IP models. The course will focus on implementing Middle layer data access layer protocols (MQTT/CoAP etc), to provide real-time data communication, and networking for IoT-enabled smart systems. The course also explores Smart System integration with cloud-based application layers. It also covers data communication fundamentals, such as modulation, error correction, and synchronization techniques relevant to real-time Smart Systems applications.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Understand basic data communication and network concepts and protocols",
+        "Implement and evaluate middle-layer data access protocols",
+        "Integrate Smart Systems with cloud-based networking solutions"
+      ]
+    },
+    {
+      "course_code": "EE 424",
+      "course_title": "Digital Communications",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course addresses the problem of designing efficient and reliable digital communication systems through introducing the field of information theory. Source and channel coding which are important elements of information theory are essential for any communication systems. We cover the mathematical preliminaries related to those elements, such as entropy, relative entropy, and mutual information. We show how they arise as natural answers to questions of data compression, channel capacity, and error correction. We also study different source and channel coding schemes, such as Huffman, arithmetic, block, cyclic, and convolution codes.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Recognize the source and channel coding theorems.",
+        "Explain the notions of entropy, relative entropy and mutual information, and how they are relevant.",
+        "Calculate the capacity of different channels.",
+        "Analyze and design source and channel coding schemes."
+      ]
+    },
+    {
+      "course_code": "EE 425",
+      "course_title": "Wireless Communications Systems",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course explores the technical challenges and solutions in designing the physical and link layers of wireless communication systems. Key topics include wireless channel characterization, cellular network principles, digital modulation methods, spread spectrum, and multiple access techniques such as CDMA and OFDMA. The course also covers diversity techniques and introduces advanced technologies like LTE, MIMO, and 5G NR.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Explain fundamental wireless communication principles",
+        "Describe the challenges in designing the physical and link layers of wireless systems.",
+        "Apply digital modulation and multiple access techniques",
+        "Design wireless system components"
+      ]
+    },
+    {
+      "course_code": "EE 426",
+      "course_title": "Antenna and wave propagation",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course provides the students with an understanding of the basic principles of Antenna Analysis and Design, an overview of the fundamental characteristics and parameters of antennas, an overview of analytical and numerical methods used to analyze and design antennas with application to some basic antenna structures such as linear antennas, loop antennas, and antenna arrays.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Describe radiation mechanism, i.e. how electromagnetic fields are generated, guided, and radiated.",
+        "Recognize some advanced antennas types.",
+        "Explain the various types of antennas and their use in wireless communication.",
+        "Analyze the effect of the antenna arrays on performance.",
+        "Calculate the antenna parameters like gain, input impedance, radiated power and radiation resistance.",
+        "Design antennas for various applications."
+      ]
+    },
+    {
+      "course_code": "EE 433",
+      "course_title": "Mechatronics",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course provides a multidisciplinary introduction to Mechatronics, focusing on the synergetic integration of mechanical systems, electronics, sensors, actuators, microcontrollers, and information technology to create intelligent automation solutions. It starts with thinking how the required function can be realized by the combination of different subsystems according to a Systems Engineering approach (V-model). Students will explore electro-mechanical systems controlled by microcontrollers, gaining hands-on experience in instrumentation, measurement systems, data acquisition, and control techniques. Through practical applications, students will learn how to design, implement, and troubleshoot sensor-actuator systems, interface microcontrollers with real-world mechanisms, and develop automated control solutions.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Understand the concept of mechatronic system design and how to construct a conceptual framework to select an appropriate solution approach",
+        "Learn how to work with sensors, actuators, controllers and how to read and interpret data sheets.",
+        "Learn how to model and simulate mechatronic systems and how to verify design solutions before their implementation.",
+        "Write technical reports following a well-defined design procedure"
+      ]
+    },
+    {
+      "course_code": "EE 434",
+      "course_title": "PLC Microcontrollers",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course provides a comprehensive introduction to Programmable Logic Controllers (PLCs), equipping students with both theoretical knowledge and hands-on experience in industrial automation. Students will explore the core principles of PLC operation, including relay ladder logic programming, and gain practical exposure to real-world industrial applications. Through interactive lab exercises and case studies, students will learn about the structure and functionality of PLCs, covering I/O modules, relays, counters, timers, and data manipulation techniques. Additionally, students will examine how PLCs integrate into modern automated manufacturing systems and explore their role in industrial networking and smart factory solutions.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Understand the main architecture of PLC controllers and their principle of operation",
+        "Learn the basics of programmable logic controllers",
+        "Classify input and output interfacing devices with PLC",
+        "Write PLC programs for Schneider PLC Modicon M241",
+        "Execute, debug and test the programs developed for digital and analog operations.",
+        "Determine I/O requirement of application, develop program and interface system with PLC solved using different approaches"
+      ]
+    },
+    {
+      "course_code": "EE 435",
+      "course_title": "Robotics and Automation",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course has basic Python programming as a prerequisite. The course delivers fundamental concepts of robotics and automation, designed for electrical engineering students those has basic Python knowledge. The course covers, topics those are essentials to build robots, including actuators, sensors, robot kinematics, control systems, and automation technologies. Furthermore, the course will provide insights into robot motion, position and force control, and mobile robotics. The course will also explores robotic operating systems (ROS), industrial robotics, vision systems, and automation techniques used in manufacturing and smart systems. The course is designed to be applied in nature, enabling students to use python to programming automation and robotics sensors, motion planning, and AI-driven control mechanisms, preparing them for real-world applications in robotics and industrial automation.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Understand the essential concepts of robotics and automation, including sensors, actuators, and robot kinematics.",
+        "Develop and analyze motion planning and control strategies for robotic systems.",
+        "Implement robot programming using Python and Robot Operating System (ROS).",
+        "Implement python libraries for machine vision, artificial intelligence, and automation techniques in robotic applications.",
+        "Design and implement robotic solutions for industrial, healthcare, and smart infrastructure applications."
+      ]
+    },
+    {
+      "course_code": "EE 436",
+      "course_title": "Artifitial Intellegince",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course provides an introduction of Artificial Intelligence (AI) for Electrical Engineering students. This AI course covers basic AI concepts, including problem-solving techniques, search algorithms, machine learning, and knowledge representation, where the main focus will be on practical applications in electrical engineering. The course integrates hands-on experience with Python-based AI tools such as NumPy, Pandas, Scikit-Learn, and TensorFlow. Specific applications include load forecasting in power systems, AI-based signal processing, and control system optimization. By the end of the course, students will learn about theoretical knowledge and practical skills to apply AI techniques to real-world electrical engineering problems, preparing them for advanced AI applications and research in intelligent automation, smart grids, and predictive maintenance.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Understand the basics of AI, and AI Concepts including search strategies, machine learning, and knowledge representation.",
+        "Develop AI-based solutions for electrical engineering applications, such as power system optimization and signal processing.",
+        "Learn about AI libraries for data preprocessing, model training, and evaluation.",
+        "Analyze and evaluate AI models using statistical and mathematical techniques.",
+        "Understand the future implications of AI in engineering disciplines."
+      ]
+    },
+    {
+      "course_code": "EE 442",
+      "course_title": "Digital Signal Processing",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course provides an in-depth understanding of Digital Signal Processing (DSP), focusing on the analysis, manipulation, and implementation of digital signals in various engineering applications. Students will explore discrete-time signals and systems, sampling theory, discrete Fourier transform (DFT), fast Fourier transform (FFT), digital filter design, and real-time signal processing techniques. The course emphasizes both theoretical concepts and practical implementation, preparing students for advanced topics in signal processing.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Analyze and manipulate discrete-time signals using time-domain and frequency-domain techniques.",
+        "Implement Z-transform, DFT, and FFT for efficient signal analysis.",
+        "Desgn and implement digital FIR and IIR filters for various signal processing applications.",
+        "Apply sampling and reconstruction techniques in real-world scenarios.",
+        "Utilize MATLAB for signal processing simulation and visualization.",
+        "Demonstrate the role of DSP in communications, audio processing, and radar systems."
+      ]
+    },
+    {
+      "course_code": "EE 456",
+      "course_title": "Renewable Energy Engineering",
+      "prerequisites": [],
+      "prerequisite_text": null,
+      "corequisites": [],
+      "corequisite_text": null,
+      "course_description": "This course focuses on the principles, technologies, and applications of solar and wind energy systems. It covers energy conversion, system design, efficiency analysis, and integration into power grids. Students will explore key challenges, sustainability considerations, and advancements in photovoltaic (PV) systems and wind turbine technology. The course combines theoretical knowledge with hands-on applications to prepare students for careers in the renewable energy sector.",
+      "course_objectives": [],
+      "textbooks": [],
+      "references": [],
+      "catalogue_learning_outcomes": [
+        "Explain the fundamental principles of solar and wind energy conversion.",
+        "Analyze the performance, efficiency, and feasibility of photovoltaic (PV) and wind turbine systems.",
+        "Design and evaluate solar and wind energy systems for various applications.",
+        "Assess the environmental, economic, and policy implications of solar and wind energy deployment."
+      ]
     }
   ]
 }

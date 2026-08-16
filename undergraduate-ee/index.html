@@ -15,9 +15,7 @@
     <div class="wrap" style="padding-top: 14px;">
         <section class="hero"><span class="kicker">Undergraduate program</span>
             <h2>Undergraduate EE Curriculum Portal</h2>
-            <p class="muted">Dynamic dashboards connected to <code>ee_curriculum_with_sos_pis.json</code> and
-                <code>ee_program_clo_so_pi_mapping.json</code>.
-            </p>
+            <p class="muted">Explore the undergraduate EE curriculum, course learning outcomes, and program mappings.</p>
         </section>
         <section id="stats" class="grid four"></section>
         <section class="grid four" style="margin-top:14px"><a class="card" href="program-overview.html">
@@ -33,7 +31,7 @@
                 <h2>Teaching &amp; Assessment</h2>
                 <p class="muted">Approved teaching strategy and assessment method pools, including course-specific exceptions.</p>
             </a></section>
-        <script>document.addEventListener('DOMContentLoaded', async () => { try { const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json'); const courses = data.curriculum.courses || []; const clos = courses.flatMap(c => c.clos || []); const mappedSO = clos.filter(c => (c.mapped_sos || []).length).length; portal.renderStats(byId('stats'), { Courses: courses.length, CLOs: clos.length, 'Mapped CLOs': mappedSO, 'SO coverage': new Set(clos.flatMap(c => c.mapped_sos || [])).size }); } catch (e) { byId('stats').innerHTML = '<div class="alert">Could not load JSON.</div>' } })</script>
+        <script>document.addEventListener('DOMContentLoaded', async () => { try { const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json'); const courses = data.curriculum.courses || []; const clos = courses.flatMap(c => c.clos || []); const mappedSO = clos.filter(c => (c.mapped_sos || []).length).length; portal.renderStats(byId('stats'), { Courses: courses.length, CLOs: clos.length, 'Mapped CLOs': mappedSO, 'SO coverage': new Set(clos.flatMap(c => c.mapped_sos || [])).size }); } catch (e) { byId('stats').innerHTML = '<div class="alert">Could not load curriculum information.</div>' } })</script>
         
         <section class="section">
             <h2>Visual CLO–SO Mapping</h2>

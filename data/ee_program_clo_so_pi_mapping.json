@@ -460,8 +460,8 @@
         "PI22": "I",
         "PI23": "I",
         "PI24": "I",
-        "PI31": "I",
-        "PI32": "I",
+        "PI31": "P",
+        "PI32": "P",
         "PI51": "I",
         "PI62": "I",
         "PI63": "I",
@@ -843,7 +843,7 @@
           "domain": null,
           "clo_id": 2.3,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze frequency selective circuits",
+          "clo_text": "Analyze frequency selective circuits, three-phase and two-port networks.",
           "aligned_sos": [
             "SO6"
           ],
@@ -853,10 +853,10 @@
           ]
         },
         {
-          "domain": null,
-          "clo_id": 2.4,
-          "nqf_domain": "Skills",
-          "clo_text": "Analyze three-phase networks and two-port networks.",
+          "domain": "Values, autonomy and responsibility",
+          "clo_id": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Acquire new circuit-analysis knowledge using appropriate learning strategies and apply it to solve circuit problems.",
           "aligned_sos": [
             "SO7"
           ],
@@ -1148,12 +1148,14 @@
       ],
       "overall_aligned_pis": [
         "PI12",
+        "PI31",
         "PI32",
         "PI71"
       ],
       "instructor": "Dr. Maged Esmail",
       "mapping_pi_levels": {
         "PI12": "P",
+        "PI31": "P",
         "PI32": "P",
         "PI71": "P"
       },
@@ -1199,8 +1201,12 @@
           "clo_id": 2.3,
           "nqf_domain": "Skills",
           "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
-          "aligned_sos": [],
-          "aligned_pis": []
+          "aligned_sos": [
+            "SO3"
+          ],
+          "aligned_pis": [
+            "PI31"
+          ]
         },
         {
           "domain": null,
@@ -1477,6 +1483,7 @@
         "PI12",
         "PI21",
         "PI22",
+        "PI23",
         "PI24",
         "PI31",
         "PI32",
@@ -1485,7 +1492,11 @@
         "PI51",
         "PI52",
         "PI61",
-        "PI71"
+        "PI62",
+        "PI63",
+        "PI64",
+        "PI71",
+        "PI72"
       ],
       "instructor": "Dr. Ahmed Alnakhli",
       "mapping_pi_levels": {
@@ -1493,6 +1504,7 @@
         "PI12": "P",
         "PI21": "P",
         "PI22": "P",
+        "PI23": "P",
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
@@ -1501,7 +1513,11 @@
         "PI51": "P",
         "PI52": "I",
         "PI61": "P",
-        "PI71": "P"
+        "PI62": "P",
+        "PI63": "P",
+        "PI64": "P",
+        "PI71": "P",
+        "PI72": "P"
       },
       "clos": [
         {
@@ -1530,6 +1546,7 @@
           "aligned_pis": [
             "PI21",
             "PI22",
+            "PI23",
             "PI24"
           ]
         },
@@ -1595,7 +1612,11 @@
             "PI51",
             "PI52",
             "PI61",
-            "PI71"
+            "PI62",
+            "PI63",
+            "PI64",
+            "PI71",
+            "PI72"
           ]
         }
       ]
@@ -1716,6 +1737,7 @@
       ],
       "overall_aligned_pis": [
         "PI11",
+        "PI12",
         "PI21",
         "PI22",
         "PI23",
@@ -1728,6 +1750,7 @@
       "instructor": "Dr. Ahmed Alnakhli",
       "mapping_pi_levels": {
         "PI11": "M",
+        "PI12": "M",
         "PI21": "P",
         "PI22": "P",
         "PI23": "P",
@@ -1798,11 +1821,13 @@
           "nqf_domain": "Skills",
           "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
           "aligned_sos": [
+            "SO1",
             "SO2",
             "SO4",
             "SO7"
           ],
           "aligned_pis": [
+            "PI12",
             "PI23",
             "PI24",
             "PI41",
@@ -1883,8 +1908,8 @@
         "PI24": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
+        "PI41": "P",
+        "PI42": "P",
         "PI51": "M",
         "PI52": "M",
         "PI61": "M",
@@ -2050,8 +2075,8 @@
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
+        "PI41": "P",
+        "PI42": "P",
         "PI51": "M",
         "PI52": "M",
         "PI63": "M",
@@ -2157,22 +2182,131 @@
       "course_id": 27,
       "course_title": "Electrical and Electronic Measurements",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO6"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI62",
+        "PI63",
+        "PI64"
+      ],
       "instructor": "Dr. Maged Esmail",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI12": "M",
+        "PI62": "M",
+        "PI63": "M",
+        "PI64": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain fundamental concepts such as accuracy, precision, sensitivity, and error analysis in electrical and electronic measurements.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate proficiency in using instruments like voltmeters, ammeters, wattmeters, oscilloscopes, and digital multimeters for accurate measurements.",
+          "aligned_sos": [
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI62"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate measurement data, identify errors, and apply corrective techniques to improve accuracy in electrical and electronic systems.",
+          "aligned_sos": [
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI63",
+            "PI64"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Utilize modern data acquisition systems, sensors, and transducers for real-world applications in power systems, electronics, and automation.",
+          "aligned_sos": [
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI62"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 415",
       "course_id": 28,
       "course_title": "Opto-Electronics",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI21"
+      ],
       "instructor": "Dr. Maged Esmail",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Understand light sources and detectors",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Design and evaluate optical network solutions",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze optical signal impairments",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 416",
@@ -2341,44 +2475,303 @@
       "course_id": 30,
       "course_title": "Communication Electronics",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO6",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI21",
+        "PI31",
+        "PI32",
+        "PI62",
+        "PI63",
+        "PI72"
+      ],
       "instructor": "Dr. Moustafa Nasralla",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI12": "M",
+        "PI21": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI62": "M",
+        "PI63": "M",
+        "PI72": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the operating principles and performance characteristics of electronic circuits and subsystems used in communication transmitters and receivers.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the performance of communication electronic circuits using appropriate circuit, semiconductor, and signal principles.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Design communication electronic circuits or subsystems for specified performance requirements.",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Communicate the analysis, design, and performance of communication electronic circuits through technical reports and presentations.",
+          "aligned_sos": [
+            "SO3"
+          ],
+          "aligned_pis": [
+            "PI31",
+            "PI32"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.4,
+          "nqf_domain": "Skills",
+          "clo_text": "Characterize the performance of communication electronic circuits through simulation and laboratory measurement.",
+          "aligned_sos": [
+            "SO6"
+          ],
+          "aligned_pis": [
+            "PI62",
+            "PI63"
+          ]
+        },
+        {
+          "domain": "Values, autonomy and responsibility",
+          "clo_id": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Apply newly acquired knowledge to emerging devices, circuits, and technologies in communication electronics.",
+          "aligned_sos": [
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI72"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 423",
       "course_id": 31,
       "course_title": "Data Communication Networks",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI21"
+      ],
       "instructor": "Dr. Moustafa Nasralla",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Understand basic data communication and network concepts and protocols",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Implement and evaluate middle-layer data access protocols",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Integrate Smart Systems with cloud-based networking solutions",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 424",
       "course_id": 32,
       "course_title": "Digital Communications",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI21"
+      ],
       "instructor": "Dr. Walid Dyab",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Recognize the source and channel coding theorems.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the notions of entropy, relative entropy and mutual information, and how they are relevant.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate the capacity of different channels.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze and design source and channel coding schemes.",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 425",
       "course_id": 33,
       "course_title": "Wireless Communications Systems",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI21"
+      ],
       "instructor": "Dr. Walid Dyab",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain fundamental wireless communication principles",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 1.2,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Describe the challenges in designing the physical and link layers of wireless systems.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Apply digital modulation and multiple access techniques",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Design wireless system components",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 426",
@@ -2514,11 +2907,68 @@
       "course_id": 35,
       "course_title": "Mechatronics",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3"
+      ],
+      "overall_aligned_pis": [
+        "PI11",
+        "PI21",
+        "PI31"
+      ],
       "instructor": "Dr. Mahmoud Abdelreheem",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI11": "M",
+        "PI21": "M",
+        "PI31": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Understand the concept of mechatronic system design and how to construct a conceptual framework to select an appropriate solution approach",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI11"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Learn how to work with sensors, actuators, controllers and how to read and interpret data sheets.",
+          "aligned_sos": [],
+          "aligned_pis": []
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Learn how to model and simulate mechatronic systems and how to verify design solutions before their implementation.",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Write technical reports following a well-defined design procedure",
+          "aligned_sos": [
+            "SO3"
+          ],
+          "aligned_pis": [
+            "PI31"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 434",
@@ -2873,22 +3323,183 @@
       "course_id": 39,
       "course_title": "Digital Signal Processing",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI21"
+      ],
       "instructor": "Dr. Walid Dyab",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Demonstrate the role of DSP in communications, audio processing, and radar systems.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze and manipulate discrete-time signals using time-domain and frequency-domain techniques.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Implement Z-transform, DFT, and FFT for efficient signal analysis.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Desgn and implement digital FIR and IIR filters for various signal processing applications.",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.4,
+          "nqf_domain": "Skills",
+          "clo_text": "Apply sampling and reconstruction techniques in real-world scenarios.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.5,
+          "nqf_domain": "Skills",
+          "clo_text": "Utilize MATLAB for signal processing simulation and visualization.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 454",
       "course_id": 40,
       "course_title": "Power System Planning",
       "performance_level": "M",
-      "overall_aligned_sos": [],
-      "overall_aligned_pis": [],
+      "overall_aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO7"
+      ],
+      "overall_aligned_pis": [
+        "PI12",
+        "PI21",
+        "PI31",
+        "PI32",
+        "PI72"
+      ],
       "instructor": "Dr. Ahmed Alnakhli",
-      "mapping_pi_levels": {},
-      "clos": []
+      "mapping_pi_levels": {
+        "PI12": "M",
+        "PI21": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI72": "M"
+      },
+      "clos": [
+        {
+          "domain": "Knowledge and understanding",
+          "clo_id": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the principles, objectives, criteria, and constraints of electric power system planning.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": "Skills",
+          "clo_id": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze electrical demand and planning data using appropriate forecasting, engineering, and economic techniques.",
+          "aligned_sos": [
+            "SO1"
+          ],
+          "aligned_pis": [
+            "PI12"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Develop power system planning alternatives for specified technical, economic, and reliability requirements.",
+          "aligned_sos": [
+            "SO2"
+          ],
+          "aligned_pis": [
+            "PI21"
+          ]
+        },
+        {
+          "domain": null,
+          "clo_id": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Communicate power system planning assumptions, analyses, results, and recommendations through technical reports and presentations.",
+          "aligned_sos": [
+            "SO3"
+          ],
+          "aligned_pis": [
+            "PI31",
+            "PI32"
+          ]
+        },
+        {
+          "domain": "Values, autonomy and responsibility",
+          "clo_id": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Apply newly acquired knowledge to emerging challenges and technologies in power system planning.",
+          "aligned_sos": [
+            "SO7"
+          ],
+          "aligned_pis": [
+            "PI72"
+          ]
+        }
+      ]
     },
     {
       "course_code": "EE 456",
@@ -3154,8 +3765,8 @@
         "PI22": "I",
         "PI23": "I",
         "PI24": "I",
-        "PI31": "I",
-        "PI32": "I",
+        "PI31": "P",
+        "PI32": "P",
         "PI51": "I",
         "PI62": "I",
         "PI63": "I",
@@ -3279,6 +3890,7 @@
       ],
       "pi_levels": {
         "PI12": "P",
+        "PI31": "P",
         "PI32": "P",
         "PI71": "P"
       }
@@ -3346,6 +3958,7 @@
         "PI12": "P",
         "PI21": "P",
         "PI22": "P",
+        "PI23": "P",
         "PI24": "P",
         "PI31": "P",
         "PI32": "P",
@@ -3354,7 +3967,11 @@
         "PI51": "P",
         "PI52": "I",
         "PI61": "P",
-        "PI71": "P"
+        "PI62": "P",
+        "PI63": "P",
+        "PI64": "P",
+        "PI71": "P",
+        "PI72": "P"
       }
     },
     {
@@ -3389,6 +4006,7 @@
       ],
       "pi_levels": {
         "PI11": "M",
+        "PI12": "M",
         "PI21": "P",
         "PI22": "P",
         "PI23": "P",
@@ -3421,8 +4039,8 @@
         "PI24": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
+        "PI41": "P",
+        "PI42": "P",
         "PI51": "M",
         "PI52": "M",
         "PI61": "M",
@@ -3450,8 +4068,8 @@
         "PI12": "M",
         "PI31": "M",
         "PI32": "M",
-        "PI41": "M",
-        "PI42": "M",
+        "PI41": "P",
+        "PI42": "P",
         "PI51": "M",
         "PI52": "M",
         "PI63": "M",
@@ -3464,15 +4082,29 @@
       "course_code": "EE 414",
       "course_title": "Electrical and Electronic Measurements",
       "instructor": "Dr. Maged Esmail",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO6"
+      ],
+      "pi_levels": {
+        "PI12": "M",
+        "PI62": "M",
+        "PI63": "M",
+        "PI64": "M"
+      }
     },
     {
       "course_code": "EE 415",
       "course_title": "Opto-Electronics",
       "instructor": "Dr. Maged Esmail",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      }
     },
     {
       "course_code": "EE 416",
@@ -3504,29 +4136,61 @@
       "course_code": "EE 417",
       "course_title": "Communication Electronics",
       "instructor": "Dr. Moustafa Nasralla",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO6",
+        "SO7"
+      ],
+      "pi_levels": {
+        "PI12": "M",
+        "PI21": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI62": "M",
+        "PI63": "M",
+        "PI72": "M"
+      }
     },
     {
       "course_code": "EE 423",
       "course_title": "Data Communication Networks",
       "instructor": "Dr. Moustafa Nasralla",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      }
     },
     {
       "course_code": "EE 424",
       "course_title": "Digital Communications",
       "instructor": "Dr. Walid Dyab",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      }
     },
     {
       "course_code": "EE 425",
       "course_title": "Wireless Communications Systems",
       "instructor": "Dr. Walid Dyab",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      }
     },
     {
       "course_code": "EE 426",
@@ -3557,8 +4221,16 @@
       "course_code": "EE 433",
       "course_title": "Mechatronics",
       "instructor": "Dr. Mahmoud Abdelreheem",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3"
+      ],
+      "pi_levels": {
+        "PI11": "M",
+        "PI21": "M",
+        "PI31": "M"
+      }
     },
     {
       "course_code": "EE 434",
@@ -3642,15 +4314,32 @@
       "course_code": "EE 442",
       "course_title": "Digital Signal Processing",
       "instructor": "Dr. Walid Dyab",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2"
+      ],
+      "pi_levels": {
+        "PI12": "M",
+        "PI21": "M"
+      }
     },
     {
       "course_code": "EE 454",
       "course_title": "Power System Planning",
       "instructor": "Dr. Ahmed Alnakhli",
-      "aligned_sos": [],
-      "pi_levels": {}
+      "aligned_sos": [
+        "SO1",
+        "SO2",
+        "SO3",
+        "SO7"
+      ],
+      "pi_levels": {
+        "PI12": "M",
+        "PI21": "M",
+        "PI31": "M",
+        "PI32": "M",
+        "PI72": "M"
+      }
     },
     {
       "course_code": "EE 456",

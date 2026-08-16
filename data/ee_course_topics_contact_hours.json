@@ -1,0 +1,760 @@
+{
+  "source_file": "EE Program Design Full ABET.xlsx",
+  "source_ranges": {
+    "topics": "C21:C30",
+    "contact_hours": "D21:D30",
+    "references": "C18:C20"
+  },
+  "courses": {
+    "EE 101": {
+      "course_title": "Computer Programming for Engineering",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction to Digital Computers and Problem-Solving Strategies.",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Introduction to Python and Its Importance; Getting Started with Python: Input/Output Statements, Basic Structure of Python Programs, Programming Style, Compilation, and Execution.",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Keywords and Identifiers, Constants, Variables, Data Types, and Python Instructions.",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Declaration, Assigning Values, Defining Variables, Operators, and Expressions.",
+          "contact_hours": 14
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Managing Input and Output Operations; Decision Making and Branching, Decision Making and Looping.",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Python Strings, Lists, Tuples, and Dictionaries.",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Functions: Built-in Functions, User-Defined Functions, Parameters and Arguments, Function Calls, Return Statements, Python Recursive Functions, Anonymous Functions.",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "Files and Exceptions: Text Files, Directories, Exceptions, Exceptions with Arguments, and User-Defined Exceptions.",
+          "contact_hours": 8
+        }
+      ],
+      "total_topic_contact_hours": 90,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 201": {
+      "course_title": "Introduction to Circuits",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction, Basic concepts, charge, current, voltage, power, energy, resistance, and Ohm's Law, dissipated power.",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Introduction, Series, Parallel and Series parallel circuits, Kirchhoff’s laws, voltage division and current distribution principles, voltage and current sources, open and short circuits",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Mesh and Nodal Analysis, Bridge networks, Y-∆ and ∆-Y conversion",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Superposition, Thevenin’s and Norton's theorems",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Review of capacitance and inductance, Generation of AC voltages, parameters of AC. waveforms, average and effective (RMS) values",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Review of complex number algebra, phasor representation, impedance and admittance. Capacitive and inductive reactance",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Examples of analysis methods for AC circuits",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "General equation, Resistive circuit, Apparent Power, Inductive circuit and reactive power, Capacitive circuit, The power triangle, The total P, Q, and Power factor correction",
+          "contact_hours": 10
+        }
+      ],
+      "total_topic_contact_hours": 90,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 211": {
+      "course_title": "Electronic Fundamentals",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction Diodes and Applications, Special purpose diodes",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Intro Bipolar Junction Transistor – BJT, BJT Operation",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Stabilization, Voltage divider bias method",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Ch/cs curves, modes of operation, load lines, Ratings, Q-Point, BJT applications",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Basic of Amplifier AC parameters - Transistor AC Models",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Classes of Power amplifiers",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Introduction to Operational Amplifiers Parameters",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "Op-Amps: Inverting and non-inverting amplifier,",
+          "contact_hours": 12
+        }
+      ],
+      "total_topic_contact_hours": 90,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 221": {
+      "course_title": "Logic Design",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introductory Concept",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Number Systems and Codes",
+          "contact_hours": 18
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Boolean Algebra",
+          "contact_hours": 18
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Combinational Logic Circuits",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Sequential logic circuts",
+          "contact_hours": 15
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Finite state machines",
+          "contact_hours": 15
+        }
+      ],
+      "total_topic_contact_hours": 90,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 231": {
+      "course_title": "Signals and Systems",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction to Signals and Systems",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Continuous-Time Signals and Systems",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Continuous-Time Linear Time-Invariant Systems",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Continuous-time Fourier Transform",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Discrete-Time Linear Time-Invariant Systems",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Discrete-Time Fourier Transform",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "The z-Transform",
+          "contact_hours": 8
+        }
+      ],
+      "total_topic_contact_hours": 60,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 202": {
+      "course_title": "Circuit Analysis",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Review of circuit elements, first-order RL and RC circuits",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Second-order RLC circuits",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Laplace transform and its application in circuit analysis",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Frequency selective circuits and active filter circuits",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Single Phase and Three Phase System",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Two-port networks",
+          "contact_hours": 10
+        }
+      ],
+      "total_topic_contact_hours": 60,
+      "references": [
+        "Alexander C.K and Sadiku MNO (2014). Fundamentals of Electric Circuits. 11th Edition, McGraw-Hill.",
+        "James William Nilsson and Susan A. Riedel, \"Electrical Circuits\", 11th edition, Pearson Education, 2019."
+      ],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 312": {
+      "course_title": "Electronic Engineering",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Multistage BJT Amplifier:",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Design and analysis of various multistage BJT Amplifiers, ‘re’ modelling of the various multistage BJT Amplifiers, BJT Frequency Response.",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Field-Effect Transistors and FET Biasing:",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Introduction, Construction and Characteristics of JFETs, Transfer Characteristics, JFET versus BJT, Depletion-Type MOSFET, Enhancement-Type MOSFET, VMOS and UMOS Power and MOSFETs, CMOS, MESFETs.",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "DC modelling of the FET, MOSFET configurations, Combination Networks, p-Channel FETs.",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "FET AC Modelling and Amplifier",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Introduction, JFET Small-Signal Model",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "Fixed-Bias, Self-Bias, Voltage-Divider, Common-Gate, Source-Follower (Common -Drain) Configurations,",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 9,
+          "topic_title": "Depletion-Type MOSFETs, Enhancement-Type MOSFETs, E-MOSFET Drain-Feedback Configuration, E-MOSFET Voltage-Divider Configuration, Designing FET Amplifier Networks. Effect of RL and Rsig, Cascade Configuration, Practical Applications.",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 10,
+          "topic_title": "Active filters, Oscillators, CMOS circuit such as NAND Gates, Transmission Gates and memory elements",
+          "contact_hours": 6
+        }
+      ],
+      "total_topic_contact_hours": 60,
+      "references": [
+        "T. L. Floyd, Electronic Devices, Ninth Edition, publisher: Prentice Hall.",
+        "Dennis L. Egglesto, “Basic Electronics for Scientists and Essential References Engineers”, Cambridge Press, 2011.",
+        "Jimmie J. Cathey, “Theory And Problems Of Electronic Devices And Circuits”, Schaum’s Outline, Second Edition, McGraw- Hill, 2022."
+      ],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 322": {
+      "course_title": "Microprocessors Design",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction and Review of Electronic Circuit Components, transistors and their applications in logic circuits",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Digital Integrated Circuits and Logic Families",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Programmable Logic Devices",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Hardware Description and Simulation Tools",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Design and Implementation of Combinational Circuits",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Design and Implementation of Sequential Circuits",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Memory Systems and Architecture",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "Computer Architecture Fundamentals",
+          "contact_hours": 10
+        },
+        {
+          "topic_number": 9,
+          "topic_title": "Assembly Language Programming with 8051 Microcontroller",
+          "contact_hours": 10
+        }
+      ],
+      "total_topic_contact_hours": 90,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 341": {
+      "course_title": "Electromagnetics Fundamental",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction & Review Coordinate Systems",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Coulomb’s Law, Electric Field intensity,",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Electric Flux Density,",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Gauss’ Law, Divergence and first Maxwell equation",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Electric Potential, Elec. Dipole, Energy density",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Currents and current density",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Boundary Conditions (BC), Capacitance",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "The Steady Magnetic Field: BIOT-SAVART LAW, STOKES’ THEOREM",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 9,
+          "topic_title": "Ampere’s Laws, Mag. Flux Density Mag. Potential, Magnetic Forces and Magnetization, BC",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 10,
+          "topic_title": "Magnetic Forces, Materials, and",
+          "contact_hours": 6
+        }
+      ],
+      "total_topic_contact_hours": 60,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 332": {
+      "course_title": "Control Systems",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction to Control Systems and Modelling EE systems",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Laplace transform and Block Diagram Representation of Control Systems",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Time-domain analysis of control systems:",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Time Domain Analysis of 1st Order Systems",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Time Domain Analysis of 2nd Order Systems",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Steady State Error & Routh-Herwitz Stability Criterion",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Frequency Response Analysis",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "Design of Feedback Control Systems:",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 9,
+          "topic_title": "Lead and lag compensatory design.",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 10,
+          "topic_title": "Proportional, integral, and derivative control.",
+          "contact_hours": 6
+        }
+      ],
+      "total_topic_contact_hours": 60,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 351": {
+      "course_title": "Communication Systems",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction to communication systems, analog and digital messages, channel effect, modulation and detection",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Signals and Signal Space",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Signals classification, some important signals, Fourier Series, Fourier Transform, properties of Fourier transform",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Analysis and transmission of signals",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "signal transmission, signal distortion, ideal versus practical filters, essential bandwidth",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Amplitude modulations and demodulations",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Baseband vs passband, double-sideband suppressed carrier modulation",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "Ordinary AM modulation, single-sideband AM, Quadrature AM, vestigial sideband",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 9,
+          "topic_title": "FDM, Synchronization, superheterodyne receiver",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 10,
+          "topic_title": "False true, relation between FM and PM, bandwidth of angle-modulated waves",
+          "contact_hours": 9
+        }
+      ],
+      "total_topic_contact_hours": 90,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 305": {
+      "course_title": "Power Electronics",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction of power semiconductor device, Structure, and operating characteristics of power, power BJT, MOSFET and IGBT, switching characteristics, firing circuits, basic concepts of PWM control.",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Single Phase AC to DC Controlled converter configurations – Semi-converter – Fully controlled converter – R, RL, RLE load – operation under continuous and discontinuous conduction – Firing Schemes for converter- Dual converters.",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Basic principles of DC-DC- Converter, step-down and step-up chopper-control strategy, Choppers-A, B, C, D and E, volt-second and ampere-second balance equations- Steady state analysis, CCM and DCM characteristics, Buck Converter, Boost Converter, and Buck - Boost converter, Cuk Converter. Numerical and analysis examples",
+          "contact_hours": 18
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Single phase and three phase voltage source inverters (both 120o mode and 180o mode)– Voltage & harmonic control- PWM techniques: Multiple PWM, Sinusoidal PWM, modified sinusoidal PWM.",
+          "contact_hours": 18
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Single phase and Three phase AC voltage controllers, Single phase and Three phase AC voltage cyclo-converter.",
+          "contact_hours": 18
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Application of Power Electronics Converter in various energy sectors e.g. industrial, electric grid, renewable energy, microgrid, electric vehicle etc.",
+          "contact_hours": 12
+        }
+      ],
+      "total_topic_contact_hours": 90,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 304": {
+      "course_title": "Electrical Machines",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction to Magnetic circuit concepts",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Electro-mechanical systems, Motor/load interactions",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Transformer theory, EMF, OC, SC operation",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "DC Generators, Types and Characteristics",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "DC machines, Types, Speed Control, and Characteristics",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Starting methods and Braking",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "Induction Machines, Types, Speed Control",
+          "contact_hours": 8
+        },
+        {
+          "topic_number": 8,
+          "topic_title": "Synchronous Machines and Special Machines",
+          "contact_hours": 8
+        }
+      ],
+      "total_topic_contact_hours": 60,
+      "references": [
+        "Electric Machines by Nagrath and Kothari | 5th Edition, McGrawHill, 2017",
+        "Electric Machinery Fundamentals 5th Edition, McGraw Hill, 5 th Edition by Stephen Chapman, 2011.",
+        "Fundamentals of Electric machines by B. R. Gupta, New age International, 2009"
+      ],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 403": {
+      "course_title": "Power Systems",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Power and power factor calculations in single phase and three phase power",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Generation of electrical energy (coal, hydro, gas, sun, water, etc.)",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Network calculations for balanced and unbalanced, star and delta connected, three phase networks",
+          "contact_hours": 6
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Load flow calculations",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "The per unit system representation",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 6,
+          "topic_title": "Single line equivalent diagrams",
+          "contact_hours": 12
+        },
+        {
+          "topic_number": 7,
+          "topic_title": "power flow calculations",
+          "contact_hours": 6
+        }
+      ],
+      "total_topic_contact_hours": 60,
+      "references": [],
+      "validation_status": "PASS",
+      "anomalies": []
+    },
+    "EE 490": {
+      "course_title": "Senior Design Project",
+      "course_topics": [
+        {
+          "topic_number": 1,
+          "topic_title": "Introduction to Engineering Design",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 2,
+          "topic_title": "Conceptual Design Process",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 3,
+          "topic_title": "Product Development Cycle",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 4,
+          "topic_title": "Program specific topics",
+          "contact_hours": 9
+        },
+        {
+          "topic_number": 5,
+          "topic_title": "Project Report and Final Presentation",
+          "contact_hours": 9
+        }
+      ],
+      "total_topic_contact_hours": 45,
+      "references": [],
+      "validation_status": "MISMATCH",
+      "anomalies": [
+        "Topic-hour total 45 differs from expected 60"
+      ]
+    },
+    "EE 492": {
+      "course_title": "Cooperative Training",
+      "course_topics": [],
+      "total_topic_contact_hours": 0,
+      "references": [],
+      "validation_status": "MISMATCH",
+      "anomalies": [
+        "Row 21: topic present but contact hours missing",
+        "Unclear credit-hour value: \"10\"",
+        "Topic count 0 is outside 1–10"
+      ]
+    }
+  }
+}

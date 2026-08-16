@@ -102,7 +102,64 @@
               "Major and Final Exams"
             ]
           }
-        ]
+        ],
+        "course_description": "This course covers the concept of programming languages in Python. It enables the student to understand and write basic coding based on various operators, functions, logic statements, Strings, tuples, etc., in the Python programming language. In addition, the course covers the basic concept of files and exceptions.",
+        "prerequisites": [],
+        "prerequisite_text": null,
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Understand the basics Linux, Microprocessor and Microcontroller Programming concepts.",
+          "Understand the basics of the computer programming language python.",
+          "Write a basic code in the computer programming language python."
+        ],
+        "textbooks": [
+          "E Balagurusamy, \"Problem Solving and Python Programming\", McGraw Hill Education, 2018."
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction to Digital Computers and Problem-Solving Strategies.",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Introduction to Python and Its Importance; Getting Started with Python: Input/Output Statements, Basic Structure of Python Programs, Programming Style, Compilation, and Execution.",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Keywords and Identifiers, Constants, Variables, Data Types, and Python Instructions.",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Declaration, Assigning Values, Defining Variables, Operators, and Expressions.",
+            "contact_hours": 14
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Managing Input and Output Operations; Decision Making and Branching, Decision Making and Looping.",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Python Strings, Lists, Tuples, and Dictionaries.",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Functions: Built-in Functions, User-Defined Functions, Parameters and Arguments, Function Calls, Return Statements, Python Recursive Functions, Anonymous Functions.",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "Files and Exceptions: Text Files, Directories, Exceptions, Exceptions with Arguments, and User-Defined Exceptions.",
+            "contact_hours": 8
+          }
+        ],
+        "total_topic_contact_hours": 90
       },
       {
         "course_code": "EE 201",
@@ -249,7 +306,67 @@
               "Simulation/Computational Assignments"
             ]
           }
-        ]
+        ],
+        "course_description": "This module provides a comprehensive introduction to both DC and AC circuit principles. Students will begin by reviewing fundamental concepts, including current, voltage, and power. The course then explores series and parallel circuits and delves into Ohm’s Law, Kirchhoff’s Laws, source transformations, bridge networks, and delta/star transformations. Key analysis methods and network theorems are also covered. Additionally, the module revisits inductors and capacitors, introduces sinusoidal sources and the concept of phasors, and details methods for analyzing AC circuits. Practical experience is emphasized through hands-on use of electrical measurement tools such as voltmeters, ammeters, wattmeters, function generators, and oscilloscopes.",
+        "prerequisites": [
+          "PHYS 205",
+          "MATH 113"
+        ],
+        "prerequisite_text": "PHYS 205, Math113",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Understand the basic linear electric circuits, theories, and concepts.",
+          "Understand circuit theorems and laws of circuit analysis in DC and AC circuits.",
+          "Gain hands-on experience and develop skills in using measurement tools like voltmeters, ammeters, and oscilloscopes while linking theory to practice."
+        ],
+        "textbooks": [
+          "Robert L. Boylestad - Introductory Circuit Analysis (2016, Pearson), 13th Edition"
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction, Basic concepts, charge, current, voltage, power, energy, resistance, and Ohm's Law, dissipated power.",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Introduction, Series, Parallel and Series parallel circuits, Kirchhoff’s laws, voltage division and current distribution principles, voltage and current sources, open and short circuits",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Mesh and Nodal Analysis, Bridge networks, Y-∆ and ∆-Y conversion",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Superposition, Thevenin’s and Norton's theorems",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Review of capacitance and inductance, Generation of AC voltages, parameters of AC. waveforms, average and effective (RMS) values",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Review of complex number algebra, phasor representation, impedance and admittance. Capacitive and inductive reactance",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Examples of analysis methods for AC circuits",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "General equation, Resistive circuit, Apparent Power, Inductive circuit and reactive power, Capacitive circuit, The power triangle, The total P, Q, and Power factor correction",
+            "contact_hours": 10
+          }
+        ],
+        "total_topic_contact_hours": 90
       },
       {
         "course_code": "EE 211",
@@ -376,7 +493,66 @@
               "Design Project Assignment"
             ]
           }
-        ]
+        ],
+        "course_description": "This course provides a comprehensive introduction to essential semiconductor devices and amplifiers. It covers diodes, including special-purpose types, and explores Bipolar Junction Transistors (BJTs) with a focus on their operation, characteristics, and various biasing methods. Students will study transistor amplifier configurations such as common emitter, common collector, and common base, as well as classes of power amplifiers. The course also delves into operational amplifiers (Op-Amps), addressing their parameters, feedback mechanisms, and various practical circuit applications.",
+        "prerequisites": [
+          "EE 201"
+        ],
+        "prerequisite_text": "EE 201",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Understand diode and BJT fundamentals and applications.",
+          "Analyze and design various transistor amplifier configurations.",
+          "Master operational amplifier parameters and feedback effects."
+        ],
+        "textbooks": [
+          "Electronic Devices (Conventional Current Version): Pearson New International Edition, Author(s): Floyd, Thomas L., Publisher: Pearson (Intl), Edition: 9th, Pages: 952, Print ISBN: 9781292025643, 1292025646eText ISBN: 9781292038070"
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction Diodes and Applications, Special purpose diodes",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Intro Bipolar Junction Transistor – BJT, BJT Operation",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Stabilization, Voltage divider bias method",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Ch/cs curves, modes of operation, load lines, Ratings, Q-Point, BJT applications",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Basic of Amplifier AC parameters - Transistor AC Models",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Classes of Power amplifiers",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Introduction to Operational Amplifiers Parameters",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "Op-Amps: Inverting and non-inverting amplifier,",
+            "contact_hours": 12
+          }
+        ],
+        "total_topic_contact_hours": 90
       },
       {
         "course_code": "EE 221",
@@ -552,7 +728,56 @@
               "Teamwork/Peer Assessment"
             ]
           }
-        ]
+        ],
+        "course_description": "This module enables students to understand concepts in binary numbers, number base conversion, complements and codes, definition of Boolean Algebra, Boolean functions, digital logic gates, integrated circuits, Karnaugh map methods, combinational logic circuits, sequential logic circuits and Memory modules. Design and analysis of sequential logic circuits such as: Shift Registers, Counters, Synchronous and Asynchronous Sequential Circuits, State Diagrams, State Tables, Students will be able to develop, measure, and test different types of Sequential Circuits using D-type, T-type, and JK-type Flip-Flops.",
+        "prerequisites": [
+          "EE 101"
+        ],
+        "prerequisite_text": "EE 101",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Provide students with a solid foundation in the principles and techniques of digital logic design.",
+          "Develop students’ ability to analyze, design, and implement combinational and sequential digital circuits using standard logic devices and design tools.",
+          "Introduce students to practical digital system design through simulation and hardware-based implementation using modern development platforms."
+        ],
+        "textbooks": [
+          "Digital Systems: Principles and Applications, 12/E, 2017, Neal Widmer, Greg Moss, Ronald J. Tocci. ISBN-10: 0135103827, ISBN 13: 978-0-13-422013-0, Publisher: Prentice Hall"
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introductory Concept",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Number Systems and Codes",
+            "contact_hours": 18
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Boolean Algebra",
+            "contact_hours": 18
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Combinational Logic Circuits",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Sequential logic circuts",
+            "contact_hours": 15
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Finite state machines",
+            "contact_hours": 15
+          }
+        ],
+        "total_topic_contact_hours": 90
       },
       {
         "course_code": "EE 231",
@@ -704,7 +929,62 @@
               "Homework and Classwork Assignments"
             ]
           }
-        ]
+        ],
+        "course_description": "This course covers basic concepts and methods related to continuous and discrete-time signals and systems. The course includes: signals and systems and their properties, linear time-invariant systems, stability analysis, sampling of continuous-time signals, z-transform, continuous and discrete-time Fourier transform, discrete Fourier transform and fast Fourier Transform.",
+        "prerequisites": [
+          "MATH 225",
+          "EE 201"
+        ],
+        "prerequisite_text": "MATH225, EE 201",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Introduce the fundamental concepts of continuous-time and discrete-time signals and systems, including classification, representation, and basic transformations.",
+          "Equip students with analytical tools such as convolution, Fourier analysis, and Laplace and Z-transforms to model and analyze linear systems.",
+          "Develop students’ ability to interpret and apply signal processing techniques in engineering contexts, supported by mathematical reasoning and computational tools."
+        ],
+        "textbooks": [
+          "Signals, Systems, & Transforms (5th Global Edition), Phillips, Charles; Parr, John; Riskin, Published by Pearson Education (2014). ISBN: 9781292015286"
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction to Signals and Systems",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Continuous-Time Signals and Systems",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Continuous-Time Linear Time-Invariant Systems",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Continuous-time Fourier Transform",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Discrete-Time Linear Time-Invariant Systems",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Discrete-Time Fourier Transform",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "The z-Transform",
+            "contact_hours": 8
+          }
+        ],
+        "total_topic_contact_hours": 60
       },
       {
         "course_code": "EE 202",
@@ -785,7 +1065,7 @@
           {
             "clo_number": 2.3,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze frequency selective circuits",
+            "clo_text": "Analyze frequency selective circuits, three-phase and two-port networks.",
             "mapped_sos": [
               "SO6"
             ],
@@ -805,9 +1085,9 @@
             ]
           },
           {
-            "clo_number": 2.4,
-            "nqf_domain": "Skills",
-            "clo_text": "Analyze three-phase networks and two-port networks.",
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
+            "clo_text": "Acquire new circuit-analysis knowledge using appropriate learning strategies and apply it to solve circuit problems.",
             "mapped_sos": [
               "SO7"
             ],
@@ -825,7 +1105,60 @@
               "Simulation/Computational Assignments"
             ]
           }
-        ]
+        ],
+        "course_description": "The course begins by reviewing the behaviors of inductor and capacitor storing elements. It then covers the characteristics and behavior of first-order RL/RC circuits, as well as second-order RLC circuits. Additionally, the course explains the conversion of time-domain circuits to the s-domain using the Laplace transform. Furthermore, it delves into frequency response and resonance, providing a basic understanding of filter circuits. The course also includes the study of electrical configurations involving three phases of networks and the analysis of two-port networks.",
+        "prerequisites": [
+          "EE 201",
+          "MATH 225"
+        ],
+        "prerequisite_text": "EE 201, MATH 225",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Understand RL, RC, and RLC circuit behaviors and analysis.",
+          "Mastery of time-domain to s-domain circuit conversion and analysis.",
+          "Knowledge of frequency response and filter circuits."
+        ],
+        "textbooks": [
+          "Ravish R. Singh, \"Electrical Networks\" Tata McGraw-Hill Education, July 2009."
+        ],
+        "references": [
+          "Alexander C.K and Sadiku MNO (2014). Fundamentals of Electric Circuits. 11th Edition, McGraw-Hill.",
+          "James William Nilsson and Susan A. Riedel, \"Electrical Circuits\", 11th edition, Pearson Education, 2019."
+        ],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Review of circuit elements, first-order RL and RC circuits",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Second-order RLC circuits",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Laplace transform and its application in circuit analysis",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Frequency selective circuits and active filter circuits",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Single Phase and Three Phase System",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Two-port networks",
+            "contact_hours": 10
+          }
+        ],
+        "total_topic_contact_hours": 60
       },
       {
         "course_code": "EE 312",
@@ -928,7 +1261,80 @@
               "Major and Final Exams"
             ]
           }
-        ]
+        ],
+        "course_description": "This course enables the students to understand the DC and AC analysis, and modelling of multistage configuration based on BJT, FET, MOSFET. This course also helps to analyze and design the different electronic circuitries- CMOS circuit such as NAND Gates, Transmission Gates and memory elements.",
+        "prerequisites": [
+          "EE 211"
+        ],
+        "prerequisite_text": "EE 211",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Identify the design characteristics of BJT, FET, MOSFET amplifiers, filters and oscillators.",
+          "Analyzing BJT multistage models and Frequency response.",
+          "Analyzing DC and AC model the different configurations of FET/MOSFET"
+        ],
+        "textbooks": [
+          "Robert L. Boylestad Louis Nashelsky, ‘Electronic Devices and Circuit Theory”, Eleventh Edition, Pearson, 2013."
+        ],
+        "references": [
+          "T. L. Floyd, Electronic Devices, Ninth Edition, publisher: Prentice Hall.",
+          "Dennis L. Egglesto, “Basic Electronics for Scientists and Essential References Engineers”, Cambridge Press, 2011.",
+          "Jimmie J. Cathey, “Theory And Problems Of Electronic Devices And Circuits”, Schaum’s Outline, Second Edition, McGraw- Hill, 2022."
+        ],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Multistage BJT Amplifier:",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Design and analysis of various multistage BJT Amplifiers, ‘re’ modelling of the various multistage BJT Amplifiers, BJT Frequency Response.",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Field-Effect Transistors and FET Biasing:",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Introduction, Construction and Characteristics of JFETs, Transfer Characteristics, JFET versus BJT, Depletion-Type MOSFET, Enhancement-Type MOSFET, VMOS and UMOS Power and MOSFETs, CMOS, MESFETs.",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "DC modelling of the FET, MOSFET configurations, Combination Networks, p-Channel FETs.",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "FET AC Modelling and Amplifier",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Introduction, JFET Small-Signal Model",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "Fixed-Bias, Self-Bias, Voltage-Divider, Common-Gate, Source-Follower (Common -Drain) Configurations,",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 9,
+            "topic_title": "Depletion-Type MOSFETs, Enhancement-Type MOSFETs, E-MOSFET Drain-Feedback Configuration, E-MOSFET Voltage-Divider Configuration, Designing FET Amplifier Networks. Effect of RL and Rsig, Cascade Configuration, Practical Applications.",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 10,
+            "topic_title": "Active filters, Oscillators, CMOS circuit such as NAND Gates, Transmission Gates and memory elements",
+            "contact_hours": 6
+          }
+        ],
+        "total_topic_contact_hours": 60
       },
       {
         "course_code": "EE 322",
@@ -1131,7 +1537,73 @@
               "Prototype/System Demonstration"
             ]
           }
-        ]
+        ],
+        "course_description": "The course will focus primarily on basic embedded system concepts and the student will learn the basics of designing, interfacing, configuring, and programming embedded systems. One of popular microcontroller is selected to implement the techniques learned in class. By the end of the course the student will have mastered the basics of embedded system design and programming.",
+        "prerequisites": [
+          "EE 211",
+          "EE 221",
+          "CEE 201"
+        ],
+        "prerequisite_text": "EE 211, EE 221, CEE 201",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "To understand embedded hardware and software design fundamentals.",
+          "To develop an embedded system from the ground up, starting with electronic components and data sheets, and progressing through construction of hardware and implementation of firmware.",
+          "To develop the opportunity to experience embedded system design in a manner similar to that practiced in industry."
+        ],
+        "textbooks": [
+          "David Harris and Sarah Harris, “Digital Design and Computer Architecture” RISC-V Edition, Elsevier 2021"
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction and Review of Electronic Circuit Components, transistors and their applications in logic circuits",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Digital Integrated Circuits and Logic Families",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Programmable Logic Devices",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Hardware Description and Simulation Tools",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Design and Implementation of Combinational Circuits",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Design and Implementation of Sequential Circuits",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Memory Systems and Architecture",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "Computer Architecture Fundamentals",
+            "contact_hours": 10
+          },
+          {
+            "topic_number": 9,
+            "topic_title": "Assembly Language Programming with 8051 Microcontroller",
+            "contact_hours": 10
+          }
+        ],
+        "total_topic_contact_hours": 90
       },
       {
         "course_code": "EE 341",
@@ -1210,8 +1682,12 @@
             "clo_number": 2.3,
             "nqf_domain": "Skills",
             "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
-            "mapped_sos": [],
-            "pi_codes": [],
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31"
+            ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
               "Interactive Lectures"
@@ -1267,7 +1743,77 @@
               "Oral Technical Presentation"
             ]
           }
-        ]
+        ],
+        "course_description": "This module is designed to introduce the electromagnetic fields. Coulomb's law, Gauss's law, electrical potential, dielectric materials capacitance, boundary value problems, Biot-Savart law, Ampere's law, Lorentz force equation, magnetic materials, magnetic inductance, time varying fields and Maxwell's equations",
+        "prerequisites": [
+          "MATH 215",
+          "MATH 225",
+          "EE 201"
+        ],
+        "prerequisite_text": "MATH 215, MATH225, EE 201",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Provide knowledge about the contribution of electromagnetics to the fields of electrical and communication engineering.",
+          "Provide the technical foundation required for more advanced future courses in applied electromagnetics engineering"
+        ],
+        "textbooks": [
+          "W.H. Hayt, Jr. and J.A. Buck, “Engineering Electromagnetics,” 9th edition, McGraw Hill, 2018"
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction & Review Coordinate Systems",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Coulomb’s Law, Electric Field intensity,",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Electric Flux Density,",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Gauss’ Law, Divergence and first Maxwell equation",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Electric Potential, Elec. Dipole, Energy density",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Currents and current density",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Boundary Conditions (BC), Capacitance",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "The Steady Magnetic Field: BIOT-SAVART LAW, STOKES’ THEOREM",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 9,
+            "topic_title": "Ampere’s Laws, Mag. Flux Density Mag. Potential, Magnetic Forces and Magnetization, BC",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 10,
+            "topic_title": "Magnetic Forces, Materials, and",
+            "contact_hours": 6
+          }
+        ],
+        "total_topic_contact_hours": 60
       },
       {
         "course_code": "EE 332",
@@ -1387,7 +1933,77 @@
               "Major and Final Exams"
             ]
           }
-        ]
+        ],
+        "course_description": "Introduction to feedback control systems. Block diagram and signal flow graph representation. Mathematical modeling of physical systems. Stability of linear control systems. Time-domain and frequency-domain analysis tools and performance assessment. Lead and lag compensatory design. Proportional, integral, and derivative control.",
+        "prerequisites": [
+          "EE 231",
+          "MATH 223"
+        ],
+        "prerequisite_text": "EE 231, MATH 223",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Introduce the fundamental principles of feedback control systems, including modeling, analysis, and stability of linear time-invariant systems.",
+          "Equip students with techniques to analyze system performance in both time and frequency domains using classical control methods.",
+          "Develop students’ ability to design, simulate, and evaluate control systems using software tools and apply control strategies to practical engineering problems."
+        ],
+        "textbooks": [
+          "Modern Control Modern Control Engineering, (5th Edition) By: Katsuhiko Ogata."
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction to Control Systems and Modelling EE systems",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Laplace transform and Block Diagram Representation of Control Systems",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Time-domain analysis of control systems:",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Time Domain Analysis of 1st Order Systems",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Time Domain Analysis of 2nd Order Systems",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Steady State Error & Routh-Herwitz Stability Criterion",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Frequency Response Analysis",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "Design of Feedback Control Systems:",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 9,
+            "topic_title": "Lead and lag compensatory design.",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 10,
+            "topic_title": "Proportional, integral, and derivative control.",
+            "contact_hours": 6
+          }
+        ],
+        "total_topic_contact_hours": 60
       },
       {
         "course_code": "EE 351",
@@ -1550,7 +2166,77 @@
               "Oral Technical Presentation"
             ]
           }
-        ]
+        ],
+        "course_description": "In this course, we focus on signal transforms and continuous-wave modulation, which is the basic operation of analog communication systems. Initially, we give the students an insight and understanding of signals classifications, Fourier series, Fourier transform, spectrum analysis, and explore their applications in the context of analog communication systems. We then cover thoroughly amplitude modulation including the generation and reception of double-side band, single side-band, and vestigial side-band. We also cover the angle modulations (phase and frequency), the generation both the narrow and wide-band angle modulation.",
+        "prerequisites": [
+          "EE 211",
+          "EE 231"
+        ],
+        "prerequisite_text": "EE 211, EE 231",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Introduce topics of signal spectrum analysis, modulation/demodulation, pulse modulation techniques, and design tradeoffs.",
+          "Evaluate the characteristics of different classes of signals, and produce their representation in both time and frequency domains.",
+          "Provide knowledge of analog modulation techniques and their comparative analysis and applications suitability."
+        ],
+        "textbooks": [
+          "Lathi, Modern Digital and Analog Communication Systems, Fifth Edition, Oxford University Press, 2018."
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction to communication systems, analog and digital messages, channel effect, modulation and detection",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Signals and Signal Space",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Signals classification, some important signals, Fourier Series, Fourier Transform, properties of Fourier transform",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Analysis and transmission of signals",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "signal transmission, signal distortion, ideal versus practical filters, essential bandwidth",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Amplitude modulations and demodulations",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Baseband vs passband, double-sideband suppressed carrier modulation",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "Ordinary AM modulation, single-sideband AM, Quadrature AM, vestigial sideband",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 9,
+            "topic_title": "FDM, Synchronization, superheterodyne receiver",
+            "contact_hours": 9
+          },
+          {
+            "topic_number": 10,
+            "topic_title": "False true, relation between FM and PM, bandwidth of angle-modulated waves",
+            "contact_hours": 9
+          }
+        ],
+        "total_topic_contact_hours": 90
       },
       {
         "course_code": "EE 305",
@@ -1596,6 +2282,7 @@
             "pi_codes": [
               "PI21",
               "PI22",
+              "PI23",
               "PI24"
             ],
             "teaching_strategy": [
@@ -1697,7 +2384,11 @@
               "PI51",
               "PI52",
               "PI61",
-              "PI71"
+              "PI62",
+              "PI63",
+              "PI64",
+              "PI71",
+              "PI72"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -1712,7 +2403,56 @@
               "Oral Technical Presentation"
             ]
           }
-        ]
+        ],
+        "course_description": "This course is an introduction to Power Electronics. It enables the student to understand the basic Power Electronics components, operations, design, and the analysis of basic power electronics converter circuits. The course is focused on the applications of the power converter in various sectors, e.g., industrial, electric grid, renewable energy, microgrid, electric vehicle, etc. In addition, the course covers the basic characteristics, control schemes, and applications of power semiconductor devices and circuits.",
+        "prerequisites": [
+          "EE 211"
+        ],
+        "prerequisite_text": "EE 211",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Provide knowledge about power semiconductor devices and circuits",
+          "Understand the types, modes of operation and design of various power converters.",
+          "To connect the dots between power electronics and various energy sectors e.g. industrial, electric grid, renewable energy, microgrid, electric vehicle etc."
+        ],
+        "textbooks": [
+          "Rashid M.H., ‘Power Electronics Handbook’, Academic Press, 2001."
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction of power semiconductor device, Structure, and operating characteristics of power, power BJT, MOSFET and IGBT, switching characteristics, firing circuits, basic concepts of PWM control.",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Single Phase AC to DC Controlled converter configurations – Semi-converter – Fully controlled converter – R, RL, RLE load – operation under continuous and discontinuous conduction – Firing Schemes for converter- Dual converters.",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Basic principles of DC-DC- Converter, step-down and step-up chopper-control strategy, Choppers-A, B, C, D and E, volt-second and ampere-second balance equations- Steady state analysis, CCM and DCM characteristics, Buck Converter, Boost Converter, and Buck - Boost converter, Cuk Converter. Numerical and analysis examples",
+            "contact_hours": 18
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Single phase and three phase voltage source inverters (both 120o mode and 180o mode)– Voltage & harmonic control- PWM techniques: Multiple PWM, Sinusoidal PWM, modified sinusoidal PWM.",
+            "contact_hours": 18
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Single phase and Three phase AC voltage controllers, Single phase and Three phase AC voltage cyclo-converter.",
+            "contact_hours": 18
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Application of Power Electronics Converter in various energy sectors e.g. industrial, electric grid, renewable energy, microgrid, electric vehicle etc.",
+            "contact_hours": 12
+          }
+        ],
+        "total_topic_contact_hours": 90
       },
       {
         "course_code": "EE 304",
@@ -1839,7 +2579,71 @@
               "Oral Technical Presentation"
             ]
           }
-        ]
+        ],
+        "course_description": "The students will learn the fundamentals of electrical machinery. They will learn to analyze the voltage-current, torque-speed characteristics of the different machines. The students also will be able to understand the transformers, principles, and operation",
+        "prerequisites": [
+          "EE 202",
+          "EE 341"
+        ],
+        "prerequisite_text": "EE202, EE341",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Describe the working principle of a Transformer, DC motor and a AC Motor.",
+          "List and describe the main components of a Motors and Transformers.",
+          "Describe the operation of, and factors affecting output power, torque, speed and direction of rotation of DC, AC motors."
+        ],
+        "textbooks": [
+          "BL Theraja, \" A Textbook of Electrical Technology - Volume II\", S. Chand, 2023."
+        ],
+        "references": [
+          "Electric Machines by Nagrath and Kothari | 5th Edition, McGrawHill, 2017",
+          "Electric Machinery Fundamentals 5th Edition, McGraw Hill, 5 th Edition by Stephen Chapman, 2011.",
+          "Fundamentals of Electric machines by B. R. Gupta, New age International, 2009"
+        ],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Introduction to Magnetic circuit concepts",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Electro-mechanical systems, Motor/load interactions",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Transformer theory, EMF, OC, SC operation",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "DC Generators, Types and Characteristics",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "DC machines, Types, Speed Control, and Characteristics",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Starting methods and Braking",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Induction Machines, Types, Speed Control",
+            "contact_hours": 8
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "Synchronous Machines and Special Machines",
+            "contact_hours": 8
+          }
+        ],
+        "total_topic_contact_hours": 60
       },
       {
         "course_code": "EE 403",
@@ -1946,11 +2750,13 @@
             "nqf_domain": "Skills",
             "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
             "mapped_sos": [
+              "SO1",
               "SO2",
               "SO4",
               "SO7"
             ],
             "pi_codes": [
+              "PI12",
               "PI23",
               "PI24",
               "PI41",
@@ -2017,7 +2823,61 @@
               "Major and Final Exams"
             ]
           }
-        ]
+        ],
+        "course_description": "This course provides an introduction to power systems used in electrical engineering. Examples include different types of generation systems, load flow studies and infinite bus systems with exploring their applications in substations and power plants.",
+        "prerequisites": [
+          "EE 304"
+        ],
+        "prerequisite_text": "EE 304",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "The fundamental concepts of analysis and control of power systems;",
+          "The understanding of problems commonly encountered in power system engineering practice; and",
+          "The modeling, analysis and control techniques applied to solve some practical problems in power systems."
+        ],
+        "textbooks": [
+          "D. P. Kothari, I. J. Nagrath, Power System Engineering, 2019, 3rd edition, McGraw-Hill Education"
+        ],
+        "references": [],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Power and power factor calculations in single phase and three phase power",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Generation of electrical energy (coal, hydro, gas, sun, water, etc.)",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Network calculations for balanced and unbalanced, star and delta connected, three phase networks",
+            "contact_hours": 6
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "Load flow calculations",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "The per unit system representation",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Single line equivalent diagrams",
+            "contact_hours": 12
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "power flow calculations",
+            "contact_hours": 6
+          }
+        ],
+        "total_topic_contact_hours": 60
       },
       {
         "course_code": "EE 490",
@@ -2248,7 +3108,28 @@
               "Weekly Progress Assessment"
             ]
           }
-        ]
+        ],
+        "course_description": "Project groups deliver their products that have progressed through the design, analysis, testing and evaluation stages. The project teams produce a polished professional report that describes the design process, implementation and testing, verification and validation, and a critical appraisal of the project. An oral presentation and graphic works are complementary project deliverables",
+        "prerequisites": [
+          "ENG 301",
+          "CEE 201"
+        ],
+        "prerequisite_text": "ENG 301, CEE 201, Completion of 90 Credit Hours",
+        "corequisites": [
+          "ETHC 305"
+        ],
+        "corequisite_text": "ETHC305",
+        "course_objectives": [
+          "Apply engineering knowledge and design methodology to develop a functional solution to a real-world electrical engineering problem.",
+          "Demonstrate effective teamwork, project management, and professional communication skills through all phases of the design process.",
+          "Evaluate design outcomes with consideration for ethical, environmental, societal, and economic factors, and present the final product through comprehensive technical documentation and oral presentations."
+        ],
+        "textbooks": [
+          "Exploring Engineering: An Introduction to Engineering and Design / Philip Kosky, ISBN 978-0-12-374723-5"
+        ],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 492",
@@ -2399,7 +3280,21 @@
               "Final Oral Presentation"
             ]
           }
-        ]
+        ],
+        "course_description": "Cooperative Education is a planned learning experience, for which credits are earned, that integrates classroom theory and learning experiences at a workplace. The experience enables students to apply and refine the knowledge and skills acquired in a related curriculum course. The Co-op is a supervised work experience in a position in the government or the private sector which aimed to assist students in making the transition from the classroom to industry. Students are required to finish 28 weeks on the job to earn 10-credit hours for the course",
+        "prerequisites": [],
+        "prerequisite_text": "Compltion of 128 Credit Hours",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [
+          "Provide students with real-world professional experience in electrical engineering environments to apply theoretical knowledge to practical problems.",
+          "Develop students’ professional skills, including communication, teamwork, time management, and ethical responsibility, through structured workplace engagement.",
+          "Expose students to the standards, practices, and challenges of industry to enhance their readiness for full-time employment and lifelong learning."
+        ],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 414",
@@ -2410,7 +3305,105 @@
         "year": "0",
         "level": "0",
         "credit_hours": "3",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Explain fundamental concepts such as accuracy, precision, sensitivity, and error analysis in electrical and electronic measurements.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Laboratory Reports"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Demonstrate proficiency in using instruments like voltmeters, ammeters, wattmeters, oscilloscopes, and digital multimeters for accurate measurements.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI62"
+            ],
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Evaluate measurement data, identify errors, and apply corrective techniques to improve accuracy in electrical and electronic systems.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
+            "clo_text": "Utilize modern data acquisition systems, sensors, and transducers for real-world applications in power systems, electronics, and automation.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI62"
+            ],
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration"
+            ]
+          }
+        ],
+        "course_description": "The Electrical and Electronics Measurements course covers fundamental principles, instruments, and techniques used to measure electrical and electronic parameters accurately. Students will learn about voltmeters, ammeters, wattmeters, oscilloscopes, and digital measurement systems, along with sensor and transducer applications. Emphasis is placed on error analysis, precision, and modern data acquisition techniques. Through theoretical learning and practical lab sessions, students gain hands-on experience with industry-standard measurement tools, preparing them for real-world applications in electrical and electronic systems.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 415",
@@ -2421,7 +3414,82 @@
         "year": "0",
         "level": "0",
         "credit_hours": "3",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Understand light sources and detectors",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Design and evaluate optical network solutions",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Analyze optical signal impairments",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Quizzes",
+              "Major and Final Exams"
+            ]
+          }
+        ],
+        "course_description": "Overview of semiconductor fundamentals; Heterojunction structures; Light-emitting devices: principles, spectral characteristics, and modulation bandwidth; Photodetectors: operational principles, noise analysis, and sensitivity; Optical waveguides; Fundamentals of optical fibers, including attenuation and dispersion; Optical amplification technologies; WDM and DWDM systems along with their components; Key elements of optical networking; Emerging trends and advancements in optoelectronics.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 416",
@@ -2624,7 +3692,17 @@
               "Simulation/Computational Assignments"
             ]
           }
-        ]
+        ],
+        "course_description": "This course offers an introduction to Very Large Scale Integration (VLSI) design, exposing students to the complexities of creating integrated circuits with cutting-edge technologies. It begins with an exploration of VLSI systems, outlining key design and fabrication stages, including ASIC and FPGA development and processes like photolithography. Participants will explore significant industry players and evolving market trends and gain practical skills through extensive use of HDLs like VHDL and Verilog for circuit design and simulation. The curriculum also covers functional and timing analysis, post-synthesis optimization, and various packaging technologies. Additionally, the course addresses professional ethics in VLSI design, stressing regulatory adherence, intellectual property integrity, accurate reporting, and environmental awareness, equipping students for the technical and ethical challenges in the semiconductor industry.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 417",
@@ -2635,7 +3713,151 @@
         "year": "0",
         "level": "0",
         "credit_hours": "",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Explain the operating principles and performance characteristics of electronic circuits and subsystems used in communication transmitters and receivers.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Analyze the performance of communication electronic circuits using appropriate circuit, semiconductor, and signal principles.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Simulation/Computational Assignments",
+              "Quizzes",
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Design communication electronic circuits or subsystems for specified performance requirements.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration",
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
+            "clo_text": "Communicate the analysis, design, and performance of communication electronic circuits through technical reports and presentations.",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32"
+            ],
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Design- and Project-Based Learning",
+              "Collaborative/Team-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Reports",
+              "Oral Technical Presentation",
+              "Design Project Assignment",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
+            "clo_text": "Characterize the performance of communication electronic circuits through simulation and laboratory measurement.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI62",
+              "PI63"
+            ],
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration"
+            ]
+          },
+          {
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
+            "clo_text": "Apply newly acquired knowledge to emerging devices, circuits, and technologies in communication electronics.",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI72"
+            ],
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion",
+              "Flipped Classroom"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation"
+            ]
+          }
+        ],
+        "course_description": null,
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 423",
@@ -2646,7 +3868,83 @@
         "year": "0",
         "level": "0",
         "credit_hours": "3",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Understand basic data communication and network concepts and protocols",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Implement and evaluate middle-layer data access protocols",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning",
+              "Design- and Project-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Integrate Smart Systems with cloud-based networking solutions",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning",
+              "Laboratory Experimentation"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration",
+              "Laboratory Practical Assessment"
+            ]
+          }
+        ],
+        "course_description": "This course provides a comprehensive understanding of data communication networks with a strong focus on data communication and networking techniques for smart system applications such smart grids, energy systems for smart homes, buildings and factories. It covers network architectures, protocols, and data transmission principles, emphasizing wireless and wired communication technologies essential for Smart systems applications. The course covers several protocols operating at different layers of OSI and TCP/IP models. The course will focus on implementing Middle layer data access layer protocols (MQTT/CoAP etc), to provide real-time data communication, and networking for IoT-enabled smart systems. The course also explores Smart System integration with cloud-based application layers. It also covers data communication fundamentals, such as modulation, error correction, and synchronization techniques relevant to real-time Smart Systems applications.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 424",
@@ -2657,7 +3955,103 @@
         "year": "0",
         "level": "0",
         "credit_hours": "3",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Recognize the source and channel coding theorems.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Explain the notions of entropy, relative entropy and mutual information, and how they are relevant.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Calculate the capacity of different channels.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments",
+              "Quizzes"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Analyze and design source and channel coding schemes.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
+          }
+        ],
+        "course_description": "This course addresses the problem of designing efficient and reliable digital communication systems through introducing the field of information theory. Source and channel coding which are important elements of information theory are essential for any communication systems. We cover the mathematical preliminaries related to those elements, such as entropy, relative entropy, and mutual information. We show how they arise as natural answers to questions of data compression, channel capacity, and error correction. We also study different source and channel coding schemes, such as Huffman, arithmetic, block, cyclic, and convolution codes.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 425",
@@ -2668,7 +4062,103 @@
         "year": "0",
         "level": "0",
         "credit_hours": "3",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Explain fundamental wireless communication principles",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Describe the challenges in designing the physical and link layers of wireless systems.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Apply digital modulation and multiple access techniques",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Quizzes"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Design wireless system components",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Prototype/System Demonstration",
+              "Homework and Classwork Assignments"
+            ]
+          }
+        ],
+        "course_description": "This course explores the technical challenges and solutions in designing the physical and link layers of wireless communication systems. Key topics include wireless channel characterization, cellular network principles, digital modulation methods, spread spectrum, and multiple access techniques such as CDMA and OFDMA. The course also covers diversity techniques and introduces advanced technologies like LTE, MIMO, and 5G NR.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 426",
@@ -2824,7 +4314,17 @@
               "Simulation/Computational Assignments"
             ]
           }
-        ]
+        ],
+        "course_description": "This course provides the students with an understanding of the basic principles of Antenna Analysis and Design, an overview of the fundamental characteristics and parameters of antennas, an overview of analytical and numerical methods used to analyze and design antennas with application to some basic antenna structures such as linear antennas, loop antennas, and antenna arrays.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 433",
@@ -2835,7 +4335,102 @@
         "year": "0",
         "level": "0",
         "credit_hours": "3",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Understand the concept of mechatronic system design and how to construct a conceptual framework to select an appropriate solution approach",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI11"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Case-Based Learning and Technical Discussion",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Design Project Assignment"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Learn how to work with sensors, actuators, controllers and how to read and interpret data sheets.",
+            "mapped_sos": [],
+            "pi_codes": [],
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Guided Problem Solving and Tutorials",
+              "Independent/Self-Directed Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Homework and Classwork Assignments",
+              "Prototype/System Demonstration"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Learn how to model and simulate mechatronic systems and how to verify design solutions before their implementation.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": [
+              "Simulation and Computer-Based Learning",
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Design Project Assignment",
+              "Prototype/System Demonstration",
+              "Homework and Classwork Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
+            "clo_text": "Write technical reports following a well-defined design procedure",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31"
+            ],
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Design- and Project-Based Learning",
+              "Independent/Self-Directed Learning"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation",
+              "Teamwork/Peer Assessment"
+            ]
+          }
+        ],
+        "course_description": "This course provides a multidisciplinary introduction to Mechatronics, focusing on the synergetic integration of mechanical systems, electronics, sensors, actuators, microcontrollers, and information technology to create intelligent automation solutions. It starts with thinking how the required function can be realized by the combination of different subsystems according to a Systems Engineering approach (V-model). Students will explore electro-mechanical systems controlled by microcontrollers, gaining hands-on experience in instrumentation, measurement systems, data acquisition, and control techniques. Through practical applications, students will learn how to design, implement, and troubleshoot sensor-actuator systems, interface microcontrollers with real-world mechanisms, and develop automated control solutions.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 434",
@@ -2946,7 +4541,17 @@
               "Quizzes"
             ]
           }
-        ]
+        ],
+        "course_description": "This course provides a comprehensive introduction to Programmable Logic Controllers (PLCs), equipping students with both theoretical knowledge and hands-on experience in industrial automation. Students will explore the core principles of PLC operation, including relay ladder logic programming, and gain practical exposure to real-world industrial applications. Through interactive lab exercises and case studies, students will learn about the structure and functionality of PLCs, covering I/O modules, relays, counters, timers, and data manipulation techniques. Additionally, students will examine how PLCs integrate into modern automated manufacturing systems and explore their role in industrial networking and smart factory solutions.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 435",
@@ -3089,7 +4694,17 @@
               "Oral Technical Presentation"
             ]
           }
-        ]
+        ],
+        "course_description": "This course has basic Python programming as a prerequisite. The course delivers fundamental concepts of robotics and automation, designed for electrical engineering students those has basic Python knowledge. The course covers, topics those are essentials to build robots, including actuators, sensors, robot kinematics, control systems, and automation technologies. Furthermore, the course will provide insights into robot motion, position and force control, and mobile robotics. The course will also explores robotic operating systems (ROS), industrial robotics, vision systems, and automation techniques used in manufacturing and smart systems. The course is designed to be applied in nature, enabling students to use python to programming automation and robotics sensors, motion planning, and AI-driven control mechanisms, preparing them for real-world applications in robotics and industrial automation.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 436",
@@ -3230,7 +4845,17 @@
               "Oral Technical Presentation"
             ]
           }
-        ]
+        ],
+        "course_description": "This course provides an introduction of Artificial Intelligence (AI) for Electrical Engineering students. This AI course covers basic AI concepts, including problem-solving techniques, search algorithms, machine learning, and knowledge representation, where the main focus will be on practical applications in electrical engineering. The course integrates hands-on experience with Python-based AI tools such as NumPy, Pandas, Scikit-Learn, and TensorFlow. Specific applications include load forecasting in power systems, AI-based signal processing, and control system optimization. By the end of the course, students will learn about theoretical knowledge and practical skills to apply AI techniques to real-world electrical engineering problems, preparing them for advanced AI applications and research in intelligent automation, smart grids, and predictive maintenance.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 442",
@@ -3241,7 +4866,145 @@
         "year": "0",
         "level": "0",
         "credit_hours": "3",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Demonstrate the role of DSP in communications, audio processing, and radar systems.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Analyze and manipulate discrete-time signals using time-domain and frequency-domain techniques.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Quizzes"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Implement Z-transform, DFT, and FFT for efficient signal analysis.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Quizzes"
+            ]
+          },
+          {
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
+            "clo_text": "Desgn and implement digital FIR and IIR filters for various signal processing applications.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
+            "clo_text": "Apply sampling and reconstruction techniques in real-world scenarios.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Quizzes"
+            ]
+          },
+          {
+            "clo_number": 2.5,
+            "nqf_domain": "Skills",
+            "clo_text": "Utilize MATLAB for signal processing simulation and visualization.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Simulation and Computer-Based Learning",
+              "Independent/Self-Directed Learning"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Design Project Assignment",
+              "Oral Technical Presentation"
+            ]
+          }
+        ],
+        "course_description": "This course provides an in-depth understanding of Digital Signal Processing (DSP), focusing on the analysis, manipulation, and implementation of digital signals in various engineering applications. Students will explore discrete-time signals and systems, sampling theory, discrete Fourier transform (DFT), fast Fourier transform (FFT), digital filter design, and real-time signal processing techniques. The course emphasizes both theoretical concepts and practical implementation, preparing students for advanced topics in signal processing.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 454",
@@ -3252,7 +5015,129 @@
         "year": "0",
         "level": "0",
         "credit_hours": "",
-        "clos": []
+        "clos": [
+          {
+            "clo_number": 1.1,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Explain the principles, objectives, criteria, and constraints of electric power system planning.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Case-Based Learning and Technical Discussion",
+              "Flipped Classroom"
+            ],
+            "assessment_methods": [
+              "Quizzes",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 2.1,
+            "nqf_domain": "Skills",
+            "clo_text": "Analyze electrical demand and planning data using appropriate forecasting, engineering, and economic techniques.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams",
+              "Quizzes"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Develop power system planning alternatives for specified technical, economic, and reliability requirements.",
+            "mapped_sos": [
+              "SO2"
+            ],
+            "pi_codes": [
+              "PI21"
+            ],
+            "teaching_strategy": [
+              "Design- and Project-Based Learning",
+              "Guided Problem Solving and Tutorials",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 2.3,
+            "nqf_domain": "Skills",
+            "clo_text": "Communicate power system planning assumptions, analyses, results, and recommendations through technical reports and presentations.",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32"
+            ],
+            "teaching_strategy": [
+              "Technical Communication Activities",
+              "Design- and Project-Based Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Oral Technical Presentation",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments"
+            ]
+          },
+          {
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
+            "clo_text": "Apply newly acquired knowledge to emerging challenges and technologies in power system planning.",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI72"
+            ],
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion",
+              "Flipped Classroom"
+            ],
+            "assessment_methods": [
+              "Design Project Assignment",
+              "Simulation/Computational Assignments",
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation"
+            ]
+          }
+        ],
+        "course_description": null,
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 456",
@@ -3352,7 +5237,17 @@
               "Simulation/Computational Assignments"
             ]
           }
-        ]
+        ],
+        "course_description": "This course focuses on the principles, technologies, and applications of solar and wind energy systems. It covers energy conversion, system design, efficiency analysis, and integration into power grids. Students will explore key challenges, sustainability considerations, and advancements in photovoltaic (PV) systems and wind turbine technology. The course combines theoretical knowledge with hands-on applications to prepare students for careers in the renewable energy sector.",
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       },
       {
         "course_code": "EE 499",
@@ -3521,7 +5416,17 @@
               "Simulation/Computational Assignments"
             ]
           }
-        ]
+        ],
+        "course_description": null,
+        "prerequisites": [],
+        "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
+        "corequisites": [],
+        "corequisite_text": null,
+        "course_objectives": [],
+        "textbooks": [],
+        "references": [],
+        "course_topics": [],
+        "total_topic_contact_hours": null
       }
     ]
   },

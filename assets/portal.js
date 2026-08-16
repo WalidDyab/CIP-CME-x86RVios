@@ -1,10 +1,10 @@
 
-async function loadJSON(path){const r=await fetch(path); if(!r.ok) throw new Error(path+': '+r.status); return await r.json();}
+async function loadJSON(path){const r=await fetch(path,{cache:'no-cache'}); if(!r.ok) throw new Error(path+': '+r.status); return await r.json();}
 function byId(id){return document.getElementById(id)}
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function badge(s, cls=''){return `<span class="pill ${cls}">${esc(s)}</span>`}
 function listText(value){return (Array.isArray(value)?value:[value]).filter(Boolean).join('; ')}
-function normCourse(c){return {code:c.code||c.course_code||'',title:c.title||c.course_title||'',track:c.track||c.type||'',credits:c.credits||c.credit_hours||'',re:c.re||c.required_or_elective||'',level:c.performance_level||'',year:c.year||'',desc:c.description||'',clos:c.clos||[],topics:c.topics||[],prereq:c.prereq||'',coreq:c.coreq||''}}
+function normCourse(c){return {code:c.code||c.course_code||'',title:c.title||c.course_title||'',track:c.track||c.type||'',credits:c.credits||c.credit_hours||'',re:c.re||c.required_or_elective||'',level:c.performance_level||'',year:c.year||'',desc:c.description||c.course_description||'',clos:c.clos||[],topics:c.topics||[],prereq:c.prereq||'',coreq:c.coreq||''}}
 function countMsc(courses){const clos=courses.flatMap(c=>c.clos||[]); const topics=courses.flatMap(c=>c.topics||[]); return {courses:courses.length, credits:courses.reduce((a,c)=>a+(+c.credits||0),0), clos:clos.length, topics:topics.length, tracks:[...new Set(courses.map(c=>c.track).filter(Boolean))].length}}
 function renderStats(el, stats){el.innerHTML=Object.entries(stats).map(([k,v])=>`<div class="card"><div class="stat">${esc(v)}</div><div class="label">${esc(k)}</div></div>`).join('')}
 function courseCard(c, linkPrefix='course-dashboard.html?course='){c=normCourse(c); const plos=(c.clos||[]).flatMap(x=>String(x.plos||x.mapped_sos||'').split(/[, ]+/).filter(Boolean)); return `<a class="course-card" href="${linkPrefix}${encodeURIComponent(c.code)}"><div class="code">${esc(c.code)}</div><div class="course-title">${esc(c.title)}</div><div>${badge(c.re||'Course')}${badge(c.track||'General')}${c.credits?badge(c.credits+' cr'):''}</div><p class="desc">${esc(c.desc||((c.clos||[])[0]?.clo_text)||'')}</p></a>`}
