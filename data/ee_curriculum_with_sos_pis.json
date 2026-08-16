@@ -1262,7 +1262,7 @@
             ]
           }
         ],
-        "course_description": "This course enables the students to understand the DC and AC analysis, and modelling of multistage configuration based on BJT, FET, MOSFET. This course also helps to analyze and design the different electronic circuitries- CMOS circuit such as NAND Gates, Transmission Gates and memory elements.",
+        "course_description": "This course enables the students to understand the DC and AC analysis, and modelling of multistage configuration based on BJT, FET, MOSFET. This course also helps to analyze and design the different electronic circuitries- filters and oscillators, CMOS circuit such as NAND Gates, Transmission Gates and memory elements.",
         "prerequisites": [
           "EE 211"
         ],
@@ -2511,7 +2511,7 @@
           {
             "clo_number": 2.1,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of d.c. machines",
+            "clo_text": "Design a DC machine and analyze its parameters.",
             "mapped_sos": [
               "SO2"
             ],
@@ -2535,7 +2535,7 @@
           {
             "clo_number": 2.2,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of a.c. machines",
+            "clo_text": "Design an AC machine and analyze its parameters.",
             "mapped_sos": [
               "SO2"
             ],
@@ -2559,7 +2559,7 @@
           {
             "clo_number": 3.1,
             "nqf_domain": "Values",
-            "clo_text": "Show the importance of sustainability in electrical machines and transformers",
+            "clo_text": "Acquire and apply new knowledge on electrical machines and transformers to engineering tasks.",
             "mapped_sos": [
               "SO7"
             ],

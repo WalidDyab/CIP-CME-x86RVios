@@ -139,7 +139,7 @@
       "prerequisite_text": "EE 211",
       "corequisites": [],
       "corequisite_text": null,
-      "course_description": "This course enables the students to understand the DC and AC analysis, and modelling of multistage configuration based on BJT, FET, MOSFET. This course also helps to analyze and design the different electronic circuitries- CMOS circuit such as NAND Gates, Transmission Gates and memory elements.",
+      "course_description": "This course enables the students to understand the DC and AC analysis, and modelling of multistage configuration based on BJT, FET, MOSFET. This course also helps to analyze and design the different electronic circuitries- filters and oscillators, CMOS circuit such as NAND Gates, Transmission Gates and memory elements.",
       "course_objectives": [
         "Identify the design characteristics of BJT, FET, MOSFET amplifiers, filters and oscillators.",
         "Analyzing BJT multistage models and Frequency response.",

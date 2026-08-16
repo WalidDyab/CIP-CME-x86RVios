@@ -1683,7 +1683,7 @@
           "domain": "Skills",
           "clo_id": 2.1,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of d.c. machines",
+          "clo_text": "Design a DC machine and analyze its parameters.",
           "aligned_sos": [
             "SO2"
           ],
@@ -1698,7 +1698,7 @@
           "domain": null,
           "clo_id": 2.2,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of a.c. machines",
+          "clo_text": "Design an AC machine and analyze its parameters.",
           "aligned_sos": [
             "SO2"
           ],
@@ -1713,7 +1713,7 @@
           "domain": "Values, autonomy and responsibility",
           "clo_id": 3.1,
           "nqf_domain": "Values",
-          "clo_text": "Show the importance of sustainability in electrical machines and transformers",
+          "clo_text": "Acquire and apply new knowledge on electrical machines and transformers to engineering tasks.",
           "aligned_sos": [
             "SO7"
           ],
