@@ -166,7 +166,7 @@ const html = `<!DOCTYPE html>
           <h1>Undergraduate EE Program CLO Revision Report</h1>
           <h2>Term 252 Targeted Curriculum Improvement</h2>
         </div>
-        <img src="../assets/PSU.svg" alt="Prince Sultan University">
+        <img src="../assets/PSU.png" alt="Prince Sultan University">
       </header>
       <div class="report-content">
         <section class="report-section"><h2>1. Purpose</h2><p>This report documents the Course Learning Outcome modifications resulting from the Undergraduate EE program’s Term 252 review following ABET feedback concerning Student Outcome assessment.</p></section>
