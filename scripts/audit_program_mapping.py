@@ -6,7 +6,7 @@ from pathlib import Path
 import pdfplumber
 
 ROOT = Path(__file__).resolve().parents[1]
-MAPPING_JSON = ROOT / "data" / "ee_program_clo_so_pi_mapping.json"
+CURRICULUM_JSON = ROOT / "data" / "ee_curriculum.json"
 SO_PDF = ROOT / "data" / "Course-SO.pdf"
 PI_PDF = ROOT / "data" / "Course-SO-PI.pdf"
 
@@ -60,8 +60,8 @@ def extract_pi_rows():
     return rows
 
 
-mapping = json.loads(MAPPING_JSON.read_text(encoding="utf-8"))
-portal_courses = mapping["courses"]
+curriculum = json.loads(CURRICULUM_JSON.read_text(encoding="utf-8"))
+portal_courses = curriculum["curriculum"]["courses"]
 so_rows = extract_so_rows()
 pi_rows = extract_pi_rows()
 pdf_code_for_portal = {"EE 433": "EE 430", "EE 435": "EE 440", "EE 454": "EE 452", "EE 456": "EE 454"}
@@ -75,8 +75,12 @@ for portal in portal_courses:
         continue
     approved_so = approved.get("so_levels", {})
     approved_pi = approved.get("pi_levels", {})
-    portal_so = set(portal.get("overall_aligned_sos", []))
-    portal_pi = portal.get("mapping_pi_levels", {})
+    portal_so = set(
+        so
+        for clo in portal.get("clos", [])
+        for so in clo.get("mapped_sos", [])
+    )
+    portal_pi = portal.get("pi_levels", {})
     results.append({
         "course_code": portal["course_code"],
         "course_title": portal["course_title"],

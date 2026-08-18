@@ -74,19 +74,10 @@
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
       try {
-        const [data, mappingData] = await Promise.all([
-          portal.loadJSON('../data/ee_curriculum_with_sos_pis.json'),
-          portal.loadJSON('../data/ee_program_clo_so_pi_mapping.json')
-        ]);
+        const data = await portal.loadJSON('../data/ee_curriculum.json');
         const courses = data.curriculum.courses || [];
-        const mappingCourses = mappingData.courses || [];
+        const mappingCourses = courses;
         const curriculumByCode = new Map(courses.map(course => [course.course_code, course]));
-        const overviewByCourse = new Map((mappingData.mapping_overview || []).map(row => [row.course_code, row.pi_levels || {}]));
-        mappingCourses.forEach(course => {
-          if (JSON.stringify(course.mapping_pi_levels || {}) !== JSON.stringify(overviewByCourse.get(course.course_code) || {})) {
-            throw new Error(`PI-level mapping mismatch for ${course.course_code}`);
-          }
-        });
         const clos = courses.flatMap(course => course.clos || []);
         portal.renderStats(byId('stats'), {
           Courses: courses.length,
@@ -137,12 +128,10 @@
         trackFilter.addEventListener('change', () => setTimeout(renderCourseGroups, 0));
         renderCourseGroups();
 
-        const pis = ['PI11', 'PI12', 'PI21', 'PI22', 'PI23', 'PI24', 'PI31', 'PI32', 'PI41', 'PI42', 'PI51', 'PI52', 'PI61', 'PI62', 'PI63', 'PI64', 'PI71', 'PI72'];
-        const soPIs = {
-          SO1: ['PI11', 'PI12'], SO2: ['PI21', 'PI22', 'PI23', 'PI24'],
-          SO3: ['PI31', 'PI32'], SO4: ['PI41', 'PI42'], SO5: ['PI51', 'PI52'],
-          SO6: ['PI61', 'PI62', 'PI63', 'PI64'], SO7: ['PI71', 'PI72']
-        };
+        const piDefinitions = data.abet?.performance_indicators || {};
+        const soDefinitions = data.abet?.student_outcomes || {};
+        const pis = Object.keys(piDefinitions);
+        const soPIs = Object.fromEntries(Object.entries(soDefinitions).map(([so, definition]) => [so, definition.pis || []]));
         const sos = Object.keys(soPIs);
         const courseCell = course => `<td class="course-column" title="${portal.esc(course.course_title)}"><strong>${portal.esc(course.course_code)}</strong></td>`;
         const renderTable = (columns, cellRenderer, headerRows = '', headerClass = () => '') => {
@@ -165,11 +154,11 @@
         const renderHeatmaps = () => {
           const piGroupHeader = `<tr class="so-group-row"><th class="course-column" rowspan="2">Course</th>${sos.map(so => `<th class="so-${so.toLowerCase()}" colspan="${soPIs[so].length}">${so}</th>`).join('')}</tr>`;
           byId('piHeatmapContainer').innerHTML = renderTable(pis, (course, pi) => {
-            const level = (course.mapping_pi_levels || {})[pi] || '';
+            const level = (course.pi_levels || {})[pi] || '';
             return level ? `<td class="pi-${pi.toLowerCase()}">${portal.esc(level)}</td>` : '<td class="cell-unmapped"></td>';
           }, piGroupHeader, pi => `pi-${pi.toLowerCase()}`);
           byId('soHeatmapContainer').innerHTML = renderTable(sos, (course, so) => {
-            const levelsByPI = soPIs[so].filter(pi => (course.mapping_pi_levels || {})[pi]).map(pi => [pi, course.mapping_pi_levels[pi]]);
+            const levelsByPI = soPIs[so].filter(pi => (course.pi_levels || {})[pi]).map(pi => [pi, course.pi_levels[pi]]);
             if (!levelsByPI.length) return '<td class="cell-unmapped"></td>';
             const levels = [...new Set(levelsByPI.map(([, level]) => level))].sort((a, b) => ['I', 'P', 'M'].indexOf(a) - ['I', 'P', 'M'].indexOf(b));
             const details = levelsByPI.map(([pi, level]) => `${pi}=${level}`).join(', ');

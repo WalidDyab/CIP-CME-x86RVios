@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import { FileBlob, SpreadsheetFile } from '@oai/artifact-tool';
 
 const workbookPath = 'data/course-additional-data.xlsx';
-const curriculumPath = 'data/ee_curriculum_with_sos_pis.json';
+const curriculumPath = 'data/ee_curriculum.json';
 const electiveCataloguePath = 'data/ee_elective_catalogue_metadata.json';
 const outputPath = 'data/ee_course_metadata.json';
 

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Term 252 CLO Revision Report | Curriculum Intelligence Portal</title>
+  <link rel="stylesheet" href="../assets/portal.css">
+  <script defer src="../assets/portal.js"></script>
+  <style>
+    body { background:#eef1f4; color:#1d2732; }
+    .portal-header .header-row { background:linear-gradient(135deg,#08111e,#143d66); border-color:rgba(255,255,255,.2); box-shadow:0 12px 28px rgba(15,31,48,.28); }
+    .portal-header .nav-center .btn { color:rgba(255,255,255,.94); background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.22); }
+    .portal-header .nav-center .btn:hover, .portal-header .nav-center .btn:focus-visible { color:#fff; background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.4); }
+    .portal-header .ce-logo, .portal-header .psu-logo { filter:drop-shadow(0 4px 9px rgba(0,0,0,.35)); }
+    .report-shell { max-width:1120px; margin:0 auto; padding:0 20px 48px; }
+    .report-toolbar { display:flex; justify-content:space-between; gap:12px; align-items:center; margin:18px 0; }
+    .report-toolbar a { color:#143d66; font-weight:750; }
+    .report-paper { background:#fff; border:1px solid #d8dee5; border-radius:10px; box-shadow:0 10px 28px rgba(24,39,55,.1); overflow:hidden; }
+    .report-masthead { display:flex; align-items:center; justify-content:space-between; gap:28px; padding:28px 38px; border-bottom:5px solid #143d66; }
+    .report-masthead img { max-width:190px; max-height:76px; object-fit:contain; }
+    .report-identity { text-align:center; flex:1; }
+    .report-identity p { margin:0 0 5px; color:#53606d; font-weight:700; }
+    .report-identity h1 { margin:0; font-size:clamp(24px,4vw,36px); color:#143d66; line-height:1.15; }
+    .report-identity h2 { margin:8px 0 0; font-size:18px; color:#8a5a12; font-weight:750; }
+    .report-content { padding:34px 42px 48px; }
+    .report-section { margin:0 0 34px; }
+    .report-section > h2 { margin:0 0 14px; padding-bottom:8px; border-bottom:1px solid #cfd6dd; color:#143d66; font-size:21px; }
+    .report-section p, .report-section li { color:#303b46; line-height:1.7; }
+    .scope-list { margin:10px 0 0; padding-left:22px; }
+    .report-stats { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:10px; }
+    .report-stat { border:1px solid #d9e0e6; border-top:3px solid #143d66; padding:15px 10px; text-align:center; background:#f7f9fb; }
+    .report-stat strong { display:block; color:#143d66; font-size:26px; }
+    .report-stat span { display:block; margin-top:3px; color:#596674; font-size:12px; font-weight:750; }
+    .course-revision { margin:0 0 26px; break-inside:avoid-page; }
+    .course-revision h3 { margin:0; padding:11px 14px; color:#fff; background:#143d66; font-size:17px; }
+    .course-revision h3 span { margin-left:8px; font-weight:500; opacity:.9; }
+    .report-table-wrap { overflow-x:auto; max-width:100%; }
+    .report-table-wrap table { width:100%; min-width:720px; border-collapse:collapse; table-layout:fixed; }
+    .report-table-wrap th { background:#e8edf2; color:#243444; text-align:left; font-size:12px; letter-spacing:.03em; }
+    .report-table-wrap th:first-child { width:19%; }
+    .report-table-wrap th, .report-table-wrap td { border:1px solid #ccd4dc; padding:12px; vertical-align:top; }
+    .clo-id { display:block; color:#143d66; font-weight:800; margin-bottom:5px; }
+    .clo-wording { display:block; color:#202b35; line-height:1.5; }
+    .change-type { display:inline-block; border-radius:999px; padding:5px 8px; font-size:11px; font-weight:800; background:#e8edf2; color:#243444; }
+    .change-type.added { background:#e2f0e7; color:#235b36; }
+    .change-type.omitted { background:#f6e5e5; color:#7b2929; }
+    .change-note { display:block; margin-top:8px; color:#596674; font-size:12px; line-height:1.45; }
+    .dash { color:#77828d; }
+    .unchanged-courses { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 22px; padding:0; list-style:none; }
+    .unchanged-courses li { display:flex; gap:10px; border-bottom:1px solid #e1e6eb; padding:8px 0; }
+    .unchanged-courses strong { color:#143d66; min-width:58px; }
+    .report-footer { border-top:1px solid #d8dee5; padding-top:18px; color:#66727e; font-size:12px; }
+    @media (max-width:760px) {
+      .report-shell { padding:0 10px 28px; }
+      .report-toolbar { align-items:stretch; flex-direction:column; }
+      .report-toolbar .btn { text-align:center; }
+      .report-masthead { padding:22px 18px; flex-direction:column; }
+      .report-masthead img { max-width:150px; max-height:62px; }
+      .report-content { padding:25px 18px 34px; }
+      .report-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .unchanged-courses { grid-template-columns:1fr; }
+      .course-revision h3 span { display:block; margin:4px 0 0; }
+    }
+    @page { size:A4; margin:15mm 13mm 16mm; }
+    @media print {
+      body { background:#fff !important; color:#111 !important; }
+      .portal-header, .portal-footer, .report-toolbar, #footer-placeholder, #header-placeholder { display:none !important; }
+      .report-shell { max-width:none; padding:0; margin:0; }
+      .report-paper { border:0; border-radius:0; box-shadow:none; overflow:visible; }
+      .report-masthead { padding:0 0 16px; border-bottom:4px solid #143d66; }
+      .report-masthead img { max-width:145px; max-height:58px; }
+      .report-identity h1 { font-size:25px; }
+      .report-identity h2 { font-size:15px; }
+      .report-content { padding:20px 0 0; }
+      .report-section { margin-bottom:24px; }
+      .report-stats { grid-template-columns:repeat(6,1fr); }
+      .report-stat { padding:9px 4px; }
+      .report-stat strong { font-size:20px; }
+      .report-table-wrap { overflow:visible; }
+      .report-table-wrap table { min-width:0; font-size:10.5pt; }
+      .report-table-wrap thead { display:table-header-group; }
+      .report-table-wrap tr { break-inside:avoid; page-break-inside:avoid; }
+      .course-revision { break-inside:avoid-page; page-break-inside:avoid; }
+      .course-revision h3 { print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+      .change-type, .report-stat, .report-table-wrap th { print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+      a { color:inherit !important; text-decoration:none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="report-shell">
+    <div class="report-toolbar" aria-label="Report actions">
+      <a href="index.html">← Back to Curriculum Vision</a>
+      <button class="btn primary" type="button" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+    <article class="report-paper">
+      <header class="report-masthead">
+        <img src="../assets/CE-LOGO.png" alt="College of Engineering">
+        <div class="report-identity">
+          <p>Undergraduate Electrical Engineering Program</p>
+          <h1>Undergraduate EE Program CLO Revision Report</h1>
+          <h2>Term 252 Targeted Curriculum Improvement</h2>
+        </div>
+        <img src="../assets/PSU.svg" alt="Prince Sultan University">
+      </header>
+      <div class="report-content">
+        <section class="report-section"><h2>1. Purpose</h2><p>This report documents the Course Learning Outcome modifications resulting from the Undergraduate EE program’s Term 252 review following ABET feedback concerning Student Outcome assessment.</p></section>
+        <section class="report-section"><h2>2. Continuous Improvement Context</h2><p>The Term 252 review represents a targeted improvement step within the program’s broader continuous-improvement process. It establishes an updated CLO basis for systematic outcome assessment and precedes the program’s wider major curriculum revision.</p></section>
+        <section class="report-section"><h2>3. Revision Rationale</h2><p>The Undergraduate Electrical Engineering program reviewed its Course Learning Outcomes in Term 252 following ABET feedback concerning Student Outcome assessment. The previous curriculum mapping primarily followed the NCAAA learning domains. To strengthen outcome assessment under the ABET framework, the program revised the CLO structure to establish explicit alignment between Course Learning Outcomes, ABET Student Outcomes, and program Performance Indicators. As part of this review, selected CLO statements were modified, added, or omitted where necessary to support a clearer and more systematic assessment framework.</p></section>
+        <section class="report-section"><h2>4. Scope</h2><p>The report covers the Undergraduate EE core courses, including EE 490 and EE 492.</p><ul class="scope-list"><li>All program electives are excluded.</li><li>Only modified CLO wording, added CLOs, and omitted CLOs are reported.</li><li>SO/PI mappings, I/P/M levels, Teaching Strategies, and Assessment Methods are outside the scope of this report.</li></ul></section>
+        <section class="report-section"><h2>5. Summary of Changes</h2><div class="report-stats"><div class="report-stat"><strong>84</strong><span>Baseline CLOs</span></div><div class="report-stat"><strong>94</strong><span>Final CLOs</span></div><div class="report-stat"><strong>34</strong><span>Modified</span></div><div class="report-stat"><strong>12</strong><span>Added</span></div><div class="report-stat"><strong>2</strong><span>Omitted</span></div><div class="report-stat"><strong>48</strong><span>Unchanged</span></div></div></section>
+        <section class="report-section"><h2>6. Detailed CLO Revisions</h2><section class="course-revision">
+    <h3>EE 201 <span>Introduction to Circuits</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Recognize the main concepts of electrical parameters and their interrelations.</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Analyze DC/AC electric circuits using Ohm`s law, Kirchhoff&#39;s circuit laws, and voltage/current divider rules.</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Analyze DC/AC electric circuits using different analysis techniques such as Mesh, Nodal, and Thevenin.</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Analyze sinusoidal signals, reactance, admittance, and power using phasor forms.</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Investigate electric circuits through experiments and simulations</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Demonstrate DC/AC electric circuits using hardware boards and simulation in group activities.</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Contribute to team tasks and objectives in electric circuits laboratory activities</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 3.2</span><span class="clo-wording">Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 202 <span>Circuit Analysis</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span><span class="change-note">Merged with baseline CLO 2.4 into revised CLO 2.3.</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Analyze frequency selective circuits</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Analyze frequency selective circuits, three-phase and two-port networks.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type omitted">Omitted CLO</span><span class="change-note">Content merged with baseline CLO 2.3 into revised CLO 2.3.</span></td>
+    <td><span class="clo-id">CLO 2.4</span><span class="clo-wording">Analyze three-phase networks and two-port networks.</span></td>
+    <td><span class="dash">—</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Acquire new circuit-analysis knowledge using appropriate learning strategies and apply it to solve circuit problems.</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 211 <span>Electronic Fundamentals</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span><span class="change-note">Renumbered from 3.1 to 2.2; domain changed from Values to Skills.</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Demonstrate experimentally basic electronic circuits and their applications</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Perform laboratory experiments on electronic circuits and analyze the resulting data to verify theoretical concepts.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Describe the basic electronic circuits using diodes and transistors.</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Solve fundamental electronic circuit problems involving diodes, BJTs, and operational amplifiers using principles of electronics and circuit theory.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Analyze the characterstics of different BJT configurations and biasing circuits.</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Design basic electronic circuits such as rectifiers, transistor amplifiers, and operational-amplifier applications to satisfy given performance requirements.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type omitted">Omitted CLO</span><span class="change-note">Operational-amplifier content was reorganized across revised CLOs 1.1, 1.2, and 2.1.</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Analyze operational amplifier characterstics and circuits for different applications.</span></td>
+    <td><span class="dash">—</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 1.2</span><span class="clo-wording">Explain the operation and applications of semiconductor devices and amplifiers using appropriate technical language and circuit representations.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Collaborate effectively in laboratory activities to build, test, and troubleshoot electronic circuits.</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 231 <span>Signals and Systems</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Describe different properties of continuous and discrete-time signals and systems.</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Describe continuous- and discrete-time signals and systems using standard properties and classification criteria.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 1.2</span><span class="clo-wording">Recognize the sampling theory.</span></td>
+    <td><span class="clo-id">CLO 1.2</span><span class="clo-wording">Describe sampling theory principles for converting continuous-time signals to discrete-time signals.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Explain Z- transform and its applications for LTI systems.</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Analyze LTI systems using Z-transform concepts to interpret results and draw engineering conclusions.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Explain Continuous and Discrete-time Fourier Transform and its applications for LTI systems</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Explain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.4</span><span class="clo-wording">Write MatLab code and sampling theory and develop discrete system.</span></td>
+    <td><span class="clo-id">CLO 2.4</span><span class="clo-wording">Write MATLAB code to implement sampling-based discrete-time systems and evaluate their performance using independently learned tools or functions.</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 304 <span>Electrical Machines</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Analyze the selection, methods of speed control, and methods of direction reversal of and applications of d.c. machines</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Design a DC machine and analyze its parameters.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Analyze the selection, methods of speed control, and methods of direction reversal of and applications of a.c. machines</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Design an AC machine and analyze its parameters.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Show the importance of sustainability in electrical machines and transformers</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Acquire and apply new knowledge on electrical machines and transformers to engineering tasks.</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 322 <span>Microprocessors Design</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Describe the types and operation of a typical microprocessors/microcontrollers.</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Explain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D &amp; D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Design arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures.</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Design control units and sequential systems using finite state machines for system control applications.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Demonstrate the ability to configure hardware and software microprocessor-based systems</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Implement and verify an integrated digital system combining datapath and control components on FPGA hardware.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 1.3</span><span class="clo-wording">Model digital components of microprocessor-based systems using HDL at the RTL level.</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 341 <span>Electromagnetics Fundamental</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Explain the concept of electric field and magnetic field.</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Analyze Maxwell’s equations to find the electric and magnetic field components in different media.</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Develop an ability to apply Gauss’ law, Ampere’s Law, Biot-Savart law, Faraday’s law and Maxwell’s equations in the analysis of electromagnetic systems.</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 2.4</span><span class="clo-wording">Present an oral technical presentation on an electromagnetics application</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Acquire new knowledge on an electromagnetics application using appropriate learning strategies.</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 403 <span>Power Systems</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Demonstrate effective technical communication of power system analysis and results.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 3.2</span><span class="clo-wording">Demonstrate the ability to independently acquire and apply new knowledge related to power systems.</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 490 <span>Senior Design Project</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Identify, gather and synthesize relevant information needed to define and solve an open-ended design problem.</span></td>
+    <td><span class="clo-id">CLO 1.1</span><span class="clo-wording">Identify relevant technical information and engineering principles needed to define and solve an open-ended design problem.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Apply the engineering design process to define, formulate and solve a conceptual design problem considering human factors, safety, environmental, economic, and societal constraints.</span></td>
+    <td><span class="clo-id">CLO 2.1</span><span class="clo-wording">Apply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Use lateral and critical thinking to generate creative alternative concepts and identify a preferred solution to a design problem.</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Generate alternative concepts and select a preferred solution for a design problem.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Use engineering tools and drawing skills to check and visually communicate design problem-solving.</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Communicate design solutions visually using engineering tools and drawings.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.4</span><span class="clo-wording">Communicate effectively and define engineering design problems and keep a well build log file and keep a journal of ideas and activities associated with the design project.</span></td>
+    <td><span class="clo-id">CLO 2.4</span><span class="clo-wording">Communicate design solutions using written, visual, and oral technical methods.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Recognize the engineering profession and the importance of ethical and legal factors in professional duties</span></td>
+    <td><span class="clo-id">CLO 3.1</span><span class="clo-wording">Evaluate ethical and legal responsibilities and their impact on engineering decisions.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 3.2</span><span class="clo-wording">Establish requirements, scopes, plan tasks, and meet objectives through effective teamwork.</span></td>
+    <td><span class="clo-id">CLO 3.2</span><span class="clo-wording">Collaborate to establish goals, plan tasks, and meet project objectives within a team.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 2.5</span><span class="clo-wording">Validate design solutions through experimentation/testing, data collection, analysis, and engineering conclusions.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 3.3</span><span class="clo-wording">Acquire new knowledge, tools, standards, or technologies as needed to complete the design project.</span></td>
+  </tr></tbody></table></div>
+  </section>
+<section class="course-revision">
+    <h3>EE 492 <span>Cooperative Training</span></h3>
+    <div class="report-table-wrap"><table><thead><tr><th>Change Type</th><th>Previous CLO</th><th>Revised CLO</th></tr></thead><tbody><tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 1.2</span><span class="clo-wording">Define and recognize complex electrical engineering problems encountered in industry, utilizing theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.</span></td>
+    <td><span class="clo-id">CLO 1.2</span><span class="clo-wording">Identify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Examine advanced technical skills in electrical engineering, including design, analysis, and troubleshooting, to successfully complete assigned tasks and projects within cooperative work environments.</span></td>
+    <td><span class="clo-id">CLO 2.2</span><span class="clo-wording">Apply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type modified">Modified CLO wording</span></td>
+    <td><span class="clo-id">CLO 3.2</span><span class="clo-wording">Demonstrate professional and ethical responsibility</span></td>
+    <td><span class="clo-id">CLO 3.2</span><span class="clo-wording">Demonstrate professional and ethical responsibility in engineering practice and decision-making.</span></td>
+  </tr>
+<tr>
+    <td><span class="change-type added">Added CLO</span></td>
+    <td><span class="dash">—</span></td>
+    <td><span class="clo-id">CLO 2.3</span><span class="clo-wording">Collaborate effectively within multidisciplinary teams to plan tasks, meet objectives, and support a professional work environment.</span></td>
+  </tr></tbody></table></div>
+  </section></section>
+        <section class="report-section"><h2>7. Courses with No CLO Changes</h2><ul class="unchanged-courses"><li><strong>EE 101</strong><span>Computer Programming for Engineering</span></li><li><strong>EE 221</strong><span>Logic Design</span></li><li><strong>EE 305</strong><span>Power Electronics</span></li><li><strong>EE 312</strong><span>Electronic Engineering</span></li><li><strong>EE 332</strong><span>Control Systems</span></li><li><strong>EE 351</strong><span>Communication Systems</span></li></ul></section>
+        <section class="report-section"><h2>8. Conclusion</h2><p>The Term 252 revisions establish the CLO basis for the program’s ABET-aligned SO/PI assessment framework and form part of the Undergraduate EE program’s continuing curriculum-improvement activities.</p></section>
+        <footer class="report-footer">Sources: EE Program Design Full ABET.xlsx (baseline) and ee_curriculum.json (final/current curriculum).</footer>
+      </div>
+    </article>
+  </div>
+  <div id="footer-placeholder"></div>
+</body>
+</html>

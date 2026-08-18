@@ -40,7 +40,7 @@
   <div id="footer-placeholder"></div>
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
-      const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json');
+      const data = await portal.loadJSON('../data/ee_curriculum.json');
       const rows = (data.curriculum.courses || []).flatMap(course => (course.clos || []).map(clo => ({course, clo})));
       const list = values => `<ul class="method-list">${(values || []).map(value => `<li>${portal.esc(value)}</li>`).join('')}</ul>`;
       const render = () => {

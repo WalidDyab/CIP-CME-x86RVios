@@ -311,7 +311,7 @@ let _printCourseNorm = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const data = await portal.loadJSON('../data/ee_curriculum_with_sos_pis.json');
+    const data = await portal.loadJSON('../data/ee_curriculum.json');
     const courses = data.curriculum.courses || [];
     const wanted = portal.getParam('course') || portal.normCourse(courses[0]).code;
     const raw = courses.find(x => portal.normCourse(x).code === wanted) || courses[0];

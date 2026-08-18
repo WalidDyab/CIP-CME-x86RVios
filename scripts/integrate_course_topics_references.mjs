@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import { FileBlob, SpreadsheetFile } from '@oai/artifact-tool';
 
 const workbookPath = 'data/EE Program Design Full ABET.xlsx';
-const curriculumPath = 'data/ee_curriculum_with_sos_pis.json';
+const curriculumPath = 'data/ee_curriculum.json';
 const sourcePath = 'data/ee_course_topics_contact_hours.json';
 const auditOnly = process.argv.includes('--audit-only');
 
