@@ -177,7 +177,7 @@ const html = `<!DOCTYPE html>
         <section class="report-section"><h2>6. Detailed CLO Revisions</h2>${courseSections}</section>
         <section class="report-section"><h2>7. Courses with No CLO Changes</h2><ul class="unchanged-courses">${unchangedList}</ul></section>
         <section class="report-section"><h2>8. Conclusion</h2><p>The Term 252 revisions establish the CLO basis for the program’s ABET-aligned SO/PI assessment framework and form part of the Undergraduate EE program’s continuing curriculum-improvement activities.</p></section>
-        <footer class="report-footer">Sources: EE Program Design Full ABET.xlsx (baseline) and ee_curriculum.json (final/current curriculum).</footer>
+        <footer class="report-footer">This report is created by the CME curriculum committee. Date: 16/8/2026</footer>
       </div>
     </article>
   </div>
@@ -187,5 +187,5 @@ const html = `<!DOCTYPE html>
 
 await fs.mkdir('curriculum-vision', { recursive:true });
 await fs.writeFile(auditOutput, `${JSON.stringify(audit, null, 2)}\n`, 'utf8');
-await fs.writeFile(htmlOutput, html, 'utf8');
+await fs.writeFile(htmlOutput, `${html}\n`, 'utf8');
 console.log(JSON.stringify({ counts, coursesWithChanges, coursesWithoutChanges, auditOutput, htmlOutput }, null, 2));
