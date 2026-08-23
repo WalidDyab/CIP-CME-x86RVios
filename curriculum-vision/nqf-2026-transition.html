@@ -8,41 +8,56 @@
   <link rel="stylesheet" href="../assets/portal.css">
   <script defer src="../assets/portal.js"></script>
   <style>
-    .nqf-hero{position:relative;overflow:hidden}.nqf-hero:after{content:"";position:absolute;right:-120px;bottom:-180px;width:420px;height:420px;background:radial-gradient(circle,rgba(121,215,255,.18),transparent 68%);pointer-events:none}.nqf-hero p{max-width:980px}.section-nav{position:sticky;top:10px;z-index:5;display:flex;gap:8px;flex-wrap:wrap;padding:12px;margin:14px 0 22px;border:1px solid var(--line);border-radius:18px;background:rgba(8,17,30,.88);backdrop-filter:blur(12px)}.section-nav a{font-size:12px;font-weight:800;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 10px}.section-nav a:hover{color:#101522;background:var(--cyan);border-color:transparent}.flow-stack{display:grid;gap:10px;max-width:760px;margin-top:20px}.flow-item{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.055);font-weight:850}.flow-item span{color:var(--cyan);font-family:var(--mono)}.flow-arrow{color:var(--orange);font-size:24px;text-align:center;font-weight:900}.compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.framework-card{border:1px solid var(--line);border-radius:20px;padding:20px;background:rgba(255,255,255,.045)}.framework-card.new{border-color:rgba(121,215,255,.42)}.framework-card.old{border-color:rgba(242,162,58,.38)}.framework-card h3{margin:0 0 12px}.framework-card h4{margin:16px 0 8px;color:#ffe2ad}.framework-card.new h4{color:var(--cyan)}.badge-retained{color:#bfffc6;border-color:rgba(126,231,135,.4);background:rgba(126,231,135,.10)}.badge-renamed,.badge-moved{color:#d6c1ff;border-color:rgba(170,120,255,.42);background:rgba(170,120,255,.12)}.badge-expanded{color:#bdeeff;border-color:rgba(121,215,255,.42);background:rgba(121,215,255,.12)}.badge-new{color:#ffe2ad;border-color:rgba(242,162,58,.45);background:rgba(242,162,58,.12)}.badge-needs-review,.badge-partial,.badge-program-level,.badge-distributed{color:#ffd59b;border-color:rgba(255,213,110,.48);background:rgba(255,213,110,.10)}.descriptor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.descriptor-card{border:1px solid var(--line);border-radius:18px;padding:16px;background:rgba(255,255,255,.04)}.descriptor-id{display:inline-flex;color:#101522;background:var(--cyan);font-family:var(--mono);font-weight:900;border-radius:10px;padding:4px 8px;margin-bottom:9px}.descriptor-card h3{margin:6px 0;font-size:17px}.descriptor-card p{margin:0;color:var(--muted);line-height:1.55}.matrix-table th,.matrix-table td{text-align:center;vertical-align:middle}.matrix-table td:first-child,.matrix-table th:first-child{text-align:left;min-width:250px}.mark-primary{background:rgba(126,231,135,.22);color:#d9ffdd;font-weight:900}.mark-supporting{background:rgba(121,215,255,.15);color:#dff5ff;font-weight:800}.method-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}.method-card,.source-item{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(255,255,255,.045)}.method-card strong,.source-item span{color:#ffe2ad}.empty-state{border:1px dashed rgba(121,215,255,.48);border-radius:20px;padding:20px;background:rgba(121,215,255,.07)}.source-list{display:grid;gap:12px}.source-item strong{display:block;margin:6px 0;color:#fff}.source-item span{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:800}.provenance-note{margin-top:12px}.nowrap{white-space:nowrap}@media(max-width:900px){.compare-grid,.descriptor-grid,.method-grid{grid-template-columns:1fr}.section-nav{position:static}.flow-item{align-items:flex-start;flex-direction:column}}
+    .nqf-hero{position:relative;overflow:hidden}.nqf-hero:after{content:"";position:absolute;right:-120px;bottom:-180px;width:420px;height:420px;background:radial-gradient(circle,rgba(121,215,255,.14),transparent 68%);pointer-events:none}.nqf-hero p{max-width:980px}.section-nav{position:sticky;top:10px;z-index:5;display:flex;gap:8px;flex-wrap:wrap;padding:12px;margin:14px 0 22px;border:1px solid var(--line);border-radius:18px;background:rgba(8,17,30,.88);backdrop-filter:blur(12px)}.section-nav a{font-size:12px;font-weight:800;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:8px 10px}.section-nav a:hover{color:#101522;background:var(--cyan);border-color:transparent}.alignment-funnel{display:flex;flex-direction:column;align-items:center;gap:4px;max-width:780px;margin:18px auto 0}.funnel-tier{--tier-width:100%;width:var(--tier-width);display:grid;grid-template-columns:112px 1fr;align-items:center;min-height:43px;padding:7px 18px;border:1px solid rgba(121,215,255,.28);background:linear-gradient(90deg,rgba(121,215,255,.13),rgba(255,255,255,.045));clip-path:polygon(4% 0,96% 0,100% 100%,0 100%)}.funnel-tier:nth-child(2){--tier-width:91%}.funnel-tier:nth-child(3){--tier-width:82%}.funnel-tier:nth-child(4){--tier-width:73%}.funnel-tier:nth-child(5){--tier-width:64%}.funnel-tier span{color:var(--cyan);font:800 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.funnel-tier strong{font-size:14px;text-align:center}.alignment-summary{max-width:980px;margin:0}.compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.framework-card{border:1px solid var(--line);border-radius:20px;padding:20px;background:rgba(255,255,255,.045)}.framework-card.new{border-color:rgba(121,215,255,.42)}.framework-card.old{border-color:rgba(242,162,58,.38)}.framework-card h3{margin:0 0 12px}.framework-card h4{margin:16px 0 8px;color:#ffe2ad}.framework-card.new h4{color:var(--cyan)}.badge-retained{color:#bfffc6;border-color:rgba(126,231,135,.4);background:rgba(126,231,135,.10)}.badge-renamed,.badge-moved{color:#d6c1ff;border-color:rgba(170,120,255,.42);background:rgba(170,120,255,.12)}.badge-expanded{color:#bdeeff;border-color:rgba(121,215,255,.42);background:rgba(121,215,255,.12)}.badge-new{color:#ffe2ad;border-color:rgba(242,162,58,.45);background:rgba(242,162,58,.12)}.badge-needs-review,.badge-partial,.badge-program-level,.badge-distributed{color:#ffd59b;border-color:rgba(255,213,110,.48);background:rgba(255,213,110,.10)}.curriculum-table{font-size:13px}.curriculum-table th{font-size:11px;text-transform:uppercase;letter-spacing:.045em}.curriculum-table td{line-height:1.45}.descriptor-id{display:inline-flex;color:#08111e;background:var(--cyan);font-family:var(--mono);font-weight:900;border-radius:7px;padding:3px 7px;white-space:nowrap}.domain-knowledge td{background:rgba(126,231,135,.085)}.domain-skills td{background:rgba(244,211,116,.08)}.domain-values td{background:rgba(242,162,58,.09)}.domain-band th{padding:8px 12px;text-align:left;font-size:12px;letter-spacing:.06em}.domain-band.domain-knowledge th{color:#d9ffdd;background:rgba(126,231,135,.18)}.domain-band.domain-skills th{color:#fff0bd;background:rgba(244,211,116,.17)}.domain-band.domain-values th{color:#ffe2bd;background:rgba(242,162,58,.18)}.subdomain-band th{padding:6px 12px;text-align:left;color:var(--muted);background:rgba(255,255,255,.055);font-size:11px}.matrix-table th,.matrix-table td{text-align:center;vertical-align:middle}.matrix-table td:first-child,.matrix-table th:first-child{text-align:left;min-width:230px}.matrix-table td:last-child,.matrix-table th:last-child{text-align:left;min-width:310px}.mark-primary{background:rgba(126,231,135,.22)!important;color:#d9ffdd;font-weight:900}.mark-supporting{background:rgba(121,215,255,.15)!important;color:#dff5ff;font-weight:800}.empty-state{border:1px dashed rgba(121,215,255,.48);border-radius:20px;padding:20px;background:rgba(121,215,255,.07)}.source-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}.source-item{display:flex;flex-direction:column;min-height:190px;border:1px solid var(--line);border-radius:14px;padding:14px;background:rgba(255,255,255,.04)}.source-item strong{display:block;margin:7px 0;color:#fff;line-height:1.35}.source-item span{color:#ffe2ad;font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:800}.source-item p{font-size:12px;line-height:1.45;margin:0 0 12px}.source-item .btn{margin-top:auto;align-self:flex-start;padding:8px 11px;font-size:12px}.compact-note{padding:12px 14px;font-size:13px}.nowrap{white-space:nowrap}@media(max-width:1050px){.source-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.compare-grid{grid-template-columns:1fr}.section-nav{position:static}}@media(max-width:620px){.alignment-funnel{align-items:stretch}.funnel-tier,.funnel-tier:nth-child(n){--tier-width:100%;width:100%;grid-template-columns:82px 1fr;padding:7px 12px;clip-path:none;border-radius:8px}.funnel-tier strong{text-align:left;font-size:12px}.source-list{grid-template-columns:1fr}.source-item{min-height:0}.curriculum-table{font-size:12px}}
+    /* Exact categorical palette from references/EE-PLOs.png. */
+    .curriculum-table tr.domain-knowledge td,
+    .curriculum-table tr.domain-skills td,
+    .curriculum-table tr.domain-values td{background:rgba(255,255,255,.025)}
+    .domain-band th{color:#17202b!important;border-color:rgba(10,18,28,.35)!important;font-weight:900}
+    .domain-band.domain-knowledge th{background:#C6E0B4!important}
+    .domain-band.domain-skills th{background:#FFE699!important}
+    .domain-band.domain-values th{background:#F8CBAD!important}
+    .subdomain-band th{color:#17202b!important;background:#FFE699!important;border-color:rgba(10,18,28,.35)!important;padding-left:24px!important;font-weight:850}
+    .subdomain-band th:before{content:"Skills / ";font-weight:600;opacity:.72}
+    .matrix-table .mark-primary{background:rgba(121,215,255,.14)!important;color:#dff5ff;box-shadow:inset 0 0 0 1px rgba(121,215,255,.28)}
+    .matrix-table .mark-supporting{background:rgba(255,255,255,.055)!important;color:#c5d2df;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+    .alignment-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;max-width:1120px;margin:20px auto 0;align-items:stretch}
+    .flow-node{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:94px;padding:13px 14px;border:1px solid rgba(121,215,255,.30);border-radius:10px;background:rgba(255,255,255,.045);text-align:left}
+    .flow-node:after{content:"→";position:absolute;left:calc(100% + 6px);top:50%;width:12px;transform:translateY(-50%);color:var(--cyan);font-size:18px;font-weight:800;text-align:center}
+    .flow-node:last-child:after{display:none}
+    .flow-node span{margin-bottom:8px;color:var(--cyan);font:800 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+    .flow-node strong{font-size:13px;line-height:1.35}
+    .nqf-hero .alignment-summary{margin:14px auto 0}
+    @media(max-width:620px){.funnel-tier span{font-size:8.5px;letter-spacing:.035em}.funnel-tier strong{font-size:11px}}
+    @media(max-width:900px){.alignment-flow{grid-template-columns:1fr;gap:22px;max-width:540px}.flow-node{min-height:0;text-align:center}.flow-node:after{content:"↓";left:50%;top:calc(100% + 3px);transform:translateX(-50%)}.flow-node span{margin-bottom:6px}}
   </style>
 </head>
 <body>
   <div id="header-placeholder"></div>
   <main class="wrap">
-    <section class="hero nqf-hero">
+    <section class="hero nqf-hero" id="overview">
       <span class="kicker">Curriculum Vision · Major Revision Workspace</span>
       <h2>NQF 2026 Transition & Curriculum Alignment</h2>
       <p class="muted">From national qualification requirements to institutional outcomes, ABET Student Outcomes, course CLOs, and assessment evidence.</p>
-      <div class="flow-stack" id="alignmentFlow"></div>
+      <div class="alignment-flow" id="alignmentFlow" aria-label="Five-step curriculum alignment pathway"></div>
+      <p class="muted alignment-summary">The NQF defines national qualification expectations; PSU Graduate Attributes and ILOs provide the institutional interpretation; engineering PLOs and ABET SOs form the program layer; CLOs implement those requirements within courses; and assessment supplies evidence of attainment. These are distinct alignment layers—not equivalent or interchangeable frameworks.</p>
     </section>
 
     <nav class="section-nav" aria-label="NQF alignment sections">
       <a href="#overview">Overview</a><a href="#transition">2023 → 2026</a><a href="#level6">Level 6</a><a href="#ilo">PSU ILO Alignment</a><a href="#abet">ABET Alignment</a><a href="#matrix">Subskill Matrix</a><a href="#coverage">CLO Coverage</a><a href="#references">References</a>
     </nav>
 
-    <section class="section" id="overview">
-      <h2>Alignment Philosophy</h2>
-      <p class="muted">The national NQF, PSU Graduate Attributes / Institutional Learning Outcomes, ABET Student Outcomes, CLOs, and assessment evidence are different layers. This page treats crosswalks as curriculum-alignment tools, not as official NQF–ABET equivalencies.</p>
-      <div class="method-grid" id="methodGrid"></div>
-      <div class="alert provenance-note">Provenance labels in the data distinguish source-defined facts, PSU institutional mapping/philosophy, and portal curriculum interpretations.</div>
-    </section>
-
     <section class="section" id="transition">
       <h2>Section A — Old 2023 vs New 2026 NQF</h2>
       <div class="compare-grid" id="frameworkCompare"></div>
       <h3 style="margin-top:24px">Old → New Transition Table</h3>
-      <div class="table-wrap"><table><thead><tr><th>Old NQF 2023</th><th>New NQF 2026</th><th>Transition</th><th>Review note</th></tr></thead><tbody id="transitionRows"></tbody></table></div>
+      <div class="table-wrap"><table class="curriculum-table"><thead><tr><th>Old NQF 2023</th><th>New NQF 2026</th><th>Transition</th><th>Review note</th></tr></thead><tbody id="transitionRows"></tbody></table></div>
     </section>
 
     <section class="section" id="level6">
       <h2>Section B — New NQF Level 6 Descriptors</h2>
       <p class="muted">Stable descriptor codes are used so future CLO mappings can reference each requirement consistently.</p>
-      <div class="descriptor-grid" id="descriptorGrid"></div>
+      <div class="table-wrap"><table class="curriculum-table"><thead><tr><th>Code</th><th>Domain</th><th>Subdomain</th><th>Descriptor</th><th>Level 6 Requirement / Explanation</th></tr></thead><tbody id="descriptorRows"></tbody></table></div>
     </section>
 
     <section class="section" id="ilo">
@@ -53,14 +68,13 @@
 
     <section class="section" id="abet">
       <h2>Section D — New NQF → ILO/GA → Engineering PLO / ABET SO</h2>
-      <p class="muted">ABET SO1–SO7 are reused from the existing Undergraduate EE curriculum data. The SO structure remains unchanged; no SO8 is introduced for digital skills, AI, or cybersecurity.</p>
-      <div id="abetDefinitions" class="grid two"></div>
+      <div class="alert compact-note">The ABET Student Outcomes SO1–SO7 remain unchanged. The 2026 NQF revision does not require creation or modification of the ABET SO structure; the task is to map the new Level 6 descriptors and subskills to the existing SO1–SO7 where meaningful. No SO8 is introduced for AI, cybersecurity, or digital skills. A requirement may span several existing SOs or have no exact one-to-one ABET equivalent.</div>
     </section>
 
     <section class="section" id="matrix">
       <h2>Section E — Dedicated NQF Subskill → ABET SO Matrix</h2>
       <p class="muted">Primary and supporting relationships are configurable curriculum mappings. They do not imply that ABET publishes these NQF mappings.</p>
-      <div class="table-wrap"><table class="matrix-table"><thead id="matrixHead"></thead><tbody id="matrixBody"></tbody></table></div>
+      <div class="table-wrap"><table class="matrix-table curriculum-table"><thead id="matrixHead"></thead><tbody id="matrixBody"></tbody></table></div>
       <div class="legend"><div class="legend-item"><div class="legend-box mark-primary">P</div><span>Primary / Direct</span></div><div class="legend-item"><div class="legend-box mark-supporting">S</div><span>Supporting / Context-dependent</span></div></div>
     </section>
 
@@ -77,7 +91,7 @@
       <h2>Reference Documents & Methodology</h2>
       <p class="muted">The 2026 NQF document defines the new national Level 6 framework. PSU documents describe the university's current/previous NQF implementation and mapping philosophy. PSU Graduate Attributes / ILOs provide the institutional layer, while ABET SOs provide the engineering accreditation layer.</p>
       <div class="source-list" id="sourceList"></div>
-      <div class="alert" style="margin-top:16px">The crosswalk tables are curriculum-alignment tools. They should not be represented as official NQF-ABET mappings unless such mappings are explicitly documented by the relevant authority.</div>
+      <div class="alert compact-note" style="margin-top:14px">Crosswalk tables are curriculum-alignment tools, not official NQF–ABET mappings unless explicitly documented by the relevant authority.</div>
     </section>
   </main>
   <div id="footer-placeholder"></div>
@@ -89,20 +103,22 @@
     function mark(v){if(v==='Primary')return'<td class="mark-primary">P</td>';if(v==='Supporting')return'<td class="mark-supporting">S</td>';return'<td></td>'}
     document.addEventListener('DOMContentLoaded',async()=>{
       const nqf=await portal.loadJSON('../data/nqf_2026_alignment.json');
-      let ee=null;try{ee=await portal.loadJSON('../data/ee_curriculum.json')}catch(e){console.warn('ABET definitions unavailable',e)}
-      byId('alignmentFlow').innerHTML=nqf.alignment_layers.map((layer,i)=>`<div class="flow-item">${portal.esc(layer)}<span>Layer ${i+1}</span></div>${i<nqf.alignment_layers.length-1?'<div class="flow-arrow">↓</div>':''}`).join('');
-      byId('methodGrid').innerHTML=nqf.abet_alignment_philosophy.map((item,i)=>`<div class="method-card"><strong>${i+1}.</strong><p class="muted">${portal.esc(item)}</p></div>`).join('');
+      const layerNames=['National','Institutional','Program','Course','Evidence'];
+      byId('alignmentFlow').innerHTML=nqf.alignment_layers.map((layer,i)=>`<div class="flow-node"><span>${layerNames[i]}</span><strong>${portal.esc(layer)}</strong></div>`).join('');
       byId('frameworkCompare').innerHTML=renderFramework('OLD NQF — 2023 PSU implementation',nqf.old_nqf_2023,'old')+renderFramework('NEW NQF — 2026 Third Edition',nqf.new_nqf_2026,'new');
-      byId('transitionRows').innerHTML=nqf.transition_map.map(r=>`<tr><td>${portal.esc(r.old)}</td><td>${portal.esc(r.new)}</td><td>${r.transition.map(s=>portal.badge(s,statusClass(s))).join(' ')}</td><td>${portal.esc(r.note)}</td></tr>`).join('');
+      const domainClass=d=>d==='Knowledge'?'domain-knowledge':d==='Values'?'domain-values':'domain-skills';
+      const transitionDomain=r=>/Values|Autonomy|Responsibility/i.test(r.old+' '+r.new)?'Values':/Knowledge/i.test(r.old+' '+r.new)?'Knowledge':'Skills';
+      byId('transitionRows').innerHTML=['Knowledge','Skills','Values'].map(domain=>`<tr class="domain-band ${domainClass(domain)}"><th colspan="4">${portal.esc(domain)}</th></tr>`+nqf.transition_map.filter(r=>transitionDomain(r)===domain).map(r=>`<tr><td>${portal.esc(r.old)}</td><td>${portal.esc(r.new)}</td><td>${r.transition.map(s=>portal.badge(s,statusClass(s))).join(' ')}</td><td>${portal.esc(r.note)}</td></tr>`).join('')).join('');
       const descriptors=nqf.descriptors.map(dObj), descriptorById=Object.fromEntries(descriptors.map(d=>[d.id,d]));
-      byId('descriptorGrid').innerHTML=descriptors.map(d=>`<article class="descriptor-card"><span class="descriptor-id">${portal.esc(d.id)}</span><div class="label">${portal.esc(d.domain+(d.subdomain?' · '+d.subdomain:''))}</div><h3>${portal.esc(d.title)}</h3><p>${portal.esc(d.descriptor)}</p></article>`).join('');
+      const majorDomain=d=>d.domain==='Knowledge'?'Knowledge':d.domain==='Values'?'Values':'Skills';
+      let lastDescriptorDomain='',lastDescriptorSubdomain='';
+      byId('descriptorRows').innerHTML=descriptors.map(d=>{const domain=majorDomain(d),subdomain=domain==='Skills'?d.domain:'';let bands='';if(domain!==lastDescriptorDomain){bands+=`<tr class="domain-band ${domainClass(domain)}"><th colspan="5">${portal.esc(domain)}</th></tr>`;lastDescriptorDomain=domain;lastDescriptorSubdomain=''}if(subdomain&&subdomain!==lastDescriptorSubdomain){bands+=`<tr class="subdomain-band"><th colspan="5">${portal.esc(subdomain)}</th></tr>`;lastDescriptorSubdomain=subdomain}return bands+`<tr><td><span class="descriptor-id">${portal.esc(d.id)}</span></td><td>${portal.esc(domain)}</td><td>${portal.esc(d.domain==='Knowledge'||d.domain==='Values'?(d.subdomain||'—'):d.domain+(d.subdomain?' · '+d.subdomain:''))}</td><td><strong>${portal.esc(d.title)}</strong></td><td>${portal.esc(d.descriptor)}</td></tr>`}).join('');
       const iloNames=Object.fromEntries(nqf.psu_ilos.map(i=>[i[0],`${i[1]} / ${i[0]} — ${i[2]}`]));
       byId('iloRows').innerHTML=nqf.ilo_mapping.map(r=>`<tr><td>${portal.esc(r.nqf)}</td><td>${r.ilo.map(i=>portal.badge(iloNames[i]||i)).join(' ')}</td><td>${portal.badge(r.strength,statusClass(r.strength))}</td><td>${portal.esc(r.interpretation)}</td></tr>`).join('');
-      const soDefs=ee?.abet?.student_outcomes||{};
-      byId('abetDefinitions').innerHTML=soOrder.map(so=>`<article class="card"><div class="code">${so}</div><h3>${portal.esc(soDefs[so]?.statement||'Definition not available in curriculum data')}</h3><p class="muted">Mapped PIs: ${portal.esc((soDefs[so]?.pis||[]).join(', ')||'—')}</p></article>`).join('');
       byId('matrixHead').innerHTML='<tr><th>NQF descriptor</th>'+soOrder.map(so=>`<th>${so}</th>`).join('')+'<th>Rationale</th></tr>';
-      byId('matrixBody').innerHTML=nqf.abet_matrix.map(r=>{const d=descriptorById[r.descriptor_id];return `<tr><td><strong class="code">${portal.esc(r.descriptor_id)}</strong><br>${portal.esc(d?.title||'')}</td>${soOrder.map(so=>mark(r.so[so])).join('')}<td>${portal.esc(r.rationale)}</td></tr>`}).join('');
-      byId('sourceList').innerHTML=nqf.sources.map(s=>`<article class="source-item"><span>${portal.esc(s.group)}</span><strong>${portal.esc(s.title)}</strong><p class="muted">${portal.esc(s.role)}</p><p class="small">Local file: ${portal.esc(s.local_file)}</p>${s.href?`<a class="btn primary" href="${encodeURI(s.href)}" target="_blank" rel="noopener">Open reference</a>`:''}</article>`).join('');
+      let lastDomain='',lastSubdomain='';
+      byId('matrixBody').innerHTML=nqf.abet_matrix.map(r=>{const d=descriptorById[r.descriptor_id],domain=majorDomain(d),subdomain=domain==='Skills'?d.domain:'';let bands='';if(domain!==lastDomain){bands+=`<tr class="domain-band ${domainClass(domain)}"><th colspan="9">${portal.esc(domain)}</th></tr>`;lastDomain=domain;lastSubdomain=''}if(subdomain&&subdomain!==lastSubdomain){bands+=`<tr class="subdomain-band"><th colspan="9">${portal.esc(subdomain)}</th></tr>`;lastSubdomain=subdomain}return bands+`<tr><td><span class="descriptor-id">${portal.esc(r.descriptor_id)}</span><br>${portal.esc(d?.title||'')}</td>${soOrder.map(so=>mark(r.so[so])).join('')}<td>${portal.esc(r.rationale)}</td></tr>`}).join('');
+      byId('sourceList').innerHTML=nqf.sources.map(s=>`<article class="source-item"><span>${portal.esc(s.group)}</span><strong>${portal.esc(s.title)}</strong><p class="muted">${portal.esc(s.role)}</p>${s.href?`<a class="btn primary" href="${encodeURI(s.href)}" target="_blank" rel="noopener">Open reference</a>`:''}</article>`).join('');
     });
   </script>
 </body>
