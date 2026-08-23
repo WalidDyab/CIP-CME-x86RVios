@@ -1,0 +1,737 @@
+{
+  "schema_version": "1.0",
+  "module": "NQF 2026 Transition & Curriculum Alignment",
+  "status": "framework_scaffold_no_clo_coverage_claims",
+  "provenance_types": {
+    "source_fact": "Source-defined fact from NQF or PSU reference documents",
+    "psu_mapping": "PSU-defined institutional layer or documented PSU mapping philosophy",
+    "portal_crosswalk": "Portal curriculum-alignment interpretation for review; not an official ETEC, PSU, or ABET mapping"
+  },
+  "sources": [
+    {
+      "id": "nqf2026",
+      "group": "National Source",
+      "title": "Saudi National Qualifications Framework — Third Edition, 1447H / 2026",
+      "role": "Defines the new national Level 6 framework.",
+      "local_file": "references/تحديث الإطار الوطني للمؤهلات في المملكة العربية السعودية - الإصدار الثالث.pdf",
+      "provenance": "source_fact",
+      "href": "references/تحديث الإطار الوطني للمؤهلات في المملكة العربية السعودية - الإصدار الثالث.pdf"
+    },
+    {
+      "id": "psu-transform",
+      "group": "PSU Institutional Sources",
+      "title": "Guidelines for transforming Current Learning Domains with New Learning Areas",
+      "role": "Represents PSU current/previous NQF implementation and engineering interpretation philosophy.",
+      "local_file": "references/Guidelines for transforming Current Learning Domains with New Learning Areas.pdf",
+      "provenance": "psu_mapping",
+      "href": "references/Guidelines for transforming Current Learning Domains with New Learning Areas.pdf"
+    },
+    {
+      "id": "psu-nqf-guidelines",
+      "group": "PSU Institutional Sources",
+      "title": "Guidelines for National Qualification Framework",
+      "role": "PSU quality-assurance guidance for NQF learning areas, Level 6 descriptors, mapping, graduate attributes, and PLOs.",
+      "local_file": "references/Guidelines for National Qualification Framework.pdf",
+      "provenance": "psu_mapping",
+      "href": "references/Guidelines for National Qualification Framework.pdf"
+    },
+    {
+      "id": "psu-ga-ilo-2021",
+      "group": "PSU Institutional Sources",
+      "title": "Updated Graduate Attributes and Institutional Learning Outcomes — April 2021",
+      "role": "Defines PSU Graduate Attributes / Institutional Learning Outcomes used as the institutional alignment layer.",
+      "local_file": "references/updated-graduate-attributes-and-institutional-learning-outcomes-april-2021docx_1628153639.pdf",
+      "provenance": "psu_mapping",
+      "href": "references/updated-graduate-attributes-and-institutional-learning-outcomes-april-2021docx_1628153639.pdf"
+    }
+  ],
+  "alignment_layers": [
+    "New NQF 2026 Level 6",
+    "PSU Graduate Attributes / Institutional Learning Outcomes",
+    "Engineering Program Outcomes / ABET SO1–SO7",
+    "Course CLOs",
+    "Assessment Evidence"
+  ],
+  "old_nqf_2023": [
+    {
+      "domain": "Knowledge & Understanding",
+      "items": [
+        "Knowledge and understanding required for the qualification level."
+      ]
+    },
+    {
+      "domain": "Skills",
+      "items": [
+        "Cognitive Skills",
+        "Practical & Physical Skills",
+        "Communication & ICT Skills",
+        "Quantitative/numeracy skills",
+        "Digital technology and information literacy"
+      ]
+    },
+    {
+      "domain": "Values, Autonomy & Responsibility",
+      "items": [
+        "Values & Ethics",
+        "Autonomy & Responsibility",
+        "Self-development/lifelong learning",
+        "Management of tasks",
+        "Teamwork",
+        "Leadership",
+        "Responsibility",
+        "Civic/community engagement"
+      ]
+    }
+  ],
+  "new_nqf_2026": [
+    {
+      "domain": "Knowledge",
+      "items": [
+        "Broad and deep knowledge",
+        "Processes, procedures, materials, technologies, practices, assumptions, and terminology",
+        "Current specialized knowledge",
+        "Research methodology and inquiry methods"
+      ]
+    },
+    {
+      "domain": "Skills",
+      "items": [
+        "Cognitive Skills",
+        "Practical & Physical Skills",
+        "Social & Emotional Skills: Collaboration, Emotional Regulation, Communication",
+        "Digital Skills: Digital Technology, Artificial Intelligence, Cybersecurity"
+      ]
+    },
+    {
+      "domain": "Values",
+      "items": [
+        "Values & Ethics",
+        "Responsibility & Autonomy"
+      ]
+    }
+  ],
+  "transition_map": [
+    {
+      "old": "Knowledge & Understanding",
+      "new": "Knowledge",
+      "transition": [
+        "Retained",
+        "Renamed"
+      ],
+      "note": "The knowledge layer is retained but named more compactly.",
+      "provenance": "source_fact"
+    },
+    {
+      "old": "Cognitive Skills",
+      "new": "Cognitive Skills",
+      "transition": [
+        "Retained"
+      ],
+      "note": "Continues as a central skills area.",
+      "provenance": "source_fact"
+    },
+    {
+      "old": "Practical & Physical Skills",
+      "new": "Practical & Physical Skills",
+      "transition": [
+        "Retained"
+      ],
+      "note": "Continues as a practical/professional capability area.",
+      "provenance": "source_fact"
+    },
+    {
+      "old": "Communication",
+      "new": "Social & Emotional → Communication",
+      "transition": [
+        "Moved"
+      ],
+      "note": "Communication is represented inside Social & Emotional Skills.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "old": "Teamwork",
+      "new": "Social & Emotional → Collaboration",
+      "transition": [
+        "Moved"
+      ],
+      "note": "Teamwork/collaboration is treated as a skills capability rather than only a values/responsibility item.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "old": "—",
+      "new": "Social & Emotional → Emotional Regulation",
+      "transition": [
+        "New"
+      ],
+      "note": "Emotional regulation is newly explicit and requires coverage analysis.",
+      "provenance": "source_fact"
+    },
+    {
+      "old": "ICT / Digital Technology",
+      "new": "Digital Skills → Digital Technology",
+      "transition": [
+        "Expanded"
+      ],
+      "note": "Digital capability is reorganized under a dedicated Digital Skills area.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "old": "—",
+      "new": "Digital Skills → Artificial Intelligence",
+      "transition": [
+        "New"
+      ],
+      "note": "AI is an explicit Level 6 digital requirement in the new framework.",
+      "provenance": "source_fact"
+    },
+    {
+      "old": "—",
+      "new": "Digital Skills → Cybersecurity",
+      "transition": [
+        "New"
+      ],
+      "note": "Cybersecurity is an explicit Level 6 digital requirement in the new framework.",
+      "provenance": "source_fact"
+    },
+    {
+      "old": "Values & Ethics",
+      "new": "Values → Values & Ethics",
+      "transition": [
+        "Retained"
+      ],
+      "note": "Professional and human ethics remain explicit.",
+      "provenance": "source_fact"
+    },
+    {
+      "old": "Autonomy & Responsibility",
+      "new": "Values → Responsibility & Autonomy",
+      "transition": [
+        "Moved"
+      ],
+      "note": "The organization changes, but the requirement remains central.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "old": "Quantitative / Numeracy",
+      "new": "No standalone new subskill",
+      "transition": [
+        "Needs Review"
+      ],
+      "note": "This does not mean quantitative competence is unnecessary in engineering; coverage should be reviewed through ABET SO1/SO2/SO6 and program CLOs.",
+      "provenance": "portal_crosswalk"
+    }
+  ],
+  "descriptors": [
+    [
+      "K1",
+      "Knowledge",
+      "",
+      "Theories, principles, and concepts",
+      "Broad and deep knowledge of theories, principles, and concepts in the field of learning or professional practice."
+    ],
+    [
+      "K2",
+      "Knowledge",
+      "",
+      "Processes, technologies, and practices",
+      "Knowledge of processes, procedures, materials, technologies, practices, assumptions, and terminology used in specialized practice."
+    ],
+    [
+      "K3",
+      "Knowledge",
+      "",
+      "Current specialized knowledge",
+      "Current specialized knowledge and awareness of developments relevant to the discipline or profession."
+    ],
+    [
+      "K4",
+      "Knowledge",
+      "",
+      "Research methodology",
+      "Knowledge of research methodology, inquiry methods, and ways of verifying information and evidence."
+    ],
+    [
+      "SC1",
+      "Cognitive Skills",
+      "",
+      "Application of integrated concepts",
+      "Apply integrated concepts, principles, and theories to specialized situations and professional problems."
+    ],
+    [
+      "SC2",
+      "Cognitive Skills",
+      "",
+      "Complex problem solving",
+      "Analyze and solve complex problems using appropriate concepts, methods, and evidence."
+    ],
+    [
+      "SC3",
+      "Cognitive Skills",
+      "",
+      "Critical and creative thinking",
+      "Use critical thinking and creative approaches to generate, compare, and justify solutions."
+    ],
+    [
+      "SC4",
+      "Cognitive Skills",
+      "",
+      "Inquiry and research",
+      "Conduct inquiry, verification, and research activities to support decisions and conclusions."
+    ],
+    [
+      "SP1",
+      "Practical & Physical Skills",
+      "",
+      "Advanced tools and processes",
+      "Select and use advanced processes, technologies, tools, equipment, and materials in specialized activities."
+    ],
+    [
+      "SP2",
+      "Practical & Physical Skills",
+      "",
+      "Complex practical activities",
+      "Perform complex practical activities and procedures relevant to the field or profession."
+    ],
+    [
+      "SSE1",
+      "Social & Emotional Skills",
+      "Collaboration",
+      "Collaboration",
+      "Participate effectively in collaborative specialized or professional projects, remain open to different viewpoints, appreciate diversity, and share ideas and resources."
+    ],
+    [
+      "SSE2",
+      "Social & Emotional Skills",
+      "Emotional Regulation",
+      "Emotional regulation",
+      "Consider stakeholder perspectives, manage conflict constructively, adapt with flexibility, and regulate responses in complex professional settings."
+    ],
+    [
+      "SSE3",
+      "Social & Emotional Skills",
+      "Communication",
+      "Communication",
+      "Communicate through different methods with different audiences, including transfer of theoretical and specialized knowledge and complex ideas."
+    ],
+    [
+      "SD1",
+      "Digital Skills",
+      "Digital Technology",
+      "Digital technology",
+      "Select, use, and adapt digital tools; process and analyze data and information; create digital content; and support research or project activity."
+    ],
+    [
+      "SD2",
+      "Digital Skills",
+      "Artificial Intelligence",
+      "Artificial intelligence",
+      "Select and adapt AI tools responsibly, evaluate AI outputs, document use, improve outputs through prompt or instruction design, and observe ethical governance and protection requirements."
+    ],
+    [
+      "SD3",
+      "Digital Skills",
+      "Cybersecurity",
+      "Cybersecurity",
+      "Apply advanced digital safety practices, protect data and privacy, behave safely in digital environments, and reduce digital risks."
+    ],
+    [
+      "V1",
+      "Values",
+      "Values & Ethics",
+      "Professional and human ethics",
+      "Apply professional and human ethics, standards, integrity, and responsible conduct in academic and professional contexts."
+    ],
+    [
+      "V2",
+      "Values",
+      "Values & Ethics",
+      "Responsible citizenship",
+      "Demonstrate responsible citizenship and awareness of social and professional responsibilities."
+    ],
+    [
+      "V3",
+      "Values",
+      "Responsibility & Autonomy",
+      "Self-development and autonomy",
+      "Engage in self-development, reflective learning, and autonomous improvement based on evidence and feedback."
+    ],
+    [
+      "V4",
+      "Values",
+      "Responsibility & Autonomy",
+      "Professional responsibility",
+      "Make evidence-based decisions and assume independent professional responsibility for tasks, outputs, and consequences."
+    ],
+    [
+      "V5",
+      "Values",
+      "Responsibility & Autonomy",
+      "Community contribution",
+      "Contribute to the community and participate responsibly in professional, institutional, or civic contexts."
+    ]
+  ],
+  "psu_ilos": [
+    [
+      "ILO1",
+      "GA1",
+      "Knowledgeable"
+    ],
+    [
+      "ILO2",
+      "GA2",
+      "Critical Thinkers"
+    ],
+    [
+      "ILO3",
+      "GA3",
+      "Leaders"
+    ],
+    [
+      "ILO4",
+      "GA4",
+      "Communicators & Team Players"
+    ],
+    [
+      "ILO5",
+      "GA5",
+      "Digital Natives"
+    ],
+    [
+      "ILO6",
+      "GA6",
+      "Socially Responsible & Ethical"
+    ]
+  ],
+  "ilo_mapping": [
+    {
+      "nqf": "Knowledge",
+      "ilo": [
+        "ILO1"
+      ],
+      "strength": "Direct",
+      "interpretation": "Knowledge requirements align directly with the institutional Knowledgeable attribute.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Cognitive Skills",
+      "ilo": [
+        "ILO2"
+      ],
+      "strength": "Direct",
+      "interpretation": "Problem solving, critical thinking, creativity, and inquiry align with Critical Thinkers.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Practical & Physical Skills",
+      "ilo": [
+        "Program-level coverage"
+      ],
+      "strength": "Program-level",
+      "interpretation": "Practical engineering capability is expected to be demonstrated through program outcomes, labs, design work, and course evidence rather than one explicit institutional ILO.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Collaboration",
+      "ilo": [
+        "ILO4"
+      ],
+      "strength": "Direct",
+      "interpretation": "Collaboration aligns directly with Communicators & Team Players.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Emotional Regulation",
+      "ilo": [
+        "ILO3",
+        "ILO4"
+      ],
+      "strength": "Partial",
+      "interpretation": "Leadership and team-player behaviors support this area, but emotional regulation should be checked explicitly in CLO and assessment language.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Communication",
+      "ilo": [
+        "ILO4"
+      ],
+      "strength": "Direct",
+      "interpretation": "Communication maps directly to Communicators & Team Players.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Digital Technology",
+      "ilo": [
+        "ILO5"
+      ],
+      "strength": "Direct",
+      "interpretation": "Digital technology aligns with Digital Natives.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Artificial Intelligence",
+      "ilo": [
+        "ILO5"
+      ],
+      "strength": "Partial",
+      "interpretation": "AI belongs naturally under digital capability, but current ILO wording may not name AI explicitly.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Cybersecurity",
+      "ilo": [
+        "ILO5"
+      ],
+      "strength": "Partial",
+      "interpretation": "Cybersecurity belongs under digital capability, but current ILO wording may not name cybersecurity explicitly.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Values & Ethics",
+      "ilo": [
+        "ILO6"
+      ],
+      "strength": "Direct",
+      "interpretation": "Ethics and responsibility align with Socially Responsible & Ethical.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Responsibility & Autonomy",
+      "ilo": [
+        "ILO3",
+        "ILO6"
+      ],
+      "strength": "Distributed",
+      "interpretation": "Autonomy, leadership, responsibility, and community contribution are distributed across Leaders and Socially Responsible & Ethical.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "nqf": "Self-development / Lifelong Learning",
+      "ilo": [
+        "ILO3"
+      ],
+      "strength": "Direct",
+      "interpretation": "Self-development and autonomous growth support the Leaders institutional attribute.",
+      "provenance": "portal_crosswalk"
+    }
+  ],
+  "abet_alignment_philosophy": [
+    "Identify the NQF qualification level.",
+    "Identify the essential learning requirements of each domain.",
+    "Interpret those requirements for the engineering program as program learning outcomes.",
+    "Align teaching, assessment, and evidence with those outcomes."
+  ],
+  "abet_matrix": [
+    {
+      "descriptor_id": "K1",
+      "so": {
+        "SO1": "Primary",
+        "SO2": "Supporting"
+      },
+      "rationale": "Engineering theories and principles are applied in problem solving and may support design decisions.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "K2",
+      "so": {
+        "SO1": "Supporting",
+        "SO2": "Supporting",
+        "SO6": "Supporting"
+      },
+      "rationale": "Processes, technologies, and practices support problem solving, design, and experimentation.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "K3",
+      "so": {
+        "SO7": "Primary",
+        "SO1": "Supporting"
+      },
+      "rationale": "Current specialized knowledge is developed through new learning and applied in technical work.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "K4",
+      "so": {
+        "SO6": "Primary",
+        "SO7": "Supporting"
+      },
+      "rationale": "Research methodology supports experimentation, data interpretation, and self-directed learning.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SC1",
+      "so": {
+        "SO1": "Primary",
+        "SO2": "Supporting"
+      },
+      "rationale": "Application of integrated concepts is core to engineering problem solving and design.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SC2",
+      "so": {
+        "SO1": "Primary"
+      },
+      "rationale": "Complex problem solving is directly aligned with SO1.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SC3",
+      "so": {
+        "SO2": "Primary",
+        "SO1": "Supporting"
+      },
+      "rationale": "Creative solutions strongly support engineering design and may support problem formulation.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SC4",
+      "so": {
+        "SO6": "Primary",
+        "SO7": "Supporting"
+      },
+      "rationale": "Inquiry and verification align with experimentation, data analysis, and learning strategies.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SP1",
+      "so": {
+        "SO6": "Primary",
+        "SO2": "Supporting"
+      },
+      "rationale": "Advanced tools and processes often generate experimental or design evidence.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SP2",
+      "so": {
+        "SO6": "Primary",
+        "SO2": "Supporting"
+      },
+      "rationale": "Complex practical activities are commonly assessed through experimentation, implementation, or design tasks.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SSE1",
+      "so": {
+        "SO5": "Primary"
+      },
+      "rationale": "Collaboration/teamwork aligns directly with SO5.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SSE2",
+      "so": {
+        "SO5": "Supporting",
+        "SO4": "Supporting"
+      },
+      "rationale": "Conflict resolution, flexibility, and stakeholder awareness support effective teams and professional judgment.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SSE3",
+      "so": {
+        "SO3": "Primary"
+      },
+      "rationale": "Communication with different audiences maps directly to SO3.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SD1",
+      "so": {
+        "SO1": "Supporting",
+        "SO2": "Supporting",
+        "SO6": "Supporting",
+        "SO7": "Supporting"
+      },
+      "rationale": "Digital tools and data practices support problem solving, design, experimentation, and independent learning depending on context.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SD2",
+      "so": {
+        "SO1": "Supporting",
+        "SO2": "Supporting",
+        "SO4": "Supporting",
+        "SO6": "Supporting",
+        "SO7": "Supporting"
+      },
+      "rationale": "AI is context-dependent across analysis, design, ethics, experimentation, and learning; no new ABET SO is introduced.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "SD3",
+      "so": {
+        "SO1": "Supporting",
+        "SO2": "Supporting",
+        "SO4": "Supporting"
+      },
+      "rationale": "Cybersecurity is context-dependent and may appear in problem constraints, design choices, and ethical/professional responsibility.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "V1",
+      "so": {
+        "SO4": "Primary"
+      },
+      "rationale": "Professional ethics aligns directly with SO4.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "V2",
+      "so": {
+        "SO4": "Primary"
+      },
+      "rationale": "Responsible citizenship is part of professional judgment and societal context.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "V3",
+      "so": {
+        "SO7": "Primary",
+        "SO4": "Supporting"
+      },
+      "rationale": "Self-development and reflective learning align with SO7 and support professional responsibility.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "V4",
+      "so": {
+        "SO4": "Primary",
+        "SO5": "Supporting",
+        "SO7": "Supporting"
+      },
+      "rationale": "Professional responsibility primarily supports SO4 and can be evidenced in team or learning contexts.",
+      "provenance": "portal_crosswalk"
+    },
+    {
+      "descriptor_id": "V5",
+      "so": {
+        "SO4": "Supporting"
+      },
+      "rationale": "Community contribution supports broader societal/professional responsibility.",
+      "provenance": "portal_crosswalk"
+    }
+  ],
+  "clo_coverage_scaffold": {
+    "production_mode": "empty_state",
+    "note": "No CLO coverage counts are provided here. Future analysis must be computed from actual CLO-to-NQF descriptor mappings.",
+    "future_fields": [
+      "nqf_descriptor_id",
+      "abet_so",
+      "mapped_clos",
+      "courses",
+      "coverage_strength",
+      "evidence_type",
+      "action"
+    ],
+    "statuses": [
+      "Strong",
+      "Adequate",
+      "Weak",
+      "No explicit CLO coverage",
+      "Implicit coverage only",
+      "Review required"
+    ]
+  }
+}
