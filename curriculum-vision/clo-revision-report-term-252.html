@@ -3,6 +3,8 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-hAhUzGigOQUUHMtM/dLNbjoJByhlEeXgc70no03yGAE='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Term 252 CLO Revision Report | Curriculum Intelligence Portal</title>
   <link rel="stylesheet" href="../assets/portal.css">
@@ -93,7 +95,7 @@
   <div class="report-shell">
     <div class="report-toolbar" aria-label="Report actions">
       <a href="index.html">← Back to Curriculum Vision</a>
-      <button class="btn primary" type="button" onclick="window.print()">Print / Save as PDF</button>
+      <button class="btn primary" type="button" id="printReportBtn">Print / Save as PDF</button>
     </div>
     <article class="report-paper">
       <header class="report-masthead">
@@ -388,5 +390,6 @@
     </article>
   </div>
   <div id="footer-placeholder"></div>
+<script>document.getElementById('printReportBtn').addEventListener('click', () => window.print());</script>
 </body>
 </html>
