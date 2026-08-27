@@ -2,6 +2,36 @@
 .report-section{margin-top:18px;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)}.report-section h2{margin:4px 0 10px}.report-section>p,.method-note{color:var(--muted);line-height:1.65}.eyebrow{color:var(--cyan);font:800 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}
 .metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}.metric{padding:17px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035)}.metric strong{display:block;color:var(--cyan);font-size:27px}.metric span{display:block;margin-top:5px;color:var(--muted);font-size:12px;line-height:1.4}
 .finding-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.finding{padding:17px;border:1px solid rgba(121,215,255,.25);border-radius:14px;background:rgba(121,215,255,.055)}.finding h3{margin:0 0 7px;font-size:17px}.finding p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
-.table-wrap{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:13px}.report-table{width:100%;min-width:850px;border-collapse:collapse;background:rgba(5,13,25,.35)}.report-table caption{padding:12px 14px;text-align:left;color:var(--muted);font-size:12px}.report-table th,.report-table td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.report-table thead th{background:#19355e;color:#fff;font-size:13px}.report-table tbody th{color:#dfeaff;font-size:13px}.report-table td{color:var(--muted);font-size:13px;line-height:1.4}.report-table tr:last-child>*{border-bottom:0}.report-table .emphasis>*{background:rgba(242,162,58,.1);color:#ffe2ad}.report-table .total>*{background:rgba(121,215,255,.09);color:#e6f8ff;font-weight:800}.cell-note{display:block;margin-top:3px;color:#8794a9;font-size:11px;font-weight:400}.scroll-note{margin:7px 2px 0;color:var(--muted);font-size:11px}
+/* The light treatment is limited to this report's tables and containers. */
+.benchmarking-report .table-wrap{overflow-x:auto;margin-top:16px;border:1px solid #c6d2df;border-radius:13px;background:#fff;color:#243244}
+.benchmarking-report .table-wrap:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.benchmarking-report .report-table{width:100%;min-width:850px;border-collapse:collapse;background:#fff;color:#243244}
+.benchmarking-report .report-table caption{padding:13px 15px;text-align:left;background:#f4f7fb;color:#34465c;font-size:12px;line-height:1.5}
+.benchmarking-report .report-table th,.benchmarking-report .report-table td{padding:12px;border:1px solid #d4dde7;text-align:left;vertical-align:top;font-size:13px;line-height:1.5}
+.benchmarking-report .report-table thead th{background:#19355e;color:#fff}
+.benchmarking-report .report-table tbody th,.benchmarking-report .report-table tbody td{background:#fff;color:#243244}
+.benchmarking-report .report-table tbody tr:nth-child(even)>*{background:#f3f6fa}
+.benchmarking-report .report-table tbody tr>:nth-child(2){background:#e7eff9;color:#18355d;font-weight:800;border-left:2px solid #9bb3d0;border-right:2px solid #9bb3d0}
+.benchmarking-report .report-table thead tr>:nth-child(2){background:#294d7b;border-left:2px solid #9bb3d0;border-right:2px solid #9bb3d0}
+.benchmarking-report .report-table .emphasis>*{background:#fff3e4;color:#71370e}
+.benchmarking-report .report-table .emphasis>:nth-child(2){background:#ffe8c9;color:#65300a}
+.benchmarking-report .report-table .total>*{background:#e7eef6;color:#19355e;font-weight:800}
+.benchmarking-report .report-table .total>:nth-child(2){background:#d5e3f3;color:#19355e}
+.benchmarking-report .report-table .cell-note{display:block;margin-top:4px;color:#4e6074;font-size:11px;font-weight:400;line-height:1.45}
+.benchmarking-report .report-table a{color:#174f8d;text-decoration:underline;text-underline-offset:2px}
+.scroll-note{margin:7px 2px 0;color:var(--muted);font-size:11px}
+.finding .finding-reading{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:#e1eaf7}
 .structure-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}.structure-card{padding:16px;border:1px solid var(--line);border-radius:13px}.structure-card strong{display:block;color:var(--cyan);font-size:26px}.structure-card span{color:var(--muted);font-size:12px}.course-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}.course-block{padding:16px;border:1px solid var(--line);border-radius:14px}.course-block h3{margin:0 0 10px;font-size:17px}.course-list{margin:0;padding-left:20px;color:var(--muted);font-size:13px;line-height:1.55}.course-list li{margin:5px 0}.report-note{margin-top:14px;padding:14px 16px;border-left:3px solid var(--orange);border-radius:8px;background:rgba(242,162,58,.08);color:var(--muted);font-size:13px;line-height:1.55}.implications{margin:12px 0 0;padding-left:22px}.implications li{margin:9px 0;color:var(--muted);line-height:1.55}
 @media(max-width:850px){.metric-grid,.structure-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.finding-grid,.course-columns{grid-template-columns:1fr}}@media(max-width:520px){.report-section{padding:18px}.metric-grid,.structure-grid{grid-template-columns:1fr}.report-actions .btn{width:100%;text-align:center}}
+@media print{
+  .benchmarking-report .table-wrap{overflow:visible;border-radius:0;background:#fff;break-inside:auto}
+  .benchmarking-report .report-table{min-width:0;width:100%;table-layout:fixed;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .benchmarking-report .report-table th,.benchmarking-report .report-table td{padding:6px;font-size:9pt;overflow-wrap:anywhere}
+  .benchmarking-report .report-table th:first-child{width:23%}
+  .benchmarking-report .report-table thead{display:table-header-group}
+  .benchmarking-report .report-table tr{break-inside:avoid}
+  .benchmarking-report .report-table .cell-note{font-size:8pt}
+  .benchmarking-report .report-table thead th{background:#e7eef6;color:#19355e}
+  .benchmarking-report .report-table thead tr>:nth-child(2){background:#d5e3f3;color:#19355e}
+  .benchmarking-report .scroll-note{display:none}
+}
