@@ -9,6 +9,8 @@
   <title>EE Program Overview | Curriculum Intelligence Portal</title>
   <link rel="stylesheet" href="../assets/portal.css?v=heatmap-reference-20260813">
   <script defer src="../assets/portal.js"></script>
+  <link rel="stylesheet" href="../assets/program-identity.css?v=cards-1">
+  <script defer src="../assets/program-identity.js?v=cards-1"></script>
   <style>
     .overview-course-sections { display: grid; gap: 22px; }
     .overview-course-group h3 { margin: 0 0 11px; }
@@ -30,16 +32,24 @@
 </head>
 <body>
   <div id="header-placeholder"></div>
-  <main class="wrap" style="padding-top:14px">
+  <main class="wrap program-overview" style="padding-top:14px">
     <div class="title" style="margin-bottom:24px">
       <h1>EE Program Overview</h1>
       <p>PSU College of Engineering Curriculum Intelligence Portal</p>
     </div>
     <section class="hero">
       <span class="kicker">Undergraduate EE</span>
-      <h2>Program Overview</h2>
-      <p class="muted">Searchable overview of the undergraduate EE program.</p>
+      <h2>Bachelor of Science in Electrical Engineering</h2>
+      <p class="muted">Program mission, educational objectives, student outcomes, and curriculum information.</p>
     </section>
+      <section class="accreditation-panel" aria-labelledby="accreditation-title">
+        <div class="accreditation-logo-space"><a href="https://www.abet.org/" target="_blank" rel="noopener noreferrer" aria-label="ABET website (opens in a new tab)"><img src="../assets/EAC-RGB-W-L.png" width="861" height="369" alt="ABET Accredited - Engineering Accreditation Commission"></a></div>
+        <div><h2 id="accreditation-title">ABET-Accredited Program</h2><p>The Bachelor of Science in Electrical Engineering program is accredited by the Engineering Accreditation Commission of ABET, <a href="https://www.abet.org/" target="_blank" rel="noopener noreferrer" aria-label="www.abet.org (opens in a new tab)">www.abet.org</a>.</p></div>
+      </section>
+      <section class="program-statement mission-feature" aria-labelledby="mission-title"><h2 id="mission-title">Program Mission</h2><p id="program-mission">Loading program mission…</p></section>
+      <section class="program-statement" aria-labelledby="peo-title"><h2 id="peo-title">Program Educational Objectives</h2><p class="statement-intro">Program Educational Objectives describe what graduates are expected to achieve within several years after graduation.</p><div id="program-peos" class="peo-grid"><p>Loading program educational objectives…</p></div></section>
+      <section class="program-statement" aria-labelledby="so-title"><h2 id="so-title">Student Outcomes</h2><p class="statement-intro">Student Outcomes describe the knowledge, skills, and professional capabilities students are expected to demonstrate by graduation.</p><div id="program-sos" class="outcome-grid"><p>Loading student outcomes…</p></div></section>
+      <noscript><p>JavaScript is needed to display the program statements from the <a href="../data/ee_curriculum.json">canonical curriculum data</a>.</p></noscript>
     <section id="stats" class="grid four"></section>
     <section class="card" style="margin-top:14px">
       <h2>Course–SO–PI Performance Heatmaps</h2>

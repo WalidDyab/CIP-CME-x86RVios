@@ -1,0 +1,6 @@
+Web asset: EAC-RGB-W-L.png
+Source: user-supplied EAC.zip, EAC/Color/White-background/Screen/PNG/EAC-RGB-W-L.png
+Copied without artwork or file-content changes. Natural resolution: 861 x 369.
+Placement: undergraduate-ee/program-overview.html only, on a white surface.
+Display: 240 CSS pixels on desktop and 216 CSS pixels on small screens, height automatic, with additional clear space.
+Usage and program-specific accreditation wording confirmed by the user. No other ZIP files were inspected.

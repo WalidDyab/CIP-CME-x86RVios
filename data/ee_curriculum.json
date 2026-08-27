@@ -1,6 +1,19 @@
 {
   "schema_version": "2.0",
   "program": "Electrical Engineering",
+  "program_identity": {
+    "mission": "To provide students with the needed knowledge and skills in electrical engineering, to conduct scientific research, and to contribute to the sustainability of the society.",
+    "educational_objectives": {
+      "PEO1": "Technical Competence and Innovation- EE graduates will apply electrical engineering knowledge and skills to design solutions, solve complex problems, and pursue graduate studies and research, demonstrating creativity and innovation.",
+      "PEO2": "Ethical, Professional, and Sustainable Responsibilities- EE graduates will uphold ethical standards, commit to sustainability, and pursue lifelong learning.",
+      "PEO3": "Leadership and Teamwork- EE graduates will demonstrate leadership, critical thinking, decision-making, and teamwork, contributing positively to their organizations and society."
+    },
+    "sources": {
+      "mission": "Exact program mission supplied by the user for the Program Overview update.",
+      "educational_objectives": "EE Program Design Full ABET.xlsx, PEOs sheet, cells C2:E2.",
+      "student_outcomes": "Canonical definitions in abet.student_outcomes; existing IDs and mappings retained."
+    }
+  },
   "consolidated_on": "2026-08-16",
   "provenance": {
     "primary_source": "ee_curriculum_with_sos_pis.json",

@@ -1,0 +1,26 @@
+/* Identity presentation scoped to Program Overview only. */
+.program-overview .accreditation-panel{display:grid;grid-template-columns:300px minmax(0,1fr);gap:28px;align-items:center;margin:26px 0 32px;padding:28px;background:#fff;color:#243244;border:1px solid #d4dde7;border-radius:18px}
+.program-overview .accreditation-panel h2{color:#19355e;margin:0 0 12px;font-size:24px}
+.program-overview .accreditation-panel p{margin:0;max-width:760px;line-height:1.75}
+.program-overview .accreditation-panel a{color:#18508c;text-decoration:underline;text-underline-offset:3px}
+.program-overview .accreditation-panel a:focus-visible{outline:3px solid #18508c;outline-offset:5px}
+.program-overview .accreditation-logo-space{padding:30px;background:#fff}
+.program-overview .accreditation-logo-space a{display:block}
+.program-overview .accreditation-logo-space img{display:block;width:240px;min-width:216px;max-width:100%;height:auto;border:0;border-radius:0;padding:0;margin:0;box-shadow:none;filter:none;transform:none}
+.program-overview .program-statement{margin:32px 0}
+.program-overview .program-statement h2{margin:0 0 12px;color:var(--text);font-size:26px}
+.program-overview .statement-intro{max-width:950px;margin:0 0 20px;color:var(--muted);line-height:1.65}
+.program-overview .mission-feature{padding:28px 30px;background:rgba(121,215,255,.06);border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:18px}
+.program-overview .mission-feature h2{color:var(--cyan)}
+.program-overview .mission-feature p{max-width:1040px;margin:0;color:var(--text);font-size:20px;line-height:1.75}
+.program-overview .peo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.program-overview .outcome-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.program-overview .statement-card{min-width:0;padding:24px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:16px}
+.program-overview .statement-badge{display:inline-block;margin-bottom:16px;padding:6px 10px;border:1px solid rgba(121,215,255,.3);border-radius:8px;background:rgba(121,215,255,.07);color:var(--cyan);font:800 12px var(--mono);letter-spacing:.04em}
+.program-overview .statement-copy h3{margin:0 0 14px;color:var(--text);font-size:18px;line-height:1.45}
+.program-overview .statement-copy p{margin:0;color:var(--muted);font-size:15px;line-height:1.75;overflow-wrap:break-word}
+.program-overview .statement-separator{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:pre}
+@media(max-width:1100px){.program-overview .peo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.program-overview .peo-grid .statement-card:last-child{grid-column:1/-1}}
+@media(max-width:800px){.program-overview .accreditation-panel{grid-template-columns:1fr;gap:12px}.program-overview .accreditation-logo-space{width:300px;max-width:100%;box-sizing:border-box;margin:auto}}
+@media(max-width:600px){.program-overview .peo-grid,.program-overview .outcome-grid{grid-template-columns:1fr}.program-overview .peo-grid .statement-card:last-child{grid-column:auto}.program-overview .accreditation-panel{padding:18px}.program-overview .mission-feature{padding:22px}.program-overview .mission-feature p{font-size:18px}.program-overview .statement-card{padding:22px}}
+@media(max-width:520px){.program-overview .accreditation-logo-space{padding:24px;max-width:100%}.program-overview .accreditation-logo-space img{width:216px}}
