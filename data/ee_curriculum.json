@@ -5845,7 +5845,8 @@
         "statement": "Ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics.",
         "pis": [
           "PI11",
-          "PI12"
+          "PI12",
+          "PI13"
         ],
         "abet_illustration": "Complex Engineering Problems – Complex engineering problems include one or more of the following characteristics: involving wide-ranging or conflicting technical issues; having no obvious solution; addressing problems not encompassed by current standards and codes; involving diverse groups of stakeholders; including many component parts or sub-problems; involving multiple disciplines; or having significant consequences in a range of contexts."
       },
@@ -5863,7 +5864,8 @@
         "statement": "An ability to communicate effectively with a range of audiences",
         "pis": [
           "PI31",
-          "PI32"
+          "PI32",
+          "PI33"
         ],
         "abet_illustration": "The “range of audiences” should include at least two distinct audiences relevant to the discipline or program’s mission. It is the program’s responsibility to determine the range of audiences (e.g., faculty, students, non-technical audiences, public sector, external clients, etc.)."
       },
@@ -5905,15 +5907,22 @@
     "performance_indicators": {
       "PI11": {
         "so": "SO1",
-        "statement": "Identify, formulate, and solve complex electrical engineering problems",
+        "statement": "Identify the key requirements, interacting variables, and technical issues of a complex engineering problem.",
         "course_level_guidance": "For senior-level courses that include complex engineering problems.",
         "rubric": "Rubric",
         "abet_illustration": "Complex Engineering Problems – Complex engineering problems include one or more of the following characteristics: \n-involving wide-ranging or conflicting technical issues, \n-having no obvious solution, \n-addressing problems not encompassed by current standards and codes, \n-involving diverse groups of stakeholders, \n-including many component parts or sub-problems, \n-involving multiple disciplines, \n-or having significant consequences in a range of contexts."
       },
       "PI12": {
         "so": "SO1",
-        "statement": "Apply principles of mathematics, science, and electrical engineering to solve engineering problems and compute required quantities",
+        "statement": "Formulate an engineering or mathematical model of a complex engineering problem using appropriate assumptions, parameters, and governing relationships.",
         "course_level_guidance": "For low-level courses such as circuits, electronics, signals, etc. Also for senior-level courses that include complex engineering problems (together with PI11).",
+        "rubric": null,
+        "abet_illustration": null
+      },
+      "PI13": {
+        "so": "SO1",
+        "statement": "Solve the formulated complex engineering problem by applying appropriate principles of engineering, science, and mathematics using suitable analytical, computational, or experimental methods.",
+        "course_level_guidance": "",
         "rubric": null,
         "abet_illustration": null
       },
@@ -5947,14 +5956,21 @@
       },
       "PI31": {
         "so": "SO3",
-        "statement": "Communicate technical ideas in written technical reports, including engineering graphs and drawings",
+        "statement": "Communicate relevant, accurate, and sufficient engineering information.",
         "course_level_guidance": "",
         "rubric": "Rubric",
         "abet_illustration": "-The guidance indicates that the “range of audiences” should include at least two distinct audiences (and they should be relevant to the discipline or program’s mission). \n-It is the program's responsibility to determine the range of audiences. For example, if a program stresses preparing students for graduate school, it might have students prepare a journal paper. There are many other possible audiences: faculty, students, non-technical, the public sector, etc. For example, students in biomedical engineering programs might communicate with doctors. In the major design experience, students might communicate with external clients. It is the program's responsibility to determine the most meaningful audiences for its students."
       },
       "PI32": {
         "so": "SO3",
-        "statement": "Conduct effective oral technical presentations to a range of audiences",
+        "statement": "Use appropriate communication methods and engineering representations to effectively convey information.",
+        "course_level_guidance": "",
+        "rubric": null,
+        "abet_illustration": null
+      },
+      "PI33": {
+        "so": "SO3",
+        "statement": "Adapt communication to the knowledge and needs of different audiences.",
         "course_level_guidance": "",
         "rubric": null,
         "abet_illustration": null

@@ -39,5 +39,30 @@
 .review-error { color: #ffb4a8; font-size: 12px; font-weight: 600; min-height: 15px; }
 .review-invalid { border-color: #ff8978 !important; }
 .review-new-empty { color: var(--muted); font-size: 13px; }
+.so-mapping-definitions { margin-bottom: 16px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.035); }
+.so-mapping-definitions > p { margin: 7px 0 13px; line-height: 1.55; }
+.so-mapping-definitions ul { list-style: none; display: grid; gap: 8px; margin: 0; padding: 0; }
+.so-mapping-definitions li { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: 9px; color: var(--muted); line-height: 1.45; }
+.so-mapping-definitions strong { color: var(--cyan); font-family: var(--mono); }
+.mapping-help { color: var(--muted); font-size: 13px; }
+.so-mapping-table { min-width: 850px; }
+.so-mapping-table td { white-space: normal; line-height: 1.45; }
+.so-mapping-meta { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.so-mapping-overall { display: flex; flex-wrap: wrap; gap: 9px; margin: 16px 0 4px; }
+.so-mapping-overall span { padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 12px; }
+.so-mapping-overall strong { color: var(--cyan); }
+.so-mapping-course-list { display: grid; gap: 20px; margin-top: 16px; }
+.so-mapping-course { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.025); }
+.so-mapping-course-head { padding: 16px 18px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.04); }
+.so-mapping-course-head h3 { margin: 4px 0 5px; }
+.so-mapping-course-head p { margin: 0; color: var(--muted); font-size: 12px; }
+.so-mapping-course-head p strong { color: var(--cyan); }
+.so-mapping-table-wrap { margin: 0; border: 0; border-radius: 0; }
+.mapping-check-cell { text-align: center; }
+.mapping-check-cell input { width: 20px; height: 20px; accent-color: var(--orange); cursor: pointer; }
+.so-mapping-table tr.mapping-modified td { background: rgba(121,215,255,.07); }
+.mapping-status { display: inline-block; white-space: nowrap; padding: 5px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 11px; font-weight: 800; }
+.mapping-status.is-modified { border-color: rgba(121,215,255,.5); color: var(--cyan); background: rgba(121,215,255,.1); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 body.review-open { overflow: hidden; }
 @media(max-width:700px){ .clo-review-overlay{padding:0}.clo-review-modal{min-height:100%;border-radius:0;padding:18px}.review-meta,.review-proposal{grid-template-columns:1fr}.review-course,.review-proposal .review-text{grid-column:auto}.review-clo-head{display:grid}.review-section-heading{align-items:flex-start}.review-primary{width:100%}.review-footer{display:block} }
