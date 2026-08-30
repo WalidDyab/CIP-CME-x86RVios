@@ -49,7 +49,8 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11"
+              "PI11",
+              "PI12"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -116,7 +117,8 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11"
+              "PI11",
+              "PI12"
             ],
             "teaching_strategy": [
               "Simulation and Computer-Based Learning",
@@ -191,6 +193,7 @@
         "instructor": "Dr. Muddesar Iqbal",
         "pi_levels": {
           "PI11": "I",
+          "PI12": "I",
           "PI31": "I",
           "PI32": "I"
         }
@@ -213,7 +216,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -234,7 +237,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -255,7 +258,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -277,7 +280,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI62",
               "PI63",
               "PI64"
@@ -404,7 +407,7 @@
         "course_id": 12,
         "instructor": "Dr. Maged Esmail",
         "pi_levels": {
-          "PI12": "I",
+          "PI13": "I",
           "PI41": "I",
           "PI42": "I",
           "PI51": "I",
@@ -432,7 +435,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -603,6 +607,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "I",
           "PI22": "I",
           "PI23": "I",
@@ -634,7 +639,7 @@
               "SO2"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI21"
             ],
             "teaching_strategy": [
@@ -842,7 +847,7 @@
         "course_id": 14,
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
-          "PI12": "I",
+          "PI13": "I",
           "PI21": "I",
           "PI22": "I",
           "PI23": "I",
@@ -870,7 +875,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -891,7 +896,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -913,7 +918,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63",
               "PI64"
             ],
@@ -937,7 +942,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63",
               "PI64"
             ],
@@ -961,7 +966,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63"
             ],
             "teaching_strategy": [
@@ -1061,7 +1066,7 @@
         "course_id": 15,
         "instructor": "Dr. Moustafa Nasralla",
         "pi_levels": {
-          "PI12": "I",
+          "PI13": "I",
           "PI63": "I",
           "PI64": "I",
           "PI71": "I"
@@ -1086,7 +1091,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -1245,6 +1251,7 @@
         "pi_levels": {
           "PI11": "I",
           "PI12": "I",
+          "PI13": "I",
           "PI63": "I",
           "PI64": "I",
           "PI71": "I"
@@ -1269,7 +1276,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -1430,6 +1438,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "I",
           "PI22": "I",
           "PI63": "P",
@@ -1457,6 +1466,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32"
             ],
@@ -1482,6 +1492,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -1508,6 +1519,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI21"
             ],
             "teaching_strategy": [
@@ -1709,6 +1721,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -1745,7 +1758,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -1766,7 +1779,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -1787,7 +1800,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -1939,7 +1952,7 @@
         "course_id": 19,
         "instructor": "Dr. Maged Esmail",
         "pi_levels": {
-          "PI12": "P",
+          "PI13": "P",
           "PI31": "P",
           "PI32": "P",
           "PI71": "P"
@@ -1963,7 +1976,8 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11"
+              "PI11",
+              "PI12"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -1984,7 +1998,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Simulation and Computer-Based Learning",
@@ -2050,7 +2064,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -2139,6 +2154,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI63": "P",
           "PI64": "P"
@@ -2163,7 +2179,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -2184,7 +2201,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -2207,7 +2224,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -2230,7 +2248,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -2381,6 +2400,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -2416,6 +2436,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI21"
             ],
             "teaching_strategy": [
@@ -2615,6 +2636,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -2652,7 +2674,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -2674,7 +2697,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -2828,6 +2852,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -2856,6 +2881,7 @@
             ],
             "pi_codes": [
               "PI11",
+              "PI12",
               "PI21"
             ],
             "teaching_strategy": [
@@ -2879,6 +2905,7 @@
             ],
             "pi_codes": [
               "PI11",
+              "PI12",
               "PI21"
             ],
             "teaching_strategy": [
@@ -2947,7 +2974,7 @@
               "SO7"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI23",
               "PI24",
               "PI41",
@@ -3074,6 +3101,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -3103,7 +3131,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -3340,6 +3369,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI22": "M",
           "PI23": "M",
@@ -3377,7 +3407,7 @@
               "SO7"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -3399,7 +3429,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Field Experience"
@@ -3439,7 +3470,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63",
               "PI64"
             ],
@@ -3527,6 +3558,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI41": "P",
@@ -3557,7 +3589,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -3650,7 +3682,7 @@
         "course_id": 27,
         "instructor": "Dr. Maged Esmail",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI62": "M",
           "PI63": "M",
           "PI64": "M"
@@ -3674,7 +3706,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -3717,7 +3749,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -3744,7 +3776,7 @@
         "course_id": 28,
         "instructor": "Dr. Maged Esmail",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -3770,6 +3802,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32",
               "PI71",
@@ -3800,6 +3833,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI41",
               "PI42",
               "PI71",
@@ -3829,6 +3863,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -3965,6 +4000,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI22": "M",
           "PI23": "M",
@@ -3995,7 +4031,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4016,7 +4052,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -4134,7 +4170,7 @@
         "course_id": 30,
         "instructor": "Dr. Moustafa Nasralla",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
@@ -4161,7 +4197,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4182,7 +4218,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Laboratory Experimentation",
@@ -4232,7 +4268,7 @@
         "course_id": 31,
         "instructor": "Dr. Moustafa Nasralla",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -4254,7 +4290,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4275,7 +4311,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4296,7 +4332,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -4345,7 +4381,7 @@
         "course_id": 32,
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -4367,7 +4403,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4388,7 +4424,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4409,7 +4445,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -4458,7 +4494,7 @@
         "course_id": 33,
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -4481,7 +4517,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -4503,7 +4540,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -4552,6 +4590,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI21",
               "PI23"
             ],
@@ -4575,7 +4614,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63",
               "PI64"
             ],
@@ -4632,6 +4671,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI22": "M",
           "PI23": "M",
@@ -4661,7 +4701,8 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11"
+              "PI11",
+              "PI12"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4752,6 +4793,7 @@
         "instructor": "Dr. Mahmoud Abdelreheem",
         "pi_levels": {
           "PI11": "M",
+          "PI12": "M",
           "PI21": "M",
           "PI31": "M"
         }
@@ -4775,7 +4817,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -4800,6 +4843,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32"
             ],
@@ -4881,6 +4925,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI61": "P",
@@ -4913,6 +4958,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32",
               "PI71",
@@ -5048,6 +5094,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI41": "P",
@@ -5083,6 +5130,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -5217,6 +5265,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI41": "P",
@@ -5247,7 +5296,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -5268,7 +5317,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -5289,7 +5338,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -5332,7 +5381,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -5353,7 +5402,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Simulation and Computer-Based Learning",
@@ -5380,7 +5429,7 @@
         "course_id": 39,
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -5402,7 +5451,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -5424,7 +5473,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -5519,7 +5568,7 @@
         "course_id": 40,
         "instructor": "Dr. Ahmed Alnakhli",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
@@ -5545,7 +5594,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -5589,7 +5639,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -5640,6 +5691,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI71": "M"
@@ -5667,6 +5719,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32",
               "PI71",
@@ -5695,6 +5748,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -5721,6 +5775,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -5746,6 +5801,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -5828,6 +5884,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
