@@ -193,6 +193,7 @@
         "instructor": "Dr. Muddesar Iqbal",
         "pi_levels": {
           "PI11": "I",
+          "PI12": "I",
           "PI31": "I",
           "PI32": "I"
         }
@@ -406,7 +407,7 @@
         "course_id": 12,
         "instructor": "Dr. Maged Esmail",
         "pi_levels": {
-          "PI12": "I",
+          "PI13": "I",
           "PI41": "I",
           "PI42": "I",
           "PI51": "I",
@@ -606,6 +607,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "I",
           "PI22": "I",
           "PI23": "I",
@@ -845,7 +847,7 @@
         "course_id": 14,
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
-          "PI12": "I",
+          "PI13": "I",
           "PI21": "I",
           "PI22": "I",
           "PI23": "I",
@@ -1064,7 +1066,7 @@
         "course_id": 15,
         "instructor": "Dr. Moustafa Nasralla",
         "pi_levels": {
-          "PI12": "I",
+          "PI13": "I",
           "PI63": "I",
           "PI64": "I",
           "PI71": "I"
@@ -1249,6 +1251,7 @@
         "pi_levels": {
           "PI11": "I",
           "PI12": "I",
+          "PI13": "I",
           "PI63": "I",
           "PI64": "I",
           "PI71": "I"
@@ -1435,6 +1438,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "I",
           "PI22": "I",
           "PI63": "P",
@@ -1717,6 +1721,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -1947,7 +1952,7 @@
         "course_id": 19,
         "instructor": "Dr. Maged Esmail",
         "pi_levels": {
-          "PI12": "P",
+          "PI13": "P",
           "PI31": "P",
           "PI32": "P",
           "PI71": "P"
@@ -2149,6 +2154,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI63": "P",
           "PI64": "P"
@@ -2394,6 +2400,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -2629,6 +2636,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -2844,6 +2852,7 @@
         "pi_levels": {
           "PI11": "P",
           "PI12": "P",
+          "PI13": "P",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -3092,6 +3101,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "P",
           "PI22": "P",
           "PI23": "P",
@@ -3359,6 +3369,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI22": "M",
           "PI23": "M",
@@ -3547,6 +3558,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI41": "P",
@@ -3670,7 +3682,7 @@
         "course_id": 27,
         "instructor": "Dr. Maged Esmail",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI62": "M",
           "PI63": "M",
           "PI64": "M"
@@ -3764,7 +3776,7 @@
         "course_id": 28,
         "instructor": "Dr. Maged Esmail",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -3988,6 +4000,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI22": "M",
           "PI23": "M",
@@ -4157,7 +4170,7 @@
         "course_id": 30,
         "instructor": "Dr. Moustafa Nasralla",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
@@ -4255,7 +4268,7 @@
         "course_id": 31,
         "instructor": "Dr. Moustafa Nasralla",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -4368,7 +4381,7 @@
         "course_id": 32,
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -4481,7 +4494,7 @@
         "course_id": 33,
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -4658,6 +4671,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI22": "M",
           "PI23": "M",
@@ -4779,6 +4793,7 @@
         "instructor": "Dr. Mahmoud Abdelreheem",
         "pi_levels": {
           "PI11": "M",
+          "PI12": "M",
           "PI21": "M",
           "PI31": "M"
         }
@@ -4910,6 +4925,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI61": "P",
@@ -5078,6 +5094,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI41": "P",
@@ -5248,6 +5265,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI41": "P",
@@ -5411,7 +5429,7 @@
         "course_id": 39,
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M"
         }
       },
@@ -5550,7 +5568,7 @@
         "course_id": 40,
         "instructor": "Dr. Ahmed Alnakhli",
         "pi_levels": {
-          "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
@@ -5673,6 +5691,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI31": "M",
           "PI32": "M",
           "PI71": "M"
@@ -5865,6 +5884,7 @@
         "pi_levels": {
           "PI11": "M",
           "PI12": "M",
+          "PI13": "M",
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
