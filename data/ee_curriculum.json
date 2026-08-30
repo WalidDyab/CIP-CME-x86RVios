@@ -49,7 +49,8 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11"
+              "PI11",
+              "PI12"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -116,7 +117,8 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11"
+              "PI11",
+              "PI12"
             ],
             "teaching_strategy": [
               "Simulation and Computer-Based Learning",
@@ -213,7 +215,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -234,7 +236,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -255,7 +257,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -277,7 +279,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI62",
               "PI63",
               "PI64"
@@ -432,7 +434,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -634,7 +637,7 @@
               "SO2"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI21"
             ],
             "teaching_strategy": [
@@ -870,7 +873,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -891,7 +894,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -913,7 +916,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63",
               "PI64"
             ],
@@ -937,7 +940,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63",
               "PI64"
             ],
@@ -961,7 +964,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63"
             ],
             "teaching_strategy": [
@@ -1086,7 +1089,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -1269,7 +1273,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -1457,6 +1462,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32"
             ],
@@ -1482,6 +1488,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -1508,6 +1515,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI21"
             ],
             "teaching_strategy": [
@@ -1745,7 +1753,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -1766,7 +1774,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -1787,7 +1795,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -1963,7 +1971,8 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11"
+              "PI11",
+              "PI12"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -1984,7 +1993,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Simulation and Computer-Based Learning",
@@ -2050,7 +2059,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -2163,7 +2173,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -2184,7 +2195,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -2207,7 +2218,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -2230,7 +2242,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -2416,6 +2429,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI21"
             ],
             "teaching_strategy": [
@@ -2652,7 +2666,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -2674,7 +2689,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -2856,6 +2872,7 @@
             ],
             "pi_codes": [
               "PI11",
+              "PI12",
               "PI21"
             ],
             "teaching_strategy": [
@@ -2879,6 +2896,7 @@
             ],
             "pi_codes": [
               "PI11",
+              "PI12",
               "PI21"
             ],
             "teaching_strategy": [
@@ -2947,7 +2965,7 @@
               "SO7"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI23",
               "PI24",
               "PI41",
@@ -3103,7 +3121,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -3377,7 +3396,7 @@
               "SO7"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -3399,7 +3418,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Field Experience"
@@ -3439,7 +3459,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63",
               "PI64"
             ],
@@ -3557,7 +3577,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -3674,7 +3694,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -3717,7 +3737,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -3770,6 +3790,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32",
               "PI71",
@@ -3800,6 +3821,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI41",
               "PI42",
               "PI71",
@@ -3829,6 +3851,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -3995,7 +4018,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4016,7 +4039,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -4161,7 +4184,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4182,7 +4205,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Laboratory Experimentation",
@@ -4254,7 +4277,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4275,7 +4298,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4296,7 +4319,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -4367,7 +4390,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4388,7 +4411,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4409,7 +4432,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -4481,7 +4504,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -4503,7 +4527,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -4552,6 +4577,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI21",
               "PI23"
             ],
@@ -4575,7 +4601,7 @@
               "SO6"
             ],
             "pi_codes": [
-              "PI12",
+              "PI13",
               "PI63",
               "PI64"
             ],
@@ -4661,7 +4687,8 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11"
+              "PI11",
+              "PI12"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4775,7 +4802,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -4800,6 +4828,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32"
             ],
@@ -4913,6 +4942,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32",
               "PI71",
@@ -5083,6 +5113,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -5247,7 +5278,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -5268,7 +5299,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -5289,7 +5320,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -5332,7 +5363,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -5353,7 +5384,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Simulation and Computer-Based Learning",
@@ -5402,7 +5433,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -5424,7 +5455,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI12"
+              "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -5545,7 +5576,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -5589,7 +5621,8 @@
             ],
             "pi_codes": [
               "PI11",
-              "PI12"
+              "PI12",
+              "PI13"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -5667,6 +5700,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI31",
               "PI32",
               "PI71",
@@ -5695,6 +5729,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -5721,6 +5756,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
@@ -5746,6 +5782,7 @@
             "pi_codes": [
               "PI11",
               "PI12",
+              "PI13",
               "PI71",
               "PI72"
             ],
