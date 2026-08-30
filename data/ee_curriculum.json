@@ -5907,21 +5907,21 @@
     "performance_indicators": {
       "PI11": {
         "so": "SO1",
-        "statement": "Identify complex engineering problems and the relevant engineering, science, and mathematical principles.",
+        "statement": "Identify the key requirements, interacting variables, and technical issues of a complex engineering problem.",
         "course_level_guidance": "For senior-level courses that include complex engineering problems.",
         "rubric": "Rubric",
         "abet_illustration": "Complex Engineering Problems – Complex engineering problems include one or more of the following characteristics: \n-involving wide-ranging or conflicting technical issues, \n-having no obvious solution, \n-addressing problems not encompassed by current standards and codes, \n-involving diverse groups of stakeholders, \n-including many component parts or sub-problems, \n-involving multiple disciplines, \n-or having significant consequences in a range of contexts."
       },
       "PI12": {
         "so": "SO1",
-        "statement": "Formulate complex engineering problems using appropriate engineering, scientific, and mathematical models.",
+        "statement": "Formulate an engineering or mathematical model of a complex engineering problem using appropriate assumptions, parameters, and governing relationships.",
         "course_level_guidance": "For low-level courses such as circuits, electronics, signals, etc. Also for senior-level courses that include complex engineering problems (together with PI11).",
         "rubric": null,
         "abet_illustration": null
       },
       "PI13": {
         "so": "SO1",
-        "statement": "Solve complex engineering problems using appropriate analytical, computational, or engineering methods.",
+        "statement": "Solve the formulated complex engineering problem by applying appropriate principles of engineering, science, and mathematics using suitable analytical, computational, or experimental methods.",
         "course_level_guidance": "",
         "rubric": null,
         "abet_illustration": null

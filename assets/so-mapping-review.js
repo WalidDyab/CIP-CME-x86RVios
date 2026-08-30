@@ -22,19 +22,20 @@
   function totalRows() { return state.groups.reduce((total, group) => total + group.rows.length, 0); }
   function totalModified() { return state.groups.reduce((total, group) => total + modifiedCount(group), 0); }
   function mappingText(codes) { return codes.length ? codes.join(', ') : `No PI selected under ${state.soCode}`; }
+  function definitionAttrs(code, statement) { return `title="${portal.esc(statement || '')}" tabindex="0" aria-label="${portal.esc(`${code}: ${statement || ''}`)}"`; }
 
   function closeReview() {
     overlay().classList.remove('visible'); overlay().setAttribute('aria-hidden', 'true');
     document.body.classList.remove('review-open'); content().innerHTML = ''; state = null;
   }
   function renderDefinitions() {
-    return `<section class="so-mapping-definitions"><div class="code">${portal.esc(state.soCode)}</div><p>${portal.esc(state.outcome.statement || '')}</p><ul>${state.piCodes.map(pi => `<li><strong>${portal.esc(pi)}</strong><span>${portal.esc(state.piDefinitions[pi]?.statement || '')}</span></li>`).join('')}</ul></section>`;
+    return `<section class="so-mapping-definitions"><div class="code" ${definitionAttrs(state.soCode, state.outcome.statement)}>${portal.esc(state.soCode)}</div><p>${portal.esc(state.outcome.statement || '')}</p><ul>${state.piCodes.map(pi => `<li><strong ${definitionAttrs(pi, state.piDefinitions[pi]?.statement)}>${portal.esc(pi)}</strong><span>${portal.esc(state.piDefinitions[pi]?.statement || '')}</span></li>`).join('')}</ul></section>`;
   }
   function renderTable(group, groupIndex) {
     const level = performanceLevel(group.course, state.piCodes);
-    return `<div class="table-wrap so-mapping-table-wrap"><table class="so-mapping-table"><thead><tr><th>CLO</th><th>CLO Statement</th><th>Performance Level</th>${state.piCodes.map(pi => `<th>${portal.esc(pi)}</th>`).join('')}<th>Status</th></tr></thead><tbody>${group.rows.map((row, rowIndex) => {
+    return `<div class="table-wrap so-mapping-table-wrap"><table class="so-mapping-table"><thead><tr><th>CLO</th><th>CLO Statement</th><th>Performance Level</th>${state.piCodes.map(pi => `<th ${definitionAttrs(pi, state.piDefinitions[pi]?.statement)}>${portal.esc(pi)}</th>`).join('')}<th>Status</th></tr></thead><tbody>${group.rows.map((row, rowIndex) => {
       const modified = isModified(row);
-      return `<tr class="${modified ? 'mapping-modified' : ''}" data-mapping-row="${groupIndex}-${rowIndex}"><td class="code">${portal.esc(row.clo.clo_number)}</td><td>${portal.esc(row.clo.clo_text)}</td><td><span class="pill">${portal.esc(level)}</span></td>${state.piCodes.map(pi => `<td class="mapping-check-cell"><label><input type="checkbox" data-mapping-group-index="${groupIndex}" data-mapping-row-index="${rowIndex}" data-mapping-pi="${portal.esc(pi)}"${row.proposed.includes(pi) ? ' checked' : ''}><span class="sr-only">Map CLO ${portal.esc(row.clo.clo_number)} to ${portal.esc(pi)}</span></label></td>`).join('')}<td><span class="mapping-status ${modified ? 'is-modified' : ''}">${modified ? 'Modified' : 'No Change'}</span></td></tr>`;
+      return `<tr class="${modified ? 'mapping-modified' : ''}" data-mapping-row="${groupIndex}-${rowIndex}"><td class="code">${portal.esc(row.clo.clo_number)}</td><td>${portal.esc(row.clo.clo_text)}</td><td><span class="pill">${portal.esc(level)}</span></td>${state.piCodes.map(pi => `<td class="mapping-check-cell"><label title="${portal.esc(state.piDefinitions[pi]?.statement || '')}"><input type="checkbox" data-mapping-group-index="${groupIndex}" data-mapping-row-index="${rowIndex}" data-mapping-pi="${portal.esc(pi)}" aria-label="${portal.esc(`${pi}: ${state.piDefinitions[pi]?.statement || ''}; CLO ${row.clo.clo_number}`)}"${row.proposed.includes(pi) ? ' checked' : ''}><span class="sr-only">Map CLO ${portal.esc(row.clo.clo_number)} to ${portal.esc(pi)}</span></label></td>`).join('')}<td><span class="mapping-status ${modified ? 'is-modified' : ''}">${modified ? 'Modified' : 'No Change'}</span></td></tr>`;
     }).join('')}</tbody></table></div>`;
   }
   function renderCourse(group, groupIndex) {
