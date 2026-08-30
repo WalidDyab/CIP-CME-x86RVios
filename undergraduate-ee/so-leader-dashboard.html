@@ -3,12 +3,16 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ijX5Sl9UnwGhbavykvZl3wTmF0t5FoDNb4xsjttR5/A='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-m6wX2CBnfHrTtqgqgm9cWk9mD+k2HptrXAZYQEbDW14=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Undergraduate EE SO Leader Dashboard</title>
   <link rel="stylesheet" href="../assets/portal.css">
+  <link rel="stylesheet" href="../assets/clo-review.css">
   <script defer src="../assets/portal.js"></script>
+  <script defer src="../assets/so-mapping-review.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js" integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.8/jspdf.plugin.autotable.min.js" integrity="sha512-QLh0AACvI+3C+bmn3QdH6blN0NWBxwGvBDgV67TvKV5Q2knO9+/+lguVL23JQ9DR7CnfuOSYUBURlXjmJeK11Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>.so-reference{margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025)}.so-reference-code{font-weight:800;font-size:18px;color:var(--cyan)}.so-reference p{margin:5px 0 11px;line-height:1.45}.so-reference-label{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.so-reference ul{list-style:none;margin:7px 0 0;padding:0;display:grid;gap:5px}.so-reference li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;line-height:1.4}@media(max-width:600px){.so-reference{padding:12px}.so-reference li{grid-template-columns:46px minmax(0,1fr)}}</style>
 </head>
 <body>
@@ -16,12 +20,18 @@
   <div class="wrap" style="padding-top:14px">
     <div class="title" style="margin-bottom:24px"><h1>Undergraduate EE SO Leader Dashboard</h1><p>PSU College of Engineering Curriculum Intelligence Portal</p></div>
     <section class="hero"><span class="kicker">ABET evidence</span><h2>SO Leader Dashboard</h2><p class="muted">Select a student outcome to inspect PI coverage and mapped CLO evidence.</p></section>
-    <section class="card"><div class="toolbar"><select id="soSelect" class="select"></select><input id="search" class="input" placeholder="Search within selected SO…"></div><div id="soInfo" class="muted"></div></section>
+    <section class="card"><div class="toolbar"><select id="soSelect" class="select"></select><input id="search" class="input" placeholder="Search within selected SO…"><button class="review-secondary" id="soMappingReviewOpen" type="button" hidden></button></div><div id="soInfo" class="muted"></div></section>
     <section id="stats" class="grid four" style="margin-top:14px"></section>
     <section class="card" style="margin-top:14px"><h2>Mapped CLO Evidence</h2><div id="evidence"></div></section>
     <div class="footer">Undergraduate Electrical Engineering Curriculum Intelligence Portal</div>
   </div>
   <div id="footer-placeholder"></div>
+  <div class="clo-review-overlay" id="soMappingReviewOverlay" aria-hidden="true">
+    <section class="clo-review-modal" role="dialog" aria-modal="true" aria-labelledby="soMappingReviewTitle">
+      <header class="clo-review-heading"><div><span class="kicker">Faculty Review</span><h2 id="soMappingReviewTitle">SO Mapping Review</h2></div><button class="clo-review-close" id="soMappingReviewClose" type="button" aria-label="Close SO mapping review">×</button></header>
+      <div id="soMappingReviewContent"></div>
+    </section>
+  </div>
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
       try {
@@ -33,6 +43,8 @@
         const select = byId('soSelect');
         const search = byId('search');
         const info = byId('soInfo');
+        const reviewButton = byId('soMappingReviewOpen');
+        window.soMappingReviewContext = { courses, abet: data.abet || {} };
         select.innerHTML = outcomes.map(outcome => `<option value="${portal.esc(outcome.soCode)}">${portal.esc(outcome.soCode)}</option>`).join('');
 
         function renderSOReference() {
@@ -47,6 +59,9 @@
           const query = (search.value || '').toLowerCase();
           const outcome = outcomes.find(item => item.soCode === so);
           const expectedPIs = outcome?.pis || [];
+          const reviewEnabled = ['SO1', 'SO3'].includes(so);
+          reviewButton.hidden = !reviewEnabled;
+          reviewButton.textContent = reviewEnabled ? `Review ${so} Mapping` : '';
           const rows = [];
           courses.forEach(course => (course.clos || []).forEach(clo => {
             if ((clo.mapped_sos || []).includes(so)) {
@@ -60,6 +75,7 @@
           byId('evidence').innerHTML = `<div class="table-wrap"><table><thead><tr><th>Course</th><th>CLO</th><th>PI</th><th>Assessment</th></tr></thead><tbody>${rows.map(row => `<tr><td><a href="course-dashboard.html?course=${encodeURIComponent(row.course.course_code)}"><span class="code">${portal.esc(row.course.course_code)}</span><br>${portal.esc(row.course.course_title)}</a></td><td>${portal.esc(row.clo.clo_text)}</td><td>${(row.clo.pi_codes || []).map(portal.badge).join('')}</td><td>${portal.esc(portal.listText(row.clo.assessment_methods))}</td></tr>`).join('')}</tbody></table></div>`;
         }
         select.onchange = render;
+        reviewButton.onclick = () => window.dispatchEvent(new CustomEvent('open-so-mapping-review', { detail: { so: select.value } }));
         search.oninput = render;
         render();
       } catch (error) {
