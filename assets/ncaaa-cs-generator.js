@@ -19,6 +19,11 @@
     '2.1': 4, '2.2': 5, '2.3': 6, '2.4': 7, '2.5': 8,
     '3.1': 9, '3.2': 10, '3.3': 11
   });
+  const FES_CLO_SLOT_BY_CODE = Object.freeze({
+    '1.1': 1, '1.2': 2, '1.3': 3,
+    '2.1': 4, '2.2': 5, '2.3': 6, '2.4': 7, '2.5': 8,
+    '3.1': 9, '3.2': 10
+  });
   const REQUIRED_GENERAL_FIELDS = Object.freeze([
     'course_code', 'course_title', 'required_or_elective', 'level', 'year',
     'credit_hours', 'course_description'
@@ -33,8 +38,11 @@
     ? value.filter(item => item !== null && item !== undefined && String(item).trim()).map(String)
     : [];
   const normalizedCourseCode = value => String(value || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
-  const filenameForCourse = code => `${normalizedCourseCode(code)}_NCAAA_Course_Specification.docx`;
+  const filenameForCourse = (code, kind = 'cs') => kind === 'fes'
+    ? `${normalizedCourseCode(code)}_NCAAA_Field_Experience_Specification.docx`
+    : `${normalizedCourseCode(code)}_NCAAA_Course_Specification.docx`;
   const isCoop = course => String(course.type || '').trim().toUpperCase() === 'COOP';
+  const documentKindForCourse = course => isCoop(course) ? 'fes' : 'cs';
   const isSeniorDesign = course => String(course.type || '').trim().toLowerCase() === 'capstone';
   const optionalText = (course, textKey, listKey) => {
     const direct = course[textKey];
@@ -66,8 +74,8 @@
   }
 
   function validateAndBuildValues(course) {
+    if (isCoop(course)) return validateAndBuildFesValues(course);
     const code = String(course.course_code || '<unknown>');
-    if (isCoop(course)) throw new ExcludedCourse('Co-Op/Field Experience uses a different NCAAA template');
     const missing = REQUIRED_GENERAL_FIELDS.filter(key => !String(course[key] || '').trim());
     if (missing.length) throw new ValidationError(`missing required general field(s): ${missing.join(', ')}`);
     const [hours, hoursRule] = contactHours(course);
@@ -133,6 +141,44 @@
       else if (declared !== topicSum) warnings.push(`${code}: declared total_topic_contact_hours ${declared} does not match stored topic sum ${topicSum}`);
     }
     return { values, warnings, hoursRule };
+  }
+
+  function validateAndBuildFesValues(course) {
+    const code = String(course.course_code || '<unknown>');
+    const missing = REQUIRED_GENERAL_FIELDS.filter(key => !String(course[key] || '').trim());
+    if (missing.length) throw new ValidationError(`missing required general field(s): ${missing.join(', ')}`);
+    const warnings = [];
+    const values = Object.assign({}, FIXED_VALUES, {
+      Course_Title: String(course.course_title), Course_Code: code,
+      Credit_Hours: String(course.credit_hours), Level: String(course.level),
+      Year: String(course.year), Course_Description: String(course.course_description),
+      Prereq: optionalText(course, 'prerequisite_text', 'prerequisites'),
+      Coreq: optionalText(course, 'corequisite_text', 'corequisites')
+    });
+    const objectives = cleanList(course.course_objectives);
+    if (objectives.length > 3) warnings.push(`${code}: only the first 3 of ${objectives.length} objectives fit the FES template`);
+    for (let index = 1; index <= 3; index += 1) values[`O${index}`] = objectives[index - 1] || '';
+    for (let index = 1; index <= 10; index += 1) {
+      values[`CLO_${index}`] = '';
+      values[`MPLO${index}`] = '';
+      values[`CLO_${index}_TS`] = '';
+      values[`CLO_${index}_AM`] = '';
+    }
+    const clos = course.clos || [];
+    if (clos.length > 10) throw new ValidationError(`contains ${clos.length} CLOs; FES template capacity is 10`);
+    const seenCodes = new Set();
+    clos.forEach(clo => {
+      const codeValue = cloCode(clo.clo_number);
+      if (!FES_CLO_SLOT_BY_CODE[codeValue]) throw new ValidationError(`unsupported FES CLO code ${codeValue}; no matching NCAAA row`);
+      if (seenCodes.has(codeValue)) throw new ValidationError(`duplicate CLO code ${codeValue}`);
+      seenCodes.add(codeValue);
+      const slot = FES_CLO_SLOT_BY_CODE[codeValue];
+      values[`CLO_${slot}`] = String(clo.clo_text || '');
+      values[`MPLO${slot}`] = cleanList(clo.mapped_sos).join(', ');
+      values[`CLO_${slot}_TS`] = cleanList(clo.teaching_strategy).join('; ');
+      values[`CLO_${slot}_AM`] = cleanList(clo.assessment_methods).join('; ');
+    });
+    return { values, warnings, hoursRule: 'field-experience schedule' };
   }
 
   function fieldName(instruction) {
@@ -262,8 +308,21 @@
     return output;
   }
 
-  async function generateDocxBlob(course, templateUrl) {
+  function templateUrlForCourse(course, templateUrls) {
+    const kind = documentKindForCourse(course);
+    if (typeof templateUrls === 'string') {
+      if (kind === 'fes') throw new ValidationError('The FES template URL is unavailable');
+      return templateUrls;
+    }
+    const url = templateUrls && templateUrls[kind];
+    if (!url) throw new ValidationError(`The ${kind.toUpperCase()} template URL is unavailable`);
+    return url;
+  }
+
+  async function generateDocxBlob(course, templateUrls) {
     if (!global.JSZip) throw new ValidationError('The local DOCX ZIP library is unavailable');
+    const kind = documentKindForCourse(course);
+    const templateUrl = templateUrlForCourse(course, templateUrls);
     const response = await fetch(templateUrl, { credentials: 'same-origin' });
     if (!response.ok) throw new ValidationError(`Could not load the NCAAA Word template (${response.status})`);
     const templateBytes = await response.arrayBuffer();
@@ -274,7 +333,7 @@
     const xml = await documentPart.async('string');
     zip.file('word/document.xml', patchDocumentXml(xml, built.values, course.required_or_elective));
     const blob = await zip.generateAsync({ type: 'blob', mimeType: DOCX_MIME, compression: 'DEFLATE' });
-    return { blob, filename: filenameForCourse(course.course_code), warnings: built.warnings, hoursRule: built.hoursRule };
+    return { blob, filename: filenameForCourse(course.course_code, kind), warnings: built.warnings, hoursRule: built.hoursRule, kind };
   }
 
   function downloadBlob(blob, filename) {
@@ -285,17 +344,17 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
-  async function generateAndDownload(course, templateUrl) {
-    const result = await generateDocxBlob(course, templateUrl);
+  async function generateAndDownload(course, templateUrls) {
+    const result = await generateDocxBlob(course, templateUrls);
     downloadBlob(result.blob, result.filename);
     return result;
   }
 
   const api = {
-    CLO_SLOT_BY_CODE, ValidationError, ExcludedCourse, cleanList, cloCode,
-    normalizedCourseCode, filenameForCourse, isCoop, contactHours,
-    validateAndBuildValues, fieldName, patchDocumentXml, generateDocxBlob,
-    generateAndDownload
+    CLO_SLOT_BY_CODE, FES_CLO_SLOT_BY_CODE, ValidationError, ExcludedCourse, cleanList, cloCode,
+    normalizedCourseCode, filenameForCourse, isCoop, documentKindForCourse, contactHours,
+    validateAndBuildValues, validateAndBuildFesValues, fieldName, patchDocumentXml,
+    templateUrlForCourse, generateDocxBlob, generateAndDownload
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   global.ncaaaCsGenerator = api;
