@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head>
-  <meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-aaVDkWGP+c+83Ep5UvFjxeHm8IKn0XBDF1gNMwHG00s=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undergraduate EE Course Dashboard</title><link rel="stylesheet" href="../assets/portal.css"><link rel="stylesheet" href="../assets/clo-review.css"><script defer src="../assets/portal.js"></script><script defer src="../assets/clo-review.js"></script>
+  <meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-9VtJRCPeQNelJKUHxDk8w9T5u0a1S/IykNWzTH7X9ok=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undergraduate EE Course Dashboard</title><link rel="stylesheet" href="../assets/portal.css"><link rel="stylesheet" href="../assets/clo-review.css"><script defer src="../assets/portal.js"></script><script defer src="../assets/clo-review.js"></script><script defer src="../assets/vendor/jszip.min.js"></script><script defer src="../assets/ncaaa-cs-generator.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js" integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.8/jspdf.plugin.autotable.min.js" integrity="sha512-QLh0AACvI+3C+bmn3QdH6blN0NWBxwGvBDgV67TvKV5Q2knO9+/+lguVL23JQ9DR7CnfuOSYUBURlXjmJeK11Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
@@ -27,6 +27,14 @@
     }
     .print-btn:active { transform: translateY(0); }
     .print-btn svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+    a.print-btn { text-decoration: none; }
+    .ncaaa-cs-note {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      margin-top: 14px;
+      font-size: 12px;
+    }
 
     /* ── Modal Overlay ── */
     .print-modal-overlay {
@@ -368,7 +376,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
     const methodList = values => `<ul class="clo-method-list">${(values || []).map(value => `<li>${portal.esc(value)}</li>`).join('')}</ul>`;
     const methodsSection = (raw.clos || []).length ? `<section class="card"><h2>Teaching Strategies and Assessment Methods</h2><div class="table-wrap"><table class="clo-methods-table"><thead><tr><th>CLO ID</th><th>CLO Wording</th><th>Teaching Strategies</th><th>Assessment Methods</th></tr></thead><tbody>${raw.clos.map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.esc(x.clo_text)}</td><td>${methodList(x.teaching_strategy)}</td><td>${methodList(x.assessment_methods)}</td></tr>`).join('')}</tbody></table></div></section>` : '';
-    byId('detail').innerHTML = `<section class="card"><div class="code">${portal.esc(c.code)}</div><h2>${portal.esc(c.title)}</h2><div>${portal.badge(c.track)}${portal.badge(c.re)}${portal.badge('Level ' + c.level)}${portal.badge(c.credits + ' credits')}</div><div class="course-actions"><button class="print-btn" id="printReportBtn" title="Export course report as PDF"><svg viewBox="0 0 24 24"><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>Print Report</button><button class="print-btn clo-review-open" id="cloReviewOpen" type="button">Review CLOs</button></div></section><section class="card"><h2>CLO–SO–PI Mapping</h2><div class="table-wrap"><table class="clo-main-table"><thead><tr><th>CLO ID</th><th>NQF Domain</th><th>CLO Wording</th><th>SO</th><th>PIs</th></tr></thead><tbody>${(raw.clos || []).map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.badge(x.nqf_domain)}</td><td>${portal.esc(x.clo_text)}</td><td>${(x.mapped_sos || []).map(s => portal.badge(s)).join('')}</td><td>${(x.pi_codes || []).map(s => portal.badge(s)).join('')}</td></tr>`).join('')}</tbody></table></div></section>${methodsSection}${renderCourseTopics(raw)}`;
+    byId('detail').innerHTML = `<section class="card"><div class="code">${portal.esc(c.code)}</div><h2>${portal.esc(c.title)}</h2><div>${portal.badge(c.track)}${portal.badge(c.re)}${portal.badge('Level ' + c.level)}${portal.badge(c.credits + ' credits')}</div><div class="course-actions"><button class="print-btn" id="printReportBtn" title="Export course report as PDF"><svg viewBox="0 0 24 24"><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 14H8v-4h8v4zm2-4v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/><circle cx="18" cy="11.5" r="1"/></svg>Print Report</button><button class="print-btn clo-review-open" id="cloReviewOpen" type="button">Review CLOs</button><span id="ncaaaCsAction" class="ncaaa-cs-note muted" aria-live="polite">Checking NCAAA CS…</span></div></section><section class="card"><h2>CLO–SO–PI Mapping</h2><div class="table-wrap"><table class="clo-main-table"><thead><tr><th>CLO ID</th><th>NQF Domain</th><th>CLO Wording</th><th>SO</th><th>PIs</th></tr></thead><tbody>${(raw.clos || []).map(x => `<tr><td class="code">${portal.esc(x.clo_number)}</td><td>${portal.badge(x.nqf_domain)}</td><td>${portal.esc(x.clo_text)}</td><td>${(x.mapped_sos || []).map(s => portal.badge(s)).join('')}</td><td>${(x.pi_codes || []).map(s => portal.badge(s)).join('')}</td></tr>`).join('')}</tbody></table></div></section>${methodsSection}${renderCourseTopics(raw)}`;
 
     byId('detail').firstElementChild.insertAdjacentHTML('afterend', renderCourseInformation(raw));
 
@@ -377,6 +385,41 @@ document.addEventListener('DOMContentLoaded', async () => {
       byId('printModalOverlay').classList.add('visible');
     });
     byId('cloReviewOpen').addEventListener('click', () => window.dispatchEvent(new CustomEvent('open-clo-review')));
+
+    const ncaaaAction = byId('ncaaaCsAction');
+    if (window.ncaaaCsGenerator?.isCoop(raw)) {
+      ncaaaAction.textContent = 'NCAAA CS unavailable — field experience uses a different template';
+      ncaaaAction.title = 'EE 492 / COOP requires the separate Field Experience specification template.';
+    } else {
+      const button = document.createElement('button');
+      button.className = 'print-btn';
+      button.type = 'button';
+      button.textContent = 'Generate NCAAA CS — Word';
+      button.title = 'Generate the official NCAAA Course Specification locally in this browser';
+      const status = document.createElement('span');
+      status.className = 'ncaaa-cs-note muted';
+      status.setAttribute('aria-live', 'polite');
+      ncaaaAction.replaceWith(button, status);
+      button.addEventListener('click', async () => {
+        if (button.disabled) return;
+        button.disabled = true;
+        button.textContent = 'Generating…';
+        status.textContent = '';
+        try {
+          const result = await window.ncaaaCsGenerator.generateAndDownload(
+            raw,
+            '../templates/EE-CS-NCAAA-Template.docx'
+          );
+          status.textContent = result.warnings.length ? 'Downloaded with data warnings.' : 'Downloaded.';
+          status.title = result.warnings.join(' ');
+        } catch (error) {
+          status.textContent = `Could not generate: ${error.message || 'unexpected error'}`;
+        } finally {
+          button.disabled = false;
+          button.textContent = 'Generate NCAAA CS — Word';
+        }
+      });
+    }
 
   } catch (e) {
     byId('detail').innerHTML = '<div class="alert">Could not load course information.</div>';
