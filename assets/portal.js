@@ -23,7 +23,7 @@ async function loadSharedComponents() {
   if (headerEl) {
     try {
       let headerHtml = await fetch(basePath + 'assets/header.html').then(r => r.text());
-      if (basePath) headerHtml = headerHtml.replace(/(src|href)="([^"]+)"/g, (m, a, p) => p.match(/^http|\/\/|#/) ? m : `${a}="${basePath}${p}"`);
+      if (basePath) headerHtml = headerHtml.replace(/(src|href)="([^"]+)"/g, (m, a, p) => p.match(/^(?:https?:)?\/\/|^#/) ? m : `${a}="${basePath}${p}"`);
       headerEl.outerHTML = headerHtml;
     } catch (e) { console.error('Failed to load header:', e); }
   }
@@ -32,7 +32,7 @@ async function loadSharedComponents() {
   if (footerEl) {
     try {
       let footerHtml = await fetch(basePath + 'assets/footer.html').then(r => r.text());
-      if (basePath) footerHtml = footerHtml.replace(/(src|href)="([^"]+)"/g, (m, a, p) => p.match(/^http|\/\/|#/) ? m : `${a}="${basePath}${p}"`);
+      if (basePath) footerHtml = footerHtml.replace(/(src|href)="([^"]+)"/g, (m, a, p) => p.match(/^(?:https?:)?\/\/|^#/) ? m : `${a}="${basePath}${p}"`);
       footerEl.outerHTML = footerHtml;
     } catch (e) { console.error('Failed to load footer:', e); }
   }
