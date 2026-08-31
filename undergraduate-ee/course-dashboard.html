@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head>
-  <meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-9VtJRCPeQNelJKUHxDk8w9T5u0a1S/IykNWzTH7X9ok=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undergraduate EE Course Dashboard</title><link rel="stylesheet" href="../assets/portal.css"><link rel="stylesheet" href="../assets/clo-review.css"><script defer src="../assets/portal.js"></script><script defer src="../assets/clo-review.js"></script><script defer src="../assets/vendor/jszip.min.js"></script><script defer src="../assets/ncaaa-cs-generator.js"></script>
+  <meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-itG6uZB4XjlcNfDjMo8UFf/r/R2C+rwtCBev8rPExqI=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undergraduate EE Course Dashboard</title><link rel="stylesheet" href="../assets/portal.css"><link rel="stylesheet" href="../assets/clo-review.css"><script defer src="../assets/portal.js"></script><script defer src="../assets/clo-review.js"></script><script defer src="../assets/vendor/jszip.min.js"></script><script defer src="../assets/ncaaa-cs-generator.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js" integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.8/jspdf.plugin.autotable.min.js" integrity="sha512-QLh0AACvI+3C+bmn3QdH6blN0NWBxwGvBDgV67TvKV5Q2knO9+/+lguVL23JQ9DR7CnfuOSYUBURlXjmJeK11Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
@@ -29,12 +29,21 @@
     .print-btn svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
     a.print-btn { text-decoration: none; }
     .ncaaa-cs-note {
-      display: inline-flex;
-      align-items: center;
+      display: inline-block;
       min-height: 42px;
       margin-top: 14px;
       font-size: 12px;
     }
+    .ncaaa-cs-warning-title { display: block; color: #ffd56e; font-weight: 800; }
+    .ncaaa-cs-warning-list {
+      max-height: 9rem;
+      margin: 5px 0 0;
+      padding-left: 20px;
+      overflow-y: auto;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .ncaaa-cs-warning-list li + li { margin-top: 3px; }
 
     /* ── Modal Overlay ── */
     .print-modal-overlay {
@@ -396,7 +405,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       button.type = 'button';
       button.textContent = 'Generate NCAAA CS — Word';
       button.title = 'Generate the official NCAAA Course Specification locally in this browser';
-      const status = document.createElement('span');
+      const status = document.createElement('div');
       status.className = 'ncaaa-cs-note muted';
       status.setAttribute('aria-live', 'polite');
       ncaaaAction.replaceWith(button, status);
@@ -410,8 +419,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             raw,
             '../templates/EE-CS-NCAAA-Template.docx'
           );
-          status.textContent = result.warnings.length ? 'Downloaded with data warnings.' : 'Downloaded.';
-          status.title = result.warnings.join(' ');
+          if (result.warnings.length) {
+            const heading = document.createElement('strong');
+            heading.className = 'ncaaa-cs-warning-title';
+            heading.textContent = 'Downloaded successfully — data warnings:';
+            const list = document.createElement('ul');
+            list.className = 'ncaaa-cs-warning-list';
+            result.warnings.forEach(warning => {
+              const item = document.createElement('li');
+              item.textContent = warning;
+              list.appendChild(item);
+            });
+            status.replaceChildren(heading, list);
+          } else {
+            status.textContent = 'Downloaded successfully.';
+          }
         } catch (error) {
           status.textContent = `Could not generate: ${error.message || 'unexpected error'}`;
         } finally {
