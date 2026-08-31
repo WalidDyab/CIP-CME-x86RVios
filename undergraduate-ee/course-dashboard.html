@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head>
-  <meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-itG6uZB4XjlcNfDjMo8UFf/r/R2C+rwtCBev8rPExqI=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undergraduate EE Course Dashboard</title><link rel="stylesheet" href="../assets/portal.css"><link rel="stylesheet" href="../assets/clo-review.css"><script defer src="../assets/portal.js"></script><script defer src="../assets/clo-review.js"></script><script defer src="../assets/vendor/jszip.min.js"></script><script defer src="../assets/ncaaa-cs-generator.js"></script>
+  <meta name="robots" content="noindex, nofollow"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-aUmjiV9ayKuHvLHQ7uFaak5lVm8aKMmjpioEGpzdSYM=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Undergraduate EE Course Dashboard</title><link rel="stylesheet" href="../assets/portal.css"><link rel="stylesheet" href="../assets/clo-review.css"><script defer src="../assets/portal.js"></script><script defer src="../assets/clo-review.js"></script><script defer src="../assets/vendor/jszip.min.js"></script><script defer src="../assets/ncaaa-cs-generator.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js" integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.8/jspdf.plugin.autotable.min.js" integrity="sha512-QLh0AACvI+3C+bmn3QdH6blN0NWBxwGvBDgV67TvKV5Q2knO9+/+lguVL23JQ9DR7CnfuOSYUBURlXjmJeK11Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
@@ -396,20 +396,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     byId('cloReviewOpen').addEventListener('click', () => window.dispatchEvent(new CustomEvent('open-clo-review')));
 
     const ncaaaAction = byId('ncaaaCsAction');
-    if (window.ncaaaCsGenerator?.isCoop(raw)) {
-      ncaaaAction.textContent = 'NCAAA CS unavailable — field experience uses a different template';
-      ncaaaAction.title = 'EE 492 / COOP requires the separate Field Experience specification template.';
-    } else {
-      const button = document.createElement('button');
-      button.className = 'print-btn';
-      button.type = 'button';
-      button.textContent = 'Generate NCAAA CS — Word';
-      button.title = 'Generate the official NCAAA Course Specification locally in this browser';
-      const status = document.createElement('div');
-      status.className = 'ncaaa-cs-note muted';
-      status.setAttribute('aria-live', 'polite');
-      ncaaaAction.replaceWith(button, status);
-      button.addEventListener('click', async () => {
+    const ncaaaKind = window.ncaaaCsGenerator.isCoop(raw) ? 'FES' : 'CS';
+    const ncaaaButtonLabel = `Generate NCAAA ${ncaaaKind} — Word`;
+    const button = document.createElement('button');
+    button.className = 'print-btn';
+    button.type = 'button';
+    button.textContent = ncaaaButtonLabel;
+    button.title = `Generate the official NCAAA ${ncaaaKind === 'FES' ? 'Field Experience' : 'Course'} Specification locally in this browser`;
+    const status = document.createElement('div');
+    status.className = 'ncaaa-cs-note muted';
+    status.setAttribute('aria-live', 'polite');
+    ncaaaAction.replaceWith(button, status);
+    button.addEventListener('click', async () => {
         if (button.disabled) return;
         button.disabled = true;
         button.textContent = 'Generating…';
@@ -417,7 +415,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
           const result = await window.ncaaaCsGenerator.generateAndDownload(
             raw,
-            '../templates/EE-CS-NCAAA-Template.docx'
+            {
+              cs: '/templates/EE-CS-NCAAA-Template.docx',
+              fes: '/templates/EE-FES-NCAAA-Template.docx'
+            }
           );
           if (result.warnings.length) {
             const heading = document.createElement('strong');
@@ -438,10 +439,9 @@ document.addEventListener('DOMContentLoaded', async () => {
           status.textContent = `Could not generate: ${error.message || 'unexpected error'}`;
         } finally {
           button.disabled = false;
-          button.textContent = 'Generate NCAAA CS — Word';
+          button.textContent = ncaaaButtonLabel;
         }
-      });
-    }
+    });
 
   } catch (e) {
     byId('detail').innerHTML = '<div class="alert">Could not load course information.</div>';

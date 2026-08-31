@@ -25,6 +25,7 @@ from lxml import etree
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "ee_curriculum.json"
 TEMPLATE_PATH = ROOT / "templates" / "EE-CS-NCAAA-Template.docx"
+FES_TEMPLATE_PATH = ROOT / "templates" / "EE-FES-NCAAA-Template.docx"
 DEFAULT_OUTPUT_DIR = ROOT / "generated" / "ncaaa-cs"
 
 W_NS = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
@@ -56,6 +57,7 @@ CLO_SLOT_BY_CODE = {
     "3.2": 10,
     "3.3": 11,
 }
+FES_CLO_SLOT_BY_CODE = {key: value for key, value in CLO_SLOT_BY_CODE.items() if key != "3.3"}
 
 REQUIRED_GENERAL_FIELDS = (
     "course_code",
@@ -108,9 +110,19 @@ def normalized_course_code(value: str) -> str:
     return re.sub(r"[^A-Z0-9]", "", str(value).upper())
 
 
-def filename_for_course(course_code: str) -> str:
+def filename_for_course(course_code: str, kind: str = "cs") -> str:
     safe_code = normalized_course_code(course_code)
+    if kind == "fes":
+        return f"{safe_code}_NCAAA_Field_Experience_Specification.docx"
     return f"{safe_code}_NCAAA_Course_Specification.docx"
+
+
+def document_kind_for_course(course: dict[str, Any]) -> str:
+    return "fes" if is_coop(course) else "cs"
+
+
+def template_for_course(course: dict[str, Any]) -> Path:
+    return FES_TEMPLATE_PATH if is_coop(course) else TEMPLATE_PATH
 
 
 def clo_code(value: Any) -> str:
@@ -165,10 +177,8 @@ def contact_hours(course: dict[str, Any]) -> tuple[dict[str, str], str]:
     raise ValidationError(f"no approved contact-hour rule for {raw_credits!r} credits")
 
 
-def validate_and_build_values(course: dict[str, Any]) -> tuple[dict[str, str], list[str], str]:
+def validate_and_build_cs_values(course: dict[str, Any]) -> tuple[dict[str, str], list[str], str]:
     code = str(course.get("course_code", "<unknown>"))
-    if is_coop(course):
-        raise ExcludedCourse("Co-Op/Field Experience uses a different NCAAA template")
 
     missing = [key for key in REQUIRED_GENERAL_FIELDS if not str(course.get(key) or "").strip()]
     if missing:
@@ -265,6 +275,58 @@ def validate_and_build_values(course: dict[str, Any]) -> tuple[dict[str, str], l
             warnings.append(f"{code}: total_topic_contact_hours is not numeric")
 
     return values, warnings, hours_rule
+
+
+def validate_and_build_fes_values(course: dict[str, Any]) -> tuple[dict[str, str], list[str], str]:
+    code = str(course.get("course_code", "<unknown>"))
+    missing = [key for key in REQUIRED_GENERAL_FIELDS if not str(course.get(key) or "").strip()]
+    if missing:
+        raise ValidationError("missing required general field(s): " + ", ".join(missing))
+    values = dict(FIXED_VALUES)
+    values.update(
+        {
+            "Course_Title": str(course["course_title"]),
+            "Course_Code": code,
+            "Credit_Hours": str(course["credit_hours"]),
+            "Level": str(course["level"]),
+            "Year": str(course["year"]),
+            "Course_Description": str(course["course_description"]),
+            "Prereq": optional_text(course, "prerequisite_text", "prerequisites"),
+            "Coreq": optional_text(course, "corequisite_text", "corequisites"),
+        }
+    )
+    warnings: list[str] = []
+    objectives = clean_list(course.get("course_objectives"))
+    if len(objectives) > 3:
+        warnings.append(f"{code}: only the first 3 of {len(objectives)} objectives fit the FES template")
+    for index in range(1, 4):
+        values[f"O{index}"] = objectives[index - 1] if index <= len(objectives) else ""
+    for index in range(1, 11):
+        values[f"CLO_{index}"] = ""
+        values[f"MPLO{index}"] = ""
+        values[f"CLO_{index}_TS"] = ""
+        values[f"CLO_{index}_AM"] = ""
+    clos = course.get("clos") or []
+    if len(clos) > 10:
+        raise ValidationError(f"contains {len(clos)} CLOs; FES template capacity is 10")
+    seen_codes: set[str] = set()
+    for clo in clos:
+        code_value = clo_code(clo.get("clo_number"))
+        if code_value not in FES_CLO_SLOT_BY_CODE:
+            raise ValidationError(f"unsupported FES CLO code {code_value}; no matching NCAAA row")
+        if code_value in seen_codes:
+            raise ValidationError(f"duplicate CLO code {code_value}")
+        seen_codes.add(code_value)
+        slot = FES_CLO_SLOT_BY_CODE[code_value]
+        values[f"CLO_{slot}"] = str(clo.get("clo_text") or "")
+        values[f"MPLO{slot}"] = ", ".join(clean_list(clo.get("mapped_sos")))
+        values[f"CLO_{slot}_TS"] = "; ".join(clean_list(clo.get("teaching_strategy")))
+        values[f"CLO_{slot}_AM"] = "; ".join(clean_list(clo.get("assessment_methods")))
+    return values, warnings, "field-experience schedule"
+
+
+def validate_and_build_values(course: dict[str, Any]) -> tuple[dict[str, str], list[str], str]:
+    return validate_and_build_fes_values(course) if is_coop(course) else validate_and_build_cs_values(course)
 
 
 def field_name(instruction: str) -> str | None:
@@ -421,7 +483,7 @@ def patch_document_xml(xml_bytes: bytes, values: dict[str, str], requirement: st
 
 def write_generated_docx(course: dict[str, Any], values: dict[str, str], output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    with zipfile.ZipFile(TEMPLATE_PATH, "r") as source:
+    with zipfile.ZipFile(template_for_course(course), "r") as source:
         document_xml = patch_document_xml(
             source.read("word/document.xml"), values, str(course["required_or_elective"])
         )
@@ -435,9 +497,10 @@ def generate_course(course: dict[str, Any], output_dir: Path) -> CourseResult:
     code = str(course.get("course_code", "<unknown>"))
     try:
         values, warnings, hours_rule = validate_and_build_values(course)
-        filename = filename_for_course(code)
+        filename = filename_for_course(code, document_kind_for_course(course))
         write_generated_docx(course, values, output_dir / filename)
-        warnings.insert(0, f"{code}: contact hours use the {hours_rule}")
+        if not is_coop(course):
+            warnings.insert(0, f"{code}: contact hours use the {hours_rule}")
         return CourseResult(code, "generated", filename, warnings)
     except ExcludedCourse as exc:
         return CourseResult(code, "excluded", reason=str(exc))
@@ -446,7 +509,8 @@ def generate_course(course: dict[str, Any], output_dir: Path) -> CourseResult:
 
 
 def verify_preserved_parts(generated_path: Path) -> None:
-    with zipfile.ZipFile(TEMPLATE_PATH) as source, zipfile.ZipFile(generated_path) as generated:
+    template = FES_TEMPLATE_PATH if "Field_Experience" in generated_path.name else TEMPLATE_PATH
+    with zipfile.ZipFile(template) as source, zipfile.ZipFile(generated_path) as generated:
         source_names = source.namelist()
         if source_names != generated.namelist():
             raise ValidationError("generated DOCX package part list differs from the master template")
@@ -493,8 +557,9 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    if not TEMPLATE_PATH.exists():
-        print(f"ERROR: official template not found: {TEMPLATE_PATH}", file=sys.stderr)
+    missing_templates = [path for path in (TEMPLATE_PATH, FES_TEMPLATE_PATH) if not path.exists()]
+    if missing_templates:
+        print("ERROR: official template(s) not found: " + ", ".join(map(str, missing_templates)), file=sys.stderr)
         return 2
     template_hash = hashlib.sha256(TEMPLATE_PATH.read_bytes()).hexdigest().upper()
     courses = load_courses()
