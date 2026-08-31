@@ -2876,13 +2876,10 @@
             "nqf_domain": "Knowledge",
             "clo_text": "Explain the basic concepts, components, and principles of power systems",
             "mapped_sos": [
-              "SO1",
-              "SO2"
+              "SO1"
             ],
             "pi_codes": [
-              "PI11",
-              "PI12",
-              "PI21"
+              "PI12"
             ],
             "teaching_strategy": [
               "Design- and Project-Based Learning",
@@ -2898,15 +2895,13 @@
           {
             "clo_number": 1.2,
             "nqf_domain": "Knowledge",
-            "clo_text": "Describe the different types of power generators and their characteristics",
+            "clo_text": "Apply transformer and transmission-line equivalent-circuit models to compute system quantities.",
             "mapped_sos": [
-              "SO1",
-              "SO2"
+              "SO1"
             ],
             "pi_codes": [
               "PI11",
-              "PI12",
-              "PI21"
+              "PI12"
             ],
             "teaching_strategy": [
               "Design- and Project-Based Learning",
@@ -2922,11 +2917,13 @@
           {
             "clo_number": 2.1,
             "nqf_domain": "Skills",
-            "clo_text": "Analyse both symmetrical and unsymmetrical conditions in power systems.",
+            "clo_text": "Analyze balanced three-phase and transformer networks using per-phase equivalent circuits and per-unit representation",
             "mapped_sos": [
+              "SO1",
               "SO2"
             ],
             "pi_codes": [
+              "PI12",
               "PI21",
               "PI22"
             ],
@@ -2944,7 +2941,7 @@
           {
             "clo_number": 2.2,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze the behavior of power systems under steady-state and transient conditions",
+            "clo_text": "Design a transmission-line configuration to meet specified line parameters and power-factor requirements.",
             "mapped_sos": [
               "SO2"
             ],
@@ -2966,21 +2963,15 @@
           {
             "clo_number": 2.3,
             "nqf_domain": "Skills",
-            "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
+            "clo_text": "Evaluate the steady-state performance of short, medium, and long transmission lines.",
             "mapped_sos": [
               "SO1",
-              "SO2",
-              "SO4",
-              "SO7"
+              "SO2"
             ],
             "pi_codes": [
-              "PI13",
-              "PI23",
-              "PI24",
-              "PI41",
-              "PI42",
-              "PI71",
-              "PI72"
+              "PI12",
+              "PI21",
+              "PI22"
             ],
             "teaching_strategy": [
               "Independent/Self-Directed Learning",
