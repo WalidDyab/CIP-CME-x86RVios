@@ -73,7 +73,8 @@
             ],
             "pi_codes": [
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -96,7 +97,8 @@
             ],
             "pi_codes": [
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -195,7 +197,8 @@
           "PI11": "I",
           "PI12": "I",
           "PI31": "I",
-          "PI32": "I"
+          "PI32": "I",
+          "PI33": "I"
         }
       },
       {
@@ -458,7 +461,8 @@
             ],
             "pi_codes": [
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -614,6 +618,7 @@
           "PI24": "I",
           "PI31": "P",
           "PI32": "P",
+          "PI33": "P",
           "PI51": "I",
           "PI62": "I",
           "PI63": "I",
@@ -1468,7 +1473,8 @@
               "PI12",
               "PI13",
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -1728,6 +1734,7 @@
           "PI24": "P",
           "PI31": "P",
           "PI32": "P",
+          "PI33": "P",
           "PI41": "I",
           "PI42": "I",
           "PI51": "P",
@@ -1821,7 +1828,8 @@
               "SO3"
             ],
             "pi_codes": [
-              "PI31"
+              "PI31",
+              "PI32"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -1842,7 +1850,8 @@
               "SO3"
             ],
             "pi_codes": [
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -1955,6 +1964,7 @@
           "PI13": "P",
           "PI31": "P",
           "PI32": "P",
+          "PI33": "P",
           "PI71": "P"
         }
       },
@@ -2304,6 +2314,7 @@
               "PI24",
               "PI31",
               "PI32",
+              "PI33",
               "PI51",
               "PI52",
               "PI61",
@@ -2407,6 +2418,7 @@
           "PI24": "P",
           "PI31": "P",
           "PI32": "P",
+          "PI33": "P",
           "PI51": "P",
           "PI52": "I",
           "PI61": "P",
@@ -2557,6 +2569,7 @@
             "pi_codes": [
               "PI31",
               "PI32",
+              "PI33",
               "PI41",
               "PI42",
               "PI51",
@@ -2643,6 +2656,7 @@
           "PI24": "P",
           "PI31": "P",
           "PI32": "P",
+          "PI33": "P",
           "PI41": "I",
           "PI42": "I",
           "PI51": "P",
@@ -3196,7 +3210,8 @@
               "SO3"
             ],
             "pi_codes": [
-              "PI31"
+              "PI31",
+              "PI32"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -3220,7 +3235,8 @@
             ],
             "pi_codes": [
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -3367,6 +3383,7 @@
           "PI24": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI41": "P",
           "PI42": "P",
           "PI51": "M",
@@ -3441,7 +3458,8 @@
             ],
             "pi_codes": [
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Field Experience"
@@ -3552,6 +3570,7 @@
           "PI13": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI41": "P",
           "PI42": "P",
           "PI51": "M",
@@ -3796,6 +3815,7 @@
               "PI13",
               "PI31",
               "PI32",
+              "PI33",
               "PI71",
               "PI72"
             ],
@@ -3998,6 +4018,7 @@
           "PI24": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI41": "M",
           "PI42": "M",
           "PI71": "M",
@@ -4088,7 +4109,8 @@
             ],
             "pi_codes": [
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -4165,6 +4187,7 @@
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI62": "M",
           "PI63": "M",
           "PI72": "M"
@@ -4755,7 +4778,8 @@
               "SO3"
             ],
             "pi_codes": [
-              "PI31"
+              "PI31",
+              "PI32"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -4786,7 +4810,8 @@
           "PI11": "M",
           "PI12": "M",
           "PI21": "M",
-          "PI31": "M"
+          "PI31": "M",
+          "PI32": "M"
         }
       },
       {
@@ -4836,7 +4861,8 @@
               "PI12",
               "PI13",
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -4919,6 +4945,7 @@
           "PI13": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI61": "P",
           "PI62": "P",
           "PI63": "P",
@@ -4952,6 +4979,7 @@
               "PI13",
               "PI31",
               "PI32",
+              "PI33",
               "PI71",
               "PI72"
             ],
@@ -5088,6 +5116,7 @@
           "PI13": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI41": "P",
           "PI42": "P",
           "PI51": "M",
@@ -5198,6 +5227,7 @@
             "pi_codes": [
               "PI31",
               "PI32",
+              "PI33",
               "PI41",
               "PI42"
             ],
@@ -5259,6 +5289,7 @@
           "PI13": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI41": "P",
           "PI42": "P",
           "PI61": "M",
@@ -5509,7 +5540,8 @@
             ],
             "pi_codes": [
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -5563,6 +5595,7 @@
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI72": "M"
         }
       },
@@ -5608,7 +5641,8 @@
             ],
             "pi_codes": [
               "PI31",
-              "PI32"
+              "PI32",
+              "PI33"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -5685,6 +5719,7 @@
           "PI13": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI71": "M"
         }
       },
@@ -5713,6 +5748,7 @@
               "PI13",
               "PI31",
               "PI32",
+              "PI33",
               "PI71",
               "PI72"
             ],
@@ -5843,6 +5879,7 @@
             "pi_codes": [
               "PI31",
               "PI32",
+              "PI33",
               "PI71",
               "PI72"
             ],
@@ -5879,6 +5916,7 @@
           "PI21": "M",
           "PI31": "M",
           "PI32": "M",
+          "PI33": "M",
           "PI71": "M",
           "PI72": "M"
         }
