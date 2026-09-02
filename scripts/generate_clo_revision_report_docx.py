@@ -1,13 +1,10 @@
-"""Generate the formal CLO revision report as a deterministic Word document.
-
-The structured audit JSON is the sole content source. This script does not read
-or modify the canonical curriculum JSON.
-"""
+"""Generate the formal CLO revision report as a deterministic Word document."""
 
 from __future__ import annotations
 
 import json
 import os
+import re
 import tempfile
 import zipfile
 from datetime import datetime, timezone
@@ -24,7 +21,9 @@ from docx.shared import Mm, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT_PATH = ROOT / "data" / "clo_revision_audit_term_251_to_261.json"
+CURRICULUM_PATH = ROOT / "data" / "ee_curriculum.json"
 OUTPUT_PATH = ROOT / "output" / "CLO_Revision_Report_Term_251_to_261.docx"
+TEMPLATE_PATH = ROOT / "templates" / "CLO-Revision-Report-Template.docx"
 
 # Standard business brief, with the requested A4 portrait override.
 FONT = "Arial"
@@ -34,7 +33,6 @@ INK = "202A35"
 MUTED = "59636E"
 GRID = "A9B3BE"
 HEADER_FILL = "E8EDF3"
-LIGHT_FILL = "F5F7F9"
 TABLE_WIDTH_DXA = 9400
 TABLE_INDENT_DXA = 120
 CELL_MARGINS_DXA = {"top": 90, "start": 120, "bottom": 90, "end": 120}
@@ -191,9 +189,6 @@ def style_table(table, widths, *, header=True, font_size=8.5, center_columns=())
         if header and row_index == 0:
             for cell in row.cells:
                 set_cell_shading(cell, HEADER_FILL)
-        elif row_index % 2 == 0:
-            for cell in row.cells:
-                set_cell_shading(cell, LIGHT_FILL)
         for col_index, cell in enumerate(row.cells):
             for paragraph in cell.paragraphs:
                 paragraph.paragraph_format.space_before = Pt(0)
@@ -218,7 +213,36 @@ def clear_cell(cell):
         paragraph._p.remove(child)
 
 
-def add_clo_blocks(cell, items, side):
+def current_mapping(clo, pi_owners):
+    domain = domain_name(clo.get("nqf_domain"))
+    sos = [str(value) for value in clo.get("mapped_sos", [])]
+    grouped = {so: [] for so in sos}
+    for pi in clo.get("pi_codes", []):
+        owner = pi_owners.get(pi)
+        if owner not in grouped:
+            raise ValueError(f"Invalid SO/PI relationship for {clo.get('current_clo_id')}: {pi}")
+        grouped[owner].append(pi)
+    values = [f"{so} ({', '.join(grouped[so])})" if grouped[so] else so for so in sos]
+    return f"{domain} · {', '.join(values)}" if values else domain
+
+
+def baseline_mapping(clo):
+    domain = domain_name(clo.get("nqf_domain"))
+    source = str(clo.get("source_so", ""))
+    sos = []
+    for value in re.findall(r"\d+", source):
+        so = f"SO{value}"
+        if so not in sos:
+            sos.append(so)
+    return f"{domain} · {', '.join(sos)}" if sos else domain
+
+
+def domain_name(value):
+    value = str(value or "")
+    return "Knowledge" if value.startswith("Knowledge") else "Skills" if value.startswith("Skills") else "Values"
+
+
+def add_clo_blocks(cell, items, side, pi_owners):
     clear_cell(cell)
     if not items:
         add_text(cell, "-", color=MUTED)
@@ -229,11 +253,10 @@ def add_clo_blocks(cell, items, side):
         paragraph.paragraph_format.space_after = Pt(4 if index < len(items) - 1 else 1)
         clo_id = item["baseline_clo_ref"] if side == "baseline" else item["current_clo_id"]
         wording = item["clo_text"] if side == "baseline" else item["current_clo_text"]
-        domain_value = str(item.get("nqf_domain", ""))
-        domain = "Knowledge" if domain_value.startswith("Knowledge") else "Skills" if domain_value.startswith("Skills") else "Values"
+        mapping = baseline_mapping(item) if side == "baseline" else current_mapping(item, pi_owners)
         run = paragraph.add_run(f"CLO {clo_id}\n")
         set_run_font(run, size=8.1, bold=True, color=NAVY)
-        run = paragraph.add_run(f"{domain}\n")
+        run = paragraph.add_run(f"{mapping}\n")
         set_run_font(run, size=7.7, italic=True, color=MUTED)
         run = paragraph.add_run(wording)
         set_run_font(run, size=8.1)
@@ -278,19 +301,20 @@ def configure_page(doc):
     section = doc.sections[0]
     section.page_width = Mm(210)
     section.page_height = Mm(297)
-    section.top_margin = Mm(18)
-    section.bottom_margin = Mm(17)
-    section.left_margin = Mm(20)
-    section.right_margin = Mm(20)
-    section.header_distance = Mm(10)
-    section.footer_distance = Mm(9)
+    section.top_margin = Mm(35.56)
+    section.bottom_margin = Mm(25.4)
+    section.left_margin = Mm(17.78)
+    section.right_margin = Mm(17.78)
+    section.header_distance = Mm(0)
+    section.footer_distance = Mm(0)
 
-    header = section.header.paragraphs[0]
-    header.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    header.paragraph_format.space_after = Pt(0)
-    set_run_font(header.add_run("Undergraduate Electrical Engineering Program"), size=8, color=MUTED)
-    footer = section.footer.paragraphs[0]
-    add_page_number(footer)
+
+def relationship_sort_key(item):
+    current = item.get("current_clos", [])
+    baseline = item.get("baseline_clos", [])
+    clo_id = current[0].get("current_clo_id") if current else baseline[0].get("baseline_clo_ref") if baseline else ""
+    parts = tuple(int(value) for value in re.findall(r"\d+", str(clo_id)))
+    return parts, item.get("type") == "omitted"
 
 
 def add_title_block(doc):
@@ -322,10 +346,11 @@ def add_title_block(doc):
     doc.add_paragraph().paragraph_format.space_after = Pt(8)
 
 
-def build_report(audit):
+def build_report(audit, curriculum):
     counts = audit["counts"]
     relationships = audit["relationships"]
     summaries = {item["course_code"]: item for item in audit["course_summaries"]}
+    pi_owners = {pi: definition["so"] for pi, definition in curriculum["abet"]["performance_indicators"].items()}
 
     if audit["accounting"]["baseline_accounted"] != counts["baseline_clos"]:
         raise ValueError("Baseline CLO reconciliation is incomplete")
@@ -335,7 +360,11 @@ def build_report(audit):
     if not any(item["type"] == "unchanged" and any(str(clo["current_clo_id"]) == "1.1" for clo in item["current_clos"]) for item in ee403):
         raise ValueError("EE 403 unchanged CLO 1.1 is missing from the structured audit")
 
-    doc = Document()
+    doc = Document(TEMPLATE_PATH)
+    body = doc._element.body
+    for child in list(body):
+        if child.tag != qn("w:sectPr"):
+            body.remove(child)
     configure_styles(doc)
     configure_page(doc)
     props = doc.core_properties
@@ -353,7 +382,7 @@ def build_report(audit):
     add_heading(doc, "3. Rationale for CLO Review", 1)
     add_body(doc, "The review was undertaken to improve CLO clarity and measurability and to strengthen alignment with SO assessment and the program's assessment framework. The revisions support assessment improvement; they do not imply that ABET prescribed specific CLO wording.")
     add_heading(doc, "4. Scope", 1)
-    add_body(doc, "The comparison covers the 16 Undergraduate EE courses represented in both curriculum sets. Supporting courses and current-only courses without a corresponding Term 251 specification are outside the comparison.")
+    add_body(doc, "The scope of this review is limited to the 16 Undergraduate EE courses represented in both the Term 251 and Term 261 curricula. Elective courses and non-EE College/supporting courses are excluded from the comparison.")
     scope = doc.add_table(rows=1, cols=2)
     scope.rows[0].cells[0].text = "Course"
     scope.rows[0].cells[1].text = "Title"
@@ -389,12 +418,12 @@ def build_report(audit):
         table = doc.add_table(rows=1, cols=4)
         for cell, text in zip(table.rows[0].cells, ("Change", "Term 251 CLO", "Term 261 CLO", "Brief Justification / Comment")):
             cell.text = text
-        entries = [item for item in relationships if item["course_code"] == code]
+        entries = sorted((item for item in relationships if item["course_code"] == code), key=relationship_sort_key)
         for index, item in enumerate(entries):
             row = table.add_row().cells
             row[0].text = LABELS[item["type"]]
-            add_clo_blocks(row[1], item["baseline_clos"], "baseline")
-            add_clo_blocks(row[2], item["current_clos"], "current")
+            add_clo_blocks(row[1], item["baseline_clos"], "baseline", pi_owners)
+            add_clo_blocks(row[2], item["current_clos"], "current", pi_owners)
             row[3].text = comment_for(item, index)
         style_table(table, [1400, 2650, 2650, 2700], font_size=8.1, center_columns=(0,))
         doc.add_paragraph().paragraph_format.space_after = Pt(2)
@@ -411,6 +440,7 @@ def build_report(audit):
 
     add_heading(doc, "8. Impact on ABET Assessment", 1)
     add_body(doc, "The revised framework strengthens the alignment and traceability among CLOs, SOs, PIs, and assessment evidence. This supports systematic continuous improvement while keeping the detailed comparison focused on CLO wording and structure.")
+    doc.add_page_break()
     add_heading(doc, "9. Approval Status", 1)
     approval = doc.add_table(rows=1, cols=2)
     approval.rows[0].cells[0].text = "Item"
@@ -420,10 +450,10 @@ def build_report(audit):
         ("Curriculum Term", "261"),
         ("Prepared by", "Curriculum Committee"),
         ("Review Status", "Proposed for Approval"),
-        ("College Curriculum Committee", "____________________________"),
-        ("Approval Date", "____________________________"),
-        ("Institutional Curriculum Committee, if required", "____________________________"),
-        ("Approval Date", "____________________________"),
+        ("College Curriculum Committee", ""),
+        ("Approval Date", ""),
+        ("Institutional Curriculum Committee, if required", ""),
+        ("Approval Date", ""),
     ):
         row = approval.add_row().cells
         row[0].text = label
@@ -453,8 +483,9 @@ def normalize_zip(path):
 
 def main():
     audit = json.loads(AUDIT_PATH.read_text(encoding="utf-8"))
+    curriculum = json.loads(CURRICULUM_PATH.read_text(encoding="utf-8"))
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    document = build_report(audit)
+    document = build_report(audit, curriculum)
     document.save(OUTPUT_PATH)
     normalize_zip(OUTPUT_PATH)
     print(json.dumps({"output": str(OUTPUT_PATH.relative_to(ROOT)), "source": str(AUDIT_PATH.relative_to(ROOT))}, indent=2))
