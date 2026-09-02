@@ -90,9 +90,20 @@ a {
 
 .logo-left,
 .logo-right {
-    flex: 1;
+    flex: 0 1 210px;
+    min-width: 150px;
     display: flex;
     align-items: center
+}
+
+.header-row .nav-center {
+    flex: 1 1 620px;
+    gap: 8px
+}
+
+.header-row .btn {
+    padding: 9px 10px;
+    font-size: 12px
 }
 
 .logo-left {

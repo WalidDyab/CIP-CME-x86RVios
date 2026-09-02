@@ -3,7 +3,7 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-EMSgH4UuNmR/ymd6P6Pzx/wYMWM3b6fHG1bc6VyKQTQ='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Gk/LrtWPMvmrirEPu7PfDLSt+mY4eHH5O3YMNbJA5+0=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>EE Program Overview | Curriculum Intelligence Portal</title>
@@ -11,6 +11,9 @@
   <script defer src="../assets/portal.js"></script>
   <link rel="stylesheet" href="../assets/program-identity.css?v=cards-1">
   <script defer src="../assets/program-identity.js?v=cards-1"></script>
+  <script defer src="../assets/reference-management.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js" integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.8/jspdf.plugin.autotable.min.js" integrity="sha512-QLh0AACvI+3C+bmn3QdH6blN0NWBxwGvBDgV67TvKV5Q2knO9+/+lguVL23JQ9DR7CnfuOSYUBURlXjmJeK11Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
     .overview-course-sections { display: grid; gap: 22px; }
     .overview-course-group h3 { margin: 0 0 11px; }
@@ -25,6 +28,7 @@
     .overview-card-requirements.has-corequisite .overview-card-requirement { -webkit-line-clamp: 1; line-clamp: 1; }
     .overview-card-requirement strong { color: var(--text); }
     .overview-course-grid .desc { min-height: 4.65em; margin: auto 0 0; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+    .overview-tool-status { display:block; min-height:1.4em; margin-top:10px; }
     @media (max-width: 1100px) { .overview-course-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .overview-special-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 780px) { .overview-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 520px) { .overview-course-grid, .overview-special-grid { grid-template-columns: minmax(0, 1fr); } }
@@ -51,11 +55,11 @@
       <section class="program-statement" aria-labelledby="so-title"><h2 id="so-title">Student Outcomes</h2><p class="statement-intro">Student Outcomes describe the knowledge, skills, and professional capabilities students are expected to demonstrate by graduation.</p><div id="program-sos" class="outcome-grid"><p>Loading student outcomes…</p></div></section>
       <noscript><p>JavaScript is needed to display the program statements from the <a href="../data/ee_curriculum.json">canonical curriculum data</a>.</p></noscript>
     <section id="stats" class="grid four"></section>
-    <section class="card" style="margin-top:14px">
-      <h2>Course–SO–PI Performance Heatmaps</h2>
-      <p class="muted">These heatmaps show the approved PI-specific Introduced (I), Practiced (P), and Mastered (M) levels.</p>
-      <button id="toggleHeatmapBtn" class="btn primary" style="margin:10px 0">Show Heatmaps</button>
-      <div id="heatmapSection" class="hidden">
+      <section class="card" style="margin-top:14px">
+        <h2>Course–SO–PI Performance Heatmaps</h2>
+        <p class="muted">These heatmaps show the approved PI-specific Introduced (I), Practiced (P), and Mastered (M) levels.</p>
+        <button id="toggleHeatmapBtn" class="btn primary" style="margin:10px 0">Show Heatmaps</button>
+        <div id="heatmapSection" class="hidden">
         <div class="heatmap-heading"><h3>PI Heatmap</h3><button id="exportPiBtn" class="btn">Export PNG</button></div>
         <p class="muted">Each cell displays the course-specific level for that PI. Unmapped cells remain blank.</p>
         <div id="piHeatmapContainer"></div>
@@ -69,8 +73,14 @@
           <div class="legend-item"><div class="legend-box level-code">I/P</div><span>Mixed PI levels</span></div>
           <div class="legend-item"><div class="legend-box cell-unmapped"></div><span>Unmapped</span></div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+      <section class="card" style="margin-top:14px">
+        <h2>Textbooks &amp; References</h2>
+        <p class="muted">Generate the current program-wide list of main textbooks and additional references used across Undergraduate EE courses.</p>
+        <button id="generateTextbookList" class="btn primary" type="button" style="margin:10px 0">Generate Textbook List</button>
+        <span id="textbookListStatus" class="muted overview-tool-status" aria-live="polite"></span>
+      </section>
     <section class="card" style="margin-top:14px">
       <h2>Courses</h2>
       <div class="toolbar">
@@ -88,6 +98,15 @@
       try {
         const data = await portal.loadJSON('../data/ee_curriculum.json');
         const courses = data.curriculum.courses || [];
+        byId('generateTextbookList').addEventListener('click', () => {
+          const status = byId('textbookListStatus');
+          try {
+            window.referenceManagement.createProgramListPdf(courses);
+            status.textContent = 'Textbook and reference list generated.';
+          } catch (error) {
+            status.textContent = error.message || 'The textbook and reference list could not be generated.';
+          }
+        });
         const mappingCourses = courses;
         const curriculumByCode = new Map(courses.map(course => [course.course_code, course]));
         const clos = courses.flatMap(course => course.clos || []);

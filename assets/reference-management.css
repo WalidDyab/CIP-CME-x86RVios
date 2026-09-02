@@ -1,0 +1,24 @@
+.reference-review-modal { max-width:1100px; }
+.reference-intro { margin:0 0 16px; color:var(--muted); line-height:1.6; }
+.reference-slot-list { display:grid; gap:16px; }
+.reference-slot { border:1px solid var(--line); border-radius:16px; padding:16px; background:rgba(255,255,255,.035); }
+.reference-slot-head { display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; }
+.reference-slot-head h3 { margin:0; color:var(--cyan); }
+.reference-operation { min-width:170px; padding:9px; border:1px solid var(--line); border-radius:8px; background:#162235; color:var(--text); }
+.reference-current { margin:12px 0 0; padding:12px; border-left:3px solid var(--orange); background:var(--panel); line-height:1.55; overflow-wrap:anywhere; }
+.reference-current strong { display:block; margin-bottom:4px; color:#ffd56e; }
+.reference-editor { display:none; margin-top:14px; }
+.reference-editor.visible { display:block; }
+.reference-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.reference-field { display:grid; gap:5px; color:var(--muted); font-size:12px; font-weight:700; }
+.reference-field input,.reference-field textarea { width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; background:#101c2c; color:var(--text); font:inherit; }
+.reference-field textarea { min-height:92px; resize:vertical; }
+.reference-wide { grid-column:1/-1; }
+.bibtex-row { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:end; margin-top:12px; }
+.reference-secondary { padding:10px 14px; border:1px solid var(--line); border-radius:999px; background:var(--panel2); color:var(--text); cursor:pointer; font-weight:700; }
+.reference-preview { margin-top:12px; padding:12px; border:1px dashed rgba(121,215,255,.45); border-radius:10px; line-height:1.55; }
+.reference-preview strong { color:var(--cyan); }
+.reference-error { display:block; min-height:18px; margin-top:5px; color:var(--red); font-size:12px; }
+.reference-justification { margin-top:18px; }
+.reference-actions { display:flex; justify-content:flex-end; gap:10px; margin-top:18px; }
+@media(max-width:700px){.reference-fields,.bibtex-row{grid-template-columns:1fr}.reference-wide{grid-column:auto}.reference-review-modal{min-height:100%;border-radius:0}.reference-actions{display:grid}.reference-actions button{width:100%}}

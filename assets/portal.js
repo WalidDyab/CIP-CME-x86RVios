@@ -22,7 +22,7 @@ async function loadSharedComponents() {
   const headerEl = document.getElementById('header-placeholder');
   if (headerEl) {
     try {
-      let headerHtml = await fetch(basePath + 'assets/header.html').then(r => r.text());
+      let headerHtml = await fetch(basePath + 'assets/header.html', { cache: 'no-cache' }).then(r => r.text());
       if (basePath) headerHtml = headerHtml.replace(/(src|href)="([^"]+)"/g, (m, a, p) => p.match(/^(?:https?:)?\/\/|^#/) ? m : `${a}="${basePath}${p}"`);
       headerEl.outerHTML = headerHtml;
     } catch (e) { console.error('Failed to load header:', e); }
@@ -31,7 +31,7 @@ async function loadSharedComponents() {
   const footerEl = document.getElementById('footer-placeholder');
   if (footerEl) {
     try {
-      let footerHtml = await fetch(basePath + 'assets/footer.html').then(r => r.text());
+      let footerHtml = await fetch(basePath + 'assets/footer.html', { cache: 'no-cache' }).then(r => r.text());
       if (basePath) footerHtml = footerHtml.replace(/(src|href)="([^"]+)"/g, (m, a, p) => p.match(/^(?:https?:)?\/\/|^#/) ? m : `${a}="${basePath}${p}"`);
       footerEl.outerHTML = footerHtml;
     } catch (e) { console.error('Failed to load footer:', e); }
