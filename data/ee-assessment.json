@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "program": "Electrical Engineering",
+  "assessment_cycle": {
+    "name": "Program Assessment Cycle AY 2025-26 to AY 2028-29",
+    "start_academic_year": "2025-26",
+    "end_academic_year": "2028-29",
+    "responsible_unit": "Quality Assurance Committee",
+    "source": "COE EE Assessment Plan Template AY 2025-26.docx.pdf",
+    "status_legend": {
+      "A": "Assess",
+      "E/C": "Evaluate / Change",
+      "C": "Change"
+    }
+  },
+  "active_term": "T261",
+  "targets": {
+    "direct_assessment_percent": 70,
+    "indirect_assessment_method": "Course Exit Survey",
+    "indirect_assessment_percent": 70
+  },
+  "so_course_selection": {
+    "SO1": ["EE 490", "EE 322", "EE 351", "EE 211", "EE 312"],
+    "SO2": ["EE 490", "EE 322", "EE 351", "EE 305", "EE 211"],
+    "SO3": ["EE 490", "EE 492", "EE 351", "EE 305", "EE 341"],
+    "SO4": ["EE 490", "EE 322", "EE 201", "ETCH305"],
+    "SO5": ["EE 490", "EE 492", "EE 351", "EE 201", "EE 305"],
+    "SO6": ["EE 490", "EE 322", "EE 351", "EE 305", "EE 231"],
+    "SO7": ["EE 490", "EE 492", "EE 403", "EE 304", "EE 231"]
+  },
+  "roadmap": [
+    {
+      "academic_year": "2025-26",
+      "semesters": [
+        {"term": "T251", "statuses": {"SO2": "A", "SO4": "A"}},
+        {"term": "T252", "statuses": {"SO2": "A", "SO4": "A"}}
+      ]
+    },
+    {
+      "academic_year": "2026-27",
+      "semesters": [
+        {"term": "T261", "statuses": {"SO1": "A", "SO3": "A", "SO2": "E/C", "SO4": "E/C"}},
+        {"term": "T262", "statuses": {"SO1": "A", "SO3": "A", "SO2": "C", "SO4": "C"}}
+      ]
+    },
+    {
+      "academic_year": "2027-28",
+      "semesters": [
+        {"term": "T271", "statuses": {"SO5": "A", "SO6": "A", "SO7": "A", "SO1": "E/C", "SO3": "E/C", "SO2": "C", "SO4": "C"}},
+        {"term": "T272", "statuses": {"SO5": "A", "SO6": "A", "SO7": "A", "SO1": "C", "SO3": "C", "SO2": "C", "SO4": "C"}}
+      ]
+    },
+    {
+      "academic_year": "2028-29",
+      "semesters": [
+        {"term": "T281", "statuses": {"SO5": "E/C", "SO6": "E/C", "SO7": "E/C", "SO1": "C", "SO3": "C"}},
+        {"term": "T282", "statuses": {"SO5": "C", "SO6": "C", "SO7": "C", "SO1": "C", "SO3": "C"}}
+      ]
+    }
+  ]
+}
