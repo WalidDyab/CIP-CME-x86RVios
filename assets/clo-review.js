@@ -103,7 +103,8 @@
 
   function render() {
     const c = state.course;
-    content().innerHTML = `<div class="review-meta"><div class="review-course"><div class="code">${portal.esc(c.code)}</div><h3>${portal.esc(c.title)}</h3><div>${portal.badge(c.credits ? c.credits + ' credits' : 'Credits unavailable')}${c.track ? portal.badge(c.track) : ''}${c.re ? portal.badge(c.re) : ''}${c.level ? portal.badge('Level ' + c.level) : ''}</div></div><label class="review-field">Reviewer Name<input id="reviewerName" value="${portal.esc(state.reviewer)}" autocomplete="name" placeholder="Enter reviewer name"><span class="review-error" data-error="reviewer"></span></label><label class="review-field">Review Date<input value="${state.reviewDate}" readonly></label></div>
+    const placement = c.academicYear && c.academicLevel && c.academicYear !== '0' && c.academicLevel !== '0' ? `Year ${c.academicYear} / Level ${c.academicLevel}` : '';
+    content().innerHTML = `<div class="review-meta"><div class="review-course"><div class="code">${portal.esc(c.code)}</div><h3>${portal.esc(c.title)}</h3><div>${portal.badge(c.credits ? c.credits + ' credits' : 'Credits unavailable')}${c.track ? portal.badge(c.track) : ''}${c.re ? portal.badge(c.re) : ''}${placement ? portal.badge(placement) : ''}</div></div><label class="review-field">Reviewer Name<input id="reviewerName" value="${portal.esc(state.reviewer)}" autocomplete="name" placeholder="Enter reviewer name"><span class="review-error" data-error="reviewer"></span></label><label class="review-field">Review Date<input value="${state.reviewDate}" readonly></label></div>
       <div class="review-section-heading"><h3>Existing CLO Review</h3></div><div class="review-list">${state.existing.map(existingCard).join('')}</div>
       <div class="review-section-heading"><h3>Proposed New CLOs</h3><button class="review-secondary" id="addNewClo" type="button">+ Add New CLO</button></div><div class="review-list" id="newCloList">${state.added.length ? state.added.map(newCard).join('') : '<p class="review-new-empty">No new CLOs proposed.</p>'}</div>
       <div class="review-footer"><button class="review-primary" id="generateReviewPdf" type="button">Generate CLO Review PDF</button></div>`;
@@ -186,7 +187,8 @@
     doc.setTextColor(255); doc.setFont('helvetica','bold'); doc.setFontSize(17); doc.text('CLO Review Report',margin,15);
     doc.setTextColor(25); doc.setFontSize(15); doc.text(`${state.course.code} — ${state.course.title}`,margin,37);
     doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(80);
-    const meta = [`Credits: ${state.course.credits || 'N/A'}`,`Type: ${state.course.re || 'N/A'}`,`Level: ${state.course.level || 'N/A'}`,`Reviewer: ${state.reviewer}`,`Review Date: ${state.reviewDate}`];
+    const placement = state.course.academicYear && state.course.academicLevel && state.course.academicYear !== '0' && state.course.academicLevel !== '0' ? `Year ${state.course.academicYear} / Level ${state.course.academicLevel}` : 'Academic placement: N/A';
+    const meta = [`Credits: ${state.course.credits || 'N/A'}`,`Type: ${state.course.re || 'N/A'}`,placement,`Reviewer: ${state.reviewer}`,`Review Date: ${state.reviewDate}`];
     doc.text(meta,margin,44);
     doc.setFont('helvetica','bold'); doc.setFontSize(12); doc.setTextColor(...blue); doc.text('Existing CLO Review',margin,67);
     const rows = state.existing.map(item => {
