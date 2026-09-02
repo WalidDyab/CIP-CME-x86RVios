@@ -89,6 +89,13 @@ if (accountedBaseline !== counts.baseline_clos || accountedCurrent !== counts.cu
 if (counts.ambiguous) throw new Error('Ambiguous CLO relationships require review');
 
 const labels = {unchanged:'Unchanged',modified:'Modified',renumbered:'Renumbered',added:'Added',omitted:'Omitted',merged:'Merged',split:'Split',ambiguous:'Review required'};
+const cloParts = value => String(value || '').split('.').map(part => Number.parseInt(part, 10));
+const relationshipId = item => item.current_clos[0]?.current_clo_id || item.baseline_clos[0]?.baseline_clo_ref || '';
+const sortRelationships = items => items.map((item,index)=>({item,index})).sort((a,b)=>{
+  const left=cloParts(relationshipId(a.item)), right=cloParts(relationshipId(b.item));
+  for(let i=0;i<Math.max(left.length,right.length);i++){const difference=(left[i]??-1)-(right[i]??-1);if(difference)return difference;}
+  return Number(a.item.type==='omitted')-Number(b.item.type==='omitted') || a.index-b.index;
+}).map(entry=>entry.item);
 const relationshipKey = item => `${item.course_code}|${item.baseline_clos.map(clo => clo.baseline_clo_ref).join('+')}->${item.current_clos.map(clo => clo.current_clo_id).join('+')}`;
 const editorialComments = new Map(Object.entries({
   'EE 201|1.1->1.1':'CLO expanded to cover electrical quantities, circuit elements, and basic AC signal relationships.',
@@ -159,16 +166,32 @@ const audit = {
 };
 
 const commentFor = item => item.comment;
+const piOwners = new Map(Object.entries(curriculum.abet?.performance_indicators ?? {}).map(([pi, definition]) => [pi, definition.so]));
+const currentMapping = clo => {
+  const sos = (clo.mapped_sos ?? []).map(String);
+  const grouped = new Map(sos.map(so => [so, []]));
+  for (const pi of clo.pi_codes ?? []) {
+    const owner = piOwners.get(pi);
+    if (!owner || !grouped.has(owner)) throw new Error(`Invalid SO/PI relationship for ${clo.current_clo_id}: ${pi}`);
+    grouped.get(owner).push(pi);
+  }
+  return [domainName(clo.nqf_domain), sos.map(so => grouped.get(so).length ? `${so} (${grouped.get(so).join(', ')})` : so).join(', ')].filter(Boolean).join(' · ');
+};
+const baselineMapping = clo => {
+  const sos = [...new Set((String(clo.source_so ?? '').match(/\d+/g) ?? []).map(value => `SO${value}`))];
+  return [domainName(clo.nqf_domain), sos.join(', ')].filter(Boolean).join(' · ');
+};
 const cloBlock = (clo, side) => {
   if (!clo) return '<span class="empty">—</span>';
   const id = side === 'baseline' ? clo.baseline_clo_ref : clo.current_clo_id;
   const text = side === 'baseline' ? clo.clo_text : clo.current_clo_text;
-  return `<div class="clo"><strong>CLO ${esc(id)}</strong><span>${esc(domainName(clo.nqf_domain))}</span><p>${esc(text)}</p></div>`;
+  const mapping = side === 'baseline' ? baselineMapping(clo) : currentMapping(clo);
+  return `<div class="clo"><strong>CLO ${esc(id)}</strong><span>${esc(mapping)}</span><p>${esc(text)}</p></div>`;
 };
 const cell = (items, side) => items.length ? items.map(item => cloBlock(item, side)).join('') : '<span class="empty">—</span>';
 const courseSections = changedCourses.map(code => {
   const course = currentByCode.get(code);
-  const rows = relationships.filter(item => item.course_code === code).map(item => `<tr><td>${esc(labels[item.type])}</td><td>${cell(item.baseline_clos,'baseline')}</td><td>${cell(item.current_clos,'current')}</td><td>${esc(commentFor(item))}</td></tr>`).join('');
+  const rows = sortRelationships(relationships.filter(item => item.course_code === code)).map(item => `<tr><td>${esc(labels[item.type])}</td><td>${cell(item.baseline_clos,'baseline')}</td><td>${cell(item.current_clos,'current')}</td><td>${esc(commentFor(item))}</td></tr>`).join('');
   return `<section class="course"><h3>${esc(code)} - ${esc(course.course_title)}</h3><table><thead><tr><th>Change</th><th>Term 251 CLO</th><th>Term 261 CLO</th><th>Brief Justification / Comment</th></tr></thead><tbody>${rows}</tbody></table></section>`;
 }).join('');
 const summaryRows = [
@@ -176,29 +199,31 @@ const summaryRows = [
 ].map(([label,value]) => `<tr><td>${esc(label)}</td><td>${value}</td></tr>`).join('');
 const unchangedRows = unchangedCourses.map(code => `<tr><td>${esc(code)}</td><td>${esc(currentByCode.get(code).course_title)}</td></tr>`).join('');
 const includedRows = baseline.included_courses.map(code => `<tr><td>${esc(code)}</td><td>${esc(currentByCode.get(code).course_title)}</td></tr>`).join('');
+const reportScopeOptions = [`<option value="all">All Courses</option>`, ...baseline.included_courses.map(code => `<option value="${esc(code)}">${esc(code)} — ${esc(currentByCode.get(code).course_title)}</option>`)].join('');
 const printScript = "document.getElementById('printReport').addEventListener('click', () => window.print());";
 const cspHash = crypto.createHash('sha256').update(printScript).digest('base64');
 
 const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-${cspHash}'; style-src 'self' 'unsafe-inline'; img-src 'self'; object-src 'none'; base-uri 'self'">
-<meta name="referrer" content="strict-origin-when-cross-origin"><title>Term 251-261 CLO Revision Report</title>
+<meta name="referrer" content="strict-origin-when-cross-origin"><title>Term 251-261 CLO Revision Report</title><script defer src="../assets/vendor/jszip.min.js"></script><script defer src="../assets/clo-revision-docx-generator.js"></script>
 <style>
-  :root{color:#1b1b1b;background:#ececec;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.45}*{box-sizing:border-box}body{margin:0}.toolbar{max-width:210mm;margin:18px auto 8px;display:flex;justify-content:space-between;align-items:center}.toolbar a{color:#17365d}.toolbar button{background:#17365d;color:#fff;border:0;padding:9px 16px;border-radius:3px;font-weight:700;cursor:pointer}.document{width:210mm;max-width:calc(100% - 24px);margin:0 auto 28px;background:#fff;padding:22mm 20mm 20mm;box-shadow:0 2px 12px #999}.title{text-align:center;border-bottom:2px solid #17365d;padding-bottom:18px;margin-bottom:28px}.title h1{font-family:Georgia,serif;font-size:23px;margin:6px 0;color:#17365d}.title h2{font-size:17px;margin:5px 0;font-weight:600}.title p{margin:4px 0}.document h2{font-family:Georgia,serif;color:#17365d;font-size:18px;border-bottom:1px solid #9eabb9;padding-bottom:4px;margin:28px 0 10px}.document h3{font-size:15px;color:#17365d;margin:22px 0 6px}.document p{margin:7px 0}.document ul{margin:7px 0;padding-left:22px}table{width:100%;border-collapse:collapse;margin:8px 0 16px;table-layout:fixed;font-size:12px}th,td{border:1px solid #777;padding:7px;vertical-align:top;text-align:left}th{background:#e8edf3;color:#111}th:first-child{width:12%}th:nth-child(2),th:nth-child(3){width:31%}.summary{width:55%;table-layout:auto}.summary th:first-child{width:auto}.summary td:last-child,.summary th:last-child{text-align:right;width:25%}.scope{width:75%;table-layout:auto}.scope th:first-child{width:24%}.clo strong,.clo span{display:block}.clo span{font-size:11px;font-style:italic;color:#444}.clo p{margin:4px 0 0}.clo+.clo{border-top:1px dotted #999;margin-top:7px;padding-top:7px}.empty{color:#666}.course{break-inside:auto}.course table thead{display:table-header-group}.approval{table-layout:auto}.approval th:first-child{width:38%}.footer-note{margin-top:28px;border-top:1px solid #777;padding-top:8px;font-size:11px;color:#555}
-  @page{size:A4 portrait;margin:15mm 14mm 16mm}@media print{:root{background:#fff;font-size:10pt}.toolbar{display:none}.document{width:auto;max-width:none;margin:0;padding:0;box-shadow:none}.title{margin-bottom:18px}.document h2{margin-top:20px}.course{break-before:auto}.course h3{break-after:avoid}.course table{font-size:8.2pt}tr,.clo{break-inside:avoid;page-break-inside:avoid}th{print-color-adjust:exact;-webkit-print-color-adjust:exact}.footer-note{margin-top:18px}}
+  :root{color:#1b1b1b;background:#ececec;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.45}*{box-sizing:border-box}body{margin:0}.toolbar{max-width:210mm;margin:18px auto 8px;display:flex;justify-content:space-between;align-items:center}.toolbar a{color:#17365d}.toolbar button,.report-generator button{background:#17365d;color:#fff;border:0;padding:9px 16px;border-radius:3px;font-weight:700;cursor:pointer}.report-generator button:disabled{opacity:.65;cursor:wait}.document{width:210mm;max-width:calc(100% - 24px);margin:0 auto 28px;background:#fff;padding:22mm 20mm 20mm;box-shadow:0 2px 12px #999}.title{text-align:center;border-bottom:2px solid #17365d;padding-bottom:18px;margin-bottom:28px}.title h1{font-family:Georgia,serif;font-size:23px;margin:6px 0;color:#17365d}.title h2{font-size:17px;margin:5px 0;font-weight:600}.title p{margin:4px 0}.report-generator{border:1px solid #9eabb9;background:#f5f7f9;padding:14px 16px;margin:0 0 24px}.report-generator h2{border:0;margin:0 0 9px;padding:0}.report-generator-controls{display:flex;gap:10px;align-items:end;flex-wrap:wrap}.report-generator label{font-weight:700}.report-generator select{display:block;margin-top:4px;min-width:310px;max-width:100%;padding:8px;border:1px solid #777;background:#fff}.report-generator-status{display:block;margin-top:8px}.report-generator-status.success{color:#176b32}.report-generator-status.error{color:#9b1c1c}.muted{color:#59636e}.document h2{font-family:Georgia,serif;color:#17365d;font-size:18px;border-bottom:1px solid #9eabb9;padding-bottom:4px;margin:28px 0 10px}.document h3{font-size:15px;color:#17365d;margin:22px 0 6px}.document p{margin:7px 0}.document ul{margin:7px 0;padding-left:22px}table{width:100%;border-collapse:collapse;margin:8px 0 16px;table-layout:fixed;font-size:12px}th,td{border:1px solid #777;padding:7px;vertical-align:top;text-align:left}th{background:#e8edf3;color:#111}th:first-child{width:12%}th:nth-child(2),th:nth-child(3){width:31%}.summary{width:55%;table-layout:auto}.summary th:first-child{width:auto}.summary td:last-child,.summary th:last-child{text-align:right;width:25%}.scope{width:75%;table-layout:auto}.scope th:first-child{width:24%}.clo strong,.clo span{display:block}.clo span{font-size:11px;font-style:italic;color:#444}.clo p{margin:4px 0 0}.clo+.clo{border-top:1px dotted #999;margin-top:7px;padding-top:7px}.empty{color:#666}.course{break-inside:auto}.course table thead{display:table-header-group}.approval{table-layout:auto}.approval th:first-child{width:38%}.approval-section{break-inside:avoid;page-break-inside:avoid}.footer-note{margin-top:28px;border-top:1px solid #777;padding-top:8px;font-size:11px;color:#555}
+  @page{size:A4 portrait;margin:15mm 14mm 16mm}@media print{:root{background:#fff;font-size:10pt}.toolbar,.report-generator{display:none}.document{width:auto;max-width:none;margin:0;padding:0;box-shadow:none}.title{margin-bottom:18px}.document h2{margin-top:20px}.course{break-before:auto}.course h3{break-after:avoid}.course table{font-size:8.2pt}tr,.clo{break-inside:avoid;page-break-inside:avoid}th{print-color-adjust:exact;-webkit-print-color-adjust:exact}.footer-note{margin-top:18px}}
 </style></head><body>
 <div class="toolbar"><a href="index.html">Back to Curriculum Vision</a><button id="printReport" type="button">Print / Save as PDF</button></div>
 <main class="document">
   <header class="title"><p><strong>Undergraduate Electrical Engineering Program</strong></p><h1>CLO Revision Report</h1><h2>Term 251 ABET Submission vs Term 261 Proposed Curriculum</h2></header>
+  <section class="report-generator" id="cloReportGenerator" data-baseline="../data/clo_baseline_term_251_abet.json" data-audit="../data/clo_revision_audit_term_251_to_261.json" data-curriculum="../data/ee_curriculum.json" data-template="../templates/CLO-Revision-Report-Template.docx"><h2>Generate CLO Revision Report</h2><div class="report-generator-controls"><label for="cloReportScope">Report scope<select id="cloReportScope">${reportScopeOptions}</select></label><button id="generateCloReport" type="button">Generate Word Report</button></div><span id="cloReportStatus" class="report-generator-status muted" aria-live="polite"></span></section>
   <section><h2>1. Purpose</h2><p>This report documents the revision of the CLOs of the Undergraduate Electrical Engineering Program from the Term 251 curriculum submitted to ABET to the proposed Term 261 curriculum. It provides a concise record for curriculum review and approval.</p></section>
   <section><h2>2. Background</h2><p>The CLO review formed part of the program's continuous-improvement process initiated in December 2025 following ABET review and assessment discussions. Faculty review and refinement continued through Term 252 and subsequent stages, resulting in the proposed Term 261 CLO set.</p></section>
   <section><h2>3. Rationale for CLO Review</h2><p>The review was undertaken to improve CLO clarity and measurability and to strengthen alignment with SO assessment and the program's assessment framework. The revisions support assessment improvement; they do not imply that ABET prescribed specific CLO wording.</p></section>
-  <section><h2>4. Scope</h2><p>The comparison covers the 16 Undergraduate EE courses represented in both curriculum sets. Supporting courses and current-only courses without a corresponding Term 251 specification are outside the comparison.</p><table class="scope"><thead><tr><th>Course</th><th>Title</th></tr></thead><tbody>${includedRows}</tbody></table></section>
+  <section><h2>4. Scope</h2><p>The scope of this review is limited to the 16 Undergraduate EE courses represented in both the Term 251 and Term 261 curricula. Elective courses and non-EE College/supporting courses are excluded from the comparison.</p><table class="scope"><thead><tr><th>Course</th><th>Title</th></tr></thead><tbody>${includedRows}</tbody></table></section>
   <section><h2>5. Summary of CLO Changes</h2><table class="summary"><thead><tr><th>Category</th><th>Count</th></tr></thead><tbody>${summaryRows}</tbody></table><p>The comparison accounts for all ${counts.baseline_clos} Term 251 CLOs and all ${counts.current_clos} Term 261 CLOs. Merged relationships are counted once and are not duplicated as omissions or additions.</p></section>
   <section><h2>6. Detailed CLO Comparison by Course</h2>${courseSections}</section>
   <section><h2>7. Courses with No CLO Changes</h2><table class="scope"><thead><tr><th>Course Code</th><th>Course Title</th></tr></thead><tbody>${unchangedRows}</tbody></table></section>
   <section><h2>8. Impact on ABET Assessment</h2><p>The revised framework strengthens the alignment and traceability among CLOs, SOs, PIs, and assessment evidence. This supports systematic continuous improvement while keeping the detailed comparison focused on CLO wording and structure.</p></section>
-  <section><h2>9. Approval Status</h2><table class="approval"><tbody><tr><th>Program</th><td>B.Sc. Electrical Engineering</td></tr><tr><th>Curriculum Term</th><td>261</td></tr><tr><th>Prepared by</th><td>Curriculum Committee</td></tr><tr><th>Review Status</th><td>Proposed for Approval</td></tr><tr><th>College Curriculum Committee</th><td>____________________________</td></tr><tr><th>Approval Date</th><td>____________________________</td></tr><tr><th>Institutional Curriculum Committee, if required</th><td>____________________________</td></tr><tr><th>Approval Date</th><td>____________________________</td></tr></tbody></table></section>
+  <section class="approval-section"><h2>9. Approval Status</h2><table class="approval"><tbody><tr><th>Program</th><td>B.Sc. Electrical Engineering</td></tr><tr><th>Curriculum Term</th><td>261</td></tr><tr><th>Prepared by</th><td>Curriculum Committee</td></tr><tr><th>Review Status</th><td>Proposed for Approval</td></tr><tr><th>College Curriculum Committee</th><td></td></tr><tr><th>Approval Date</th><td></td></tr><tr><th>Institutional Curriculum Committee, if required</th><td></td></tr><tr><th>Approval Date</th><td></td></tr></tbody></table></section>
   <section><h2>10. Conclusion</h2><p>This report compares the Term 251 CLO baseline submitted to ABET with the proposed Term 261 CLO framework. The changes reflect the program's continuous-improvement and faculty-review process and strengthen CLO clarity, measurability, and alignment with ABET assessment. The Term 261 CLO set is presented for the required curriculum approval.</p></section>
   <p class="footer-note">Undergraduate Electrical Engineering Program - CLO Revision Report - Term 251 to Term 261</p>
 </main><script>${printScript}</script></body></html>`;
