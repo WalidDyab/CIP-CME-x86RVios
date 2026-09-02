@@ -3,7 +3,7 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-rNKC5uvFEVvnE972ZS1A/Gt0r9Lyh1dH3/vlqY1h4B8='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Teaching Strategies and Assessment Methods | Undergraduate EE</title>
@@ -19,9 +19,30 @@
     .exception-card ul { margin: 14px 0 0; padding-left: 21px; line-height: 1.6; }
     .exception-card li + li { margin-top: 5px; }
     .page-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .assessment-plan { border-top: 4px solid var(--cyan); }
+    .assessment-toolbar { display: flex; align-items: end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+    .assessment-toolbar label { font-weight: 700; }
+    .assessment-toolbar select { display: block; min-width: 230px; margin-top: 5px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 5px; background: #162235; color: var(--text); }
+    .term-summary { padding: 16px; border-left: 4px solid var(--orange); background: var(--panel); border-radius: 4px; }
+    .term-summary h3 { margin: 0 0 5px; }
+    .status-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+    .status { display: inline-flex; gap: 6px; align-items: center; padding: 5px 9px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+    .status-a { color: #174c28; background: #dff2e4; border: 1px solid #8dc89b; }
+    .status-ec, .status-c { color: #694015; background: #fff0dc; border: 1px solid #e4bd88; }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(4, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+    .roadmap-year { padding: 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+    .roadmap-year h3 { margin: 0 0 10px; color: var(--cyan); }
+    .roadmap-term + .roadmap-term { margin-top: 12px; padding-top: 12px; border-top: 1px solid #e2e6eb; }
+    .roadmap-term strong { display: block; }
+    .assessment-meta { margin-top: 14px; }
+    .assessment-meta .card { padding: 14px; }
+    .assessment-meta .stat { font-size: 22px; }
+    .assessment-courses { margin-top: 16px; }
+    .assessment-error { color: #8b1e1e; padding: 12px; background: #fff1f1; border: 1px solid #e5b5b5; }
     @media (max-width: 700px) {
       .hero { padding: 22px; }
       .reference-section { padding: 20px; }
+      .roadmap-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -36,6 +57,12 @@
         <a class="btn primary" href="index.html">Undergraduate EE Home</a>
         <a class="btn" href="course-dashboard.html">Course Dashboard</a>
       </div>
+    </section>
+
+    <section class="section reference-section assessment-plan" aria-labelledby="assessmentPlanHeading">
+      <h2 id="assessmentPlanHeading">Program Assessment Plan</h2>
+      <p class="muted">Assessment roadmap, active Student Outcomes, and officially selected assessment courses.</p>
+      <div id="assessmentPlan"><p class="muted">Loading assessment plan...</p></div>
     </section>
 
     <section class="section reference-section">
@@ -133,5 +160,37 @@
     </section>
   </main>
   <div id="footer-placeholder"></div>
+  <script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const root = byId('assessmentPlan');
+    try {
+      const [plan, curriculum] = await Promise.all([
+        portal.loadJSON('../data/ee-assessment.json'),
+        portal.loadJSON('../data/ee_curriculum.json')
+      ]);
+      const terms = plan.roadmap.flatMap(year => year.semesters.map(semester => ({...semester, academic_year: year.academic_year})));
+      const courseTitles = new Map((curriculum.curriculum?.courses || []).map(course => [course.course_code.replace(/\s+/g, '').toUpperCase(), course.course_title]));
+      const statusPill = (so, status) => `<span class="status status-${status.toLowerCase().replace('/', '')}">${portal.esc(so)} · ${portal.esc(status)}</span>`;
+      const renderTerm = term => {
+        const activeSos = Object.entries(term.statuses).filter(([, status]) => status === 'A').map(([so]) => so);
+        const selected = new Map();
+        activeSos.forEach(so => (plan.so_course_selection[so] || []).forEach(code => {
+          if (!selected.has(code)) selected.set(code, []);
+          selected.get(code).push(so);
+        }));
+        const rows = [...selected].map(([code, sos]) => `<tr><td class="code">${portal.esc(code)}</td><td>${portal.esc(courseTitles.get(code.replace(/\s+/g, '').toUpperCase()) || 'Title not available')}</td><td>${sos.map(so => portal.badge(so)).join('')}</td></tr>`).join('');
+        byId('activeTermSummary').innerHTML = `<h3>${portal.esc(term.academic_year)} · ${portal.esc(term.term)}</h3><div class="muted">SOs Under Assessment</div><div class="status-list">${activeSos.map(so => statusPill(so, 'A')).join('') || '<span class="muted">No SOs are in active assessment.</span>'}</div>`;
+        byId('assessmentCoursesBody').innerHTML = rows || '<tr><td colspan="3" class="muted">No courses are selected for active assessment in this term.</td></tr>';
+      };
+      root.innerHTML = `<div class="assessment-toolbar"><label for="assessmentTerm">Assessment semester<select id="assessmentTerm">${terms.map(term => `<option value="${portal.esc(term.term)}"${term.term === plan.active_term ? ' selected' : ''}>${portal.esc(term.academic_year)} · ${portal.esc(term.term)}</option>`).join('')}</select></label><span class="muted">A = Assess · E = Evaluate · C = Change</span></div><div id="activeTermSummary" class="term-summary"></div><div class="assessment-courses"><h3>Courses Under Assessment</h3><div class="table-wrap"><table><thead><tr><th>Course</th><th>Course Title</th><th>SO(s) Under Assessment</th></tr></thead><tbody id="assessmentCoursesBody"></tbody></table></div></div><h3 style="margin-top:22px">Assessment Roadmap</h3><div class="roadmap-grid">${plan.roadmap.map(year => `<article class="roadmap-year"><h3>AY ${portal.esc(year.academic_year)}</h3>${year.semesters.map(semester => `<div class="roadmap-term"><strong>${portal.esc(semester.term)}</strong><div class="status-list">${Object.entries(semester.statuses).map(([so,status]) => statusPill(so,status)).join('')}</div></div>`).join('')}</article>`).join('')}</div><div class="grid three assessment-meta"><article class="card"><div class="stat">${portal.esc(plan.targets.direct_assessment_percent)}%</div><div class="label">Direct target</div></article><article class="card"><div class="stat">${portal.esc(plan.targets.indirect_assessment_percent)}%</div><div class="label">Indirect target</div></article><article class="card"><div class="stat" style="font-size:17px">${portal.esc(plan.targets.indirect_assessment_method)}</div><div class="label">Indirect method</div></article></div>`;
+      const select = byId('assessmentTerm');
+      select.addEventListener('change', () => renderTerm(terms.find(term => term.term === select.value)));
+      renderTerm(terms.find(term => term.term === plan.active_term) || terms[0]);
+    } catch (error) {
+      root.innerHTML = `<p class="assessment-error">The program assessment plan could not be loaded.</p>`;
+      console.error('Failed to load program assessment plan:', error);
+    }
+  });
+  </script>
 </body>
 </html>
