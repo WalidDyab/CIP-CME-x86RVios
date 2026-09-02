@@ -1,0 +1,4521 @@
+{
+  "schema_version": "1.0",
+  "comparison": "Term 251 ABET Submission → Term 261 Proposed Curriculum",
+  "baseline_source": {
+    "dataset": "data/clo_baseline_term_251_abet.json",
+    "pdf": "data/EE All syllabi 243.pdf",
+    "pdf_sha256": "0c5bdc5313f7f4a17060a920c7f976ad4af05b8743aa8287ef4b9af056f116ba",
+    "identifier_note": "The PDF does not print CLO identifiers. References are derived from NQF-domain order within each course."
+  },
+  "current_source": "data/ee_curriculum.json",
+  "scope": {
+    "included_courses": [
+      "EE 101",
+      "EE 201",
+      "EE 211",
+      "EE 221",
+      "EE 231",
+      "EE 202",
+      "EE 312",
+      "EE 322",
+      "EE 341",
+      "EE 332",
+      "EE 351",
+      "EE 305",
+      "EE 304",
+      "EE 403",
+      "EE 490",
+      "EE 492"
+    ],
+    "excluded_term_251_supporting_courses": [
+      "MATH 111",
+      "MATH 113",
+      "MATH 215",
+      "MATH 225",
+      "MATH 223",
+      "PHY 105",
+      "PHY 205",
+      "CHM 101",
+      "STAT 101",
+      "ENG 301"
+    ],
+    "excluded_current_courses": [
+      {
+        "course_code": "EE 414",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 415",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 416",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 417",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 423",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 424",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 425",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 426",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 433",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 434",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 435",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 436",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 442",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 454",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 456",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      },
+      {
+        "course_code": "EE 499",
+        "reason": "No matching course specification in the Term 251 baseline package."
+      }
+    ]
+  },
+  "counts": {
+    "baseline_clos": 85,
+    "current_clos": 94,
+    "unchanged": 41,
+    "modified": 37,
+    "renumbered": 2,
+    "added": 12,
+    "omitted": 1,
+    "merge_cases": 2,
+    "merged_baseline_clos": 4,
+    "merged_current_clos": 2,
+    "split_cases": 0,
+    "split_baseline_clos": 0,
+    "split_current_clos": 0,
+    "ambiguous": 0
+  },
+  "accounting": {
+    "baseline_accounted": 85,
+    "current_accounted": 94
+  },
+  "courses_with_changes": [
+    "EE 201",
+    "EE 211",
+    "EE 231",
+    "EE 202",
+    "EE 322",
+    "EE 341",
+    "EE 332",
+    "EE 304",
+    "EE 403",
+    "EE 490",
+    "EE 492"
+  ],
+  "courses_without_clo_changes": [
+    "EE 101",
+    "EE 221",
+    "EE 312",
+    "EE 351",
+    "EE 305"
+  ],
+  "course_summaries": [
+    {
+      "course_code": "EE 101",
+      "course_title": "Computer Programming for Engineering",
+      "baseline_clos": 4,
+      "current_clos": 4,
+      "change_types": []
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "baseline_clos": 5,
+      "current_clos": 6,
+      "change_types": [
+        "modified",
+        "added"
+      ]
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "baseline_clos": 4,
+      "current_clos": 5,
+      "change_types": [
+        "modified",
+        "omitted",
+        "added"
+      ]
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "baseline_clos": 7,
+      "current_clos": 7,
+      "change_types": []
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "baseline_clos": 6,
+      "current_clos": 6,
+      "change_types": [
+        "modified"
+      ]
+    },
+    {
+      "course_code": "EE 202",
+      "course_title": "Circuit Analysis",
+      "baseline_clos": 5,
+      "current_clos": 5,
+      "change_types": [
+        "merged",
+        "added"
+      ]
+    },
+    {
+      "course_code": "EE 312",
+      "course_title": "Electronic Engineering",
+      "baseline_clos": 4,
+      "current_clos": 4,
+      "change_types": []
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "baseline_clos": 5,
+      "current_clos": 6,
+      "change_types": [
+        "modified",
+        "added"
+      ]
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "baseline_clos": 4,
+      "current_clos": 6,
+      "change_types": [
+        "modified",
+        "added"
+      ]
+    },
+    {
+      "course_code": "EE 332",
+      "course_title": "Control Systems",
+      "baseline_clos": 6,
+      "current_clos": 5,
+      "change_types": [
+        "merged",
+        "renumbered"
+      ]
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "baseline_clos": 6,
+      "current_clos": 6,
+      "change_types": []
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "baseline_clos": 6,
+      "current_clos": 6,
+      "change_types": []
+    },
+    {
+      "course_code": "EE 304",
+      "course_title": "Electrical Machines",
+      "baseline_clos": 5,
+      "current_clos": 5,
+      "change_types": [
+        "modified"
+      ]
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "baseline_clos": 5,
+      "current_clos": 7,
+      "change_types": [
+        "modified",
+        "added"
+      ]
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "baseline_clos": 7,
+      "current_clos": 9,
+      "change_types": [
+        "modified",
+        "added"
+      ]
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "baseline_clos": 6,
+      "current_clos": 7,
+      "change_types": [
+        "modified",
+        "added"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "course_code": "EE 101",
+      "course_title": "Computer Programming for Engineering",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Define fundamental concepts of programming along with problem- solving techniques and analytical thinking.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 22,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Define fundamental concepts of programming along with problem-solving techniques and analytical thinking.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Simulation/Computational Assignments",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Define fundamental concepts of programming along with problem-solving techniques and analytical thinking."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 101",
+      "course_title": "Computer Programming for Engineering",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain the various logic using various operators and expressions.",
+          "source_so": "3",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 22,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Explain the various logic using various operators and expressions.",
+          "mapped_sos": [
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32",
+            "PI33"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Oral Technical Presentation",
+            "Homework and Classwork Assignments",
+            "Design Project Assignment",
+            "Prototype/System Demonstration"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Explain the various logic using various operators and expressions."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 101",
+      "course_title": "Computer Programming for Engineering",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Write a programming code in Python.",
+          "source_so": "2",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 22,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Write a programming code in Python.",
+          "mapped_sos": [
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32",
+            "PI33"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Simulation and Computer-Based Learning"
+          ],
+          "assessment_methods": [
+            "Simulation/Computational Assignments",
+            "Oral Technical Presentation",
+            "Homework and Classwork Assignments",
+            "Design Project Assignment"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Write a programming code in Python."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 101",
+      "course_title": "Computer Programming for Engineering",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Examine program code using Python",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 22,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Examine program code using Python",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12"
+          ],
+          "teaching_strategy": [
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Simulation/Computational Assignments",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Examine program code using Python"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize the main concepts of electrical parameters and their interrelations.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits."
+        }
+      ],
+      "note": null,
+      "comment": "CLO expanded to cover electrical quantities, circuit elements, and basic AC signal relationships."
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze DC/AC electric circuits using Ohm`s law, Kirchhoff's circuit laws, and voltage/current divider rules.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems."
+        }
+      ],
+      "note": null,
+      "comment": "CLO refocused on DC circuit analysis using nodal, mesh, and network-theorem methods."
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze DC/AC electric circuits using different analysis techniques such as Mesh, Nodal, and Thevenin.",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.2",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Oral Technical Presentation",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts."
+        }
+      ],
+      "note": null,
+      "comment": "CLO refocused on AC phasor, impedance, power, and power-factor analysis."
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze sinusoidal signals, reactance, admittance, and power using phasor forms.",
+          "source_so": "6",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.3",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Investigate electric circuits through experiments and simulations",
+          "mapped_sos": [
+            "SO1",
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI13",
+            "PI62",
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Quizzes"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Investigate electric circuits through experiments and simulations"
+        }
+      ],
+      "note": null,
+      "comment": "CLO scope revised to emphasize experimental and simulation-based investigation."
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate DC/AC electric circuits using hardware boards and simulation in group activities.",
+          "source_so": "5",
+          "source_table_row": 14,
+          "baseline_clo_ref": "3.1",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Contribute to team tasks and objectives in electric circuits laboratory activities",
+          "mapped_sos": [
+            "SO5"
+          ],
+          "pi_codes": [
+            "PI51"
+          ],
+          "teaching_strategy": [
+            "Collaborative/Team-Based Learning",
+            "Laboratory Experimentation"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Teamwork/Peer Assessment",
+            "Design Project Assignment",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Contribute to team tasks and objectives in electric circuits laboratory activities"
+        }
+      ],
+      "note": null,
+      "comment": "Teamwork outcome clarified in the context of electric-circuits laboratory activities."
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 3.2,
+          "nqf_domain": "Values",
+          "clo_text": "Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions",
+          "mapped_sos": [
+            "SO4"
+          ],
+          "pi_codes": [
+            "PI41",
+            "PI42"
+          ],
+          "teaching_strategy": [
+            "Case-Based Learning and Technical Discussion",
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Quizzes",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "3.2",
+          "current_clo_text": "Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions"
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New ethical and professional responsibility CLO added to strengthen assessment coverage."
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate experimentally basic electronic circuits and their applications",
+          "source_so": "5",
+          "source_table_row": 12,
+          "baseline_clo_ref": "3.1",
+          "source_page": 26,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Perform laboratory experiments on electronic circuits and analyze the resulting data to verify theoretical concepts.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI62",
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Prototype/System Demonstration",
+            "Quizzes"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Perform laboratory experiments on electronic circuits and analyze the resulting data to verify theoretical concepts."
+        }
+      ],
+      "note": "Experimental work was retained with revised wording and classification.",
+      "comment": "Experimental work was retained with revised wording and classification."
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe the basic electronic circuits using diodes and transistors.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 26,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Solve fundamental electronic circuit problems involving diodes, BJTs, and operational amplifiers using principles of electronics and circuit theory.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Solve fundamental electronic circuit problems involving diodes, BJTs, and operational amplifiers using principles of electronics and circuit theory."
+        }
+      ],
+      "note": null,
+      "comment": "CLO revised from description to problem solving across diodes, BJTs, and operational amplifiers."
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the characterstics of different BJT configurations and biasing circuits.",
+          "source_so": "6",
+          "source_table_row": 5,
+          "baseline_clo_ref": "2.1",
+          "source_page": 26,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Design basic electronic circuits such as rectifiers, transistor amplifiers, and operational-amplifier applications to satisfy given performance requirements.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Interactive Lectures",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Simulation/Computational Assignments",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Design basic electronic circuits such as rectifiers, transistor amplifiers, and operational-amplifier applications to satisfy given performance requirements."
+        }
+      ],
+      "note": null,
+      "comment": "CLO revised to emphasize circuit design against specified performance requirements."
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "type": "omitted",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze operational amplifier characterstics and circuits for different applications.",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 26,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [],
+      "note": "Outcome content was incorporated into the revised CLO set.",
+      "comment": "Outcome content was incorporated into the revised CLO set."
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 1.2,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the operation and applications of semiconductor devices and amplifiers using appropriate technical language and circuit representations.",
+          "mapped_sos": [
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32",
+            "PI33"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Oral Technical Presentation",
+            "Homework and Classwork Assignments",
+            "Design Project Assignment",
+            "Prototype/System Demonstration"
+          ],
+          "current_clo_id": "1.2",
+          "current_clo_text": "Explain the operation and applications of semiconductor devices and amplifiers using appropriate technical language and circuit representations."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New technical-explanation CLO added for semiconductor devices and amplifiers."
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Collaborate effectively in laboratory activities to build, test, and troubleshoot electronic circuits.",
+          "mapped_sos": [
+            "SO5"
+          ],
+          "pi_codes": [
+            "PI51"
+          ],
+          "teaching_strategy": [
+            "Collaborative/Team-Based Learning",
+            "Laboratory Experimentation"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Prototype/System Demonstration",
+            "Teamwork/Peer Assessment",
+            "Design Project Assignment"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Collaborate effectively in laboratory activities to build, test, and troubleshoot electronic circuits."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New teamwork CLO added for laboratory building, testing, and troubleshooting."
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices.",
+          "mapped_sos": [
+            "SO1",
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI13",
+            "PI21"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Simulation and Computer-Based Learning",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Simulation/Computational Assignments",
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain different binary number systems and arithmetic.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Explain different binary number systems and arithmetic.",
+          "mapped_sos": [
+            "SO2",
+            "SO5"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI51"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Explain different binary number systems and arithmetic."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain Boolean expressions using Karnaugh Map.",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Explain Boolean expressions using Karnaugh Map.",
+          "mapped_sos": [
+            "SO2",
+            "SO5"
+          ],
+          "pi_codes": [
+            "PI23",
+            "PI51"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Explain Boolean expressions using Karnaugh Map."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze and design combinational logic circuit.",
+          "source_so": "2",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze and design combinational logic circuit.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI62",
+            "PI63"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Analyze and design combinational logic circuit."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers.",
+          "source_so": "2",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.4",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.4,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI62",
+            "PI63"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.4",
+          "current_clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects.",
+          "source_so": "5",
+          "source_table_row": 12,
+          "baseline_clo_ref": "3.1",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Collaborative/Team-Based Learning",
+            "Laboratory Experimentation"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Teamwork/Peer Assessment",
+            "Simulation/Computational Assignments",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects.",
+          "source_so": "4, 7",
+          "source_table_row": 14,
+          "baseline_clo_ref": "3.2",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.2,
+          "nqf_domain": "Values",
+          "clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Collaborative/Team-Based Learning",
+            "Laboratory Experimentation",
+            "Simulation and Computer-Based Learning"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Prototype/System Demonstration",
+            "Teamwork/Peer Assessment"
+          ],
+          "current_clo_id": "3.2",
+          "current_clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze continuous and discrete linear time-invariant (LTI) systems.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze continuous and discrete linear time-invariant (LTI) systems.",
+          "mapped_sos": [
+            "SO1",
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI13",
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Analyze continuous and discrete linear time-invariant (LTI) systems."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe different properties of continuous and discrete-time signals and systems.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Describe continuous- and discrete-time signals and systems using standard properties and classification criteria.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Describe continuous- and discrete-time signals and systems using standard properties and classification criteria."
+        }
+      ],
+      "note": null,
+      "comment": "Signal and system properties were clarified through standard classification criteria."
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize the sampling theory.",
+          "source_so": "1",
+          "source_table_row": 4,
+          "baseline_clo_ref": "1.2",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.2,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Describe sampling theory principles for converting continuous-time signals to discrete-time signals.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.2",
+          "current_clo_text": "Describe sampling theory principles for converting continuous-time signals to discrete-time signals."
+        }
+      ],
+      "note": null,
+      "comment": "Sampling outcome clarified to address continuous-to-discrete signal conversion."
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain Z- transform and its applications for LTI systems.",
+          "source_so": "3",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze LTI systems using Z-transform concepts to interpret results and draw engineering conclusions.",
+          "mapped_sos": [
+            "SO1",
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI13",
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Analyze LTI systems using Z-transform concepts to interpret results and draw engineering conclusions."
+        }
+      ],
+      "note": null,
+      "comment": "Z-transform outcome revised to emphasize analysis, interpretation, and engineering conclusions."
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain Continuous and Discrete-time Fourier Transform and its applications for LTI systems",
+          "source_so": "3",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Explain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results.",
+          "mapped_sos": [
+            "SO1",
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI13",
+            "PI63"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Explain Continuous- and Discrete-time Fourier Transform concepts and their applications for LTI systems by interpreting frequency-domain results."
+        }
+      ],
+      "note": null,
+      "comment": "Fourier-transform outcome clarified to include interpretation of frequency-domain results."
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Write MatLab code and sampling theory and develop discrete system.",
+          "source_so": "2",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.4",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.4,
+          "nqf_domain": "Skills",
+          "clo_text": "Write MATLAB code to implement sampling-based discrete-time systems and evaluate their performance using independently learned tools or functions.",
+          "mapped_sos": [
+            "SO6",
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI63",
+            "PI64",
+            "PI71"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Laboratory Experimentation",
+            "Simulation and Computer-Based Learning"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Prototype/System Demonstration",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.4",
+          "current_clo_text": "Write MATLAB code to implement sampling-based discrete-time systems and evaluate their performance using independently learned tools or functions."
+        }
+      ],
+      "note": null,
+      "comment": "MATLAB outcome expanded to include performance evaluation and independently learned tools."
+    },
+    {
+      "course_code": "EE 202",
+      "course_title": "Circuit Analysis",
+      "type": "merged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze frequency selective circuits",
+          "source_so": "6",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.3",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze three-phase networks and two-port networks.",
+          "source_so": "6",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.4",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze frequency selective circuits, three-phase and two-port networks.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Analyze frequency selective circuits, three-phase and two-port networks."
+        }
+      ],
+      "note": "Two overlapping skills CLOs were consolidated into one current CLO.",
+      "comment": "Two overlapping skills CLOs were consolidated into one current CLO."
+    },
+    {
+      "course_code": "EE 202",
+      "course_title": "Circuit Analysis",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize the application of the basic electric circuit components in different electrical applications.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Recognize the application of the basic electric circuit components in different electrical applications.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Recognize the application of the basic electric circuit components in different electrical applications."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 202",
+      "course_title": "Circuit Analysis",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze first-order and second-order transient reponse of electrical circuits.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze first-order and second-order transient reponse of electrical circuits.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Analyze first-order and second-order transient reponse of electrical circuits."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 202",
+      "course_title": "Circuit Analysis",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the Laplace transform in circuit analysis.",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.2",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the Laplace transform in circuit analysis.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Apply the Laplace transform in circuit analysis."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 202",
+      "course_title": "Circuit Analysis",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Acquire new circuit-analysis knowledge using appropriate learning strategies and apply it to solve circuit problems.",
+          "mapped_sos": [
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI71"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Homework and Classwork Assignments",
+            "Quizzes",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Acquire new circuit-analysis knowledge using appropriate learning strategies and apply it to solve circuit problems."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New independent-learning CLO added to strengthen circuit-analysis assessment coverage."
+    },
+    {
+      "course_code": "EE 312",
+      "course_title": "Electronic Engineering",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Identify the feature of various amplifier circuits, active filters, and oscillators.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 34,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Identify the feature of various amplifier circuits, active filters, and oscillators.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Identify the feature of various amplifier circuits, active filters, and oscillators."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 312",
+      "course_title": "Electronic Engineering",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the model of BJT amplifiers and their frequency response.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 34,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the model of BJT amplifiers and their frequency response.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Quizzes"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Analyze the model of BJT amplifiers and their frequency response."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 312",
+      "course_title": "Electronic Engineering",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the DC and AC model of various FET amplifiers.",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 34,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the DC and AC model of various FET amplifiers.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Quizzes"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Analyze the DC and AC model of various FET amplifiers."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 312",
+      "course_title": "Electronic Engineering",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Design CMOS circuit such as NAND Gates, Tranmsission Gates and memory elements",
+          "source_so": "2",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 34,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Design CMOS circuit such as NAND Gates, Tranmsission Gates and memory elements",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Interactive Lectures",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Simulation/Computational Assignments",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Design CMOS circuit such as NAND Gates, Tranmsission Gates and memory elements"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
+          "source_so": "1",
+          "source_table_row": 4,
+          "baseline_clo_ref": "1.2",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.2,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
+          "mapped_sos": [
+            "SO1",
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13",
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Homework and Classwork Assignments",
+            "Quizzes",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.2",
+          "current_clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe the types and operation of a typical microprocessors/microcontrollers.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses.",
+          "mapped_sos": [
+            "SO1",
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13",
+            "PI31",
+            "PI32",
+            "PI33"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Oral Technical Presentation",
+            "Homework and Classwork Assignments",
+            "Design Project Assignment",
+            "Prototype/System Demonstration"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Explain the functional organization and operation of microprocessor components including datapath, control unit, registers, ALU, and buses."
+        }
+      ],
+      "note": null,
+      "comment": "Microprocessor organization clarified through explicit datapath, control, register, ALU, and bus components."
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D & D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.",
+          "source_so": "3",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.1",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Design arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits.",
+          "mapped_sos": [
+            "SO2",
+            "SO4",
+            "SO5",
+            "SO6",
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24",
+            "PI41",
+            "PI42",
+            "PI51",
+            "PI52",
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64",
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Case-Based Learning and Technical Discussion",
+            "Laboratory Experimentation"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Design Project Assignment",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Design arithmetic, logic, and timing components such as ALUs, registers, counters, and clock/timing circuits."
+        }
+      ],
+      "note": null,
+      "comment": "CLO scope shifted toward design of processor datapath and timing components."
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures.",
+          "source_so": "2",
+          "source_table_row": 11,
+          "baseline_clo_ref": "2.2",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Design control units and sequential systems using finite state machines for system control applications.",
+          "mapped_sos": [
+            "SO2",
+            "SO4",
+            "SO5",
+            "SO6",
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24",
+            "PI41",
+            "PI42",
+            "PI51",
+            "PI52",
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64",
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Case-Based Learning and Technical Discussion",
+            "Laboratory Experimentation"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Design Project Assignment",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Design control units and sequential systems using finite state machines for system control applications."
+        }
+      ],
+      "note": null,
+      "comment": "CLO scope revised to emphasize control-unit and sequential-system design."
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to configure hardware and software microprocessor-based systems",
+          "source_so": "4, 7",
+          "source_table_row": 17,
+          "baseline_clo_ref": "3.1",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Implement and verify an integrated digital system combining datapath and control components on FPGA hardware.",
+          "mapped_sos": [
+            "SO2",
+            "SO5",
+            "SO6",
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24",
+            "PI52",
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64",
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Laboratory Experimentation",
+            "Design- and Project-Based Learning"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Design Project Assignment",
+            "Prototype/System Demonstration"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Implement and verify an integrated digital system combining datapath and control components on FPGA hardware."
+        }
+      ],
+      "note": null,
+      "comment": "Implementation outcome made more specific through integrated FPGA-based system verification."
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 1.3,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Model digital components of microprocessor-based systems using HDL at the RTL level.",
+          "mapped_sos": [
+            "SO1",
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13",
+            "PI21"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Simulation and Computer-Based Learning"
+          ],
+          "assessment_methods": [
+            "Simulation/Computational Assignments",
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "1.3",
+          "current_clo_text": "Model digital components of microprocessor-based systems using HDL at the RTL level."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New HDL and RTL modeling CLO added to strengthen digital-system assessment coverage."
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
+          "source_so": "2",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.3",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
+          "mapped_sos": [
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32"
+          ],
+          "teaching_strategy": [
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Explain the concept of electric field and magnetic field.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media."
+        }
+      ],
+      "note": null,
+      "comment": "Electromagnetic-field concepts expanded to include sources in free space and material media."
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze Maxwell’s equations to find the electric and magnetic field components in different media.",
+          "source_so": "6",
+          "source_table_row": 5,
+          "baseline_clo_ref": "2.1",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions."
+        }
+      ],
+      "note": null,
+      "comment": "Application of Maxwell’s equations clarified to include boundary-condition analysis."
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Develop an ability to apply Gauss’ law, Ampere’s Law, Biot-Savart law, Faraday’s law and Maxwell’s equations in the analysis of electromagnetic systems.",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity."
+        }
+      ],
+      "note": null,
+      "comment": "Technical scope refocused on analysis of key electric and magnetic field quantities."
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 2.4,
+          "nqf_domain": "Skills",
+          "clo_text": "Present an oral technical presentation on an electromagnetics application",
+          "mapped_sos": [
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI32",
+            "PI33"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Interactive Lectures",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Oral Technical Presentation",
+            "Homework and Classwork Assignments",
+            "Design Project Assignment",
+            "Prototype/System Demonstration"
+          ],
+          "current_clo_id": "2.4",
+          "current_clo_text": "Present an oral technical presentation on an electromagnetics application"
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New oral technical communication CLO added for an electromagnetics application."
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Acquire new knowledge on an electromagnetics application using appropriate learning strategies.",
+          "mapped_sos": [
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI71"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Interactive Lectures",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Homework and Classwork Assignments",
+            "Simulation/Computational Assignments",
+            "Design Project Assignment",
+            "Oral Technical Presentation"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Acquire new knowledge on an electromagnetics application using appropriate learning strategies."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New independent-learning CLO added for an electromagnetics application."
+    },
+    {
+      "course_code": "EE 332",
+      "course_title": "Control Systems",
+      "type": "merged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize feedback in control systems and stability concept",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Recognize feedback in control systems and stability concept",
+          "source_so": "2",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.2",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Recognize feedback in control systems and stability concept",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Recognize feedback in control systems and stability concept"
+        }
+      ],
+      "note": "The repeated feedback-and-stability outcome was consolidated into one CLO.",
+      "comment": "The repeated feedback-and-stability outcome was consolidated into one CLO."
+    },
+    {
+      "course_code": "EE 332",
+      "course_title": "Control Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the Laplace Transform in modelling the LTI control systems",
+          "source_so": "2",
+          "source_table_row": 5,
+          "baseline_clo_ref": "2.1",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the Laplace Transform in modelling the LTI control systems",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Simulation/Computational Assignments",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Apply the Laplace Transform in modelling the LTI control systems"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 332",
+      "course_title": "Control Systems",
+      "type": "renumbered",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate the beahaviour of LTI in time domain",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.3",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate the beahaviour of LTI in time domain",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Quizzes",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Evaluate the beahaviour of LTI in time domain"
+        }
+      ],
+      "note": "Learning outcome retained under a revised CLO number.",
+      "comment": "Learning outcome retained under a revised CLO number."
+    },
+    {
+      "course_code": "EE 332",
+      "course_title": "Control Systems",
+      "type": "renumbered",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Design a stable control system according to the required specification",
+          "source_so": null,
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.4",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Design a stable control system according to the required specification",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Interactive Lectures",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Simulation/Computational Assignments",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Design a stable control system according to the required specification"
+        }
+      ],
+      "note": "Learning outcome retained under a revised CLO number.",
+      "comment": "Learning outcome retained under a revised CLO number."
+    },
+    {
+      "course_code": "EE 332",
+      "course_title": "Control Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the concepts of stable and well-performed control systems",
+          "source_so": "7",
+          "source_table_row": 10,
+          "baseline_clo_ref": "3.1",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the concepts of stable and well-performed control systems",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Interactive Lectures",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Prototype/System Demonstration",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Demonstrate the concepts of stable and well-performed control systems"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize different analog modulation and demodulation techniques.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Recognize different analog modulation and demodulation techniques.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Recognize different analog modulation and demodulation techniques."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain the linear model of the distortionless channel.",
+          "source_so": "3",
+          "source_table_row": 5,
+          "baseline_clo_ref": "2.1",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Explain the linear model of the distortionless channel.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Simulation and Computer-Based Learning",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Simulation/Computational Assignments",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Explain the linear model of the distortionless channel."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
+          "source_so": "2",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.2",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Flipped Classroom",
+            "Simulation and Computer-Based Learning"
+          ],
+          "assessment_methods": [
+            "Simulation/Computational Assignments",
+            "Homework and Classwork Assignments",
+            "Oral Technical Presentation",
+            "Quizzes"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the impact of various channels on communication systems.",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the impact of various channels on communication systems.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Homework and Classwork Assignments",
+            "Oral Technical Presentation",
+            "Quizzes",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Analyze the impact of various channels on communication systems."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate the pulse modulation techniques.",
+          "source_so": "3",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.4",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.4,
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate the pulse modulation techniques.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Laboratory Experimentation",
+            "Interactive Lectures",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Homework and Classwork Assignments"
+          ],
+          "current_clo_id": "2.4",
+          "current_clo_text": "Demonstrate the pulse modulation techniques."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
+          "source_so": "5",
+          "source_table_row": 11,
+          "baseline_clo_ref": "3.1",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
+          "mapped_sos": [
+            "SO2",
+            "SO3",
+            "SO5",
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24",
+            "PI31",
+            "PI32",
+            "PI33",
+            "PI51",
+            "PI52",
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Laboratory Experimentation",
+            "Design- and Project-Based Learning"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Design Project Assignment",
+            "Oral Technical Presentation"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize the characteristics of various semiconductor devices and power converter configurations.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Recognize the characteristics of various semiconductor devices and power converter configurations.",
+          "mapped_sos": [
+            "SO1",
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13",
+            "PI21"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Recognize the characteristics of various semiconductor devices and power converter configurations."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of AC-DC converter.",
+          "source_so": "2",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of AC-DC converter.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Analyze the various configurations of AC-DC converter."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of DC-DC converter.",
+          "source_so": "2",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of DC-DC converter.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI24"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Analyze the various configurations of DC-DC converter."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of DC-AC converter.",
+          "source_so": "2",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of DC-AC converter.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI24"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Analyze the various configurations of DC-AC converter."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of AC-AC converter.",
+          "source_so": "2",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.4",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.4,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of AC-AC converter.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI24"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.4",
+          "current_clo_text": "Analyze the various configurations of AC-AC converter."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate various power electronics circuits, application, and analyze the waveform through simulation and experimental work",
+          "source_so": "4, 7",
+          "source_table_row": 11,
+          "baseline_clo_ref": "3.1",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate various power electronics circuits, application, and analyze the waveform through simulation and experimental work",
+          "mapped_sos": [
+            "SO3",
+            "SO4",
+            "SO5",
+            "SO6",
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32",
+            "PI33",
+            "PI41",
+            "PI42",
+            "PI51",
+            "PI52",
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64",
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Independent/Self-Directed Learning",
+            "Case-Based Learning and Technical Discussion"
+          ],
+          "assessment_methods": [
+            "Laboratory Practical Assessment",
+            "Laboratory Reports",
+            "Simulation/Computational Assignments",
+            "Prototype/System Demonstration",
+            "Oral Technical Presentation"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Demonstrate various power electronics circuits, application, and analyze the waveform through simulation and experimental work"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 304",
+      "course_title": "Electrical Machines",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Explain the concepts of electromechanical energy conversion systems",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the concepts of electromechanical energy conversion systems",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Explain the concepts of electromechanical energy conversion systems"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 304",
+      "course_title": "Electrical Machines",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe the construction, principle of operation, and characteristics of dc machines, ac machines and transformers",
+          "source_so": "1",
+          "source_table_row": 3,
+          "baseline_clo_ref": "1.2",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.2,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Describe the construction, principle of operation, and characteristics of dc machines, ac machines and transformers",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Prototype/System Demonstration",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "1.2",
+          "current_clo_text": "Describe the construction, principle of operation, and characteristics of dc machines, ac machines and transformers"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 304",
+      "course_title": "Electrical Machines",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of d.c. machines",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Design a DC machine and analyze its parameters.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Design a DC machine and analyze its parameters."
+        }
+      ],
+      "note": null,
+      "comment": "CLO revised to emphasize DC-machine design rather than selection and speed-control analysis."
+    },
+    {
+      "course_code": "EE 304",
+      "course_title": "Electrical Machines",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of a.c. machines",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.2",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Design an AC machine and analyze its parameters.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Design an AC machine and analyze its parameters."
+        }
+      ],
+      "note": null,
+      "comment": "CLO revised to emphasize AC-machine design rather than selection and speed-control analysis."
+    },
+    {
+      "course_code": "EE 304",
+      "course_title": "Electrical Machines",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Show the importance of sustainability in electrical machines and transformers",
+          "source_so": "4",
+          "source_table_row": 13,
+          "baseline_clo_ref": "3.1",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Acquire and apply new knowledge on electrical machines and transformers to engineering tasks.",
+          "mapped_sos": [
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Interactive Lectures",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Homework and Classwork Assignments",
+            "Simulation/Computational Assignments",
+            "Design Project Assignment",
+            "Oral Technical Presentation"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Acquire and apply new knowledge on electrical machines and transformers to engineering tasks."
+        }
+      ],
+      "note": null,
+      "comment": "CLO scope changed from sustainability awareness to acquisition and application of new knowledge."
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Explain the basic concepts, components, and principles of power systems",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Explain the basic concepts, components, and principles of power systems",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI12"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Explain the basic concepts, components, and principles of power systems"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe the different types of power generators and their characteristics",
+          "source_so": "1",
+          "source_table_row": 4,
+          "baseline_clo_ref": "1.2",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.2,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Apply transformer and transmission-line equivalent-circuit models to compute system quantities.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "1.2",
+          "current_clo_text": "Apply transformer and transmission-line equivalent-circuit models to compute system quantities."
+        }
+      ],
+      "note": null,
+      "comment": "CLO revised to focus on transformer and transmission-line modeling."
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyse both symmetrical and unsymmetrical conditions in power systems.",
+          "source_so": "2",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.1",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze balanced three-phase and transformer networks using per-phase equivalent circuits and per-unit representation",
+          "mapped_sos": [
+            "SO1",
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI12",
+            "PI21",
+            "PI22"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Analyze balanced three-phase and transformer networks using per-phase equivalent circuits and per-unit representation"
+        }
+      ],
+      "note": null,
+      "comment": "CLO revised to emphasize balanced three-phase, transformer, and per-unit analysis."
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the behavior of power systems under steady-state and transient conditions",
+          "source_so": "2",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.2",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Design a transmission-line configuration to meet specified line parameters and power-factor requirements.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22"
+          ],
+          "teaching_strategy": [
+            "Design- and Project-Based Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Design a transmission-line configuration to meet specified line parameters and power-factor requirements."
+        }
+      ],
+      "note": null,
+      "comment": "CLO revised to introduce transmission-line design requirements."
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
+          "source_so": "6",
+          "source_table_row": 11,
+          "baseline_clo_ref": "2.3",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate the steady-state performance of short, medium, and long transmission lines.",
+          "mapped_sos": [
+            "SO1",
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI12",
+            "PI21",
+            "PI22"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Case-Based Learning and Technical Discussion",
+            "Design- and Project-Based Learning"
+          ],
+          "assessment_methods": [
+            "Design Project Assignment",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Simulation/Computational Assignments",
+            "Quizzes"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Evaluate the steady-state performance of short, medium, and long transmission lines."
+        }
+      ],
+      "note": null,
+      "comment": "CLO revised to focus on steady-state transmission-line performance."
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate effective technical communication of power system analysis and results.",
+          "mapped_sos": [
+            "SO4"
+          ],
+          "pi_codes": [
+            "PI41",
+            "PI42"
+          ],
+          "teaching_strategy": [
+            "Technical Communication Activities",
+            "Case-Based Learning and Technical Discussion",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Prototype/System Demonstration",
+            "Homework and Classwork Assignments",
+            "Oral Technical Presentation",
+            "Major and Final Exams",
+            "Design Project Assignment"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Demonstrate effective technical communication of power system analysis and results."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New technical communication CLO added for power-system analysis and results."
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 3.2,
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to independently acquire and apply new knowledge related to power systems.",
+          "mapped_sos": [
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Independent/Self-Directed Learning",
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Prototype/System Demonstration",
+            "Homework and Classwork Assignments",
+            "Quizzes",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "3.2",
+          "current_clo_text": "Demonstrate the ability to independently acquire and apply new knowledge related to power systems."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New independent-learning CLO added for power systems."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Identify, gather and synthesize relevant information needed to define and solve an open-ended design problem.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Identify relevant technical information and engineering principles needed to define and solve an open-ended design problem.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Identify relevant technical information and engineering principles needed to define and solve an open-ended design problem."
+        }
+      ],
+      "note": null,
+      "comment": "Information-identification outcome streamlined around technical information and engineering principles."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the engineering design process to define, formulate and solve a conceptual design problem considering human factors, safety, environmental, economic, and societal constraints.",
+          "source_so": "2",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI22",
+            "PI23",
+            "PI24"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Apply the engineering design process to produce solutions that meet specified needs with consideration of safety, environmental, economic, and societal constraints and relevant standards/codes."
+        }
+      ],
+      "note": null,
+      "comment": "Design outcome clarified to include specified needs, relevant constraints, and standards or codes."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Use lateral and critical thinking to generate creative alternative concepts and identify a preferred solution to a design problem.",
+          "source_so": "6",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.2",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Generate alternative concepts and select a preferred solution for a design problem.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI21",
+            "PI23"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Generate alternative concepts and select a preferred solution for a design problem."
+        }
+      ],
+      "note": null,
+      "comment": "Concept-generation outcome streamlined around alternatives and preferred-solution selection."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Use engineering tools and drawing skills to check and visually communicate design problem-solving.",
+          "source_so": "3",
+          "source_table_row": 11,
+          "baseline_clo_ref": "2.3",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Communicate design solutions visually using engineering tools and drawings.",
+          "mapped_sos": [
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Communicate design solutions visually using engineering tools and drawings."
+        }
+      ],
+      "note": null,
+      "comment": "Visual communication outcome clarified through engineering tools and drawings."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Communicate effectively and define engineering design problems and keep a well build log file and keep a journal of ideas and activities associated with the design project.",
+          "source_so": "3",
+          "source_table_row": 13,
+          "baseline_clo_ref": "2.4",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.4,
+          "nqf_domain": "Skills",
+          "clo_text": "Communicate design solutions using written, visual, and oral technical methods.",
+          "mapped_sos": [
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32",
+            "PI33"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "2.4",
+          "current_clo_text": "Communicate design solutions using written, visual, and oral technical methods."
+        }
+      ],
+      "note": null,
+      "comment": "Communication outcome clarified to emphasize written, visual, and oral technical communication."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Recognize the engineering profession and the importance of ethical and legal factors in professional duties",
+          "source_so": "4",
+          "source_table_row": 17,
+          "baseline_clo_ref": "3.1",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Evaluate ethical and legal responsibilities and their impact on engineering decisions.",
+          "mapped_sos": [
+            "SO4"
+          ],
+          "pi_codes": [
+            "PI41",
+            "PI42"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Evaluate ethical and legal responsibilities and their impact on engineering decisions."
+        }
+      ],
+      "note": null,
+      "comment": "Ethical and legal responsibility clarified in the context of engineering decisions."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Establish requirements, scopes, plan tasks, and meet objectives through effective teamwork.",
+          "source_so": "5",
+          "source_table_row": 19,
+          "baseline_clo_ref": "3.2",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.2,
+          "nqf_domain": "Values",
+          "clo_text": "Collaborate to establish goals, plan tasks, and meet project objectives within a team.",
+          "mapped_sos": [
+            "SO5"
+          ],
+          "pi_codes": [
+            "PI51",
+            "PI52"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "3.2",
+          "current_clo_text": "Collaborate to establish goals, plan tasks, and meet project objectives within a team."
+        }
+      ],
+      "note": null,
+      "comment": "Teamwork outcome refined to emphasize shared goals, task planning, and project objectives."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 2.5,
+          "nqf_domain": "Skills",
+          "clo_text": "Validate design solutions through experimentation/testing, data collection, analysis, and engineering conclusions.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI61",
+            "PI62",
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "2.5",
+          "current_clo_text": "Validate design solutions through experimentation/testing, data collection, analysis, and engineering conclusions."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New design-validation CLO added for testing, data analysis, and engineering conclusions."
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 3.3,
+          "nqf_domain": "Values",
+          "clo_text": "Acquire new knowledge, tools, standards, or technologies as needed to complete the design project.",
+          "mapped_sos": [
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Project Studio",
+            "Laboratory Demonstrations",
+            "Oral Discussions",
+            "Team Meetings"
+          ],
+          "assessment_methods": [
+            "Written Reports (Proposal, Interim, and Final)",
+            "Oral Presentations",
+            "Weekly Progress Assessment"
+          ],
+          "current_clo_id": "3.3",
+          "current_clo_text": "Acquire new knowledge, tools, standards, or technologies as needed to complete the design project."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New independent-learning CLO added for project-specific knowledge, tools, standards, and technologies."
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Demonstrate a comprehensive understanding of their academic studies through general education and their areas of specializations.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.1,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Demonstrate a comprehensive understanding of their academic studies through general education and their areas of specializations.",
+          "mapped_sos": [
+            "SO1",
+            "SO7"
+          ],
+          "pi_codes": [
+            "PI13",
+            "PI71",
+            "PI72"
+          ],
+          "teaching_strategy": [
+            "Field Experience"
+          ],
+          "assessment_methods": [
+            "Employer Assessment",
+            "Final Report",
+            "Final Oral Presentation"
+          ],
+          "current_clo_id": "1.1",
+          "current_clo_text": "Demonstrate a comprehensive understanding of their academic studies through general education and their areas of specializations."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate effective communication skills to a range of audiences.",
+          "source_so": "3",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.1",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.1,
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate effective communication skills to a range of audiences.",
+          "mapped_sos": [
+            "SO3"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32",
+            "PI33"
+          ],
+          "teaching_strategy": [
+            "Field Experience"
+          ],
+          "assessment_methods": [
+            "Employer Assessment",
+            "Final Report",
+            "Final Oral Presentation"
+          ],
+          "current_clo_id": "2.1",
+          "current_clo_text": "Demonstrate effective communication skills to a range of audiences."
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "type": "unchanged",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to work as an individual and as a part of a multi- disciplinary team",
+          "source_so": "4, 5",
+          "source_table_row": 15,
+          "baseline_clo_ref": "3.1",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.1,
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to work as an individual and as a part of a multi-disciplinary team",
+          "mapped_sos": [],
+          "pi_codes": [],
+          "teaching_strategy": [
+            "Field Experience"
+          ],
+          "assessment_methods": [
+            "Employer Assessment",
+            "Final Report",
+            "Final Oral Presentation"
+          ],
+          "current_clo_id": "3.1",
+          "current_clo_text": "Demonstrate the ability to work as an individual and as a part of a multi-disciplinary team"
+        }
+      ],
+      "note": null,
+      "comment": "No wording change."
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Define and recognize complex electrical engineering problems encountered in industry, utilizing theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
+          "source_so": "1",
+          "source_table_row": 4,
+          "baseline_clo_ref": "1.2",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 1.2,
+          "nqf_domain": "Knowledge",
+          "clo_text": "Identify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI11",
+            "PI12",
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Field Experience"
+          ],
+          "assessment_methods": [
+            "Employer Assessment",
+            "Final Report",
+            "Final Oral Presentation"
+          ],
+          "current_clo_id": "1.2",
+          "current_clo_text": "Identify complex electrical engineering problems encountered in industry using theoretical knowledge acquired in academic coursework to propose innovative and effective solutions."
+        }
+      ],
+      "note": null,
+      "comment": "Wording refined to emphasize identification of complex engineering problems in industry."
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Examine advanced technical skills in electrical engineering, including design, analysis, and troubleshooting, to successfully complete assigned tasks and projects within cooperative work environments.",
+          "source_so": "2, 6",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.2",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.2,
+          "nqf_domain": "Skills",
+          "clo_text": "Apply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment.",
+          "mapped_sos": [
+            "SO1",
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI13",
+            "PI63",
+            "PI64"
+          ],
+          "teaching_strategy": [
+            "Field Experience"
+          ],
+          "assessment_methods": [
+            "Employer Assessment",
+            "Final Report",
+            "Final Oral Presentation"
+          ],
+          "current_clo_id": "2.2",
+          "current_clo_text": "Apply advanced technical electrical engineering skills in design, analysis, and troubleshooting to complete assigned tasks and projects in a cooperative work environment."
+        }
+      ],
+      "note": null,
+      "comment": "CLO refined to emphasize application of technical skills in a professional work environment."
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate professional and ethical responsibility",
+          "source_so": "5, 7",
+          "source_table_row": 17,
+          "baseline_clo_ref": "3.2",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 3.2,
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate professional and ethical responsibility in engineering practice and decision-making.",
+          "mapped_sos": [
+            "SO4"
+          ],
+          "pi_codes": [
+            "PI41",
+            "PI42"
+          ],
+          "teaching_strategy": [
+            "Field Experience"
+          ],
+          "assessment_methods": [
+            "Employer Assessment",
+            "Final Report",
+            "Final Oral Presentation"
+          ],
+          "current_clo_id": "3.2",
+          "current_clo_text": "Demonstrate professional and ethical responsibility in engineering practice and decision-making."
+        }
+      ],
+      "note": null,
+      "comment": "Professional and ethical responsibility clarified in engineering practice and decision-making."
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Collaborate effectively within multidisciplinary teams to plan tasks, meet objectives, and support a professional work environment.",
+          "mapped_sos": [
+            "SO5"
+          ],
+          "pi_codes": [
+            "PI51",
+            "PI52"
+          ],
+          "teaching_strategy": [
+            "Field Experience"
+          ],
+          "assessment_methods": [
+            "Employer Assessment",
+            "Final Report",
+            "Final Oral Presentation"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Collaborate effectively within multidisciplinary teams to plan tasks, meet objectives, and support a professional work environment."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New multidisciplinary teamwork CLO added to strengthen workplace assessment coverage."
+    }
+  ],
+  "ambiguous_cases": []
+}

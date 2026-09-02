@@ -1,0 +1,918 @@
+{
+  "schema_version": "1.0",
+  "baseline_term": "251",
+  "source_pdf": "data/EE All syllabi 243.pdf",
+  "source_pdf_sha256": "0c5bdc5313f7f4a17060a920c7f976ad4af05b8743aa8287ef4b9af056f116ba",
+  "source_pdf_pages": 53,
+  "identifier_note": "The PDF does not print CLO identifiers. References are derived from NQF-domain order within each course.",
+  "included_courses": [
+    "EE 101",
+    "EE 201",
+    "EE 211",
+    "EE 221",
+    "EE 231",
+    "EE 202",
+    "EE 312",
+    "EE 322",
+    "EE 341",
+    "EE 332",
+    "EE 351",
+    "EE 305",
+    "EE 304",
+    "EE 403",
+    "EE 490",
+    "EE 492"
+  ],
+  "excluded_source_courses": [
+    "MATH 111",
+    "MATH 113",
+    "MATH 215",
+    "MATH 225",
+    "MATH 223",
+    "PHY 105",
+    "PHY 205",
+    "CHM 101",
+    "STAT 101",
+    "ENG 301"
+  ],
+  "baseline_clo_count": 85,
+  "courses": [
+    {
+      "course_code": "EE 101",
+      "course_title": "Computer Programming for Engineering",
+      "source_page": 22,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Define fundamental concepts of programming along with problem- solving techniques and analytical thinking.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 22,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain the various logic using various operators and expressions.",
+          "source_so": "3",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 22,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Write a programming code in Python.",
+          "source_so": "2",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 22,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Examine program code using Python",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 22,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 201",
+      "course_title": "Introduction to Circuits",
+      "source_page": 24,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize the main concepts of electrical parameters and their interrelations.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze DC/AC electric circuits using Ohm`s law, Kirchhoff's circuit laws, and voltage/current divider rules.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze DC/AC electric circuits using different analysis techniques such as Mesh, Nodal, and Thevenin.",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.2",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze sinusoidal signals, reactance, admittance, and power using phasor forms.",
+          "source_so": "6",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.3",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate DC/AC electric circuits using hardware boards and simulation in group activities.",
+          "source_so": "5",
+          "source_table_row": 14,
+          "baseline_clo_ref": "3.1",
+          "source_page": 24,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 211",
+      "course_title": "Electronic Fundamentals",
+      "source_page": 26,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe the basic electronic circuits using diodes and transistors.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 26,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the characterstics of different BJT configurations and biasing circuits.",
+          "source_so": "6",
+          "source_table_row": 5,
+          "baseline_clo_ref": "2.1",
+          "source_page": 26,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze operational amplifier characterstics and circuits for different applications.",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 26,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate experimentally basic electronic circuits and their applications",
+          "source_so": "5",
+          "source_table_row": 12,
+          "baseline_clo_ref": "3.1",
+          "source_page": 26,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 221",
+      "course_title": "Logic Design",
+      "source_page": 28,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain different binary number systems and arithmetic.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain Boolean expressions using Karnaugh Map.",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze and design combinational logic circuit.",
+          "source_so": "2",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers.",
+          "source_so": "2",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.4",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects.",
+          "source_so": "5",
+          "source_table_row": 12,
+          "baseline_clo_ref": "3.1",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects.",
+          "source_so": "4, 7",
+          "source_table_row": 14,
+          "baseline_clo_ref": "3.2",
+          "source_page": 28,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 231",
+      "course_title": "Signals and Systems",
+      "source_page": 30,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe different properties of continuous and discrete-time signals and systems.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize the sampling theory.",
+          "source_so": "1",
+          "source_table_row": 4,
+          "baseline_clo_ref": "1.2",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze continuous and discrete linear time-invariant (LTI) systems.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain Z- transform and its applications for LTI systems.",
+          "source_so": "3",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain Continuous and Discrete-time Fourier Transform and its applications for LTI systems",
+          "source_so": "3",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Write MatLab code and sampling theory and develop discrete system.",
+          "source_so": "2",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.4",
+          "source_page": 30,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 202",
+      "course_title": "Circuit Analysis",
+      "source_page": 32,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize the application of the basic electric circuit components in different electrical applications.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze first-order and second-order transient reponse of electrical circuits.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the Laplace transform in circuit analysis.",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.2",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze frequency selective circuits",
+          "source_so": "6",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.3",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze three-phase networks and two-port networks.",
+          "source_so": "6",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.4",
+          "source_page": 32,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 312",
+      "course_title": "Electronic Engineering",
+      "source_page": 34,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Identify the feature of various amplifier circuits, active filters, and oscillators.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 34,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the model of BJT amplifiers and their frequency response.",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 34,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the DC and AC model of various FET amplifiers.",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 34,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Design CMOS circuit such as NAND Gates, Tranmsission Gates and memory elements",
+          "source_so": "2",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 34,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 322",
+      "course_title": "Microprocessors Design",
+      "source_page": 36,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe the types and operation of a typical microprocessors/microcontrollers.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize various memory technologies, cache memories, addressing modes, memory mapping, and composing memories.",
+          "source_so": "1",
+          "source_table_row": 4,
+          "baseline_clo_ref": "1.2",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain the operations of peripherals typically used for interfacing microprocessors, such as A/D & D/A converters, Timer, Counters, LCDs, UART, PWM controllers, regular and stepper motors, Real time clocks.",
+          "source_so": "3",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.1",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Illustrate microprocessor communication basics, hardware interfacing techniques, I/O addressing, interrupts, direct memory access, arbitration, and multi-level bus architectures.",
+          "source_so": "2",
+          "source_table_row": 11,
+          "baseline_clo_ref": "2.2",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to configure hardware and software microprocessor-based systems",
+          "source_so": "4, 7",
+          "source_table_row": 17,
+          "baseline_clo_ref": "3.1",
+          "source_page": 36,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "source_page": 38,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Explain the concept of electric field and magnetic field.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze Maxwell’s equations to find the electric and magnetic field components in different media.",
+          "source_so": "6",
+          "source_table_row": 5,
+          "baseline_clo_ref": "2.1",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Develop an ability to apply Gauss’ law, Ampere’s Law, Biot-Savart law, Faraday’s law and Maxwell’s equations in the analysis of electromagnetic systems.",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
+          "source_so": "2",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.3",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 332",
+      "course_title": "Control Systems",
+      "source_page": 40,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize feedback in control systems and stability concept",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the Laplace Transform in modelling the LTI control systems",
+          "source_so": "2",
+          "source_table_row": 5,
+          "baseline_clo_ref": "2.1",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Recognize feedback in control systems and stability concept",
+          "source_so": "2",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.2",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate the beahaviour of LTI in time domain",
+          "source_so": "6",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.3",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Design a stable control system according to the required specification",
+          "source_so": null,
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.4",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the concepts of stable and well-performed control systems",
+          "source_so": "7",
+          "source_table_row": 10,
+          "baseline_clo_ref": "3.1",
+          "source_page": 40,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "source_page": 42,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize different analog modulation and demodulation techniques.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Explain the linear model of the distortionless channel.",
+          "source_so": "3",
+          "source_table_row": 5,
+          "baseline_clo_ref": "2.1",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
+          "source_so": "2",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.2",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the impact of various channels on communication systems.",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate the pulse modulation techniques.",
+          "source_so": "3",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.4",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
+          "source_so": "5",
+          "source_table_row": 11,
+          "baseline_clo_ref": "3.1",
+          "source_page": 42,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 305",
+      "course_title": "Power Electronics",
+      "source_page": 44,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Recognize the characteristics of various semiconductor devices and power converter configurations.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of AC-DC converter.",
+          "source_so": "2",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of DC-DC converter.",
+          "source_so": "2",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.2",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of DC-AC converter.",
+          "source_so": "2",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.3",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the various configurations of AC-AC converter.",
+          "source_so": "2",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.4",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate various power electronics circuits, application, and analyze the waveform through simulation and experimental work",
+          "source_so": "4, 7",
+          "source_table_row": 11,
+          "baseline_clo_ref": "3.1",
+          "source_page": 44,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 304",
+      "course_title": "Electrical Machines",
+      "source_page": 46,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Explain the concepts of electromechanical energy conversion systems",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe the construction, principle of operation, and characteristics of dc machines, ac machines and transformers",
+          "source_so": "1",
+          "source_table_row": 3,
+          "baseline_clo_ref": "1.2",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of d.c. machines",
+          "source_so": "6",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the selection, methods of speed control, and methods of direction reversal of and applications of a.c. machines",
+          "source_so": "6",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.2",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Show the importance of sustainability in electrical machines and transformers",
+          "source_so": "4",
+          "source_table_row": 13,
+          "baseline_clo_ref": "3.1",
+          "source_page": 46,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 403",
+      "course_title": "Power Systems",
+      "source_page": 48,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Explain the basic concepts, components, and principles of power systems",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Describe the different types of power generators and their characteristics",
+          "source_so": "1",
+          "source_table_row": 4,
+          "baseline_clo_ref": "1.2",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyse both symmetrical and unsymmetrical conditions in power systems.",
+          "source_so": "2",
+          "source_table_row": 7,
+          "baseline_clo_ref": "2.1",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze the behavior of power systems under steady-state and transient conditions",
+          "source_so": "2",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.2",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate the per-unit system and draw the single-line diagram",
+          "source_so": "6",
+          "source_table_row": 11,
+          "baseline_clo_ref": "2.3",
+          "source_page": 48,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 490",
+      "course_title": "Senior Design Project",
+      "source_page": 50,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Identify, gather and synthesize relevant information needed to define and solve an open-ended design problem.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the engineering design process to define, formulate and solve a conceptual design problem considering human factors, safety, environmental, economic, and societal constraints.",
+          "source_so": "2",
+          "source_table_row": 6,
+          "baseline_clo_ref": "2.1",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Use lateral and critical thinking to generate creative alternative concepts and identify a preferred solution to a design problem.",
+          "source_so": "6",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.2",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Use engineering tools and drawing skills to check and visually communicate design problem-solving.",
+          "source_so": "3",
+          "source_table_row": 11,
+          "baseline_clo_ref": "2.3",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Communicate effectively and define engineering design problems and keep a well build log file and keep a journal of ideas and activities associated with the design project.",
+          "source_so": "3",
+          "source_table_row": 13,
+          "baseline_clo_ref": "2.4",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Recognize the engineering profession and the importance of ethical and legal factors in professional duties",
+          "source_so": "4",
+          "source_table_row": 17,
+          "baseline_clo_ref": "3.1",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Establish requirements, scopes, plan tasks, and meet objectives through effective teamwork.",
+          "source_so": "5",
+          "source_table_row": 19,
+          "baseline_clo_ref": "3.2",
+          "source_page": 50,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    },
+    {
+      "course_code": "EE 492",
+      "course_title": "Cooperative Training",
+      "source_page": 52,
+      "clos": [
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Demonstrate a comprehensive understanding of their academic studies through general education and their areas of specializations.",
+          "source_so": "1",
+          "source_table_row": 2,
+          "baseline_clo_ref": "1.1",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Knowledge & Understanding",
+          "clo_text": "Define and recognize complex electrical engineering problems encountered in industry, utilizing theoretical knowledge acquired in academic coursework to propose innovative and effective solutions.",
+          "source_so": "1",
+          "source_table_row": 4,
+          "baseline_clo_ref": "1.2",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate effective communication skills to a range of audiences.",
+          "source_so": "3",
+          "source_table_row": 8,
+          "baseline_clo_ref": "2.1",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Examine advanced technical skills in electrical engineering, including design, analysis, and troubleshooting, to successfully complete assigned tasks and projects within cooperative work environments.",
+          "source_so": "2, 6",
+          "source_table_row": 9,
+          "baseline_clo_ref": "2.2",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate the ability to work as an individual and as a part of a multi- disciplinary team",
+          "source_so": "4, 5",
+          "source_table_row": 15,
+          "baseline_clo_ref": "3.1",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        },
+        {
+          "nqf_domain": "Values",
+          "clo_text": "Demonstrate professional and ethical responsibility",
+          "source_so": "5, 7",
+          "source_table_row": 17,
+          "baseline_clo_ref": "3.2",
+          "source_page": 52,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ]
+    }
+  ]
+}
