@@ -707,13 +707,30 @@ select option:hover {
 
     .header-row {
         flex-direction: column;
-        gap: 16px
+        justify-content: flex-start;
+        gap: 12px
     }
 
-    .logo-left,
-    .logo-right {
+    .portal-header .logo-left {
         flex: initial;
+        min-width: 0;
+        width: 100%;
         justify-content: center
+    }
+
+    .portal-header .nav-center {
+        flex: none;
+        width: 100%;
+        gap: 8px
+    }
+
+    .portal-header .nav-center .btn {
+        min-height: 44px;
+        box-sizing: border-box
+    }
+
+    .portal-header .logo-right {
+        display: none
     }
 
     .ce-logo {

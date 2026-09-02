@@ -3,7 +3,7 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Gk/LrtWPMvmrirEPu7PfDLSt+mY4eHH5O3YMNbJA5+0=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-LRwCJoQCRy503EeHNbQesTtxiyKKIHzXya8znP1olFs=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>EE Program Overview | Curriculum Intelligence Portal</title>
@@ -120,7 +120,7 @@
         const search = byId('search');
         const trackFilter = byId('trackFilter');
         const normalizedCourses = courses.map(course => ({ raw: course, normalized: portal.normCourse(course) }));
-        const filterValues = ['All', ...new Set(normalizedCourses.flatMap(({ normalized }) => [normalized.track, normalized.re, normalized.level]).filter(Boolean))].sort();
+        const filterValues = ['All', ...new Set(normalizedCourses.flatMap(({ normalized }) => [normalized.track, normalized.re, normalized.academicLevel ? `Level ${normalized.academicLevel}` : '']).filter(Boolean))].sort();
         trackFilter.innerHTML = filterValues.map(value => `<option>${portal.esc(value)}</option>`).join('');
         const specialTypes = new Set(['Capstone', 'COOP']);
         const availableValue = value => {
@@ -143,7 +143,7 @@
           const selectedFilter = trackFilter.value;
           const visible = normalizedCourses.filter(({ normalized: course }) => {
             const text = [course.code, course.title, course.track, course.re, course.desc, JSON.stringify(course.clos)].join(' ').toLowerCase();
-            return (!query || text.includes(query)) && (selectedFilter === 'All' || course.track === selectedFilter || course.re === selectedFilter || course.level === selectedFilter);
+            return (!query || text.includes(query)) && (selectedFilter === 'All' || course.track === selectedFilter || course.re === selectedFilter || `Level ${course.academicLevel}` === selectedFilter);
           });
           const required = visible.filter(({ normalized: course }) => course.re === 'Required' && !specialTypes.has(course.track));
           const special = visible.filter(({ normalized: course }) => course.re === 'Required' && specialTypes.has(course.track));
