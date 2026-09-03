@@ -2172,17 +2172,16 @@
           {
             "clo_number": 1.1,
             "nqf_domain": "Knowledge",
-            "clo_text": "Recognize different analog modulation and demodulation techniques.",
+            "clo_text": "Explain modulation and demodulation techniques using time- and frequency-domain representations.",
             "mapped_sos": [
               "SO1"
             ],
             "pi_codes": [
-              "PI11",
-              "PI12",
-              "PI13"
+              "PI11"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
+              "Guided Problem Solving and Tutorials",
               "Interactive Lectures"
             ],
             "assessment_methods": [
@@ -2195,16 +2194,16 @@
           {
             "clo_number": 2.1,
             "nqf_domain": "Skills",
-            "clo_text": "Explain the linear model of the distortionless channel.",
+            "clo_text": "Formulate mathematical models for signal transmission through various channels.",
             "mapped_sos": [
               "SO1"
             ],
             "pi_codes": [
-              "PI13"
+              "PI12"
             ],
             "teaching_strategy": [
-              "Flipped Classroom",
               "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials",
               "Interactive Lectures"
             ],
             "assessment_methods": [
@@ -2217,13 +2216,11 @@
           {
             "clo_number": 2.2,
             "nqf_domain": "Skills",
-            "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
+            "clo_text": "Solve communication system problems from specified system parameters and requirements.",
             "mapped_sos": [
               "SO1"
             ],
             "pi_codes": [
-              "PI11",
-              "PI12",
               "PI13"
             ],
             "teaching_strategy": [
@@ -2241,7 +2238,7 @@
           {
             "clo_number": 2.3,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze the impact of various channels on communication systems.",
+            "clo_text": "Evaluate various channel effects on communication system performance using analytical and simulation methods.",
             "mapped_sos": [
               "SO1"
             ],
@@ -2251,8 +2248,10 @@
               "PI13"
             ],
             "teaching_strategy": [
+              "Simulation and Computer-Based Learning",
+              "Guided Problem Solving and Tutorials",
               "Technical Communication Activities",
-              "Guided Problem Solving and Tutorials"
+              "Interactive Lectures"
             ],
             "assessment_methods": [
               "Homework and Classwork Assignments",
@@ -2264,12 +2263,11 @@
           {
             "clo_number": 2.4,
             "nqf_domain": "Skills",
-            "clo_text": "Demonstrate the pulse modulation techniques.",
+            "clo_text": "Apply various modulation techniques and evaluate their characteristics using analytical, simulation, or laboratory methods.",
             "mapped_sos": [
               "SO6"
             ],
             "pi_codes": [
-              "PI61",
               "PI62",
               "PI63",
               "PI64"
@@ -2289,27 +2287,17 @@
           {
             "clo_number": 3.1,
             "nqf_domain": "Values",
-            "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
+            "clo_text": "Design communication systems through team-based laboratory experiments using software-defined radio.",
             "mapped_sos": [
               "SO2",
-              "SO3",
               "SO5",
               "SO6"
             ],
             "pi_codes": [
               "PI21",
-              "PI22",
-              "PI23",
-              "PI24",
-              "PI31",
-              "PI32",
-              "PI33",
               "PI51",
-              "PI52",
               "PI61",
-              "PI62",
-              "PI63",
-              "PI64"
+              "PI62"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -2322,6 +2310,32 @@
               "Simulation/Computational Assignments",
               "Design Project Assignment",
               "Oral Technical Presentation"
+            ]
+          },
+          {
+            "clo_number": 3.2,
+            "nqf_domain": "Values",
+            "clo_text": "Communicate the experimental results of communication systems as part of a team using appropriate techniques adapted to a range of audiences.",
+            "mapped_sos": [
+              "SO3",
+              "SO5"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32",
+              "PI33",
+              "PI51"
+            ],
+            "teaching_strategy": [
+              "Flipped Classroom",
+              "Design- and Project-Based Learning",
+              "Independent/Self-Directed Learning"
+            ],
+            "assessment_methods": [
+              "Oral Technical Presentation",
+              "Design Project Assignment",
+              "Prototype/System Demonstration",
+              "Laboratory Reports"
             ]
           }
         ],
@@ -2402,14 +2416,10 @@
           "PI12": "P",
           "PI13": "P",
           "PI21": "P",
-          "PI22": "P",
-          "PI23": "P",
-          "PI24": "P",
           "PI31": "P",
           "PI32": "P",
           "PI33": "P",
           "PI51": "P",
-          "PI52": "I",
           "PI61": "P",
           "PI62": "P",
           "PI63": "P",
