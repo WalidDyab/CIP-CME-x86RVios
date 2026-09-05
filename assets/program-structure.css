@@ -1,0 +1,551 @@
+/* Program Structure presentation, scoped to Program Overview only.
+   Reuses the portal palette, radii, shadows, and typography from portal.css. */
+
+.program-structure {
+  margin-top: 14px;
+}
+
+.program-structure > h2 {
+  margin: 0 0 6px;
+}
+
+.program-structure .ps-intro {
+  margin: 0 0 20px;
+  max-width: 950px;
+}
+
+/* Restrained per-category accents. Each accent is always paired with text,
+   never used as the only carrier of meaning. */
+.program-structure [data-category="university_requirements"] { --ps-accent: #79d7ff; }
+.program-structure [data-category="college_requirements"] { --ps-accent: #f2a23a; }
+.program-structure [data-category="capstone_project"] { --ps-accent: #7ee787; }
+.program-structure [data-category="program_core_requirements"] { --ps-accent: #ffd56e; }
+.program-structure [data-category="program_elective_requirements"] { --ps-accent: #b98cff; }
+.program-structure [data-category="field_experience"] { --ps-accent: #8fb3d9; }
+
+.program-structure .ps-block + .ps-block {
+  margin-top: 30px;
+}
+
+.program-structure .ps-block > h3 {
+  margin: 0 0 4px;
+  font-size: 19px;
+}
+
+.program-structure .ps-block-note {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------- A. At a Glance */
+
+.program-structure .ps-glance {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--cyan);
+  border-radius: 18px;
+  background: rgba(121, 215, 255, .06);
+}
+
+.program-structure .ps-total {
+  text-align: center;
+}
+
+.program-structure .ps-total-number {
+  font-size: clamp(56px, 8vw, 82px);
+  font-weight: 850;
+  line-height: 1;
+  color: var(--cyan);
+  letter-spacing: -.02em;
+}
+
+.program-structure .ps-total-label {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.program-structure .ps-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.program-structure .ps-fact {
+  flex: 1 1 92px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .05);
+  text-align: center;
+}
+
+.program-structure .ps-fact b {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.program-structure .ps-fact span {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* Segmented proportional bar */
+.program-structure .ps-bar {
+  display: flex;
+  width: 100%;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .04);
+}
+
+.program-structure .ps-bar-seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #101522;
+  background: var(--ps-accent);
+  border-right: 1px solid rgba(8, 17, 30, .35);
+  overflow: hidden;
+}
+
+.program-structure .ps-bar-seg:last-child {
+  border-right: 0;
+}
+
+.program-structure .ps-legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px 18px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-structure .ps-legend li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.program-structure .ps-swatch {
+  flex: 0 0 auto;
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  background: var(--ps-accent);
+  transform: translateY(1px);
+}
+
+.program-structure .ps-legend .ps-legend-name {
+  color: var(--text);
+}
+
+.program-structure .ps-legend b {
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------- B. Requirement Breakdown */
+
+.program-structure .ps-categories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.program-structure .ps-cat {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ps-accent);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .045);
+}
+
+.program-structure .ps-cat[open] {
+  grid-column: 1 / -1;
+  background: rgba(255, 255, 255, .06);
+}
+
+.program-structure .ps-cat > summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 13px;
+}
+
+.program-structure .ps-cat > summary::-webkit-details-marker {
+  display: none;
+}
+
+.program-structure .ps-cat > summary:hover {
+  background: rgba(255, 255, 255, .04);
+}
+
+.program-structure .ps-cat > summary:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: -2px;
+}
+
+.program-structure .ps-cat-name {
+  font-weight: 800;
+  font-size: 14.5px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.program-structure .ps-cat-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.program-structure .ps-cat-credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding-left: 8px;
+}
+
+.program-structure .ps-cat-credits b {
+  font-size: 26px;
+  font-weight: 850;
+  line-height: 1;
+  color: var(--ps-accent);
+}
+
+.program-structure .ps-cat-credits span {
+  font-size: 10.5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+
+.program-structure .ps-chevron {
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin: 6px auto 0;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform .15s ease;
+}
+
+.program-structure .ps-cat[open] .ps-chevron {
+  transform: rotate(-135deg);
+}
+
+.program-structure .ps-cat-body {
+  padding: 0 16px 16px;
+}
+
+/* Elective rule callout */
+.program-structure .ps-rule {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(185, 140, 255, .45);
+  border-radius: 12px;
+  background: rgba(185, 140, 255, .1);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.program-structure .ps-rule strong {
+  color: var(--text);
+}
+
+.program-structure .ps-menu-label {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+
+/* Course lists */
+.program-structure .ps-courses {
+  display: grid;
+  /* min() keeps the track from demanding more width than the container has,
+     which would otherwise overflow the expanded category on narrow tablets. */
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-structure .ps-course {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 4px 10px;
+  min-width: 0;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, .035);
+}
+
+.program-structure .ps-code {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #ffd56e;
+  white-space: nowrap;
+}
+
+a.ps-code {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 213, 110, .45);
+}
+
+a.ps-code:hover,
+a.ps-code:focus-visible {
+  color: #fff0c4;
+  text-decoration-color: currentColor;
+}
+
+a.ps-code:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.program-structure .ps-course-title {
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.program-structure .ps-cr {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.program-structure .ps-prereq {
+  grid-column: 2 / -1;
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.program-structure .ps-prereq b {
+  font-weight: 700;
+  color: rgba(255, 255, 255, .8);
+}
+
+/* ------------------------------------------------- C. Four-Year Study Plan */
+
+.program-structure .ps-plan {
+  display: grid;
+  gap: 12px;
+}
+
+.program-structure .ps-year {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .035);
+  overflow: hidden;
+}
+
+.program-structure .ps-year-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, .045);
+  border-bottom: 1px solid var(--line);
+}
+
+.program-structure .ps-year-head h4 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: .02em;
+}
+
+.program-structure .ps-year-total {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.program-structure .ps-year-total b {
+  color: var(--text);
+}
+
+.program-structure .ps-semesters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.program-structure .ps-sem {
+  min-width: 0;
+  padding: 14px 16px;
+}
+
+.program-structure .ps-sem + .ps-sem {
+  border-left: 1px solid var(--line);
+}
+
+.program-structure .ps-sem-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.program-structure .ps-sem-head h5 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.program-structure .ps-sem-total {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+
+.program-structure .ps-sem-courses {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-structure .ps-plan-course {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+  padding: 7px 10px 7px 12px;
+  border-left: 3px solid var(--ps-accent);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .03);
+}
+
+.program-structure .ps-plan-course.is-placeholder {
+  border-left-style: dashed;
+  background: rgba(185, 140, 255, .07);
+}
+
+.program-structure .ps-plan-title {
+  font-size: 12.5px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.program-structure .ps-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.program-structure .ps-plan-legend {
+  margin-bottom: 14px;
+}
+
+.program-structure .ps-plan-legend .ps-legend {
+  margin-top: 0;
+  grid-template-columns: repeat(6, minmax(0, auto));
+  justify-content: start;
+  gap: 6px 16px;
+}
+
+.program-structure .ps-plan-legend .ps-legend li {
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------------ Responsive */
+
+@media (max-width: 1100px) {
+  .program-structure .ps-categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .program-structure .ps-legend { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .program-structure .ps-plan-legend .ps-legend { grid-template-columns: repeat(3, minmax(0, auto)); }
+}
+
+@media (max-width: 820px) {
+  .program-structure .ps-glance {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 20px;
+  }
+  .program-structure .ps-semesters { grid-template-columns: minmax(0, 1fr); }
+  .program-structure .ps-sem + .ps-sem {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 700px) {
+  .program-structure .ps-categories { grid-template-columns: minmax(0, 1fr); }
+  .program-structure .ps-cat[open] { grid-column: auto; }
+  .program-structure .ps-legend { grid-template-columns: minmax(0, 1fr); }
+  .program-structure .ps-plan-legend .ps-legend { grid-template-columns: repeat(2, minmax(0, auto)); }
+  .program-structure .ps-courses { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 430px) {
+  .program-structure .ps-bar { height: 28px; }
+  .program-structure .ps-bar-seg { font-size: 11px; }
+  .program-structure .ps-course,
+  .program-structure .ps-plan-course { grid-template-columns: 66px minmax(0, 1fr) auto; gap: 3px 8px; }
+  .program-structure .ps-cat > summary { padding: 12px 13px; }
+  .program-structure .ps-cat-body { padding: 0 13px 13px; }
+  .program-structure .ps-sem { padding: 12px 13px; }
+  .program-structure .ps-fact { flex-basis: 78px; }
+}
