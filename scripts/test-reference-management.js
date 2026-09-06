@@ -45,4 +45,16 @@ assert(rows.some(row => row.courseCode === 'EE 312' && row.role === 'Additional 
 assert(rows.every(row => row.citation && row.courseCode && row.courseTitle));
 assert.strictEqual(reference.referenceSlots({textbooks:[],references:[]}).filter(slot => slot.current).length, 0);
 
-console.log(`Reference-management tests passed (${rows.length} current course-reference rows).`);
+// programReferenceGroups regroups exactly the PDF rows, one record per course.
+const groups = reference.programReferenceGroups(courses);
+const groupedCitations = groups.flatMap(group => [group.mainTextbook, ...group.additionalReferences].filter(Boolean));
+assert.strictEqual(groupedCitations.length, rows.length);
+assert.deepStrictEqual([...new Set(groups.map(group => group.courseCode))].length, groups.length);
+assert.deepStrictEqual(groups.map(group => group.courseCode), [...new Set(rows.map(row => row.courseCode))]);
+const grouped312 = groups.find(group => group.courseCode === 'EE 312');
+assert.strictEqual(grouped312.courseTitle, populated.course_title);
+assert.strictEqual(grouped312.mainTextbook, populated.textbooks[0]);
+assert.deepStrictEqual(grouped312.additionalReferences, populated.references.slice(0, 3));
+assert.deepStrictEqual(reference.programReferenceGroups([{course_code:'EE 000', course_title:'Empty', textbooks:[], references:[]}]), []);
+
+console.log(`Reference-management tests passed (${rows.length} current course-reference rows across ${groups.length} courses).`);
