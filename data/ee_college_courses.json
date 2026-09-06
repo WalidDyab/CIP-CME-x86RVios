@@ -1,0 +1,1755 @@
+{
+  "schema_version": "1.0",
+  "program": "Bachelor of Science in Electrical Engineering",
+  "record_type": "College Requirement course details from official NCAAA Course Specifications",
+  "generated_on": "2026-09-05",
+  "source": {
+    "program_structure_source": {
+      "filename": "EE New Brochure Term 252.docx",
+      "source_type": "Official program brochure",
+      "brochure_term": "Term 252",
+      "authoritative_for": [
+        "inclusion in the current EE program",
+        "requirement category",
+        "program credit hours",
+        "EE-program prerequisite structure"
+      ]
+    },
+    "course_specification_sources": {
+      "source_type": "NCAAA Course Specification",
+      "term_label": "Term 231",
+      "authoritative_for": [
+        "official course title/code as stated in the specification",
+        "specification version and last revision date",
+        "owning department, college and institution",
+        "course type stated in the specification",
+        "course description, objectives and CLOs",
+        "CLO domain headings and alignment codes exactly as documented",
+        "teaching strategies and assessment methods",
+        "contact hours, course content, student assessment activities",
+        "learning resources and quality-assurance information"
+      ]
+    },
+    "institution": "Prince Sultan University",
+    "scope_note": "This file contains detailed records for the nine College Requirement courses of the current EE program for which official Course Specifications are available. The EE brochure lists sixteen College Requirement courses in total; the remaining seven have no Course Specification available and are deliberately not given detailed records here. They remain listed in ee_program_structure.json.",
+    "extraction_notes": [
+      "Course codes are normalized to a machine-readable form without spaces (for example 'MATH111'). The brochure spelling is kept in 'display_code' and the specification spelling in 'specification_code_text'.",
+      "'credits' mirrors 'program_credit_hours' (the current EE brochure value) for convenience. 'specification_credit_hours' preserves the Course Specification's own credit-hours field verbatim, including cases where that field is blank, unclear, or expressed differently.",
+      "'prerequisites' / 'prerequisite_text' hold the current EE-program (brochure) prerequisite structure. 'specification_prerequisite_text' preserves the Course Specification's own wording, which may reference older or different requirements.",
+      "CLO codes, NCAAA domain headings, CLO wording and program-alignment codes are reproduced exactly as documented. Alignment codes in these specifications are ILO-style codes, not the EE program's ABET SO/PI framework; no SO, PI or I/P/M performance level has been inferred, translated or added.",
+      "CLO rows that are blank in the official specification are omitted rather than invented. Domains documented with no CLOs at all are recorded in 'source_notes'.",
+      "Multi-line source cells are split into array elements at the source's own paragraph and line breaks; each element is verbatim. A cell that is blank in the source is recorded as null.",
+      "Only formatting artifacts (repeated whitespace, paragraph and line breaks inside a single table cell) were normalized. No academic content was rewritten.",
+      "Filler rows in source tables ('…', '...', '---') are structural placeholders and are not represented as content rows."
+    ]
+  },
+  "courses": [
+    {
+      "course_code": "CHM101",
+      "display_code": "CHM 101",
+      "specification_code_text": "CHM101",
+      "course_title": "General Chemistry",
+      "specification_course_title": "General Chemistry",
+      "program_requirement_category": "College Requirements",
+      "credits": 4,
+      "program_credit_hours": 4,
+      "specification_credit_hours": "4 (3 theory + 1 Practical )",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": "College",
+        "requirement_marked": "Required",
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"]
+      },
+      "level_or_year": "(After PYP)",
+      "department": "Department of Math and Science",
+      "college": "College of Humanities and Science",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third Version",
+      "last_revision_date": "26/10/2023",
+      "specification_program_list": "Bachelor of Software Engineering, Engineering Management, Electrical Engineering, and Environmental Engineering.",
+      "description": "This course is designed to provide students with foundational knowledge in chemistry. The course content encompasses basic concepts, including units and measurements, the atomic theory, principles of stoichiometry, properties of aqueous solutions, behaviors of gasses, thermochemistry, quantum numbers, periodic trends, chemical bonding, VSEPR theory, and the classification of organic compounds.",
+      "prerequisites": [],
+      "prerequisite_text": "-",
+      "specification_prerequisite_text": "None",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": "None",
+      "objectives": [
+        "Establish a foundational understanding of general chemistry principles, including atomic structure, chemical bonding, stoichiometry, solutions, gases, thermochemistry, etc.",
+        "Enhance problem-solving skills and critical thinking.",
+        "Foster practical skills and teamwork in the laboratory setting.",
+        "Prepare students for effective engagement in advanced courses."
+      ],
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "45 Theory + 39 Lab.", "percentage": "100%" }
+        ],
+        "not_marked": ["E-learning", "Hybrid", "Distance learning"],
+        "not_marked_documented_value": "NA"
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": 39 },
+          { "activity": "Field", "contact_hours": 0 },
+          { "activity": "Tutorial", "contact_hours": 2 },
+          { "activity": "Others (specify)", "contact_hours": null, "documented_value": "None" }
+        ],
+        "documented_total": 86
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Code of CLOs aligned with program (ILOs)",
+        "note": "Alignment values are ILO numbers written without an 'ILO' prefix, exactly as documented."
+      },
+      "clos": [
+        {
+          "code": "1.1",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Recognize the basic concepts, theoretical fundamentals, and the related experimental applications in chemistry.",
+          "program_alignment_text": "1",
+          "teaching_strategies": ["Lectures", "Discussion", "Lab Experiments"],
+          "assessment_methods": ["Midterm exam", "Quizzes 1-3", "HW", "Final exam"]
+        },
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Predict the solution of the problem, apply suitable strategy to reach the solution, test the correctness of the solution, and interpret the results.",
+          "program_alignment_text": "1+2",
+          "teaching_strategies": ["Lectures", "Discussion", "Lab Experiments"],
+          "assessment_methods": ["Midterm exam", "Quiz 2", "HW 2", "Final exam"]
+        },
+        {
+          "code": "2.2",
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the principles of stoichiometry in different types of chemical reactions including reactions of aqueous solutions",
+          "program_alignment_text": "2",
+          "teaching_strategies": ["Lectures", "Discussion"],
+          "assessment_methods": ["Midterm exam", "Quiz 2", "HW 2", "Final exam"]
+        },
+        {
+          "code": "2.3",
+          "nqf_domain": "Skills",
+          "clo_text": "Realize the main principles of thermochemistry, gases, and chemical kinetics.",
+          "program_alignment_text": "2",
+          "teaching_strategies": ["Lectures", "Discussion"],
+          "assessment_methods": ["Quiz 3", "HW 3", "Final exam"]
+        },
+        {
+          "code": "2.4",
+          "nqf_domain": "Skills",
+          "clo_text": "Interpret periodicity concepts, distinguish the types of chemical bonding, and estimate the Lewis structure and molecular geometry of different chemical compounds.",
+          "program_alignment_text": "2",
+          "teaching_strategies": ["Lectures", "Discussion"],
+          "assessment_methods": ["Quiz 3", "HW 3", "Final exam"]
+        },
+        {
+          "code": "2.5",
+          "nqf_domain": "Skills",
+          "clo_text": "Differentiate between the major classes of organic compounds and understand the IUPAC nomenclature of simple organic compounds.",
+          "program_alignment_text": "2",
+          "teaching_strategies": ["Lectures", "Discussion"],
+          "assessment_methods": ["Final exam"]
+        },
+        {
+          "code": "2.6",
+          "nqf_domain": "Skills",
+          "clo_text": "Use different experimental techniques and work within a group in the laboratory, understand the objectives of the experiments, analyze data, and interpret results for deep understanding of the theoretical topics.",
+          "program_alignment_text": "2+4",
+          "teaching_strategies": ["Discussions", "Demonstrations", "Lab Experiments"],
+          "assessment_methods": ["- Lab. Quizzes.", "- Lab. Reports.", "- Final Lab. Exams (Theoretical + practical)"]
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "Chemical Foundations:\nChemistry an Overview\nScientific Method\nUnits of Measurements\nUncertainty in Measurements\nSignificant Figures and Calculations\nDensity\nClassification of Matter", "contact_hours": 4.5, "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "Atoms, Molecules, and Ions\nFundamental Chemical Laws\nModern View of the Structure of Atom\nAtomic Number, Mass Number, and Isotopes.\nMolecules and Ions\nThe Periodic Table\nNaming Simple Compounds", "contact_hours": 6, "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "Stoichiometry:\nAtomic Masses\nThe Mole\nMolar Masses\nChemical Equations\nLearning to Solve Problems\nPercent Composition of Compounds\nDetermining the Formula of Compounds\nChemical Equations\nBalancing Chemical Equations\nStoichiometric Calculations\nLimiting Reactant", "contact_hours": 6 },
+          { "topic_number": 4, "topic_title": "Types of Chemical Reactions and Solution Stoichiometry:\nWater the common solvent\nThe nature of aqueous solutions\nThe composition of solutions: Molarity\nTypes of Chemical Reactions\nPrecipitation Reactions\nDescribing Reactions in Solutions\nStoichiometry of Precipitation Reactions\nAcid Base Reactions\nRedox Reactions", "contact_hours": 6 },
+          { "topic_number": 5, "topic_title": "Gas\nProperties of Gases\nThe Ideal Gas Law\nGas Stoichiometry\nDalton's Law of Partial Pressures: Gas Mixtures", "contact_hours": 3 },
+          { "topic_number": 6, "topic_title": "Thermochemistry:\nThe Nature of Energy\nEnthalpy and Calorimetry\nHess's Law\nStandard Enthalpies of Formation", "contact_hours": 3 },
+          { "topic_number": 7, "topic_title": "Atomic Structure and Periodicity:\nQuantum Numbers\nOrbitals Shapes and Energies\nElectron Spin and Pauli Principle\nThe Aufbau Principle\nPeriodic Trends in Atomic Properties", "contact_hours": 3 },
+          { "topic_number": 8, "topic_title": "Bonding: General Concepts:\nTypes of Chemical Bonds\nElectronegativity\nPolarity\nDrawing Lewis Structures\nExceptions of Octet Rule\nResonance\nMolecular geometry and VSEPR Theory", "contact_hours": 7.5 },
+          { "topic_number": 9, "topic_title": "Organic and Biological Molecules:\nClasses of Organic Compounds.\nNomenclature of Organic Compounds.\nAddition and Substitution Reactions", "contact_hours": 6 }
+        ],
+        "documented_total_contact_hours": 45,
+        "computed_total_contact_hours": 45,
+        "totals_match": true
+      },
+      "assessment_activities": {
+        "sections": [
+          { "section": "THEORY (75%)", "section_percentage": "75%" },
+          { "section": "Laboratory (25%)", "section_percentage": "25%" }
+        ],
+        "activities": [
+          { "no": 1, "section": "THEORY (75%)", "activity": "Midterm exam", "timing": "9-10", "percentage": "20%", "no_documented": false },
+          { "no": 2, "section": "THEORY (75%)", "activity": "Quizzes", "timing": "During the semester", "percentage": "10%", "no_documented": false },
+          { "no": 3, "section": "THEORY (75%)", "activity": "HW and Participation", "timing": "During the semester", "percentage": "5%", "no_documented": false },
+          { "no": 4, "section": "THEORY (75%)", "activity": "Final Exam", "timing": "16", "percentage": "40%" },
+          { "no": 5, "section": "Laboratory (25%)", "activity": "Lab Reports", "timing": "Weekly", "percentage": "10%" },
+          { "no": 6, "section": "Laboratory (25%)", "activity": "Final Lab. Exams (Theo. + Pract.)", "timing": "14-15", "percentage": "15%" }
+        ],
+        "documented_total_percentage": null,
+        "computed_total_percentage": 100
+      },
+      "learning_resources": {
+        "essential_references": [
+          "The hard copy of: Chemistry 10th edition by Steven Zumdahl and Susan Zumdahl; ISBN-13: 978-1305957404, ISBN-10: 9781305957404",
+          "General Chemistry Laboratory Manual by: Ihab Shawish;",
+          "ISBN: 9786030121601"
+        ],
+        "supportive_references": ["https://www.youtube.com/channel/UCzrrJQA2Z78GA6VAfVxsgLQ"],
+        "electronic_materials": ["The electronic copy (code) of: Chemistry 10th edition by Steven Zumdahl and Susan Zumdahl; ISBN: 978 1337418171."],
+        "other_learning_materials": null,
+        "required_facilities_and_equipment": {
+          "facilities": ["Classrooms with capacity of 30 students and Laboratory with capacity of 18 students."],
+          "technology_equipment": ["Virtual classes and Labs through Hangouts meeting", "Data show", "Smart board", "MOODLE System (Modular Object-Oriented Dynamic Learning Environment)", "Cengage OWL platform"],
+          "other_equipment": [
+            "Laboratory instruments and tools such as: Analytical balance, hot plates, heating mantles, calorimeters, thermometers, stop watches, water baths, drying oven, PH meter, fume hood, ventilation system, shower, first aid box, lab goggles, etc.",
+            "Laboratory glassware such as: Beakers, Erlenmeyer flasks, graduated cylinders, volumetric flasks, burettes, pipettes, watch glasses, test tubes, glass rods, spatulas…. etc."
+          ]
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["Course instructors", "Students"], "assessment_methods": ["Course exit survey", "Evaluation Form"] },
+          { "area": "Effectiveness of Students assessment", "assessors": ["Instructors"], "assessment_methods": ["CLO-rubric assessment"] },
+          { "area": "Quality of learning resources", "assessors": ["Course instructors", "Students"], "assessment_methods": ["Course exit survey", "Evaluation Form"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["Course instructors", "Students"], "assessment_methods": ["Course exit survey", "Evaluation Form"] }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd meeting in academic year 2023/2024",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS CHM101 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third Version", "last_revision_date": "26/10/2023" },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "Specification credit-hours field reads '4 (3 theory + 1 Practical )'; the brochure states 4 credits. Both agree on the total of 4.",
+        "The CLO table contains no 'Values, autonomy, and responsibility' domain section at all; only 'Knowledge and understanding' and 'Skills' domains are present.",
+        "Alignment codes in this specification are bare ILO numbers ('1', '1+2', '2', '2+4') under the heading 'Code of CLOs aligned with program (ILOs)'. They are preserved verbatim and have not been mapped to ABET SOs or PIs.",
+        "The assessment table has no total row; the documented percentages sum to 100% (theory 75% + laboratory 25%)."
+      ]
+    },
+    {
+      "course_code": "MATH111",
+      "display_code": "MATH 111",
+      "specification_code_text": "MATH 111",
+      "course_title": "Calculus I",
+      "specification_course_title": "Calculus I",
+      "program_requirement_category": "College Requirements",
+      "credits": 3,
+      "program_credit_hours": 3,
+      "specification_credit_hours": "3",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": "Department",
+        "requirement_marked": "Required",
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"]
+      },
+      "level_or_year": "( 1st year)",
+      "department": "Department of Mathematics and Sciences",
+      "college": "College of Humanities and Sciences",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third version",
+      "last_revision_date": "26/10/2023",
+      "specification_program_list": "CS, IS, EM, CME",
+      "description": "This course introduces the students to various topics such as the concept of limits, continuity of functions, the derivative, and formulas of differentiation, differentials, mean value theorems, graph sketching and optimization.",
+      "prerequisites": [],
+      "prerequisite_text": "-",
+      "specification_prerequisite_text": "MATH 002",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": "None",
+      "objectives": {
+        "preamble": "By the end of the semester, each student is expected to:",
+        "statements": [
+          "Provide our students with the basic concept of calculus such as continuity and differentiability.",
+          "Verify independent critical thinking and problem solving",
+          "Explain the concept of the limit and derivatives and interrelate these concepts.",
+          "Establish connections among calculus topics and “real word” applications like the",
+          "related rates and optimization problems."
+        ]
+      },
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "60", "percentage": "100" }
+        ],
+        "not_marked": ["E-learning", "Hybrid", "Distance learning"],
+        "not_marked_documented_value": "NA for E-learning and Distance learning; Hybrid row left blank"
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": null, "documented_value": "NA" },
+          { "activity": "Field", "contact_hours": null, "documented_value": "NA" },
+          { "activity": "Tutorial", "contact_hours": 15 },
+          { "activity": "Others (specify)", "contact_hours": null, "documented_value": "NA" }
+        ],
+        "documented_total": null,
+        "computed_total": 60
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Code of CLOs aligned with program",
+        "note": "Alignment values are ILO codes, exactly as documented."
+      },
+      "clos": [
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate the limit of a function using appropriate techniques, including L'Hospital's Rule",
+          "program_alignment_text": "ILO3, ILO7",
+          "program_alignment_codes": ["ILO3", "ILO7"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "2.2",
+          "nqf_domain": "Skills",
+          "clo_text": "CLO2: Compute the derivative of functions by applying the rules of differentiation",
+          "program_alignment_text": "ILO3, ILO4",
+          "program_alignment_codes": ["ILO3", "ILO4"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "2.3",
+          "nqf_domain": "Skills",
+          "clo_text": "CLO3: Determine whether a function is continuous and/or differentiable.",
+          "program_alignment_text": "ILO7",
+          "program_alignment_codes": ["ILO7"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "2.4",
+          "nqf_domain": "Skills",
+          "clo_text": "CLO4: Find extreme values of functions.",
+          "program_alignment_text": "ILO6",
+          "program_alignment_codes": ["ILO6"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "2.5",
+          "nqf_domain": "Skills",
+          "clo_text": "CLO6: Solve various real word problems using Calculus concepts",
+          "program_alignment_text": "ILO7, ILO2",
+          "program_alignment_codes": ["ILO7", "ILO2"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "3.1",
+          "nqf_domain": "Values, autonomy, and responsibility",
+          "clo_text": "CLO5: Apply the concept of differentiation to sketch the graph of a function in a systematic way.",
+          "program_alignment_text": "ILO3",
+          "program_alignment_codes": ["ILO3"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "Four Ways to Represent a Function\nMathematical Models: A Catalog of Essential Functions", "contact_hours": 4, "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "New Functions from Old Functions", "contact_hours": 2, "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "Exponential Functions\nInverse Functions and Logarithms", "contact_hours": 4 },
+          { "topic_number": 4, "topic_title": "The Limit of a Function\nCalculating Limits using the Limit Laws", "contact_hours": 4 },
+          { "topic_number": 5, "topic_title": "Continuity\nLimits at Infinity; Horizontal Asymptotes", "contact_hours": 4 },
+          { "topic_number": 6, "topic_title": "Derivatives and Rate of Change\nThe Derivative as a Function", "contact_hours": 2 },
+          { "topic_number": 7, "topic_title": "Derivative of Polynomials and Exponential Functions\nThe Product and Quotient Rules", "contact_hours": 3 },
+          { "topic_number": 8, "topic_title": "Derivatives of Trigonometric Functions", "contact_hours": 4 },
+          { "topic_number": 9, "topic_title": "The Chain Rule\nImplicit Differentiation", "contact_hours": 4 },
+          { "topic_number": 10, "topic_title": "Derivatives of Logarithmic Functions", "contact_hours": 3 },
+          { "topic_number": 11, "topic_title": "Related Rates", "contact_hours": 6 },
+          { "topic_number": 12, "topic_title": "Hyperbolic Functions", "contact_hours": 2 },
+          { "topic_number": 13, "topic_title": "Maximum and Minimum Values\nThe Mean Value Theorem", "contact_hours": 4 },
+          { "topic_number": 14, "topic_title": "How Derivatives affect the Shape of a Graph", "contact_hours": 2 },
+          { "topic_number": 15, "topic_title": "Indeterminate Forms and L’Hopital’s Rule\nSummary of Curve Sketching", "contact_hours": 6 },
+          { "topic_number": 16, "topic_title": "Optimization", "contact_hours": 4 }
+        ],
+        "documented_total_contact_hours": null,
+        "computed_total_contact_hours": 58
+      },
+      "assessment_activities": {
+        "activities": [
+          { "no": 1, "activity": "First Major Exam", "timing": "7/8", "percentage": "20%", "no_documented": false },
+          { "no": 2, "activity": "Second Major Exam", "timing": "12/13", "percentage": "20%", "no_documented": false },
+          { "no": 3, "activity": "Quizzes", "timing": "Throughout the semester", "percentage": "10%", "no_documented": false },
+          { "no": 4, "activity": "Online Homework", "timing": "Throughout the semester", "percentage": "5%" },
+          { "no": 5, "activity": "Participation and Projects", "timing": "Throughout the term", "percentage": "5%" },
+          { "no": 6, "activity": "Final Exam", "timing": null, "percentage": "40%" }
+        ],
+        "documented_total_percentage": "100%",
+        "computed_total_percentage": 100
+      },
+      "learning_resources": {
+        "essential_references": ["Calculus: Early Transcendental Functions. 9th Edition by J. Stewart, D. Clegg, S. Watson"],
+        "supportive_references": [
+          "1. Calculus for Business, Economics, life Sciences, and the Social Sciences By: Raymond Barnett, Michael Ziegler and Karl Byleen; 11th Edition.",
+          "2. Brief Calculus for the Business, Social & life Sciences By: Bill Armstrong and Don Davis; 3rd Edition."
+        ],
+        "electronic_materials": [
+          "Access to university LMS. We use the LMS to communicate with t the students, Announcements and Grading are all conveyed to the students through this system.",
+          "WebAssign: www.webassign.net.",
+          "We use the WEBASSIGN to create online assignment and students utilize all helps and hints on how to solve problems from WebAssign"
+        ],
+        "other_learning_materials": ["None"],
+        "required_facilities_and_equipment": {
+          "facilities": ["Classrooms with capacity of 30 students", "Whiteboard and projector"],
+          "technology_equipment": ["2.1. Whiteboard", "2.2. Desktop computer and Smart board", "2.3. MOODLE System (Modular Object-Oriented Dynamic Learning Environment)"],
+          "other_equipment": ["None"]
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["● Program leaders", "● Peers Students"], "assessment_methods": ["● Class observation", "● Faculty Evaluation", "● Peer Review", "●Course Evaluation Survey"] },
+          { "area": "Effectiveness of Students assessment", "assessors": ["● Peers", "● Course coordinators", "● Co-signers"], "assessment_methods": ["● Course Report", "● Course Evaluation Survey"] },
+          { "area": "Quality of learning resources", "assessors": ["Peers", "Course coordinators", "Co-signers"], "assessment_methods": ["● CLO Assessment Analysis", "● Course Exit Survey", "● Course Evaluation Survey"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["all of them"], "assessment_methods": null }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd meeting in academic year 2023/2024",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS MATH111 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third version", "last_revision_date": "26/10/2023" },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "Prerequisite discrepancy: the Course Specification states 'MATH 002' while the current EE brochure shows no prerequisite ('-'). Both values are preserved; the brochure value governs the EE program.",
+        "The Course Specification lists the serving programs as 'CS, IS, EM, CME' and does not name the current EE program. The EE brochure explicitly includes MATH 111 as a College Requirement, so the course is in scope.",
+        "The 'Knowledge and understanding' domain is documented with blank CLO rows (1.1, 1.2, …); no CLOs were invented for it.",
+        "CLO numbering in the source is internally inconsistent: row 2.1 carries no 'CLO' label, rows 2.2–2.4 are labelled CLO2–CLO4, row 2.5 is labelled CLO6, and row 3.1 (Values domain) is labelled CLO5. The wording and codes are reproduced exactly as documented.",
+        "Teaching Strategies and Assessment Methods columns are blank for every CLO in this specification; they are recorded as null rather than inferred.",
+        "The Course Content table has no documented total; the listed topic hours sum to 58, while the teaching-mode and contact-hour tables indicate 60 hours (45 lectures + 15 tutorial).",
+        "Topic numbers for the first two content rows are blank in the source; sequential numbers are supplied for indexing and flagged with 'topic_number_documented': false.",
+        "Assessment activity numbers for the first three rows are blank in the source and are flagged the same way."
+      ]
+    },
+    {
+      "course_code": "MATH113",
+      "display_code": "MATH 113",
+      "specification_code_text": "MATH 113",
+      "course_title": "Calculus II",
+      "specification_course_title": "Calculus II",
+      "program_requirement_category": "College Requirements",
+      "credits": 3,
+      "program_credit_hours": 3,
+      "specification_credit_hours": "3",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": "Department",
+        "requirement_marked": "Required",
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"]
+      },
+      "level_or_year": "(2nd and 1st Year)",
+      "department": "Department of Mathematics and Sciences",
+      "college": "College of Humanities and Sciences",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third version",
+      "last_revision_date": "26/10/2023",
+      "specification_program_list": "CS, EM, CME",
+      "description": "This course introduces the students to various topics such as the concept of anti-derivatives, integrals (definite and indefinite), the fundamental theorem of calculus and applications of definite integrals to find area, volume, arc’s length and surface area. Furthermore, the course continues in covering the concepts of sequences, infinite series, and Power series.",
+      "prerequisites": ["MATH111"],
+      "prerequisite_text": "MATH 111",
+      "specification_prerequisite_text": "MATH 111: Calculus I",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": "None.",
+      "objectives": {
+        "preamble": null,
+        "statements": ["The objective of the course is to introduce the students to various topics such as the concept of anti-derivatives, integrals (definite and indefinite), the fundamental theorem of calculus, applications of definite integrals like (area, volume, arc’s length and surface area), the sequences, infinite series, and power series."]
+      },
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "60", "percentage": "100%" }
+        ],
+        "not_marked": ["E-learning", "Hybrid", "Distance learning"],
+        "not_marked_documented_value": null
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": null },
+          { "activity": "Field", "contact_hours": null },
+          { "activity": "Tutorial", "contact_hours": 15 },
+          { "activity": "Others (specify)", "contact_hours": null }
+        ],
+        "documented_total": 60,
+        "computed_total": 60
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Code of CLOs aligned with program",
+        "note": "Alignment values are ILO codes, exactly as documented."
+      },
+      "clos": [
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate the integration of basic functions such as polynomials, exponential function, logarithmic functions, etc. by using the definition of integration, antiderivative, and standard rules.",
+          "program_alignment_text": "ILO2, ILO5",
+          "program_alignment_codes": ["ILO2", "ILO5"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "2.2",
+          "nqf_domain": "Skills",
+          "clo_text": "Find the area of the plane region, arc length and surface of revolution by using integration techniques.",
+          "program_alignment_text": "ILO2, ILO5",
+          "program_alignment_codes": ["ILO2", "ILO5"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "2.3",
+          "nqf_domain": "Skills",
+          "clo_text": "Use the integration methods to find the volume of solid generated by rotating region about vertical axis or horizontal axis.",
+          "program_alignment_text": "ILO2, ILO5",
+          "program_alignment_codes": ["ILO2", "ILO5"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "2.4",
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate the integration of complicated functions by using methods of integration such as substitution, integration by parts, trigonometric substitutions, partial fractions, and trigonometric integrals.",
+          "program_alignment_text": "ILO2, ILO5",
+          "program_alignment_codes": ["ILO2", "ILO5"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        },
+        {
+          "code": "2.5",
+          "nqf_domain": "Skills",
+          "clo_text": "Determine the convergence and divergence of sequences and series",
+          "program_alignment_text": "ILO2, ILO5",
+          "program_alignment_codes": ["ILO2", "ILO5"],
+          "teaching_strategies": null,
+          "assessment_methods": null
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "Areas and Distances, The Definite Integral, The Fundamental Theorem of Calculus, Indefinite Integrals and the Net Change Theorem, The Substitution Rule", "contact_hours": 12, "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "Areas between Curves, Volumes, Volumes by Cylindrical Shells, Average Value of a Function", "contact_hours": 12, "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "Integration by Parts, Trigonometric Integrals, Trigonometric Substitution,\nIntegration of Rational Functions by Partial Fractions, Strategy for Integration, Improper Integrals.", "contact_hours": 12 },
+          { "topic_number": 4, "topic_title": "Arc Length, Area of a Surface of Revolution", "contact_hours": 4 },
+          { "topic_number": 5, "topic_title": "Sequences, Series, The Integral Test and Estimates of Sums, The Comparison Tests, Alternating Series, Absolute Convergence and the Ratio and Root Tests, Strategy for Testing Series, Power Series", "contact_hours": 20 }
+        ],
+        "documented_total_contact_hours": 60,
+        "computed_total_contact_hours": 60,
+        "totals_match": true
+      },
+      "assessment_activities": {
+        "activities": [
+          { "no": 1, "activity": "First Major Exam", "timing": "Week 6", "percentage": "20%", "no_documented": false },
+          { "no": 2, "activity": "Second Major Exam", "timing": "Week 12", "percentage": "20%", "no_documented": false },
+          { "no": 3, "activity": "Quizzes", "timing": "Throughout the semester", "percentage": "10%", "no_documented": false },
+          { "no": 4, "activity": "Online Homework", "timing": "Throughout the semester", "percentage": "5%" },
+          { "no": 5, "activity": "Participation and Projects", "timing": null, "percentage": "5%" },
+          { "no": 6, "activity": "Final Exam", "timing": null, "percentage": "40%" }
+        ],
+        "documented_total_percentage": "100%",
+        "computed_total_percentage": 100
+      },
+      "learning_resources": {
+        "essential_references": ["Calculus: Early Transcendental Functions. 9th edition By Stewart"],
+        "supportive_references": ["Calculus, Early Transcendental by Anton, Bivens and Davis 2010, John Wiley and Sons, Inc.2. Calculus: William L. Briggs, Lyle Cochran"],
+        "electronic_materials": [
+          "1. Access to university LMS. We use the LMS to communicate with the students. Announcements and Grading are all conveyed to the students through this system.",
+          "2. WWW.Webassign.com is used for online assignments 3. http://cims.nyu.edu/~kiryl/calculus.html"
+        ],
+        "other_learning_materials": ["Previous Exams.", "http://info.psu.edu.sa/psu/maths"],
+        "required_facilities_and_equipment": {
+          "facilities": ["Classrooms with capacity of 30 students", "Whiteboard, computer and projector"],
+          "technology_equipment": ["Projector"],
+          "other_equipment": ["None"]
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["Program leaders", "Peers", "Students"], "assessment_methods": ["Class observation", "Faculty Evaluation", "Peer Review", "Course Evaluation Survey"] },
+          { "area": "Effectiveness of Students’ assessment", "assessors": ["● Peers", "course coordinators", "● Co-signers"], "assessment_methods": ["Course Report", "Course Evaluation Survey"] },
+          { "area": "Quality of learning resources", "assessors": ["● Peer review", "● Rubrics", "● Actual Grades"], "assessment_methods": ["● CLO Assessment Analysis", "● Course Exit Survey", "Course Evaluation Survey"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["Good"], "assessment_methods": ["Good"] }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd meeting in academic year 2023/2024",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS MATH113 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third version", "last_revision_date": "26/10/2023" },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "The Course Specification lists the serving programs as 'CS, EM, CME' and does not name the current EE program. The EE brochure explicitly includes MATH 113 as a College Requirement, so the course is in scope.",
+        "The 'Knowledge and understanding' and 'Values, autonomy, and responsibility' domains are documented with blank CLO rows; no CLOs were invented for them.",
+        "Teaching Strategies and Assessment Methods columns are blank for every CLO in this specification; they are recorded as null rather than inferred.",
+        "The 'Quality of learning resources' and 'The extent to which CLOs have been achieved' rows of the quality table contain the placeholder word 'Good' rather than named assessors or methods; the text is preserved as documented."
+      ]
+    },
+    {
+      "course_code": "MATH215",
+      "display_code": "MATH 215",
+      "specification_code_text": "MATH 215",
+      "course_title": "Engineering Mathematics",
+      "specification_course_title": "Engineering Mathematics",
+      "program_requirement_category": "College Requirements",
+      "credits": 3,
+      "program_credit_hours": 3,
+      "specification_credit_hours": null,
+      "specification_credit_hours_documented_text": "( ……… )",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": "Department",
+        "requirement_marked": "Required",
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"]
+      },
+      "level_or_year": "(2nd and 3rd Year)",
+      "department": "Department of Mathematics and Sciences",
+      "college": "College of Humanities and Sciences",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third Version",
+      "last_revision_date": "26/10/2023",
+      "specification_program_list": "EE, CME",
+      "description": "limits and continuity for functions of several variables, partial derivatives, tangent planes and differentials, the chain rule and local extrema for functions of several variables, double integrals over rectangular and general regions, double integrals in polar coordinates, surface area, triple integrals in rectangular coordinates, triple integrals in cylindrical and spherical coordinates, 2-spaces and 3-spaces, general vector spaces and vector arithmetic and norm, dot products, projections and cross products, lines and planes in 3-spaces, Euclidean inner product spaces, linear transformations, bases and dimensions, orthonormal bases and Gram-Schmidt process eigenvalues and eigenvectors.",
+      "prerequisites": ["MATH113"],
+      "prerequisite_text": "MATH 113",
+      "specification_prerequisite_text": "MATH 113: Calculus II",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": "None.",
+      "objectives": {
+        "preamble": "This course mainly consists of two parts: Multivariable Calculus, and Linear Algebra..",
+        "statements": [
+          "Generally, these topics will enable students to",
+          "Acquire the ability of dealing with multiple integrals and their applications.",
+          "Understand the mathematical concepts and terminology in linear algebra.",
+          "Gain an acceptable level of computational proficiency involving the procedures in linear algebra."
+        ]
+      },
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "60", "percentage": "100%" }
+        ],
+        "not_marked": ["E-learning", "Hybrid", "Distance learning"],
+        "not_marked_documented_value": null
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": null },
+          { "activity": "Field", "contact_hours": null },
+          { "activity": "Tutorial", "contact_hours": 15 },
+          { "activity": "Others (specify)", "contact_hours": null }
+        ],
+        "documented_total": 60,
+        "computed_total": 60
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Codes of PLOs aligned with program",
+        "note": "Alignment values are ILO codes, exactly as documented."
+      },
+      "clos": [
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate limits and partial derivatives for functions of 2 and 3 variables",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "2.2",
+          "nqf_domain": "Skills",
+          "clo_text": "Solve optimization problems in functions of 2 variables.",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "2.3",
+          "nqf_domain": "Skills",
+          "clo_text": "Evaluate double and triple integrals in different coordinate systems for area and volume",
+          "program_alignment_text": "ILO4, ILO2",
+          "program_alignment_codes": ["ILO4", "ILO2"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "2.4",
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze vectors and linear operators in Euclidean inner product spaces geometrically and algebraically",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "2.5",
+          "nqf_domain": "Skills",
+          "clo_text": "Determine the dimension and orthonormal bases for vector spaces",
+          "program_alignment_text": "ILO3",
+          "program_alignment_codes": ["ILO3"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "2.6",
+          "nqf_domain": "Skills",
+          "clo_text": "Compute eigenvalues and eigenvectors of matrices for the diagonal process",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "limits and continuity for functions of several variables", "contact_hours": 4, "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "partial derivatives, tangent planes and differentials", "contact_hours": 4, "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "the chain rule and local extrema for functions of several variables", "contact_hours": 4 },
+          { "topic_number": 4, "topic_title": "iterated double integrals", "contact_hours": 4 },
+          { "topic_number": 5, "topic_title": "double integrals over general regions and double integrals in polar coordinates.", "contact_hours": 4 },
+          { "topic_number": 6, "topic_title": "surface area, triple integrals", "contact_hours": 4 },
+          { "topic_number": 7, "topic_title": "triple integrals in cylindrical and spherical coordinates", "contact_hours": 4 },
+          { "topic_number": 8, "topic_title": "introduction to vectors, vector arithmetic and norm of a vector", "contact_hours": 4 },
+          { "topic_number": 9, "topic_title": "dot products, projections and cross products", "contact_hours": 4 },
+          { "topic_number": 10, "topic_title": "lines and planes in 3-space", "contact_hours": 4 },
+          { "topic_number": 11, "topic_title": "Euclidean inner products, linear transformations", "contact_hours": 4 },
+          { "topic_number": 12, "topic_title": "properties of linear transformations, real vector spaces", "contact_hours": 4 },
+          { "topic_number": 13, "topic_title": "vector subspaces, linear dependence, basis and dimension", "contact_hours": 4 },
+          { "topic_number": 14, "topic_title": "orthonormal bases, eigenvalues and eigenvectors", "contact_hours": 4 },
+          { "topic_number": 15, "topic_title": "diagonalization, orthogonal diagonalization", "contact_hours": 4 }
+        ],
+        "documented_total_contact_hours": 60,
+        "computed_total_contact_hours": 60,
+        "totals_match": true
+      },
+      "assessment_activities": {
+        "activities": [
+          { "no": 1, "activity": "First Major Exam", "timing": "Week 8", "percentage": "20%", "no_documented": false },
+          { "no": 2, "activity": "Second Major Exam", "timing": "Week 13", "percentage": "20%", "no_documented": false },
+          { "no": 3, "activity": "Quizzes", "timing": "Throughout the semester", "percentage": "10%", "no_documented": false },
+          { "no": 4, "activity": "Homework", "timing": "Throughout the semester", "percentage": "5%" },
+          { "no": 5, "activity": "Teamwork and participation", "timing": null, "percentage": "5%" },
+          { "no": 6, "activity": "Final Exam", "timing": null, "percentage": "40%" }
+        ],
+        "documented_total_percentage": "100%",
+        "computed_total_percentage": 100
+      },
+      "learning_resources": {
+        "essential_references": ["1. Calculus: Early Trans. 8th Edition by James Stewart", "2. Elementary Linear algebra 9th Ed. By H. Anton"],
+        "supportive_references": ["1. Calculus: The language of Change: David W. Cohen and James M. Henle", "2. Calculus: William L. Briggs, Lyle Cochran"],
+        "electronic_materials": [
+          "Access to university LMS. We use the LMS to communicate with the students. Homework Assignments, Announcements and Grading are all conveyed to the students through this system.",
+          "https://octave-online.net/",
+          "http://www.dangries.com/Flash/RowReducer/RowReducer.html",
+          "https://www.mathdetail.com/index.php",
+          "https://technology.cpm.org/general/3dgraph/",
+          "https://academo.org/demos/3d-vector-plotter/"
+        ],
+        "other_learning_materials": ["Moodle LMS is efficiently used. All the assignments , solutions to quizzes and Major Exams, Lecture Notes and important instructions can be found on the university LMS at https://lms.psu.edu.sa/"],
+        "required_facilities_and_equipment": {
+          "facilities": ["Classrooms with capacity of 30 students", "Whiteboard, computer and projector"],
+          "technology_equipment": ["Whiteboard", "Desktop computer and Smart board", "Projector"],
+          "other_equipment": ["None"]
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["Program leaders", "Peers", "Students"], "assessment_methods": ["Class observation", "Faculty Evaluation", "Peer Review", "Course Evaluation Survey"] },
+          { "area": "Effectiveness of Students assessment", "assessors": ["● Peers", "course coordinators", "● Co-signers"], "assessment_methods": ["Course Report", "Course Evaluation Survey"] },
+          { "area": "Quality of learning resources", "assessors": ["● Peer review", "● Rubrics", "● Actual Grades"], "assessment_methods": ["● CLO Assessment Analysis", "● Course Exit Survey", "Course Evaluation Survey"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["Good"], "assessment_methods": ["Good"] }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd meeting in academic year 2023/2024",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS MATH215 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third Version", "last_revision_date": "26/10/2023" },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "Credit-hours discrepancy: the Course Specification's credit-hours field is an unfilled placeholder '( ……… )'. The current EE brochure states 3 credits, which is recorded in 'program_credit_hours' and 'credits'. 'specification_credit_hours' is null because the specification does not state a value.",
+        "The 'Knowledge and understanding' and 'Values, autonomy, and responsibility' domains are documented with blank CLO rows; no CLOs were invented for them.",
+        "The alignment column in this specification is headed 'Codes of PLOs aligned with program' although the values are ILO codes; both the heading and the values are preserved as documented.",
+        "The Course Content table contains an internal 'TOTAL 60' row followed by an empty 'Total' row; the documented total is 60 and matches the sum of the 15 topic rows."
+      ]
+    },
+    {
+      "course_code": "MATH223",
+      "display_code": "MATH 223",
+      "specification_code_text": "MATH 223",
+      "course_title": "Linear Algebra",
+      "specification_course_title": "Linear Algebra",
+      "program_requirement_category": "College Requirements",
+      "credits": 3,
+      "program_credit_hours": 3,
+      "specification_credit_hours": "3",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": "Department",
+        "requirement_marked": "Required",
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"]
+      },
+      "level_or_year": "( Second and third year)",
+      "department": "Department of Mathematics and Sciences",
+      "college": "College of Humanities and Sciences",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third version",
+      "last_revision_date": "26/10/2023.",
+      "specification_program_list": "EE (Electrical Engineering), SE (Software Engineering), DM-Ma (Computer Science (Digital Media)), SE-CYS (Software Engineering (Cyber Security))",
+      "description": "The course examines the techniques of linear algebra and utilizes its tools. Topics and instruments include matrices, determinants, systems of linear equations, Euclidean vector spaces, real vector spaces, inner product spaces, eigenvalues and eigenvectors, linear transformation, applications",
+      "prerequisites": ["MATH113"],
+      "prerequisite_text": "MATH 113",
+      "specification_prerequisite_text": "Math 113.",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": "None",
+      "objectives": {
+        "preamble": "By the end of the semester, the student is expected to:",
+        "statements": [
+          "Solve linear systems of equations.",
+          "Perform matrix operations and demonstrate matrix properties.",
+          "Calculate determinants of matrices in different ways.",
+          "Define and demonstrate properties of vector spaces with basic operations.",
+          "Determine subspaces and linear independence and dependence of vectors.",
+          "Computes basis and coordinates, dimension for subspaces.",
+          "Compute eigenvalues and eigenvectors of matrices.",
+          "Diagonalize matrices and demonstrate their similarity.",
+          "Identify inner product spaces, and calculate inner products.",
+          "Construct orthonormal bases of subspaces using Use Gram–Schmidt process.",
+          "Solve least squares problems, and use them in fitting a curve to Data.",
+          "Understand orthogonal matrices, and apply them in orthogonal diagonalization.",
+          "Demonstrate basic properties of linear transformations.",
+          "Perform compositions and inverses of linear transformations."
+        ]
+      },
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "45", "percentage": "75%" },
+          { "no": 3, "mode": "Hybrid (Traditional classroom / E-learning)", "contact_hours_text": "15", "percentage": "25%" }
+        ],
+        "not_marked": ["E-learning", "Distance learning"],
+        "not_marked_documented_value": null
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": null },
+          { "activity": "Field", "contact_hours": null },
+          { "activity": "Tutorial", "contact_hours": 15 },
+          { "activity": "Others (specify)", "contact_hours": null }
+        ],
+        "documented_total": 60,
+        "computed_total": 60
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Code of PLOs aligned with program",
+        "note": "Alignment values are ILO codes written with a space ('ILO 1'), exactly as documented."
+      },
+      "clos": [
+        {
+          "code": "1.1",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Identify matrices, determinants, and their vector operations.",
+          "program_alignment_text": "ILO 1",
+          "program_alignment_codes": ["ILO 1"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "1.2",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Grasp the concepts of vector spaces, subspaces and linear transformations between vector spaces.",
+          "program_alignment_text": "ILO 1",
+          "program_alignment_codes": ["ILO 1"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Perform matrix operations to solve linear systems and to determine linear independence of vectors and bases of subspaces.",
+          "program_alignment_text": "ILO 2",
+          "program_alignment_codes": ["ILO 2"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "2.2",
+          "nqf_domain": "Skills",
+          "clo_text": "Compute eigenvectors and eigenvalues of matrices and use them in the diagonalization process.",
+          "program_alignment_text": "ILO 5",
+          "program_alignment_codes": ["ILO 5"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        },
+        {
+          "code": "2.3",
+          "nqf_domain": "Skills",
+          "clo_text": "Determine and obtain orthogonality in inner product spaces.",
+          "program_alignment_text": "ILO 2",
+          "program_alignment_codes": ["ILO 2"],
+          "teaching_strategies": ["Lectures with white board, Concept presentation, PowerPoint Notes, Small group discussion, and online computing tools.", "Hands-on Practice"],
+          "assessment_methods": ["Direct Assessment Tool", "Quizzes, Exams", "Assignments", "Indirect Assessment Tool", "Course Exit Survey"]
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "Chapter 1: System of Linear Equations\nIntroduction to Systems of Linear Equations, Gaussian Elimination, Matrices and Matrix Operations, Inverses; Algebraic Properties of Matrices, Elementary Matrices and a Method for Finding A-1, More on Linear Systems and Invertible Matrices, Diagonal, Triangular, and Symmetric Matrices.", "contact_hours": 8, "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "Chapter 2: Determinants\nDeterminants by Cofactor Expansion, Evaluating Determinants by Row Reduction, Properties of Determinants; Cramer's Rule.", "contact_hours": 6, "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "Chapter 3: Euclidean Vector Spaces\nVectors in 2-Space, 3-Space, and n-Space, Norm, Dot Product, and Distance in Rn, Orthogonality, The Geometry of Linear Systems, Cross Product.", "contact_hours": 8 },
+          { "topic_number": 4, "topic_title": "Chapter 4: General Vector Spaces\nReal Vector Spaces, Subspaces, Linear Independence, Coordinates and Basis, Dimension, Change of Basis, Basic Matrix Transformations in R2 and R3, Properties of Matrix Transformations.", "contact_hours": 16 },
+          { "topic_number": 5, "topic_title": "Chapter 5: Eigenvalues and eigenvectors\nEigenvalues and Eigenvectors, Diagonalization.", "contact_hours": 8 },
+          { "topic_number": 6, "topic_title": "Chapter 6: Inner product spaces\nInner Products, Angle and Orthogonality in Inner Product Spaces, Gram–Schmidt Process; Best Approximation; Least Squares, Mathematical Modeling Using Least Squares.", "contact_hours": 4 },
+          { "topic_number": 7, "topic_title": "Chapter 7: Diagonalization and Quadratic Forms\nOrthogonal Matrices, Orthogonal Diagonalization.", "contact_hours": 4 },
+          { "topic_number": 8, "topic_title": "Chapter 8: Linear Transformations\nGeneral Linear Transformations, Compositions and Inverse Transformations.", "contact_hours": 6 }
+        ],
+        "documented_total_contact_hours": 60,
+        "computed_total_contact_hours": 60,
+        "totals_match": true
+      },
+      "assessment_activities": {
+        "activities": [
+          { "no": 1, "activity": "First Major Exam", "timing": "Week 7", "percentage": "20%", "no_documented": false },
+          { "no": 2, "activity": "Second Major Exam", "timing": "Week 13", "percentage": "20%", "no_documented": false },
+          { "no": 3, "activity": "(2-4) Quizzes", "timing": "Spread throughout the semester", "percentage": "10%", "no_documented": false },
+          { "no": 4, "activity": "Assignments", "timing": "Spread throughout the semester", "percentage": "5%" },
+          { "no": 5, "activity": "Participation & Project", "timing": "Spread throughout the semester", "percentage": "5%" },
+          { "no": 6, "activity": "Final Exam", "timing": "Week 17-18", "percentage": "40%" }
+        ],
+        "documented_total_percentage": "100%",
+        "computed_total_percentage": 100
+      },
+      "learning_resources": {
+        "essential_references": ["Elementary Linear Algebra, 12th Edition, Howard Anton, Anton Kaul."],
+        "supportive_references": [
+          "Introduction to Linear Algebra, 5th Edition, Gilbert Strang.",
+          "2. Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares 1st Edition, Stephen Boyd, Lieven Vandenberghe"
+        ],
+        "electronic_materials": [
+          "Access to university LMS. We use the LMS to communicate with the students. Homework Assignments, Announcements and Grading are all conveyed to the students through this system.",
+          "https://octave-online.net/",
+          "http://www.dangries.com/Flash/RowReducer/RowReducer.html",
+          "https://www.mathdetail.com/index.php",
+          "https://technology.cpm.org/general/3dgraph/",
+          "https://academo.org/demos/3d-vector-plotter/"
+        ],
+        "other_learning_materials": ["Moodle LMS is efficiently used. All the assignments , solutions to quizzes and Major Exams, Lecture Notes and important instructions can be found on the university LMS at https://lms.psu.edu.sa/"],
+        "required_facilities_and_equipment": {
+          "facilities": ["Classrooms with capacity of 30 students, Whiteboard , Overhead Projector, Screen, Computer with internet access and basic Microsoft Office installed."],
+          "technology_equipment": ["2.1. Whiteboard", "2.2. Scientific Calculator, Desktop computer and Smart board.", "2.3. MOODLE System (Modular Object-Oriented Dynamic Learning Environment)"],
+          "other_equipment": ["None"]
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["Program leaders", "Peers", "Students"], "assessment_methods": ["Class observation", "Faculty Evaluation", "Peer Review", "Course Evaluation Survey (indirect)."] },
+          { "area": "Effectiveness of Students assessment", "assessors": ["Peers and course coordinators", "Co-signers"], "assessment_methods": ["Course Report", "Course Evaluation Survey (indirect)."] },
+          { "area": "Quality of learning resources", "assessors": ["Peers and course coordinators"], "assessment_methods": ["Course Report"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["Peer review", "Rubrics", "Actual Grades"], "assessment_methods": ["CLO Assessment Analysis", "Course Exit Survey (indirect).", "Course Evaluation Survey (indirect)."] }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd meeting in academic year 2023/2024",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS MATH223 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third version", "last_revision_date": "26/10/2023." },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "A duplicate copy of this specification exists in the data folder as 'CS MATH223 Term231 (1).docx'. It is byte-identical to 'CS MATH223 Term231.docx' (SHA-256 25353773dd8ae4f5b935b78cc4ac91c6200f8753d3297c57df8b6ec048012342), so only one record is created.",
+        "CLO row 2.4 and the whole 'Values, autonomy, and responsibility' domain are documented with blank rows; no CLOs were invented for them.",
+        "The alignment column in this specification is headed 'Code of PLOs aligned with program' although the values are ILO codes; both the heading and the values are preserved as documented."
+      ]
+    },
+    {
+      "course_code": "MATH225",
+      "display_code": "MATH 225",
+      "specification_code_text": "Math225",
+      "course_title": "Differential Equations",
+      "specification_course_title": "Differential Equations.",
+      "program_requirement_category": "College Requirements",
+      "credits": 3,
+      "program_credit_hours": 3,
+      "specification_credit_hours": "3+1",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": "Department",
+        "requirement_marked": "Required",
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"]
+      },
+      "level_or_year": "( 2-3 year)",
+      "department": "Mathematics and Sciences",
+      "college": "College of Humanities and Science",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third Version",
+      "last_revision_date": "26/10/2023",
+      "specification_program_list": "Engineering Construction Management, Engineering Production and Manufacturing Management, Communication and Networks Engineering.",
+      "description": "This course introduces the students to various topics in ordinary differential equations. These topics include: techniques for solving first order differential equations such as linear equations, separable equations, exact equations and integrating factors; homogeneous and general second order linear equations; higher order linear equations; power series solutions; the Laplace transform and applications in science and engineering, Fourier series and its convergence theorem, Separation of Variables, Heat Equation, Wave Equation and Laplace equation.",
+      "prerequisites": ["MATH113"],
+      "prerequisite_text": "MATH 113",
+      "specification_prerequisite_text": "Math 111 and Math113",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": "None",
+      "objectives": {
+        "preamble": "By the end of the semester, each student is expected to:",
+        "statements": [
+          "1. Solve first order equations.",
+          "2. Solve second order equations.",
+          "3. Solve higher order equations.",
+          "4. Implement power series to solve equations.",
+          "5. Implement Laplace technique to solve equations.",
+          "6. Expand function via Fourier series.",
+          "7. Solve partial differential equations."
+        ]
+      },
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "60", "percentage": "100%" }
+        ],
+        "not_marked": ["E-learning", "Hybrid", "Distance learning"],
+        "not_marked_documented_value": null
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": null },
+          { "activity": "Field", "contact_hours": null },
+          { "activity": "Tutorial", "contact_hours": 15 },
+          { "activity": "Others (specify)", "contact_hours": null }
+        ],
+        "documented_total": null,
+        "computed_total": 60
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Code of CLOs aligned with program",
+        "note": "Alignment values are ILO codes, exactly as documented."
+      },
+      "clos": [
+        {
+          "code": "1.1",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Recognize the characteristics of various types of differential equations.",
+          "program_alignment_text": "ILO1,ILO2,ILO3",
+          "program_alignment_codes": ["ILO1", "ILO2", "ILO3"],
+          "teaching_strategies": ["Blackboard, PPP, and Group Assignment"],
+          "assessment_methods": ["Quiz, Exams, Final"]
+        },
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Apply analytical techniques to solve 1-st, 2-nd and higher order differential equations.",
+          "program_alignment_text": "ILO1,ILO2,ILO3",
+          "program_alignment_codes": ["ILO1", "ILO2", "ILO3"],
+          "teaching_strategies": ["Blackboard, PPP, and Group Assignment"],
+          "assessment_methods": ["Quiz, Exams, Final"]
+        },
+        {
+          "code": "3.1",
+          "nqf_domain": "Values, autonomy, and responsibility",
+          "clo_text": "Analyze to demonstrate models of differential equations in fields such as physics, biology and engineering.",
+          "program_alignment_text": "ILO6,ILO7",
+          "program_alignment_codes": ["ILO6", "ILO7"],
+          "teaching_strategies": ["Blackboard, PPP, and Group Assignment"],
+          "assessment_methods": ["Quiz, Exams, Final"]
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "1.1 Definitions and terminology\n1.2 Initial value problem\n1.3 Mathematical models", "contact_hours": 4, "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "2.1 Solution curves without a solution\n2.2 Separable equations", "contact_hours": 4, "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "2.3 Linear equations\n2.4 Exact equations", "contact_hours": 4 },
+          { "topic_number": 4, "topic_title": "2.5 Solutions by substitutions\n4.1 Preliminary theory\nReduction of order", "contact_hours": 4 },
+          { "topic_number": 5, "topic_title": "4.3 Homog. Linear equations with constant coefficients\n4.4 Method of undetermined coefficients-Superposition approach", "contact_hours": 4 },
+          { "topic_number": 6, "topic_title": "4.5 Method of undetermined coefficients-Annihilator approach.\n4.6 Variation of parameters", "contact_hours": 4 },
+          { "topic_number": 7, "topic_title": "4.7 Cauchy-Euler equation.\n6.1 Review on power series", "contact_hours": 4 },
+          { "topic_number": 8, "topic_title": "6.2 Solutions about ordinary points.\n6.3 Solutions about singular points.", "contact_hours": 4 },
+          { "topic_number": 9, "topic_title": "7.1 Definition of Laplace transform.\n7.2 Inverse Laplace transform", "contact_hours": 4 },
+          { "topic_number": 10, "topic_title": "7.3 Operational properties I.\n7.4 Operational properties II", "contact_hours": 4 },
+          { "topic_number": 11, "topic_title": "8.1 Linear Systems\n8.2 Homogeneous Linear Systems", "contact_hours": 4 },
+          { "topic_number": 12, "topic_title": "11.1 Orthogonal functions.\n11.2 Fourier series.\n11.3 Fourier cosine and sine series.", "contact_hours": 4 },
+          { "topic_number": 13, "topic_title": "12.1 Separable PDE.\n12.2 Classical PDE and BVP", "contact_hours": 4 },
+          { "topic_number": 14, "topic_title": "12.3 Heat equation.\n12.4 Wave equation", "contact_hours": 4 },
+          { "topic_number": 15, "topic_title": "12.5 Laplace equation.\nReview", "contact_hours": 4 }
+        ],
+        "documented_total_contact_hours": null,
+        "computed_total_contact_hours": 60
+      },
+      "assessment_activities": {
+        "activities": [
+          { "no": 1, "activity": "Quizzes", "timing": "Every two weeks", "percentage": "10%", "no_documented": false },
+          { "no": 2, "activity": "Major Exams", "timing": "Week 6\nWeek 12", "percentage": "40%", "no_documented": false },
+          { "no": 3, "activity": "Online Assignment", "timing": "Every week", "percentage": "10%", "no_documented": false },
+          { "no": 4, "activity": "Final", "timing": "Week 16", "percentage": "40%" }
+        ],
+        "documented_total_percentage": null,
+        "computed_total_percentage": 100
+      },
+      "learning_resources": {
+        "essential_references": ["Differential Equations with Boundary Value Problems", "Author: D. G. Zill, W. S. Wright", "Edition: 8th.", "Publisher: Cengage"],
+        "supportive_references": ["Elementary Differential Equations and Boundary Value Problems.", "Author: Boyce, W. E. and Di Prima, R. C.", "Edition: Tenth.", "Publisher: John Wiley and Son’s"],
+        "electronic_materials": ["Access to university LMS. We use the LMS to communicate with t the students, Announcements and Grading are all conveyed to the students through this system. We use webassign.net for homework, quizzes and exams"],
+        "other_learning_materials": ["NA"],
+        "required_facilities_and_equipment": {
+          "facilities": ["Classrooms with a capacity of 25 students equipped with smart boards."],
+          "technology_equipment": ["2.1. Whiteboard", "2.2. Desktop computer and Smart board", "2.3. MOODLE System (Modular Object-Oriented Dynamic Learning Environment)", "2.4 Excel"],
+          "other_equipment": ["NA"]
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["Faculty"], "assessment_methods": ["Direct: Assignments", "Indirect: Course Exit Survey"] },
+          { "area": "Effectiveness of Students assessment", "assessors": ["Faculty"], "assessment_methods": ["Direct: Assignments", "Indirect: Course Exit Survey"] },
+          { "area": "Quality of learning resources", "assessors": ["Faculty"], "assessment_methods": ["Direct: Assignments", "Indirect: Course Exit Survey"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["Faculty"], "assessment_methods": ["Direct: Assignments", "Indirect: Course Exit Survey"] }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd meeting in academic year 2023/2024",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS MATH225 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third Version", "last_revision_date": "26/10/2023" },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "Credit-hours discrepancy: the Course Specification states '( 3+1)' while the current EE brochure states 3 credits. The brochure value governs the EE program; the specification value is preserved verbatim in 'specification_credit_hours'.",
+        "Prerequisite discrepancy: the Course Specification states 'Math 111 and Math113' while the current EE brochure states MATH 113 only. Both values are preserved; the brochure value governs the EE program.",
+        "The Course Specification writes the code as 'Math225' and the title with a trailing period ('Differential Equations.'). The identity is normalized to MATH225 / 'Differential Equations' while the source spellings are preserved in 'specification_code_text' and 'specification_course_title'.",
+        "The Course Specification lists the serving programs using older program names ('Engineering Construction Management, Engineering Production and Manufacturing Management, Communication and Networks Engineering.') and does not name the current EE program. The EE brochure explicitly includes MATH 225 as a College Requirement, so the course is in scope.",
+        "CLO rows 1.2, 2.2 and 3.2 are documented as blank; no CLOs were invented for them.",
+        "The Contact Hours and Course Content tables have blank total cells; the listed values sum to 60 in both cases.",
+        "The assessment table has no total row; the documented percentages sum to 100%."
+      ]
+    },
+    {
+      "course_code": "PHY105",
+      "display_code": "PHY 105",
+      "specification_code_text": "PHY105",
+      "course_title": "Physics I",
+      "specification_course_title": "Physics I",
+      "program_requirement_category": "College Requirements",
+      "credits": 4,
+      "program_credit_hours": 4,
+      "specification_credit_hours": "4",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": null,
+        "requirement_marked": null,
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"],
+        "note": "No option is marked in either row of the specification's course-type table."
+      },
+      "level_or_year": "(Sophomore for CS & Freshmen for Engineering)",
+      "department": "Mathematics & Sciences",
+      "college": "Humanities & Sciences",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third Version",
+      "last_revision_date": "26/10/2023",
+      "specification_program_list": "Engineering, Software Engineering. Computer",
+      "description": "This course introduces the principles of mechanics, energy, and heat. The course covers physics and measurement, motion in one dimension, vectors, motion in two dimensions, laws of motion, circular motion and other applications of Newton's laws, work and energy, potential energy, and conservation of energy, momentum and collisions, rotational kinematic and torque, temperature, and heat. The emphasis in this course is cultivating an understanding of natural phenomena through direct observation, reasoning, and application of this knowledge.",
+      "prerequisites": [],
+      "prerequisite_text": "-",
+      "specification_prerequisite_text": "None",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": "None",
+      "objectives": {
+        "preamble": null,
+        "statements": [
+          "To help students develop physical intuition and build strong problem-solving skills.",
+          "To develop an understanding of the main concepts and laws in mechanics and heat.",
+          "To provide the students with the needed background for upcoming and advanced courses."
+        ]
+      },
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "45", "percentage": "100%" }
+        ],
+        "not_marked": ["E-learning", "Hybrid", "Distance learning"],
+        "not_marked_documented_value": null
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": 30 },
+          { "activity": "Field", "contact_hours": null },
+          { "activity": "Tutorial", "contact_hours": null },
+          { "activity": "Others (specify)", "contact_hours": null }
+        ],
+        "documented_total": 75,
+        "computed_total": 75
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Code of CLOs aligned with program",
+        "note": "Alignment values are ILO codes, exactly as documented (written both as 'ILO 1' and 'ILO2' in this source)."
+      },
+      "clos": [
+        {
+          "code": "1.1",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Describe basic physical quantities in mechanics and heat.",
+          "program_alignment_text": "ILO 1",
+          "program_alignment_codes": ["ILO 1"],
+          "teaching_strategies": ["Lectures, Demonstrations, Discussions"],
+          "assessment_methods": ["Quizzes, midterm exam and Final Exam"]
+        },
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate various physical quantities using translational and rotational kinematical equations and torque.",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Assignments, Exercises, HW"],
+          "assessment_methods": ["Midterm exam and Final Exam"]
+        },
+        {
+          "code": "2.2",
+          "nqf_domain": "Skills",
+          "clo_text": "Apply Newton’s laws of motion to solve various physical problems.",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Assignments, Exercises, HW"],
+          "assessment_methods": ["midterm exam and Final Exam"]
+        },
+        {
+          "code": "2.3",
+          "nqf_domain": "Skills",
+          "clo_text": "Solve physical problems using conservation laws.",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Assignments, Exercises, HW"],
+          "assessment_methods": ["midterm exam and Final Exam"]
+        },
+        {
+          "code": "2.4",
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate physical parameters associated with thermal properties of matter.",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Assignments, Exercises, HW"],
+          "assessment_methods": ["midterm exam and Final Exam"]
+        },
+        {
+          "code": "2.5",
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate basic experimental skills by setting up experiment, carrying out experimental procedure, and reporting properly the results",
+          "program_alignment_text": "ILO 4\nILO 5",
+          "program_alignment_codes": ["ILO 4", "ILO 5"],
+          "teaching_strategies": ["Assignments, Exercises, HW"],
+          "assessment_methods": ["midterm exam and Final Exam"]
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "1. Introduction to Physics:\nPhysics and the laws of Nature, Units of Mass, Length and Time, Dimensional analysis, Significant Figures, Converting Units.\nSections: (1.1), (1.2), (1.3), (1.5)", "contact_hours": 3, "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "2. One Dimensional Kinematics Position:\nDistance and Displacement, Average Speed and Velocity, Acceleration, Motion with Constant Acceleration, Freely Falling Objects\nSections: (2.1), (2.2), (2.4), (2.5), (2.7)", "contact_hours": 3, "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "3. Vectors:\nScalars and Vectors, Components of a Vector, Adding and Subtracting vectors, Unit Vectors, Position, Displacement, Velocity and Acceleration Vectors, (Multiplication of Vectors: Dot and Cross Products).\nSections: (3.1), (3.2), (3.3), (3.4), (3.5)", "contact_hours": 3, "topic_number_documented": false },
+          { "topic_number": 4, "topic_title": "4. Two-Dimensional kinematics:\nProjectile Motion, Zero Launch Angle, General Launch Angle, Key Characteristics. Sections: (4.2), (4.3), (4.4), (4.5)", "contact_hours": 4, "topic_number_documented": false },
+          { "topic_number": 5, "topic_title": "5.Newton’s Laws of Motion\nForce and Mass, Newton’s First law of Motion, Newton’s Second law of Motion,\nNewton’s Third law of Motion, Weight, Normal Forces\nSections: (5.1), (5.2), (5.3), (5.4), (5.6), (5.7)", "contact_hours": 5, "topic_number_documented": false },
+          { "topic_number": 6, "topic_title": "6. Application of Newton’s Laws\nFrictional Forces, Strings and springs, Translational Equilibrium, Circular Motion.\nSections: (6.1), (6.2), (6.3), (6.5)", "contact_hours": 6, "topic_number_documented": false },
+          { "topic_number": 7, "topic_title": "7. Work and Kinetic Energy\nWork done by a constant Force, Kinetic Energy and Work-Energy Theorem, Work done by a variable force (spring), Power\nSections: (7.1), (7.2), (7.3), (7.4)", "contact_hours": 3, "topic_number_documented": false },
+          { "topic_number": 8, "topic_title": "8. Potential Energy and Conservation of Energy\nPotential Energy and the Work done by Conservative, Conservation of Mechanical Energy.\nSections: (8.2), (8.3)", "contact_hours": 3, "topic_number_documented": false },
+          { "topic_number": 9, "topic_title": "9. Linear Momentum and Collision\nLinear Momentum, Momentum, and Newton’s Second law, Impulse, Conservation of Linear Momentum, Inelastic Collision, Elastic Collision\nSections: (9.1), (9.2), (9.3), (9.4), (9.5), (9.6)", "contact_hours": 6, "topic_number_documented": false },
+          { "topic_number": 10, "topic_title": "10. Rotational Kinematics\nAngular Position, Velocity and Acceleration, Connections between Linear and Rotational Quantities\nSections: (10.1), (10.3)", "contact_hours": 3, "topic_number_documented": false },
+          { "topic_number": 11, "topic_title": "11. Rotational Dynamics and Static Equilibrium\nTorque, Zero Torque, and Static Equilibrium\nSections: (11.1), (11.3)", "contact_hours": 3, "topic_number_documented": false },
+          { "topic_number": 12, "topic_title": "16. Temperature and Heat (Ch.16)\nTemperature and Heat, Temperature Scales, Thermal Expansion, Introduction to Conduction, Convection and Radiation\nSections: (16.1), (16.2), (16.3), (16.6)", "contact_hours": 3, "topic_number_documented": false }
+        ],
+        "documented_total_contact_hours": null,
+        "computed_total_contact_hours": 45
+      },
+      "assessment_activities": {
+        "activities": [
+          { "no": 1, "activity": "Quizzes", "timing": "Quiz 1 week 4\nQuiz 2 week 11\nQuiz 3 week 14", "percentage": "10%", "no_documented": false },
+          { "no": 2, "activity": "Class Participation, HW", "timing": null, "percentage": "5%", "no_documented": false },
+          { "no": 3, "activity": "Midterm exam", "timing": "Week 9", "percentage": "20%", "no_documented": false },
+          { "no": 4, "activity": "Lab Reports", "timing": "Weekly", "percentage": "10%", "no_documented": false },
+          { "no": 5, "activity": "Lab Final Exam", "timing": "Week 15", "percentage": "15%", "no_documented": false },
+          { "no": 6, "activity": "Final Comprehensive Exam", "timing": null, "percentage": "40%", "no_documented": false }
+        ],
+        "documented_total_percentage": null,
+        "computed_total_percentage": 100
+      },
+      "learning_resources": {
+        "essential_references": [
+          "Physics Technology Update by James S. Walker. Fourth Edition, Pearson International Edition.2014",
+          "Physics 1 Lab Manual (Mechanics), by Hazem Abu-Farsakh (PSU)"
+        ],
+        "supportive_references": [
+          "1- College Physics by Serway and Vuille. Tenth edition. CENGAGE Learning, 2014",
+          "2- College Physics. By Nicholas Giordano. Second edition. CENGAGE Learning, 2013",
+          "3- Principles of Physics by Serway and Jewetts, Fourth Edition, 2005",
+          "4- University Physics by Young and Freedman. Eleventh edition. Person, 2004"
+        ],
+        "electronic_materials": ["Access to university LMS. We use the LMS to communicate with students. Homework assignments, Announcements and Grading are all conveyed to the students through this system."],
+        "other_learning_materials": ["Mastering Physics (Pearson)", "Pasco Website.", "Moodle"],
+        "required_facilities_and_equipment": {
+          "facilities": ["Classrooms (capacity 30 students)", "Physics lab (capacity 15 students)"],
+          "technology_equipment": ["Data Show, Smart White Board, Capstone software"],
+          "other_equipment": ["Equipment for 10 experiments from PASCO is required. This equipment is listed in the lab manual we use (see part E.1)"]
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["Students", "Course Exit Survey", "Course evaluation form"], "assessment_methods": ["Indirect"] },
+          { "area": "Effectiveness of Students assessment", "assessors": ["Course instructor"], "assessment_methods": ["direct"] },
+          { "area": "Quality of learning resources", "assessors": ["The department director"], "assessment_methods": ["direct"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["The course instructor"], "assessment_methods": ["direct"] }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd meeting in academic year 2023/2024",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS PHY105 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third Version", "last_revision_date": "26/10/2023" },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "The specification's course-type table has no marked option in either row; 'specification_course_type' records this rather than assuming a value. The brochure classifies PHY 105 as a College Requirement.",
+        "The 'Values, autonomy, and responsibility' domain is documented with a blank CLO row; no CLO was invented for it.",
+        "The Course Content table has no documented total; the listed topic hours sum to 45, which matches the 45 lecture hours (the 30 laboratory hours are counted separately in the contact-hours table).",
+        "The assessment table has no total row; the documented percentages sum to 100%.",
+        "All topic-number and assessment-number cells are blank in this specification; sequential numbers are supplied for indexing and flagged with 'topic_number_documented' / 'no_documented' set to false."
+      ]
+    },
+    {
+      "course_code": "PHY205",
+      "display_code": "PHY 205",
+      "specification_code_text": "PHY205",
+      "course_title": "Physics II",
+      "specification_course_title": "Physics II",
+      "program_requirement_category": "College Requirements",
+      "credits": 4,
+      "program_credit_hours": 4,
+      "specification_credit_hours": "4",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": "University",
+        "requirement_marked": "Required",
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"]
+      },
+      "level_or_year": "First year of university-level (Freshman) for Engineering students.\nThe second year of university-level (Sophomore) for Computer Science students.",
+      "department": "Mathematics and Sciences",
+      "college": "Humanities and Sciences",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third Version",
+      "last_revision_date": "26/10/ 2023",
+      "specification_program_list": "CE (College of Engineering)\nCCIS (College of Computer and Information Sciences)\nSoftware Engineering",
+      "description": "This course includes several topics in electricity, magnetism, and optics. Topics include: The electrostatic force, electric field, Gauss’s law, electric potential, capacitors and dielectrics, direct current circuits, magnetic fields, electromagnetism, induction, Faraday’s law, alternating current circuits, geometrical optics, and optical instruments.",
+      "prerequisites": ["PHY105"],
+      "prerequisite_text": "PHY 105",
+      "specification_prerequisite_text": "PHY105",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": "NA",
+      "objectives": {
+        "preamble": "By the end of the semester, each student is expected to:",
+        "statements": [
+          "1. To become familiar with the main physical principles and concepts in electricity, magnetism, and optics, using both conceptual and mathematical approaches.",
+          "2. To increase the understanding of natural phenomena and laws and to develop physical curiosity and critical thinking skills.",
+          "3. To enhance investigative and observational skills and problem-solving strategies and techniques."
+        ]
+      },
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "75", "percentage": null }
+        ],
+        "not_marked": ["E-learning", "Hybrid", "Distance learning"],
+        "not_marked_documented_value": null
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": 30 },
+          { "activity": "Field", "contact_hours": null, "documented_value": "None" },
+          { "activity": "Tutorial", "contact_hours": null, "documented_value": "None" },
+          { "activity": "Others (specify)", "contact_hours": null }
+        ],
+        "documented_total": 75,
+        "computed_total": 75
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Code of CLOs aligned with program",
+        "note": "Alignment values are ILO codes, exactly as documented."
+      },
+      "clos": [
+        {
+          "code": "1.1",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Describe basic concepts of electricity, magnetism, and optics.",
+          "program_alignment_text": "ILO1",
+          "program_alignment_codes": ["ILO1"],
+          "teaching_strategies": ["Lectures", "Discussions", "Problem-Based Learning"],
+          "assessment_methods": ["Written Exams", "Quizzes", "Classroom Participation"]
+        },
+        {
+          "code": "1.2",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Describe the image formation and its application in optical instrument.",
+          "program_alignment_text": "ILO2",
+          "program_alignment_codes": ["ILO2"],
+          "teaching_strategies": ["Lectures", "Discussions", "Problem-Based Learning"],
+          "assessment_methods": ["Written Exams", "Quizzes", "Classroom Participation"]
+        },
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate electric forces, fields and potentials associated with different charge arrangements.",
+          "program_alignment_text": "ILO2, ILO3",
+          "program_alignment_codes": ["ILO2", "ILO3"],
+          "teaching_strategies": ["Lectures", "Discussions", "Problem-Based Learning"],
+          "assessment_methods": ["Written Exams", "Quizzes", "Classroom Participation"]
+        },
+        {
+          "code": "2.2",
+          "nqf_domain": "Skills",
+          "clo_text": "Analyze electric circuits to determine unknown variables.",
+          "program_alignment_text": "ILO2, ILO3",
+          "program_alignment_codes": ["ILO2", "ILO3"],
+          "teaching_strategies": ["Lectures", "Discussions", "Problem-Based Learning"],
+          "assessment_methods": ["Written Exams", "Quizzes", "Classroom Participation"]
+        },
+        {
+          "code": "2.3",
+          "nqf_domain": "Skills",
+          "clo_text": "Apply the knowledge of magnetic forces and fields to relevant problems.",
+          "program_alignment_text": "ILO2, ILO3",
+          "program_alignment_codes": ["ILO2", "ILO3"],
+          "teaching_strategies": ["Lectures", "Discussions", "Problem-Based Learning"],
+          "assessment_methods": ["Written Exams", "Quizzes", "Classroom Participation"]
+        },
+        {
+          "code": "2.4",
+          "nqf_domain": "Skills",
+          "clo_text": "Demonstrate basic experimental skills by setting up laboratory equipment safely, carrying out experimental procedure, and reporting the results of the experiment.",
+          "program_alignment_text": "ILO4",
+          "program_alignment_codes": ["ILO4"],
+          "teaching_strategies": ["Demonstration", "Experiments (Lab Work)"],
+          "assessment_methods": ["Written & Practical Exams", "Lab Reports"]
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "Ch19: Electric charges, Forces and Fields.\nElectric charge, Insulators and conductors, Coulombs’ Law. The electric field lines and electric fields due to symmetric charge configurations. Induction. Electric flux and Gauss’ Law.", "contact_hours": 9, "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "Ch 20: Electric potential and Electric potential Energy.\nElectric potential Energy and Electric potential. Energy conservation. The electric potential due to a point charge and other symmetrical charge configurations. Equipotential surfaces and the electric field. Capacitors and dielectrics. Electrical energy storage.", "contact_hours": 8, "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "Ch 21: Electric Current and Direct Current Circuits.\nElectric current. Resistance and Ohms’ Law. Energy and Power in Electric Circuits.\nResistors in series and in parallel. Kirchhoff’s Rules. Capacitors circuits. RC circuits.", "contact_hours": 9 },
+          { "topic_number": 4, "topic_title": "Ch 22: Magnetism.\nThe magnetic fields. The Magnetic force exerted on a current carrying conductor. The magnetic force on moving charges. Electric currents, Magnetic fields, and Amperes’ Law. Current loops, Solenoid and Torrid.", "contact_hours": 7 },
+          { "topic_number": 5, "topic_title": "Ch 23: Magnetic Flux and Faraday's Law of Induction.\nInduced Electromotive force. Magnetic Flux. Faradays’ Law of Induction.", "contact_hours": 6 },
+          { "topic_number": 6, "topic_title": "Ch 26: Geometrical Optics.\nThe reflection of Light. Image formation by plane mirror. Spherical mirrors. The Mirror equation and Image formation. Magnification.", "contact_hours": 6 }
+        ],
+        "documented_total_contact_hours": 45,
+        "computed_total_contact_hours": 45,
+        "totals_match": true
+      },
+      "assessment_activities": {
+        "activities": [
+          { "no": 1, "activity": "Quiz 1", "timing": "7", "percentage": "5 %", "no_documented": false },
+          { "no": 2, "activity": "Mid Term Exam", "timing": "9", "percentage": "20 %", "no_documented": false },
+          { "no": 3, "activity": "Quiz 2", "timing": "12", "percentage": "5%", "no_documented": false },
+          { "no": 4, "activity": "Quiz 3 (optional)", "timing": "15", "percentage": "5%", "no_documented": false, "optional": true },
+          { "no": 5, "activity": "Class Participation", "timing": null, "percentage": "5 %", "no_documented": false },
+          { "no": 6, "activity": "Lab Practical Exam", "timing": "14", "percentage": "10 %", "no_documented": false },
+          { "no": 7, "activity": "Lab Written Exam+ Lab Reports", "timing": "15", "percentage": "5 % + 10%", "no_documented": false },
+          { "no": 8, "activity": "Final Exam", "timing": "18", "percentage": "40%" }
+        ],
+        "documented_total_percentage": null,
+        "computed_total_percentage": 100,
+        "computed_total_percentage_note": "Excluding the row marked 'Quiz 3 (optional)' the documented percentages sum to 100%. Including it they sum to 105%."
+      },
+      "learning_resources": {
+        "essential_references": ["Physics, Technology Update, Fourth Edition, Pearson", "James S. Walker"],
+        "supportive_references": [
+          "College Physics. By Serway and Vuille. Tenth edition. CENGAGE Learning, 2014",
+          "College Physics, Nicholas Giordano. Second Edition Brooks/Cole, 2013",
+          "Principles of Physics, Serway & Jewett. Fourth Edition. Brooks/Cole, 2005",
+          "University Physics. By Young and Freedman. Eleventh edition. Person, 2004"
+        ],
+        "electronic_materials": [
+          "Access to university LMS. LMS is used for:",
+          "downloading course material (handouts, solutions of exams/quizzes)",
+          "listing homework assignment",
+          "posting useful external links (videos, notes)",
+          "announcements"
+        ],
+        "other_learning_materials": ["None"],
+        "required_facilities_and_equipment": {
+          "facilities": ["Classroom", "Laboratory", "Whiteboard"],
+          "technology_equipment": ["Laptop with Projector", "Smart Board", "Moodle", "LMS"],
+          "other_equipment": null
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["Students", "Peers", "Course Leader"], "assessment_methods": ["Instructor Evaluation Survey", "Peer Review", "CLO Assessment Results", "Classroom Observation", "Faculty Evaluation"] },
+          { "area": "Effectiveness of Students assessment", "assessors": ["Course Instructor", "Students"], "assessment_methods": ["Course Report", "Course Report Analysis"] },
+          { "area": "Quality of learning resources", "assessors": ["Course Instructors", "Students"], "assessment_methods": ["Instructor Evaluation"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["Students", "Course Instructor"], "assessment_methods": ["Course Exit Survey", "CLO Assessment Results"] }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd meeting in academic year 2023/2024",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS PHY205 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third Version", "last_revision_date": "26/10/ 2023" },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "Course-type discrepancy: the Course Specification marks the course type as 'University', while the current EE brochure classifies PHY 205 as a College Requirement. Both values are preserved; the brochure value governs 'program_requirement_category'.",
+        "The specification's 'Level/year' field contains an empty placeholder '(……….)' immediately followed by a descriptive paragraph; the descriptive text is recorded in 'level_or_year'.",
+        "The 'Values, autonomy, and responsibility' domain is documented with blank CLO rows; no CLOs were invented for it.",
+        "The teaching-mode table records 75 contact hours for Traditional classroom with a blank percentage cell.",
+        "The Course Content documented total is 45, matching the sum of the six topic rows; the contact-hours table records 75 hours in total (45 lectures + 30 laboratory).",
+        "The assessment table has no total row and includes an optional Quiz 3; see 'computed_total_percentage_note'."
+      ]
+    },
+    {
+      "course_code": "STAT101",
+      "display_code": "STAT 101",
+      "specification_code_text": "STAT101",
+      "course_title": "Introduction to Statistics and Probability Theory",
+      "specification_course_title": "Introduction to Statistics and Probability Theory",
+      "program_requirement_category": "College Requirements",
+      "credits": 3,
+      "program_credit_hours": 3,
+      "specification_credit_hours": "3",
+      "required_or_elective": "Required",
+      "specification_course_type": {
+        "level_marked": null,
+        "requirement_marked": "Required",
+        "source_row_a_options": ["University", "College", "Department", "Track", "Others"],
+        "source_row_b_options": ["Required", "Elective"],
+        "note": "No option is marked in the University/College/Department/Track/Others row of the specification."
+      },
+      "level_or_year": "( College level/ First and second year)",
+      "department": "Mathematics and Sciences",
+      "college": "Humanities and Sciences",
+      "institution": "Prince Sultan University",
+      "specification_version": "Third Version",
+      "last_revision_date": "26/10/2023",
+      "specification_program_list": "CS, IS, SE, ACC, MKT, FIN, AV.MGT, CE, PE, CME",
+      "description": "Introduction to Statistics & Probability Theory is the first course in Statistics, designed to expose the students to the use of tables and graphs as a way to summarize data and provide concise and meaningful presentations for the data. Using the computing facilities at campus, problem-solving is spreadsheet-oriented whenever possible. Excel is a spreadsheet tool for manipulating quantitative data. The extent to which the variables are related is discussed deeply through graphs and using rules. The emphasis is on analyzing, understanding, and using statistics to solve real-world problems. Coverage of the course includes descriptive statistics, probability and probability distributions, and sampling.",
+      "prerequisites": ["MATH111"],
+      "prerequisite_text": "MATH 111",
+      "specification_prerequisite_text": "Math002, Calculus 1, Math 101",
+      "corequisites": [],
+      "corequisite_text": null,
+      "specification_corequisite_text": null,
+      "objectives": {
+        "preamble": "By the end of the semester, each student is expected to:",
+        "statements": [
+          "1. Distinguish between Population and sample; parameter and statistic, Recognize types of sampling designs and Types of variable.",
+          "2. Construct and Interpret Frequency Distribution, cumulative frequency distribution.",
+          "3. Interpret graphical summary of data sets such as box plot, histograms, stem plot, bar chart, pie charts, etc.",
+          "4. Apply concepts of descriptive statistics (Mean, Median, Mode) to solve problems.",
+          "5. Calculate Measures of location and Dispersion, and study correlation coefficient and interpret it meaning.",
+          "6. Learn basic concepts of Probability and random variables, and different rules of probability and learn how to apply them.",
+          "7. Understands the Empirical rule and Tchebysheff’s Theorem and its applications.",
+          "8. Learn how to find the Probabilities of discrete and continuous random variables using formula and statistical tables.",
+          "9. An understanding of Central Limit Theorem, and the difference between point and interval estimation",
+          "10. Understanding sampling distribution and estimating single population parameters."
+        ]
+      },
+      "teaching_modes": {
+        "marked": [
+          { "no": 1, "mode": "Traditional classroom", "contact_hours_text": "60", "percentage": "100%" }
+        ],
+        "not_marked": ["E-learning", "Hybrid", "Distance learning"],
+        "not_marked_documented_value": null
+      },
+      "contact_hours": {
+        "activities": [
+          { "activity": "Lectures", "contact_hours": 45 },
+          { "activity": "Laboratory/Studio", "contact_hours": null },
+          { "activity": "Field", "contact_hours": null },
+          { "activity": "Tutorial", "contact_hours": 15 },
+          { "activity": "Others (specify)", "contact_hours": null }
+        ],
+        "documented_total": 60,
+        "computed_total": 60
+      },
+      "clo_alignment_framework": {
+        "column_heading": "Code of CLOs aligned with program",
+        "note": "Alignment values are ILO codes, exactly as documented (some rows list bare numbers after the first code, e.g. 'ILO 1, 2, 3')."
+      },
+      "clos": [
+        {
+          "code": "1.1",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Distinguish between Population and sample; parameter and statistic, and Types of variables in given scenarios, Recognize types of sampling designs",
+          "program_alignment_text": "ILO 1",
+          "program_alignment_codes": ["ILO 1"],
+          "teaching_strategies": ["Lecture, PowerPoint Presentation, Group Discussion"],
+          "assessment_methods": ["Quizzes, Online Homework, Major Exams, Final Exam"]
+        },
+        {
+          "code": "1.2",
+          "nqf_domain": "Knowledge and understanding",
+          "clo_text": "Demonstrate the ability to apply concepts of descriptive statistics and correlation, basic concepts of Probability, and random variables. An understanding of Empirical and Tchebysheff’s Theorem, sampling error, and the importance of the Central Limit Theorem. Difference between point and interval estimation",
+          "program_alignment_text": "ILO 1, 2, 3",
+          "teaching_strategies": ["Lecture, PowerPoint Presentation, Group Discussion"],
+          "assessment_methods": ["Quizzes, Online Homework, Major Exams, Final Exam"]
+        },
+        {
+          "code": "2.1",
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate Measures of location and Dispersion (mean, median, mode, quartile, percentiles, variance, and z-scores. Simple events, complementary events, union, intersection, and Law of total probability. Probabilities of discrete probability and continuous Probability distributions using a calculator and statistical tables. Point and Interval estimate for a single parameter",
+          "program_alignment_text": "ILO 1, 2",
+          "teaching_strategies": ["Group Discussion, lectures Tutorials, Problem-solving sessions, Computer lab"],
+          "assessment_methods": ["Quizzes, Online Homework, Major Exams, Final Exam", "Use of Excel in Lab"]
+        },
+        {
+          "code": "2.2",
+          "nqf_domain": "Skills",
+          "clo_text": "Interpret graphical summary of data sets such as box plots, histograms, and stem plots. Summary statistics (measures of location and dispersion). Z-scores, Empirical, Tchebycheff how they are applied in decision-making.",
+          "program_alignment_text": "ILO 1,2",
+          "teaching_strategies": ["Group Discussion, lectures Tutorials, Problem-solving sessions, Computer lab"],
+          "assessment_methods": ["Quizzes, Online Homework, Major Exams, Final Exam", "Use of Excel in Lab"]
+        },
+        {
+          "code": "2.3",
+          "nqf_domain": "Skills",
+          "clo_text": "Formulate and Develop research study through survey and group projects using Data Analysis Tool Pak and Statcrunch of MyStatLab data according to the appropriate need of the statistical tools.",
+          "program_alignment_text": "ILO 2,4,5,6",
+          "teaching_strategies": ["Problem-solving sessions doing Projects and using Excel in the lab to solve problems"],
+          "assessment_methods": ["Writing Project and project presentation"]
+        }
+      ],
+      "course_content": {
+        "topics": [
+          { "topic_number": 1, "topic_title": "The Where, Why, and How of Data Collection", "contact_hours": 5, "contact_hours_documented_text": "5 hours", "topic_number_documented": false },
+          { "topic_number": 2, "topic_title": "Graphs, Charts, and Tables—Describing Your Data", "contact_hours": 9, "contact_hours_documented_text": "9 hours", "topic_number_documented": false },
+          { "topic_number": 3, "topic_title": "Introduction to and Correlation Analysis", "contact_hours": 4, "contact_hours_documented_text": "4 hours" },
+          { "topic_number": 4, "topic_title": "Describing Data Using Numerical Measures", "contact_hours": 7, "contact_hours_documented_text": "7 hours" },
+          { "topic_number": 5, "topic_title": "Introduction to Probability", "contact_hours": 5, "contact_hours_documented_text": "5 hours" },
+          { "topic_number": 6, "topic_title": "Discrete Probability Distributions", "contact_hours": 8, "contact_hours_documented_text": "8 hours" },
+          { "topic_number": 7, "topic_title": "Introduction to Continuous Probability Distributions", "contact_hours": 7, "contact_hours_documented_text": "7 hours" },
+          { "topic_number": 8, "topic_title": "Introduction to Sampling Distributions", "contact_hours": 8, "contact_hours_documented_text": "8 hours" },
+          { "topic_number": 9, "topic_title": "Estimating Single Population Parameters", "contact_hours": 7, "contact_hours_documented_text": "7 hours" }
+        ],
+        "documented_total_contact_hours": 60,
+        "computed_total_contact_hours": 60,
+        "totals_match": true
+      },
+      "assessment_activities": {
+        "activities": [
+          { "no": 1, "activity": "First Quiz", "timing": "Week 4", "percentage": "3 %", "no_documented": false },
+          { "no": 2, "activity": "First Major Test", "timing": "Week 7", "percentage": "20 %", "no_documented": false },
+          { "no": 3, "activity": "Second Quiz", "timing": "Week 9", "percentage": "3 %", "no_documented": false },
+          { "no": 4, "activity": "Second Major Test", "timing": "Week 12", "percentage": "20 %" },
+          { "no": 5, "activity": "Group Project", "timing": "Week 7", "percentage": "5 %" },
+          { "no": 6, "activity": "Online Home works + participation", "timing": "Spread throughout the term", "percentage": "4+5=9%" },
+          { "no": 7, "activity": "Final Exam", "timing": "Final Exam", "percentage": "40%" }
+        ],
+        "documented_total_percentage": "100%",
+        "computed_total_percentage": 100
+      },
+      "learning_resources": {
+        "essential_references": ["Business Statistics A Decision Making approach-Tenth Edition", "By D. Groebner, P. Shannon and P. Fry"],
+        "supportive_references": [
+          "Statistics for Business by Farouk Benghezi. Arab world Edition",
+          "Probability & statistics for engineers & scientists (9th edition.) by Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K."
+        ],
+        "electronic_materials": ["LMS. My mathlab, Excel, statcrunch,"],
+        "other_learning_materials": ["None"],
+        "required_facilities_and_equipment": {
+          "facilities": ["Classrooms with whiteboard and smartboard with projectors for power point presentation, also computer lab with at least 20 computers"],
+          "technology_equipment": ["1. Whiteboard", "2. Projector", "3. Desktop computer with smartboard", "4. Excel\\ Statcrunch"],
+          "other_equipment": ["None"]
+        }
+      },
+      "quality_assurance": {
+        "assessment_of_course_quality": [
+          { "area": "Effectiveness of teaching", "assessors": ["1. Course coordinator", "2. Peers", "3. Students"], "assessment_methods": ["Class observation", "Faculty Evaluation", "Peer Review", "Course evaluation survey (Indirect)"] },
+          { "area": "Effectiveness of Students assessment", "assessors": ["Course Instructor"], "assessment_methods": ["Course Report:", "Grade Report Analysis", "Course Evaluation Survey (Indirect)"] },
+          { "area": "Quality of learning resources", "assessors": ["Course Instructor", "Students"], "assessment_methods": ["Course report", "Course Evaluation Survey (Indirect)"] },
+          { "area": "The extent to which CLOs have been achieved", "assessors": ["Course Instructor", "Students"], "assessment_methods": ["CLO Assessment Analysis", "Course Exit Survey (Indirect)", "Course evaluation survey (Indirect)"] }
+        ],
+        "specification_approval": {
+          "council_committee": null,
+          "reference_no": "2nd Meeting in Academic Year 2023",
+          "date": "October 26, 2023"
+        }
+      },
+      "source_documents": [
+        { "filename": "CS STAT101 Term231.docx", "document_type": "NCAAA Course Specification", "version": "Third Version", "last_revision_date": "26/10/2023" },
+        { "filename": "EE New Brochure Term 252.docx", "document_type": "Official program brochure", "brochure_term": "Term 252" }
+      ],
+      "source_notes": [
+        "Prerequisite discrepancy: the Course Specification states 'Math002, Calculus 1, Math 101' while the current EE brochure states MATH 111. Both values are preserved; the brochure value governs the EE program.",
+        "The specification's co-requisites cell is blank; 'specification_corequisite_text' is null rather than assuming 'None'.",
+        "The Course Specification lists the serving programs as 'CS, IS, SE, ACC, MKT, FIN, AV.MGT, CE, PE, CME' and does not name the current EE program. The EE brochure explicitly includes STAT 101 as a College Requirement, so the course is in scope.",
+        "The 'Values, autonomy, and responsibility' domain is documented with blank CLO rows; no CLOs were invented for it.",
+        "Alignment cells for CLOs 1.2, 2.1, 2.2 and 2.3 write only the first code with an 'ILO' prefix and list the rest as bare numbers (for example 'ILO 1, 2, 3'). The text is preserved verbatim in 'program_alignment_text' and deliberately not split into a codes array, because splitting would require inferring the intended prefix.",
+        "Course-content contact hours are documented with the word 'hours' appended; the verbatim text is kept in 'contact_hours_documented_text' alongside the numeric value."
+      ]
+    }
+  ],
+  "validation": {
+    "validated_on": "2026-09-05",
+    "expected_detailed_course_count": 9,
+    "actual_detailed_course_count": 9,
+    "course_codes": ["CHM101", "MATH111", "MATH113", "MATH215", "MATH223", "MATH225", "PHY105", "PHY205", "STAT101"],
+    "duplicate_normalized_course_codes": [],
+    "total_clos_documented": 49,
+    "clo_counts_by_course": {
+      "CHM101": 7,
+      "MATH111": 6,
+      "MATH113": 5,
+      "MATH215": 6,
+      "MATH223": 5,
+      "MATH225": 3,
+      "PHY105": 6,
+      "PHY205": 6,
+      "STAT101": 5
+    },
+    "program_credit_hours_total_for_these_nine": 30,
+    "abet_so_pi_mappings_present": false,
+    "abet_so_pi_mappings_note": "None of these Course Specifications document ABET Student Outcomes, Performance Indicators or I/P/M performance levels. No such mapping has been inferred or added.",
+    "fields_not_reliably_extractable": [
+      { "course_code": "MATH215", "field": "specification_credit_hours", "reason": "The specification's credit-hours field is an unfilled placeholder '( ……… )'." },
+      { "course_code": "MATH111", "field": "clos[*].teaching_strategies and clos[*].assessment_methods", "reason": "Both columns are blank for every CLO in the specification." },
+      { "course_code": "MATH113", "field": "clos[*].teaching_strategies and clos[*].assessment_methods", "reason": "Both columns are blank for every CLO in the specification." },
+      { "course_code": "STAT101", "field": "clos[*].program_alignment_codes", "reason": "Alignment cells mix a prefixed code with bare numbers; splitting into discrete codes would require inference." },
+      { "course_code": "MATH111", "field": "course_content.documented_total_contact_hours", "reason": "The Course Content total cell is blank." },
+      { "course_code": "MATH225", "field": "course_content.documented_total_contact_hours", "reason": "The Course Content total cell is blank." },
+      { "course_code": "PHY105", "field": "course_content.documented_total_contact_hours", "reason": "The Course Content total cell is blank." },
+      { "course_code": "MATH111", "field": "contact_hours.documented_total", "reason": "The Contact Hours total cell is blank." },
+      { "course_code": "MATH225", "field": "contact_hours.documented_total", "reason": "The Contact Hours total cell is blank." },
+      { "course_code": "PHY105", "field": "specification_course_type", "reason": "No option is marked in either row of the course-type table." },
+      { "course_code": "STAT101", "field": "specification_course_type.level_marked", "reason": "No option is marked in the University/College/Department/Track/Others row." },
+      { "course_code": "STAT101", "field": "specification_corequisite_text", "reason": "The co-requisites cell is blank." },
+      { "course_code": "ALL", "field": "quality_assurance.specification_approval.council_committee", "reason": "The Council/Committee cell is blank in every one of the nine specifications." }
+    ]
+  }
+}

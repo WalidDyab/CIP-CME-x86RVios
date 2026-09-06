@@ -39,7 +39,7 @@
     {
       "academic_year": "2026-27",
       "semesters": [
-        {"term": "T261", "statuses": {"SO1": "A", "SO3": "A", "SO2": "E/C", "SO4": "E/C"}},
+        {"term": "T261", "statuses": {"SO1": "A", "SO3": "A", "SO2": "A", "SO4": "A"}},
         {"term": "T262", "statuses": {"SO1": "A", "SO3": "A", "SO2": "C", "SO4": "C"}}
       ]
     },

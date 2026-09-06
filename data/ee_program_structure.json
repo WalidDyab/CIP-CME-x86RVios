@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0",
+  "program": "Bachelor of Science in Electrical Engineering",
+  "generated_on": "2026-09-05",
+  "source": {
+    "primary_source_document": "EE New Brochure Term 252.docx",
+    "source_type": "Official program brochure",
+    "brochure_term": "Term 252",
+    "institution": "Prince Sultan University",
+    "college": "College of Engineering",
+    "authority_note": "The EE brochure is the authoritative source for this file: inclusion in the current EE program, requirement category, program credit hours, EE-program prerequisite structure, total credits, academic-plan year/semester placement, and capstone/core/elective/field-experience classification.",
+    "extraction_notes": [
+      "Course codes are normalized to a machine-readable form without spaces (for example 'MATH111'); the brochure spelling is preserved in 'display_code' and 'source_code_text'.",
+      "Prerequisite cells are preserved verbatim in 'prerequisite_text'. Course-code prerequisites are additionally normalized into 'prerequisites'; non-course conditions such as credit-hour thresholds are placed in 'prerequisite_conditions'.",
+      "A brochure prerequisite cell containing only '-' means no prerequisite; it is represented as an empty 'prerequisites' array with 'prerequisite_text' set to '-'.",
+      "In the brochure Year 4 Second Semester table, EE 492 occupies a single vertically merged block worth 10 credit hours; it is represented here as one course, not repeated rows.",
+      "Only formatting artifacts (repeated whitespace, paragraph breaks inside a single table cell) were normalized. No academic wording was rewritten."
+    ]
+  },
+  "program_summary": {
+    "degree_awarded": "Bachelor of Science (BS) in Electrical Engineering",
+    "total_credit_hours": 138,
+    "brochure_statement": "A Bachelor of Science (BS) in Electrical Engineering is awarded upon successful completion of 138 credit hours. This includes 3 credits of capstone project, 6 credits of technical electives, and 10 credits of field experience."
+  },
+  "program_educational_objectives": {
+    "preamble": "Graduates of the Bachelor of Science in Electrical Engineering are expected, within a few years of graduation, to have demonstrated:",
+    "statements": [
+      "EE graduates will apply electrical engineering knowledge and skills to design solutions, solve complex problems, and pursue graduate studies and research, demonstrating creativity and innovation.",
+      "EE graduates will uphold ethical standards, commit to sustainability, and pursue lifelong learning.",
+      "EE graduates will demonstrate leadership, critical thinking, decision-making, and teamwork, contributing positively to their organizations and society."
+    ]
+  },
+  "credit_distribution": {
+    "source_table": "PROGRAM STRUCTURE",
+    "categories": [
+      { "category_id": "university_requirements", "course_type": "UNIVERSITY REQUIREMENTS", "credit_hours": 23 },
+      { "category_id": "college_requirements", "course_type": "COLLEGE REQUIREMENTS", "credit_hours": 51 },
+      { "category_id": "capstone_project", "course_type": "CAPSTONE PROJECT", "credit_hours": 3 },
+      { "category_id": "program_core_requirements", "course_type": "PROGRAM CORE REQUIREMENTS", "credit_hours": 45 },
+      { "category_id": "program_elective_requirements", "course_type": "PROGRAM ELECTIVE REQUIREMENTS", "credit_hours": 6 },
+      { "category_id": "field_experience", "course_type": "FIELD EXPERIENCE", "credit_hours": 10 }
+    ],
+    "brochure_total": 138,
+    "program_requirements_subtotal": {
+      "brochure_heading": "PROGRAM REQUIREMENTS (61 Credits)",
+      "credit_hours": 61,
+      "comprises": ["program_core_requirements", "program_elective_requirements", "field_experience"]
+    }
+  },
+  "requirement_categories": [
+    {
+      "category_id": "university_requirements",
+      "category_name": "University Requirements",
+      "brochure_heading": "UNIVERSITY REQUIREMENTS (23 Credits)",
+      "brochure_credit_hours": 23,
+      "courses": [
+        { "course_code": "ENG101", "display_code": "ENG 101", "source_code_text": "ENG 101", "course_title": "Intensive Writing", "credits": 3, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "ISC101", "display_code": "ISC 101", "source_code_text": "ISC 101", "course_title": "Islamic Ethics", "credits": 2, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "COM201", "display_code": "COM 201", "source_code_text": "COM 201", "course_title": "Communication Skills", "credits": 3, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "ISC103", "display_code": "ISC 103", "source_code_text": "ISC 103", "course_title": "Islamic Economic System", "credits": 2, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "ARAB101", "display_code": "ARAB 101", "source_code_text": "ARAB 101", "course_title": "Arabic Writing I", "credits": 2, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "ISC105", "display_code": "ISC 105", "source_code_text": "ISC 105", "course_title": "Studies of The Holy Quran", "credits": 2, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "ISC203", "display_code": "ISC 203", "source_code_text": "ISC 203", "course_title": "Contemporary Financial Transactions", "credits": 2, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "ARAB103", "display_code": "ARAB 103", "source_code_text": "ARAB 103", "course_title": "Arabic Writing II", "credits": 2, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "ARAB203", "display_code": "ARAB 203", "source_code_text": "ARAB 203", "course_title": "Arabic Writing III", "credits": 2, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "PSY101", "display_code": "PSY 101", "source_code_text": "PSY 101", "course_title": "Introduction to Psychology", "credits": 3, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] }
+      ]
+    },
+    {
+      "category_id": "college_requirements",
+      "category_name": "College Requirements",
+      "brochure_heading": "COLLEGE REQUIREMENTS (51 Credits)",
+      "brochure_credit_hours": 51,
+      "detail_note": "Courses carrying 'detail_source' have a full NCAAA Course Specification record in the referenced file, keyed by 'detail_course_code'.",
+      "courses": [
+        { "course_code": "MATH111", "display_code": "MATH 111", "source_code_text": "MATH 111", "course_title": "Calculus I", "credits": 3, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "MATH111" },
+        { "course_code": "MATH113", "display_code": "MATH 113", "source_code_text": "MATH 113", "course_title": "Calculus II", "credits": 3, "prerequisite_text": "MATH 111", "prerequisites": ["MATH111"], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "MATH113" },
+        { "course_code": "MATH215", "display_code": "MATH 215", "source_code_text": "MATH 215", "course_title": "Engineering Mathematics", "credits": 3, "prerequisite_text": "MATH 113", "prerequisites": ["MATH113"], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "MATH215" },
+        { "course_code": "MATH225", "display_code": "MATH 225", "source_code_text": "MATH 225", "course_title": "Differential Equations", "credits": 3, "prerequisite_text": "MATH 113", "prerequisites": ["MATH113"], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "MATH225" },
+        { "course_code": "MATH223", "display_code": "MATH 223", "source_code_text": "MATH 223", "course_title": "Linear Algebra", "credits": 3, "prerequisite_text": "MATH 113", "prerequisites": ["MATH113"], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "MATH223" },
+        { "course_code": "PHY105", "display_code": "PHY 105", "source_code_text": "PHY 105", "course_title": "Physics I", "credits": 4, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "PHY105" },
+        { "course_code": "PHY205", "display_code": "PHY 205", "source_code_text": "PHY 205", "course_title": "Physics II", "credits": 4, "prerequisite_text": "PHY 105", "prerequisites": ["PHY105"], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "PHY205" },
+        { "course_code": "CHM101", "display_code": "CHM 101", "source_code_text": "CHM 101", "course_title": "General Chemistry", "credits": 4, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "CHM101" },
+        { "course_code": "STAT101", "display_code": "STAT 101", "source_code_text": "STAT 101", "course_title": "Introduction to Statistics and Probability Theory", "credits": 3, "prerequisite_text": "MATH 111", "prerequisites": ["MATH111"], "prerequisite_conditions": [], "detail_source": "ee_college_courses.json", "detail_course_code": "STAT101" },
+        { "course_code": "ENG301", "display_code": "ENG 301", "source_code_text": "ENG 301", "course_title": "Technical Writing and Translation", "credits": 3, "prerequisite_text": "ENG 101", "prerequisites": ["ENG101"], "prerequisite_conditions": [] },
+        { "course_code": "ETHC305", "display_code": "ETHC 305", "source_code_text": "ETHC 305", "course_title": "Ethical and Social Aspects of Engineering", "credits": 2, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "EM326", "display_code": "EM 326", "source_code_text": "EM 326", "course_title": "Project Management", "credits": 3, "prerequisite_text": "STAT 101", "prerequisites": ["STAT101"], "prerequisite_conditions": [] },
+        { "course_code": "EM327", "display_code": "EM 327", "source_code_text": "EM 327", "course_title": "Engineering Economy", "credits": 3, "prerequisite_text": "MATH 113", "prerequisites": ["MATH113"], "prerequisite_conditions": [] },
+        { "course_code": "CEE101", "display_code": "CEE 101", "source_code_text": "CEE 101", "course_title": "Engineering Drawing", "credits": 3, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] },
+        { "course_code": "CEE205", "display_code": "CEE 205", "source_code_text": "CEE 205", "course_title": "Introduction to Engineering Design", "credits": 3, "prerequisite_text": "CEE 101", "prerequisites": ["CEE101"], "prerequisite_conditions": [] },
+        { "course_code": "EE101", "display_code": "EE 101", "source_code_text": "EE 101", "course_title": "Computer Programming for Engineering", "credits": 4, "prerequisite_text": "-", "prerequisites": [], "prerequisite_conditions": [] }
+      ]
+    },
+    {
+      "category_id": "capstone_project",
+      "category_name": "Capstone Project",
+      "brochure_heading": "CAPSTONE PROJECT (3 Credits)",
+      "brochure_credit_hours": 3,
+      "courses": [
+        {
+          "course_code": "EE490",
+          "display_code": "EE 490",
+          "source_code_text": "EE 490",
+          "course_title": "Senior Design Project",
+          "credits": 3,
+          "prerequisite_text": "CEE 205, ENG 301, Completion of 90 credit hours",
+          "prerequisites": ["CEE205", "ENG301"],
+          "prerequisite_conditions": ["Completion of 90 credit hours"],
+          "corequisite_text": "ETHC 305",
+          "corequisites": ["ETHC305"]
+        }
+      ]
+    },
+    {
+      "category_id": "program_core_requirements",
+      "category_name": "Program Core Requirements",
+      "brochure_heading": "Core Courses (45 Credits)",
+      "brochure_credit_hours": 45,
+      "courses": [
+        { "course_code": "EE201", "display_code": "EE 201", "source_code_text": "EE 201", "course_title": "Introduction to Circuits", "credits": 4, "prerequisite_text": "PHY 205, MATH 113", "prerequisites": ["PHY205", "MATH113"], "prerequisite_conditions": [] },
+        { "course_code": "EE211", "display_code": "EE 211", "source_code_text": "EE 211", "course_title": "Electronic Fundamentals", "credits": 4, "prerequisite_text": "EE 201", "prerequisites": ["EE201"], "prerequisite_conditions": [] },
+        { "course_code": "EE221", "display_code": "EE 221", "source_code_text": "EE 221", "course_title": "Logic Design", "credits": 4, "prerequisite_text": "EE 101", "prerequisites": ["EE101"], "prerequisite_conditions": [] },
+        { "course_code": "EE231", "display_code": "EE 231", "source_code_text": "EE 231", "course_title": "Signals and Systems", "credits": 3, "prerequisite_text": "MATH 225, EE 201", "prerequisites": ["MATH225", "EE201"], "prerequisite_conditions": [] },
+        { "course_code": "EE202", "display_code": "EE 202", "source_code_text": "EE 202", "course_title": "Circuit Analysis", "credits": 3, "prerequisite_text": "MATH 225, EE 201", "prerequisites": ["MATH225", "EE201"], "prerequisite_conditions": [] },
+        { "course_code": "EE312", "display_code": "EE 312", "source_code_text": "EE 312", "course_title": "Electronic Engineering", "credits": 3, "prerequisite_text": "EE 211", "prerequisites": ["EE211"], "prerequisite_conditions": [] },
+        { "course_code": "EE322", "display_code": "EE 322", "source_code_text": "EE 322", "course_title": "Microprocessors Design", "credits": 4, "prerequisite_text": "EE 211, EE 221, CEE 205", "prerequisites": ["EE211", "EE221", "CEE205"], "prerequisite_conditions": [] },
+        { "course_code": "EE341", "display_code": "EE 341", "source_code_text": "EE 341", "course_title": "Electromagnetics Fundamental", "credits": 3, "prerequisite_text": "MATH 215, MATH 225, EE 201", "prerequisites": ["MATH215", "MATH225", "EE201"], "prerequisite_conditions": [] },
+        { "course_code": "EE332", "display_code": "EE 332", "source_code_text": "EE 332", "course_title": "Control Systems", "credits": 3, "prerequisite_text": "MATH 223, EE 231", "prerequisites": ["MATH223", "EE231"], "prerequisite_conditions": [] },
+        { "course_code": "EE351", "display_code": "EE 351", "source_code_text": "EE 351", "course_title": "Communication Systems", "credits": 4, "prerequisite_text": "EE 211, EE 231", "prerequisites": ["EE211", "EE231"], "prerequisite_conditions": [] },
+        { "course_code": "EE305", "display_code": "EE 305", "source_code_text": "EE 305", "course_title": "Power Electronics", "credits": 4, "prerequisite_text": "EE 211", "prerequisites": ["EE211"], "prerequisite_conditions": [] },
+        { "course_code": "EE304", "display_code": "EE 304", "source_code_text": "EE 304", "course_title": "Electrical Machines", "credits": 3, "prerequisite_text": "EE 202, EE 341", "prerequisites": ["EE202", "EE341"], "prerequisite_conditions": [] },
+        { "course_code": "EE403", "display_code": "EE 403", "source_code_text": "EE 403", "course_title": "Power Systems", "credits": 3, "prerequisite_text": "EE 304", "prerequisites": ["EE304"], "prerequisite_conditions": [] }
+      ]
+    },
+    {
+      "category_id": "program_elective_requirements",
+      "category_name": "Program Elective Requirements",
+      "brochure_heading": "Elective Courses (6 Credits)",
+      "brochure_credit_hours": 6,
+      "selection_rule": {
+        "brochure_statement": "Student should take two courses only from the following technical electives:",
+        "courses_to_select": 2,
+        "credits_per_course": 3,
+        "total_credits": 6
+      },
+      "courses": [
+        { "course_code": "EE414", "display_code": "EE 414", "source_code_text": "EE 414", "course_title": "Electrical and Electronic Measurements", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE415", "display_code": "EE 415", "source_code_text": "EE 415", "course_title": "Opto-Electronics", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE416", "display_code": "EE 416", "source_code_text": "EE 416", "course_title": "VLSI Circuits Design", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE417", "display_code": "EE 417", "source_code_text": "EE 417", "course_title": "Communications Electronics", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE423", "display_code": "EE 423", "source_code_text": "EE 423", "course_title": "Data Communication Networks", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE424", "display_code": "EE 424", "source_code_text": "EE 424", "course_title": "Digital Communications", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE425", "display_code": "EE 425", "source_code_text": "EE 425", "course_title": "Wireless Communications Systems", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE426", "display_code": "EE 426", "source_code_text": "EE 426", "course_title": "Antenna and Wave Propagation", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE433", "display_code": "EE 433", "source_code_text": "EE 433", "course_title": "Mechatronics", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE434", "display_code": "EE 434", "source_code_text": "EE 434", "course_title": "PLC Microcontrollers", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE435", "display_code": "EE 435", "source_code_text": "EE 435", "course_title": "Robotics and Automation", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE436", "display_code": "EE 436", "source_code_text": "EE 436", "course_title": "Artificial Intelligence", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE442", "display_code": "EE 442", "source_code_text": "EE 442", "course_title": "Digital Signal Processing", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE454", "display_code": "EE 454", "source_code_text": "EE 454", "course_title": "Power System Planning", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE456", "display_code": "EE 456", "source_code_text": "EE 456", "course_title": "Renewable Energy Engineering", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] },
+        { "course_code": "EE499", "display_code": "EE 499", "source_code_text": "EE 499", "course_title": "Special Topics in Electrical and Electronic Engineering", "credits": 3, "prerequisite_text": "Completion of 90 credit hours", "prerequisites": [], "prerequisite_conditions": ["Completion of 90 credit hours"] }
+      ]
+    },
+    {
+      "category_id": "field_experience",
+      "category_name": "Field Experience",
+      "brochure_heading": "Field Experience (10 Credits)",
+      "brochure_credit_hours": 10,
+      "courses": [
+        {
+          "course_code": "EE492",
+          "display_code": "EE 492",
+          "source_code_text": "EE 492",
+          "course_title": "Cooperative Training",
+          "credits": 10,
+          "prerequisite_text": "Completion of 128 credit hours",
+          "prerequisites": [],
+          "prerequisite_conditions": ["Completion of 128 credit hours"]
+        }
+      ]
+    }
+  ],
+  "study_plan": [
+    {
+      "year": 1,
+      "semesters": [
+        {
+          "semester": "First Semester",
+          "semester_index": 1,
+          "brochure_semester_total": 18,
+          "courses": [
+            { "course_code": "ENG101", "display_code": "ENG 101", "course_title": "Intensive Writing", "credit_hours": 3 },
+            { "course_code": "MATH111", "display_code": "MATH 111", "course_title": "Calculus I", "credit_hours": 3 },
+            { "course_code": "PHY105", "display_code": "PHY 105", "course_title": "Physics I", "credit_hours": 4 },
+            { "course_code": "CHM101", "display_code": "CHM 101", "course_title": "General Chemistry", "credit_hours": 4 },
+            { "course_code": "EE101", "display_code": "EE 101", "course_title": "Computer Programming for Engineering", "credit_hours": 4 }
+          ]
+        },
+        {
+          "semester": "Second Semester",
+          "semester_index": 2,
+          "brochure_semester_total": 18,
+          "courses": [
+            { "course_code": "ISC101", "display_code": "ISC 101", "course_title": "Islamic Ethics", "credit_hours": 2 },
+            { "course_code": "COM201", "display_code": "COM 201", "course_title": "Communication Skills", "credit_hours": 3 },
+            { "course_code": "MATH113", "display_code": "MATH 113", "course_title": "Calculus II", "credit_hours": 3 },
+            { "course_code": "PHY205", "display_code": "PHY 205", "course_title": "Physics II", "credit_hours": 4 },
+            { "course_code": "STAT101", "display_code": "STAT 101", "course_title": "Introduction to Statistics and Probability Theory", "credit_hours": 3 },
+            { "course_code": "CEE101", "display_code": "CEE 101", "course_title": "Engineering Drawing", "credit_hours": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "semesters": [
+        {
+          "semester": "First Semester",
+          "semester_index": 1,
+          "brochure_semester_total": 19,
+          "courses": [
+            { "course_code": "ARAB101", "display_code": "ARAB 101", "course_title": "Arabic Writing I", "credit_hours": 2 },
+            { "course_code": "MATH215", "display_code": "MATH 215", "course_title": "Engineering Mathematics", "credit_hours": 3 },
+            { "course_code": "MATH225", "display_code": "MATH 225", "course_title": "Differential Equations", "credit_hours": 3 },
+            { "course_code": "CEE205", "display_code": "CEE 205", "course_title": "Introduction to Engineering Design", "credit_hours": 3 },
+            { "course_code": "EE201", "display_code": "EE 201", "course_title": "Introduction to Circuits", "credit_hours": 4 },
+            { "course_code": "EE221", "display_code": "EE 221", "course_title": "Logic Design", "credit_hours": 4 }
+          ]
+        },
+        {
+          "semester": "Second Semester",
+          "semester_index": 2,
+          "brochure_semester_total": 18,
+          "courses": [
+            { "course_code": "ARAB103", "display_code": "ARAB 103", "course_title": "Arabic Writing II", "credit_hours": 2 },
+            { "course_code": "MATH223", "display_code": "MATH 223", "course_title": "Linear Algebra", "credit_hours": 3 },
+            { "course_code": "EM327", "display_code": "EM 327", "course_title": "Engineering Economy", "credit_hours": 3 },
+            { "course_code": "EE211", "display_code": "EE 211", "course_title": "Electronic Fundamentals", "credit_hours": 4 },
+            { "course_code": "EE231", "display_code": "EE 231", "course_title": "Signals and Systems", "credit_hours": 3 },
+            { "course_code": "EE202", "display_code": "EE 202", "course_title": "Circuit Analysis", "credit_hours": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 3,
+      "semesters": [
+        {
+          "semester": "First Semester",
+          "semester_index": 1,
+          "brochure_semester_total": 19,
+          "courses": [
+            { "course_code": "ISC103", "display_code": "ISC 103", "course_title": "Islamic Economic System", "credit_hours": 2 },
+            { "course_code": "ENG301", "display_code": "ENG 301", "course_title": "Technical Writing and Translation", "credit_hours": 3 },
+            { "course_code": "EE312", "display_code": "EE 312", "course_title": "Electronic Engineering", "credit_hours": 3 },
+            { "course_code": "EE322", "display_code": "EE 322", "course_title": "Microprocessors Design", "credit_hours": 4 },
+            { "course_code": "EE341", "display_code": "EE 341", "course_title": "Electromagnetics Fundamental", "credit_hours": 3 },
+            { "course_code": "EE351", "display_code": "EE 351", "course_title": "Communication Systems", "credit_hours": 4 }
+          ]
+        },
+        {
+          "semester": "Second Semester",
+          "semester_index": 2,
+          "brochure_semester_total": 19,
+          "courses": [
+            { "course_code": "ISC105", "display_code": "ISC 105", "course_title": "Studies of The Holy Quran", "credit_hours": 2 },
+            { "course_code": "ISC203", "display_code": "ISC 203", "course_title": "Contemporary Financial Transactions", "credit_hours": 2 },
+            { "course_code": "ARAB203", "display_code": "ARAB 203", "course_title": "Arabic Writing III", "credit_hours": 2 },
+            { "course_code": "EM326", "display_code": "EM 326", "course_title": "Project Management", "credit_hours": 3 },
+            { "course_code": "EE332", "display_code": "EE 332", "course_title": "Control Systems", "credit_hours": 3 },
+            { "course_code": "EE305", "display_code": "EE 305", "course_title": "Power Electronics", "credit_hours": 4 },
+            { "course_code": "EE304", "display_code": "EE 304", "course_title": "Electrical Machines", "credit_hours": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 4,
+      "semesters": [
+        {
+          "semester": "First Semester",
+          "semester_index": 1,
+          "brochure_semester_total": 17,
+          "courses": [
+            { "course_code": "PSY101", "display_code": "PSY 101", "course_title": "Introduction to Psychology", "credit_hours": 3 },
+            { "course_code": "ETHC305", "display_code": "ETHC 305", "course_title": "Ethical and Social Aspects of Engineering", "credit_hours": 2 },
+            { "course_code": "EE403", "display_code": "EE 403", "course_title": "Power Systems", "credit_hours": 3 },
+            { "course_code": "EE4XX_ELECTIVE_1", "display_code": "EE 4xx", "course_title": "Elective 1", "credit_hours": 3, "is_elective_placeholder": true, "elective_category_id": "program_elective_requirements" },
+            { "course_code": "EE4XX_ELECTIVE_2", "display_code": "EE 4xx", "course_title": "Elective 2", "credit_hours": 3, "is_elective_placeholder": true, "elective_category_id": "program_elective_requirements" },
+            { "course_code": "EE490", "display_code": "EE 490", "course_title": "Senior Design Project", "credit_hours": 3 }
+          ]
+        },
+        {
+          "semester": "Second Semester",
+          "semester_index": 2,
+          "brochure_semester_total": 10,
+          "courses": [
+            { "course_code": "EE492", "display_code": "EE 492", "course_title": "Cooperative Training", "credit_hours": 10 }
+          ]
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "validated_on": "2026-09-05",
+    "category_credit_sum": 138,
+    "category_credit_sum_expression": "23 + 51 + 3 + 45 + 6 + 10 = 138",
+    "category_credit_sum_matches_brochure_total": true,
+    "category_course_credit_totals": {
+      "university_requirements": { "listed_course_credit_sum": 23, "brochure_credit_hours": 23, "matches": true, "course_count": 10 },
+      "college_requirements": { "listed_course_credit_sum": 51, "brochure_credit_hours": 51, "matches": true, "course_count": 16 },
+      "capstone_project": { "listed_course_credit_sum": 3, "brochure_credit_hours": 3, "matches": true, "course_count": 1 },
+      "program_core_requirements": { "listed_course_credit_sum": 45, "brochure_credit_hours": 45, "matches": true, "course_count": 13 },
+      "program_elective_requirements": { "listed_course_credit_sum": 48, "brochure_credit_hours": 6, "matches": false, "course_count": 16, "note": "The elective list is a menu of 16 approved 3-credit technical electives (48 credits if summed). The program requirement is 6 credits: students select two courses only. The 6-credit category total is therefore validated against the selection rule, not against the sum of the menu." },
+      "field_experience": { "listed_course_credit_sum": 10, "brochure_credit_hours": 10, "matches": true, "course_count": 1 }
+    },
+    "study_plan_semester_totals": [
+      { "year": 1, "semester": "First Semester", "computed_total": 18, "brochure_total": 18, "matches": true },
+      { "year": 1, "semester": "Second Semester", "computed_total": 18, "brochure_total": 18, "matches": true },
+      { "year": 2, "semester": "First Semester", "computed_total": 19, "brochure_total": 19, "matches": true },
+      { "year": 2, "semester": "Second Semester", "computed_total": 18, "brochure_total": 18, "matches": true },
+      { "year": 3, "semester": "First Semester", "computed_total": 19, "brochure_total": 19, "matches": true },
+      { "year": 3, "semester": "Second Semester", "computed_total": 19, "brochure_total": 19, "matches": true },
+      { "year": 4, "semester": "First Semester", "computed_total": 17, "brochure_total": 17, "matches": true },
+      { "year": 4, "semester": "Second Semester", "computed_total": 10, "brochure_total": 10, "matches": true }
+    ],
+    "study_plan_total": 138,
+    "study_plan_total_matches_program_total": true
+  }
+}
