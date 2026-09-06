@@ -16,7 +16,7 @@ const template = fs.readFileSync(path.join(root, 'templates/CLO-Revision-Report-
 async function main() {
   const reconciled = generator.reconcileAudit(audit, baseline, curriculum);
   assert.deepStrictEqual(reconciled.counts, {
-    baseline_clos:85, current_clos:95, unchanged:35, modified:43, renumbered:2,
+    baseline_clos:85, current_clos:95, unchanged:27, modified:51, renumbered:2,
     added:13, omitted:1, merge_cases:2, split_cases:0, ambiguous:0
   });
   assert(reconciled.relationships.some(item => item.type === 'added'));
@@ -34,8 +34,8 @@ async function main() {
   const ee211 = generator.reportForScope(reconciled, 'EE 211');
   const live211 = ee211.relationships.flatMap(item => item.current_clos).find(clo => clo.current_clo_id === '1.2');
   assert(live211.pi_codes.includes('PI31') && live211.pi_codes.includes('PI32') && live211.pi_codes.includes('PI33'));
-  const unchanged = generator.reportForScope(reconciled, 'EE 221');
-  assert.strictEqual(unchanged.selectedCourse.change_types.length, 0);
+  const ee221 = generator.reportForScope(reconciled, 'EE 221');
+  assert.deepStrictEqual(ee221.selectedCourse.change_types, ['modified']);
   assert.deepStrictEqual(generator.sortRelationships(ee403.relationships).flatMap(item=>item.current_clos.map(clo=>clo.current_clo_id)), ['1.1','1.2','2.1','2.2','2.3','3.1','3.2']);
 
   assert.throws(() => generator.reportForScope(reconciled, 'EE 999'), /cannot be found/);
@@ -64,7 +64,7 @@ async function main() {
     assert(section.includes('w:left="1008"') && section.includes('w:right="1008"'));
     assert(!xml.includes('&lt;w:p'), 'OOXML markup must not be rendered as visible table-cell text');
     if (scope === 'EE 403') assert(xml.includes('Skills · SO1 (PI12), SO2 (PI21, PI22)'));
-    if (scope === 'EE 221') assert(xml.includes('The CLO set is unchanged between Term 251 and Term 261.'));
+    if (scope === 'EE 221') assert(xml.includes('Describe fundamental concepts and representations of digital logic circuits.'));
     assert(packageZip.file('word/media/CME-CE-letter-background.png'));
     const header = await packageZip.file('word/header1.xml').async('string');
     assert(header.includes('CMEStationeryBackground') && header.includes('z-index:-251654144'));
