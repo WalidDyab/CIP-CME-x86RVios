@@ -212,7 +212,7 @@
           {
             "clo_number": 1.1,
             "nqf_domain": "Knowledge",
-            "clo_text": "Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.",
+          "clo_text": "Explain fundamental electrical concepts, quantities, and circuit elements.",
             "mapped_sos": [
               "SO1"
             ],
@@ -220,20 +220,19 @@
               "PI13"
             ],
             "teaching_strategy": [
-              "Flipped Classroom",
-              "Interactive Lectures"
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
             ],
             "assessment_methods": [
               "Quizzes",
               "Homework and Classwork Assignments",
-              "Major and Final Exams",
-              "Simulation/Computational Assignments"
+            "Major and Final Exams"
             ]
           },
           {
             "clo_number": 2.1,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
+          "clo_text": "Analyze DC circuits using fundamental circuit laws and network analysis techniques.",
             "mapped_sos": [
               "SO1"
             ],
@@ -247,14 +246,13 @@
             "assessment_methods": [
               "Quizzes",
               "Homework and Classwork Assignments",
-              "Major and Final Exams",
-              "Simulation/Computational Assignments"
+            "Major and Final Exams"
             ]
           },
           {
             "clo_number": 2.2,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.",
+          "clo_text": "Analyze AC circuits using phasor-based circuit and power analysis.",
             "mapped_sos": [
               "SO1"
             ],
@@ -262,12 +260,10 @@
               "PI13"
             ],
             "teaching_strategy": [
-              "Technical Communication Activities",
-              "Guided Problem Solving and Tutorials"
+            "Guided Problem Solving and Tutorials"
             ],
             "assessment_methods": [
-              "Oral Technical Presentation",
-              "Quizzes",
+            "Quizzes",
               "Homework and Classwork Assignments",
               "Major and Final Exams"
             ]
@@ -275,27 +271,22 @@
           {
             "clo_number": 2.3,
             "nqf_domain": "Skills",
-            "clo_text": "Investigate electric circuits through experiments and simulations",
-            "mapped_sos": [
-              "SO1",
-              "SO6"
-            ],
-            "pi_codes": [
-              "PI13",
-              "PI62",
+          "clo_text": "Investigate electric circuits through experimentation and simulation.",
+          "mapped_sos": [
+            "SO6"
+          ],
+          "pi_codes": [
+            "PI62",
               "PI63",
               "PI64"
             ],
             "teaching_strategy": [
-              "Laboratory Experimentation",
-              "Simulation and Computer-Based Learning",
-              "Guided Problem Solving and Tutorials"
+            "Simulation and Computer-Based Learning",
+            "Laboratory Experimentation"
             ],
             "assessment_methods": [
               "Laboratory Practical Assessment",
-              "Laboratory Reports",
-              "Simulation/Computational Assignments",
-              "Quizzes"
+            "Laboratory Reports"
             ]
           },
           {
@@ -323,7 +314,7 @@
           {
             "clo_number": 3.2,
             "nqf_domain": "Values",
-            "clo_text": "Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions",
+          "clo_text": "Evaluate ethical and professional responsibilities and broader impacts of electrical engineering decisions.",
             "mapped_sos": [
               "SO4"
             ],
@@ -332,16 +323,13 @@
               "PI42"
             ],
             "teaching_strategy": [
-              "Case-Based Learning and Technical Discussion",
-              "Design- and Project-Based Learning",
-              "Guided Problem Solving and Tutorials"
+            "Guided Problem Solving and Tutorials",
+            "Case-Based Learning and Technical Discussion"
             ],
             "assessment_methods": [
-              "Design Project Assignment",
-              "Homework and Classwork Assignments",
-              "Major and Final Exams",
-              "Quizzes",
-              "Simulation/Computational Assignments"
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
             ]
           }
         ],
@@ -634,47 +622,40 @@
           {
             "clo_number": 1.1,
             "nqf_domain": "Knowledge",
-            "clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices.",
+          "clo_text": "Describe fundamental concepts and representations of digital logic circuits.",
             "mapped_sos": [
               "SO1",
               "SO2"
             ],
             "pi_codes": [
-              "PI13",
-              "PI21"
+            "PI13"
             ],
             "teaching_strategy": [
-              "Design- and Project-Based Learning",
-              "Simulation and Computer-Based Learning",
-              "Interactive Lectures"
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
             ],
             "assessment_methods": [
-              "Simulation/Computational Assignments",
-              "Design Project Assignment",
-              "Quizzes",
-              "Homework and Classwork Assignments"
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
             ]
           },
           {
             "clo_number": 2.1,
             "nqf_domain": "Skills",
-            "clo_text": "Explain different binary number systems and arithmetic.",
-            "mapped_sos": [
-              "SO2",
-              "SO5"
-            ],
-            "pi_codes": [
-              "PI21",
-              "PI22",
-              "PI51"
-            ],
-            "teaching_strategy": [
-              "Design- and Project-Based Learning",
-              "Interactive Lectures"
-            ],
-            "assessment_methods": [
-              "Design Project Assignment",
-              "Quizzes",
+          "clo_text": "Apply number systems, codes, and binary arithmetic in digital computations.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Quizzes",
               "Homework and Classwork Assignments",
               "Major and Final Exams"
             ]
@@ -682,19 +663,19 @@
           {
             "clo_number": 2.2,
             "nqf_domain": "Skills",
-            "clo_text": "Explain Boolean expressions using Karnaugh Map.",
-            "mapped_sos": [
-              "SO2",
-              "SO5"
-            ],
-            "pi_codes": [
-              "PI23",
-              "PI51"
-            ],
-            "teaching_strategy": [
-              "Design- and Project-Based Learning",
-              "Interactive Lectures"
-            ],
+          "clo_text": "Simplify Boolean expressions using Boolean algebra and Karnaugh maps.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials",
+            "Laboratory Experimentation",
+            "Design- and Project-Based Learning"
+          ],
             "assessment_methods": [
               "Design Project Assignment",
               "Quizzes",
@@ -705,13 +686,14 @@
           {
             "clo_number": 2.3,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze and design combinational logic circuit.",
-            "mapped_sos": [
-              "SO6"
-            ],
-            "pi_codes": [
-              "PI62",
-              "PI63"
+          "clo_text": "Design combinational and sequential logic circuits.",
+          "mapped_sos": [
+            "SO2"
+          ],
+          "pi_codes": [
+            "PI22",
+            "PI23",
+            "PI24"
             ],
             "teaching_strategy": [
               "Laboratory Experimentation",
@@ -719,80 +701,71 @@
               "Guided Problem Solving and Tutorials"
             ],
             "assessment_methods": [
-              "Laboratory Practical Assessment",
-              "Laboratory Reports",
-              "Design Project Assignment",
-              "Quizzes",
-              "Homework and Classwork Assignments"
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Design Project Assignment",
+            "Laboratory Practical Assessment",
+            "Laboratory Reports"
             ]
           },
           {
             "clo_number": 2.4,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers.",
-            "mapped_sos": [
-              "SO6"
-            ],
-            "pi_codes": [
-              "PI62",
-              "PI63"
-            ],
-            "teaching_strategy": [
-              "Laboratory Experimentation",
-              "Design- and Project-Based Learning",
-              "Guided Problem Solving and Tutorials"
-            ],
-            "assessment_methods": [
-              "Laboratory Practical Assessment",
-              "Laboratory Reports",
-              "Design Project Assignment",
-              "Quizzes",
-              "Homework and Classwork Assignments"
+          "clo_text": "Analyze combinational and sequential logic circuits.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Guided Problem Solving and Tutorials"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
             ]
           },
           {
             "clo_number": 3.1,
             "nqf_domain": "Values",
-            "clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects.",
-            "mapped_sos": [
-              "SO6"
-            ],
-            "pi_codes": [
-              "PI64"
-            ],
-            "teaching_strategy": [
-              "Collaborative/Team-Based Learning",
-              "Laboratory Experimentation"
-            ],
-            "assessment_methods": [
-              "Laboratory Practical Assessment",
-              "Laboratory Reports",
-              "Teamwork/Peer Assessment",
-              "Simulation/Computational Assignments",
-              "Homework and Classwork Assignments"
+          "clo_text": "Collaborate effectively in teams during laboratory experiments and projects.",
+          "mapped_sos": [
+            "SO5"
+          ],
+          "pi_codes": [
+            "PI51"
+          ],
+          "teaching_strategy": [
+            "Collaborative/Team-Based Learning"
+          ],
+          "assessment_methods": [
+            "Teamwork/Peer Assessment"
             ]
           },
           {
             "clo_number": 3.2,
             "nqf_domain": "Values",
-            "clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects.",
+          "clo_text": "Investigate digital logic circuits experimentally using simulation tools and digital hardware.",
             "mapped_sos": [
               "SO6"
             ],
             "pi_codes": [
-              "PI64"
+            "PI62",
+            "PI63"
             ],
             "teaching_strategy": [
-              "Collaborative/Team-Based Learning",
-              "Laboratory Experimentation",
-              "Simulation and Computer-Based Learning"
+            "Simulation and Computer-Based Learning",
+            "Laboratory Experimentation",
+            "Design- and Project-Based Learning"
             ],
             "assessment_methods": [
-              "Laboratory Practical Assessment",
-              "Laboratory Reports",
-              "Simulation/Computational Assignments",
-              "Prototype/System Demonstration",
-              "Teamwork/Peer Assessment"
+            "Simulation/Computational Assignments",
+            "Prototype/System Demonstration",
+            "Laboratory Practical Assessment",
+            "Laboratory Reports"
             ]
           }
         ],
@@ -849,13 +822,12 @@
         "instructor": "Dr. Walid Dyab",
         "pi_levels": {
           "PI13": "I",
-          "PI21": "I",
           "PI22": "I",
           "PI23": "I",
+		  "PI24": "I",
           "PI51": "I",
           "PI62": "I",
-          "PI63": "I",
-          "PI64": "I"
+          "PI63": "I"
         }
       },
       {
@@ -1751,7 +1723,7 @@
           {
             "clo_number": 1.1,
             "nqf_domain": "Knowledge",
-            "clo_text": "Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.",
+          "clo_text": "Explain fundamental concepts of electric and magnetic fields.",
             "mapped_sos": [
               "SO1"
             ],
@@ -1759,20 +1731,19 @@
               "PI13"
             ],
             "teaching_strategy": [
-              "Flipped Classroom",
-              "Interactive Lectures"
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
             ],
             "assessment_methods": [
               "Quizzes",
               "Homework and Classwork Assignments",
-              "Major and Final Exams",
-              "Simulation/Computational Assignments"
+            "Major and Final Exams"
             ]
           },
           {
             "clo_number": 2.1,
             "nqf_domain": "Skills",
-            "clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
+          "clo_text": "Determine electrostatic and magnetostatic quantities using appropriate electromagnetic principles.",
             "mapped_sos": [
               "SO1"
             ],
@@ -1786,14 +1757,13 @@
             "assessment_methods": [
               "Quizzes",
               "Homework and Classwork Assignments",
-              "Major and Final Exams",
-              "Simulation/Computational Assignments"
+            "Major and Final Exams"
             ]
           },
           {
             "clo_number": 2.2,
             "nqf_domain": "Skills",
-            "clo_text": "Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.",
+          "clo_text": "Analyze time-varying electromagnetic fields using Maxwell’s equations.",
             "mapped_sos": [
               "SO1"
             ],
@@ -1807,20 +1777,18 @@
             "assessment_methods": [
               "Quizzes",
               "Homework and Classwork Assignments",
-              "Major and Final Exams",
-              "Simulation/Computational Assignments"
+            "Major and Final Exams"
             ]
           },
           {
             "clo_number": 2.3,
             "nqf_domain": "Skills",
-            "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
-            "mapped_sos": [
-              "SO3"
-            ],
-            "pi_codes": [
-              "PI31",
-              "PI32"
+          "clo_text": "Solve electromagnetic field problems involving material media and boundary conditions.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
             ],
             "teaching_strategy": [
               "Guided Problem Solving and Tutorials",
@@ -1829,31 +1797,26 @@
             "assessment_methods": [
               "Quizzes",
               "Homework and Classwork Assignments",
-              "Major and Final Exams",
-              "Simulation/Computational Assignments"
+            "Major and Final Exams"
             ]
           },
           {
             "clo_number": 2.4,
             "nqf_domain": "Skills",
-            "clo_text": "Present an oral technical presentation on an electromagnetics application",
+          "clo_text": "Communicate electromagnetics information using appropriate engineering representations.",
             "mapped_sos": [
               "SO3"
             ],
             "pi_codes": [
-              "PI32",
-              "PI33"
+            "PI31",
+            "PI32",
+            "PI33"
             ],
             "teaching_strategy": [
-              "Technical Communication Activities",
-              "Interactive Lectures",
-              "Guided Problem Solving and Tutorials"
+            "Technical Communication Activities"
             ],
             "assessment_methods": [
-              "Oral Technical Presentation",
-              "Homework and Classwork Assignments",
-              "Design Project Assignment",
-              "Prototype/System Demonstration"
+            "Oral Technical Presentation"
             ]
           },
           {
@@ -1867,15 +1830,10 @@
               "PI71"
             ],
             "teaching_strategy": [
-              "Independent/Self-Directed Learning",
-              "Interactive Lectures",
-              "Guided Problem Solving and Tutorials"
+            "Independent/Self-Directed Learning"
             ],
             "assessment_methods": [
-              "Homework and Classwork Assignments",
-              "Simulation/Computational Assignments",
-              "Design Project Assignment",
-              "Oral Technical Presentation"
+            "Oral Technical Presentation"
             ]
           }
         ],
