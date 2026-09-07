@@ -63,6 +63,22 @@
     })));
   }
 
+  // Same rows the PDF is built from, regrouped one-record-per-course so a viewer can
+  // show the main textbook beside its additional references. Curriculum order is kept.
+  function programReferenceGroups(courses) {
+    const groups = new Map();
+    collectProgramReferences(courses).forEach(row => {
+      let group = groups.get(row.courseCode);
+      if (!group) {
+        group = {courseCode:row.courseCode, courseTitle:row.courseTitle, mainTextbook:'', additionalReferences:[]};
+        groups.set(row.courseCode, group);
+      }
+      if (row.role === ROLES[0]) group.mainTextbook = row.citation;
+      else group.additionalReferences.push(row.citation);
+    });
+    return [...groups.values()];
+  }
+
   function validateBook(book) {
     const missing = [['authors','Author(s)'],['title','Book Title'],['publisher','Publisher'],['year','Publication Year']].filter(([key]) => !clean(book[key])).map(([,label]) => label);
     if (missing.length) throw new Error(`Complete: ${missing.join(', ')}.`);
@@ -111,6 +127,6 @@
   function openModal(){renderModal();document.getElementById('referenceReviewOverlay').classList.add('visible');document.getElementById('referenceReviewOverlay').setAttribute('aria-hidden','false');document.body.classList.add('review-open');}
   function closeModal(){const overlay=document.getElementById('referenceReviewOverlay');overlay.classList.remove('visible');overlay.setAttribute('aria-hidden','true');document.body.classList.remove('review-open');}
   if(typeof document!=='undefined'){global.addEventListener('open-reference-review',openModal);document.addEventListener('DOMContentLoaded',()=>{document.getElementById('referenceReviewClose')?.addEventListener('click',closeModal);document.getElementById('referenceReviewOverlay')?.addEventListener('click',event=>{if(event.target.id==='referenceReviewOverlay')closeModal();});});}
-  const api={ROLES,parseBibtex,formatEdition,formatBook,referenceSlots,operationsForSlot,collectProgramReferences,validateBook,createProposalPdf,createProgramListPdf};
+  const api={ROLES,parseBibtex,formatEdition,formatBook,referenceSlots,operationsForSlot,collectProgramReferences,programReferenceGroups,validateBook,createProposalPdf,createProgramListPdf};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;global.referenceManagement=api;
 }(typeof window!=='undefined'?window:globalThis));

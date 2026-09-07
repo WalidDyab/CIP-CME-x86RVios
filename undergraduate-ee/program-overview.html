@@ -3,7 +3,7 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
   <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-LRwCJoQCRy503EeHNbQesTtxiyKKIHzXya8znP1olFs=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-JzJ0HzT7KILeEq9ZyzTg4+FAW67NNF4jJr3MZa2zXrA=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>EE Program Overview | Curriculum Intelligence Portal</title>
@@ -15,7 +15,9 @@
   <script defer src="../assets/program-structure.js?v=structure-1"></script>
   <link rel="stylesheet" href="../assets/program-prerequisites.css?v=prereq-1">
   <script defer src="../assets/program-prerequisites.js?v=prereq-1"></script>
-  <script defer src="../assets/reference-management.js"></script>
+  <script defer src="../assets/reference-management.js?v=refs-1"></script>
+  <link rel="stylesheet" href="../assets/program-references.css?v=refs-1">
+  <script defer src="../assets/program-references.js?v=refs-1"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js" integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.8/jspdf.plugin.autotable.min.js" integrity="sha512-QLh0AACvI+3C+bmn3QdH6blN0NWBxwGvBDgV67TvKV5Q2knO9+/+lguVL23JQ9DR7CnfuOSYUBURlXjmJeK11Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
@@ -58,7 +60,6 @@
       <section class="program-statement" aria-labelledby="peo-title"><h2 id="peo-title">Program Educational Objectives</h2><p class="statement-intro">Program Educational Objectives describe what graduates are expected to achieve within several years after graduation.</p><div id="program-peos" class="peo-grid"><p>Loading program educational objectives…</p></div></section>
       <section class="program-statement" aria-labelledby="so-title"><h2 id="so-title">Student Outcomes</h2><p class="statement-intro">Student Outcomes describe the knowledge, skills, and professional capabilities students are expected to demonstrate by graduation.</p><div id="program-sos" class="outcome-grid"><p>Loading student outcomes…</p></div></section>
       <noscript><p>JavaScript is needed to display the program statements from the <a href="../data/ee_curriculum.json">canonical curriculum data</a>.</p></noscript>
-    <section id="stats" class="grid four"></section>
       <section class="card program-structure" aria-labelledby="program-structure-title">
         <h2 id="program-structure-title">Program Structure</h2>
         <p class="muted ps-intro">How the Bachelor of Science in Electrical Engineering is organised, from the overall credit distribution down to the recommended semester-by-semester sequence. All figures below are read from the program structure data.</p>
@@ -93,9 +94,13 @@
       </section>
       <section class="card" style="margin-top:14px">
         <h2>Textbooks &amp; References</h2>
-        <p class="muted">Generate the current program-wide list of main textbooks and additional references used across Undergraduate EE courses.</p>
-        <button id="generateTextbookList" class="btn primary" type="button" style="margin:10px 0">Generate Textbook List</button>
+        <p class="muted">Review the current program-wide list of main textbooks and additional references used across Undergraduate EE courses, or export the same list as a PDF.</p>
+        <div class="pref-actions">
+          <button id="viewTextbookList" class="btn primary" type="button">View Textbooks &amp; References</button>
+          <button id="generateTextbookList" class="btn" type="button">Generate PDF</button>
+        </div>
         <span id="textbookListStatus" class="muted overview-tool-status" aria-live="polite"></span>
+        <div id="textbookListError"></div>
       </section>
     <section class="card" style="margin-top:14px">
       <h2>Courses</h2>
@@ -114,6 +119,14 @@
       try {
         const data = await portal.loadJSON('../data/ee_curriculum.json');
         const courses = data.curriculum.courses || [];
+        // The viewer is optional: if its module is missing, the section degrades to the
+        // PDF button rather than taking the rest of the page down with it.
+        if (window.programReferences) {
+          window.programReferences.mount({ courses, trigger: byId('viewTextbookList'), errorTarget: byId('textbookListError') });
+        } else {
+          byId('viewTextbookList').hidden = true;
+          byId('textbookListError').innerHTML = '<div class="alert">The textbooks and references view is unavailable.</div>';
+        }
         byId('generateTextbookList').addEventListener('click', () => {
           const status = byId('textbookListStatus');
           try {
@@ -125,13 +138,6 @@
         });
         const mappingCourses = courses;
         const curriculumByCode = new Map(courses.map(course => [course.course_code, course]));
-        const clos = courses.flatMap(course => course.clos || []);
-        portal.renderStats(byId('stats'), {
-          Courses: courses.length,
-          CLOs: clos.length,
-          Required: courses.filter(course => course.required_or_elective === 'Required').length,
-          Electives: courses.filter(course => course.required_or_elective === 'Elective').length
-        });
         const courseList = byId('courseList');
         const search = byId('search');
         const trackFilter = byId('trackFilter');
@@ -297,7 +303,7 @@
         });
       } catch (error) {
         console.error(error);
-        byId('stats').innerHTML = '<div class="alert">Could not load or validate the undergraduate mapping data.</div>';
+        byId('courseList').innerHTML = '<div class="alert">Could not load or validate the undergraduate mapping data.</div>';
       }
     });
   </script>
