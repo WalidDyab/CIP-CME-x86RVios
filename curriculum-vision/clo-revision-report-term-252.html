@@ -3,92 +3,14 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-hAhUzGigOQUUHMtM/dLNbjoJByhlEeXgc70no03yGAE='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Term 252 CLO Revision Report | Curriculum Intelligence Portal</title>
   <link rel="stylesheet" href="../assets/portal.css">
   <script defer src="../assets/portal.js"></script>
-  <style>
-    body { background:#eef1f4; color:#1d2732; }
-    .portal-header .header-row { background:linear-gradient(135deg,#08111e,#143d66); border-color:rgba(255,255,255,.2); box-shadow:0 12px 28px rgba(15,31,48,.28); }
-    .portal-header .nav-center .btn { color:rgba(255,255,255,.94); background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.22); }
-    .portal-header .nav-center .btn:hover, .portal-header .nav-center .btn:focus-visible { color:#fff; background:rgba(255,255,255,.16); border-color:rgba(255,255,255,.4); }
-    .portal-header .ce-logo, .portal-header .psu-logo { filter:drop-shadow(0 4px 9px rgba(0,0,0,.35)); }
-    .report-shell { max-width:1120px; margin:0 auto; padding:0 20px 48px; }
-    .report-toolbar { display:flex; justify-content:space-between; gap:12px; align-items:center; margin:18px 0; }
-    .report-toolbar a { color:#143d66; font-weight:750; }
-    .report-paper { background:#fff; border:1px solid #d8dee5; border-radius:10px; box-shadow:0 10px 28px rgba(24,39,55,.1); overflow:hidden; }
-    .report-masthead { display:flex; align-items:center; justify-content:space-between; gap:28px; padding:28px 38px; border-bottom:5px solid #143d66; }
-    .report-masthead img { max-width:190px; max-height:76px; object-fit:contain; }
-    .report-identity { text-align:center; flex:1; }
-    .report-identity p { margin:0 0 5px; color:#53606d; font-weight:700; }
-    .report-identity h1 { margin:0; font-size:clamp(24px,4vw,36px); color:#143d66; line-height:1.15; }
-    .report-identity h2 { margin:8px 0 0; font-size:18px; color:#8a5a12; font-weight:750; }
-    .report-content { padding:34px 42px 48px; }
-    .report-section { margin:0 0 34px; }
-    .report-section > h2 { margin:0 0 14px; padding-bottom:8px; border-bottom:1px solid #cfd6dd; color:#143d66; font-size:21px; }
-    .report-section p, .report-section li { color:#303b46; line-height:1.7; }
-    .scope-list { margin:10px 0 0; padding-left:22px; }
-    .report-stats { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:10px; }
-    .report-stat { border:1px solid #d9e0e6; border-top:3px solid #143d66; padding:15px 10px; text-align:center; background:#f7f9fb; }
-    .report-stat strong { display:block; color:#143d66; font-size:26px; }
-    .report-stat span { display:block; margin-top:3px; color:#596674; font-size:12px; font-weight:750; }
-    .course-revision { margin:0 0 26px; break-inside:avoid-page; }
-    .course-revision h3 { margin:0; padding:11px 14px; color:#fff; background:#143d66; font-size:17px; }
-    .course-revision h3 span { margin-left:8px; font-weight:500; opacity:.9; }
-    .report-table-wrap { overflow-x:auto; max-width:100%; }
-    .report-table-wrap table { width:100%; min-width:720px; border-collapse:collapse; table-layout:fixed; }
-    .report-table-wrap th { background:#e8edf2; color:#243444; text-align:left; font-size:12px; letter-spacing:.03em; }
-    .report-table-wrap th:first-child { width:19%; }
-    .report-table-wrap th, .report-table-wrap td { border:1px solid #ccd4dc; padding:12px; vertical-align:top; }
-    .clo-id { display:block; color:#143d66; font-weight:800; margin-bottom:5px; }
-    .clo-wording { display:block; color:#202b35; line-height:1.5; }
-    .change-type { display:inline-block; border-radius:999px; padding:5px 8px; font-size:11px; font-weight:800; background:#e8edf2; color:#243444; }
-    .change-type.added { background:#e2f0e7; color:#235b36; }
-    .change-type.omitted { background:#f6e5e5; color:#7b2929; }
-    .change-note { display:block; margin-top:8px; color:#596674; font-size:12px; line-height:1.45; }
-    .dash { color:#77828d; }
-    .unchanged-courses { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 22px; padding:0; list-style:none; }
-    .unchanged-courses li { display:flex; gap:10px; border-bottom:1px solid #e1e6eb; padding:8px 0; }
-    .unchanged-courses strong { color:#143d66; min-width:58px; }
-    .report-footer { border-top:1px solid #d8dee5; padding-top:18px; color:#66727e; font-size:12px; }
-    @media (max-width:760px) {
-      .report-shell { padding:0 10px 28px; }
-      .report-toolbar { align-items:stretch; flex-direction:column; }
-      .report-toolbar .btn { text-align:center; }
-      .report-masthead { padding:22px 18px; flex-direction:column; }
-      .report-masthead img { max-width:150px; max-height:62px; }
-      .report-content { padding:25px 18px 34px; }
-      .report-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .unchanged-courses { grid-template-columns:1fr; }
-      .course-revision h3 span { display:block; margin:4px 0 0; }
-    }
-    @page { size:A4; margin:15mm 13mm 16mm; }
-    @media print {
-      body { background:#fff !important; color:#111 !important; }
-      .portal-header, .portal-footer, .report-toolbar, #footer-placeholder, #header-placeholder { display:none !important; }
-      .report-shell { max-width:none; padding:0; margin:0; }
-      .report-paper { border:0; border-radius:0; box-shadow:none; overflow:visible; }
-      .report-masthead { padding:0 0 16px; border-bottom:4px solid #143d66; }
-      .report-masthead img { max-width:145px; max-height:58px; }
-      .report-identity h1 { font-size:25px; }
-      .report-identity h2 { font-size:15px; }
-      .report-content { padding:20px 0 0; }
-      .report-section { margin-bottom:24px; }
-      .report-stats { grid-template-columns:repeat(6,1fr); }
-      .report-stat { padding:9px 4px; }
-      .report-stat strong { font-size:20px; }
-      .report-table-wrap { overflow:visible; }
-      .report-table-wrap table { min-width:0; font-size:10.5pt; }
-      .report-table-wrap thead { display:table-header-group; }
-      .report-table-wrap tr { break-inside:avoid; page-break-inside:avoid; }
-      .course-revision { break-inside:avoid-page; page-break-inside:avoid; }
-      .course-revision h3 { print-color-adjust:exact; -webkit-print-color-adjust:exact; }
-      .change-type, .report-stat, .report-table-wrap th { print-color-adjust:exact; -webkit-print-color-adjust:exact; }
-      a { color:inherit !important; text-decoration:none !important; }
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/pages/curriculum-vision-clo-revision-report-term-252.css">
+<link rel="stylesheet" href="../assets/runtime-utilities.css">
 </head>
 <body>
   <div id="header-placeholder"></div>
@@ -390,6 +312,6 @@
     </article>
   </div>
   <div id="footer-placeholder"></div>
-<script>document.getElementById('printReportBtn').addEventListener('click', () => window.print());</script>
+<script src="../assets/pages/curriculum-vision-clo-revision-report-term-252.js"></script>
 </body>
 </html>

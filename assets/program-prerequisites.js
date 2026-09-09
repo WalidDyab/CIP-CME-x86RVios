@@ -367,6 +367,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // ------------------------------------------------------------- Graph ----
     const scroll = el('div', 'pf-scroll');
     const grid = el('div', 'pf-grid');
+    // Numeric, data-derived CSSOM properties preserve the unbounded grid layout.
+    // Direct property writes are permitted by CSP; do not replace with style text.
     grid.style.setProperty('--pf-cols', String(columns.length));
     grid.setAttribute('role', 'group');
     grid.setAttribute('aria-label',
@@ -467,7 +469,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       const band = el('div', 'pf-year');
       band.style.gridColumn = `${cursor + 1} / span ${yearSemesters.length}`;
-      band.style.gridRow = '1';
       band.append(el('span', 'pf-year-name', `Year ${year.year}`));
       band.append(el('span', 'pf-year-total', `${yearCredits} cr`));
       grid.append(band);
@@ -477,7 +478,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         const computed = (semester.courses || []).reduce((sum, course) => sum + num(course.credit_hours), 0);
         const head = el('div', 'pf-sem');
         head.style.gridColumn = String(cursor + 1);
-        head.style.gridRow = '2';
         head.append(el('span', 'pf-sem-name', column.label));
         head.append(el('span', 'pf-sem-total',
           `${typeof column.statedTotal === 'number' ? column.statedTotal : computed} cr`));
@@ -582,10 +582,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const refresh = () => {
       if (!isGraphMode()) {
-        svg.style.display = 'none';
+        svg.classList.add('pf-connectors-hidden');
         return;
       }
-      svg.style.display = '';
+      svg.classList.remove('pf-connectors-hidden');
       drawEdges();
     };
 

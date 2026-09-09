@@ -4,23 +4,24 @@
 <head>
   <meta name="robots" content="noindex, nofollow">
     <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-L6x/l24Ej/8kVBvriCWko6K1uNoR2Y4ochU8KO3iXy0='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>MSc EE Curriculum Portal</title>
     <link rel="stylesheet" href="../assets/portal.css">
     <script defer src="../assets/portal.js"></script>
+<link rel="stylesheet" href="../assets/runtime-utilities.css">
 </head>
 
 <body>
     <div id="header-placeholder"></div>
-    <div class="wrap" style="padding-top: 14px;">
+    <div class="page-inset-top wrap">
         <section class="hero"><span class="kicker">Graduate program</span>
             <h2>MSc EE Curriculum Portal</h2>
             <p class="muted">Dynamic dashboards connected to <code>data/msc_ee_courses_full.json</code>.</p>
         </section>
         <section id="stats" class="grid four"></section>
-        <section class="grid three" style="margin-top:14px"><a class="card" href="program-dashboard.html">
+        <section class="space-top-14 grid three"><a class="card" href="program-dashboard.html">
                 <h2>Program Dashboard</h2>
                 <p class="muted">Overview, tracks, credits, CLOs, and course distribution.</p>
             </a><a class="card" href="course-dashboard.html">
@@ -30,7 +31,7 @@
                 <h2>Concentration Dashboard</h2>
                 <p class="muted">Group courses by track/focus area and elective pathway.</p>
             </a></section>
-        <section class="grid three" style="margin-top:14px"><a class="card" href="unified-advising-view.html">
+        <section class="space-top-14 grid three"><a class="card" href="unified-advising-view.html">
                 <h2>Unified Advising View</h2>
                 <p class="muted">Original V5 landing style, now powered by the MSc JSON file.</p>
             </a><a class="card" href="concentration-view.html">
@@ -40,7 +41,7 @@
                 <h2>Course Dashboard V4 Style</h2>
                 <p class="muted">Detailed searchable course dashboard, dynamically loaded from JSON.</p>
             </a></section>
-        <script>document.addEventListener('DOMContentLoaded', async () => { try { const courses = await portal.loadJSON('../data/msc_ee_courses_full.json'); portal.renderStats(document.getElementById('stats'), portal.countMsc(courses)); } catch (e) { document.getElementById('stats').innerHTML = '<div class="alert">Could not load JSON. Use a local server or GitHub Pages.</div>' } })</script>
+        <script src="../assets/pages/msc-ee-index.js"></script>
         <div class="footer">One source of truth: JSON data files. Refresh the page after updating JSON.</div>
     </div>
     <div id="footer-placeholder"></div>

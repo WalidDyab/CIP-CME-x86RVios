@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', async () => { try { const courses = await portal.loadJSON('../data/msc_ee_courses_full.json'); portal.renderStats(document.getElementById('stats'), portal.countMsc(courses)); } catch (e) { document.getElementById('stats').innerHTML = '<div class="alert">Could not load JSON. Use a local server or GitHub Pages.</div>' } })

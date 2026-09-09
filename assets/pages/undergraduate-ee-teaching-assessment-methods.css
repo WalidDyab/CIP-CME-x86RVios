@@ -1,0 +1,34 @@
+.reference-section { margin-top: 22px; }
+    .reference-section > h2 { margin-bottom: 6px; }
+    .pool-table th { color: var(--cyan); }
+    .pool-table td { font-size: 14px; }
+    .exception-grid { margin-top: 14px; }
+    .exception-card { border-top: 3px solid var(--orange); }
+    .exception-card ul { margin: 14px 0 0; padding-left: 21px; line-height: 1.6; }
+    .exception-card li + li { margin-top: 5px; }
+    .page-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .assessment-plan { border-top: 4px solid var(--cyan); }
+    .assessment-toolbar { display: flex; align-items: end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+    .assessment-toolbar label { font-weight: 700; }
+    .assessment-toolbar select { display: block; min-width: 230px; margin-top: 5px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 5px; background: #162235; color: var(--text); }
+    .term-summary { padding: 16px; border-left: 4px solid var(--orange); background: var(--panel); border-radius: 4px; }
+    .term-summary h3 { margin: 0 0 5px; }
+    .status-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+    .status { display: inline-flex; gap: 6px; align-items: center; padding: 5px 9px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+    .status-a { color: #174c28; background: #dff2e4; border: 1px solid #8dc89b; }
+    .status-ec, .status-c { color: #694015; background: #fff0dc; border: 1px solid #e4bd88; }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(4, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+    .roadmap-year { padding: 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+    .roadmap-year h3 { margin: 0 0 10px; color: var(--cyan); }
+    .roadmap-term + .roadmap-term { margin-top: 12px; padding-top: 12px; border-top: 1px solid #e2e6eb; }
+    .roadmap-term strong { display: block; }
+    .assessment-meta { margin-top: 14px; }
+    .assessment-meta .card { padding: 14px; }
+    .assessment-meta .stat { font-size: 22px; }
+    .assessment-courses { margin-top: 16px; }
+    .assessment-error { color: #8b1e1e; padding: 12px; background: #fff1f1; border: 1px solid #e5b5b5; }
+    @media (max-width: 700px) {
+      .hero { padding: 22px; }
+      .reference-section { padding: 20px; }
+      .roadmap-grid { grid-template-columns: 1fr; }
+    }

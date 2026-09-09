@@ -461,6 +461,7 @@
 /* Year band and semester header */
 
 .program-prereq .pf-year {
+  grid-row: 1;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -486,6 +487,7 @@
 }
 
 .program-prereq .pf-sem {
+  grid-row: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -842,3 +844,5 @@
   .program-prereq .pf-node:hover,
   .program-prereq .pf-node.is-selected { transform: none; }
 }
+
+.pf-connectors-hidden { display: none; }

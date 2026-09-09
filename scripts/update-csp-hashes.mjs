@@ -1,9 +1,8 @@
 // CSP inline-script hash maintenance utility.
 //
-// The site's HTML pages carry a per-page <meta> Content-Security-Policy whose
-// script-src allow-lists each page's inline <script> block(s) by SHA-256 hash
-// instead of 'unsafe-inline'. Editing an inline script changes its hash, which
-// silently breaks that script under CSP until the hash is regenerated here.
+// Runtime scripts are now external for desktop CSP compatibility. This legacy
+// utility still detects stale hashes and other script-policy drift in source
+// pages. Use test_runtime_compatibility.py to reject inline runtime code/styles.
 //
 // Usage:
 //   node scripts/update-csp-hashes.mjs --check   Report drift, change nothing. Exits 1 on any issue.
@@ -30,17 +29,11 @@ if (!mode) {
 // File discovery
 // ---------------------------------------------------------------------------
 
-function findHtmlFiles(dir, out = []) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === '.git' || entry.name === 'node_modules') continue;
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) findHtmlFiles(full, out);
-    else if (entry.isFile() && entry.name.endsWith('.html')) out.push(full);
-  }
-  return out;
-}
-
-const htmlFiles = findHtmlFiles(REPO_ROOT).sort();
+// The packaging manifest is the shared web/desktop runtime inventory. Never
+// inspect or rewrite generated releases, development dependencies or references.
+const runtimeFiles = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'packaging/desktop-runtime-files.json'), 'utf8'));
+const htmlFiles = runtimeFiles.filter(name => name.endsWith('.html'))
+  .map(name => path.join(REPO_ROOT, name)).sort();
 
 // ---------------------------------------------------------------------------
 // Parsing helpers

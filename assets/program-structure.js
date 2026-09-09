@@ -141,6 +141,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const share = percentOf(credits);
       const segment = el('div', 'ps-bar-seg');
       segment.dataset.category = category.category_id;
+      // Preserve the exact data-derived ratio using a CSP-safe CSSOM property write.
       segment.style.width = `${share}%`;
       segment.title = `${displayName(category)} — ${credits} credits (${formatPercent(credits)})`;
       // Only the widest segments can hold a legible inline figure; the legend

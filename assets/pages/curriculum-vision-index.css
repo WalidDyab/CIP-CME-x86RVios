@@ -1,0 +1,19 @@
+.vision-initiative { padding:28px; border-left:5px solid var(--orange); }
+    .vision-initiative.major-revision { border-left-color:var(--cyan); }
+    .vision-initiative h2 { margin:6px 0 12px; font-size:clamp(26px,3vw,38px); line-height:1.15; }
+    .vision-initiative p { max-width:1100px; margin:0; color:var(--muted); line-height:1.68; }
+    .vision-initiative .btn { display:inline-block; margin-top:18px; }
+    .initiative-label { display:inline-flex; align-items:center; color:#ffe2ad; font-weight:800; text-transform:uppercase; letter-spacing:.07em; font-size:12px; }
+    .major-revision .initiative-label { color:var(--cyan); }
+    .strategy-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:18px; }
+    .strategy-item { padding:18px; border-radius:14px; background:rgba(255,255,255,.035); border:1px solid var(--line); }
+    .strategy-item h3 { margin:0 0 7px; font-size:17px; }
+    .strategy-item p { margin:0; color:var(--muted); line-height:1.55; }
+    .ai-governance { padding:26px; }
+    .ai-governance h2 { margin:0 0 14px; }
+    .ai-governance p, .ai-governance li { color:var(--muted); line-height:1.65; }
+    .ai-governance ol { margin:12px 0 16px; padding-left:24px; }
+    .ai-governance li + li { margin-top:7px; }
+    .ai-governance .integrity-statement { color:inherit; }
+    .ai-governance .policy-reference { margin-bottom:0; }
+    @media (max-width:700px) { .strategy-grid { grid-template-columns:1fr; } .vision-initiative { padding:22px 18px; } }

@@ -1,0 +1,11 @@
+.review-table { min-width: 1500px; }
+    .review-table th:nth-child(1) { width: 8%; }
+    .review-table th:nth-child(2) { width: 6%; }
+    .review-table th:nth-child(3) { width: 28%; }
+    .review-table th:nth-child(4) { width: 8%; }
+    .review-table th:nth-child(5) { width: 12%; }
+    .review-table th:nth-child(6) { width: 18%; }
+    .review-table th:nth-child(7) { width: 20%; }
+    .review-table td { vertical-align: top; line-height: 1.45; white-space: normal; }
+    .method-list { margin: 0; padding-left: 18px; }
+    .method-list li + li { margin-top: 5px; }
