@@ -27,6 +27,20 @@
     .assessment-meta .stat { font-size: 22px; }
     .assessment-courses { margin-top: 16px; }
     .assessment-error { color: #8b1e1e; padding: 12px; background: #fff1f1; border: 1px solid #e5b5b5; }
+    .ethics-grid { margin-top: 14px; align-items: stretch; }
+    .ethics-card { display: flex; flex-direction: column; border-top: 3px solid var(--cyan); }
+    .ethics-scope { color: #ffe2ad; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .ethics-card h3 { margin: 7px 0 0; line-height: 1.35; }
+    .ethics-native { white-space: nowrap; }
+    .ethics-org { margin: 5px 0 0; color: var(--cyan); font-size: 13px; font-weight: 700; line-height: 1.45; }
+    .ethics-card .label { margin-top: 14px; }
+    .ethics-value { margin: 5px 0 0; font-size: 13px; line-height: 1.55; }
+    .ethics-citation { margin: 5px 0 0; color: var(--muted); font-size: 12px; font-style: italic; line-height: 1.55; }
+    .ethics-summary { margin: 5px 0 0; font-size: 13px; }
+    .ethics-language { margin: 14px 0 0; color: var(--muted); font-size: 12px; }
+    .ethics-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 18px; }
+    .ethics-actions .file-type { margin-left: 5px; color: inherit; font: 800 10px var(--mono); }
+    .ethics-note { padding: 12px 14px; font-size: 13px; line-height: 1.6; }
     @media (max-width: 700px) {
       .hero { padding: 22px; }
       .reference-section { padding: 20px; }
