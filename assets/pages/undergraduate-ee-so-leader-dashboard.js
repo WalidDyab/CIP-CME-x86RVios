@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           const query = (search.value || '').toLowerCase();
           const outcome = outcomes.find(item => item.soCode === so);
           const expectedPIs = outcome?.pis || [];
-          const reviewEnabled = ['SO1', 'SO3'].includes(so);
+          const reviewEnabled = Boolean(outcome && expectedPIs.length);
           reviewButton.hidden = !reviewEnabled;
           reviewButton.textContent = reviewEnabled ? `Review ${so} Mapping` : '';
           const rows = [];

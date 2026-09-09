@@ -47,8 +47,8 @@
   }
   function openReview(event) {
     const context = window.soMappingReviewContext, soCode = event.detail?.so;
-    if (!context || !['SO1', 'SO3'].includes(soCode)) return;
-    const outcome = context.abet?.student_outcomes?.[soCode]; if (!outcome) return;
+    if (!context || !soCode) return;
+    const outcome = context.abet?.student_outcomes?.[soCode]; if (!outcome || !(outcome.pis || []).length) return;
     state = { soCode, outcome: clone(outcome), piCodes: [...(outcome.pis || [])], piDefinitions: clone(context.abet?.performance_indicators || {}), groups: [], reviewer: '', reviewDate: dateISO() };
     state.groups = clone(relevantCourses(context, soCode)).map(course => ({ course, rows: rowsForCourse(course) }));
     render(); overlay().classList.add('visible'); overlay().setAttribute('aria-hidden', 'false'); document.body.classList.add('review-open');
