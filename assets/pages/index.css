@@ -9,7 +9,7 @@
     }
 
     .home-hero {
-      margin: 12px 0 18px
+      margin: 12px 0 24px
     }
 
     .panel {
@@ -114,8 +114,13 @@
     }
 
     .process {
-      margin-top: 18px;
+      margin-top: 24px;
       padding: 24px
+    }
+
+    /* Even vertical rhythm between the homepage's top-level panels. */
+    main .section {
+      margin-top: 24px
     }
 
     .steps {
