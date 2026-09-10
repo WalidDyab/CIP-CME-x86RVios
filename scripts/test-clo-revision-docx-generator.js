@@ -16,7 +16,7 @@ const template = fs.readFileSync(path.join(root, 'templates/CLO-Revision-Report-
 async function main() {
   const reconciled = generator.reconcileAudit(audit, baseline, curriculum);
   assert.deepStrictEqual(reconciled.counts, {
-    baseline_clos:85, current_clos:95, unchanged:27, modified:51, renumbered:2,
+    baseline_clos:85, current_clos:95, unchanged:24, modified:54, renumbered:2,
     added:13, omitted:1, merge_cases:2, split_cases:0, ambiguous:0
   });
   assert(reconciled.relationships.some(item => item.type === 'added'));

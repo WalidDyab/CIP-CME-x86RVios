@@ -97,6 +97,23 @@ const sortRelationships = items => items.map((item,index)=>({item,index})).sort(
 }).map(entry=>entry.item);
 const relationshipKey = item => `${item.course_code}|${item.baseline_clos.map(clo => clo.baseline_clo_ref).join('+')}->${item.current_clos.map(clo => clo.current_clo_id).join('+')}`;
 const editorialComments = new Map(Object.entries({
+  'EE 101|2.1->2.1':'CLO refocused on explaining the logic of a Python program, giving better assessment and alignment for SO3 evidence under PI31 and PI32.',
+  'EE 101|2.2->2.2':'CLO refocused on developing a Python program from a given algorithm or logic, giving better assessment and alignment for SO1 evidence under PI12.',
+  'EE 101|2.3->2.3':'CLO refocused on examining Python program code for logical and technical errors, giving better assessment and alignment for SO1 evidence under PI11.',
+  'EE 221|1.1->1.1':'Knowledge outcome restated around fundamental digital-logic concepts and representations, giving better assessment and alignment for SO1 evidence under PI13.',
+  'EE 221|2.1->2.1':'Number-systems outcome raised from explanation to application in digital computations, giving better assessment and alignment for SO1 evidence under PI13.',
+  'EE 221|2.2->2.2':'Boolean outcome restated around simplification using Boolean algebra and Karnaugh maps, giving better assessment and alignment for SO1 evidence under PI13.',
+  'EE 221|2.3->2.3':'Design outcome consolidated to cover both combinational and sequential circuits, giving better assessment and alignment for SO2 evidence under PI22, PI23, and PI24.',
+  'EE 221|2.4->2.4':'Analysis outcome separated from design and applied to both circuit types, giving better assessment and alignment for SO1 evidence under PI13.',
+  'EE 221|3.1->3.1':'Teamwork outcome restated around effective collaboration in laboratory work, giving better assessment and alignment for SO5 evidence under PI51.',
+  'EE 221|3.2->3.2':'Tool-use outcome restated around experimental investigation of digital circuits, giving better assessment and alignment for SO6 evidence under PI62 and PI63.',
+  'EE 341|2.3->2.3':'Outcome broadened from a reflection and transmission calculation to solving field problems in material media and at boundaries, giving better assessment and alignment for SO1 evidence under PI13.',
+  'EE 351|1.1->1.1':'Modulation outcome raised from recognition to explanation using time- and frequency-domain representations, giving better assessment and alignment for SO1 evidence under PI11.',
+  'EE 351|2.1->2.1':'Channel outcome raised from explaining one linear model to formulating transmission models, giving better assessment and alignment for SO1 evidence under PI12.',
+  'EE 351|2.2->2.2':'System outcome raised from recognition to solving problems from specified parameters and requirements, giving better assessment and alignment for SO1 evidence under PI13.',
+  'EE 351|2.3->2.3':'Channel-effects outcome raised to performance evaluation by analytical and simulation methods, giving better assessment and alignment for SO1 evidence under PI11, PI12, and PI13.',
+  'EE 351|2.4->2.4':'Modulation outcome broadened beyond pulse techniques to application and evaluation by analytical, simulation, or laboratory methods, giving better assessment and alignment for SO6 evidence under PI62, PI63, and PI64.',
+  'EE 351|3.1->3.1':'Laboratory design outcome restated around team-based communication-system design using software-defined radio, giving better assessment and alignment for SO2, SO5, and SO6 evidence under PI21, PI51, PI61, and PI62.',
   'EE 201|1.1->1.1':'CLO expanded to cover electrical quantities, circuit elements, and basic AC signal relationships.',
   'EE 201|2.1->2.1':'CLO refocused on DC circuit analysis using nodal, mesh, and network-theorem methods.',
   'EE 201|2.2->2.2':'CLO refocused on AC phasor, impedance, power, and power-factor analysis.',

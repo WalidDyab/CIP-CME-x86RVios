@@ -108,11 +108,11 @@
   },
   "counts": {
     "baseline_clos": 85,
-    "current_clos": 94,
-    "unchanged": 41,
-    "modified": 37,
+    "current_clos": 95,
+    "unchanged": 24,
+    "modified": 54,
     "renumbered": 2,
-    "added": 12,
+    "added": 13,
     "omitted": 1,
     "merge_cases": 2,
     "merged_baseline_clos": 4,
@@ -124,26 +124,26 @@
   },
   "accounting": {
     "baseline_accounted": 85,
-    "current_accounted": 94
+    "current_accounted": 95
   },
   "courses_with_changes": [
+    "EE 101",
     "EE 201",
     "EE 211",
+    "EE 221",
     "EE 231",
     "EE 202",
     "EE 322",
     "EE 341",
     "EE 332",
+    "EE 351",
     "EE 304",
     "EE 403",
     "EE 490",
     "EE 492"
   ],
   "courses_without_clo_changes": [
-    "EE 101",
-    "EE 221",
     "EE 312",
-    "EE 351",
     "EE 305"
   ],
   "course_summaries": [
@@ -152,7 +152,9 @@
       "course_title": "Computer Programming for Engineering",
       "baseline_clos": 4,
       "current_clos": 4,
-      "change_types": []
+      "change_types": [
+        "modified"
+      ]
     },
     {
       "course_code": "EE 201",
@@ -180,7 +182,9 @@
       "course_title": "Logic Design",
       "baseline_clos": 7,
       "current_clos": 7,
-      "change_types": []
+      "change_types": [
+        "modified"
+      ]
     },
     {
       "course_code": "EE 231",
@@ -242,8 +246,11 @@
       "course_code": "EE 351",
       "course_title": "Communication Systems",
       "baseline_clos": 6,
-      "current_clos": 6,
-      "change_types": []
+      "current_clos": 7,
+      "change_types": [
+        "modified",
+        "added"
+      ]
     },
     {
       "course_code": "EE 305",
@@ -317,8 +324,7 @@
             "SO1"
           ],
           "pi_codes": [
-            "PI11",
-            "PI12"
+            "PI11"
           ],
           "teaching_strategy": [
             "Flipped Classroom",
@@ -341,7 +347,7 @@
     {
       "course_code": "EE 101",
       "course_title": "Computer Programming for Engineering",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -357,14 +363,13 @@
         {
           "clo_number": 2.1,
           "nqf_domain": "Skills",
-          "clo_text": "Explain the various logic using various operators and expressions.",
+          "clo_text": "Explain the logic of a Python program using an appropriate method.",
           "mapped_sos": [
             "SO3"
           ],
           "pi_codes": [
             "PI31",
-            "PI32",
-            "PI33"
+            "PI32"
           ],
           "teaching_strategy": [
             "Technical Communication Activities",
@@ -378,16 +383,16 @@
             "Prototype/System Demonstration"
           ],
           "current_clo_id": "2.1",
-          "current_clo_text": "Explain the various logic using various operators and expressions."
+          "current_clo_text": "Explain the logic of a Python program using an appropriate method."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "CLO refocused on explaining the logic of a Python program, giving better assessment and alignment for SO3 evidence under PI31 and PI32."
     },
     {
       "course_code": "EE 101",
       "course_title": "Computer Programming for Engineering",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -403,14 +408,12 @@
         {
           "clo_number": 2.2,
           "nqf_domain": "Skills",
-          "clo_text": "Write a programming code in Python.",
+          "clo_text": "Develop a Python program for a given algorithm or logic.",
           "mapped_sos": [
-            "SO3"
+            "SO1"
           ],
           "pi_codes": [
-            "PI31",
-            "PI32",
-            "PI33"
+            "PI12"
           ],
           "teaching_strategy": [
             "Technical Communication Activities",
@@ -423,16 +426,16 @@
             "Design Project Assignment"
           ],
           "current_clo_id": "2.2",
-          "current_clo_text": "Write a programming code in Python."
+          "current_clo_text": "Develop a Python program for a given algorithm or logic."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "CLO refocused on developing a Python program from a given algorithm or logic, giving better assessment and alignment for SO1 evidence under PI12."
     },
     {
       "course_code": "EE 101",
       "course_title": "Computer Programming for Engineering",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -448,13 +451,12 @@
         {
           "clo_number": 2.3,
           "nqf_domain": "Skills",
-          "clo_text": "Examine program code using Python",
+          "clo_text": "Examine Python program code for logical and technical errors.",
           "mapped_sos": [
             "SO1"
           ],
           "pi_codes": [
-            "PI11",
-            "PI12"
+            "PI11"
           ],
           "teaching_strategy": [
             "Simulation and Computer-Based Learning",
@@ -467,11 +469,11 @@
             "Major and Final Exams"
           ],
           "current_clo_id": "2.3",
-          "current_clo_text": "Examine program code using Python"
+          "current_clo_text": "Examine Python program code for logical and technical errors."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "CLO refocused on examining Python program code for logical and technical errors, giving better assessment and alignment for SO1 evidence under PI11."
     },
     {
       "course_code": "EE 201",
@@ -492,7 +494,7 @@
         {
           "clo_number": 1.1,
           "nqf_domain": "Knowledge",
-          "clo_text": "Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits.",
+          "clo_text": "Explain fundamental electrical concepts, quantities, and circuit elements.",
           "mapped_sos": [
             "SO1"
           ],
@@ -500,17 +502,16 @@
             "PI13"
           ],
           "teaching_strategy": [
-            "Flipped Classroom",
+            "Guided Problem Solving and Tutorials",
             "Interactive Lectures"
           ],
           "assessment_methods": [
             "Quizzes",
             "Homework and Classwork Assignments",
-            "Major and Final Exams",
-            "Simulation/Computational Assignments"
+            "Major and Final Exams"
           ],
           "current_clo_id": "1.1",
-          "current_clo_text": "Explain fundamental electrical quantities, circuit elements, and basic AC signal concepts and their relationships in linear circuits."
+          "current_clo_text": "Explain fundamental electrical concepts, quantities, and circuit elements."
         }
       ],
       "note": null,
@@ -535,7 +536,7 @@
         {
           "clo_number": 2.1,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems.",
+          "clo_text": "Analyze DC circuits using fundamental circuit laws and network analysis techniques.",
           "mapped_sos": [
             "SO1"
           ],
@@ -549,11 +550,10 @@
           "assessment_methods": [
             "Quizzes",
             "Homework and Classwork Assignments",
-            "Major and Final Exams",
-            "Simulation/Computational Assignments"
+            "Major and Final Exams"
           ],
           "current_clo_id": "2.1",
-          "current_clo_text": "Analyze DC resistive circuits using Kirchhoff’s laws, nodal and mesh analysis, and basic network theorems."
+          "current_clo_text": "Analyze DC circuits using fundamental circuit laws and network analysis techniques."
         }
       ],
       "note": null,
@@ -578,7 +578,7 @@
         {
           "clo_number": 2.2,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts.",
+          "clo_text": "Analyze AC circuits using phasor-based circuit and power analysis.",
           "mapped_sos": [
             "SO1"
           ],
@@ -586,17 +586,15 @@
             "PI13"
           ],
           "teaching_strategy": [
-            "Technical Communication Activities",
             "Guided Problem Solving and Tutorials"
           ],
           "assessment_methods": [
-            "Oral Technical Presentation",
             "Quizzes",
             "Homework and Classwork Assignments",
             "Major and Final Exams"
           ],
           "current_clo_id": "2.2",
-          "current_clo_text": "Analyze AC circuits using phasor representation, including impedance-based analysis and power and power-factor concepts."
+          "current_clo_text": "Analyze AC circuits using phasor-based circuit and power analysis."
         }
       ],
       "note": null,
@@ -621,30 +619,25 @@
         {
           "clo_number": 2.3,
           "nqf_domain": "Skills",
-          "clo_text": "Investigate electric circuits through experiments and simulations",
+          "clo_text": "Investigate electric circuits through experimentation and simulation.",
           "mapped_sos": [
-            "SO1",
             "SO6"
           ],
           "pi_codes": [
-            "PI13",
             "PI62",
             "PI63",
             "PI64"
           ],
           "teaching_strategy": [
-            "Laboratory Experimentation",
             "Simulation and Computer-Based Learning",
-            "Guided Problem Solving and Tutorials"
+            "Laboratory Experimentation"
           ],
           "assessment_methods": [
             "Laboratory Practical Assessment",
-            "Laboratory Reports",
-            "Simulation/Computational Assignments",
-            "Quizzes"
+            "Laboratory Reports"
           ],
           "current_clo_id": "2.3",
-          "current_clo_text": "Investigate electric circuits through experiments and simulations"
+          "current_clo_text": "Investigate electric circuits through experimentation and simulation."
         }
       ],
       "note": null,
@@ -703,7 +696,7 @@
         {
           "clo_number": 3.2,
           "nqf_domain": "Values",
-          "clo_text": "Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions",
+          "clo_text": "Evaluate ethical and professional responsibilities and broader impacts of electrical engineering decisions.",
           "mapped_sos": [
             "SO4"
           ],
@@ -712,19 +705,16 @@
             "PI42"
           ],
           "teaching_strategy": [
-            "Case-Based Learning and Technical Discussion",
-            "Design- and Project-Based Learning",
-            "Guided Problem Solving and Tutorials"
+            "Guided Problem Solving and Tutorials",
+            "Case-Based Learning and Technical Discussion"
           ],
           "assessment_methods": [
-            "Design Project Assignment",
-            "Homework and Classwork Assignments",
-            "Major and Final Exams",
             "Quizzes",
-            "Simulation/Computational Assignments"
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
           ],
           "current_clo_id": "3.2",
-          "current_clo_text": "Evaluate ethical and professional responsibilities in electrical engineering design and analysis decisions"
+          "current_clo_text": "Evaluate ethical and professional responsibilities and broader impacts of electrical engineering decisions."
         }
       ],
       "note": "New CLO added to strengthen assessment coverage.",
@@ -959,7 +949,7 @@
     {
       "course_code": "EE 221",
       "course_title": "Logic Design",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Knowledge & Understanding",
@@ -975,37 +965,34 @@
         {
           "clo_number": 1.1,
           "nqf_domain": "Knowledge",
-          "clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices.",
+          "clo_text": "Describe fundamental concepts and representations of digital logic circuits.",
           "mapped_sos": [
-            "SO1",
-            "SO2"
+            "SO1"
           ],
           "pi_codes": [
-            "PI13",
-            "PI21"
+            "PI13"
           ],
           "teaching_strategy": [
-            "Design- and Project-Based Learning",
             "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials",
             "Interactive Lectures"
           ],
           "assessment_methods": [
-            "Simulation/Computational Assignments",
-            "Design Project Assignment",
             "Quizzes",
-            "Homework and Classwork Assignments"
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
           ],
           "current_clo_id": "1.1",
-          "current_clo_text": "Describe integrated-circuit logic families, memory devices, and programmable logic devices."
+          "current_clo_text": "Describe fundamental concepts and representations of digital logic circuits."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Knowledge outcome restated around fundamental digital-logic concepts and representations, giving better assessment and alignment for SO1 evidence under PI13."
     },
     {
       "course_code": "EE 221",
       "course_title": "Logic Design",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -1021,37 +1008,32 @@
         {
           "clo_number": 2.1,
           "nqf_domain": "Skills",
-          "clo_text": "Explain different binary number systems and arithmetic.",
+          "clo_text": "Apply number systems, codes, and binary arithmetic in digital computations.",
           "mapped_sos": [
-            "SO2",
-            "SO5"
+            "SO1"
           ],
           "pi_codes": [
-            "PI21",
-            "PI22",
-            "PI51"
+            "PI13"
           ],
           "teaching_strategy": [
-            "Design- and Project-Based Learning",
-            "Interactive Lectures"
+            "Guided Problem Solving and Tutorials"
           ],
           "assessment_methods": [
-            "Design Project Assignment",
             "Quizzes",
             "Homework and Classwork Assignments",
             "Major and Final Exams"
           ],
           "current_clo_id": "2.1",
-          "current_clo_text": "Explain different binary number systems and arithmetic."
+          "current_clo_text": "Apply number systems, codes, and binary arithmetic in digital computations."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Number-systems outcome raised from explanation to application in digital computations, giving better assessment and alignment for SO1 evidence under PI13."
     },
     {
       "course_code": "EE 221",
       "course_title": "Logic Design",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -1067,18 +1049,18 @@
         {
           "clo_number": 2.2,
           "nqf_domain": "Skills",
-          "clo_text": "Explain Boolean expressions using Karnaugh Map.",
+          "clo_text": "Simplify Boolean expressions using Boolean algebra and Karnaugh maps.",
           "mapped_sos": [
-            "SO2",
-            "SO5"
+            "SO1"
           ],
           "pi_codes": [
-            "PI23",
-            "PI51"
+            "PI13"
           ],
           "teaching_strategy": [
-            "Design- and Project-Based Learning",
-            "Interactive Lectures"
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials",
+            "Laboratory Experimentation",
+            "Design- and Project-Based Learning"
           ],
           "assessment_methods": [
             "Design Project Assignment",
@@ -1087,16 +1069,16 @@
             "Major and Final Exams"
           ],
           "current_clo_id": "2.2",
-          "current_clo_text": "Explain Boolean expressions using Karnaugh Map."
+          "current_clo_text": "Simplify Boolean expressions using Boolean algebra and Karnaugh maps."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Boolean outcome restated around simplification using Boolean algebra and Karnaugh maps, giving better assessment and alignment for SO1 evidence under PI13."
     },
     {
       "course_code": "EE 221",
       "course_title": "Logic Design",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -1112,13 +1094,14 @@
         {
           "clo_number": 2.3,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze and design combinational logic circuit.",
+          "clo_text": "Design combinational and sequential logic circuits.",
           "mapped_sos": [
-            "SO6"
+            "SO2"
           ],
           "pi_codes": [
-            "PI62",
-            "PI63"
+            "PI22",
+            "PI23",
+            "PI24"
           ],
           "teaching_strategy": [
             "Laboratory Experimentation",
@@ -1126,23 +1109,24 @@
             "Guided Problem Solving and Tutorials"
           ],
           "assessment_methods": [
-            "Laboratory Practical Assessment",
-            "Laboratory Reports",
-            "Design Project Assignment",
             "Quizzes",
-            "Homework and Classwork Assignments"
+            "Homework and Classwork Assignments",
+            "Major and Final Exams",
+            "Design Project Assignment",
+            "Laboratory Practical Assessment",
+            "Laboratory Reports"
           ],
           "current_clo_id": "2.3",
-          "current_clo_text": "Analyze and design combinational logic circuit."
+          "current_clo_text": "Design combinational and sequential logic circuits."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Design outcome consolidated to cover both combinational and sequential circuits, giving better assessment and alignment for SO2 evidence under PI22, PI23, and PI24."
     },
     {
       "course_code": "EE 221",
       "course_title": "Logic Design",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -1158,37 +1142,32 @@
         {
           "clo_number": 2.4,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers.",
+          "clo_text": "Analyze combinational and sequential logic circuits.",
           "mapped_sos": [
-            "SO6"
+            "SO1"
           ],
           "pi_codes": [
-            "PI62",
-            "PI63"
+            "PI13"
           ],
           "teaching_strategy": [
-            "Laboratory Experimentation",
-            "Design- and Project-Based Learning",
             "Guided Problem Solving and Tutorials"
           ],
           "assessment_methods": [
-            "Laboratory Practical Assessment",
-            "Laboratory Reports",
-            "Design Project Assignment",
             "Quizzes",
-            "Homework and Classwork Assignments"
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
           ],
           "current_clo_id": "2.4",
-          "current_clo_text": "Analyze and design sequential logic circuits including flip flops, counters, and registers."
+          "current_clo_text": "Analyze combinational and sequential logic circuits."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Analysis outcome separated from design and applied to both circuit types, giving better assessment and alignment for SO1 evidence under PI13."
     },
     {
       "course_code": "EE 221",
       "course_title": "Logic Design",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Values",
@@ -1204,35 +1183,30 @@
         {
           "clo_number": 3.1,
           "nqf_domain": "Values",
-          "clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects.",
+          "clo_text": "Collaborate effectively in teams during laboratory experiments and projects.",
           "mapped_sos": [
-            "SO6"
+            "SO5"
           ],
           "pi_codes": [
-            "PI64"
+            "PI51"
           ],
           "teaching_strategy": [
-            "Collaborative/Team-Based Learning",
-            "Laboratory Experimentation"
+            "Collaborative/Team-Based Learning"
           ],
           "assessment_methods": [
-            "Laboratory Practical Assessment",
-            "Laboratory Reports",
-            "Teamwork/Peer Assessment",
-            "Simulation/Computational Assignments",
-            "Homework and Classwork Assignments"
+            "Teamwork/Peer Assessment"
           ],
           "current_clo_id": "3.1",
-          "current_clo_text": "Demonstrate the ability to work in a team to collaborate in performing LAB experiments and projects."
+          "current_clo_text": "Collaborate effectively in teams during laboratory experiments and projects."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Teamwork outcome restated around effective collaboration in laboratory work, giving better assessment and alignment for SO5 evidence under PI51."
     },
     {
       "course_code": "EE 221",
       "course_title": "Logic Design",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Values",
@@ -1248,31 +1222,31 @@
         {
           "clo_number": 3.2,
           "nqf_domain": "Values",
-          "clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects.",
+          "clo_text": "Investigate digital logic circuits experimentally using simulation tools and digital hardware.",
           "mapped_sos": [
             "SO6"
           ],
           "pi_codes": [
-            "PI64"
+            "PI62",
+            "PI63"
           ],
           "teaching_strategy": [
-            "Collaborative/Team-Based Learning",
+            "Simulation and Computer-Based Learning",
             "Laboratory Experimentation",
-            "Simulation and Computer-Based Learning"
+            "Design- and Project-Based Learning"
           ],
           "assessment_methods": [
-            "Laboratory Practical Assessment",
-            "Laboratory Reports",
             "Simulation/Computational Assignments",
             "Prototype/System Demonstration",
-            "Teamwork/Peer Assessment"
+            "Laboratory Practical Assessment",
+            "Laboratory Reports"
           ],
           "current_clo_id": "3.2",
-          "current_clo_text": "Illustrate the ability to use Multisim and FPGA boards in group activities through lab and projects."
+          "current_clo_text": "Investigate digital logic circuits experimentally using simulation tools and digital hardware."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Tool-use outcome restated around experimental investigation of digital circuits, giving better assessment and alignment for SO6 evidence under PI62 and PI63."
     },
     {
       "course_code": "EE 231",
@@ -2265,50 +2239,6 @@
     {
       "course_code": "EE 341",
       "course_title": "Electromagnetics Fundamental",
-      "type": "unchanged",
-      "baseline_clos": [
-        {
-          "nqf_domain": "Skills",
-          "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
-          "source_so": "2",
-          "source_table_row": 10,
-          "baseline_clo_ref": "2.3",
-          "source_page": 38,
-          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
-        }
-      ],
-      "current_clos": [
-        {
-          "clo_number": 2.3,
-          "nqf_domain": "Skills",
-          "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
-          "mapped_sos": [
-            "SO3"
-          ],
-          "pi_codes": [
-            "PI31",
-            "PI32"
-          ],
-          "teaching_strategy": [
-            "Guided Problem Solving and Tutorials",
-            "Interactive Lectures"
-          ],
-          "assessment_methods": [
-            "Quizzes",
-            "Homework and Classwork Assignments",
-            "Major and Final Exams",
-            "Simulation/Computational Assignments"
-          ],
-          "current_clo_id": "2.3",
-          "current_clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another."
-        }
-      ],
-      "note": null,
-      "comment": "No wording change."
-    },
-    {
-      "course_code": "EE 341",
-      "course_title": "Electromagnetics Fundamental",
       "type": "modified",
       "baseline_clos": [
         {
@@ -2325,7 +2255,7 @@
         {
           "clo_number": 1.1,
           "nqf_domain": "Knowledge",
-          "clo_text": "Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media.",
+          "clo_text": "Explain fundamental concepts of electric and magnetic fields.",
           "mapped_sos": [
             "SO1"
           ],
@@ -2333,17 +2263,16 @@
             "PI13"
           ],
           "teaching_strategy": [
-            "Flipped Classroom",
+            "Guided Problem Solving and Tutorials",
             "Interactive Lectures"
           ],
           "assessment_methods": [
             "Quizzes",
             "Homework and Classwork Assignments",
-            "Major and Final Exams",
-            "Simulation/Computational Assignments"
+            "Major and Final Exams"
           ],
           "current_clo_id": "1.1",
-          "current_clo_text": "Explain the fundamental concepts of electromagnetics, including electric and magnetic fields and their sources in free space and material media."
+          "current_clo_text": "Explain fundamental concepts of electric and magnetic fields."
         }
       ],
       "note": null,
@@ -2368,7 +2297,7 @@
         {
           "clo_number": 2.1,
           "nqf_domain": "Skills",
-          "clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions.",
+          "clo_text": "Determine electrostatic and magnetostatic quantities using appropriate electromagnetic principles.",
           "mapped_sos": [
             "SO1"
           ],
@@ -2382,11 +2311,10 @@
           "assessment_methods": [
             "Quizzes",
             "Homework and Classwork Assignments",
-            "Major and Final Exams",
-            "Simulation/Computational Assignments"
+            "Major and Final Exams"
           ],
           "current_clo_id": "2.1",
-          "current_clo_text": "Apply Maxwell’s equations to determine electric and magnetic field components in different media and under relevant boundary conditions."
+          "current_clo_text": "Determine electrostatic and magnetostatic quantities using appropriate electromagnetic principles."
         }
       ],
       "note": null,
@@ -2411,7 +2339,7 @@
         {
           "clo_number": 2.2,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity.",
+          "clo_text": "Analyze time-varying electromagnetic fields using Maxwell’s equations.",
           "mapped_sos": [
             "SO1"
           ],
@@ -2425,15 +2353,56 @@
           "assessment_methods": [
             "Quizzes",
             "Homework and Classwork Assignments",
-            "Major and Final Exams",
-            "Simulation/Computational Assignments"
+            "Major and Final Exams"
           ],
           "current_clo_id": "2.2",
-          "current_clo_text": "Analyze key electromagnetic parameters, including electric field intensity due to charge distributions, work and electric potential, electric current and current density, and magnetic field intensity."
+          "current_clo_text": "Analyze time-varying electromagnetic fields using Maxwell’s equations."
         }
       ],
       "note": null,
       "comment": "Technical scope refocused on analysis of key electric and magnetic field quantities."
+    },
+    {
+      "course_code": "EE 341",
+      "course_title": "Electromagnetics Fundamental",
+      "type": "modified",
+      "baseline_clos": [
+        {
+          "nqf_domain": "Skills",
+          "clo_text": "Calculate the percentage of electromagnetic energy reflected and transmitted from a medium to another.",
+          "source_so": "2",
+          "source_table_row": 10,
+          "baseline_clo_ref": "2.3",
+          "source_page": 38,
+          "identifier_basis": "Derived from printed NQF-domain sequence; identifier is not printed in the PDF"
+        }
+      ],
+      "current_clos": [
+        {
+          "clo_number": 2.3,
+          "nqf_domain": "Skills",
+          "clo_text": "Solve electromagnetic field problems involving material media and boundary conditions.",
+          "mapped_sos": [
+            "SO1"
+          ],
+          "pi_codes": [
+            "PI13"
+          ],
+          "teaching_strategy": [
+            "Guided Problem Solving and Tutorials",
+            "Interactive Lectures"
+          ],
+          "assessment_methods": [
+            "Quizzes",
+            "Homework and Classwork Assignments",
+            "Major and Final Exams"
+          ],
+          "current_clo_id": "2.3",
+          "current_clo_text": "Solve electromagnetic field problems involving material media and boundary conditions."
+        }
+      ],
+      "note": null,
+      "comment": "Outcome broadened from a reflection and transmission calculation to solving field problems in material media and at boundaries, giving better assessment and alignment for SO1 evidence under PI13."
     },
     {
       "course_code": "EE 341",
@@ -2444,27 +2413,23 @@
         {
           "clo_number": 2.4,
           "nqf_domain": "Skills",
-          "clo_text": "Present an oral technical presentation on an electromagnetics application",
+          "clo_text": "Communicate electromagnetics information using appropriate engineering representations.",
           "mapped_sos": [
             "SO3"
           ],
           "pi_codes": [
+            "PI31",
             "PI32",
             "PI33"
           ],
           "teaching_strategy": [
-            "Technical Communication Activities",
-            "Interactive Lectures",
-            "Guided Problem Solving and Tutorials"
+            "Technical Communication Activities"
           ],
           "assessment_methods": [
-            "Oral Technical Presentation",
-            "Homework and Classwork Assignments",
-            "Design Project Assignment",
-            "Prototype/System Demonstration"
+            "Oral Technical Presentation"
           ],
           "current_clo_id": "2.4",
-          "current_clo_text": "Present an oral technical presentation on an electromagnetics application"
+          "current_clo_text": "Communicate electromagnetics information using appropriate engineering representations."
         }
       ],
       "note": "New CLO added to strengthen assessment coverage.",
@@ -2487,14 +2452,9 @@
             "PI71"
           ],
           "teaching_strategy": [
-            "Independent/Self-Directed Learning",
-            "Interactive Lectures",
-            "Guided Problem Solving and Tutorials"
+            "Independent/Self-Directed Learning"
           ],
           "assessment_methods": [
-            "Homework and Classwork Assignments",
-            "Simulation/Computational Assignments",
-            "Design Project Assignment",
             "Oral Technical Presentation"
           ],
           "current_clo_id": "3.1",
@@ -2736,7 +2696,7 @@
     {
       "course_code": "EE 351",
       "course_title": "Communication Systems",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Knowledge & Understanding",
@@ -2752,17 +2712,16 @@
         {
           "clo_number": 1.1,
           "nqf_domain": "Knowledge",
-          "clo_text": "Recognize different analog modulation and demodulation techniques.",
+          "clo_text": "Explain modulation and demodulation techniques using time- and frequency-domain representations.",
           "mapped_sos": [
             "SO1"
           ],
           "pi_codes": [
-            "PI11",
-            "PI12",
-            "PI13"
+            "PI11"
           ],
           "teaching_strategy": [
             "Flipped Classroom",
+            "Guided Problem Solving and Tutorials",
             "Interactive Lectures"
           ],
           "assessment_methods": [
@@ -2772,16 +2731,16 @@
             "Simulation/Computational Assignments"
           ],
           "current_clo_id": "1.1",
-          "current_clo_text": "Recognize different analog modulation and demodulation techniques."
+          "current_clo_text": "Explain modulation and demodulation techniques using time- and frequency-domain representations."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Modulation outcome raised from recognition to explanation using time- and frequency-domain representations, giving better assessment and alignment for SO1 evidence under PI11."
     },
     {
       "course_code": "EE 351",
       "course_title": "Communication Systems",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -2797,16 +2756,16 @@
         {
           "clo_number": 2.1,
           "nqf_domain": "Skills",
-          "clo_text": "Explain the linear model of the distortionless channel.",
+          "clo_text": "Formulate mathematical models for signal transmission through various channels.",
           "mapped_sos": [
             "SO1"
           ],
           "pi_codes": [
-            "PI13"
+            "PI12"
           ],
           "teaching_strategy": [
-            "Flipped Classroom",
             "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials",
             "Interactive Lectures"
           ],
           "assessment_methods": [
@@ -2816,16 +2775,16 @@
             "Major and Final Exams"
           ],
           "current_clo_id": "2.1",
-          "current_clo_text": "Explain the linear model of the distortionless channel."
+          "current_clo_text": "Formulate mathematical models for signal transmission through various channels."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Channel outcome raised from explaining one linear model to formulating transmission models, giving better assessment and alignment for SO1 evidence under PI12."
     },
     {
       "course_code": "EE 351",
       "course_title": "Communication Systems",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -2841,13 +2800,11 @@
         {
           "clo_number": 2.2,
           "nqf_domain": "Skills",
-          "clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems.",
+          "clo_text": "Solve communication system problems from specified system parameters and requirements.",
           "mapped_sos": [
             "SO1"
           ],
           "pi_codes": [
-            "PI11",
-            "PI12",
             "PI13"
           ],
           "teaching_strategy": [
@@ -2862,16 +2819,16 @@
             "Quizzes"
           ],
           "current_clo_id": "2.2",
-          "current_clo_text": "Recognize the basic model of communication systems, such as AM and FM radio systems."
+          "current_clo_text": "Solve communication system problems from specified system parameters and requirements."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "System outcome raised from recognition to solving problems from specified parameters and requirements, giving better assessment and alignment for SO1 evidence under PI13."
     },
     {
       "course_code": "EE 351",
       "course_title": "Communication Systems",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -2887,7 +2844,7 @@
         {
           "clo_number": 2.3,
           "nqf_domain": "Skills",
-          "clo_text": "Analyze the impact of various channels on communication systems.",
+          "clo_text": "Evaluate various channel effects on communication system performance using analytical and simulation methods.",
           "mapped_sos": [
             "SO1"
           ],
@@ -2897,8 +2854,10 @@
             "PI13"
           ],
           "teaching_strategy": [
+            "Simulation and Computer-Based Learning",
+            "Guided Problem Solving and Tutorials",
             "Technical Communication Activities",
-            "Guided Problem Solving and Tutorials"
+            "Interactive Lectures"
           ],
           "assessment_methods": [
             "Homework and Classwork Assignments",
@@ -2907,16 +2866,16 @@
             "Major and Final Exams"
           ],
           "current_clo_id": "2.3",
-          "current_clo_text": "Analyze the impact of various channels on communication systems."
+          "current_clo_text": "Evaluate various channel effects on communication system performance using analytical and simulation methods."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Channel-effects outcome raised to performance evaluation by analytical and simulation methods, giving better assessment and alignment for SO1 evidence under PI11, PI12, and PI13."
     },
     {
       "course_code": "EE 351",
       "course_title": "Communication Systems",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Skills",
@@ -2932,12 +2891,11 @@
         {
           "clo_number": 2.4,
           "nqf_domain": "Skills",
-          "clo_text": "Demonstrate the pulse modulation techniques.",
+          "clo_text": "Apply various modulation techniques and evaluate their characteristics using analytical, simulation, or laboratory methods.",
           "mapped_sos": [
             "SO6"
           ],
           "pi_codes": [
-            "PI61",
             "PI62",
             "PI63",
             "PI64"
@@ -2954,16 +2912,16 @@
             "Homework and Classwork Assignments"
           ],
           "current_clo_id": "2.4",
-          "current_clo_text": "Demonstrate the pulse modulation techniques."
+          "current_clo_text": "Apply various modulation techniques and evaluate their characteristics using analytical, simulation, or laboratory methods."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Modulation outcome broadened beyond pulse techniques to application and evaluation by analytical, simulation, or laboratory methods, giving better assessment and alignment for SO6 evidence under PI62, PI63, and PI64."
     },
     {
       "course_code": "EE 351",
       "course_title": "Communication Systems",
-      "type": "unchanged",
+      "type": "modified",
       "baseline_clos": [
         {
           "nqf_domain": "Values",
@@ -2979,27 +2937,17 @@
         {
           "clo_number": 3.1,
           "nqf_domain": "Values",
-          "clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis.",
+          "clo_text": "Design communication systems through team-based laboratory experiments using software-defined radio.",
           "mapped_sos": [
             "SO2",
-            "SO3",
             "SO5",
             "SO6"
           ],
           "pi_codes": [
             "PI21",
-            "PI22",
-            "PI23",
-            "PI24",
-            "PI31",
-            "PI32",
-            "PI33",
             "PI51",
-            "PI52",
             "PI61",
-            "PI62",
-            "PI63",
-            "PI64"
+            "PI62"
           ],
           "teaching_strategy": [
             "Technical Communication Activities",
@@ -3014,11 +2962,49 @@
             "Oral Technical Presentation"
           ],
           "current_clo_id": "3.1",
-          "current_clo_text": "Design modulation and demodulation circuits using various lab experiments, such as: envelope detector, rectifier circuits, and software defined radio circutis."
+          "current_clo_text": "Design communication systems through team-based laboratory experiments using software-defined radio."
         }
       ],
       "note": null,
-      "comment": "No wording change."
+      "comment": "Laboratory design outcome restated around team-based communication-system design using software-defined radio, giving better assessment and alignment for SO2, SO5, and SO6 evidence under PI21, PI51, PI61, and PI62."
+    },
+    {
+      "course_code": "EE 351",
+      "course_title": "Communication Systems",
+      "type": "added",
+      "baseline_clos": [],
+      "current_clos": [
+        {
+          "clo_number": 3.2,
+          "nqf_domain": "Values",
+          "clo_text": "Communicate the experimental results of communication systems as part of a team using appropriate techniques adapted to a range of audiences.",
+          "mapped_sos": [
+            "SO3",
+            "SO5"
+          ],
+          "pi_codes": [
+            "PI31",
+            "PI32",
+            "PI33",
+            "PI51"
+          ],
+          "teaching_strategy": [
+            "Flipped Classroom",
+            "Design- and Project-Based Learning",
+            "Independent/Self-Directed Learning"
+          ],
+          "assessment_methods": [
+            "Oral Technical Presentation",
+            "Design Project Assignment",
+            "Prototype/System Demonstration",
+            "Laboratory Reports"
+          ],
+          "current_clo_id": "3.2",
+          "current_clo_text": "Communicate the experimental results of communication systems as part of a team using appropriate techniques adapted to a range of audiences."
+        }
+      ],
+      "note": "New CLO added to strengthen assessment coverage.",
+      "comment": "New CLO added to strengthen assessment coverage."
     },
     {
       "course_code": "EE 305",

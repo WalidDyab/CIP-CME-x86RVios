@@ -48,8 +48,7 @@
               "SO1"
             ],
             "pi_codes": [
-              "PI11",
-              "PI12"
+              "PI11"
             ],
             "teaching_strategy": [
               "Flipped Classroom",
@@ -66,14 +65,13 @@
           {
             "clo_number": 2.1,
             "nqf_domain": "Skills",
-            "clo_text": "Explain the various logic using various operators and expressions.",
+            "clo_text": "Explain the logic of a Python program using an appropriate method.",
             "mapped_sos": [
               "SO3"
             ],
             "pi_codes": [
               "PI31",
-              "PI32",
-              "PI33"
+              "PI32"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -90,14 +88,12 @@
           {
             "clo_number": 2.2,
             "nqf_domain": "Skills",
-            "clo_text": "Write a programming code in Python.",
+            "clo_text": "Develop a Python program for a given algorithm or logic.",
             "mapped_sos": [
-              "SO3"
+              "SO1"
             ],
             "pi_codes": [
-              "PI31",
-              "PI32",
-              "PI33"
+              "PI12"
             ],
             "teaching_strategy": [
               "Technical Communication Activities",
@@ -113,13 +109,12 @@
           {
             "clo_number": 2.3,
             "nqf_domain": "Skills",
-            "clo_text": "Examine program code using Python",
+            "clo_text": "Examine Python program code for logical and technical errors.",
             "mapped_sos": [
               "SO1"
             ],
             "pi_codes": [
-              "PI11",
-              "PI12"
+              "PI11"
             ],
             "teaching_strategy": [
               "Simulation and Computer-Based Learning",
@@ -196,8 +191,7 @@
           "PI11": "I",
           "PI12": "I",
           "PI31": "I",
-          "PI32": "I",
-          "PI33": "I"
+          "PI32": "I"
         }
       },
       {
@@ -624,8 +618,7 @@
             "nqf_domain": "Knowledge",
           "clo_text": "Describe fundamental concepts and representations of digital logic circuits.",
             "mapped_sos": [
-              "SO1",
-              "SO2"
+              "SO1"
             ],
             "pi_codes": [
             "PI13"
