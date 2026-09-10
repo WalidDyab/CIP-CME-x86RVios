@@ -8,12 +8,8 @@
       font-weight: 700
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 18px;
-      align-items: stretch;
-      margin-bottom: 18px
+    .home-hero {
+      margin: 12px 0 18px
     }
 
     .panel {
@@ -65,12 +61,6 @@
       background: linear-gradient(135deg, var(--coe-orange), #ffbf63);
       color: #1d1203;
       border: 0
-    }
-
-    .quick {
-      padding: 26px;
-      display: grid;
-      gap: 14px
     }
 
     .kpi {
@@ -164,7 +154,6 @@
 
     @media(max-width:900px) {
 
-      .hero,
       .grid {
         grid-template-columns: 1fr
       }
