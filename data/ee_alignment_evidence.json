@@ -1190,7 +1190,8 @@
         "max_review_share": 0.03,
         "requires_all_outcomes_represented": true,
         "headline": "Strong and broadly defensible",
-        "summary": "Across the required curriculum, the great majority of CLO to PI relationships read as well supported or defensible, every Student Outcome is represented, and only a small number of relationships show enough conceptual distance to merit a faculty conversation. The productive work here is sharpening evidence rather than revisiting the mapping."
+        "summary": "Across the required curriculum, the great majority of CLO to PI relationships read as well supported or defensible, every Student Outcome is represented, and only a small number of relationships show enough conceptual distance to merit a faculty conversation. The productive work here is sharpening evidence rather than revisiting the mapping.",
+        "plain_headline": "Core curriculum alignment appears strong and broadly defensible."
       },
       {
         "id": "broadly_defensible",
@@ -1198,7 +1199,8 @@
         "max_review_share": 0.06,
         "requires_all_outcomes_represented": true,
         "headline": "Broadly defensible, with focused opportunities to strengthen evidence",
-        "summary": "Most relationships in the required curriculum read as well supported or defensible. An identifiable group would be easier to defend with a clearer evidence route or a PI-specific rubric criterion."
+        "summary": "Most relationships in the required curriculum read as well supported or defensible. An identifiable group would be easier to defend with a clearer evidence route or a PI-specific rubric criterion.",
+        "plain_headline": "Core curriculum alignment appears broadly defensible."
       },
       {
         "id": "defensible_with_opportunities",
@@ -1206,7 +1208,8 @@
         "max_review_share": 0.12,
         "requires_all_outcomes_represented": false,
         "headline": "Defensible overall, with several areas where evidence could be strengthened",
-        "summary": "The mapping holds across the required curriculum. Several outcomes would benefit from a clearer evidence route before their attainment is reported."
+        "summary": "The mapping holds across the required curriculum. Several outcomes would benefit from a clearer evidence route before their attainment is reported.",
+        "plain_headline": "Core curriculum alignment appears defensible, with some areas to strengthen."
       },
       {
         "id": "evidence_development",
@@ -1214,7 +1217,8 @@
         "max_review_share": 1.0,
         "requires_all_outcomes_represented": false,
         "headline": "Mapping is in place; evidence documentation is the main area to develop",
-        "summary": "The approved mapping covers the required curriculum. The clearest next step is naming the artifacts and rubric criteria that would carry the evidence."
+        "summary": "The approved mapping covers the required curriculum. The clearest next step is naming the artifacts and rubric criteria that would carry the evidence.",
+        "plain_headline": "The required curriculum is fully mapped; the evidence behind it is still being documented."
       }
     ]
   },
@@ -1241,6 +1245,78 @@
         "Do the permitted elective combinations maintain the intended educational experience?"
       ],
       "note": "Not implemented in this release. The elective mappings are already analysed and can be inspected through the exploration tools on this page; only the combination-level analysis is deferred."
+    }
+  ],
+  "so_short_names": {
+    "SO1": "Complex Problem Solving",
+    "SO2": "Engineering Design",
+    "SO3": "Communication",
+    "SO4": "Ethics & Professional Responsibility",
+    "SO5": "Teamwork",
+    "SO6": "Experimentation",
+    "SO7": "New Knowledge & Lifelong Learning"
+  },
+  "so_short_checks": {
+    "SO1": "Nominate specific exam or assignment items rather than whole papers.",
+    "SO2": "Confirm the design courses score design, constraints and standards as separate rubric rows.",
+    "SO3": "Keep the graded report or presentation, not only the mark.",
+    "SO4": "Confirm the CLO–PI relationships involving ethical and professional responsibility.",
+    "SO5": "Confirm that at least one nominated team activity evaluates individual contribution.",
+    "SO6": "Score experiment design, data interpretation and conclusions separately.",
+    "SO7": "Make the self-directed-learning component explicit in the nominated evidence."
+  },
+  "overview_states": {
+    "none": {
+      "label": "Strong",
+      "tone": "strong"
+    },
+    "confirm": {
+      "label": "Looks appropriate",
+      "tone": "good"
+    },
+    "evidence_watch": {
+      "label": "Check evidence",
+      "tone": "watch"
+    },
+    "evidence": {
+      "label": "Check evidence",
+      "tone": "watch"
+    },
+    "review": {
+      "label": "Review",
+      "tone": "review"
+    }
+  },
+  "tools": [
+    {
+      "id": "overview",
+      "label": "Overview",
+      "description": "Program conclusion, the seven Student Outcomes and the items worth reviewing."
+    },
+    {
+      "id": "so-details",
+      "label": "SO Details",
+      "description": "A single Student Outcome in more depth, with the option to open its mappings."
+    },
+    {
+      "id": "matrix",
+      "label": "Course × SO Map",
+      "description": "Which courses contribute to each outcome, required courses first."
+    },
+    {
+      "id": "explorer",
+      "label": "CLO–PI Explorer",
+      "description": "Every CLO to Performance Indicator relationship with its rationale and evidence suggestions."
+    },
+    {
+      "id": "evidence",
+      "label": "Evidence Review",
+      "description": "Evidence readiness, recommended carriers, rubric suggestions and evidence-quality checks."
+    },
+    {
+      "id": "methodology",
+      "label": "Methodology",
+      "description": "How the analysis reads a mapping, the thresholds it uses and the layers still to come."
     }
   ]
 }

@@ -1,4 +1,8 @@
-/* CLO-SO-PI Alignment & Evidence Analysis.
+/* CLO-SO-PI Alignment Review.
+ *
+ * Simple by default, analysis on demand. The Overview answers only whether the required
+ * curriculum serves the seven Student Outcomes and what faculty should look at; every
+ * deeper capability sits behind the Analysis Tools rail and renders on first use.
  *
  * Reads the approved curriculum mapping from data/ee_curriculum.json, the program
  * assessment cycle from data/ee-assessment.json, and the review knowledge layer from
@@ -414,84 +418,162 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>`;
   }
 
-  function renderScope() {
-    el('scope-title').textContent = scopeModel.label || 'Analysis scope: Core curriculum';
-    el('scopeStatement').textContent = scopeModel.statement || '';
-    el('scopeElectiveNote').textContent = scopeModel.elective_note || '';
-    el('scopeCounts').innerHTML = `
-      <span class="scope-chip scope-core"><strong>${esc(coreCourseCount)}</strong> required courses · <strong>${esc(coreLinks.length)}</strong> CLO→PI relationships analysed for program conclusions</span>
-      <span class="scope-chip scope-elective"><strong>${esc(electiveCourses.length)}</strong> elective courses · <strong>${esc(electiveLinks.length)}</strong> relationships shown for exploration only</span>`;
+  // ------------------------------------------------------ shared derived copy
+
+  const shortName = soCode => knowledge.so_short_names?.[soCode] || soCode;
+  const shortCheck = soCode => knowledge.so_short_checks?.[soCode] || '';
+  const overviewState = attention => knowledge.overview_states?.[attention] || { label: attention, tone: 'watch' };
+
+  // The faculty-facing one-liner for an outcome, composed from figures the engine has
+  // already computed. No new measurement is introduced here.
+  function overviewMessage(stat) {
+    const core = stat.core;
+    const reviewCount = core.statuses.review_recommended || 0;
+    if (stat.attention === 'review') {
+      return `${plural(reviewCount, 'CLO–PI relationship')} ${verb(reviewCount, 'is', 'are')} worth faculty confirmation.`;
+    }
+    if (stat.attention === 'evidence' || stat.attention === 'evidence_watch') {
+      return shortCheck(stat.soCode);
+    }
+    if (stat.attention === 'confirm') {
+      if (core.concentrated) {
+        return `Concentrated in ${plural(Math.min(TOP_COURSES, core.perCourse.length), 'required course')} suited to this outcome; assessment opportunities look suitable.`;
+      }
+      return `Carried by a focused set of ${plural(core.courseCodes.size, 'required course')}; assessment opportunities look suitable.`;
+    }
+    return core.breadth === 'broad'
+      ? 'Broadly represented in the required curriculum with suitable assessment opportunities.'
+      : `Represented in ${plural(core.courseCodes.size, 'required course')} with suitable assessment opportunities.`;
   }
 
-  function renderSnapshot() {
+  function renderScopeBadge() {
+    el('scopeBadge').textContent = `${scopeModel.core_label || 'Core curriculum'} · `
+      + `${plural(coreCourseCount, 'required course')}. `
+      + `Electives are analysed separately because students complete only part of the elective pool.`;
+  }
+
+  // -------------------------------------------------------------- overview tool
+
+  function renderOverview() {
     const conclusion = programConclusion();
-    el('snapshotVerdict').innerHTML = `
-      <p class="verdict-kicker">${esc(scopeModel.core_label || 'Core curriculum')} · alignment conclusion</p>
-      <p class="verdict-headline">${esc(conclusion.headline || '')}</p>
-      <p class="verdict-summary">${esc(conclusion.summary || '')}</p>
-      ${statusBar(coreStatuses, coreLinks.length)}
-      <div class="status-chip-row">${statusOrder.map(id => statusChip(id, coreStatuses[id])).join('')}</div>`;
+    const needAttention = soStats.filter(stat => stat.attention === 'review'
+      || stat.attention === 'evidence' || stat.attention === 'evidence_watch');
+    el('overviewConclusion').innerHTML = `
+      <p class="conclusion-headline">${esc(conclusion.plain_headline || conclusion.headline || '')}</p>
+      <p class="conclusion-detail">${esc(allOutcomesRepresented
+        ? `All ${soStats.length} Student Outcomes are represented in the required curriculum.`
+        : `${outcomesRepresented} of ${soStats.length} Student Outcomes are represented in the required curriculum.`)}
+        ${esc(needAttention.length
+          ? `Most existing mappings appear reasonable, with ${plural(needAttention.length, 'outcome')} where assessment evidence or faculty confirmation would make the alignment clearer.`
+          : 'Most existing mappings appear reasonable, and no outcome currently needs faculty attention.')}</p>`;
 
-    const leanest = [...soStats].sort((left, right) => left.core.courseShare - right.core.courseShare)[0];
-    const strengthen = coreStatuses.could_be_strengthened || 0;
-    const review = coreStatuses.review_recommended || 0;
-    const reviewOutcomes = [...new Set(coreLinks.filter(link => link.status === 'review_recommended').map(link => link.soCode))].sort();
-    const messages = [
-      {
-        id: 'coverage',
-        title: 'Coverage',
-        headline: allOutcomesRepresented
-          ? `All ${outcomesRepresented} Student Outcomes are represented in the required curriculum`
-          : `${outcomesRepresented} of ${soStats.length} Student Outcomes are represented in the required curriculum`,
-        body: `${corePis.size} of ${Object.keys(indicators).length} Performance Indicators appear in at least one required course. `
-          + `The narrowest reach is ${leanest.soCode}, carried by ${leanest.core.courseCodes.size} of the ${coreCourseCount} required courses.`,
-        tone: allOutcomesRepresented ? 'strong' : 'watch'
-      },
-      {
-        id: 'alignment',
-        title: 'Alignment',
-        headline: `${coreSupported} of ${coreLinks.length} core relationships (${pct(coreSupportedShare)}%) read as Well Supported or Defensible`,
-        body: `${pct(share(coreLinks.filter(link => link.match === 'primary').length, coreLinks.length))}% of core relationships are directly aligned — the CLO asks for the same kind of demonstration the indicator describes — and most of the remainder are supported through a related demonstration.`,
-        tone: coreSupportedShare >= 0.85 ? 'strong' : coreSupportedShare >= 0.7 ? 'good' : 'watch'
-      },
-      {
-        id: 'evidence',
-        title: 'Evidence',
-        headline: `A suitable evidence carrier is already declared for ${coreReadyCount} of ${coreLinks.length} core relationships (${pct(share(coreReadyCount, coreLinks.length))}%)`,
-        body: `${strengthen === 0 ? 'No core relationship' : plural(strengthen, 'core relationship')} would benefit from a clearer evidence route or a PI-specific rubric criterion. `
-          + 'A declared assessment method shows that a suitable opportunity exists; no artifact has been linked yet, so no indicator has been shown to have been measured.',
-        tone: share(coreReadyCount, coreLinks.length) >= EVIDENCE_STRONG ? 'strong' : 'watch'
-      },
-      {
-        id: 'attention',
-        title: 'Faculty attention',
-        headline: review === 0
-          ? 'No core relationship shows a specific conceptual difference from its indicator'
-          : `${review} of ${coreLinks.length} core relationships (${pctText(coreReviewShare)}) merit a closer faculty look`,
-        body: review === 0
-          ? 'Every core relationship reads as either directly aligned with its indicator or supported through a related demonstration.'
-          : `${review === 1 ? 'It sits' : 'They sit'} under ${joinList(reviewOutcomes)}, and each one opens with the preserve path: if the assessed task carries the indicator, clarified wording or a named rubric criterion is enough.`,
-        tone: review === 0 ? 'strong' : 'review'
-      }
-    ];
-    el('snapshotMessages').innerHTML = messages.map(message => `
-      <article class="snapshot-card tone-${message.tone}">
-        <span class="snapshot-label">${esc(message.title)}</span>
-        <p class="snapshot-headline">${esc(message.headline)}</p>
-        <p class="snapshot-body">${esc(message.body)}</p>
-      </article>`).join('');
+    el('soOverview').innerHTML = soStats.map(stat => {
+      const state = overviewState(stat.attention);
+      return `<article class="so-row tone-${state.tone}">
+        <div class="so-row-head">
+          <span class="so-row-code">${esc(stat.soCode)}</span>
+          <span class="so-row-name">${esc(shortName(stat.soCode))}</span>
+          <span class="state-chip tone-${state.tone}">${esc(state.label)}</span>
+        </div>
+        <p class="so-row-message">${esc(overviewMessage(stat))}</p>
+        <button type="button" class="so-row-link" data-open-so="${esc(stat.soCode)}">Details<span aria-hidden="true"> →</span><span class="sr-only"> for ${esc(stat.soCode)} ${esc(shortName(stat.soCode))}</span></button>
+      </article>`;
+    }).join('');
 
-    const coreClos = requiredCourses.reduce((sum, course) => sum + (course.clos || []).length, 0);
-    const allClos = courses.reduce((sum, course) => sum + (course.clos || []).length, 0);
-    el('snapshotContext').innerHTML = `
-      <p class="muted">${esc(knowledge.program_conclusion?.intro || '')}</p>
-      <div class="table-wrap"><table><thead><tr><th>Dataset</th><th>${esc(scopeModel.core_label || 'Core curriculum')}</th><th>${esc(scopeModel.elective_label || 'Elective enrichment')}</th><th>Whole catalogue</th></tr></thead><tbody>
-        <tr><td>Courses</td><td>${esc(coreCourseCount)}</td><td>${esc(electiveCourses.length)}</td><td>${esc(courses.length)}</td></tr>
-        <tr><td>Course learning outcomes</td><td>${esc(coreClos)}</td><td>${esc(allClos - coreClos)}</td><td>${esc(allClos)}</td></tr>
-        <tr><td>CLO → PI relationships</td><td>${esc(coreLinks.length)}</td><td>${esc(electiveLinks.length)}</td><td>${esc(links.length)}</td></tr>
-        <tr><td>Student Outcomes represented</td><td>${esc(outcomesRepresented)} of ${esc(soStats.length)}</td><td>${esc(soStats.filter(stat => stat.elective.links.length).length)} of ${esc(soStats.length)}</td><td>${esc(soStats.filter(stat => stat.all.links.length).length)} of ${esc(soStats.length)}</td></tr>
-        <tr><td>Performance Indicators represented</td><td>${esc(corePis.size)} of ${esc(Object.keys(indicators).length)}</td><td>${esc(new Set(electiveLinks.map(link => link.piCode).filter(Boolean)).size)} of ${esc(Object.keys(indicators).length)}</td><td>${esc(new Set(links.map(link => link.piCode).filter(Boolean)).size)} of ${esc(Object.keys(indicators).length)}</td></tr>
-      </tbody></table></div>`;
+    el('reviewItems').innerHTML = needAttention.length
+      ? needAttention.map(stat => `
+        <article class="review-item tone-${overviewState(stat.attention).tone}">
+          <div class="review-item-text">
+            <p class="review-item-title">${esc(stat.soCode)} · ${esc(shortName(stat.soCode))}</p>
+            <p class="review-item-check">${esc(shortCheck(stat.soCode))}</p>
+          </div>
+          <button type="button" class="btn primary" data-open-so="${esc(stat.soCode)}">Review ${esc(stat.soCode)}</button>
+        </article>`).join('')
+      : '<p class="muted">Nothing in the required curriculum currently needs a faculty review.</p>';
+  }
+
+  // ----------------------------------------------------------- SO details tool
+
+  function meter(label, value, text, tone) {
+    return `<div class="health-meter">
+      <span class="meter-label">${esc(label)}</span>
+      ${coverageBar(value, `${label}: ${text}`, tone)}
+      <span class="meter-value tone-${tone}">${esc(text)}</span>
+    </div>`;
+  }
+
+  function healthTone(value, strong, good) {
+    return value >= strong ? 'strong' : value >= good ? 'good' : 'watch';
+  }
+
+  function renderSoChooser() {
+    el('soDetailsChooser').innerHTML = `<span class="so-chooser-label" id="soChooserLabel">Choose an outcome</span>
+      <div class="so-chooser-buttons" role="group" aria-labelledby="soChooserLabel">${soStats.map(stat => {
+        const state = overviewState(stat.attention);
+        return `<button type="button" class="so-chooser-button tone-${state.tone}${state.tone === 'strong' ? '' : ' is-flagged'}" data-open-so="${esc(stat.soCode)}" aria-pressed="${detailState.so === stat.soCode}">
+          <span class="chooser-code">${esc(stat.soCode)}</span>
+          <span class="chooser-name">${esc(shortName(stat.soCode))}</span>
+        </button>`;
+      }).join('')}</div>`;
+  }
+
+  // First screen for one outcome: a plain summary and a single deliberate action. The
+  // relationship-level analysis stays behind "Explore mappings".
+  function renderSoDetails() {
+    const stat = soByCode.get(detailState.so);
+    const body = el('soDetailsBody');
+    renderSoChooser();
+    if (!stat) {
+      body.innerHTML = '<p class="muted">Select a Student Outcome above to see its summary.</p>';
+      return;
+    }
+    const core = stat.core;
+    const state = overviewState(stat.attention);
+    const observation = [
+      model.breadth?.notes?.[core.breadth] || '',
+      core.concentrated
+        ? `Most of its relationships sit in ${joinList(core.perCourse.slice(0, TOP_COURSES).map(item => item.code))}.`
+        : '',
+      stat.evidenceNote || ''
+    ].filter(Boolean).join(' ');
+    const soFindings = buildFindings().filter(finding => finding.so === stat.soCode);
+
+    body.innerHTML = `
+      <article class="so-summary so-accent-${slug(stat.soCode)}">
+        <header class="so-summary-head">
+          <h3>${esc(stat.soCode)} — ${esc(shortName(stat.soCode))}</h3>
+          <span class="state-chip tone-${state.tone}">${esc(state.label)}</span>
+        </header>
+        <p class="so-summary-statement">${esc(stat.statement)}</p>
+        <dl class="so-summary-facts">
+          <dt>Overall</dt>
+          <dd>${esc(stat.attention === 'review'
+            ? 'Mapping is retained; a small number of relationships are worth confirming'
+            : stat.attention === 'evidence' || stat.attention === 'evidence_watch'
+              ? 'Mapping appears appropriate; the assessment evidence could be clearer'
+              : 'Mapping appears appropriate')}</dd>
+          <dt>Core curriculum</dt>
+          <dd>${esc(plural(core.courseCodes.size, 'required course'))} contribute, through ${esc(plural(core.cloKeys.size, 'CLO'))}</dd>
+          <dt>Main observation</dt>
+          <dd>${esc(observation)}</dd>
+          <dt>Suggested faculty check</dt>
+          <dd>${esc(stat.nextStep)}</dd>
+        </dl>
+        <div class="so-summary-meters">
+          ${meter('Core coverage', core.courseShare, `${core.courseCodes.size}/${coreCourseCount} courses`, healthTone(core.courseShare, BROAD, MODERATE))}
+          ${meter('Conceptual alignment', core.conceptualAlignment, `${pct(core.conceptualAlignment)}%`, healthTone(core.conceptualAlignment, 0.95, 0.8))}
+          ${meter('Evidence readiness', core.evidenceReadiness, `${pct(core.evidenceReadiness)}%`, healthTone(core.evidenceReadiness, EVIDENCE_STRONG, EVIDENCE_PARTIAL))}
+        </div>
+        <div class="status-chip-row">${statusChipRow(core.statuses)}</div>
+        <p class="so-summary-elective muted">${esc(scopeModel.elective_label || 'Elective enrichment')}: ${esc(plural(stat.elective.links.length, 'relationship'))} in ${esc(plural(stat.elective.courseCodes.size, 'elective course'))}, not counted in the program conclusion.</p>
+        <div class="so-summary-actions">
+          <button type="button" class="btn primary" data-explore-so="${esc(stat.soCode)}">Explore ${esc(stat.soCode)} mappings</button>
+        </div>
+      </article>
+      ${soFindings.length ? `<details class="so-interpretation">
+        <summary>Full interpretation for ${esc(stat.soCode)}</summary>
+        <div class="attention-list">${soFindings.map(findingCard).join('')}</div>
+      </details>` : ''}`;
   }
 
   // --------------------------------------------------------- what deserves attention
@@ -500,7 +582,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `<article class="finding tone-${finding.tone}">
       <header class="finding-head">
         <h3>${esc(finding.title)}</h3>
-        ${finding.so ? `<button type="button" class="btn finding-open" data-open-so="${esc(finding.so)}">Open ${esc(finding.so)}</button>` : ''}
       </header>
       <p class="finding-line"><span class="finding-label">What we see</span>${esc(finding.see)}</p>
       <p class="finding-line"><span class="finding-label">What it means</span>${esc(finding.means)}</p>
@@ -636,74 +717,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     return findings.sort((left, right) => right.priority - left.priority);
   }
 
-  function renderFindings() {
-    const findings = buildFindings();
-    const top = findings.slice(0, 5);
-    const rest = findings.slice(5);
-    el('attentionFindings').innerHTML = top.map(findingCard).join('');
-    el('moreObservations').innerHTML = rest.length
-      ? rest.map(findingCard).join('')
-      : '<p class="muted">No further program-level observations.</p>';
-  }
-
-  // -------------------------------------------------------- SO health overview
-
-  function meter(label, value, text, tone) {
-    return `<div class="health-meter">
-      <span class="meter-label">${esc(label)}</span>
-      ${coverageBar(value, `${label}: ${text}`, tone)}
-      <span class="meter-value tone-${tone}">${esc(text)}</span>
-    </div>`;
-  }
-
-  function healthTone(value, strong, good) {
-    return value >= strong ? 'strong' : value >= good ? 'good' : 'watch';
-  }
-
-  function renderHealth() {
-    el('healthLegend').innerHTML = ['conceptual_alignment', 'evidence_readiness', 'evidence_specificity']
-      .map(id => `<span class="health-legend-item"><strong>${esc(dimensions[id]?.label || id)}</strong>${esc(dimensions[id]?.question || '')}</span>`).join('');
-
-    el('soHealth').innerHTML = soStats.map(stat => {
-      const attention = ATTENTION[stat.attention];
-      const core = stat.core;
-      const nextLabel = stat.attention === 'none' ? 'When this outcome is next assessed' : 'What to do next';
-      const concentrationText = core.concentrated
-        ? `Relationship concentration is ${pct(core.relationshipConcentration)}% in its ${plural(Math.min(TOP_COURSES, core.perCourse.length), 'largest required course')} (${core.perCourse.slice(0, TOP_COURSES).map(item => item.code).join(', ')}).`
-        : `Relationships are spread across its ${plural(core.courseCodes.size, 'contributing required course')} rather than concentrated in a few.`;
-      return `
-      <details class="health-row so-accent-${slug(stat.soCode)} tone-${attention.tone}">
-        <summary>
-          <span class="health-code">${esc(stat.soCode)}</span>
-          <span class="health-statement">${esc(stat.statement)}</span>
-          <span class="health-meters">
-            ${meter('Core coverage', core.courseShare, `${core.courseCodes.size}/${coreCourseCount} courses`, healthTone(core.courseShare, BROAD, MODERATE))}
-            ${meter('Conceptual alignment', core.conceptualAlignment, `${pct(core.conceptualAlignment)}%`, healthTone(core.conceptualAlignment, 0.95, 0.8))}
-            ${meter('Evidence readiness', core.evidenceReadiness, `${pct(core.evidenceReadiness)}%`, healthTone(core.evidenceReadiness, EVIDENCE_STRONG, EVIDENCE_PARTIAL))}
-          </span>
-          <span class="attention-chip tone-${attention.tone}">${esc(attention.label)}</span>
-        </summary>
-        <div class="health-body">
-          <div class="health-facts">
-            <span><strong>${esc(core.cloKeys.size)}</strong> core CLOs</span>
-            <span><strong>${esc(core.links.length)}</strong> core relationships</span>
-            <span><strong>${esc(core.coveredPis)}/${esc(stat.expectedPis.length)}</strong> indicators represented</span>
-            <span><strong>${esc(model.breadth?.labels?.[core.breadth] || core.breadth)}</strong></span>
-            <span class="health-elective">${esc(scopeModel.elective_label || 'Elective enrichment')}: <strong>${esc(stat.elective.links.length)}</strong> relationships in ${esc(stat.elective.courseCodes.size)} electives</span>
-          </div>
-          <div class="status-chip-row">${statusChipRow(core.statuses)}</div>
-          <p class="health-line"><span class="finding-label">What we see</span>${esc(stat.soCode)} is carried by ${esc(plural(core.courseCodes.size, 'required course'))} through ${esc(plural(core.cloKeys.size, 'CLO'))} and ${esc(plural(core.links.length, 'CLO→PI relationship'))}. Conceptual alignment is ${esc(pct(core.conceptualAlignment))}% (${esc(pct(core.directlyAligned))}% directly aligned), and a preferred evidence carrier is already declared for ${esc(pct(core.evidenceReadiness))}% of them.</p>
-          <p class="health-line"><span class="finding-label">What it means</span>${esc(model.breadth?.notes?.[core.breadth] || '')} ${esc(concentrationText)} ${esc(stat.evidenceNote)}</p>
-          <p class="health-line"><span class="finding-label">${esc(nextLabel)}</span>${esc(stat.nextStep)}</p>
-          <p class="health-line health-specificity"><span class="finding-label">${esc(dimensions.evidence_specificity?.label || 'Evidence Specificity')}</span>${esc(dimensions.evidence_specificity?.states?.recommended?.description || '')}</p>
-          <div class="health-actions">
-            <button type="button" class="btn primary" data-open-so="${esc(stat.soCode)}">Open the full ${esc(stat.soCode)} analysis</button>
-          </div>
-        </div>
-      </details>`;
-    }).join('');
-
-    el('thresholdNote').textContent = model.threshold_note || '';
+  // Program-wide observations (not tied to one outcome) live in Evidence Review; the
+  // per-outcome ones are shown inside SO Details.
+  function renderProgramObservations() {
+    const general = buildFindings().filter(finding => !finding.so);
+    el('programObservations').innerHTML = general.length
+      ? general.map(findingCard).join('')
+      : '<p class="muted">No program-wide observations.</p>';
   }
 
   // ------------------------------------------------------------------ matrix
@@ -735,7 +755,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           ? `${course.course_code} (${core ? 'required' : 'elective'}), ${soCode}: ${plural(count, 'CLO to PI relationship')}${levels ? `, performance level ${levels}` : ''}`
           : `${course.course_code}, ${soCode}: no mapped relationship`;
         const inner = count
-          ? `<button type="button" class="matrix-hit" data-open-so="${esc(soCode)}" data-course="${esc(course.course_code)}" data-elective="${core ? 'false' : 'true'}" aria-label="${esc(label)}"><span class="matrix-count">${esc(count)}</span>${levels ? `<span class="matrix-level">${esc(levels)}</span>` : ''}</button>`
+          ? `<button type="button" class="matrix-hit" data-explore-so="${esc(soCode)}" data-course="${esc(course.course_code)}" data-elective="${core ? 'false' : 'true'}" aria-label="${esc(label)}"><span class="matrix-count">${esc(count)}</span>${levels ? `<span class="matrix-level">${esc(levels)}</span>` : ''}</button>`
           : `<span class="matrix-empty" aria-label="${esc(label)}">·</span>`;
         return `<td class="matrix-cell ${intensityClass(count)}">${inner}</td>`;
       }).join('');
@@ -752,7 +772,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // ------------------------------------------------------------- drill-down
 
+  // Explorer filter state, and the single outcome the SO Details tool is showing.
   const state = { so: soStats[0]?.soCode || '', scope: 'core', pi: 'all', status: 'all', query: '', course: '' };
+  const detailState = { so: '' };
   const activeScope = stat => state.scope === 'core' ? stat.core : stat.all;
 
   function filteredLinks(stat) {
@@ -992,7 +1014,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Every navigation into an outcome starts from a clean filter state, so a query typed
   // for an earlier outcome cannot silently hide the relationships just asked for.
-  function openOutcome(soCode, courseCode, isElective) {
+  // Every entry into the explorer starts from a clean filter state, so a query typed for
+  // an earlier outcome cannot silently hide the relationships just asked for.
+  function openExplorer(soCode, courseCode, isElective) {
     if (!soByCode.has(soCode)) return;
     state.so = soCode;
     state.course = courseCode || '';
@@ -1006,12 +1030,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     el('detailSearch').value = '';
     renderPiSelect(soByCode.get(soCode));
     renderDetail();
-    el('detailSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   document.addEventListener('click', event => {
-    const opener = event.target.closest('[data-open-so]');
-    if (opener) { openOutcome(opener.dataset.openSo, opener.dataset.course, opener.dataset.elective); return; }
+    const detailOpener = event.target.closest('[data-open-so]');
+    if (detailOpener) { showTool('so-details', { so: detailOpener.dataset.openSo }); return; }
+    const explorerOpener = event.target.closest('[data-explore-so]');
+    if (explorerOpener) {
+      showTool('explorer', {
+        so: explorerOpener.dataset.exploreSo,
+        course: explorerOpener.dataset.course,
+        elective: explorerOpener.dataset.elective
+      });
+      return;
+    }
     const piButton = event.target.closest('[data-select-pi]');
     if (piButton) {
       state.pi = state.pi === piButton.dataset.selectPi ? 'all' : piButton.dataset.selectPi;
@@ -1028,6 +1060,46 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   // ------------------------------------------------- methodology and reference
+
+  function renderMethodologyScope() {
+    el('scopeStatement').textContent = scopeModel.statement || '';
+    el('scopeElectiveNote').textContent = scopeModel.elective_note || '';
+    const coreClos = requiredCourses.reduce((sum, course) => sum + (course.clos || []).length, 0);
+    const allClos = courses.reduce((sum, course) => sum + (course.clos || []).length, 0);
+    el('scopeCounts').innerHTML = `<div class="table-wrap"><table><thead><tr><th>Dataset</th><th>${esc(scopeModel.core_label || 'Core curriculum')}</th><th>${esc(scopeModel.elective_label || 'Elective enrichment')}</th><th>Whole catalogue</th></tr></thead><tbody>
+        <tr><td>Courses</td><td>${esc(coreCourseCount)}</td><td>${esc(electiveCourses.length)}</td><td>${esc(courses.length)}</td></tr>
+        <tr><td>Course learning outcomes</td><td>${esc(coreClos)}</td><td>${esc(allClos - coreClos)}</td><td>${esc(allClos)}</td></tr>
+        <tr><td>CLO → PI relationships</td><td>${esc(coreLinks.length)}</td><td>${esc(electiveLinks.length)}</td><td>${esc(links.length)}</td></tr>
+        <tr><td>Student Outcomes represented</td><td>${esc(outcomesRepresented)} of ${esc(soStats.length)}</td><td>${esc(soStats.filter(stat => stat.elective.links.length).length)} of ${esc(soStats.length)}</td><td>${esc(soStats.filter(stat => stat.all.links.length).length)} of ${esc(soStats.length)}</td></tr>
+        <tr><td>Performance Indicators represented</td><td>${esc(corePis.size)} of ${esc(Object.keys(indicators).length)}</td><td>${esc(new Set(electiveLinks.map(link => link.piCode).filter(Boolean)).size)} of ${esc(Object.keys(indicators).length)}</td><td>${esc(new Set(links.map(link => link.piCode).filter(Boolean)).size)} of ${esc(Object.keys(indicators).length)}</td></tr>
+      </tbody></table></div>`;
+  }
+
+  function renderStatusDistribution() {
+    el('statusDistribution').innerHTML = `
+      <p class="muted">${esc(knowledge.program_conclusion?.intro || '')}</p>
+      <p class="muted">How the ${esc(coreLinks.length)} relationships in the required curriculum currently fall across the four labels:</p>
+      ${statusBar(coreStatuses, coreLinks.length)}
+      <div class="status-chip-row">${statusOrder.map(id => statusChip(id, coreStatuses[id])).join('')}</div>`;
+  }
+
+  function renderEvidenceReadiness() {
+    const ready = coreLinks.filter(link => link.evidence === 'strong').length;
+    el('evidenceReadiness').innerHTML = `
+      <p class="evidence-lead">A suitable evidence carrier is already declared for <strong>${esc(ready)} of ${esc(coreLinks.length)}</strong> relationships in the required curriculum (${esc(pct(share(ready, coreLinks.length)))}%).</p>
+      <div class="evidence-rows">${soStats.map(stat => {
+        const value = stat.core.evidenceReadiness;
+        const tone = healthTone(value, EVIDENCE_STRONG, EVIDENCE_PARTIAL);
+        return `<div class="evidence-row">
+          <span class="evidence-row-code">${esc(stat.soCode)}</span>
+          <span class="evidence-row-name">${esc(shortName(stat.soCode))}</span>
+          ${coverageBar(value, `${stat.soCode} evidence readiness ${pct(value)} per cent`, tone)}
+          <span class="evidence-row-value tone-${tone}">${esc(pct(value))}%</span>
+          <button type="button" class="so-row-link" data-open-so="${esc(stat.soCode)}">Details<span class="sr-only"> for ${esc(stat.soCode)}</span></button>
+        </div>`;
+      }).join('')}</div>`;
+  }
+
 
   function renderDimensionModel() {
     el('dimensionIntro').textContent = dimensions.intro || '';
@@ -1048,6 +1120,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <h3>${esc(statusModel[id]?.label || id)}</h3>
         <p class="muted">${esc(statusModel[id]?.definition || '')}</p>
       </article>`).join('');
+    el('thresholdNote').textContent = model.threshold_note || '';
   }
 
   function renderEvidenceQuality() {
@@ -1131,17 +1204,131 @@ document.addEventListener('DOMContentLoaded', async () => {
     el('philosophyAuthority').textContent = philosophy.authority_note || '';
   }
 
+  // ------------------------------------------------------------- tool router
+
+  const tools = knowledge.tools || [];
+  // Panels render on first activation so the Overview stays light and the heavier tools
+  // cost nothing until a faculty member asks for them.
+  const rendered = new Set();
+  let activeTool = '';
+
+  function renderTool(id) {
+    if (rendered.has(id)) return;
+    rendered.add(id);
+    if (id === 'matrix') renderMatrix();
+    if (id === 'explorer') { renderControls(); renderPiSelect(soByCode.get(state.so)); renderDetail(); }
+    if (id === 'evidence') { renderEvidenceReadiness(); renderProgramObservations(); renderEvidenceQuality(); }
+    if (id === 'methodology') {
+      renderPhilosophy();
+      renderMethodologyScope();
+      renderDimensionModel();
+      renderStatusDistribution();
+      renderChain();
+      renderDataSources();
+    }
+  }
+
+  // A deliberate tool change earns a history entry so Back returns to the previous tool;
+  // the first render only syncs the address bar.
+  function writeHash(id, soCode, replace) {
+    const next = soCode ? `#${id}/${soCode}` : `#${id}`;
+    if (location.hash === next) return;
+    if (replace) history.replaceState(null, '', next);
+    else history.pushState(null, '', next);
+  }
+
+  function showTool(id, options = {}) {
+    const tool = tools.find(item => item.id === id) ? id : 'overview';
+    // Build the panel before applying options: the explorer's controls have to exist
+    // before openExplorer can set them.
+    renderTool(tool);
+    if (tool === 'so-details' && options.so && soByCode.has(options.so)) detailState.so = options.so;
+    if (tool === 'explorer' && options.so && soByCode.has(options.so)) {
+      openExplorer(options.so, options.course, options.elective);
+    } else if (tool === 'explorer' && activeTool !== 'explorer') {
+      // Re-entering the tool from the rail drops the drill-down filters, so a course or
+      // search term left from an earlier visit cannot hide the relationships on screen.
+      state.course = '';
+      state.query = '';
+      el('detailSearch').value = '';
+      renderDetail();
+    }
+    if (tool === 'so-details') renderSoDetails();
+
+    tools.forEach(item => {
+      const selected = item.id === tool;
+      const tab = el(`tab-${item.id}`);
+      const panel = el(`panel-${item.id}`);
+      if (tab) {
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        tab.classList.toggle('is-active', selected);
+      }
+      if (panel) panel.hidden = !selected;
+    });
+
+    const first = !activeTool;
+    const changed = activeTool !== tool;
+    activeTool = tool;
+    writeHash(tool, tool === 'so-details' ? detailState.so : tool === 'explorer' ? state.so : '', first);
+    if (changed && !first) el('toolTabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderToolTabs() {
+    el('toolTabs').innerHTML = tools.map(tool => `
+      <button type="button" role="tab" class="tool-tab" id="tab-${esc(tool.id)}" aria-controls="panel-${esc(tool.id)}" aria-selected="false" tabindex="-1" title="${esc(tool.description || '')}">${esc(tool.label)}</button>`).join('');
+
+    el('toolTabs').addEventListener('click', event => {
+      const tab = event.target.closest('[role="tab"]');
+      if (tab) showTool(tab.id.replace(/^tab-/, ''));
+    });
+    // Roving tabindex with the arrow-key behaviour expected of a tablist.
+    el('toolTabs').addEventListener('keydown', event => {
+      const keys = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
+      const index = tools.findIndex(tool => tool.id === activeTool);
+      let target = null;
+      if (keys[event.key]) target = tools[(index + keys[event.key] + tools.length) % tools.length];
+      else if (event.key === 'Home') target = tools[0];
+      else if (event.key === 'End') target = tools[tools.length - 1];
+      if (!target) return;
+      event.preventDefault();
+      showTool(target.id);
+      el(`tab-${target.id}`).focus();
+    });
+  }
+
+  function readHash() {
+    const [id, soCode] = location.hash.replace(/^#/, '').split('/');
+    return { id: id || 'overview', so: soCode || '' };
+  }
+
+  // Back and forward move between tools; the hash already matches, so showTool writes
+  // nothing further to history.
+  window.addEventListener('hashchange', () => {
+    const requested = readHash();
+    if (requested.id === activeTool && (requested.so === '' || requested.so === detailState.so)) return;
+    showTool(requested.id, { so: requested.so });
+  });
+
   // ------------------------------------------------------------------- boot
 
+  function renderDataSources() {
+    el('dataSources').textContent = `Analysis scope: required courses only for every program-level conclusion (${coreCourseCount} of ${courses.length} courses). `
+      + `Curriculum mapping: data/ee_curriculum.json (consolidated ${curriculum.consolidated_on || 'n/a'}). `
+      + `Assessment cycle: data/ee-assessment.json (${plan.assessment_cycle?.name || 'n/a'}). `
+      + `Review knowledge layer: data/ee_alignment_evidence.json (${knowledge.status}). `
+      + 'No student performance or attainment value is stored or generated by this page.';
+  }
+
   function renderControls() {
-    el('soSelect').innerHTML = soStats.map(stat => `<option value="${esc(stat.soCode)}">${esc(stat.soCode)} — ${esc(stat.statement.slice(0, 62))}${stat.statement.length > 62 ? '…' : ''}</option>`).join('');
+    el('soSelect').innerHTML = soStats.map(stat => `<option value="${esc(stat.soCode)}">${esc(stat.soCode)} — ${esc(shortName(stat.soCode))}</option>`).join('');
     el('scopeSelect').innerHTML = `
       <option value="core">${esc(scopeModel.core_label || 'Core curriculum')} (required only)</option>
       <option value="all">Core + ${esc((scopeModel.elective_label || 'Elective enrichment').toLowerCase())}</option>`;
     el('statusSelect').innerHTML = ['<option value="all">All statuses</option>']
       .concat(statusOrder.map(id => `<option value="${esc(id)}">${esc(statusModel[id]?.label || id)}</option>`)).join('');
 
-    el('soSelect').addEventListener('change', event => { state.course = ''; openOutcome(event.target.value); });
+    el('soSelect').addEventListener('change', event => { openExplorer(event.target.value); writeHash('explorer', state.so); });
     el('scopeSelect').addEventListener('change', event => {
       state.scope = event.target.value;
       state.course = '';
@@ -1150,34 +1337,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     el('piSelect').addEventListener('change', event => { state.pi = event.target.value; renderDetail(); });
     el('statusSelect').addEventListener('change', event => { state.status = event.target.value; renderDetail(); });
     el('detailSearch').addEventListener('input', event => { state.query = event.target.value; renderDetail(); });
+    el('scopeSelect').value = state.scope;
   }
 
-  renderScope();
-  renderSnapshot();
-  renderFindings();
-  renderHealth();
-  renderMatrix();
-  renderControls();
-  renderDimensionModel();
-  renderEvidenceQuality();
-  renderChain();
-  renderPhilosophy();
+  renderScopeBadge();
+  renderOverview();
+  renderToolTabs();
 
+  // Legacy query-string deep links keep working alongside the new hash routing.
   const requestedSo = portal.getParam('so');
   const requestedCourse = portal.getParam('course');
+  const hash = readHash();
   if (requestedSo && soByCode.has(requestedSo)) {
-    state.so = requestedSo;
     state.course = requestedCourse || '';
     if (state.course && !requiredCourses.some(course => course.course_code === state.course)) state.scope = 'all';
+    showTool(requestedCourse ? 'explorer' : 'so-details', { so: requestedSo, course: requestedCourse });
+  } else {
+    showTool(hash.id, { so: hash.so });
   }
-  el('soSelect').value = state.so;
-  el('scopeSelect').value = state.scope;
-  renderPiSelect(soByCode.get(state.so));
-  renderDetail();
-
-  el('dataSources').textContent = `Analysis scope: required courses only for every program-level conclusion (${coreCourseCount} of ${courses.length} courses). `
-    + `Curriculum mapping: data/ee_curriculum.json (consolidated ${curriculum.consolidated_on || 'n/a'}). `
-    + `Assessment cycle: data/ee-assessment.json (${plan.assessment_cycle?.name || 'n/a'}). `
-    + `Review knowledge layer: data/ee_alignment_evidence.json (${knowledge.status}). `
-    + 'No student performance or attainment value is stored or generated by this page.';
 });
