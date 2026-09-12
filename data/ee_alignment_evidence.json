@@ -1,0 +1,1095 @@
+{
+  "schema_version": "1.0",
+  "module": "CLO-SO-PI Alignment and Evidence Analysis",
+  "program": "Bachelor of Science in Electrical Engineering",
+  "generated_on": "2026-09-11",
+  "status": "alignment_and_evidence_layers_only_no_measurement_data",
+  "source_note": "This file carries only the analysis knowledge layer. Every CLO, Student Outcome, Performance Indicator, course, teaching strategy and assessment method is read from data/ee_curriculum.json, and the program assessment cycle is read from data/ee-assessment.json. No outcome definition or approved mapping is duplicated here.",
+  "philosophy": {
+    "headline": "Supportive review, not audit",
+    "statement": "CLO-SO-PI alignment is a matter of faculty judgment. This analysis assumes the approved mapping is intentional and potentially defensible, and looks first for the strongest reasonable interpretation that supports it.",
+    "order_of_preference": [
+      "Preserve the approved mapping wherever a reasonable interpretation supports it.",
+      "Strengthen the assessment evidence so the mapping becomes visible in student work.",
+      "Clarify the rationale or the rubric criterion so the intent is explicit.",
+      "Consider remapping only where there is a strong and specific conceptual mismatch."
+    ],
+    "authority_note": "Faculty judgment remains authoritative. Nothing on this page changes an approved mapping; the page produces discussion material for the curriculum and assessment committees."
+  },
+  "layers": [
+    {
+      "id": "alignment",
+      "name": "Alignment Layer",
+      "chain": "CLO → SO → PI",
+      "availability": "available",
+      "availability_label": "Live in this release",
+      "source": "data/ee_curriculum.json",
+      "description": "Approved curriculum mappings between course learning outcomes, ABET Student Outcomes and program Performance Indicators."
+    },
+    {
+      "id": "evidence",
+      "name": "Evidence Layer",
+      "chain": "Assessment Artifact → Rubric Criterion",
+      "availability": "recommended",
+      "availability_label": "Recommendations in this release",
+      "source": "Approved assessment-method pool in data/ee_curriculum.json plus the recommendation model in this file",
+      "description": "Assessment artifacts and rubric criteria that could carry the evidence for each mapping. Where no artifact has been linked yet, the page shows the recommended evidence type instead of inventing one."
+    },
+    {
+      "id": "measurement",
+      "name": "Measurement Layer",
+      "chain": "Student Performance → Attainment",
+      "availability": "not_connected",
+      "availability_label": "Not connected",
+      "source": "Not connected",
+      "description": "Scored student work and computed attainment. No student performance or attainment value is stored, derived or displayed in this release."
+    },
+    {
+      "id": "improvement",
+      "name": "Improvement Layer",
+      "chain": "Finding → Action → Reassessment",
+      "availability": "not_connected",
+      "availability_label": "Not connected",
+      "source": "Not connected",
+      "description": "Assessment findings, improvement actions and reassessment outcomes. Reserved for a later release."
+    }
+  ],
+  "status_model": {
+    "order": [
+      "well_supported",
+      "defensible",
+      "could_be_strengthened",
+      "review_recommended"
+    ],
+    "well_supported": {
+      "label": "Well Supported",
+      "definition": "The outcome statement calls for the same kind of demonstration the Performance Indicator describes, and the declared assessment methods already include an artifact type that can carry that evidence.",
+      "lead_phrase": "This mapping appears well supported because"
+    },
+    "defensible": {
+      "label": "Defensible",
+      "definition": "A reasonable interpretation supports the mapping. It holds provided the assessed task makes the indicator's demonstration visible in student work.",
+      "lead_phrase": "This mapping is defensible provided that"
+    },
+    "could_be_strengthened": {
+      "label": "Could Be Strengthened",
+      "definition": "The mapping is retained. The evidence that would demonstrate it is thinner than it could be, so an added artifact, a clearer rubric criterion or a short written rationale would make it easier to defend.",
+      "lead_phrase": "The relationship could be strengthened by"
+    },
+    "review_recommended": {
+      "label": "Review Recommended",
+      "definition": "Reserved for a strong and specific conceptual difference between what the outcome statement describes and what the indicator measures. Even here the preserve path comes first: if the assessed task carries the indicator's demonstration, clarified wording or a named rubric criterion is enough.",
+      "lead_phrase": "A change may be worth considering only if"
+    }
+  },
+  "demonstration_families": {
+    "foundational_knowledge": {
+      "label": "foundational knowledge",
+      "description": "Recalling, defining or describing established principles, components and representations.",
+      "cues": [
+        "define",
+        "describ",
+        "recogniz",
+        "identify the feature",
+        "state the",
+        "list the",
+        "explain",
+        "understand",
+        "comprehensive understanding",
+        "recall",
+        "summariz",
+        "outline"
+      ]
+    },
+    "analysis": {
+      "label": "engineering analysis",
+      "description": "Formulating, modelling, computing, solving and interpreting engineering problems.",
+      "cues": [
+        "analyz",
+        "analys",
+        "solve",
+        "solving",
+        "formulate",
+        "derive",
+        "comput",
+        "calculat",
+        "determine",
+        "evaluat",
+        "examin",
+        "simplif",
+        "model",
+        "interpret",
+        "estimat",
+        "predict",
+        "assess",
+        "verify",
+        "simulat",
+        "laplace",
+        "problem-solving"
+      ]
+    },
+    "design": {
+      "label": "engineering design",
+      "description": "Devising, developing, implementing or realising a component, system or process against stated needs.",
+      "cues": [
+        "design",
+        "develop",
+        "build",
+        "construct",
+        "implement",
+        "produce",
+        "creat",
+        "generate alternative",
+        "select a preferred",
+        "prototype",
+        "synthes",
+        "configur",
+        "integrat",
+        "realiz",
+        "propose"
+      ]
+    },
+    "communication": {
+      "label": "technical communication",
+      "description": "Conveying engineering information in written, oral, visual or graphical form for an intended audience.",
+      "cues": [
+        "communicate",
+        "communicating",
+        "communication of",
+        "technical communication",
+        "effective communication",
+        "communication skills",
+        "presentation",
+        "presenting",
+        "present the",
+        "report",
+        "document",
+        "illustrat",
+        "convey",
+        "audience",
+        "visual",
+        "drawing",
+        "technical language",
+        "representation",
+        "explain"
+      ]
+    },
+    "ethics": {
+      "label": "ethical judgment",
+      "description": "Recognising professional or ethical responsibility and weighing the wider impact of engineering decisions.",
+      "cues": [
+        "ethic",
+        "professional responsib",
+        "legal",
+        "integrity",
+        "societal",
+        "social impact",
+        "environmental",
+        "economic",
+        "public health",
+        "safety",
+        "welfare",
+        "informed judgment",
+        "informed judgement",
+        "code of ethics",
+        "moral",
+        "sustainab",
+        "broader impact",
+        "impact of engineering",
+        "cultural"
+      ]
+    },
+    "teamwork": {
+      "label": "teamwork",
+      "description": "Contributing to a team, planning shared work, or supporting a collaborative and inclusive environment.",
+      "cues": [
+        "team",
+        "collaborat",
+        "peer",
+        "leadership",
+        "group work",
+        "coordinate",
+        "plan tasks",
+        "meet objectives",
+        "inclusive",
+        "establish goals",
+        "contribute to"
+      ]
+    },
+    "experimentation": {
+      "label": "experimentation",
+      "description": "Developing or running experiments, collecting measurements, and drawing conclusions from data.",
+      "cues": [
+        "experiment",
+        "laborator",
+        "measure",
+        "collect data",
+        "data collection",
+        "troubleshoot",
+        "investigat",
+        "observ",
+        "validate",
+        "instrument",
+        "test",
+        "hardware",
+        "waveform",
+        "simulat",
+        "fpga"
+      ]
+    },
+    "knowledge_acquisition": {
+      "label": "self-directed learning",
+      "description": "Acquiring new knowledge, tools or standards independently and putting them to use.",
+      "cues": [
+        "acquire",
+        "new knowledge",
+        "newly acquired",
+        "independently",
+        "self-directed",
+        "self directed",
+        "learning strateg",
+        "independently learned",
+        "emerging",
+        "lifelong",
+        "as needed"
+      ]
+    }
+  },
+  "artifact_families": {
+    "exam_item": {
+      "label": "Targeted exam or quiz item",
+      "evidence_mode": "direct",
+      "isolation": "high",
+      "rubric_ready": false,
+      "description": "One or more identified questions on a major, final or quiz paper, scored against a published answer key or item rubric. Isolates a single indicator well; needs an open-ended item to reach design, judgment or communication indicators."
+    },
+    "homework": {
+      "label": "Homework or classwork assignment",
+      "evidence_mode": "direct",
+      "isolation": "medium",
+      "rubric_ready": false,
+      "description": "Assigned problem work. Useful as supporting evidence; usually needs a nominated question set and a scoring key before it becomes attainment evidence."
+    },
+    "simulation_assignment": {
+      "label": "Simulation or computational assignment",
+      "evidence_mode": "direct",
+      "isolation": "medium",
+      "rubric_ready": true,
+      "description": "Modelling, coding or simulation work submitted with results. Carries formulation, solution and data-interpretation evidence well."
+    },
+    "lab_practical": {
+      "label": "Laboratory practical assessment",
+      "evidence_mode": "direct",
+      "isolation": "high",
+      "rubric_ready": true,
+      "description": "Observed bench or hardware performance, scored while the student works. Strong for conducting experimentation and for observed team behaviour."
+    },
+    "lab_report": {
+      "label": "Laboratory report",
+      "evidence_mode": "direct",
+      "isolation": "medium",
+      "rubric_ready": true,
+      "description": "Written account of an experiment with data, analysis and conclusions. Carries data-analysis and engineering-judgment evidence."
+    },
+    "design_project": {
+      "label": "Design project or design assignment",
+      "evidence_mode": "direct",
+      "isolation": "medium",
+      "rubric_ready": true,
+      "description": "Open-ended design work against stated needs and constraints. The natural home for design, constraint and standards evidence; needs a criterion-level rubric to isolate individual indicators."
+    },
+    "written_report": {
+      "label": "Technical report",
+      "evidence_mode": "direct",
+      "isolation": "medium",
+      "rubric_ready": true,
+      "description": "Proposal, interim or final report. Flexible carrier for communication, judgment, standards and self-directed-learning evidence when the rubric names the criterion."
+    },
+    "oral_presentation": {
+      "label": "Oral or technical presentation",
+      "evidence_mode": "direct",
+      "isolation": "medium",
+      "rubric_ready": true,
+      "description": "Presented and questioned in front of an audience. The most direct carrier for audience-adaptation and oral communication evidence."
+    },
+    "demonstration": {
+      "label": "Prototype or system demonstration",
+      "evidence_mode": "direct",
+      "isolation": "medium",
+      "rubric_ready": true,
+      "description": "A working artifact shown and tested. Evidences realisation of a design and application of newly acquired tools."
+    },
+    "peer_team_assessment": {
+      "label": "Teamwork or peer assessment instrument",
+      "evidence_mode": "direct_observational",
+      "isolation": "high",
+      "rubric_ready": true,
+      "description": "Structured peer or instructor rating of observed team behaviour against named criteria. The standard carrier for teamwork and leadership indicators."
+    },
+    "progress_assessment": {
+      "label": "Weekly or milestone progress assessment",
+      "evidence_mode": "direct",
+      "isolation": "medium",
+      "rubric_ready": true,
+      "description": "Recurring supervisor judgment against milestones. Evidences planning, task management and reliable contribution over time."
+    },
+    "employer_assessment": {
+      "label": "Employer or site-supervisor evaluation",
+      "evidence_mode": "external_observational",
+      "isolation": "low",
+      "rubric_ready": true,
+      "description": "Third-party rating of workplace performance. Valuable corroborating evidence; programs differ on whether it is counted as direct, so record the classification decision alongside it."
+    },
+    "indirect_survey": {
+      "label": "Course exit survey or other indirect instrument",
+      "evidence_mode": "indirect",
+      "isolation": "low",
+      "rubric_ready": false,
+      "description": "Student self-report. Supports and contextualises direct evidence; it is not a substitute for it."
+    }
+  },
+  "assessment_method_profiles": {
+    "Major and Final Exams": {
+      "artifact_family": "exam_item",
+      "note": "Nominate the specific questions that carry the indicator rather than using the whole paper score."
+    },
+    "Quizzes": {
+      "artifact_family": "exam_item",
+      "note": "Short and frequent; strongest as supporting evidence or as an early checkpoint."
+    },
+    "Homework and Classwork Assignments": {
+      "artifact_family": "homework",
+      "note": "Nominate a specific assignment and scoring key if this is to serve as attainment evidence."
+    },
+    "Simulation/Computational Assignments": {
+      "artifact_family": "simulation_assignment",
+      "note": "Collect the submitted model or code alongside the result so the reasoning is inspectable."
+    },
+    "Laboratory Practical Assessment": {
+      "artifact_family": "lab_practical",
+      "note": "Scored during the session; keep the observation sheet as the evidence record."
+    },
+    "Laboratory Reports": {
+      "artifact_family": "lab_report",
+      "note": "Separate the data-handling criterion from the write-up criterion so two indicators do not share one score."
+    },
+    "Design Project Assignment": {
+      "artifact_family": "design_project",
+      "note": "Use criterion-level rubric rows so individual design indicators can be reported separately."
+    },
+    "Written Reports (Proposal, Interim, and Final)": {
+      "artifact_family": "written_report",
+      "note": "Stage-specific rubric rows let different indicators be measured at different points."
+    },
+    "Final Report": {
+      "artifact_family": "written_report",
+      "note": "Name which report sections carry each indicator."
+    },
+    "Oral Presentations": {
+      "artifact_family": "oral_presentation",
+      "note": "Include a question-and-answer criterion if audience adaptation is being measured."
+    },
+    "Oral Technical Presentation": {
+      "artifact_family": "oral_presentation",
+      "note": "Include a question-and-answer criterion if audience adaptation is being measured."
+    },
+    "Final Oral Presentation": {
+      "artifact_family": "oral_presentation",
+      "note": "Often the only place where audience adaptation is directly observable."
+    },
+    "Prototype/System Demonstration": {
+      "artifact_family": "demonstration",
+      "note": "Record the acceptance test used so the demonstration is repeatable evidence."
+    },
+    "Teamwork/Peer Assessment": {
+      "artifact_family": "peer_team_assessment",
+      "note": "Use behaviour-anchored criteria rather than a single overall rating."
+    },
+    "Weekly Progress Assessment": {
+      "artifact_family": "progress_assessment",
+      "note": "Aggregate milestone judgments rather than attendance."
+    },
+    "Employer Assessment": {
+      "artifact_family": "employer_assessment",
+      "note": "Record how the program classifies this instrument before using it for attainment."
+    }
+  },
+  "evidence_quality_dimensions": [
+    {
+      "id": "directness",
+      "label": "Directly measures the intended skill",
+      "question": "Does the artifact require the student to perform the demonstration the indicator describes, rather than to report or recall it?",
+      "guidance": "Direct student work outweighs self-report. Where the only available evidence is indirect, pair it with at least one direct artifact."
+    },
+    {
+      "id": "challenge",
+      "label": "Sufficiently challenging",
+      "question": "Is the task demanding enough that a passing score means the indicator was genuinely met?",
+      "guidance": "Recall-level items rarely evidence design, judgment or experimentation indicators, however carefully they are scored."
+    },
+    {
+      "id": "rubric",
+      "label": "Has a clear rubric",
+      "question": "Is there a published criterion with performance levels that a second grader could apply consistently?",
+      "guidance": "Indicators carrying an ABET rubric flag in the program framework should be evidenced by a rubric-bearing artifact."
+    },
+    {
+      "id": "isolation",
+      "label": "Isolates the indicator being measured",
+      "question": "Can the score for this indicator be separated from the scores for everything else in the same task?",
+      "guidance": "A single overall project mark cannot report several indicators separately. Criterion-level rubric rows solve this."
+    },
+    {
+      "id": "defensibility",
+      "label": "Produces defensible attainment evidence",
+      "question": "Could the artifact, its rubric and its scores be shown to an external reviewer as the basis for the reported attainment?",
+      "guidance": "Keep the artifact, the rubric, the scoring records and the sample definition together."
+    }
+  ],
+  "coverage_model": {
+    "breadth": {
+      "broad_min_course_share": 0.5,
+      "moderate_min_course_share": 0.25,
+      "labels": {
+        "broad": "Broad coverage",
+        "moderate": "Moderate coverage",
+        "focused": "Focused coverage"
+      },
+      "notes": {
+        "broad": "This outcome is touched across a wide part of the curriculum.",
+        "moderate": "This outcome is carried by a meaningful subset of the curriculum.",
+        "focused": "This outcome is carried by a small set of courses. That can be entirely intentional for a specialised outcome; the point worth confirming is that the chosen courses are the ones the program wants to assess."
+      }
+    },
+    "concentration": {
+      "top_courses_considered": 3,
+      "concentrated_min_share": 0.6,
+      "note": "A large share of this outcome's CLO links sits in a few courses. Concentration is normal for capstone-anchored outcomes; the point worth confirming is that the assessment plan does not depend on a single course offering."
+    },
+    "pi_thin_link_threshold": 12,
+    "fan_out_advisory_threshold": 8,
+    "evidence_opportunity": {
+      "strong_min_share": 0.7,
+      "partial_min_share": 0.4
+    }
+  },
+  "pi_evidence_profiles": {
+    "PI11": {
+      "primary_family": "analysis",
+      "supporting_families": [
+        "foundational_knowledge",
+        "design",
+        "experimentation"
+      ],
+      "demonstrates": "the student separates a problem into its requirements, interacting variables and technical issues before attempting a solution",
+      "relationship": "Problem framing is the entry point of SO1: a student who cannot name the requirements and the interacting variables cannot formulate or solve the problem that follows.",
+      "primary_artifacts": [
+        "design_project",
+        "written_report",
+        "exam_item"
+      ],
+      "supporting_artifacts": [
+        "homework",
+        "progress_assessment",
+        "simulation_assignment"
+      ],
+      "strengthening": [
+        "Use an item or task that presents an under-specified situation, so identifying the requirements is the work rather than a given.",
+        "Ask for the interacting variables and the technical issues explicitly, as a named deliverable rather than as an implied first step."
+      ],
+      "rubric_criteria": [
+        "Identifies the governing requirements and constraints of the problem completely and accurately.",
+        "Names the interacting variables and the technical issues that make the problem non-routine."
+      ],
+      "attainment_methodology": "Percentage of assessed students reaching a faculty-defined rubric level on the problem-framing criterion of the nominated artifact.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework, so a rubric-bearing artifact is preferred over a raw exam score."
+    },
+    "PI12": {
+      "primary_family": "analysis",
+      "supporting_families": [
+        "foundational_knowledge",
+        "design",
+        "experimentation"
+      ],
+      "demonstrates": "the student converts a described situation into an engineering or mathematical model with stated assumptions, parameters and governing relationships",
+      "relationship": "Modelling is the bridge in SO1 between the identified problem and the applied engineering, science and mathematics that solve it.",
+      "primary_artifacts": [
+        "exam_item",
+        "homework",
+        "simulation_assignment"
+      ],
+      "supporting_artifacts": [
+        "design_project",
+        "lab_report",
+        "written_report"
+      ],
+      "strengthening": [
+        "Score the stated assumptions and the chosen parameters as their own criterion, not only the final model.",
+        "Use at least one item where the model is not supplied, so formulating it is what is being measured."
+      ],
+      "rubric_criteria": [
+        "States assumptions and parameters that are appropriate and sufficient for the situation.",
+        "Produces a governing model that correctly represents the described system."
+      ],
+      "attainment_methodology": "Average score on the model-formulation criterion across the nominated items, reported with the percentage of students at or above the defined threshold.",
+      "evidence_note": "Well carried by mid-level analysis courses; a model supplied inside the question removes the evidence."
+    },
+    "PI13": {
+      "primary_family": "analysis",
+      "supporting_families": [
+        "foundational_knowledge",
+        "design",
+        "experimentation"
+      ],
+      "demonstrates": "the student carries the formulated problem through to a correct solution using analytical, computational or experimental methods",
+      "relationship": "This is the closing step of SO1 and the indicator most course work naturally produces, which is why its evidence is usually plentiful and its rubric is usually a scoring key.",
+      "primary_artifacts": [
+        "exam_item",
+        "homework",
+        "simulation_assignment"
+      ],
+      "supporting_artifacts": [
+        "lab_report",
+        "design_project",
+        "written_report"
+      ],
+      "strengthening": [
+        "Nominate specific questions rather than the whole paper, so the reported attainment maps to this indicator alone.",
+        "Where the method is chosen by the student, score the appropriateness of the chosen method as well as the numerical result."
+      ],
+      "rubric_criteria": [
+        "Selects an appropriate analytical, computational or experimental method for the formulated problem.",
+        "Executes the method correctly and arrives at a defensible result."
+      ],
+      "attainment_methodology": "Percentage of assessed students scoring at or above the defined threshold on the nominated solution items.",
+      "evidence_note": "The most heavily used indicator in the program; the risk here is dilution across too many items rather than lack of evidence."
+    },
+    "PI21": {
+      "primary_family": "design",
+      "supporting_families": [
+        "analysis",
+        "experimentation",
+        "knowledge_acquisition"
+      ],
+      "demonstrates": "the student applies a design process to produce a solution that satisfies a stated need",
+      "relationship": "PI21 is the core of SO2: the presence of a specified need and a produced solution is what separates design evidence from analysis evidence.",
+      "primary_artifacts": [
+        "design_project",
+        "demonstration"
+      ],
+      "supporting_artifacts": [
+        "written_report",
+        "simulation_assignment",
+        "exam_item"
+      ],
+      "strengthening": [
+        "Make the specification explicit in the task statement, so the solution can be judged against a stated need rather than against a model answer.",
+        "Where the course work is analytical, frame at least one task as selecting or sizing a configuration to meet given specifications; that turns analysis work into design evidence."
+      ],
+      "rubric_criteria": [
+        "Produces a solution that meets the stated specification.",
+        "Shows a design process: requirements, candidate solutions, selection and verification against the specification."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the design-outcome criterion of the nominated project or demonstration.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework."
+    },
+    "PI22": {
+      "primary_family": "design",
+      "supporting_families": [
+        "analysis",
+        "ethics",
+        "experimentation"
+      ],
+      "demonstrates": "the student's design accounts for public health, safety and welfare together with global, cultural, social, environmental and economic factors",
+      "relationship": "SO2 asks for more than a working solution; PI22 is where the wider consideration is evidenced, and it is most visible when those factors are a scored part of the deliverable.",
+      "primary_artifacts": [
+        "design_project",
+        "written_report"
+      ],
+      "supporting_artifacts": [
+        "oral_presentation",
+        "exam_item"
+      ],
+      "strengthening": [
+        "Require a named section or rubric row in which the relevant factors are identified and their influence on the design decision is explained.",
+        "Ask which factors were considered and set aside, and why; that produces stronger evidence than a checklist."
+      ],
+      "rubric_criteria": [
+        "Identifies the health, safety, welfare, societal, environmental and economic factors relevant to this design.",
+        "Explains how the identified factors changed or constrained the design decision."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the broader-factors criterion.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework."
+    },
+    "PI23": {
+      "primary_family": "design",
+      "supporting_families": [
+        "analysis",
+        "ethics"
+      ],
+      "demonstrates": "the student identifies realistic constraints on the design and justifies why they apply",
+      "relationship": "Constraints are what make a design problem realistic; PI23 evidences that the student can name them and defend their relevance rather than accept a supplied list.",
+      "primary_artifacts": [
+        "design_project",
+        "written_report"
+      ],
+      "supporting_artifacts": [
+        "oral_presentation",
+        "progress_assessment"
+      ],
+      "strengthening": [
+        "Ask students to state the constraints themselves and justify each one, instead of supplying the constraint list in the task.",
+        "Score justification separately from identification."
+      ],
+      "rubric_criteria": [
+        "Identifies constraints that are realistic and relevant to this specific design.",
+        "Justifies each constraint with reference to the application context."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the constraint-identification and justification criterion.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework."
+    },
+    "PI24": {
+      "primary_family": "design",
+      "supporting_families": [
+        "analysis",
+        "foundational_knowledge",
+        "ethics"
+      ],
+      "demonstrates": "the student locates the applicable engineering standards and codes and applies them in the design",
+      "relationship": "Standards work anchors SO2 in professional practice; the evidence is strongest when a named standard visibly changes a design decision.",
+      "primary_artifacts": [
+        "design_project",
+        "written_report"
+      ],
+      "supporting_artifacts": [
+        "exam_item",
+        "oral_presentation"
+      ],
+      "strengthening": [
+        "Require the specific standard or code clause to be cited, not the standards body alone.",
+        "Score whether the cited standard actually governs the decision it is attached to."
+      ],
+      "rubric_criteria": [
+        "Cites engineering standards or codes that genuinely apply to the design.",
+        "Applies the cited requirement correctly in the design decision."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the standards-and-codes criterion.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework. Where a course is analysis-led, a single standards-referenced task can carry it well."
+    },
+    "PI31": {
+      "primary_family": "communication",
+      "supporting_families": [
+        "foundational_knowledge",
+        "experimentation",
+        "design"
+      ],
+      "demonstrates": "the student conveys engineering information that is relevant, accurate and sufficient for the purpose",
+      "relationship": "PI31 is the substance half of SO3: correct and complete technical content, independently of how well it is delivered.",
+      "primary_artifacts": [
+        "written_report",
+        "oral_presentation"
+      ],
+      "supporting_artifacts": [
+        "lab_report",
+        "demonstration",
+        "homework"
+      ],
+      "strengthening": [
+        "Score technical accuracy and sufficiency as a criterion distinct from delivery and format.",
+        "Keep the graded communication artifact, not only the mark, as the evidence record."
+      ],
+      "rubric_criteria": [
+        "Presents technically accurate engineering information.",
+        "Includes the information the audience needs, without material omissions or padding."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the content-accuracy and sufficiency criterion.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework."
+    },
+    "PI32": {
+      "primary_family": "communication",
+      "supporting_families": [
+        "foundational_knowledge",
+        "design",
+        "experimentation"
+      ],
+      "demonstrates": "the student chooses the communication method and the engineering representation that fit the message",
+      "relationship": "SO3 expects fluency with the discipline's representations, so PI32 is evidenced by schematics, plots, block diagrams and drawings as much as by prose.",
+      "primary_artifacts": [
+        "oral_presentation",
+        "written_report"
+      ],
+      "supporting_artifacts": [
+        "lab_report",
+        "demonstration",
+        "simulation_assignment"
+      ],
+      "strengthening": [
+        "Include a rubric row on the correctness and readability of figures, schematics and plots.",
+        "Ask for the same result in two representations so the choice itself becomes visible."
+      ],
+      "rubric_criteria": [
+        "Selects communication methods and engineering representations appropriate to the message.",
+        "Produces figures, schematics or plots that are correct, labelled and readable."
+      ],
+      "attainment_methodology": "Average rubric score on the representation criterion, reported with the percentage of students at or above the defined threshold.",
+      "evidence_note": "Often already present in report and presentation rubrics under a general presentation-quality heading; naming it separately makes it reportable."
+    },
+    "PI33": {
+      "primary_family": "communication",
+      "supporting_families": [
+        "foundational_knowledge",
+        "design",
+        "experimentation"
+      ],
+      "demonstrates": "the student adjusts depth, terminology and framing to suit a particular audience",
+      "relationship": "This is the part of SO3 that the words \"a range of audiences\" add; it needs a task where the audience is specified or varies.",
+      "primary_artifacts": [
+        "oral_presentation"
+      ],
+      "supporting_artifacts": [
+        "written_report",
+        "demonstration"
+      ],
+      "strengthening": [
+        "Name the audience in the task, or require two versions of the same message for different audiences.",
+        "Use a question-and-answer segment; responding to an unprepared question is where adaptation shows.",
+        "Where only one audience is ever addressed, record that limitation alongside the evidence rather than over-claiming the indicator."
+      ],
+      "rubric_criteria": [
+        "Matches technical depth and terminology to the stated audience.",
+        "Responds to audience questions at an appropriate level."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the audience-adaptation criterion.",
+      "evidence_note": "The hardest SO3 indicator to evidence from written work alone."
+    },
+    "PI41": {
+      "primary_family": "ethics",
+      "supporting_families": [
+        "foundational_knowledge",
+        "design"
+      ],
+      "demonstrates": "the student recognises the ethical and professional responsibilities present in an engineering situation",
+      "relationship": "SO4 begins with recognition: before judgment can be assessed, the student has to see that a situation carries a professional or ethical obligation at all.",
+      "primary_artifacts": [
+        "written_report",
+        "exam_item"
+      ],
+      "supporting_artifacts": [
+        "homework",
+        "oral_presentation",
+        "design_project"
+      ],
+      "strengthening": [
+        "Use a case or scenario in which the ethical dimension is not announced, so recognising it is the measured act.",
+        "Anchor the criterion to a named framework such as the IEEE Code of Ethics or the Saudi Council of Engineers Engineer's Charter, both of which the program already references."
+      ],
+      "rubric_criteria": [
+        "Identifies the ethical or professional responsibilities raised by the situation.",
+        "Relates the situation to a recognised professional code or charter."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the ethical-recognition criterion of a nominated case task.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework."
+    },
+    "PI42": {
+      "primary_family": "ethics",
+      "supporting_families": [
+        "analysis",
+        "design",
+        "foundational_knowledge"
+      ],
+      "demonstrates": "the student reaches a reasoned judgment that weighs global, societal, economic and environmental impact",
+      "relationship": "PI42 completes SO4 by asking for a decision and its justification, not only for awareness of the issue.",
+      "primary_artifacts": [
+        "written_report",
+        "design_project"
+      ],
+      "supporting_artifacts": [
+        "exam_item",
+        "oral_presentation",
+        "homework"
+      ],
+      "strengthening": [
+        "Require a stated decision with its reasoning, rather than a discussion that stops at listing considerations.",
+        "Score whether the impacts named actually bear on the decision taken."
+      ],
+      "rubric_criteria": [
+        "States a defensible judgment for the situation.",
+        "Weighs global, societal, economic and environmental impact in reaching that judgment."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the informed-judgment criterion.",
+      "evidence_note": "Pairs naturally with PI41 on the same case task, scored as two rubric rows."
+    },
+    "PI51": {
+      "primary_family": "teamwork",
+      "supporting_families": [
+        "experimentation",
+        "design"
+      ],
+      "demonstrates": "the student contributes reliably to shared team tasks and objectives",
+      "relationship": "SO5 is about observed behaviour inside a team, so the evidence has to come from something that watches the student work, not from the team's product.",
+      "primary_artifacts": [
+        "peer_team_assessment",
+        "progress_assessment"
+      ],
+      "supporting_artifacts": [
+        "lab_practical",
+        "design_project",
+        "employer_assessment"
+      ],
+      "strengthening": [
+        "Add a short behaviour-anchored peer or instructor rating to the existing team activity; this is usually the smallest change that converts a team task into SO5 evidence.",
+        "Score the individual, not the team deliverable; a shared project mark cannot report this indicator."
+      ],
+      "rubric_criteria": [
+        "Completes assigned team tasks on time and to the agreed standard.",
+        "Participates dependably in team meetings and shared decisions."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the contribution criterion of the team instrument.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework and applies to both low-level and senior courses."
+    },
+    "PI52": {
+      "primary_family": "teamwork",
+      "supporting_families": [
+        "design",
+        "experimentation"
+      ],
+      "demonstrates": "the student plans and manages shared work and supports a collaborative, inclusive team environment",
+      "relationship": "PI52 is the leadership half of SO5; it needs a team task long enough for planning and coordination to become visible.",
+      "primary_artifacts": [
+        "peer_team_assessment",
+        "progress_assessment"
+      ],
+      "supporting_artifacts": [
+        "written_report",
+        "design_project"
+      ],
+      "strengthening": [
+        "Require a team plan with allocated roles and revisit it at a milestone; the revision is the evidence.",
+        "Include an inclusivity criterion phrased as observable behaviour rather than as attitude."
+      ],
+      "rubric_criteria": [
+        "Plans and allocates team tasks and tracks them to completion.",
+        "Supports a collaborative and inclusive working environment."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the planning and team-environment criteria.",
+      "evidence_note": "Program guidance places this indicator in senior courses with a design project."
+    },
+    "PI61": {
+      "primary_family": "experimentation",
+      "supporting_families": [
+        "design",
+        "analysis"
+      ],
+      "demonstrates": "the student develops an appropriate experiment rather than following a supplied procedure",
+      "relationship": "SO6 starts with developing experimentation, which is the part a fully prescribed laboratory sheet cannot evidence.",
+      "primary_artifacts": [
+        "lab_report",
+        "lab_practical",
+        "design_project"
+      ],
+      "supporting_artifacts": [
+        "written_report",
+        "progress_assessment"
+      ],
+      "strengthening": [
+        "Include at least one open or partly open laboratory task where the procedure is designed by the student.",
+        "Score the experimental plan as a deliverable in its own right, before the data are collected."
+      ],
+      "rubric_criteria": [
+        "Designs an experimental procedure capable of answering the stated question.",
+        "Selects appropriate instrumentation, ranges and controls."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the experiment-design criterion.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework. Program guidance places it in senior courses that include experiment development."
+    },
+    "PI62": {
+      "primary_family": "experimentation",
+      "supporting_families": [
+        "design",
+        "analysis"
+      ],
+      "demonstrates": "the student runs the experiment and collects usable data",
+      "relationship": "PI62 is the execution step of SO6 and is best observed while the student is at the bench.",
+      "primary_artifacts": [
+        "lab_practical",
+        "lab_report"
+      ],
+      "supporting_artifacts": [
+        "demonstration",
+        "simulation_assignment"
+      ],
+      "strengthening": [
+        "Use an observed practical checkpoint so setup and measurement technique are scored, not only the numbers submitted.",
+        "Keep the raw data record with the report; it is the evidence that the data were actually collected."
+      ],
+      "rubric_criteria": [
+        "Sets up and operates the experiment correctly and safely.",
+        "Collects data that are complete, recorded and usable."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the data-collection criterion of an observed practical.",
+      "evidence_note": "Simulation-only work can carry this indicator when the simulation is the experiment; state that decision explicitly."
+    },
+    "PI63": {
+      "primary_family": "experimentation",
+      "supporting_families": [
+        "analysis",
+        "design"
+      ],
+      "demonstrates": "the student analyses and interprets data, including uncertainty and unexpected results",
+      "relationship": "PI63 sits between the data and the conclusion in SO6, and is the SO6 indicator that analysis-led courses carry most naturally.",
+      "primary_artifacts": [
+        "lab_report",
+        "simulation_assignment"
+      ],
+      "supporting_artifacts": [
+        "written_report",
+        "exam_item",
+        "homework"
+      ],
+      "strengthening": [
+        "Score interpretation separately from computation: what the data mean, not only what they are.",
+        "Include a case where the data do not match theory, so the interpretation has real work to do."
+      ],
+      "rubric_criteria": [
+        "Processes data correctly, including units, uncertainty and outliers.",
+        "Interprets what the data show in terms of the underlying engineering behaviour."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the data-analysis and interpretation criterion.",
+      "evidence_note": "Frequently mapped across the program; nominate a small number of artifacts rather than aggregating everything."
+    },
+    "PI64": {
+      "primary_family": "experimentation",
+      "supporting_families": [
+        "analysis",
+        "design",
+        "communication"
+      ],
+      "demonstrates": "the student uses engineering judgment to draw conclusions the data actually support",
+      "relationship": "PI64 closes SO6. It is distinct from PI63 because it asks what should be concluded and what should not.",
+      "primary_artifacts": [
+        "lab_report",
+        "written_report"
+      ],
+      "supporting_artifacts": [
+        "oral_presentation",
+        "exam_item"
+      ],
+      "strengthening": [
+        "Require an explicit conclusions section tied back to the original question, scored as its own criterion.",
+        "Ask for the limits of the conclusion; recognising what the data cannot support is strong evidence of judgment."
+      ],
+      "rubric_criteria": [
+        "Draws conclusions that follow from the evidence presented.",
+        "States the limitations and the confidence attached to those conclusions."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the conclusions criterion.",
+      "evidence_note": "Program guidance notes that this indicator should be reflected in the laboratory manuals."
+    },
+    "PI71": {
+      "primary_family": "knowledge_acquisition",
+      "supporting_families": [
+        "foundational_knowledge",
+        "analysis",
+        "design",
+        "experimentation"
+      ],
+      "demonstrates": "the student locates and learns something not taught in the course, using a deliberate learning strategy",
+      "relationship": "SO7 is about the process of learning, so the evidence has to show the gap the student started from and the route taken to close it.",
+      "primary_artifacts": [
+        "written_report",
+        "design_project"
+      ],
+      "supporting_artifacts": [
+        "oral_presentation",
+        "homework",
+        "simulation_assignment"
+      ],
+      "strengthening": [
+        "Require a short statement of what was not known, which sources were used and why they were trusted.",
+        "Set at least one task whose solution depends on a tool, standard or technique deliberately not covered in class."
+      ],
+      "rubric_criteria": [
+        "Identifies the knowledge gap and selects credible sources to close it.",
+        "Describes the learning strategy used and evaluates its effectiveness."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the knowledge-acquisition criterion.",
+      "evidence_note": "This indicator carries an ABET rubric in the program framework. Without a declared self-directed component the evidence is easy to assume and hard to show."
+    },
+    "PI72": {
+      "primary_family": "knowledge_acquisition",
+      "supporting_families": [
+        "analysis",
+        "design",
+        "experimentation",
+        "foundational_knowledge"
+      ],
+      "demonstrates": "the student puts newly acquired knowledge to work on an engineering task",
+      "relationship": "PI72 is what makes SO7 assessable as engineering rather than as study skills: the new knowledge has to change the work product.",
+      "primary_artifacts": [
+        "design_project",
+        "simulation_assignment",
+        "demonstration"
+      ],
+      "supporting_artifacts": [
+        "written_report",
+        "lab_report"
+      ],
+      "strengthening": [
+        "Score the application of the newly learned material, not the act of finding it.",
+        "Ask the student to point to where in the deliverable the new knowledge was used."
+      ],
+      "rubric_criteria": [
+        "Applies the newly acquired knowledge correctly to the engineering task.",
+        "Shows that the result depended on the newly acquired knowledge."
+      ],
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the applied-knowledge criterion.",
+      "evidence_note": "Pairs naturally with PI71 on the same deliverable, scored as two rubric rows."
+    }
+  },
+  "so_evidence_notes": {
+    "SO1": "Analysis evidence is abundant across the program. The useful work here is narrowing to nominated items rather than finding more coverage.",
+    "SO2": "Design evidence is strongest where a specification and a produced solution are both present. Analysis-led courses can carry SO2 well when a task is framed against stated specifications.",
+    "SO3": "Communication evidence depends on keeping the graded artifact and a criterion-level rubric, not only the mark.",
+    "SO4": "Ethical recognition and judgment need a case or a decision point. The program already carries the IEEE Code of Ethics and the Saudi Council of Engineers Engineer's Charter as reference frameworks.",
+    "SO5": "Teamwork evidence has to observe the individual inside the team; a shared deliverable mark cannot report it.",
+    "SO6": "Experimentation evidence is strongest where the laboratory work is at least partly open and the conclusions section is scored separately.",
+    "SO7": "Self-directed learning evidence needs a declared component that is deliberately not taught in class."
+  },
+  "measurement_layer": {
+    "status": "not_connected",
+    "policy": "No student performance or attainment value is stored or generated by this module. When real assessment data are connected they populate the records array below, and the page will show measured attainment beside the alignment analysis rather than in place of it.",
+    "record_schema": {
+      "artifact_id": "string, identifier of the assessment artifact",
+      "course_code": "string, matching curriculum.courses[].course_code",
+      "clo_number": "string or number, matching clos[].clo_number",
+      "pi_code": "string, matching abet.performance_indicators key",
+      "term": "string, matching the assessment plan term identifier",
+      "rubric_criterion_id": "string, identifier of the scored criterion",
+      "sample_size": "integer, number of students in the assessed sample",
+      "threshold": "object, the faculty-defined rubric level counted as meeting the indicator",
+      "students_meeting_threshold": "integer",
+      "attainment_percent": "number, derived from the two counts above and never entered by hand",
+      "evidence_mode": "string, one of direct, direct_observational, external_observational, indirect",
+      "recorded_by": "string",
+      "recorded_on": "date"
+    },
+    "records": []
+  },
+  "improvement_layer": {
+    "status": "not_connected",
+    "policy": "Findings, improvement actions and reassessment results are recorded only after real measurement data exist. Nothing in this release generates them.",
+    "record_schema": {
+      "finding_id": "string",
+      "so_code": "string",
+      "pi_code": "string",
+      "term": "string",
+      "finding": "string, what the measured attainment showed",
+      "action": "string, the improvement action agreed by the committee",
+      "owner": "string",
+      "target_term": "string",
+      "reassessment_term": "string",
+      "reassessment_result": "string, populated only after reassessment"
+    },
+    "records": []
+  }
+}

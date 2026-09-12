@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CLO–SO–PI Alignment &amp; Evidence Analysis | Curriculum Intelligence Portal</title>
+  <link rel="stylesheet" href="../assets/portal.css">
+  <script defer src="../assets/portal.js"></script>
+  <link rel="stylesheet" href="../assets/pages/curriculum-vision-clo-so-pi-alignment-analysis.css">
+<link rel="stylesheet" href="../assets/runtime-utilities.css">
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <main class="page-inset-top wrap">
+
+    <section class="hero alignment-hero" aria-labelledby="alignment-title">
+      <span class="kicker">Curriculum Vision · Continuous Improvement</span>
+      <h1 id="alignment-title">CLO–SO–PI Alignment &amp; Evidence Analysis</h1>
+      <p class="lead">How each ABET Student Outcome is served across the Undergraduate EE curriculum, which CLOs and
+        Performance Indicators carry it, and what assessment evidence would make the approved mapping easier to defend.</p>
+      <div class="page-links">
+        <a class="btn primary" href="index.html">Back to Curriculum Vision</a>
+        <a class="btn" href="../undergraduate-ee/so-leader-dashboard.html">SO Leader Dashboard</a>
+        <a class="btn" href="../undergraduate-ee/course-dashboard.html">Course Dashboard</a>
+        <a class="btn" href="../undergraduate-ee/teaching-assessment-methods.html">Teaching &amp; Assessment Methods</a>
+      </div>
+    </section>
+
+    <section class="card philosophy-panel" aria-labelledby="philosophy-title">
+      <h2 id="philosophy-title">How this analysis is written</h2>
+      <p id="philosophyStatement" class="muted">Loading review philosophy…</p>
+      <ol id="philosophyOrder" class="philosophy-order"></ol>
+      <p id="philosophyAuthority" class="muted philosophy-authority"></p>
+    </section>
+
+    <section class="section" aria-labelledby="chain-title">
+      <h2 id="chain-title">Traceability chain</h2>
+      <p class="section-intro muted">The full chain runs from a course learning outcome through to an improvement
+        action. This release implements the Alignment and Evidence layers. The Measurement and Improvement layers are
+        structured but deliberately empty — no student performance or attainment value is stored, derived or displayed.</p>
+      <div id="chainLayers" class="chain-layers"></div>
+    </section>
+
+    <section class="section" aria-labelledby="program-title">
+      <h2 id="program-title">Program summary</h2>
+      <p class="section-intro muted">Counts are read directly from the approved curriculum mapping. Alignment statuses
+        are produced by the supportive review model described above.</p>
+      <div id="programStats" class="grid four"></div>
+      <div id="statusSummary" class="status-summary"></div>
+      <div id="statusLegend" class="status-legend"></div>
+    </section>
+
+    <section class="section" aria-labelledby="coverage-title">
+      <h2 id="coverage-title">Student Outcome coverage across the curriculum</h2>
+      <p class="section-intro muted">Select an outcome to open its detailed alignment and evidence analysis. Coverage
+        bars show the share of courses in the curriculum that carry at least one CLO mapped to the outcome.</p>
+      <div id="soCoverageCards" class="so-coverage-grid"><p class="muted">Loading outcome coverage…</p></div>
+    </section>
+
+    <section class="section" aria-labelledby="matrix-title">
+      <h2 id="matrix-title">Course × Student Outcome coverage matrix</h2>
+      <p class="section-intro muted">Each cell shows how many CLO→PI links the course contributes to that outcome, with
+        the course-level performance level where one is assigned. Select a cell to open that outcome filtered to the
+        course.</p>
+      <div id="coverageMatrix" class="matrix-wrap"><p class="muted">Loading coverage matrix…</p></div>
+      <div id="matrixLegend" class="matrix-legend"></div>
+    </section>
+
+    <section class="section" id="detailSection" aria-labelledby="detail-title">
+      <h2 id="detail-title">Outcome detail</h2>
+      <div class="toolbar detail-toolbar">
+        <label class="field-label" for="soSelect">Student Outcome
+          <select id="soSelect" class="select"></select>
+        </label>
+        <label class="field-label" for="piSelect">Performance Indicator
+          <select id="piSelect" class="select"></select>
+        </label>
+        <label class="field-label" for="statusSelect">Alignment status
+          <select id="statusSelect" class="select"></select>
+        </label>
+        <label class="field-label detail-search" for="detailSearch">Search
+          <input id="detailSearch" class="input" type="search" placeholder="Course, CLO text, PI…">
+        </label>
+      </div>
+      <p id="detailStatus" class="detail-status" role="status" aria-live="polite"></p>
+      <div id="soDetail" class="so-detail"><p class="muted">Loading outcome detail…</p></div>
+    </section>
+
+    <section class="section" aria-labelledby="gaps-title">
+      <h2 id="gaps-title">Gaps, concentration and opportunities</h2>
+      <p class="section-intro muted">Observations generated from the approved mapping and the program assessment plan.
+        They are prompts for faculty discussion, not findings about attainment.</p>
+      <div id="programObservations" class="observation-grid"></div>
+    </section>
+
+    <section class="section" aria-labelledby="quality-title">
+      <h2 id="quality-title">Evidence quality checks</h2>
+      <p class="section-intro muted">Applied to an assessment artifact once one is linked to a mapping. Until then the
+        page shows the recommended evidence type rather than an invented artifact.</p>
+      <div id="evidenceQuality" class="quality-grid"></div>
+      <div id="artifactReference" class="artifact-reference"></div>
+    </section>
+
+    <section class="section" aria-labelledby="future-title">
+      <h2 id="future-title">Future layers &amp; data readiness</h2>
+      <p class="section-intro muted">The record structures below are already defined so real assessment data can be
+        connected without reshaping this module. Both record sets are empty in this release.</p>
+      <div id="futureLayers" class="future-grid"></div>
+    </section>
+
+    <p id="dataSources" class="footer data-sources"></p>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../assets/pages/curriculum-vision-clo-so-pi-alignment-analysis.js"></script>
+</body>
+
+</html>
