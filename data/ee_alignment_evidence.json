@@ -3,8 +3,8 @@
   "module": "CLO-SO-PI Alignment and Evidence Analysis",
   "program": "Bachelor of Science in Electrical Engineering",
   "generated_on": "2026-09-11",
-  "status": "alignment_and_evidence_layers_only_no_measurement_data",
-  "source_note": "This file carries only the analysis knowledge layer. Every CLO, Student Outcome, Performance Indicator, course, teaching strategy and assessment method is read from data/ee_curriculum.json, and the program assessment cycle is read from data/ee-assessment.json. No outcome definition or approved mapping is duplicated here.",
+  "status": "core_curriculum_alignment_and_evidence_layers_only_no_measurement_data",
+  "source_note": "This file carries only the analysis knowledge layer. Every CLO, Student Outcome, Performance Indicator, course, teaching strategy and assessment method is read from data/ee_curriculum.json, and the program assessment cycle is read from data/ee-assessment.json. No outcome definition or approved mapping is duplicated here. Program-level conclusions are computed from required (core) courses only; the required/elective classification is read from curriculum.courses[].required_or_elective.",
   "philosophy": {
     "headline": "Supportive review, not audit",
     "statement": "CLO-SO-PI alignment is a matter of faculty judgment. This analysis assumes the approved mapping is intentional and potentially defensible, and looks first for the strongest reasonable interpretation that supports it.",
@@ -456,21 +456,26 @@
         "focused": "Focused coverage"
       },
       "notes": {
-        "broad": "This outcome is touched across a wide part of the curriculum.",
-        "moderate": "This outcome is carried by a meaningful subset of the curriculum.",
-        "focused": "This outcome is carried by a small set of courses. That can be entirely intentional for a specialised outcome; the point worth confirming is that the chosen courses are the ones the program wants to assess."
-      }
+        "broad": "This outcome is touched across a wide part of the required curriculum, so every student meets it in several courses.",
+        "moderate": "This outcome is carried by a meaningful subset of the required curriculum.",
+        "focused": "This outcome is carried by a small set of required courses. That can be entirely intentional for a specialised outcome; the point worth confirming is that the chosen courses are the ones the program wants to assess."
+      },
+      "denominator": "required_courses"
     },
     "concentration": {
       "top_courses_considered": 3,
       "concentrated_min_share": 0.6,
-      "note": "A large share of this outcome's CLO links sits in a few courses. Concentration is normal for capstone-anchored outcomes; the point worth confirming is that the assessment plan does not depend on a single course offering."
+      "note": "A large share of this outcome’s CLO to PI relationships sits in a few required courses. This measures where the mapped relationships are declared, not how much time students spend on the outcome. Concentration is normal for capstone-anchored and integrative outcomes; the point worth confirming is that the assessment plan does not depend on a single course offering.",
+      "measures": "share_of_clo_to_pi_relationships"
     },
     "pi_thin_link_threshold": 12,
     "fan_out_advisory_threshold": 8,
-    "evidence_opportunity": {
+    "scope": "required_courses_only",
+    "threshold_note": "Coverage categories and advisory thresholds are descriptive curriculum-analysis settings chosen for this portal. They are not ABET requirements, accreditation criteria or attainment thresholds, and they can be changed in data/ee_alignment_evidence.json without altering any approved mapping.",
+    "evidence_readiness": {
       "strong_min_share": 0.7,
-      "partial_min_share": 0.4
+      "partial_min_share": 0.4,
+      "note": "Share of an outcome’s relationships for which an artifact type normally used to report the indicator is already among the declared assessment methods."
     }
   },
   "pi_evidence_profiles": {
@@ -1091,5 +1096,151 @@
       "reassessment_result": "string, populated only after reassessment"
     },
     "records": []
-  }
+  },
+  "analysis_scope": {
+    "primary_scope": "required",
+    "label": "Analysis scope: Core curriculum",
+    "statement": "Program-level conclusions are based on required courses only, because they represent the curriculum experienced by every EE student. Elective courses are shown separately for exploration and are not included in guaranteed program-coverage judgments.",
+    "elective_note": "Electives are not less important; they answer a different curriculum question. A student takes only a subset of the elective pool, so elective mappings describe enrichment opportunities rather than coverage every graduate is guaranteed to experience.",
+    "elective_label": "Elective enrichment",
+    "core_label": "Core curriculum"
+  },
+  "dimension_model": {
+    "intro": "A single status answers several questions at once. These three dimensions keep them apart, so that a conceptual judgment is never confused with a documentation gap.",
+    "conceptual_alignment": {
+      "label": "Conceptual Alignment",
+      "question": "Does the CLO reasonably support this Performance Indicator?",
+      "source": "Read from the outcome statement against the demonstration the indicator describes.",
+      "states": {
+        "primary": {
+          "label": "Directly aligned",
+          "tone": "strong",
+          "description": "The statement asks for the same kind of demonstration the indicator describes."
+        },
+        "supporting": {
+          "label": "Supporting alignment",
+          "tone": "good",
+          "description": "The statement supports the indicator through a related demonstration - a normal arrangement where one task carries several outcomes."
+        },
+        "unclear": {
+          "label": "Wording not explicit",
+          "tone": "watch",
+          "description": "The statement carries no distinct demonstration verb, so the mapping rests on the design of the assessed task rather than on the wording. This is a wording observation, not a mapping concern."
+        },
+        "distant": {
+          "label": "Worth a closer look",
+          "tone": "review",
+          "description": "The statement describes a noticeably different kind of demonstration from the indicator. The preserve path is offered first in every case."
+        }
+      }
+    },
+    "evidence_readiness": {
+      "label": "Evidence Readiness",
+      "question": "Do the assessment methods already declared for this CLO provide a suitable potential carrier for this indicator?",
+      "source": "Declared assessment methods in the approved curriculum, matched against the artifact types that normally carry the indicator.",
+      "caution": "A declared assessment method means a suitable evidence opportunity exists. It does not mean the indicator has been measured.",
+      "states": {
+        "strong": {
+          "label": "Preferred carrier declared",
+          "tone": "strong",
+          "description": "An artifact type normally used to report this indicator is already among the declared methods."
+        },
+        "partial": {
+          "label": "Supporting carrier declared",
+          "tone": "good",
+          "description": "A related artifact type is declared. It can support the mapping; the preferred carrier would report it more directly."
+        },
+        "limited": {
+          "label": "Carrier not yet named",
+          "tone": "watch",
+          "description": "None of the declared methods is an artifact type normally used to report this indicator. The mapping stands; the evidence route for it is not yet named."
+        }
+      }
+    },
+    "evidence_specificity": {
+      "label": "Evidence Specificity",
+      "question": "Has an actual assessment artifact and a PI-specific rubric criterion been identified for this mapping?",
+      "source": "The Evidence and Measurement layers. No artifact has been linked in this release, so this dimension reports what is recommended rather than what has been recorded.",
+      "caution": "This is the dimension that turns an evidence opportunity into defensible attainment evidence. It is intentionally unfilled until real artifacts are connected.",
+      "states": {
+        "documented": {
+          "label": "Artifact documented",
+          "tone": "strong",
+          "description": "A specific artifact and rubric criterion are recorded against this mapping."
+        },
+        "recommended": {
+          "label": "Recommended, not yet documented",
+          "tone": "watch",
+          "description": "The page proposes a suitable artifact type and rubric criterion. Nothing has been linked yet, so the indicator has not been shown to be measured."
+        },
+        "not_available": {
+          "label": "No recommendation available",
+          "tone": "watch",
+          "description": "No evidence profile exists for this indicator yet."
+        }
+      }
+    }
+  },
+  "program_conclusion": {
+    "intro": "The headline conclusion is derived from the core-curriculum analysis using the thresholds below. It is a descriptive summary of the current mapping and its evidence opportunities, not an attainment judgment.",
+    "tiers": [
+      {
+        "id": "strong",
+        "min_supported_share": 0.85,
+        "max_review_share": 0.03,
+        "requires_all_outcomes_represented": true,
+        "headline": "Strong and broadly defensible",
+        "summary": "Across the required curriculum, the great majority of CLO to PI relationships read as well supported or defensible, every Student Outcome is represented, and only a small number of relationships show enough conceptual distance to merit a faculty conversation. The productive work here is sharpening evidence rather than revisiting the mapping."
+      },
+      {
+        "id": "broadly_defensible",
+        "min_supported_share": 0.7,
+        "max_review_share": 0.06,
+        "requires_all_outcomes_represented": true,
+        "headline": "Broadly defensible, with focused opportunities to strengthen evidence",
+        "summary": "Most relationships in the required curriculum read as well supported or defensible. An identifiable group would be easier to defend with a clearer evidence route or a PI-specific rubric criterion."
+      },
+      {
+        "id": "defensible_with_opportunities",
+        "min_supported_share": 0.5,
+        "max_review_share": 0.12,
+        "requires_all_outcomes_represented": false,
+        "headline": "Defensible overall, with several areas where evidence could be strengthened",
+        "summary": "The mapping holds across the required curriculum. Several outcomes would benefit from a clearer evidence route before their attainment is reported."
+      },
+      {
+        "id": "evidence_development",
+        "min_supported_share": 0.0,
+        "max_review_share": 1.0,
+        "requires_all_outcomes_represented": false,
+        "headline": "Mapping is in place; evidence documentation is the main area to develop",
+        "summary": "The approved mapping covers the required curriculum. The clearest next step is naming the artifacts and rubric criteria that would carry the evidence."
+      }
+    ]
+  },
+  "so_next_steps": {
+    "SO1": "Choose a small number of nominated items rather than aggregating whole papers, so reported attainment traces back to one indicator at a time.",
+    "SO2": "Confirm that the design-led courses carrying most of these relationships use criterion-level rubric rows, so the design, constraints and standards indicators can be reported separately.",
+    "SO3": "Keep the graded report or presentation itself, not only the mark, and name content, representation and audience adaptation as separate rubric rows.",
+    "SO4": "Nominate one case or decision task in a core course as the ethics evidence point, and anchor its criterion to the IEEE Code of Ethics or the Saudi Council of Engineers Engineer’s Charter that the program already references.",
+    "SO5": "Add a short behaviour-anchored peer or instructor rating to the team activities that already exist. This is usually the smallest change that turns a team task into individual SO5 evidence, because a shared project mark cannot report it.",
+    "SO6": "Ensure the nominated artifacts score experiment development, data interpretation and conclusions as separate criteria rather than as one laboratory mark.",
+    "SO7": "Declare which component of the course is deliberately not taught in class, so the self-directed learning step is visible in the artifact rather than assumed."
+  },
+  "future_modules": [
+    {
+      "id": "elective_pool_consistency",
+      "name": "Elective Pool Consistency Analysis",
+      "status": "not_started",
+      "status_label": "Planned",
+      "rationale": "Electives are excluded from guaranteed core-program coverage because a student selects only part of the elective pool. Two students can complete the same degree through very different elective paths.",
+      "questions": [
+        "Do different permitted elective choices provide reasonably balanced Student Outcome and Performance Indicator opportunities?",
+        "Does the elective pool contain unintended gaps, where some outcomes are reachable only through a few electives?",
+        "Does evidence quality vary significantly depending on which electives a student takes?",
+        "Do the permitted elective combinations maintain the intended educational experience?"
+      ],
+      "note": "Not implemented in this release. The elective mappings are already analysed and can be inspected through the exploration tools on this page; only the combination-level analysis is deferred."
+    }
+  ]
 }

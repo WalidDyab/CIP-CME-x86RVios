@@ -5,6 +5,11 @@
  * data/ee_alignment_evidence.json. It never rewrites a mapping and never produces a
  * student-performance or attainment value: the Measurement and Improvement layers are
  * rendered from their declared record schemas with empty record sets.
+ *
+ * Scope: every program-level conclusion is computed from required (core) courses only,
+ * because they are the curriculum every student takes. Elective relationships are analysed
+ * with the same engine and stay inspectable through the exploration tools, but they never
+ * enter a core-coverage figure or a headline judgment.
  */
 document.addEventListener('DOMContentLoaded', async () => {
   const el = id => document.getElementById(id);
@@ -12,7 +17,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   const slug = value => String(value || '').toLowerCase().replace(/_/g, '-');
   const pct = share => Math.round(share * 100);
   const barClass = share => `w-${Math.min(100, Math.max(0, Math.round(share * 20) * 5))}`;
+  // Flex-grow keeps the stacked bar faithful to the underlying counts while the CSS
+  // min-width keeps a small but non-zero slice visible. Both come from classes, never
+  // from an inline style, so the page stays within the portal content-security policy.
+  const growClass = share => `grow-${Math.min(100, Math.max(1, Math.round(share * 100)))}`;
   const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
+  const verb = (count, singular, pluralForm) => count === 1 ? singular : pluralForm;
+  // Small shares round away to a misleading whole number, so keep one decimal below 5%.
+  const pctText = value => value > 0 && value < 0.05 ? `${(value * 100).toFixed(1)}%` : `${pct(value)}%`;
   const joinList = items => items.length <= 1 ? (items[0] || '')
     : `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
 
@@ -41,7 +53,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   const statusModel = knowledge.status_model || {};
   const statusOrder = statusModel.order || [];
   const model = knowledge.coverage_model || {};
+  const dimensions = knowledge.dimension_model || {};
+  const scopeModel = knowledge.analysis_scope || {};
   const levelLegend = curriculum.performance_levels_legend || {};
+
+  const BROAD = model.breadth?.broad_min_course_share ?? 0.5;
+  const MODERATE = model.breadth?.moderate_min_course_share ?? 0.25;
+  const CONCENTRATED = model.concentration?.concentrated_min_share ?? 0.6;
+  const TOP_COURSES = model.concentration?.top_courses_considered || 3;
+  const EVIDENCE_STRONG = model.evidence_readiness?.strong_min_share ?? 0.7;
+  const EVIDENCE_PARTIAL = model.evidence_readiness?.partial_min_share ?? 0.4;
+  const FAN_OUT = model.fan_out_advisory_threshold ?? 8;
 
   // ---------------------------------------------------------------- analysis
 
@@ -89,6 +111,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     return [...grouped.entries()].sort().map(([so, codes]) => `${so} (${codes.join(', ')})`);
   }
 
+  // Measurement records would make a mapping's evidence specific rather than recommended.
+  // The set is empty in this release; the lookup exists so real records connect cleanly.
+  const documentedKeys = new Set((knowledge.measurement_layer?.records || [])
+    .map(record => `${record.course_code}::${record.clo_number}::${record.pi_code}`));
+
+  const isRequired = course => String(course.required_or_elective || '').toLowerCase() === 'required';
+
   function analyseLink(course, clo, piCode) {
     const profile = piProfiles[piCode] || {};
     const indicator = indicators[piCode] || {};
@@ -108,15 +137,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     else match = 'distant';
 
     const evidence = matchedPrimary.length ? 'strong' : matchedSupporting.length ? 'partial' : 'limited';
-    const status = statusFor(match, evidence);
-    const rubricFlagged = Boolean(indicator.rubric);
-    const rubricReady = declared.some(id => artifactFamilies[id]?.rubric_ready);
-    const directDeclared = declared.some(id => artifactFamilies[id]?.evidence_mode === 'direct');
+    const specificity = documentedKeys.has(`${course.course_code}::${clo.clo_number}::${piCode}`) ? 'documented'
+      : primaryArtifacts.length ? 'recommended' : 'not_available';
 
     return {
       course, clo, piCode, soCode, profile, indicator,
+      core: isRequired(course),
       cloFamilies, artifacts, declared, matchedPrimary, matchedSupporting,
-      match, evidence, status, rubricFlagged, rubricReady, directDeclared,
+      match, evidence, specificity,
+      status: statusFor(match, evidence),
+      rubricFlagged: Boolean(indicator.rubric),
+      rubricReady: declared.some(id => artifactFamilies[id]?.rubric_ready),
+      directDeclared: declared.some(id => artifactFamilies[id]?.evidence_mode === 'direct'),
       fanOut: (clo.pi_codes || []).length,
       level: (course.pi_levels || {})[piCode] || ''
     };
@@ -179,8 +211,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function noteItems(link) {
     const notes = [];
-    const threshold = model.fan_out_advisory_threshold || 8;
-    if (link.fanOut >= threshold) {
+    if (link.fanOut >= FAN_OUT) {
       notes.push(`This CLO carries ${plural(link.fanOut, 'Performance Indicator')}. Broad mapping is legitimate for an integrative outcome; the practical question is which of those indicators the declared artifacts can actually score separately.`);
     }
     if (link.evidence === 'limited') {
@@ -205,7 +236,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const cloIndex = new Map();
   courses.forEach(course => (course.clos || []).forEach(clo => {
     const key = `${course.course_code}::${clo.clo_number}`;
-    cloIndex.set(key, { course, clo });
+    cloIndex.set(key, { course, clo, core: isRequired(course) });
     const piCodes = (clo.pi_codes || []).filter(code => indicators[code]);
     piCodes.forEach(code => links.push(Object.assign(analyseLink(course, clo, code), { key: `${key}::${code}` })));
     // A CLO mapped to an outcome without naming one of its indicators has no evidence
@@ -214,18 +245,22 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (piCodes.some(code => indicators[code].so === soCode)) return;
       links.push({
         key: `${key}::${soCode}::anchor`, course, clo, piCode: '', soCode, profile: {}, indicator: {},
-        cloFamilies: detectFamilies(clo.clo_text), artifacts: declaredArtifacts(clo.assessment_methods),
-        declared: [], matchedPrimary: [], matchedSupporting: [], match: 'unclear', evidence: 'limited',
-        status: 'could_be_strengthened', rubricFlagged: false, rubricReady: false, directDeclared: false,
+        core: isRequired(course), cloFamilies: detectFamilies(clo.clo_text),
+        artifacts: declaredArtifacts(clo.assessment_methods), declared: [], matchedPrimary: [], matchedSupporting: [],
+        match: 'unclear', evidence: 'limited', specificity: 'not_available', status: 'could_be_strengthened',
+        rubricFlagged: false, rubricReady: false, directDeclared: false,
         fanOut: (clo.pi_codes || []).length, level: '', anchorGap: true
       });
     });
   }));
 
   const linkByKey = new Map(links.map(link => [link.key, link]));
-  const isRequired = course => String(course.required_or_elective || '').toLowerCase() === 'required';
-  const totalCourses = courses.length;
   const requiredCourses = courses.filter(isRequired);
+  const electiveCourses = courses.filter(course => !isRequired(course));
+  const coreLinks = links.filter(link => link.core);
+  const electiveLinks = links.filter(link => !link.core);
+  const coreCourseCount = requiredCourses.length;
+  const PI_THIN_COURSES = Math.max(2, Math.round(coreCourseCount * MODERATE));
 
   function summariseStatuses(items) {
     const counts = {};
@@ -234,13 +269,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     return counts;
   }
 
-  const soStats = Object.keys(outcomes).map(soCode => {
-    const outcome = outcomes[soCode];
-    const soLinks = links.filter(link => link.soCode === soCode);
+  const share = (part, whole) => whole ? part / whole : 0;
+
+  // One scope block per (outcome, course scope). The denominator is passed in so a core
+  // block is measured against required courses and never against the whole catalogue.
+  function scopeStats(soLinks, denominator, expectedPis) {
     const courseCodes = new Set(soLinks.map(link => link.course.course_code));
-    const requiredCodes = new Set(soLinks.filter(link => isRequired(link.course)).map(link => link.course.course_code));
     const cloKeys = new Set(soLinks.map(link => `${link.course.course_code}::${link.clo.clo_number}`));
-    const expectedPis = outcome.pis || [];
+    const perCourse = [...courseCodes].map(code => ({
+      code, count: soLinks.filter(link => link.course.course_code === code).length
+    })).sort((left, right) => right.count - left.count);
+    const relationshipConcentration = share(
+      perCourse.slice(0, TOP_COURSES).reduce((sum, item) => sum + item.count, 0), soLinks.length);
+    const courseShare = share(courseCodes.size, denominator);
     const piStats = expectedPis.map(code => {
       const piLinks = soLinks.filter(link => link.piCode === code);
       return {
@@ -252,40 +293,82 @@ document.addEventListener('DOMContentLoaded', async () => {
         courses: new Set(piLinks.map(link => link.course.course_code)),
         clos: new Set(piLinks.map(link => `${link.course.course_code}::${link.clo.clo_number}`)),
         statuses: summariseStatuses(piLinks),
-        evidenceShare: piLinks.length ? piLinks.filter(link => link.evidence === 'strong').length / piLinks.length : 0
+        evidenceReadiness: share(piLinks.filter(link => link.evidence === 'strong').length, piLinks.length)
       };
     });
+    const statuses = summariseStatuses(soLinks);
+    return {
+      links: soLinks, courseCodes, cloKeys, perCourse, piStats, statuses,
+      denominator, courseShare, relationshipConcentration,
+      concentrated: relationshipConcentration >= CONCENTRATED,
+      breadth: courseShare >= BROAD ? 'broad' : courseShare >= MODERATE ? 'moderate' : 'focused',
+      conceptualAlignment: share(soLinks.filter(link => link.match === 'primary' || link.match === 'supporting').length, soLinks.length),
+      directlyAligned: share(soLinks.filter(link => link.match === 'primary').length, soLinks.length),
+      evidenceReadiness: share(soLinks.filter(link => link.evidence === 'strong').length, soLinks.length),
+      supportedShare: share((statuses.well_supported || 0) + (statuses.defensible || 0), soLinks.length),
+      coveredPis: piStats.filter(item => item.links.length).length
+    };
+  }
 
-    const perCourse = [...courseCodes].map(code => ({
-      code, count: soLinks.filter(link => link.course.course_code === code).length
-    })).sort((left, right) => right.count - left.count);
-    const topN = model.concentration?.top_courses_considered || 3;
-    const topShare = soLinks.length ? perCourse.slice(0, topN).reduce((sum, item) => sum + item.count, 0) / soLinks.length : 0;
-    const courseShare = totalCourses ? courseCodes.size / totalCourses : 0;
-    const breadth = courseShare >= (model.breadth?.broad_min_course_share ?? 0.5) ? 'broad'
-      : courseShare >= (model.breadth?.moderate_min_course_share ?? 0.25) ? 'moderate' : 'focused';
-    const evidenceShare = soLinks.length ? soLinks.filter(link => link.evidence === 'strong').length / soLinks.length : 0;
+  function attentionFor(scope) {
+    if (scope.statuses.review_recommended) return 'review';
+    if (scope.evidenceReadiness < EVIDENCE_PARTIAL) return 'evidence';
+    const strengthenShare = share(scope.statuses.could_be_strengthened || 0, scope.links.length);
+    if (scope.evidenceReadiness < EVIDENCE_STRONG || strengthenShare > 0.2) return 'evidence_watch';
+    if (scope.breadth !== 'broad' || scope.concentrated) return 'confirm';
+    return 'none';
+  }
+
+  const ATTENTION = {
+    review: { label: 'Worth a review conversation', tone: 'review' },
+    evidence: { label: 'Evidence to strengthen', tone: 'watch' },
+    evidence_watch: { label: 'Evidence could be clearer', tone: 'watch' },
+    confirm: { label: 'Worth confirming', tone: 'good' },
+    none: { label: 'No action needed', tone: 'strong' }
+  };
+
+  const soStats = Object.keys(outcomes).map(soCode => {
+    const outcome = outcomes[soCode];
+    const expectedPis = outcome.pis || [];
+    const all = links.filter(link => link.soCode === soCode);
+    const core = scopeStats(all.filter(link => link.core), coreCourseCount, expectedPis);
+    const elective = scopeStats(all.filter(link => !link.core), electiveCourses.length, expectedPis);
+    const combined = scopeStats(all, courses.length, expectedPis);
     const planCourses = (plan.so_course_selection?.[soCode] || []).map(code => {
       const normalised = code.replace(/\s+/g, '').toUpperCase();
       const course = courses.find(item => item.course_code.replace(/\s+/g, '').toUpperCase() === normalised);
       return {
         code,
         inDataset: Boolean(course),
-        carriesOutcome: Boolean(course) && courseCodes.has(course.course_code)
+        isCore: Boolean(course) && isRequired(course),
+        carriesOutcome: Boolean(course) && combined.courseCodes.has(course.course_code)
       };
     });
-
     return {
       soCode, statement: outcome.statement || '', illustration: outcome.abet_illustration || '',
-      expectedPis, piStats, links: soLinks, courseCodes, requiredCodes, cloKeys, perCourse,
-      topShare, courseShare, breadth, evidenceShare, planCourses,
-      statuses: summariseStatuses(soLinks),
-      coveredPis: piStats.filter(item => item.links.length).length,
-      evidenceNote: knowledge.so_evidence_notes?.[soCode] || ''
+      expectedPis, core, elective, all: combined, planCourses,
+      attention: attentionFor(core),
+      evidenceNote: knowledge.so_evidence_notes?.[soCode] || '',
+      nextStep: knowledge.so_next_steps?.[soCode] || ''
     };
   });
 
   const soByCode = new Map(soStats.map(item => [item.soCode, item]));
+  const coreStatuses = summariseStatuses(coreLinks);
+  const coreSupported = (coreStatuses.well_supported || 0) + (coreStatuses.defensible || 0);
+  const coreSupportedShare = share(coreSupported, coreLinks.length);
+  const coreReviewShare = share(coreStatuses.review_recommended || 0, coreLinks.length);
+  const coreReadyCount = coreLinks.filter(link => link.evidence === 'strong').length;
+  const corePis = new Set(coreLinks.map(link => link.piCode).filter(Boolean));
+  const outcomesRepresented = soStats.filter(stat => stat.core.links.length).length;
+  const allOutcomesRepresented = outcomesRepresented === soStats.length;
+
+  function programConclusion() {
+    const tiers = knowledge.program_conclusion?.tiers || [];
+    return tiers.find(tier => coreSupportedShare >= (tier.min_supported_share ?? 0)
+      && coreReviewShare <= (tier.max_review_share ?? 1)
+      && (!tier.requires_all_outcomes_represented || allOutcomesRepresented)) || tiers[tiers.length - 1] || {};
+  }
 
   // -------------------------------------------------------------- rendering
 
@@ -299,90 +382,331 @@ document.addEventListener('DOMContentLoaded', async () => {
     return statusOrder.filter(id => counts[id]).map(id => statusChip(id, counts[id])).join('');
   }
 
-  function coverageBar(share, label) {
-    return `<div class="coverage-bar" role="img" aria-label="${esc(label)}"><span class="bar-fill ${barClass(share)}"></span></div>`;
+  function statusBar(counts, total) {
+    const label = statusOrder.filter(id => counts[id]).map(id => `${statusModel[id]?.label}: ${counts[id]}`).join(', ');
+    return `<div class="status-bar" role="img" aria-label="${esc(label)}">${statusOrder
+      .filter(id => counts[id])
+      .map(id => `<span class="status-slice status-${slug(id)} ${growClass(share(counts[id], total))}"></span>`)
+      .join('')}</div>`;
+  }
+
+  function coverageBar(value, label, tone) {
+    return `<div class="coverage-bar${tone ? ` bar-${tone}` : ''}" role="img" aria-label="${esc(label)}"><span class="bar-fill ${barClass(value)}"></span></div>`;
   }
 
   function definitionAttrs(code, statement) {
     return `title="${esc(statement || '')}" aria-label="${esc(`${code}: ${statement || ''}`)}"`;
   }
 
-  function renderPhilosophy() {
-    const philosophy = knowledge.philosophy || {};
-    el('philosophyStatement').textContent = philosophy.statement || '';
-    el('philosophyOrder').innerHTML = (philosophy.order_of_preference || [])
-      .map(item => `<li>${esc(item)}</li>`).join('');
-    el('philosophyAuthority').textContent = philosophy.authority_note || '';
+  function dimensionChip(dimensionId, stateId) {
+    const dimension = dimensions[dimensionId] || {};
+    const state = dimension.states?.[stateId] || {};
+    return `<span class="dim-chip tone-${slug(state.tone || 'watch')}" title="${esc(`${dimension.label}: ${state.description || ''}`)}">
+      <span class="dim-name">${esc(dimension.label || dimensionId)}</span>
+      <span class="dim-state">${esc(state.label || stateId)}</span></span>`;
   }
 
-  function renderChain() {
-    el('chainLayers').innerHTML = (knowledge.layers || []).map(layer => `
-      <article class="chain-layer layer-${slug(layer.availability)}">
-        <span class="layer-state">${esc(layer.availability_label || layer.availability)}</span>
-        <h3>${esc(layer.name)}</h3>
-        <p class="chain-path">${esc(layer.chain)}</p>
-        <p class="muted">${esc(layer.description)}</p>
-        <p class="layer-source"><span class="label">Source</span>${esc(layer.source)}</p>
+  function dimensionRow(link) {
+    return `<div class="dim-row">
+      ${dimensionChip('conceptual_alignment', link.match)}
+      ${dimensionChip('evidence_readiness', link.evidence)}
+      ${dimensionChip('evidence_specificity', link.specificity)}
+    </div>`;
+  }
+
+  function renderScope() {
+    el('scope-title').textContent = scopeModel.label || 'Analysis scope: Core curriculum';
+    el('scopeStatement').textContent = scopeModel.statement || '';
+    el('scopeElectiveNote').textContent = scopeModel.elective_note || '';
+    el('scopeCounts').innerHTML = `
+      <span class="scope-chip scope-core"><strong>${esc(coreCourseCount)}</strong> required courses · <strong>${esc(coreLinks.length)}</strong> CLO→PI relationships analysed for program conclusions</span>
+      <span class="scope-chip scope-elective"><strong>${esc(electiveCourses.length)}</strong> elective courses · <strong>${esc(electiveLinks.length)}</strong> relationships shown for exploration only</span>`;
+  }
+
+  function renderSnapshot() {
+    const conclusion = programConclusion();
+    el('snapshotVerdict').innerHTML = `
+      <p class="verdict-kicker">${esc(scopeModel.core_label || 'Core curriculum')} · alignment conclusion</p>
+      <p class="verdict-headline">${esc(conclusion.headline || '')}</p>
+      <p class="verdict-summary">${esc(conclusion.summary || '')}</p>
+      ${statusBar(coreStatuses, coreLinks.length)}
+      <div class="status-chip-row">${statusOrder.map(id => statusChip(id, coreStatuses[id])).join('')}</div>`;
+
+    const leanest = [...soStats].sort((left, right) => left.core.courseShare - right.core.courseShare)[0];
+    const strengthen = coreStatuses.could_be_strengthened || 0;
+    const review = coreStatuses.review_recommended || 0;
+    const reviewOutcomes = [...new Set(coreLinks.filter(link => link.status === 'review_recommended').map(link => link.soCode))].sort();
+    const messages = [
+      {
+        id: 'coverage',
+        title: 'Coverage',
+        headline: allOutcomesRepresented
+          ? `All ${outcomesRepresented} Student Outcomes are represented in the required curriculum`
+          : `${outcomesRepresented} of ${soStats.length} Student Outcomes are represented in the required curriculum`,
+        body: `${corePis.size} of ${Object.keys(indicators).length} Performance Indicators appear in at least one required course. `
+          + `The narrowest reach is ${leanest.soCode}, carried by ${leanest.core.courseCodes.size} of the ${coreCourseCount} required courses.`,
+        tone: allOutcomesRepresented ? 'strong' : 'watch'
+      },
+      {
+        id: 'alignment',
+        title: 'Alignment',
+        headline: `${coreSupported} of ${coreLinks.length} core relationships (${pct(coreSupportedShare)}%) read as Well Supported or Defensible`,
+        body: `${pct(share(coreLinks.filter(link => link.match === 'primary').length, coreLinks.length))}% of core relationships are directly aligned — the CLO asks for the same kind of demonstration the indicator describes — and most of the remainder are supported through a related demonstration.`,
+        tone: coreSupportedShare >= 0.85 ? 'strong' : coreSupportedShare >= 0.7 ? 'good' : 'watch'
+      },
+      {
+        id: 'evidence',
+        title: 'Evidence',
+        headline: `A suitable evidence carrier is already declared for ${coreReadyCount} of ${coreLinks.length} core relationships (${pct(share(coreReadyCount, coreLinks.length))}%)`,
+        body: `${strengthen === 0 ? 'No core relationship' : plural(strengthen, 'core relationship')} would benefit from a clearer evidence route or a PI-specific rubric criterion. `
+          + 'A declared assessment method shows that a suitable opportunity exists; no artifact has been linked yet, so no indicator has been shown to have been measured.',
+        tone: share(coreReadyCount, coreLinks.length) >= EVIDENCE_STRONG ? 'strong' : 'watch'
+      },
+      {
+        id: 'attention',
+        title: 'Faculty attention',
+        headline: review === 0
+          ? 'No core relationship shows a specific conceptual difference from its indicator'
+          : `${review} of ${coreLinks.length} core relationships (${pctText(coreReviewShare)}) merit a closer faculty look`,
+        body: review === 0
+          ? 'Every core relationship reads as either directly aligned with its indicator or supported through a related demonstration.'
+          : `${review === 1 ? 'It sits' : 'They sit'} under ${joinList(reviewOutcomes)}, and each one opens with the preserve path: if the assessed task carries the indicator, clarified wording or a named rubric criterion is enough.`,
+        tone: review === 0 ? 'strong' : 'review'
+      }
+    ];
+    el('snapshotMessages').innerHTML = messages.map(message => `
+      <article class="snapshot-card tone-${message.tone}">
+        <span class="snapshot-label">${esc(message.title)}</span>
+        <p class="snapshot-headline">${esc(message.headline)}</p>
+        <p class="snapshot-body">${esc(message.body)}</p>
       </article>`).join('');
+
+    const coreClos = requiredCourses.reduce((sum, course) => sum + (course.clos || []).length, 0);
+    const allClos = courses.reduce((sum, course) => sum + (course.clos || []).length, 0);
+    el('snapshotContext').innerHTML = `
+      <p class="muted">${esc(knowledge.program_conclusion?.intro || '')}</p>
+      <div class="table-wrap"><table><thead><tr><th>Dataset</th><th>${esc(scopeModel.core_label || 'Core curriculum')}</th><th>${esc(scopeModel.elective_label || 'Elective enrichment')}</th><th>Whole catalogue</th></tr></thead><tbody>
+        <tr><td>Courses</td><td>${esc(coreCourseCount)}</td><td>${esc(electiveCourses.length)}</td><td>${esc(courses.length)}</td></tr>
+        <tr><td>Course learning outcomes</td><td>${esc(coreClos)}</td><td>${esc(allClos - coreClos)}</td><td>${esc(allClos)}</td></tr>
+        <tr><td>CLO → PI relationships</td><td>${esc(coreLinks.length)}</td><td>${esc(electiveLinks.length)}</td><td>${esc(links.length)}</td></tr>
+        <tr><td>Student Outcomes represented</td><td>${esc(outcomesRepresented)} of ${esc(soStats.length)}</td><td>${esc(soStats.filter(stat => stat.elective.links.length).length)} of ${esc(soStats.length)}</td><td>${esc(soStats.filter(stat => stat.all.links.length).length)} of ${esc(soStats.length)}</td></tr>
+        <tr><td>Performance Indicators represented</td><td>${esc(corePis.size)} of ${esc(Object.keys(indicators).length)}</td><td>${esc(new Set(electiveLinks.map(link => link.piCode).filter(Boolean)).size)} of ${esc(Object.keys(indicators).length)}</td><td>${esc(new Set(links.map(link => link.piCode).filter(Boolean)).size)} of ${esc(Object.keys(indicators).length)}</td></tr>
+      </tbody></table></div>`;
   }
 
-  function renderProgramSummary() {
-    const clos = courses.reduce((sum, course) => sum + (course.clos || []).length, 0);
-    portal.renderStats(el('programStats'), {
-      'Courses mapped': totalCourses,
-      'Course learning outcomes': clos,
-      'CLO → PI relationships': links.length,
-      'Student Outcomes': soStats.length
+  // --------------------------------------------------------- what deserves attention
+
+  function findingCard(finding) {
+    return `<article class="finding tone-${finding.tone}">
+      <header class="finding-head">
+        <h3>${esc(finding.title)}</h3>
+        ${finding.so ? `<button type="button" class="btn finding-open" data-open-so="${esc(finding.so)}">Open ${esc(finding.so)}</button>` : ''}
+      </header>
+      <p class="finding-line"><span class="finding-label">What we see</span>${esc(finding.see)}</p>
+      <p class="finding-line"><span class="finding-label">What it means</span>${esc(finding.means)}</p>
+      ${finding.consider ? `<p class="finding-line"><span class="finding-label">What to consider</span>${esc(finding.consider)}</p>` : ''}
+      ${finding.items?.length ? `<ul class="finding-items">${finding.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>` : ''}
+    </article>`;
+  }
+
+  function buildFindings() {
+    const findings = [];
+    const reviewLinks = coreLinks.filter(link => link.status === 'review_recommended');
+    const reviewOutcomes = [...new Set(reviewLinks.map(link => link.soCode))].sort();
+
+    reviewOutcomes.forEach(soCode => {
+      const stat = soByCode.get(soCode);
+      const items = reviewLinks.filter(link => link.soCode === soCode);
+      findings.push({
+        priority: 100, tone: 'review', so: soCode,
+        title: `${plural(items.length, 'relationship')} under ${soCode} would benefit from a short faculty conversation`,
+        see: `${joinList(items.map(link => `${link.course.course_code} CLO ${link.clo.clo_number} → ${link.piCode}`))}. `
+          + `${soCode} is carried by ${stat.core.courseCodes.size} of the ${coreCourseCount} required courses, the ${stat.core.breadth === 'broad' ? 'widest' : 'narrower'} end of the range.`,
+        means: 'In each case the outcome statement describes a different kind of demonstration from the indicator it is mapped to. That is a wording-and-evidence observation, not a verdict: the mapping is retained, and the assessed task may well carry the indicator already.',
+        consider: `${stat.nextStep} Open the relationships below to see the preserve path offered for each one before any remapping is discussed.`,
+        items: items.map(link => `${link.course.course_code} CLO ${link.clo.clo_number} → ${link.piCode}: “${link.clo.clo_text}”`)
+      });
     });
-    const counts = summariseStatuses(links);
-    const total = links.length || 1;
-    el('statusSummary').innerHTML = `
-      <div class="status-bar" role="img" aria-label="${esc(statusOrder.map(id => `${statusModel[id]?.label}: ${counts[id]}`).join(', '))}">
-        ${statusOrder.map(id => counts[id] ? `<span class="status-slice status-${slug(id)} ${barClass(counts[id] / total)}"></span>` : '').join('')}
-      </div>
-      <div class="status-chip-row">${statusOrder.map(id => statusChip(id, counts[id])).join('')}</div>`;
-    el('statusLegend').innerHTML = statusOrder.map(id => `
-      <article class="legend-card status-edge-${slug(id)}">
-        <h3>${esc(statusModel[id]?.label || id)}</h3>
-        <p class="muted">${esc(statusModel[id]?.definition || '')}</p>
-      </article>`).join('');
+
+    soStats.forEach(stat => {
+      if (stat.attention === 'review') return;
+      if (stat.core.evidenceReadiness >= EVIDENCE_STRONG) return;
+      const below = stat.core.evidenceReadiness < EVIDENCE_PARTIAL;
+      const thin = stat.core.links.filter(link => link.evidence !== 'strong');
+      const missing = [...new Set(thin.flatMap(link => link.profile.primary_artifacts || []))].map(artifactLabel);
+      findings.push({
+        priority: below ? 90 : 66, tone: 'watch', so: stat.soCode,
+        title: `${stat.soCode} evidence readiness is ${pct(stat.core.evidenceReadiness)}% across the required curriculum`,
+        see: `Of ${plural(stat.core.links.length, 'core relationship')}, ${thin.length} rely on an assessment method that is not the artifact type normally used to report the indicator. `
+          + `Conceptual alignment for ${stat.soCode} remains ${pct(stat.core.conceptualAlignment)}%, so this is an evidence observation rather than a mapping one.`,
+        means: stat.evidenceNote || 'The declared methods can support the mapping, but they are not the carriers these indicators are usually reported from.',
+        consider: stat.nextStep,
+        items: missing.length ? [`Artifact types that would carry these indicators most directly: ${joinList(missing)}.`] : []
+      });
+    });
+
+    soStats.forEach(stat => {
+      if (stat.attention === 'review' || stat.core.evidenceReadiness < EVIDENCE_STRONG) return;
+      if (stat.core.breadth === 'broad') return;
+      findings.push({
+        priority: 60, tone: 'good', so: stat.soCode,
+        title: `${stat.soCode} is carried by ${stat.core.courseCodes.size} of the ${coreCourseCount} required courses`,
+        see: `${plural(stat.core.cloKeys.size, 'CLO')} across ${plural(stat.core.courseCodes.size, 'required course')} carry ${stat.core.links.length} relationships, with all ${stat.core.coveredPis} of its ${stat.expectedPis.length} indicators represented.`,
+        means: model.breadth?.notes?.[stat.core.breadth] || '',
+        consider: stat.nextStep
+      });
+    });
+
+    soStats.forEach(stat => {
+      if (!stat.core.concentrated || stat.attention === 'review') return;
+      findings.push({
+        priority: 55, tone: 'good', so: stat.soCode,
+        title: `${pct(stat.core.relationshipConcentration)}% of ${stat.soCode} relationships sit in ${plural(Math.min(TOP_COURSES, stat.core.perCourse.length), 'required course')}`,
+        see: `${joinList(stat.core.perCourse.slice(0, TOP_COURSES).map(item => `${item.code} (${item.count})`))} carry most of this outcome's core relationships, out of ${plural(stat.core.courseCodes.size, 'contributing required course')}.`,
+        means: model.concentration?.note || '',
+        consider: stat.nextStep
+      });
+    });
+
+    const thinPis = soStats.flatMap(stat => stat.core.piStats
+      .filter(item => item.links.length && item.courses.size <= PI_THIN_COURSES)
+      .map(item => ({ stat, item })));
+    if (thinPis.length) {
+      findings.push({
+        priority: 48, tone: 'good',
+        title: `${plural(thinPis.length, 'Performance Indicator')} ${verb(thinPis.length, 'is', 'are')} supported by ${PI_THIN_COURSES} or fewer required courses`,
+        see: joinList(thinPis.map(entry => `${entry.item.code} (${entry.stat.soCode}) in ${plural(entry.item.courses.size, 'course')}`)) + '.',
+        means: 'A smaller number of contributing courses is not a problem in itself. It does mean the assessment plan has fewer options when these indicators come up in the cycle, and that a single course change has a larger effect on them.',
+        consider: 'Confirm that at least one of these courses is a stable offering in the terms where the indicator is scheduled for assessment.',
+        items: thinPis.map(entry => `${entry.item.code} (${entry.stat.soCode}) — ${joinList([...entry.item.courses])}`)
+      });
+    }
+
+    const fanOut = [...cloIndex.values()].filter(entry => entry.core && (entry.clo.pi_codes || []).length >= FAN_OUT);
+    if (fanOut.length) {
+      findings.push({
+        priority: 45, tone: 'good',
+        title: `${plural(fanOut.length, 'core CLO')} ${verb(fanOut.length, 'is', 'are')} mapped to ${FAN_OUT} or more Performance Indicators`,
+        see: joinList(fanOut.map(entry => `${entry.course.course_code} CLO ${entry.clo.clo_number} (${(entry.clo.pi_codes || []).length})`)) + '.',
+        means: 'Broad mapping suits an integrative outcome such as a design, laboratory-integration or capstone task, and these are exactly that kind of CLO. The practical question is one of evidence isolation rather than of alignment.',
+        consider: 'When one of these CLOs is nominated for assessment, use criterion-level rubric rows so reported attainment stays traceable to one indicator at a time rather than to a single overall mark.',
+        items: fanOut.map(entry => `${entry.course.course_code} CLO ${entry.clo.clo_number} — ${plural((entry.clo.pi_codes || []).length, 'indicator')}: “${entry.clo.clo_text}”`)
+      });
+    }
+
+    const planIssues = soStats.flatMap(stat => stat.planCourses
+      .filter(item => !item.inDataset || !item.carriesOutcome)
+      .map(item => ({ stat, item })));
+    if (planIssues.length) {
+      findings.push({
+        priority: 40, tone: 'good',
+        title: `${plural(planIssues.length, 'course')} nominated in the assessment plan ${verb(planIssues.length, 'needs', 'need')} a quick cross-check`,
+        see: joinList(planIssues.map(entry => `${entry.item.code} for ${entry.stat.soCode}`)) + '.',
+        means: 'Courses nominated in the program assessment plan are compared with the approved CLO mapping. A mismatch usually means the plan and the mapping were updated at different times rather than that either is wrong.',
+        consider: 'Confirm the intended course code against the current curriculum record, so the assessment cycle and the mapping describe the same courses.',
+        items: planIssues.map(entry => `${entry.stat.soCode} — ${entry.item.code}: ${!entry.item.inDataset
+          ? 'sits outside the Undergraduate EE dataset'
+          : 'carries no CLO mapped to this outcome'}`)
+      });
+    }
+
+    const unclear = [...cloIndex.values()].filter(entry => entry.core && !detectFamilies(entry.clo.clo_text).length);
+    if (unclear.length) {
+      findings.push({
+        priority: 30, tone: 'good',
+        title: `${plural(unclear.length, 'core CLO')} ${verb(unclear.length, 'does', 'do')} not surface a distinct demonstration verb`,
+        see: joinList(unclear.map(entry => `${entry.course.course_code} CLO ${entry.clo.clo_number}`)) + '.',
+        means: 'The statement does not say what kind of demonstration it expects, so the mapping rests on the course team\'s knowledge of the assessed task. This is a wording observation, not a mapping concern.',
+        consider: 'A clearer verb, or a one-line rationale in the course file, makes the mapping self-explanatory to a reviewer.',
+        items: unclear.map(entry => `${entry.course.course_code} CLO ${entry.clo.clo_number} — “${entry.clo.clo_text}”`)
+      });
+    }
+
+    const leanest = [...soStats].sort((left, right) => left.core.courseShare - right.core.courseShare).slice(0, 3);
+    findings.push({
+      priority: 20, tone: 'strong',
+      title: allOutcomesRepresented && !soStats.some(stat => stat.core.breadth === 'focused')
+        ? 'No core-coverage concern at program level'
+        : 'Core coverage overview',
+      see: `Every required course carries at least one mapped CLO, ${outcomesRepresented} of ${soStats.length} outcomes and ${corePis.size} of ${Object.keys(indicators).length} indicators appear in the required curriculum, and no outcome falls below the ${pct(MODERATE)}% descriptive coverage threshold.`,
+      means: 'Coverage is not the limiting factor for this program. The useful work sits in evidence specificity rather than in adding more mapped relationships.',
+      items: leanest.map(stat => `${stat.soCode} — ${stat.core.courseCodes.size} of ${coreCourseCount} required courses (${pct(stat.core.courseShare)}%), ${plural(stat.core.links.length, 'relationship')}`)
+    });
+
+    return findings.sort((left, right) => right.priority - left.priority);
   }
 
-  function renderCoverageCards() {
-    el('soCoverageCards').innerHTML = soStats.map(stat => {
-      const breadthLabel = model.breadth?.labels?.[stat.breadth] || stat.breadth;
-      const concentrated = stat.topShare >= (model.concentration?.concentrated_min_share ?? 0.6);
-      const evidenceLevel = stat.evidenceShare >= (model.evidence_opportunity?.strong_min_share ?? 0.7) ? 'strong'
-        : stat.evidenceShare >= (model.evidence_opportunity?.partial_min_share ?? 0.4) ? 'partial' : 'developing';
-      return `
-      <article class="so-card so-accent-${slug(stat.soCode)}">
-        <header class="so-card-head">
-          <span class="so-code">${esc(stat.soCode)}</span>
-          <span class="pill breadth-${stat.breadth}">${esc(breadthLabel)}</span>
-        </header>
-        <p class="so-statement">${esc(stat.statement)}</p>
-        <div class="so-metrics">
-          <div><span class="metric-value">${esc(stat.cloKeys.size)}</span><span class="label">CLOs</span></div>
-          <div><span class="metric-value">${esc(stat.courseCodes.size)}</span><span class="label">Courses</span></div>
-          <div><span class="metric-value">${esc(stat.coveredPis)}/${esc(stat.expectedPis.length)}</span><span class="label">PIs covered</span></div>
-          <div><span class="metric-value">${esc(stat.links.length)}</span><span class="label">CLO → PI links</span></div>
-        </div>
-        <div class="coverage-row">
-          <span class="label">Curricular reach</span>
-          ${coverageBar(stat.courseShare, `${stat.courseCodes.size} of ${totalCourses} courses carry ${stat.soCode}`)}
-          <span class="coverage-value">${esc(pct(stat.courseShare))}% of courses · ${esc(stat.requiredCodes.size)} required</span>
-        </div>
-        <div class="coverage-row">
-          <span class="label">Evidence opportunity</span>
-          ${coverageBar(stat.evidenceShare, `${pct(stat.evidenceShare)} per cent of links already declare a preferred artifact type`)}
-          <span class="coverage-value evidence-${evidenceLevel}">${esc(pct(stat.evidenceShare))}% of links already declare a preferred artifact type</span>
-        </div>
-        <div class="status-chip-row">${statusChipRow(stat.statuses)}</div>
-        ${concentrated ? `<p class="so-flag">${esc(pct(stat.topShare))}% of this outcome's links sit in ${esc(plural(Math.min(stat.perCourse.length, model.concentration?.top_courses_considered || 3), 'course'))}.</p>` : ''}
-        <button class="btn primary so-open" type="button" data-open-so="${esc(stat.soCode)}">Open ${esc(stat.soCode)} analysis</button>
-      </article>`;
-    }).join('');
+  function renderFindings() {
+    const findings = buildFindings();
+    const top = findings.slice(0, 5);
+    const rest = findings.slice(5);
+    el('attentionFindings').innerHTML = top.map(findingCard).join('');
+    el('moreObservations').innerHTML = rest.length
+      ? rest.map(findingCard).join('')
+      : '<p class="muted">No further program-level observations.</p>';
   }
+
+  // -------------------------------------------------------- SO health overview
+
+  function meter(label, value, text, tone) {
+    return `<div class="health-meter">
+      <span class="meter-label">${esc(label)}</span>
+      ${coverageBar(value, `${label}: ${text}`, tone)}
+      <span class="meter-value tone-${tone}">${esc(text)}</span>
+    </div>`;
+  }
+
+  function healthTone(value, strong, good) {
+    return value >= strong ? 'strong' : value >= good ? 'good' : 'watch';
+  }
+
+  function renderHealth() {
+    el('healthLegend').innerHTML = ['conceptual_alignment', 'evidence_readiness', 'evidence_specificity']
+      .map(id => `<span class="health-legend-item"><strong>${esc(dimensions[id]?.label || id)}</strong>${esc(dimensions[id]?.question || '')}</span>`).join('');
+
+    el('soHealth').innerHTML = soStats.map(stat => {
+      const attention = ATTENTION[stat.attention];
+      const core = stat.core;
+      const nextLabel = stat.attention === 'none' ? 'When this outcome is next assessed' : 'What to do next';
+      const concentrationText = core.concentrated
+        ? `Relationship concentration is ${pct(core.relationshipConcentration)}% in its ${plural(Math.min(TOP_COURSES, core.perCourse.length), 'largest required course')} (${core.perCourse.slice(0, TOP_COURSES).map(item => item.code).join(', ')}).`
+        : `Relationships are spread across its ${plural(core.courseCodes.size, 'contributing required course')} rather than concentrated in a few.`;
+      return `
+      <details class="health-row so-accent-${slug(stat.soCode)} tone-${attention.tone}">
+        <summary>
+          <span class="health-code">${esc(stat.soCode)}</span>
+          <span class="health-statement">${esc(stat.statement)}</span>
+          <span class="health-meters">
+            ${meter('Core coverage', core.courseShare, `${core.courseCodes.size}/${coreCourseCount} courses`, healthTone(core.courseShare, BROAD, MODERATE))}
+            ${meter('Conceptual alignment', core.conceptualAlignment, `${pct(core.conceptualAlignment)}%`, healthTone(core.conceptualAlignment, 0.95, 0.8))}
+            ${meter('Evidence readiness', core.evidenceReadiness, `${pct(core.evidenceReadiness)}%`, healthTone(core.evidenceReadiness, EVIDENCE_STRONG, EVIDENCE_PARTIAL))}
+          </span>
+          <span class="attention-chip tone-${attention.tone}">${esc(attention.label)}</span>
+        </summary>
+        <div class="health-body">
+          <div class="health-facts">
+            <span><strong>${esc(core.cloKeys.size)}</strong> core CLOs</span>
+            <span><strong>${esc(core.links.length)}</strong> core relationships</span>
+            <span><strong>${esc(core.coveredPis)}/${esc(stat.expectedPis.length)}</strong> indicators represented</span>
+            <span><strong>${esc(model.breadth?.labels?.[core.breadth] || core.breadth)}</strong></span>
+            <span class="health-elective">${esc(scopeModel.elective_label || 'Elective enrichment')}: <strong>${esc(stat.elective.links.length)}</strong> relationships in ${esc(stat.elective.courseCodes.size)} electives</span>
+          </div>
+          <div class="status-chip-row">${statusChipRow(core.statuses)}</div>
+          <p class="health-line"><span class="finding-label">What we see</span>${esc(stat.soCode)} is carried by ${esc(plural(core.courseCodes.size, 'required course'))} through ${esc(plural(core.cloKeys.size, 'CLO'))} and ${esc(plural(core.links.length, 'CLO→PI relationship'))}. Conceptual alignment is ${esc(pct(core.conceptualAlignment))}% (${esc(pct(core.directlyAligned))}% directly aligned), and a preferred evidence carrier is already declared for ${esc(pct(core.evidenceReadiness))}% of them.</p>
+          <p class="health-line"><span class="finding-label">What it means</span>${esc(model.breadth?.notes?.[core.breadth] || '')} ${esc(concentrationText)} ${esc(stat.evidenceNote)}</p>
+          <p class="health-line"><span class="finding-label">${esc(nextLabel)}</span>${esc(stat.nextStep)}</p>
+          <p class="health-line health-specificity"><span class="finding-label">${esc(dimensions.evidence_specificity?.label || 'Evidence Specificity')}</span>${esc(dimensions.evidence_specificity?.states?.recommended?.description || '')}</p>
+          <div class="health-actions">
+            <button type="button" class="btn primary" data-open-so="${esc(stat.soCode)}">Open the full ${esc(stat.soCode)} analysis</button>
+          </div>
+        </div>
+      </details>`;
+    }).join('');
+
+    el('thresholdNote').textContent = model.threshold_note || '';
+  }
+
+  // ------------------------------------------------------------------ matrix
 
   function intensityClass(count) {
     if (!count) return 'lvl-0';
@@ -394,32 +718,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function renderMatrix() {
     const soCodes = soStats.map(stat => stat.soCode);
-    const ordered = [...requiredCourses, ...courses.filter(course => !isRequired(course))];
+    const ordered = [...requiredCourses, ...electiveCourses];
     let electiveMarked = false;
     const rows = ordered.map(course => {
+      const core = isRequired(course);
       let separator = '';
-      if (!isRequired(course) && !electiveMarked) {
+      if (!core && !electiveMarked) {
         electiveMarked = true;
-        separator = `<tr class="matrix-separator"><td colspan="${soCodes.length + 1}">Elective courses</td></tr>`;
+        separator = `<tr class="matrix-separator"><td colspan="${soCodes.length + 1}">${esc(scopeModel.elective_label || 'Elective enrichment')} — shown for exploration; not counted in core coverage</td></tr>`;
       }
       const cells = soCodes.map(soCode => {
         const count = links.filter(link => link.soCode === soCode && link.course.course_code === course.course_code).length;
         const levels = [...new Set((outcomes[soCode].pis || [])
           .map(code => (course.pi_levels || {})[code]).filter(Boolean))].join('/');
         const label = count
-          ? `${course.course_code}, ${soCode}: ${plural(count, 'CLO to PI link')}${levels ? `, performance level ${levels}` : ''}`
-          : `${course.course_code}, ${soCode}: no mapped link`;
+          ? `${course.course_code} (${core ? 'required' : 'elective'}), ${soCode}: ${plural(count, 'CLO to PI relationship')}${levels ? `, performance level ${levels}` : ''}`
+          : `${course.course_code}, ${soCode}: no mapped relationship`;
         const inner = count
-          ? `<button type="button" class="matrix-hit" data-open-so="${esc(soCode)}" data-course="${esc(course.course_code)}" aria-label="${esc(label)}"><span class="matrix-count">${esc(count)}</span>${levels ? `<span class="matrix-level">${esc(levels)}</span>` : ''}</button>`
+          ? `<button type="button" class="matrix-hit" data-open-so="${esc(soCode)}" data-course="${esc(course.course_code)}" data-elective="${core ? 'false' : 'true'}" aria-label="${esc(label)}"><span class="matrix-count">${esc(count)}</span>${levels ? `<span class="matrix-level">${esc(levels)}</span>` : ''}</button>`
           : `<span class="matrix-empty" aria-label="${esc(label)}">·</span>`;
         return `<td class="matrix-cell ${intensityClass(count)}">${inner}</td>`;
       }).join('');
-      return `${separator}<tr><th scope="row" class="matrix-course"><span class="code">${esc(course.course_code)}</span><span class="matrix-course-title">${esc(course.course_title)}</span></th>${cells}</tr>`;
+      return `${separator}<tr class="${core ? 'row-core' : 'row-elective'}"><th scope="row" class="matrix-course"><span class="code">${esc(course.course_code)}</span><span class="matrix-course-title">${esc(course.course_title)}</span></th>${cells}</tr>`;
     }).join('');
 
-    el('coverageMatrix').innerHTML = `<table class="matrix-table"><caption class="sr-only">Number of CLO to Performance Indicator links each course contributes to each Student Outcome</caption><thead><tr><th scope="col" class="matrix-course">Course</th>${soCodes.map(soCode => `<th scope="col" ${definitionAttrs(soCode, outcomes[soCode].statement)}>${esc(soCode)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table>`;
+    el('coverageMatrix').innerHTML = `<table class="matrix-table"><caption class="sr-only">Number of CLO to Performance Indicator relationships each course contributes to each Student Outcome, required courses first</caption><thead><tr><th scope="col" class="matrix-course">Course</th>${soCodes.map(soCode => `<th scope="col" ${definitionAttrs(soCode, outcomes[soCode].statement)}>${esc(soCode)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table>`;
     el('matrixLegend').innerHTML = `
-      <span class="legend-title">CLO → PI links per course</span>
+      <span class="legend-title">CLO → PI relationships per course</span>
       ${[['lvl-0', 'none'], ['lvl-1', '1–2'], ['lvl-2', '3–5'], ['lvl-3', '6–9'], ['lvl-4', '10+']]
         .map(([cls, label]) => `<span class="legend-item"><span class="legend-swatch ${cls}"></span>${esc(label)}</span>`).join('')}
       <span class="legend-item legend-levels">${esc(Object.entries(levelLegend).map(([key, value]) => `${key} = ${value}`).join(' · '))}</span>`;
@@ -427,11 +752,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // ------------------------------------------------------------- drill-down
 
-  const state = { so: soStats[0]?.soCode || '', pi: 'all', status: 'all', query: '', course: '' };
+  const state = { so: soStats[0]?.soCode || '', scope: 'core', pi: 'all', status: 'all', query: '', course: '' };
+  const activeScope = stat => state.scope === 'core' ? stat.core : stat.all;
 
   function filteredLinks(stat) {
     const query = state.query.trim().toLowerCase();
-    return stat.links.filter(link => {
+    return activeScope(stat).links.filter(link => {
       if (state.pi !== 'all' && link.piCode !== state.pi) return false;
       if (state.status !== 'all' && link.status !== state.status) return false;
       if (state.course && link.course.course_code !== state.course) return false;
@@ -443,16 +769,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function renderPiSelect(stat) {
     const select = el('piSelect');
-    const options = ['<option value="all">All indicators</option>']
-      .concat(stat.expectedPis.map(code => `<option value="${esc(code)}">${esc(code)}</option>`));
-    select.innerHTML = options.join('');
+    select.innerHTML = ['<option value="all">All indicators</option>']
+      .concat(stat.expectedPis.map(code => `<option value="${esc(code)}">${esc(code)}</option>`)).join('');
     select.value = stat.expectedPis.includes(state.pi) ? state.pi : 'all';
     state.pi = select.value;
   }
 
   function evidenceBadge(link) {
-    const map = { strong: 'Preferred artifact declared', partial: 'Supporting artifact declared', limited: 'Evidence route not yet named' };
-    return `<span class="evidence-badge evidence-${link.evidence}">${esc(map[link.evidence])}</span>`;
+    const state = dimensions.evidence_readiness?.states?.[link.evidence] || {};
+    return `<span class="evidence-badge evidence-${link.evidence}" title="${esc(state.description || '')}">${esc(state.label || link.evidence)}</span>`;
   }
 
   function linkSummary(link) {
@@ -460,7 +785,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `<span class="link-code">${esc(link.course.course_code)} · CLO ${esc(link.clo.clo_number)}</span>
       <span class="link-pi">${esc(piLabel)}</span>
       <span class="link-text">${esc(link.clo.clo_text)}</span>
-      ${statusChip(link.status)}`;
+      ${statusChip(link.status)}
+      ${link.anchorGap ? '' : evidenceBadge(link)}`;
   }
 
   function artifactRow(id, declaredIds, role) {
@@ -485,6 +811,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const notes = noteItems(link);
     const so = outcomes[link.soCode] || {};
     return `<div class="analysis-panel">
+      ${dimensionRow(link)}
       <section class="analysis-block analysis-why status-edge-${slug(link.status)}">
         <h4>Why this mapping is defensible</h4>
         <p>${esc(whyText(link))}</p>
@@ -510,6 +837,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <section class="analysis-block">
           <h4>Suitable assessment artifact</h4>
           <p class="muted">Declared for this CLO: ${esc(portal.listText(link.clo.assessment_methods) || 'none recorded')}.</p>
+          <p class="muted analysis-aside">${esc(dimensions.evidence_readiness?.caution || '')}</p>
           <ul class="artifact-list">
             ${(link.profile.primary_artifacts || []).map(id => artifactRow(id, declared, 'primary')).join('')}
             ${(link.profile.supporting_artifacts || []).map(id => artifactRow(id, declared, 'supporting')).join('')}
@@ -531,59 +859,68 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>`;
   }
 
-  function renderDetail() {
-    const stat = soByCode.get(state.so);
-    const container = el('soDetail');
-    const status = el('detailStatus');
-    if (!stat) { container.innerHTML = '<div class="alert">Select a Student Outcome to view its analysis.</div>'; return; }
-    const visible = filteredLinks(stat);
-    status.textContent = `${stat.soCode}: ${plural(visible.length, 'CLO to indicator relationship')} shown`
-      + `${state.pi === 'all' ? '' : `, indicator ${state.pi}`}`
-      + `${state.status === 'all' ? '' : `, status ${statusModel[state.status]?.label || state.status}`}`
-      + `${state.course ? `, course ${state.course}` : ''}.`;
-    const byCourse = new Map();
-    visible.forEach(link => {
-      const code = link.course.course_code;
-      if (!byCourse.has(code)) byCourse.set(code, { course: link.course, items: [] });
-      byCourse.get(code).items.push(link);
-    });
-
-    const piCards = stat.piStats.map(item => `
-      <article class="pi-card${state.pi === item.code ? ' is-active' : ''}">
-        <header class="pi-card-head">
-          <button type="button" class="pi-select" data-select-pi="${esc(item.code)}" aria-pressed="${state.pi === item.code}">${esc(item.code)}</button>
-          ${item.rubric ? '<span class="pill rubric-pill" title="An ABET rubric is defined for this indicator in the program framework">Rubric defined</span>' : ''}
-        </header>
-        <p class="muted pi-statement">${esc(item.statement)}</p>
-        ${coverageBar(stat.links.length ? item.links.length / stat.links.length : 0, `${item.links.length} of ${stat.links.length} links for ${stat.soCode}`)}
-        <p class="pi-metrics">${esc(plural(item.clos.size, 'CLO'))} · ${esc(plural(item.courses.size, 'course'))} · ${esc(plural(item.links.length, 'link'))}</p>
-        ${item.guidance ? `<p class="muted pi-guidance"><span class="label">Program guidance</span>${esc(item.guidance)}</p>` : ''}
-        <div class="status-chip-row">${statusChipRow(item.statuses)}</div>
-        ${item.links.length ? '' : '<p class="so-flag">No CLO is currently mapped to this indicator.</p>'}
-      </article>`).join('');
-
-    const courseBlocks = [...byCourse.values()].map(group => `
-      <details class="course-group">
+  function courseGroupBlock(group) {
+    return `
+      <details class="course-group course-group-${isRequired(group.course) ? 'core' : 'elective'}">
         <summary>
           <span class="code">${esc(group.course.course_code)}</span>
           <span class="course-group-title">${esc(group.course.course_title)}</span>
-          <span class="pill">${esc(group.course.required_or_elective || '')}</span>
-          <span class="pill">${esc(plural(group.items.length, 'link'))}</span>
+          <span class="pill scope-pill-${isRequired(group.course) ? 'core' : 'elective'}">${isRequired(group.course) ? 'Required' : 'Elective'}</span>
+          <span class="pill">${esc(plural(group.items.length, 'relationship'))}</span>
           <span class="status-chip-row">${statusChipRow(summariseStatuses(group.items))}</span>
         </summary>
         <div class="course-group-body">
           <p class="course-group-links"><a href="../undergraduate-ee/course-dashboard.html?course=${encodeURIComponent(group.course.course_code)}">Open ${esc(group.course.course_code)} in the Course Dashboard</a></p>
           ${group.items.map(link => `
             <details class="link-row status-edge-${slug(link.status)}" data-link="${esc(link.key)}">
-              <summary>${linkSummary(link)}${evidenceBadge(link)}</summary>
+              <summary>${linkSummary(link)}</summary>
               <div class="link-body" data-link-body="${esc(link.key)}"><p class="muted">Opening analysis…</p></div>
             </details>`).join('')}
         </div>
-      </details>`).join('');
+      </details>`;
+  }
+
+  function renderDetail() {
+    const stat = soByCode.get(state.so);
+    const container = el('soDetail');
+    const status = el('detailStatus');
+    if (!stat) { container.innerHTML = '<div class="alert">Select a Student Outcome to view its analysis.</div>'; return; }
+    const scope = activeScope(stat);
+    const visible = filteredLinks(stat);
+    status.textContent = `${stat.soCode}: ${plural(visible.length, 'CLO to indicator relationship')} shown`
+      + `, scope ${state.scope === 'core' ? 'core curriculum' : 'core plus electives'}`
+      + `${state.pi === 'all' ? '' : `, indicator ${state.pi}`}`
+      + `${state.status === 'all' ? '' : `, status ${statusModel[state.status]?.label || state.status}`}`
+      + `${state.course ? `, course ${state.course}` : ''}`
+      + `${state.query ? `, search “${state.query}”` : ''}.`;
+
+    const groups = new Map();
+    visible.forEach(link => {
+      const code = link.course.course_code;
+      if (!groups.has(code)) groups.set(code, { course: link.course, items: [] });
+      groups.get(code).items.push(link);
+    });
+    const coreGroups = [...groups.values()].filter(group => isRequired(group.course));
+    const electiveGroups = [...groups.values()].filter(group => !isRequired(group.course));
+
+    const piCards = scope.piStats.map(item => `
+      <article class="pi-card${state.pi === item.code ? ' is-active' : ''}">
+        <header class="pi-card-head">
+          <button type="button" class="pi-select" data-select-pi="${esc(item.code)}" aria-pressed="${state.pi === item.code}">${esc(item.code)}</button>
+          ${item.rubric ? '<span class="pill rubric-pill" title="An ABET rubric is defined for this indicator in the program framework">Rubric defined</span>' : ''}
+        </header>
+        <p class="muted pi-statement">${esc(item.statement)}</p>
+        ${coverageBar(share(item.links.length, scope.links.length), `${item.links.length} of ${scope.links.length} relationships for ${stat.soCode}`)}
+        <p class="pi-metrics">${esc(plural(item.clos.size, 'CLO'))} · ${esc(plural(item.courses.size, 'course'))} · ${esc(plural(item.links.length, 'relationship'))} · evidence readiness ${esc(pct(item.evidenceReadiness))}%</p>
+        ${item.guidance ? `<p class="muted pi-guidance"><span class="label">Program guidance</span>${esc(item.guidance)}</p>` : ''}
+        <div class="status-chip-row">${statusChipRow(item.statuses)}</div>
+        ${item.links.length ? '' : '<p class="so-flag">No CLO is currently mapped to this indicator within this scope.</p>'}
+      </article>`).join('');
 
     const planRows = stat.planCourses.map(item => {
       const label = !item.inDataset ? 'Outside the Undergraduate EE dataset'
-        : item.carriesOutcome ? 'Carries CLOs mapped to this outcome' : 'No CLO in this course is mapped to this outcome';
+        : item.carriesOutcome ? `Carries CLOs mapped to this outcome (${item.isCore ? 'required' : 'elective'})`
+          : 'No CLO in this course is mapped to this outcome';
       const tone = !item.inDataset ? 'plan-unknown' : item.carriesOutcome ? 'plan-ok' : 'plan-check';
       return `<li class="${tone}"><span class="code">${esc(item.code)}</span><span>${esc(label)}</span></li>`;
     }).join('');
@@ -594,24 +931,27 @@ document.addEventListener('DOMContentLoaded', async () => {
           <span class="so-code">${esc(stat.soCode)}</span>
           <p class="so-statement">${esc(stat.statement)}</p>
         </div>
-        <div class="status-chip-row">${statusChipRow(stat.statuses)}</div>
+        <div class="status-chip-row">${statusChipRow(scope.statuses)}</div>
         ${stat.evidenceNote ? `<p class="muted so-evidence-note">${esc(stat.evidenceNote)}</p>` : ''}
         ${stat.illustration ? `<details class="so-illustration"><summary>ABET illustration</summary><p class="muted">${esc(stat.illustration)}</p></details>` : ''}
       </article>
 
       <div class="so-subgrid">
         <section class="card">
-          <h3>Curricular coverage</h3>
-          <p class="muted">${esc(model.breadth?.notes?.[stat.breadth] || '')}</p>
+          <h3>Coverage within the ${esc(state.scope === 'core' ? 'required curriculum' : 'whole catalogue')}</h3>
+          <p class="muted">${esc(model.breadth?.notes?.[scope.breadth] || '')}</p>
           <ul class="fact-list">
-            <li><span>Courses contributing</span><strong>${esc(stat.courseCodes.size)} of ${esc(totalCourses)}</strong></li>
-            <li><span>Required courses contributing</span><strong>${esc(stat.requiredCodes.size)} of ${esc(requiredCourses.length)}</strong></li>
-            <li><span>CLOs mapped</span><strong>${esc(stat.cloKeys.size)}</strong></li>
-            <li><span>Indicators represented</span><strong>${esc(stat.coveredPis)} of ${esc(stat.expectedPis.length)}</strong></li>
+            <li><span>Required courses contributing</span><strong>${esc(stat.core.courseCodes.size)} of ${esc(coreCourseCount)}</strong></li>
+            <li><span>Elective courses contributing</span><strong>${esc(stat.elective.courseCodes.size)} of ${esc(electiveCourses.length)}</strong></li>
+            <li><span>CLOs mapped (this scope)</span><strong>${esc(scope.cloKeys.size)}</strong></li>
+            <li><span>Indicators represented (this scope)</span><strong>${esc(scope.coveredPis)} of ${esc(stat.expectedPis.length)}</strong></li>
+            <li><span>Relationship concentration (top ${esc(TOP_COURSES)} courses)</span><strong>${esc(pct(scope.relationshipConcentration))}%</strong></li>
           </ul>
-          ${stat.topShare >= (model.concentration?.concentrated_min_share ?? 0.6)
-            ? `<p class="so-flag">${esc(pct(stat.topShare))}% of the links for this outcome sit in ${esc(stat.perCourse.slice(0, model.concentration?.top_courses_considered || 3).map(item => item.code).join(', '))}. ${esc(model.concentration?.note || '')}</p>`
-            : '<p class="muted">Links for this outcome are spread across its contributing courses rather than concentrated in a few.</p>'}
+          <p class="${scope.concentrated ? 'so-flag' : 'muted'}">${scope.concentrated
+            ? `${esc(pct(scope.relationshipConcentration))}% of the relationships for this outcome sit in ${esc(scope.perCourse.slice(0, TOP_COURSES).map(item => item.code).join(', '))}. ${esc(model.concentration?.note || '')}`
+            : esc(model.concentration?.measures === 'share_of_clo_to_pi_relationships'
+              ? 'Relationships for this outcome are spread across its contributing courses rather than concentrated in a few. This measures where the mapped relationships are declared, not how much time students spend on the outcome.'
+              : '')}</p>
         </section>
         <section class="card">
           <h3>Assessment plan cross-check</h3>
@@ -629,9 +969,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="link-section-head">
           <h3>Contributing courses, CLOs and indicator relationships</h3>
           <span class="pill">${esc(plural(visible.length, 'relationship'))}${state.course ? ` · filtered to ${esc(state.course)}` : ''}</span>
-          ${state.course ? '<button type="button" class="btn" id="clearCourseFilter">Clear course filter</button>' : ''}
+          ${state.course || state.query ? '<button type="button" class="btn" id="clearCourseFilter">Clear course and search filters</button>' : ''}
         </div>
-        ${courseBlocks || '<div class="alert">No relationship matches the current filters.</div>'}
+        ${coreGroups.length || electiveGroups.length ? '' : '<div class="alert">No relationship matches the current filters.</div>'}
+        ${coreGroups.length ? `<h4 class="group-heading">${esc(scopeModel.core_label || 'Core curriculum')} · required courses</h4>${coreGroups.map(courseGroupBlock).join('')}` : ''}
+        ${electiveGroups.length ? `<h4 class="group-heading group-heading-elective">${esc(scopeModel.elective_label || 'Elective enrichment')}</h4><p class="muted group-note">${esc(scopeModel.elective_note || '')}</p>${electiveGroups.map(courseGroupBlock).join('')}` : ''}
       </section>`;
   }
 
@@ -648,14 +990,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     body.dataset.rendered = 'true';
   }, true);
 
-  function openOutcome(soCode, courseCode) {
+  // Every navigation into an outcome starts from a clean filter state, so a query typed
+  // for an earlier outcome cannot silently hide the relationships just asked for.
+  function openOutcome(soCode, courseCode, isElective) {
     if (!soByCode.has(soCode)) return;
     state.so = soCode;
     state.course = courseCode || '';
     state.pi = 'all';
     state.status = 'all';
+    state.query = '';
+    if (isElective === 'true' || isElective === true) state.scope = 'all';
     el('soSelect').value = soCode;
+    el('scopeSelect').value = state.scope;
     el('statusSelect').value = 'all';
+    el('detailSearch').value = '';
     renderPiSelect(soByCode.get(soCode));
     renderDetail();
     el('detailSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -663,7 +1011,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.addEventListener('click', event => {
     const opener = event.target.closest('[data-open-so]');
-    if (opener) { openOutcome(opener.dataset.openSo, opener.dataset.course); return; }
+    if (opener) { openOutcome(opener.dataset.openSo, opener.dataset.course, opener.dataset.elective); return; }
     const piButton = event.target.closest('[data-select-pi]');
     if (piButton) {
       state.pi = state.pi === piButton.dataset.selectPi ? 'all' : piButton.dataset.selectPi;
@@ -671,92 +1019,34 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderDetail();
       return;
     }
-    if (event.target.closest('#clearCourseFilter')) { state.course = ''; renderDetail(); }
+    if (event.target.closest('#clearCourseFilter')) {
+      state.course = '';
+      state.query = '';
+      el('detailSearch').value = '';
+      renderDetail();
+    }
   });
 
-  // ------------------------------------------------------------ observations
+  // ------------------------------------------------- methodology and reference
 
-  function renderObservations() {
-    const cards = [];
-    const leanest = [...soStats].sort((left, right) => left.courseShare - right.courseShare).slice(0, 3);
-    const focused = soStats.filter(stat => stat.breadth === 'focused');
-    cards.push({
-      title: 'Outcomes carried by fewer courses',
-      body: focused.length
-        ? model.breadth?.notes?.focused || ''
-        : `Every outcome is carried by at least ${pct(model.breadth?.moderate_min_course_share ?? 0.25)}% of the curriculum, so none reads as under-served on curricular reach alone. The three with the narrowest reach are listed for context.`,
-      items: (focused.length ? focused : leanest)
-        .map(stat => `${stat.soCode} — ${stat.courseCodes.size} of ${totalCourses} courses (${pct(stat.courseShare)}%), ${stat.requiredCodes.size} of them required`)
-    });
-    const spread = model.concentration?.top_courses_considered || 3;
-    const concentrated = soStats.filter(stat => stat.topShare >= (model.concentration?.concentrated_min_share ?? 0.6));
-    const densest = [...soStats].sort((left, right) => right.topShare - left.topShare).slice(0, 3);
-    cards.push({
-      title: 'Outcomes concentrated in a few courses',
-      body: concentrated.length
-        ? model.concentration?.note || ''
-        : `No outcome has more than ${pct(model.concentration?.concentrated_min_share ?? 0.6)}% of its links in its ${spread} largest contributing courses, so none depends on a very small set of course offerings. The three most concentrated are listed for context.`,
-      items: (concentrated.length ? concentrated : densest)
-        .map(stat => `${stat.soCode} — ${pct(stat.topShare)}% of links in ${stat.perCourse.slice(0, spread).map(item => item.code).join(', ')}`)
-    });
-    const thin = model.pi_thin_link_threshold ?? 12;
-    const thinPis = soStats.flatMap(stat => stat.piStats.filter(item => item.links.length < thin)
-      .map(item => `${item.code} (${stat.soCode}) — ${plural(item.links.length, 'link')} across ${plural(item.courses.size, 'course')}`));
-    if (thinPis.length) {
-      cards.push({
-        title: 'Indicators with fewer mapped relationships',
-        body: 'A smaller number of relationships is not a problem in itself; it does mean the assessment plan has fewer courses to choose from when this indicator comes up for assessment.',
-        items: thinPis
-      });
-    }
-    const fanOut = model.fan_out_advisory_threshold ?? 8;
-    const broadClos = [...cloIndex.values()]
-      .filter(entry => (entry.clo.pi_codes || []).length >= fanOut)
-      .map(entry => `${entry.course.course_code} CLO ${entry.clo.clo_number} — ${plural((entry.clo.pi_codes || []).length, 'indicator')}`);
-    if (broadClos.length) {
-      cards.push({
-        title: 'CLOs mapped to many indicators',
-        body: 'Broad mapping suits an integrative outcome such as a design or capstone task. The question worth asking is which of those indicators the declared artifacts can score separately, so that reported attainment stays traceable to one indicator at a time.',
-        items: broadClos
-      });
-    }
-    const unclear = [...cloIndex.values()]
-      .filter(entry => !detectFamilies(entry.clo.clo_text).length)
-      .map(entry => `${entry.course.course_code} CLO ${entry.clo.clo_number} — “${entry.clo.clo_text}”`);
-    if (unclear.length) {
-      cards.push({
-        title: 'CLO wording without a distinct demonstration verb',
-        body: 'These statements do not surface the kind of demonstration they expect, so their mappings rest on the course team\'s knowledge of the assessed task. A clearer verb, or a one-line rationale in the course file, makes the mapping self-explanatory to a reviewer.',
-        items: unclear
-      });
-    }
-    const planGaps = soStats.flatMap(stat => stat.planCourses
-      .filter(item => item.inDataset && !item.carriesOutcome)
-      .map(item => `${stat.soCode} — ${item.code} is nominated in the assessment plan but carries no CLO mapped to ${stat.soCode}`));
-    const planOutside = soStats.flatMap(stat => stat.planCourses
-      .filter(item => !item.inDataset)
-      .map(item => `${stat.soCode} — ${item.code} is nominated in the assessment plan and sits outside the Undergraduate EE dataset`));
-    if (planGaps.length || planOutside.length) {
-      cards.push({
-        title: 'Assessment plan and mapping cross-check',
-        body: 'Courses nominated in the program assessment plan are compared with the approved CLO mapping. A mismatch usually means the plan and the mapping were updated at different times rather than that either is wrong.',
-        items: [...planGaps, ...planOutside]
-      });
-    }
-    const review = links.filter(link => link.status === 'review_recommended');
-    cards.push({
-      title: 'Relationships flagged for a closer look',
-      body: review.length
-        ? 'These are the few relationships where the statement describes a different kind of demonstration from the indicator. Each one opens with the preserve path: if the assessed task carries the indicator, clarified wording or a named rubric criterion is enough.'
-        : 'No relationship in the current mapping shows a specific conceptual difference between the outcome statement and the indicator it is mapped to.',
-      items: review.map(link => `${link.course.course_code} CLO ${link.clo.clo_number} → ${link.piCode} (${link.soCode})`)
-    });
-
-    el('programObservations').innerHTML = cards.map(card => `
-      <article class="card observation-card">
-        <h3>${esc(card.title)}${card.items.length ? ` <span class="pill">${esc(card.items.length)}</span>` : ''}</h3>
-        <p class="muted">${esc(card.body)}</p>
-        ${card.items.length ? `<ul class="observation-list">${card.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>` : ''}
+  function renderDimensionModel() {
+    el('dimensionIntro').textContent = dimensions.intro || '';
+    el('dimensionModel').innerHTML = ['conceptual_alignment', 'evidence_readiness', 'evidence_specificity']
+      .map(id => {
+        const dimension = dimensions[id] || {};
+        return `<article class="card dimension-card">
+          <h3>${esc(dimension.label || id)}</h3>
+          <p class="dimension-question">${esc(dimension.question || '')}</p>
+          <p class="muted">${esc(dimension.source || '')}</p>
+          ${dimension.caution ? `<p class="dimension-caution">${esc(dimension.caution)}</p>` : ''}
+          <ul class="dimension-states">${Object.entries(dimension.states || {}).map(([stateId, entry]) =>
+            `<li class="tone-${slug(entry.tone)}"><strong>${esc(entry.label)}</strong><span>${esc(entry.description)}</span></li>`).join('')}</ul>
+        </article>`;
+      }).join('');
+    el('statusLegend').innerHTML = statusOrder.map(id => `
+      <article class="legend-card status-edge-${slug(id)}">
+        <h3>${esc(statusModel[id]?.label || id)}</h3>
+        <p class="muted">${esc(statusModel[id]?.definition || '')}</p>
       </article>`).join('');
   }
 
@@ -789,7 +1079,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="table-wrap"><table><thead><tr><th>Assessment method</th><th>Artifact type</th><th>Evidence mode</th><th>Isolation</th><th>Rubric-bearing</th><th>Note</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
-  function renderFutureLayers() {
+  function renderChain() {
+    el('chainLayers').innerHTML = (knowledge.layers || []).map(layer => `
+      <article class="chain-layer layer-${slug(layer.availability)}">
+        <span class="layer-state">${esc(layer.availability_label || layer.availability)}</span>
+        <h3>${esc(layer.name)}</h3>
+        <p class="chain-path">${esc(layer.chain)}</p>
+        <p class="muted">${esc(layer.description)}</p>
+        <p class="layer-source"><span class="label">Source</span>${esc(layer.source)}</p>
+      </article>`).join('');
+
     const blocks = [
       { key: 'measurement_layer', name: 'Measurement Layer', chain: 'Student Performance → Attainment' },
       { key: 'improvement_layer', name: 'Improvement Layer', chain: 'Finding → Action → Reassessment' }
@@ -811,39 +1110,73 @@ document.addEventListener('DOMContentLoaded', async () => {
         </details>
       </article>`;
     }).join('');
+
+    el('futureModules').innerHTML = (knowledge.future_modules || []).map(module => `
+      <article class="card future-module">
+        <header class="future-head">
+          <h3>Future: ${esc(module.name)}</h3>
+          <span class="pill layer-state-pill">${esc(module.status_label || module.status)}</span>
+        </header>
+        <p class="muted">${esc(module.rationale)}</p>
+        <ul class="analysis-list">${(module.questions || []).map(question => `<li>${esc(question)}</li>`).join('')}</ul>
+        <p class="muted analysis-aside">${esc(module.note)}</p>
+      </article>`).join('');
+  }
+
+  function renderPhilosophy() {
+    const philosophy = knowledge.philosophy || {};
+    el('philosophyStatement').textContent = philosophy.statement || '';
+    el('philosophyOrder').innerHTML = (philosophy.order_of_preference || [])
+      .map(item => `<li>${esc(item)}</li>`).join('');
+    el('philosophyAuthority').textContent = philosophy.authority_note || '';
   }
 
   // ------------------------------------------------------------------- boot
 
   function renderControls() {
-    const soSelect = el('soSelect');
-    soSelect.innerHTML = soStats.map(stat => `<option value="${esc(stat.soCode)}">${esc(stat.soCode)} — ${esc(stat.statement.slice(0, 62))}${stat.statement.length > 62 ? '…' : ''}</option>`).join('');
+    el('soSelect').innerHTML = soStats.map(stat => `<option value="${esc(stat.soCode)}">${esc(stat.soCode)} — ${esc(stat.statement.slice(0, 62))}${stat.statement.length > 62 ? '…' : ''}</option>`).join('');
+    el('scopeSelect').innerHTML = `
+      <option value="core">${esc(scopeModel.core_label || 'Core curriculum')} (required only)</option>
+      <option value="all">Core + ${esc((scopeModel.elective_label || 'Elective enrichment').toLowerCase())}</option>`;
     el('statusSelect').innerHTML = ['<option value="all">All statuses</option>']
       .concat(statusOrder.map(id => `<option value="${esc(id)}">${esc(statusModel[id]?.label || id)}</option>`)).join('');
-    soSelect.addEventListener('change', () => { state.course = ''; openOutcome(soSelect.value); });
+
+    el('soSelect').addEventListener('change', event => { state.course = ''; openOutcome(event.target.value); });
+    el('scopeSelect').addEventListener('change', event => {
+      state.scope = event.target.value;
+      state.course = '';
+      renderDetail();
+    });
     el('piSelect').addEventListener('change', event => { state.pi = event.target.value; renderDetail(); });
     el('statusSelect').addEventListener('change', event => { state.status = event.target.value; renderDetail(); });
     el('detailSearch').addEventListener('input', event => { state.query = event.target.value; renderDetail(); });
   }
 
-  renderPhilosophy();
-  renderChain();
-  renderProgramSummary();
-  renderCoverageCards();
+  renderScope();
+  renderSnapshot();
+  renderFindings();
+  renderHealth();
   renderMatrix();
   renderControls();
-  renderObservations();
+  renderDimensionModel();
   renderEvidenceQuality();
-  renderFutureLayers();
+  renderChain();
+  renderPhilosophy();
 
   const requestedSo = portal.getParam('so');
   const requestedCourse = portal.getParam('course');
-  if (requestedSo && soByCode.has(requestedSo)) { state.so = requestedSo; state.course = requestedCourse || ''; }
+  if (requestedSo && soByCode.has(requestedSo)) {
+    state.so = requestedSo;
+    state.course = requestedCourse || '';
+    if (state.course && !requiredCourses.some(course => course.course_code === state.course)) state.scope = 'all';
+  }
   el('soSelect').value = state.so;
+  el('scopeSelect').value = state.scope;
   renderPiSelect(soByCode.get(state.so));
   renderDetail();
 
-  el('dataSources').textContent = `Curriculum mapping: data/ee_curriculum.json (consolidated ${curriculum.consolidated_on || 'n/a'}). `
+  el('dataSources').textContent = `Analysis scope: required courses only for every program-level conclusion (${coreCourseCount} of ${courses.length} courses). `
+    + `Curriculum mapping: data/ee_curriculum.json (consolidated ${curriculum.consolidated_on || 'n/a'}). `
     + `Assessment cycle: data/ee-assessment.json (${plan.assessment_cycle?.name || 'n/a'}). `
     + `Review knowledge layer: data/ee_alignment_evidence.json (${knowledge.status}). `
     + 'No student performance or attainment value is stored or generated by this page.';
