@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CLO–SO–PI Alignment Review | Curriculum Intelligence Portal</title>
+  <link rel="stylesheet" href="../assets/portal.css">
+  <script defer src="../assets/portal.js"></script>
+  <link rel="stylesheet" href="../assets/pages/curriculum-vision-clo-so-pi-alignment-analysis.css">
+<link rel="stylesheet" href="../assets/runtime-utilities.css">
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <main class="page-inset-top wrap">
+
+    <section class="review-header" aria-labelledby="alignment-title">
+      <span class="kicker">Curriculum Vision · Continuous Improvement</span>
+      <h1 id="alignment-title">CLO–SO–PI Alignment Review</h1>
+      <p class="review-subtitle">A program-level review of how the required curriculum supports the seven ABET Student
+        Outcomes.</p>
+      <p id="scopeBadge" class="scope-badge"></p>
+    </section>
+
+    <div class="tool-layout">
+      <nav class="tool-rail" aria-label="Analysis tools">
+        <span class="tool-rail-title" id="toolRailTitle">Analysis tools</span>
+        <div id="toolTabs" class="tool-tabs" role="tablist" aria-labelledby="toolRailTitle"></div>
+      </nav>
+
+      <div class="tool-stage">
+        <section id="panel-overview" class="tool-panel" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+          <div id="overviewConclusion" class="overview-conclusion"><p class="muted">Reviewing the required curriculum…</p></div>
+          <section class="overview-block" aria-labelledby="so-overview-title">
+            <h2 id="so-overview-title">Student Outcome Overview</h2>
+            <div id="soOverview" class="so-overview"></div>
+          </section>
+          <section class="overview-block" aria-labelledby="items-title">
+            <h2 id="items-title">Items Worth Reviewing</h2>
+            <div id="reviewItems" class="review-items"></div>
+          </section>
+          <p class="related-links">Related: <a href="index.html">Curriculum Vision</a> ·
+            <a href="../undergraduate-ee/so-leader-dashboard.html">SO Leader Dashboard</a> ·
+            <a href="../undergraduate-ee/course-dashboard.html">Course Dashboard</a> ·
+            <a href="../undergraduate-ee/teaching-assessment-methods.html">Teaching &amp; Assessment Methods</a></p>
+        </section>
+
+        <section id="panel-so-details" class="tool-panel" role="tabpanel" aria-labelledby="tab-so-details" tabindex="0" hidden>
+          <div class="panel-head">
+            <h2>Student Outcome Details</h2>
+            <p class="panel-intro muted">One outcome at a time, based on the required curriculum. Open its mappings only
+              when you want the relationship-level detail.</p>
+          </div>
+          <div id="soDetailsChooser" class="so-chooser"></div>
+          <div id="soDetailsBody" class="so-details-body"></div>
+        </section>
+
+        <section id="panel-matrix" class="tool-panel" role="tabpanel" aria-labelledby="tab-matrix" tabindex="0" hidden>
+          <div class="panel-head">
+            <h2>Course × Student Outcome Map</h2>
+            <p class="panel-intro muted">How many CLO→PI relationships each course contributes to each outcome.
+              Required courses come first; elective courses are listed separately and are not counted in the
+              program-level conclusions. Select a cell to open that outcome in the CLO–PI Explorer.</p>
+          </div>
+          <div id="coverageMatrix" class="matrix-wrap"><p class="muted">Loading the course map…</p></div>
+          <div id="matrixLegend" class="matrix-legend"></div>
+        </section>
+
+        <section id="panel-explorer" class="tool-panel" role="tabpanel" aria-labelledby="tab-explorer" tabindex="0" hidden>
+          <div class="panel-head">
+            <h2>CLO–PI Explorer</h2>
+            <p class="panel-intro muted">Every relationship for the selected outcome, with its rationale, suggested
+              assessment evidence, rubric criterion and possible attainment methodology. Relationship panels open on
+              demand.</p>
+          </div>
+          <div class="toolbar detail-toolbar">
+            <label class="field-label" for="soSelect">Student Outcome
+              <select id="soSelect" class="select"></select>
+            </label>
+            <label class="field-label" for="scopeSelect">Course scope
+              <select id="scopeSelect" class="select"></select>
+            </label>
+            <label class="field-label" for="piSelect">Performance Indicator
+              <select id="piSelect" class="select"></select>
+            </label>
+            <label class="field-label" for="statusSelect">Alignment status
+              <select id="statusSelect" class="select"></select>
+            </label>
+            <label class="field-label detail-search" for="detailSearch">Search
+              <input id="detailSearch" class="input" type="search" placeholder="Course, CLO text, PI…">
+            </label>
+          </div>
+          <p id="detailStatus" class="detail-status" role="status" aria-live="polite"></p>
+          <div id="soDetail" class="so-detail"><p class="muted">Loading relationships…</p></div>
+        </section>
+
+        <section id="panel-evidence" class="tool-panel" role="tabpanel" aria-labelledby="tab-evidence" tabindex="0" hidden>
+          <div class="panel-head">
+            <h2>Evidence Review</h2>
+            <p class="panel-intro muted">Where the required curriculum already declares an assessment method suited to
+              carrying evidence for an outcome, and where a clearer evidence route would help. A declared assessment
+              method shows that an evidence opportunity exists; it does not prove a Performance Indicator has been
+              measured.</p>
+          </div>
+          <div id="evidenceReadiness" class="evidence-readiness"></div>
+          <section class="evidence-block" aria-labelledby="evidence-observations-title">
+            <h3 id="evidence-observations-title">Program observations</h3>
+            <div id="programObservations" class="attention-list"></div>
+          </section>
+          <section class="evidence-block" aria-labelledby="evidence-quality-title">
+            <h3 id="evidence-quality-title">Evidence quality checks</h3>
+            <p class="muted">Applied to an assessment artifact once one is linked to a mapping. Until then the page
+              shows the recommended evidence type rather than an invented artifact.</p>
+            <div id="evidenceQuality" class="quality-grid"></div>
+          </section>
+          <div id="artifactReference" class="artifact-reference"></div>
+        </section>
+
+        <section id="panel-methodology" class="tool-panel" role="tabpanel" aria-labelledby="tab-methodology" tabindex="0" hidden>
+          <div class="panel-head">
+            <h2>Methodology</h2>
+            <p class="panel-intro muted">How this module reads a mapping, the descriptive thresholds it uses, and the
+              parts of the traceability chain still to be connected.</p>
+          </div>
+          <section class="method-block" aria-labelledby="philosophy-title">
+            <h3 id="philosophy-title">Review philosophy</h3>
+            <p id="philosophyStatement" class="muted"></p>
+            <ol id="philosophyOrder" class="philosophy-order"></ol>
+            <p id="philosophyAuthority" class="muted philosophy-authority"></p>
+          </section>
+          <section class="method-block" aria-labelledby="scope-method-title">
+            <h3 id="scope-method-title">Analysis scope</h3>
+            <p id="scopeStatement" class="muted"></p>
+            <p id="scopeElectiveNote" class="muted"></p>
+            <div id="scopeCounts" class="scope-counts"></div>
+          </section>
+          <section class="method-block" aria-labelledby="dimension-title">
+            <h3 id="dimension-title">Three questions behind every relationship</h3>
+            <p id="dimensionIntro" class="muted"></p>
+            <div id="dimensionModel" class="dimension-grid"></div>
+          </section>
+          <section class="method-block" aria-labelledby="status-title">
+            <h3 id="status-title">Supportive status labels</h3>
+            <div id="statusDistribution" class="status-distribution"></div>
+            <div id="statusLegend" class="status-legend"></div>
+            <p id="thresholdNote" class="threshold-note"></p>
+          </section>
+          <section class="method-block" aria-labelledby="chain-title">
+            <h3 id="chain-title">Traceability chain &amp; future layers</h3>
+            <p class="muted">This release implements the Alignment and Evidence layers. The Measurement and Improvement
+              layers are structured but deliberately empty — no student performance or attainment value is stored,
+              derived or displayed.</p>
+            <div id="chainLayers" class="chain-layers"></div>
+            <div id="futureLayers" class="future-grid"></div>
+            <div id="futureModules" class="future-modules"></div>
+          </section>
+          <p id="dataSources" class="footer data-sources"></p>
+        </section>
+      </div>
+    </div>
+
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../assets/pages/curriculum-vision-clo-so-pi-alignment-analysis.js"></script>
+</body>
+
+</html>
