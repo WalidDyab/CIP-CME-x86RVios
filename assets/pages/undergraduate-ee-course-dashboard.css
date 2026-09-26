@@ -206,6 +206,8 @@
     .course-information-block p { margin: 0; line-height: 1.65; white-space: normal; overflow-wrap: anywhere; }
     .course-information-list { margin: 0; padding-left: 22px; display: grid; gap: 7px; }
     .course-information-list li { line-height: 1.55; overflow-wrap: anywhere; }
+    .course-standards-link { color: var(--cyan); text-decoration: underline; }
+    .course-standards-link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 
     /* Course topics and contact hours */
     .course-topics-table { width: 100%; table-layout: fixed; }

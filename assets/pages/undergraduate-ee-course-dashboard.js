@@ -4,7 +4,10 @@ let _printCourseNorm = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const data = await portal.loadJSON('../data/ee_curriculum.json');
+    const [data, standardsData] = await Promise.all([
+      portal.loadJSON('../data/ee_curriculum.json'),
+      portal.loadJSON('../data/ee-standards.json')
+    ]);
     const courses = data.curriculum.courses || [];
     const wanted = portal.getParam('course') || portal.normCourse(courses[0]).code;
     const raw = courses.find(x => portal.normCourse(x).code === wanted) || courses[0];
@@ -41,6 +44,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       if ((course.course_objectives || []).length) blocks.push(`<div class="course-information-block"><h3>Course Objectives</h3>${metadataList(course.course_objectives, true)}</div>`);
       if ((course.textbooks || []).length) blocks.push(`<div class="course-information-block"><h3>Textbook</h3>${metadataList(course.textbooks)}</div>`);
       if ((course.references || []).length) blocks.push(`<div class="course-information-block"><h3>References</h3>${metadataList(course.references)}</div>`);
+      const standardsCount = standardsData.standards.filter(standard =>
+        standard.courses.some(mapping => mapping.courseCode === course.course_code)).length;
+      if (standardsCount) blocks.push(`<div class="course-information-block"><h3>Standards &amp; Codes</h3><p>${standardsCount} relevant ${standardsCount === 1 ? 'standard' : 'standards'} for this course. <a class="course-standards-link" href="standards-and-codes.html?course=${encodeURIComponent(course.course_code)}">View course standards</a></p></div>`);
       if (!blocks.length) return '<section class="card course-information"><h2>Course Information</h2><p class="muted">Additional course information is not available for this course.</p></section>';
       return `<section class="card course-information"><h2>Course Information</h2><div class="course-information-content">${blocks.join('')}</div></section>`;
     };

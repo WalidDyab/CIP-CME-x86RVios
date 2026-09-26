@@ -1,0 +1,1913 @@
+{
+  "sourceWorkbook": "data/source/standards/CIP_Standards_IEEE_ITU_R_ETSI_3GPP_with_Access.xlsx",
+  "standards": [
+    {
+      "organization": "IEEE",
+      "identifier": "260.1-2024",
+      "title": "260.1-2024 - IEEE Standard for Letter Symbols for Measurement Units (SI and Other Common Units)",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10530227",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 201",
+          "courseTitle": "Introduction to Circuits",
+          "priority": "Core",
+          "teachingUse": "Reinforce SI and common measurement-unit symbols in calculations, lab sheets, and technical writing."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "280-2021",
+      "title": "280-2021 - IEEE Standard Letter Symbols for Quantities Used in Electrical Science and Electrical Engineering",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9540822",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 201",
+          "courseTitle": "Introduction to Circuits",
+          "priority": "Core",
+          "teachingUse": "Use standard electrical-science symbols and notation consistently in circuit equations and reports."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "120-2023",
+      "title": "120-2023 - IEEE Master Test Guide for Electrical Measurements in Power Circuits",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10552206",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 201",
+          "courseTitle": "Introduction to Circuits",
+          "priority": "Useful",
+          "teachingUse": "Introduce standardized electrical measurement terminology and test practice for voltage, current, and power circuits."
+        },
+        {
+          "courseCode": "EE 202",
+          "courseTitle": "Circuit Analysis",
+          "priority": "Useful",
+          "teachingUse": "Relate three-phase and power calculations to standardized measurement practice."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1057-2017",
+      "title": "1057-2017 - IEEE Standard for Digitizing Waveform Recorders",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8291739",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 201",
+          "courseTitle": "Introduction to Circuits",
+          "priority": "Advanced",
+          "teachingUse": "Connect oscilloscope/digitizer measurements to standardized waveform-recorder terminology and performance."
+        },
+        {
+          "courseCode": "EE 231",
+          "courseTitle": "Signals and Systems",
+          "priority": "Core",
+          "teachingUse": "Use digitizing-waveform-recorder terminology when discussing sampling, records, timing, and measurement fidelity."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C63.16-2016",
+      "title": "C63.16-2016 - American National Standard Guide for Electrostatic Discharge Test Methodologies and Acceptance Criteria for Electronic Equipment",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=7465682",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 211",
+          "courseTitle": "Electronic Fundamentals",
+          "priority": "Core",
+          "teachingUse": "Use ESD test concepts to motivate device handling, protection, and practical electronic-equipment robustness."
+        },
+        {
+          "courseCode": "EE 312",
+          "courseTitle": "Electronic Engineering",
+          "priority": "Core",
+          "teachingUse": "Apply ESD robustness concepts to semiconductor circuits and laboratory practice."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1573-2021",
+      "title": "1573-2021 - IEEE Recommended Practice for Electronic Power Subsystems: Parameters, Interfaces, Elements, and Performance",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9775770",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 211",
+          "courseTitle": "Electronic Fundamentals",
+          "priority": "Useful",
+          "teachingUse": "Relate electronic power-subsystem parameters and interfaces to practical electronics design."
+        },
+        {
+          "courseCode": "EE 312",
+          "courseTitle": "Electronic Engineering",
+          "priority": "Useful",
+          "teachingUse": "Use electronic-power-subsystem interfaces and performance parameters as a practical design context."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1801-2024",
+      "title": "1801-2024 - IEEE Standard for Design and Verification of Low-Power Energy-Aware Electronic Systems",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10910080",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=80",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 211",
+          "courseTitle": "Electronic Fundamentals",
+          "priority": "Useful",
+          "teachingUse": "Introduce low-power design intent and power-aware verification as an industry extension of electronic circuit design."
+        },
+        {
+          "courseCode": "EE 312",
+          "courseTitle": "Electronic Engineering",
+          "priority": "Useful",
+          "teachingUse": "Introduce power-aware electronic design and verification for modern low-power systems."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1500-2022",
+      "title": "1500-2022 - IEEE Standard Testability Method for Embedded Core-based Integrated Circuits",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9916219",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 211",
+          "courseTitle": "Electronic Fundamentals",
+          "priority": "Advanced",
+          "teachingUse": "Show how testability is built into integrated circuits and embedded cores."
+        },
+        {
+          "courseCode": "EE 221",
+          "courseTitle": "Logic Design",
+          "priority": "Useful",
+          "teachingUse": "Introduce design-for-test concepts for embedded digital cores."
+        },
+        {
+          "courseCode": "EE 312",
+          "courseTitle": "Electronic Engineering",
+          "priority": "Advanced",
+          "teachingUse": "Link IC design to testability and production verification."
+        },
+        {
+          "courseCode": "EE 322",
+          "courseTitle": "Microprocessors Design",
+          "priority": "Useful",
+          "teachingUse": "Teach embedded-core testability as part of digital-system implementation."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1076-2019",
+      "title": "1076-2019 - IEEE Standard for VHDL Language Reference Manual",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8938194",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 221",
+          "courseTitle": "Logic Design",
+          "priority": "Core",
+          "teachingUse": "Use the formal VHDL language standard as the authoritative reference for syntax and semantics."
+        },
+        {
+          "courseCode": "EE 322",
+          "courseTitle": "Microprocessors Design",
+          "priority": "Core",
+          "teachingUse": "Authoritative VHDL reference for RTL modeling, simulation, and synthesis-oriented design."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1800-2023",
+      "title": "1800-2023 - IEEE Standard for SystemVerilog--Unified Hardware Design, Specification, and Verification Language",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10458100",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=80",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 221",
+          "courseTitle": "Logic Design",
+          "priority": "Useful",
+          "teachingUse": "Compare VHDL with SystemVerilog and show industrial design/verification language standardization."
+        },
+        {
+          "courseCode": "EE 322",
+          "courseTitle": "Microprocessors Design",
+          "priority": "Useful",
+          "teachingUse": "Expose students to SystemVerilog as a second standardized hardware design/verification language."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1149.7-2022",
+      "title": "1149.7-2022 - IEEE Standard for Reduced-Pin and Enhanced-Functionality Test Access Port and Boundary-Scan Architecture",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9919138",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 221",
+          "courseTitle": "Logic Design",
+          "priority": "Advanced",
+          "teachingUse": "Introduce boundary-scan/test-access concepts and reduced-pin test architectures."
+        },
+        {
+          "courseCode": "EE 322",
+          "courseTitle": "Microprocessors Design",
+          "priority": "Advanced",
+          "teachingUse": "Introduce standardized test-access/boundary-scan ideas for hardware debug and production test."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1685-2022",
+      "title": "1685-2022 - IEEE Standard for IP-XACT, Standard Structure for Packaging, Integrating, and Reusing IP within Tool Flows",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10054518",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=80",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 221",
+          "courseTitle": "Logic Design",
+          "priority": "Advanced",
+          "teachingUse": "Show how reusable IP blocks are packaged and integrated in modern digital-design tool flows."
+        },
+        {
+          "courseCode": "EE 322",
+          "courseTitle": "Microprocessors Design",
+          "priority": "Useful",
+          "teachingUse": "Introduce IP-XACT for IP packaging, registers, interfaces, and reusable system integration."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1735-2023",
+      "title": "1735-2023 - IEEE Recommended Practice for Encryption and Management of Electronic Design Intellectual Property (IP)",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10328534",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=80",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 221",
+          "courseTitle": "Logic Design",
+          "priority": "Advanced",
+          "teachingUse": "Discuss protection and management of electronic-design intellectual property."
+        },
+        {
+          "courseCode": "EE 312",
+          "courseTitle": "Electronic Engineering",
+          "priority": "Advanced",
+          "teachingUse": "Introduce secure handling of design IP in professional electronic design flows."
+        },
+        {
+          "courseCode": "EE 322",
+          "courseTitle": "Microprocessors Design",
+          "priority": "Advanced",
+          "teachingUse": "Discuss encryption and management of FPGA/ASIC design IP."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1241-2023",
+      "title": "1241-2023 - IEEE Standard for Terminology and Test Methods for Analog-to-Digital Converters",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10269813",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 231",
+          "courseTitle": "Signals and Systems",
+          "priority": "Core",
+          "teachingUse": "Connect sampling and quantization theory to standardized ADC terminology and test methods."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "754-2019",
+      "title": "754-2019 - IEEE Standard for Floating-Point Arithmetic",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8766227",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 231",
+          "courseTitle": "Signals and Systems",
+          "priority": "Useful",
+          "teachingUse": "Relate numerical signal processing to standardized floating-point representation and rounding behavior."
+        },
+        {
+          "courseCode": "EE 322",
+          "courseTitle": "Microprocessors Design",
+          "priority": "Advanced",
+          "teachingUse": "Use floating-point arithmetic as a standards-based example of processor datapath representation."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "2700-2017",
+      "title": "2700-2017 - IEEE Standard for Sensor Performance Parameter Definitions",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8277145",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 231",
+          "courseTitle": "Signals and Systems",
+          "priority": "Advanced",
+          "teachingUse": "Use standardized sensor-performance parameters when signals originate from real measurement systems."
+        },
+        {
+          "courseCode": "EE 332",
+          "courseTitle": "Control Systems",
+          "priority": "Core",
+          "teachingUse": "Use standardized sensor performance parameters when modeling measurement quality and feedback accuracy."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "519-2022",
+      "title": "519-2022 - IEEE Standard for Harmonic Control in Electric Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9848438",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 202",
+          "courseTitle": "Circuit Analysis",
+          "priority": "Core",
+          "teachingUse": "Use harmonic limits and terminology when extending sinusoidal circuit analysis to distorted waveforms."
+        },
+        {
+          "courseCode": "EE 305",
+          "courseTitle": "Power Electronics",
+          "priority": "Core",
+          "teachingUse": "Connect converter switching harmonics to system harmonic limits and power-quality requirements."
+        },
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Core",
+          "teachingUse": "Teach harmonic-control requirements as part of power quality."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1159-2019",
+      "title": "1159-2019 - IEEE Recommended Practice for Monitoring Electric Power Quality",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8796484",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 202",
+          "courseTitle": "Circuit Analysis",
+          "priority": "Useful",
+          "teachingUse": "Introduce power-quality events and monitoring terminology as applications of transient and frequency-domain analysis."
+        },
+        {
+          "courseCode": "EE 305",
+          "courseTitle": "Power Electronics",
+          "priority": "Useful",
+          "teachingUse": "Relate converter disturbances to standardized power-quality monitoring terminology."
+        },
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Core",
+          "teachingUse": "Use standardized power-quality monitoring terminology and event classification."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "3002.8-2018",
+      "title": "3002.8-2018 - IEEE Recommended Practice for Conducting Harmonic Studies and Analysis of Industrial and Commercial Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8479355",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 202",
+          "courseTitle": "Circuit Analysis",
+          "priority": "Advanced",
+          "teachingUse": "Show how harmonic studies are conducted in real industrial/commercial power systems."
+        },
+        {
+          "courseCode": "EE 305",
+          "courseTitle": "Power Electronics",
+          "priority": "Useful",
+          "teachingUse": "Show how harmonic studies are performed for converter-rich industrial/commercial systems."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1451.0-2024",
+      "title": "1451.0-2024 - IEEE Standard for a Smart Transducer Interface for Sensors and Actuators--Common Functions, Communication Protocols, and Transducer Electronic Data Sheet (TEDS) Formats",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10571826",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 322",
+          "courseTitle": "Microprocessors Design",
+          "priority": "Advanced",
+          "teachingUse": "Use smart-transducer interfaces as a realistic microprocessor/sensor interfacing case."
+        },
+        {
+          "courseCode": "EE 332",
+          "courseTitle": "Control Systems",
+          "priority": "Useful",
+          "teachingUse": "Connect sensors/actuators and transducer interfaces to practical feedback-control implementations."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C95.1-2019",
+      "title": "C95.1-2019 - IEEE Standard for Safety Levels with Respect to Human Exposure to Electric, Magnetic, and Electromagnetic Fields, 0 Hz to 300 GHz",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8859677",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=82",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Core",
+          "teachingUse": "Connect electric/magnetic field calculations to human-exposure safety limits."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C95.3-2021",
+      "title": "C95.3-2021 - IEEE Recommended Practice for Measurements and Computations of Electric, Magnetic, and Electromagnetic Fields with Respect to Human Exposure to Such Fields, 0 Hz to 300 GHz",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9444271",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=82",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Core",
+          "teachingUse": "Show standardized methods for measuring and computing fields for exposure assessment."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "145-2025",
+      "title": "145-2025 - IEEE Standard for Definitions of Terms for Antennas",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=11459443",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Useful",
+          "teachingUse": "Use standardized antenna terminology when transitioning from fields to radiation applications."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1597.1-2022",
+      "title": "1597.1-2022 - IEEE Standard for Validation of Computational Electromagnetics Computer Modeling and Simulations",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10251757",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Useful",
+          "teachingUse": "Introduce validation principles for computational electromagnetics models and simulations."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "149-2021",
+      "title": "149-2021 - IEEE Recommended Practice for Antenna Measurements",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9714426",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Advanced",
+          "teachingUse": "Demonstrate how electromagnetic theory is converted into practical antenna measurement procedures."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "473-2025",
+      "title": "473-2025 - IEEE Recommended Practice for an Electromagnetic Site Survey (10 kHz to 40 GHz)",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=11223194",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Advanced",
+          "teachingUse": "Use electromagnetic site-survey practice as an applied field-measurement example."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C63.2-2023",
+      "title": "C63.2-2023 - American National Standard for Specifications of Electromagnetic Interference and Field Strength Measuring Instrumentation in the Frequency Range 9 kHz to 40 GHz",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10285669",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Advanced",
+          "teachingUse": "Show specifications for EMI/field-strength measurement instrumentation."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C63.5-2017",
+      "title": "C63.5-2017 - American National Standard for Electromagnetic Compatibility--Radiated Emission Measurements in Electromagnetic Interference (EMI) Control--Calibration and Qualification of Antennas (9 kHz to 40 GHz)",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=7920365",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Advanced",
+          "teachingUse": "Introduce antenna calibration/qualification in EMC radiated-emission measurements."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1588-2019",
+      "title": "1588-2019 - IEEE Standard for a Precision Clock Synchronization Protocol for Networked Measurement and Control Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9120374",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 332",
+          "courseTitle": "Control Systems",
+          "priority": "Useful",
+          "teachingUse": "Use precision time synchronization as an example of requirements in networked measurement and control systems."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "21451-001-2017",
+      "title": "21451-001-2017 - IEEE Recommended Practice for Signal Treatment Applied to Smart Transducers",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8227037",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 332",
+          "courseTitle": "Control Systems",
+          "priority": "Advanced",
+          "teachingUse": "Introduce standardized signal treatment for smart transducers in measurement/control chains."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1765-2022",
+      "title": "1765-2022 - IEEE Recommended Practice for Estimating the Uncertainty in Error Vector Magnitude of Measured Digitally Modulated Signals for Wireless Communications",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9942921",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Core",
+          "teachingUse": "Use EVM uncertainty as a standards-based bridge between modulation theory and transmitter/receiver measurements."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "802.11-2024",
+      "title": "802.11-2024 - IEEE Standard for Information Technology--Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks--Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10979689",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=68",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use WLAN PHY/MAC as a modern system example for modulation, channels, bandwidth, and link trade-offs."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "802.15.4-2024",
+      "title": "802.15.4-2024 - IEEE Standard for Low‐Rate Wireless Networks",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10794630",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=68",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Compare low-rate wireless PHY choices with higher-throughput wireless systems."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "187-2018",
+      "title": "187-2018 - IEEE Standard for Measurement of Emissions from FM and Television Broadcast Receivers in the Frequency Range of 9 kHz to 40 GHz",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8370301",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Use FM/TV receiver emission measurements as an EMC/broadcast-receiver application."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1900.1-2019",
+      "title": "1900.1-2019 - IEEE Standard for Definitions and Concepts for Dynamic Spectrum Access: Terminology Relating to Emerging Wireless Networks, System Functionality, and Spectrum Management",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8694193",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Introduce dynamic spectrum-access terminology and spectrum-management concepts."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "802.3-2022",
+      "title": "802.3-2022 - IEEE Standard for Ethernet",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9844414",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=68",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Provide a wired-communications reference point when comparing physical-layer system requirements."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1662-2023",
+      "title": "1662-2023 - IEEE Recommended Practice for the Design and Application of Power Electronics in Electrical Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10492706",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 305",
+          "courseTitle": "Power Electronics",
+          "priority": "Core",
+          "teachingUse": "Use IEEE guidance for design and application of power electronics in electrical power systems."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1547-2018",
+      "title": "1547-2018 - IEEE Standard for Interconnection and Interoperability of Distributed Energy Resources with Associated Electric Power Systems Interfaces",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8332110",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 305",
+          "courseTitle": "Power Electronics",
+          "priority": "Useful",
+          "teachingUse": "Use grid-connected converters/DER as an application of inverter control and interface requirements."
+        },
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Useful",
+          "teachingUse": "Introduce DER interconnection and grid-interface requirements."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1547.1-2020",
+      "title": "1547.1-2020 - IEEE Standard Conformance Test Procedures for Equipment Interconnecting Distributed Energy Resources with Electric Power Systems and Associated Interfaces",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9097532",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 305",
+          "courseTitle": "Power Electronics",
+          "priority": "Advanced",
+          "teachingUse": "Show conformance testing of DER interconnection equipment."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "2800-2022",
+      "title": "2800-2022 - IEEE Standard for Interconnection and Interoperability of Inverter-Based Resources (IBRs) Interconnecting with Associated Transmission Electric Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9762251",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 305",
+          "courseTitle": "Power Electronics",
+          "priority": "Advanced",
+          "teachingUse": "Introduce requirements for transmission-connected inverter-based resources."
+        },
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Useful",
+          "teachingUse": "Extend interconnection concepts to transmission-connected inverter-based resources."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "112-2017",
+      "title": "112-2017 - IEEE Standard Test Procedure for Polyphase Induction Motors and Generators",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8291808",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 304",
+          "courseTitle": "Electrical Machines",
+          "priority": "Core",
+          "teachingUse": "Use standardized test procedures for induction motors/generators to reinforce equivalent-circuit and performance analysis."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "115-2019",
+      "title": "115-2019 - IEEE Guide for Test Procedures for Synchronous Machines Including Acceptance and Performance Testing and Parameter Determination for Dynamic Analysis",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9050932",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 304",
+          "courseTitle": "Electrical Machines",
+          "priority": "Core",
+          "teachingUse": "Use standardized synchronous-machine acceptance/performance tests and parameter determination."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "3002.7-2018",
+      "title": "3002.7-2018 - IEEE Recommended Practice for Conducting Motor-Starting Studies and Analysis of Industrial and Commercial Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8700698",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 304",
+          "courseTitle": "Electrical Machines",
+          "priority": "Useful",
+          "teachingUse": "Apply motor models to practical motor-starting studies."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "3004.8-2016",
+      "title": "3004.8-2016 - IEEE Recommended Practice for Motor Protection in Industrial and Commercial Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=7930538",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 304",
+          "courseTitle": "Electrical Machines",
+          "priority": "Useful",
+          "teachingUse": "Introduce motor-protection requirements and coordination as an application of machine behavior."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "841-2021",
+      "title": "841-2021 - IEEE Standard for Petroleum and Chemical Industry--Premium-Efficiency, Severe-Duty, Totally Enclosed Squirrel Cage Induction Motors from 0.75 kW to 370 kW (1 hp to 500 hp)",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9444259",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 304",
+          "courseTitle": "Electrical Machines",
+          "priority": "Useful",
+          "teachingUse": "Relate motor ratings, efficiency, construction, and severe-duty requirements to industrial motor specifications."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1110-2019",
+      "title": "1110-2019 - IEEE Guide for Synchronous Generator Modeling Practices and Parameter Verification with Applications in Power System Stability Analyses",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9020272",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 304",
+          "courseTitle": "Electrical Machines",
+          "priority": "Advanced",
+          "teachingUse": "Connect synchronous-machine models to power-system stability analysis."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "286-2024",
+      "title": "286-2024 - IEEE Recommended Practice for Measurement of Power Factor Tip-Up of Electric Machinery Stator Coil Insulation",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10636030",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 304",
+          "courseTitle": "Electrical Machines",
+          "priority": "Advanced",
+          "teachingUse": "Show insulation condition measurement on electric machinery through power-factor tip-up testing."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "421.1-2021",
+      "title": "421.1-2021 - IEEE Standard Definitions for Excitation Systems for Synchronous Machines",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9737075",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 304",
+          "courseTitle": "Electrical Machines",
+          "priority": "Advanced",
+          "teachingUse": "Introduce standardized excitation-system terminology for synchronous machines."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "3002.3-2018",
+      "title": "3002.3-2018 - IEEE Recommended Practice for Conducting Short-Circuit Studies and Analysis of Industrial and Commercial Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8672196",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Core",
+          "teachingUse": "Use standardized short-circuit study practice for fault calculations."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "3003.1-2019",
+      "title": "3003.1-2019 - IEEE Recommended Practice for System Grounding of Industrial and Commercial Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8793245",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Core",
+          "teachingUse": "Introduce system-grounding practice for industrial/commercial power systems."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C57.12.00-2021",
+      "title": "C57.12.00-2021 - IEEE Standard for General Requirements for Liquid-Immersed Distribution, Power, and Regulating Transformers",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9690122",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Core",
+          "teachingUse": "Use general transformer requirements as a practical reference for ratings and applications."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "60255-118-1-2018",
+      "title": "60255-118-1-2018 - IEEE/IEC International Standard - Measuring relays and protection equipment - Part 118-1: Synchrophasor for power systems - Measurements",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8577043",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Useful",
+          "teachingUse": "Introduce synchrophasor measurement requirements used in modern power systems."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "738-2023",
+      "title": "738-2023 - IEEE Standard for Calculating the Current-Temperature Relationship of Bare Overhead Conductors",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10382440",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Useful",
+          "teachingUse": "Connect transmission-line loading to conductor current-temperature relationships."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C57.105-2019",
+      "title": "C57.105-2019 - IEEE Guide for Application of Transformer Connections in Three-Phase Electrical Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9052771",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Useful",
+          "teachingUse": "Use transformer connection guidance in three-phase system analysis."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "837-2024",
+      "title": "837-2024 - IEEE Standard for Qualifying Permanent Connections Used in Substation Grounding",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10964114",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Advanced",
+          "teachingUse": "Use permanent substation-grounding connections as a practical grounding example."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C37.113-2025",
+      "title": "C37.113-2025 - IEEE Guide for Protective Relay Applications to Transmission Lines",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=11503181",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Advanced",
+          "teachingUse": "Introduce transmission-line protective-relay application practice."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C37.118.2-2024",
+      "title": "C37.118.2-2024 - IEEE Standard for Synchrophasor Data Transfer for Power Systems",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10794633",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Advanced",
+          "teachingUse": "Show standardized synchrophasor data transfer between power-system devices."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "C37.91-2021",
+      "title": "C37.91-2021 - IEEE Guide for Protecting Power Transformers",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9471043",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 403",
+          "courseTitle": "Power Systems",
+          "priority": "Advanced",
+          "teachingUse": "Introduce power-transformer protection practice."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "1012-2024",
+      "title": "1012-2024 - IEEE Standard for System, Software, and Hardware Verification and Validation",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=11134778",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Core",
+          "teachingUse": "Plan verification and validation evidence for hardware/software/system deliverables."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "15288-2023",
+      "title": "15288-2023 - ISO/IEC/IEEE International Standard - Systems and software engineering--System life cycle processes",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10123345",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Core",
+          "teachingUse": "Structure the project around system life-cycle processes: definition, realization, verification, validation, and transition."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "16085-2020",
+      "title": "16085-2020 - ISO/IEC/IEEE International Standard - Systems and software engineering -- Life cycle processes -- Risk management",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9325906",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Core",
+          "teachingUse": "Use a formal risk-management process for technical, schedule, safety, and project risks."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "29148-2018",
+      "title": "29148-2018 - ISO/IEC/IEEE International Standard - Systems and software engineering -- Life cycle processes -- Requirements engineering",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=8559684",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Core",
+          "teachingUse": "Require clear, testable engineering requirements and traceability before design decisions."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "7000-2021",
+      "title": "7000-2021 - IEEE Standard Model Process for Addressing Ethical Concerns during System Design",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9536677",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=93",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Core",
+          "teachingUse": "Address ethical concerns explicitly during system design and stakeholder decision-making."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "24748-2-2024",
+      "title": "24748-2-2024 - ISO/IEC/IEEE International Standard - Systems and software engineering--Life cycle management--Part 2: Guidelines for the application of ISO/IEC/IEEE 15288 (System life cycle processes)",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=10476371",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Useful",
+          "teachingUse": "Provide practical guidance for applying the 15288 system life-cycle process."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "24748-4-2025",
+      "title": "24748-4-2025 - ISO/IEC/IEEE International Standard - Systems and Software Engineering -- Life Cycle Management -- Part 4: Systems Engineering Management Planning",
+      "accessType": "Subscription / purchase",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=11396462",
+      "getUrl": "",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Useful",
+          "teachingUse": "Use systems-engineering management planning for project organization, reviews, and evidence."
+        }
+      ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "24748-7000-2022",
+      "title": "24748-7000-2022 - IEEE/ISO/IEC International Standard--Systems and software engineering--Life cycle management--Part 7000: Standard model process for addressing ethical concerns during system design",
+      "accessType": "Free — IEEE GET",
+      "status": "Active",
+      "officialUrl": "https://ieeexplore.ieee.org/servlet/opac?punumber=9967785",
+      "getUrl": "https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=93",
+      "sourceGroup": "IEEE",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Advanced",
+          "teachingUse": "Integrate ethical-system-design activities with life-cycle management."
+        }
+      ]
+    },
+    {
+      "organization": "ETSI",
+      "identifier": "EN 301 489-1 V2.2.3",
+      "title": "ElectroMagnetic Compatibility (EMC) standard for radio equipment and services; Part 1: Common technical requirements",
+      "accessType": "Free — ETSI",
+      "status": "Published",
+      "officialUrl": "https://www.etsi.org/deliver/etsi_EN/301400_301499/30148901/02.02.03_60/en_30148901v020203p.pdf",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 211",
+          "courseTitle": "Electronic Fundamentals",
+          "priority": "Useful",
+          "teachingUse": "Introduce product-level EMC requirements for radio/electronic equipment and connect circuit design to emissions/immunity testing."
+        },
+        {
+          "courseCode": "EE 312",
+          "courseTitle": "Electronic Engineering",
+          "priority": "Useful",
+          "teachingUse": "Use as a practical product-EMC reference when discussing amplifier/device robustness, RF susceptibility, and emissions."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "P.525-5",
+      "title": "Calculation of free-space attenuation",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-P.525-5-202411-I/en",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Core",
+          "teachingUse": "Connect field propagation and power density to the standard free-space path-loss model used in radio-link engineering."
+        },
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use in link-budget examples and to connect transmitted power, antenna gains, wavelength, and received power."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "P.676-13",
+      "title": "Attenuation by atmospheric gases and related effects",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-P.676-13-202208-I",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Useful",
+          "teachingUse": "Extend electromagnetic-wave propagation to oxygen/water-vapour absorption and frequency-dependent atmospheric loss."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "P.838-3",
+      "title": "Specific attenuation model for rain for use in prediction methods",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-P.838-3-200503-I",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Useful",
+          "teachingUse": "Use as a standards-based application of polarization, wavelength, and propagation loss in microwave links."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "P.1411-13",
+      "title": "Propagation data and prediction methods for the planning of short-range outdoor radiocommunication systems and radio local area networks in the frequency range 300 MHz to 300 GHz",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-P.1411-13-202509-I/en",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Advanced",
+          "teachingUse": "Show how reflection, diffraction, blockage, and urban propagation are handled in practical short-range radio planning."
+        },
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Use as an advanced wireless-channel/propagation reference for WLAN and cellular examples."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "P.1812-8",
+      "title": "A path-specific propagation prediction method for point-to-area terrestrial services in the frequency range 30 MHz to 6 GHz",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-P.1812-8-202509-I/en",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Advanced",
+          "teachingUse": "Provide an advanced example of terrain- and path-specific terrestrial propagation prediction."
+        }
+      ]
+    },
+    {
+      "organization": "ETSI",
+      "identifier": "EN 300 328 V2.2.2",
+      "title": "Wideband transmission systems; Data transmission equipment operating in the 2,4 GHz band; Harmonised Standard for access to radio spectrum",
+      "accessType": "Free — ETSI",
+      "status": "Published / OJ cited",
+      "officialUrl": "https://www.etsi.org/standards/search?search=EN+300+328",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Useful",
+          "teachingUse": "Use Wi-Fi/Bluetooth-class equipment as a practical example of spectrum masks, transmitter characteristics, and receiver requirements."
+        },
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Connect spread-spectrum/wideband modulation to real transmitter/receiver radio-spectrum requirements."
+        }
+      ]
+    },
+    {
+      "organization": "ETSI",
+      "identifier": "EN 301 893 V2.2.1",
+      "title": "5 GHz WAS/RLAN; Harmonised Standard for access to radio spectrum",
+      "accessType": "Free — ETSI",
+      "status": "Published / OJ cited",
+      "officialUrl": "https://www.etsi.org/wp-content/uploads/en_301893v020201p.pdf",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Useful",
+          "teachingUse": "Use a current 5 GHz RLAN standard to connect antenna/propagation concepts to real radio equipment limits and test methods."
+        },
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use 5 GHz WLAN requirements as a practical extension of channel bandwidth, spectral mask, coexistence, and DFS concepts."
+        }
+      ]
+    },
+    {
+      "organization": "ETSI",
+      "identifier": "EN 301 489-17 V3.3.1",
+      "title": "ElectroMagnetic Compatibility (EMC) standard for radio equipment and services; Part 17: Specific conditions for Broadband and Wideband Data Transmission Systems",
+      "accessType": "Free — ETSI",
+      "status": "Published / OJ cited",
+      "officialUrl": "https://portal.etsi.org/webapp/ewp/copy_file.asp?wki_id=63623",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 341",
+          "courseTitle": "Electromagnetics Fundamental",
+          "priority": "Advanced",
+          "teachingUse": "Introduce practical EMC test conditions and performance criteria for broadband wireless equipment."
+        },
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Introduce the EMC performance criteria that real wireless devices must satisfy in addition to communication performance."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "BS.450-4",
+      "title": "Transmission standards for FM sound broadcasting at VHF",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-BS.450-4-201910-I",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Core",
+          "teachingUse": "Teach FM deviation, pre-emphasis, stereo pilot-tone multiplexing, and supplementary-signal placement from the actual broadcast recommendation."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "BS.412-9",
+      "title": "Planning standards for terrestrial FM sound broadcasting at VHF",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-BS.412-9-199812-I/en",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use protection ratios, channel spacing, and planning concepts to connect FM theory to broadcast-system engineering."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "BS.643-4",
+      "title": "Radio data system for automatic tuning and other applications in FM radio receivers for use with the pilot-tone system",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-BS.643-4-202212-I",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Teach RDS as a real supplementary-data system on the 57 kHz subcarrier of the FM stereo multiplex."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "BS.1194-2",
+      "title": "System for multiplexing frequency modulation (FM) sound broadcasts with a sub-carrier data channel having a relatively large transmission capacity for stationary and mobile reception",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-BS.1194-2-199812-I/en",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use DARC as a higher-rate FM subcarrier-data example and compare it with RDS in multiplexing, modulation, and data capacity."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "SM.329-13",
+      "title": "Unwanted emissions in the spurious domain",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-SM.329",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Introduce transmitter spectral purity, spurious emissions, measurement bandwidths, and regulatory emission limits."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "SM.1541-7",
+      "title": "Unwanted emissions in the out-of-band domain",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-SM.1541/en",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Relate modulation bandwidth and filtering to out-of-band emissions and spectrum masks."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "M.1036-8",
+      "title": "Frequency arrangements for implementation of the terrestrial component of International Mobile Telecommunications in the bands identified for IMT in the Radio Regulations",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-M.1036",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use current IMT band arrangements to teach FDD/TDD, paired/unpaired spectrum, and cellular frequency planning."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "M.1457-15",
+      "title": "Detailed specifications of the terrestrial radio interfaces of International Mobile Telecommunications-2000 (IMT-2000)",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-M.1457-15-202010-I/en",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Provide historical 3G context when comparing the evolution of cellular air interfaces."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "M.2012-7",
+      "title": "Detailed specifications of the terrestrial radio interfaces of International Mobile Telecommunications Advanced (IMT-Advanced)",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-M.2012-7-202602-I/en",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Use as a standards bridge to 4G/LTE-Advanced and the ITU definition of IMT-Advanced."
+        }
+      ]
+    },
+    {
+      "organization": "ITU-R",
+      "identifier": "M.2150-3",
+      "title": "Detailed specifications of the terrestrial radio interfaces of International Mobile Telecommunications-2020 (IMT-2020)",
+      "accessType": "Free — ITU-R",
+      "status": "In force",
+      "officialUrl": "https://www.itu.int/rec/R-REC-M.2150",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use the ITU-recognized 5G radio-interface framework to connect course modulation concepts to IMT-2020."
+        }
+      ]
+    },
+    {
+      "organization": "ETSI",
+      "identifier": "EN 300 401 V2.2.1",
+      "title": "Radio Broadcasting Systems; Digital Audio Broadcasting (DAB) to mobile, portable and fixed receivers",
+      "accessType": "Free — ETSI",
+      "status": "Published",
+      "officialUrl": "https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=74829",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use DAB framing, channel coding, modulation, and multiplex structure as a digital-broadcasting case study."
+        }
+      ]
+    },
+    {
+      "organization": "ETSI",
+      "identifier": "EN 300 751 V1.2.1",
+      "title": "Radio broadcasting systems; DAta Radio Channel (DARC); System for wireless infotainment forwarding and teledistribution",
+      "accessType": "Free — ETSI",
+      "status": "Published (legacy)",
+      "officialUrl": "https://www.etsi.org/deliver/etsi_en/300700_300799/300751/01.02.01_60/en_300751v010201p.pdf",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Pair with ITU-R BS.1194 to study DARC framing/multiplexing in more implementation detail."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 38.211",
+      "title": "NR; Physical channels and modulation",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3213",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Core",
+          "teachingUse": "Use the actual 5G NR physical-layer specification to study OFDM numerology, physical channels, reference signals, and modulation mapping."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 38.212",
+      "title": "NR; Multiplexing and channel coding",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3214",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Core",
+          "teachingUse": "Connect coding theory to practical CRC, LDPC, Polar coding, rate matching, and transport-channel processing in 5G NR."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 38.300",
+      "title": "NR; NR and NG-RAN Overall description; Stage-2",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3191",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Give students the system-level context needed to see where the physical layer fits within the 5G radio-access network."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 38.214",
+      "title": "NR; Physical layer procedures for data",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3216",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use as an advanced reference for MCS selection, MIMO-related procedures, resource allocation, and data transmission behavior."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 38.215",
+      "title": "NR; Physical layer measurements",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3217",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Connect receiver measurements and link-quality indicators to practical 5G measurement definitions."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 38.104",
+      "title": "NR; Base Station (BS) radio transmission and reception",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3202",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use transmitter/receiver RF requirements to connect theory with EVM, occupied bandwidth, ACLR, sensitivity, and unwanted-emission measurements."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 38.101-1",
+      "title": "NR; User Equipment (UE) radio transmission and reception; Part 1: Range 1 Standalone",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3283",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Useful",
+          "teachingUse": "Use UE RF requirements as a second real-world perspective on transmitter/receiver performance below 7.125 GHz."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 36.300",
+      "title": "Evolved Universal Terrestrial Radio Access (E-UTRA) and Evolved Universal Terrestrial Radio Access Network (E-UTRAN); Overall description; Stage 2",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2430",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Use LTE as a historical comparison showing the evolution from 4G to 5G NR."
+        }
+      ]
+    },
+    {
+      "organization": "3GPP",
+      "identifier": "TS 36.211",
+      "title": "Evolved Universal Terrestrial Radio Access (E-UTRA); Physical channels and modulation",
+      "accessType": "Free — 3GPP",
+      "status": "Under change control",
+      "officialUrl": "https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2425",
+      "getUrl": "",
+      "sourceGroup": "Telecom",
+      "courses": [
+        {
+          "courseCode": "EE 351",
+          "courseTitle": "Communication Systems",
+          "priority": "Advanced",
+          "teachingUse": "Compare LTE OFDMA/SC-FDMA physical-channel design with 5G NR."
+        }
+      ]
+    }
+  ]
+}

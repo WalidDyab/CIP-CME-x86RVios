@@ -42,6 +42,8 @@
   "assets/pages/undergraduate-ee-program-overview.js",
   "assets/pages/undergraduate-ee-so-leader-dashboard.css",
   "assets/pages/undergraduate-ee-so-leader-dashboard.js",
+  "assets/pages/undergraduate-ee-standards-and-codes.css",
+  "assets/pages/undergraduate-ee-standards-and-codes.js",
   "assets/pages/undergraduate-ee-teaching-assessment-methods.css",
   "assets/pages/undergraduate-ee-teaching-assessment-methods.js",
   "assets/portal.css",
@@ -83,6 +85,7 @@
   "data/clo_baseline_term_251_abet.json",
   "data/clo_revision_audit_term_251_to_261.json",
   "data/ee-assessment.json",
+  "data/ee-standards.json",
   "data/ee_alignment_evidence.json",
   "data/ee_curriculum.json",
   "data/ee_program_structure.json",
@@ -107,5 +110,6 @@
   "undergraduate-ee/references/ieee-code-of-ethics-2020.pdf",
   "undergraduate-ee/references/sce-engineers-charter-2025-ar.pdf",
   "undergraduate-ee/so-leader-dashboard.html",
+  "undergraduate-ee/standards-and-codes.html",
   "undergraduate-ee/teaching-assessment-methods.html"
 ]

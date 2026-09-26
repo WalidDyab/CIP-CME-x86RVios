@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Standards &amp; Codes | BSc EE Curriculum Portal</title>
+  <link rel="stylesheet" href="../assets/portal.css">
+  <link rel="stylesheet" href="../assets/pages/undergraduate-ee-standards-and-codes.css">
+  <link rel="stylesheet" href="../assets/runtime-utilities.css">
+  <script defer src="../assets/portal.js"></script>
+  <script defer src="../assets/pages/undergraduate-ee-standards-and-codes.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="page-inset-top wrap standards-page">
+    <div class="space-bottom-24 title">
+      <h1>Standards &amp; Codes</h1>
+      <p>PSU College of Engineering Curriculum Intelligence Portal</p>
+    </div>
+    <section class="hero" aria-labelledby="standards-intro-title">
+      <span class="kicker">Undergraduate EE</span>
+      <h2 id="standards-intro-title">Standards for teaching and practice</h2>
+      <p class="muted">Explore professional engineering standards and specifications that can support teaching, laboratory work, design projects, and professional practice across the BSc Electrical Engineering curriculum.</p>
+    </section>
+    <section class="card standards-controls" aria-labelledby="standards-filter-title">
+      <h2 id="standards-filter-title">Find standards by course</h2>
+      <div class="standards-filter-grid">
+        <label for="standardsCourse">Course<select id="standardsCourse"><option value="">All courses</option></select></label>
+        <label for="standardsOrganization">Organization<select id="standardsOrganization"><option value="">All organizations</option><option>IEEE</option><option>ITU-R</option><option>ETSI</option><option>3GPP</option></select></label>
+        <label for="standardsPriority">Priority<select id="standardsPriority"><option value="">All priorities</option><option>Core</option><option>Useful</option><option>Advanced</option></select></label>
+        <label for="standardsAccess">Access<select id="standardsAccess"><option value="">All access</option><option value="free">Free</option><option value="subscription">Subscription / purchase</option></select></label>
+        <label for="standardsSearch" class="standards-search-label">Search<input id="standardsSearch" type="search" placeholder="Identifier, title, course, or teaching use"></label>
+      </div>
+      <details class="priority-help"><summary>What do the priorities mean?</summary><dl><div><dt>Core</dt><dd>Recommended for normal course teaching.</dd></div><div><dt>Useful</dt><dd>Suitable for selected lectures, laboratories, assignments, or examples.</dd></div><div><dt>Advanced</dt><dd>Useful for enrichment, projects, or deeper professional reference.</dd></div></dl></details>
+    </section>
+    <p id="standardsCount" class="standards-count" role="status" aria-live="polite">Loading standards…</p>
+    <div id="standardsResults" class="standards-results"></div>
+    <noscript><p class="alert">JavaScript is needed to browse the <a href="../data/ee-standards.json">standards inventory</a>.</p></noscript>
+    <div class="footer">Undergraduate Electrical Engineering Curriculum Intelligence Portal</div>
+  </main>
+  <div id="footer-placeholder"></div>
+</body>
+</html>
