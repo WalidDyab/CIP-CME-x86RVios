@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stakeholders &amp; Design Context | BSc EE Curriculum Portal</title>
+  <link rel="stylesheet" href="../assets/portal.css">
+  <link rel="stylesheet" href="../assets/pages/undergraduate-ee-stakeholders-design-context.css">
+  <link rel="stylesheet" href="../assets/runtime-utilities.css">
+  <script defer src="../assets/portal.js"></script>
+  <script defer src="../assets/pages/undergraduate-ee-stakeholders-design-context.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="page-inset-top wrap context-page">
+    <div class="space-bottom-24 title">
+      <h1>Stakeholders &amp; Design Context</h1>
+      <p>PSU College of Engineering Curriculum Intelligence Portal</p>
+    </div>
+    <section class="hero" aria-labelledby="context-intro-title">
+      <span class="kicker">Undergraduate EE</span>
+      <h2 id="context-intro-title">Consider who is affected</h2>
+      <p class="muted">Identify people, organizations, communities, and contextual factors that may be affected by an engineering decision. Connect them to possible requirements, standards, and evidence.</p>
+    </section>
+    <section class="card context-controls" aria-label="Course and print controls">
+      <label for="contextCourse">Course<select id="contextCourse"></select></label>
+      <button id="contextPrint" class="btn primary" type="button">Print / Save as PDF</button>
+    </section>
+    <p id="contextDisclaimer" class="context-disclaimer"></p>
+    <p class="context-session-note">Working choices stay in this page until it is reloaded. Print or save as PDF to retain a copy.</p>
+    <div id="contextContent"><p class="muted">Loading course suggestions…</p></div>
+    <section id="contextPrintReport" class="context-print-report" aria-label="Printable analysis"></section>
+    <noscript><p class="alert">JavaScript is needed to use the <a href="../data/ee-design-context.json">design-context suggestions</a>.</p></noscript>
+    <div class="footer">Undergraduate Electrical Engineering Curriculum Intelligence Portal</div>
+  </main>
+  <div id="footer-placeholder"></div>
+</body>
+</html>

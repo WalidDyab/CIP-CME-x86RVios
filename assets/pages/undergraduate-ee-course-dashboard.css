@@ -208,6 +208,8 @@
     .course-information-list li { line-height: 1.55; overflow-wrap: anywhere; }
     .course-standards-link { color: var(--cyan); text-decoration: underline; }
     .course-standards-link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+    .course-context-link { color: var(--cyan); text-decoration: underline; }
+    .course-context-link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 
     /* Course topics and contact hours */
     .course-topics-table { width: 100%; table-layout: fixed; }

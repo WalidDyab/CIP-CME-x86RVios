@@ -4,9 +4,10 @@ let _printCourseNorm = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const [data, standardsData] = await Promise.all([
+    const [data, standardsData, contextData] = await Promise.all([
       portal.loadJSON('../data/ee_curriculum.json'),
-      portal.loadJSON('../data/ee-standards.json')
+      portal.loadJSON('../data/ee-standards.json'),
+      portal.loadJSON('../data/ee-design-context.json')
     ]);
     const courses = data.curriculum.courses || [];
     const wanted = portal.getParam('course') || portal.normCourse(courses[0]).code;
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const standardsCount = standardsData.standards.filter(standard =>
         standard.courses.some(mapping => mapping.courseCode === course.course_code)).length;
       if (standardsCount) blocks.push(`<div class="course-information-block"><h3>Standards &amp; Codes</h3><p>${standardsCount} relevant ${standardsCount === 1 ? 'standard' : 'standards'} for this course. <a class="course-standards-link" href="standards-and-codes.html?course=${encodeURIComponent(course.course_code)}">View course standards</a></p></div>`);
+      if (contextData.courses.some(item => item.code === course.course_code)) blocks.push(`<div class="course-information-block"><h3>Stakeholders &amp; Design Context</h3><p>Explore suggested stakeholders and contextual factors for this course. <a class="course-context-link" href="stakeholders-design-context.html?course=${encodeURIComponent(course.course_code)}">Open course design context</a></p></div>`);
       if (!blocks.length) return '<section class="card course-information"><h2>Course Information</h2><p class="muted">Additional course information is not available for this course.</p></section>';
       return `<section class="card course-information"><h2>Course Information</h2><div class="course-information-content">${blocks.join('')}</div></section>`;
     };

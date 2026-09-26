@@ -1,0 +1,1377 @@
+{
+  "kind": "instructor-suggestions",
+  "disclaimer": "Suggested stakeholders and contextual factors are prompts for instructor consideration. Applicability depends on the specific engineering problem, activity, or project.",
+  "dimensions": {
+    "Stakeholders": "Who uses, operates, maintains, buys, regulates, or is otherwise affected by an engineering system?",
+    "Public Health": "Could the technology affect human health even without an immediate accident? In EE, consider exposure to RF fields, heat, noise, or battery materials where relevant.",
+    "Safety": "Could a fault, failure, or incorrect use injure someone, damage equipment, or create hazardous operation?",
+    "Welfare": "Does the system dependably support people's normal activities, essential services, accessibility, or quality of life? In EE, this often means trustworthy measurements and continuity of power or communication.",
+    "Global": "Does the decision depend on international compatibility, standards, spectrum allocation, supply chains, or deployment across countries?",
+    "Cultural": "Could language, local practices, expectations, or acceptance change how the technology should be designed or used?",
+    "Social": "How does the technology affect groups, communities, accessibility, inclusion, or everyday interaction?",
+    "Environmental": "What energy, materials, emissions, waste, land, or other resources does the system use or affect?",
+    "Economic": "What are the direct purchase, operating, maintenance, replacement, and lifecycle cost trade-offs?",
+    "Socioeconomic": "Do income, location, infrastructure, or social circumstances cause different groups to receive different benefits or burdens from the same technical decision?"
+  },
+  "courses": [
+    {
+      "code": "EE 201",
+      "title": "Introduction to Circuits",
+      "rationale": "Use a basic circuit or laboratory setup to discuss measurement, safe operation, and the people who rely on the result.",
+      "stakeholders": [
+        {
+          "name": "Student laboratory users",
+          "need": "Clear operating limits and safe measurement points",
+          "why": "They connect circuits and meters, so unclear limits or misleading readings affect their learning and safety."
+        },
+        {
+          "name": "Laboratory technicians",
+          "need": "Serviceable equipment and identifiable faults",
+          "why": "They prepare and repair the benches, and need faults to be visible before the next class uses the equipment."
+        },
+        {
+          "name": "Equipment users",
+          "need": "Dependable readings and understandable units",
+          "why": "They may make a design decision from the indicated voltage or current."
+        },
+        {
+          "name": "Course instructors",
+          "need": "Repeatable demonstrations and consistent notation",
+          "why": "They need a repeatable setup so students can compare results rather than troubleshoot inconsistent equipment."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "Contact with energized circuits, incorrect connections, and component heating.",
+          "implication": "Consider current limits, isolation, and a safe test procedure.",
+          "standards": [
+            "IEEE|120-2023"
+          ],
+          "example": "A student moves a lead while a breadboard supply is energized.",
+          "teachingIdea": "Demonstrate a safer sequence for wiring, energizing, and measuring a simple circuit.",
+          "assessmentPrompt": "You may ask students to compare two probe-and-wiring plans and justify which better prevents an accidental short or contact with an energized point."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Measurement errors can lead to an unreliable circuit decision.",
+          "implication": "Specify an acceptable measurement tolerance and verify it.",
+          "standards": [
+            "IEEE|1057-2017"
+          ],
+          "example": "Two voltmeters give different readings on the same resistor network; one varies between trials.",
+          "teachingIdea": "Have students repeat a voltage measurement and discuss who would rely on its result.",
+          "assessmentPrompt": "You may ask students to compare a cheaper but less repeatable meter with a more reliable one, identify who relies on the reading, and explain one consequence of an incorrect value."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Component ratings and replacement costs affect practical circuit choices.",
+          "implication": "Compare suitable components against an instructional budget.",
+          "standards": [],
+          "example": "A low-cost resistor operates close to its power rating and needs frequent replacement.",
+          "teachingIdea": "Compare component price with power rating and expected replacement effort.",
+          "assessmentPrompt": "You may ask students to choose between two resistor ratings for a given circuit and justify the choice using purchase and replacement cost."
+        },
+        {
+          "dimension": "Public Health",
+          "consideration": "Foreseeable misuse of a laboratory supply or probe may expose a person to electrical hazards.",
+          "implication": "Document safe operating limits and supervision needs.",
+          "standards": [],
+          "example": "An exposed supply terminal is touched during foreseeable laboratory misuse.",
+          "teachingIdea": "Use a short lab-safety scenario to distinguish a health exposure from ordinary circuit performance.",
+          "assessmentPrompt": "You may ask students to identify one foreseeable misuse of a laboratory supply and propose an operating limit or barrier that reduces exposure."
+        }
+      ],
+      "stakeholderTeachingIdea": "Pause at a circuit demonstration and ask who would be affected if the displayed voltage were wrong or a lead were unsafe.",
+      "stakeholderAssessmentPrompt": "You may ask students to identify the laboratory user and technician in a measurement setup and derive one safe-use requirement for each."
+    },
+    {
+      "code": "EE 202",
+      "title": "Circuit Analysis",
+      "rationale": "Connect analytical assumptions to real loads, supply quality, and decisions about circuit operation.",
+      "stakeholders": [
+        {
+          "name": "Circuit designers",
+          "need": "Models that represent expected operating conditions",
+          "why": "They choose models and assumptions that later determine component ratings and load behavior."
+        },
+        {
+          "name": "Equipment operators",
+          "need": "Stable voltage and predictable behavior",
+          "why": "They see the effect when a real circuit does not hold the expected voltage."
+        },
+        {
+          "name": "Maintenance personnel",
+          "need": "Diagnosable faults and accessible measurements",
+          "why": "They need measurements that help locate a fault rather than obscure it."
+        },
+        {
+          "name": "Connected equipment users",
+          "need": "Power quality that does not disrupt their equipment",
+          "why": "Their devices may be disrupted by a disturbance produced elsewhere on the shared supply."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "Fault currents and overstressed components may create unsafe operating conditions.",
+          "implication": "Check worst-case currents and component ratings.",
+          "standards": [],
+          "example": "A shorted branch draws more current than a selected component can withstand.",
+          "teachingIdea": "Work a worst-case current calculation before discussing protection.",
+          "assessmentPrompt": "You may ask students to calculate fault current for a simple network and select a justified component rating or protective limit."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Voltage variation or disturbances may interrupt a supplied function.",
+          "implication": "Define a voltage-quality or continuity constraint for the load.",
+          "standards": [
+            "IEEE|1159-2019"
+          ],
+          "example": "A brief supply sag resets a sensitive control board.",
+          "teachingIdea": "Compare ideal circuit analysis with a measured voltage-disturbance trace.",
+          "assessmentPrompt": "You may ask students to set a voltage tolerance for a load and explain what happens to its user when the supply falls below it."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Oversizing and losses can change the cost of an otherwise valid circuit.",
+          "implication": "Compare lifecycle cost alongside electrical performance.",
+          "standards": [],
+          "example": "A larger component lowers losses but costs more initially.",
+          "teachingIdea": "Compare two circuit designs using purchase cost and expected operating energy.",
+          "assessmentPrompt": "You may ask students to choose between two components using both initial cost and annual loss, stating the assumed duty cycle."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Circuit losses turn supplied energy into heat.",
+          "implication": "Estimate losses for a representative operating case.",
+          "standards": [
+            "IEEE|519-2022"
+          ],
+          "example": "A high-current path wastes power as heat over many operating hours.",
+          "teachingIdea": "Calculate I²R loss for two wiring or load choices.",
+          "assessmentPrompt": "You may ask students to estimate energy lost in two circuit alternatives and explain how the difference affects heat and resource use."
+        }
+      ],
+      "stakeholderTeachingIdea": "Trace a supply disturbance through a circuit and ask which user sees the first practical consequence.",
+      "stakeholderAssessmentPrompt": "You may ask students to name two users affected by a voltage sag and derive one circuit-level constraint for each."
+    },
+    {
+      "code": "EE 211",
+      "title": "Electronic Fundamentals",
+      "rationale": "Use an electronic device or radio-enabled product to examine user exposure, interference, and repairability.",
+      "stakeholders": [
+        {
+          "name": "Device users",
+          "need": "Reliable and understandable operation",
+          "why": "They interact with the product and experience its faults or unclear indicators."
+        },
+        {
+          "name": "Test engineers",
+          "need": "Repeatable emissions and immunity measurements",
+          "why": "They must show that emissions and immunity claims are supported by repeatable measurements."
+        },
+        {
+          "name": "Nearby equipment users",
+          "need": "Avoidance of harmful interference",
+          "why": "Their devices may malfunction when the new product emits interference."
+        },
+        {
+          "name": "Maintenance technicians",
+          "need": "Safe access and fault identification",
+          "why": "They diagnose failures and need accessible, safely serviceable assemblies."
+        },
+        {
+          "name": "Equipment manufacturers",
+          "need": "Feasible product-level design constraints",
+          "why": "They must build a practical design whose reliability and test needs are clear."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "Device faults or thermal stress may affect a person handling the circuit.",
+          "implication": "Identify a fault response and a temperature limit.",
+          "standards": [],
+          "example": "A failed transistor causes a board area to overheat.",
+          "teachingIdea": "Walk through a component-fault case and locate the thermal hazard.",
+          "assessmentPrompt": "You may ask students to identify a likely fault on a simple device and specify one protective response or temperature limit."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Electromagnetic interference may reduce dependable operation.",
+          "implication": "Set an immunity or emissions test condition.",
+          "standards": [
+            "ETSI|EN 301 489-1 V2.2.3"
+          ],
+          "example": "A nearby transmitter causes a product to reset during use.",
+          "teachingIdea": "Demonstrate or discuss an EMC susceptibility example.",
+          "assessmentPrompt": "You may ask students to propose an immunity test and state what user-visible behavior would count as an unacceptable failure."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Device choice influences production and repair cost.",
+          "implication": "Compare replacement and repair options with performance.",
+          "standards": [],
+          "example": "A sealed module is inexpensive to buy but costly to replace after one failed part.",
+          "teachingIdea": "Compare a repairable and non-repairable board over a plausible service life.",
+          "assessmentPrompt": "You may ask students to compare module replacement cost with component-level repair and justify a design choice."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Quiescent power and short device life add energy use and e-waste.",
+          "implication": "Measure idle power and consider component replacement.",
+          "standards": [
+            "IEEE|1801-2024"
+          ],
+          "example": "Standby current from many deployed devices adds substantial annual energy demand.",
+          "teachingIdea": "Measure or estimate idle power and scale it to a fleet.",
+          "assessmentPrompt": "You may ask students to calculate annual standby energy for two device designs and recommend one with a reason."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Controls and indicators may be difficult for some users to understand.",
+          "implication": "Test a clear indication of normal and fault states.",
+          "standards": [],
+          "example": "A single flashing LED gives users no clear distinction between normal and fault states.",
+          "teachingIdea": "Ask students to interpret two indicator schemes without instructions.",
+          "assessmentPrompt": "You may ask students to redesign status feedback so a user can distinguish a recoverable fault from normal operation."
+        }
+      ],
+      "stakeholderTeachingIdea": "Use a small electronic product and ask what its user, test engineer, and nearby device user each needs.",
+      "stakeholderAssessmentPrompt": "You may ask students to identify three stakeholders for a radio-enabled circuit and write a different testable concern for each."
+    },
+    {
+      "code": "EE 221",
+      "title": "Logic Design",
+      "rationale": "Discuss how digital logic behaves for users, maintainers, and downstream system designers.",
+      "stakeholders": [
+        {
+          "name": "End users",
+          "need": "Predictable behavior when inputs or timing vary",
+          "why": "They depend on the digital output behaving predictably even after reset or invalid input."
+        },
+        {
+          "name": "Digital designers",
+          "need": "Unambiguous logic and reusable interfaces",
+          "why": "They define the logic and interface assumptions that determine system behavior."
+        },
+        {
+          "name": "Verification engineers",
+          "need": "Testable states and traceable failures",
+          "why": "They need observable states to verify both intended behavior and faults."
+        },
+        {
+          "name": "System integrators",
+          "need": "Compatible and documented digital components",
+          "why": "They combine blocks from different sources and are affected by undocumented interfaces."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "A wrong logic state can propagate to a safety-critical output in some applications.",
+          "implication": "Define a safe default and test invalid inputs where relevant.",
+          "standards": [
+            "IEEE|1500-2022"
+          ],
+          "example": "An invalid state energizes an actuator output.",
+          "teachingIdea": "Use a state table to identify invalid inputs and safer default outputs.",
+          "assessmentPrompt": "You may ask students to add a safe default to a finite-state design and show a test that reaches the invalid state."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Unexpected state transitions reduce dependable system behavior.",
+          "implication": "Specify reset and recovery behavior.",
+          "standards": [
+            "IEEE|1076-2019"
+          ],
+          "example": "A reset produces a brief wrong output that interrupts a downstream device.",
+          "teachingIdea": "Simulate reset and recovery before comparing implementations.",
+          "assessmentPrompt": "You may ask students to explain a reset glitch and specify observable recovery behavior for a dependent user."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Reusable blocks may lower redesign and verification effort.",
+          "implication": "Record interface assumptions and reuse costs.",
+          "standards": [
+            "IEEE|1685-2022"
+          ],
+          "example": "A reusable logic block saves redesign time but needs interface and verification work.",
+          "teachingIdea": "Compare reuse with a fresh design using a small effort estimate.",
+          "assessmentPrompt": "You may ask students to choose reuse or redesign for a logic module, accounting for verification and integration cost."
+        },
+        {
+          "dimension": "Global",
+          "consideration": "Shared hardware description practices support collaboration across teams.",
+          "implication": "Use a documented language and interface convention.",
+          "standards": [
+            "IEEE|1800-2023"
+          ],
+          "example": "Two teams interpret the same HDL interface differently.",
+          "teachingIdea": "Have teams exchange a short interface description and identify ambiguity.",
+          "assessmentPrompt": "You may ask students to revise an ambiguous digital interface specification so an external team can implement it consistently."
+        }
+      ],
+      "stakeholderTeachingIdea": "Trace one invalid input through a logic block and ask who notices the resulting output.",
+      "stakeholderAssessmentPrompt": "You may ask students to map an invalid-state concern from an end user to a verification test."
+    },
+    {
+      "code": "EE 231",
+      "title": "Signals and Systems",
+      "rationale": "Relate signal quality and numerical assumptions to decisions made from measurements.",
+      "stakeholders": [
+        {
+          "name": "Measurement users",
+          "need": "Signals with known accuracy and limitations",
+          "why": "They act on a signal or measurement and need to know its uncertainty."
+        },
+        {
+          "name": "Signal-processing engineers",
+          "need": "Reproducible sampling and analysis",
+          "why": "They choose sampling and processing assumptions that may preserve or lose information."
+        },
+        {
+          "name": "System operators",
+          "need": "Timely detection of meaningful changes",
+          "why": "They rely on timely detection of a meaningful signal change."
+        },
+        {
+          "name": "People affected by automated decisions",
+          "need": "Awareness of false alarms or missed events",
+          "why": "A false alarm or missed event can directly affect their experience or treatment."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Welfare",
+          "consideration": "Noise or sampling errors can hide a signal needed for service continuity.",
+          "implication": "Set signal-to-noise and sampling assumptions before interpreting results.",
+          "standards": [
+            "IEEE|1241-2023"
+          ],
+          "example": "A low sampling rate makes a fast event appear as a slower signal.",
+          "teachingIdea": "Plot the same signal at two sampling rates and compare interpretations.",
+          "assessmentPrompt": "You may ask students to choose a sampling rate for a given signal and explain how aliasing could mislead a service operator."
+        },
+        {
+          "dimension": "Safety",
+          "consideration": "A missed transient may delay a protective response in an applied system.",
+          "implication": "Check detection delay and false-negative behavior.",
+          "standards": [
+            "IEEE|1057-2017"
+          ],
+          "example": "A short transient is missed by a detector that averages over too long a window.",
+          "teachingIdea": "Compare detection delay and noise rejection for two time windows.",
+          "assessmentPrompt": "You may ask students to select a detection window and justify the safety trade-off between false alarms and missed transients."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Higher sampling and processing rates increase equipment and energy costs.",
+          "implication": "Choose a rate justified by the information needed.",
+          "standards": [],
+          "example": "A faster ADC and processor cost more than the application needs.",
+          "teachingIdea": "Compare data quality and system cost for two sampling configurations.",
+          "assessmentPrompt": "You may ask students to choose an ADC rate for a stated signal and justify why extra resolution or speed is or is not worth its cost."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Signal-based decisions may affect people when uncertainty is hidden.",
+          "implication": "Communicate confidence and limitations with the reported result.",
+          "standards": [
+            "IEEE|2700-2017"
+          ],
+          "example": "A sensor dashboard presents a noisy estimate as a precise fact.",
+          "teachingIdea": "Discuss how uncertainty should appear in a user-facing signal report.",
+          "assessmentPrompt": "You may ask students to rewrite a sensor alert to communicate uncertainty without hiding an important event."
+        }
+      ],
+      "stakeholderTeachingIdea": "Show a sampled signal and ask who would be affected if its peak were missed.",
+      "stakeholderAssessmentPrompt": "You may ask students to identify two users of a sensor signal and explain how sampling error changes each user's decision."
+    },
+    {
+      "code": "EE 304",
+      "title": "Electrical Machines",
+      "rationale": "Examine machine operation from the perspectives of operators, maintenance staff, energy users, and facility owners.",
+      "stakeholders": [
+        {
+          "name": "Machine operators",
+          "need": "Safe and predictable operation",
+          "why": "They start, stop, and supervise the machine and face the consequences of unexpected operation."
+        },
+        {
+          "name": "Maintenance personnel",
+          "need": "Accessible inspection and controlled shutdown",
+          "why": "They inspect insulation and mechanical parts and need safe access to identify faults."
+        },
+        {
+          "name": "Facility owners",
+          "need": "Availability and manageable operating costs",
+          "why": "They pay for outages, energy, and replacement over the machine's life."
+        },
+        {
+          "name": "Nearby workers",
+          "need": "Protection from heat, noise, and moving parts",
+          "why": "They may be exposed to moving parts, noise, or heat without operating the machine."
+        },
+        {
+          "name": "Equipment manufacturers",
+          "need": "Clear duty and performance expectations",
+          "why": "They need a clear duty cycle and testable performance expectations."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "Rotating parts, overheating, and insulation faults can harm people or equipment.",
+          "implication": "Specify guards, thermal limits, and a fault shutdown condition.",
+          "standards": [
+            "IEEE|3004.8-2016"
+          ],
+          "example": "A motor shaft is accessible while the machine can start unexpectedly.",
+          "teachingIdea": "Walk through a machine startup and maintenance scenario.",
+          "assessmentPrompt": "You may ask students to identify a rotating-part and insulation hazard and specify a guard or shutdown requirement."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Machine outages may interrupt a dependent facility process.",
+          "implication": "Define availability and maintenance intervals.",
+          "standards": [
+            "IEEE|841-2021"
+          ],
+          "example": "A pump motor outage interrupts water delivery to a facility.",
+          "teachingIdea": "Map the machine to the service it supports.",
+          "assessmentPrompt": "You may ask students to set an availability or maintenance requirement for a motor serving a critical pump."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Machine losses increase electricity use and cooling needs.",
+          "implication": "Compare efficiency at expected load points.",
+          "standards": [
+            "IEEE|112-2017"
+          ],
+          "example": "Two motors have different efficiency at the facility's usual partial load.",
+          "teachingIdea": "Compare efficiency curves at realistic operating points.",
+          "assessmentPrompt": "You may ask students to calculate annual electricity use for two motors at the expected load and explain the environmental consequence."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Purchase price alone may understate energy and maintenance cost.",
+          "implication": "Evaluate total ownership cost over a realistic duty cycle.",
+          "standards": [
+            "IEEE|112-2017"
+          ],
+          "example": "A cheaper motor costs more to operate and repair over five years.",
+          "teachingIdea": "Build a simple purchase-plus-energy-plus-maintenance comparison.",
+          "assessmentPrompt": "You may ask students to choose between two machines using lifecycle cost rather than purchase price alone."
+        },
+        {
+          "dimension": "Public Health",
+          "consideration": "Noise and heat exposure may matter in occupied or industrial spaces.",
+          "implication": "Measure or estimate exposure in the intended setting.",
+          "standards": [],
+          "example": "A machine adds heat and noise near an occupied work area.",
+          "teachingIdea": "Discuss what should be measured at the actual installation.",
+          "assessmentPrompt": "You may ask students to propose one measurement and one design change for a noisy or overheated machine room."
+        }
+      ],
+      "stakeholderTeachingIdea": "Use a pump-motor example and ask what operators, nearby workers, and maintenance staff need from the same design.",
+      "stakeholderAssessmentPrompt": "You may ask students to derive separate operating and maintenance requirements for an industrial motor installation."
+    },
+    {
+      "code": "EE 305",
+      "title": "Power Electronics",
+      "rationale": "Use a converter design to consider hazards, power quality, energy loss, and lifecycle cost.",
+      "stakeholders": [
+        {
+          "name": "Equipment users",
+          "need": "Reliable converted power",
+          "why": "They depend on converted power meeting the stated output limits."
+        },
+        {
+          "name": "Converter operators",
+          "need": "Safe startup and fault response",
+          "why": "They start, stop, and respond to converter faults."
+        },
+        {
+          "name": "Maintenance personnel",
+          "need": "Safe access and straightforward diagnosis",
+          "why": "They may encounter stored charge and need a clear diagnostic path."
+        },
+        {
+          "name": "Utilities",
+          "need": "Acceptable grid interaction and power quality",
+          "why": "They share the electrical network and may see harmonics or connection effects."
+        },
+        {
+          "name": "Manufacturers",
+          "need": "Practical thermal and component constraints",
+          "why": "They select parts and thermal design that make the converter feasible."
+        },
+        {
+          "name": "Facility owners",
+          "need": "Affordable energy and maintenance over service life",
+          "why": "They bear energy and service costs over the converter lifetime."
+        },
+        {
+          "name": "Nearby equipment users",
+          "need": "Avoidance of disruptive harmonics",
+          "why": "Their equipment can be affected by distortion from a shared bus."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "Electric shock, thermal stress, overcurrent, and insulation failure.",
+          "implication": "Set isolation, protection, and fault-temperature requirements.",
+          "standards": [
+            "IEEE|1662-2023"
+          ],
+          "example": "A DC-link capacitor remains charged after the converter is switched off.",
+          "teachingIdea": "Walk through the stored-energy and fault paths on a converter schematic.",
+          "assessmentPrompt": "You may ask students to specify an isolation or discharge requirement and a way to verify safe maintenance access."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Converter failure can interrupt supplied equipment.",
+          "implication": "Specify acceptable output quality and recovery behavior.",
+          "standards": [
+            "IEEE|1159-2019"
+          ],
+          "example": "An output sag from the converter stops a production process.",
+          "teachingIdea": "Compare output waveforms under normal and fault conditions.",
+          "assessmentPrompt": "You may ask students to define an output-voltage and recovery criterion for a converter supplying a sensitive load."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Converter losses, cooling energy, and end-of-life electronics.",
+          "implication": "Set a rated-load efficiency target and consider replaceable parts.",
+          "standards": [],
+          "example": "One converter is 94% efficient and another 97% efficient at rated load.",
+          "teachingIdea": "Calculate losses and cooling demand for two designs at the same output power.",
+          "assessmentPrompt": "You may ask students to compare two converter efficiencies and explain effects on energy use, cooling, operating cost, and environmental impact."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Efficiency and repairability affect energy and lifecycle cost.",
+          "implication": "Compare purchase, operation, and maintenance costs.",
+          "standards": [],
+          "example": "A smaller heat sink cuts purchase cost but raises cooling and repair expense.",
+          "teachingIdea": "Compare initial and operating costs using a simple duty cycle.",
+          "assessmentPrompt": "You may ask students to choose between two converter thermal designs using lifecycle cost and an explicit assumption about operating hours."
+        },
+        {
+          "dimension": "Global",
+          "consideration": "A grid-connected converter may need interoperable connection behavior.",
+          "implication": "Define an appropriate interface and verification plan.",
+          "standards": [
+            "IEEE|1547-2018"
+          ],
+          "example": "A grid-tied converter must connect predictably to a shared network.",
+          "teachingIdea": "Use a short connection scenario to discuss interface behavior.",
+          "assessmentPrompt": "You may ask students to identify one grid-interface requirement and explain how a different deployment setting might change it."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Harmonic distortion can affect other connected users.",
+          "implication": "Measure or estimate harmonics at the shared connection.",
+          "standards": [
+            "IEEE|519-2022"
+          ],
+          "example": "Converter harmonics disturb another user on the same electrical bus.",
+          "teachingIdea": "Show a harmonic spectrum and identify affected loads.",
+          "assessmentPrompt": "You may ask students to identify who is affected by converter harmonics and propose a measurement or mitigation informed by IEEE 519."
+        }
+      ],
+      "stakeholderTeachingIdea": "Draw a converter connected to a shared bus and ask who experiences a fault, loss, or harmonic distortion.",
+      "stakeholderAssessmentPrompt": "You may ask students to identify the utility, operator, and neighboring equipment user, then derive one converter requirement for each."
+    },
+    {
+      "code": "EE 312",
+      "title": "Electronic Engineering",
+      "rationale": "Consider electronic product robustness, compatibility, and the people who use or maintain the device.",
+      "stakeholders": [
+        {
+          "name": "Product users",
+          "need": "Reliable operation and clear fault indication",
+          "why": "They see both normal product behavior and the consequences of failure."
+        },
+        {
+          "name": "RF equipment operators",
+          "need": "Limited interference and predictable performance",
+          "why": "They need the electronic device to work near other radio equipment."
+        },
+        {
+          "name": "Test laboratories",
+          "need": "Repeatable emissions and immunity evidence",
+          "why": "They must produce evidence that a robustness claim is repeatable."
+        },
+        {
+          "name": "Repair technicians",
+          "need": "Safe and diagnosable assemblies",
+          "why": "They need safe access to diagnose and replace failed parts."
+        },
+        {
+          "name": "Nearby device users",
+          "need": "Compatible electromagnetic environment",
+          "why": "They depend on a compatible electromagnetic environment."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "Component faults may cause overheating or unstable outputs.",
+          "implication": "Specify a safe response to a representative component fault.",
+          "standards": [],
+          "example": "A shorted output device overheats an amplifier enclosure.",
+          "teachingIdea": "Trace a single-component fault and its thermal path.",
+          "assessmentPrompt": "You may ask students to specify a fault-detection or shutdown response for an overheating amplifier."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "RF susceptibility can interrupt intended product behavior.",
+          "implication": "Set an immunity test for the expected environment.",
+          "standards": [
+            "ETSI|EN 301 489-1 V2.2.3"
+          ],
+          "example": "A nearby radio source causes an electronic product to reset.",
+          "teachingIdea": "Use a product-EMC case to discuss immunity rather than ideal-circuit behavior.",
+          "assessmentPrompt": "You may ask students to define an immunity test and state the maximum acceptable change in product operation."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Power consumption and component replacement influence device lifetime impact.",
+          "implication": "Measure active and standby power and consider repair access.",
+          "standards": [
+            "IEEE|1801-2024"
+          ],
+          "example": "A device draws unnecessary standby power throughout its service life.",
+          "teachingIdea": "Estimate annual standby energy for two design options.",
+          "assessmentPrompt": "You may ask students to compare active and standby energy for two products and justify one change to reduce lifecycle impact."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Shielding and robustness choices change product cost.",
+          "implication": "Compare mitigation cost against expected performance.",
+          "standards": [],
+          "example": "Shielding improves robustness but raises production cost; filtering offers a different trade-off.",
+          "teachingIdea": "Compare a shielding and filtering option using test results and cost.",
+          "assessmentPrompt": "You may ask students to choose an EMC mitigation strategy for a stated product budget and defend its expected performance."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Unclear interfaces or failures can exclude or frustrate users.",
+          "implication": "Test understandable status and recovery information.",
+          "standards": [],
+          "example": "A user cannot tell whether an indicator means normal operation or a recoverable fault.",
+          "teachingIdea": "Ask peers to interpret status feedback without documentation.",
+          "assessmentPrompt": "You may ask students to redesign a product indicator and explain how the change helps a user recover from a fault."
+        }
+      ],
+      "stakeholderTeachingIdea": "Use an amplifier near a radio transmitter and list the different concerns of users, repairers, and test staff.",
+      "stakeholderAssessmentPrompt": "You may ask students to derive a product test for a user concern and a service requirement for a repair technician."
+    },
+    {
+      "code": "EE 322",
+      "title": "Microprocessors Design",
+      "rationale": "Use an embedded-system example to connect timing, interfaces, faults, and maintainability to affected users.",
+      "stakeholders": [
+        {
+          "name": "Embedded-system users",
+          "need": "Predictable responses and understandable errors",
+          "why": "They experience a wrong or delayed response from the embedded device."
+        },
+        {
+          "name": "Firmware developers",
+          "need": "Clear hardware interfaces and timing assumptions",
+          "why": "They must implement the timing and interface assumptions set by the hardware."
+        },
+        {
+          "name": "System integrators",
+          "need": "Compatible reusable blocks",
+          "why": "They combine components and need compatible, documented interfaces."
+        },
+        {
+          "name": "Maintenance engineers",
+          "need": "Diagnostics and update paths",
+          "why": "They need diagnostics and update access after deployment."
+        },
+        {
+          "name": "Sensor-data users",
+          "need": "Measurements with known accuracy",
+          "why": "They make decisions from sensor values and need accuracy and timing context."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "A processor hang or incorrect output can affect a controlled device.",
+          "implication": "Define watchdog, reset, and safe-output behavior where needed.",
+          "standards": [
+            "IEEE|1500-2022"
+          ],
+          "example": "A frozen microcontroller leaves a valve command active.",
+          "teachingIdea": "Inject a watchdog timeout into an embedded-system example.",
+          "assessmentPrompt": "You may ask students to design a safe output state for a controller hang and specify a fault-injection test."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Timing or interface faults reduce service dependability.",
+          "implication": "State timing bounds and recovery behavior.",
+          "standards": [
+            "IEEE|1451.0-2024"
+          ],
+          "example": "Sensor timestamps drift and a monitoring system acts on stale data.",
+          "teachingIdea": "Compare a trace with synchronized and unsynchronized measurements.",
+          "assessmentPrompt": "You may ask students to set a maximum sensor-data age and explain its consequence for the system user."
+        },
+        {
+          "dimension": "Global",
+          "consideration": "Interoperable component descriptions support integration across suppliers.",
+          "implication": "Document an interface using a reusable representation.",
+          "standards": [
+            "IEEE|1685-2022"
+          ],
+          "example": "Two suppliers describe the same module interface differently.",
+          "teachingIdea": "Exchange a brief interface contract between student teams.",
+          "assessmentPrompt": "You may ask students to identify an ambiguous timing or data field and rewrite it for cross-supplier integration."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Diagnostic access can lower future maintenance cost.",
+          "implication": "Compare test coverage and service effort.",
+          "standards": [
+            "IEEE|1149.7-2022"
+          ],
+          "example": "An extra diagnostic port costs more initially but reduces field service visits.",
+          "teachingIdea": "Compare development cost with expected service effort.",
+          "assessmentPrompt": "You may ask students to justify or reject a diagnostic interface using a simple maintenance-cost estimate."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Automated responses may confuse users without clear status feedback.",
+          "implication": "Provide a visible fault and recovery state.",
+          "standards": [],
+          "example": "A device reports faults only through an inaccessible visual signal.",
+          "teachingIdea": "Review alternative feedback for users with different needs.",
+          "assessmentPrompt": "You may ask students to propose two ways an embedded device could communicate the same critical fault to users."
+        }
+      ],
+      "stakeholderTeachingIdea": "Trace a sensor reading through firmware to an output and ask who notices a late or wrong response.",
+      "stakeholderAssessmentPrompt": "You may ask students to derive one timing requirement for a user and one diagnostic requirement for a maintainer."
+    },
+    {
+      "code": "EE 332",
+      "title": "Control Systems",
+      "rationale": "Connect controller performance and sensor uncertainty to people operating or depending on the controlled process.",
+      "stakeholders": [
+        {
+          "name": "Process operators",
+          "need": "Stable behavior and interpretable alarms",
+          "why": "They intervene when the controller behaves unexpectedly."
+        },
+        {
+          "name": "Maintenance engineers",
+          "need": "Calibration and fault diagnosis",
+          "why": "They calibrate sensors and diagnose failures in the loop."
+        },
+        {
+          "name": "People near controlled equipment",
+          "need": "Protection from unstable operation",
+          "why": "They may be exposed to uncontrolled motion or process conditions."
+        },
+        {
+          "name": "Facility owners",
+          "need": "Continuity of service and manageable costs",
+          "why": "They depend on continuous, efficient operation."
+        },
+        {
+          "name": "Sensor-data users",
+          "need": "Timestamped and trustworthy measurements",
+          "why": "They rely on trustworthy measurements and timestamps."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "Instability, actuator saturation, or sensor failure may create hazardous motion or process states.",
+          "implication": "Define a safe state and test a representative failure.",
+          "standards": [
+            "IEEE|2700-2017"
+          ],
+          "example": "A poorly tuned controller overshoots the safe travel of an actuator.",
+          "teachingIdea": "Plot a step response and mark the point where performance becomes hazardous.",
+          "assessmentPrompt": "You may ask students to set an overshoot limit and describe the safe state after a failed sensor reading."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Poor response or loss of synchronization can interrupt a service.",
+          "implication": "Set settling, availability, and timing criteria.",
+          "standards": [
+            "IEEE|1588-2019"
+          ],
+          "example": "Timing drift causes a controller to miss a service target.",
+          "teachingIdea": "Compare control traces with different delay and synchronization.",
+          "assessmentPrompt": "You may ask students to specify settling time and data-timing bounds for a process that users depend on."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Conservative tuning can trade energy or throughput against performance.",
+          "implication": "Compare operating cost for candidate control settings.",
+          "standards": [],
+          "example": "Aggressive control reduces response time but raises energy consumption.",
+          "teachingIdea": "Compare two tuning settings using response and energy plots.",
+          "assessmentPrompt": "You may ask students to justify a tuning choice using both operating cost and control performance."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Control choices affect process energy and material waste.",
+          "implication": "Include energy or waste in performance comparison.",
+          "standards": [],
+          "example": "Repeated overshoot wastes material in a controlled process.",
+          "teachingIdea": "Estimate waste under two response profiles.",
+          "assessmentPrompt": "You may ask students to compare two controllers and quantify how overshoot changes energy or material use."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Operator understanding influences safe intervention.",
+          "implication": "Test whether alarms communicate a useful action.",
+          "standards": [
+            "IEEE|1451.0-2024"
+          ],
+          "example": "An alarm says only “fault” and gives an operator no useful action.",
+          "teachingIdea": "Role-play the operator response to two alarm messages.",
+          "assessmentPrompt": "You may ask students to rewrite a control alarm so it communicates a specific condition and a safe next action."
+        }
+      ],
+      "stakeholderTeachingIdea": "Follow a control-loop fault from sensor to actuator and ask whose concern emerges at each step.",
+      "stakeholderAssessmentPrompt": "You may ask students to assign one safe-state concern to a nearby person and one recovery concern to an operator."
+    },
+    {
+      "code": "EE 341",
+      "title": "Electromagnetics Fundamental",
+      "rationale": "Discuss field measurement, exposure, propagation, and spectrum sharing in an applied electromagnetic example.",
+      "stakeholders": [
+        {
+          "name": "RF equipment users",
+          "need": "Predictable coverage and device operation",
+          "why": "They rely on radio performance and may be near the device in normal use."
+        },
+        {
+          "name": "People near installations",
+          "need": "Appropriate exposure assessment",
+          "why": "They may be near an antenna site without operating the equipment."
+        },
+        {
+          "name": "Spectrum regulators",
+          "need": "Evidence of suitable radio operation",
+          "why": "They need evidence that radio operation fits assigned bands and constraints."
+        },
+        {
+          "name": "Nearby spectrum users",
+          "need": "Avoidance of harmful interference",
+          "why": "They can experience interference from a new installation."
+        },
+        {
+          "name": "Field technicians",
+          "need": "Safe measurement procedures",
+          "why": "They measure fields and need safe procedures near energized equipment."
+        },
+        {
+          "name": "Communities near sites",
+          "need": "Clear information about local effects",
+          "why": "They experience local coverage, siting, and communication effects."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Public Health",
+          "consideration": "RF exposure can matter near a transmitter or during maintenance.",
+          "implication": "Estimate exposure for the stated scenario and compare it with an appropriate limit.",
+          "standards": [
+            "IEEE|C95.1-2019",
+            "IEEE|C95.3-2021"
+          ],
+          "example": "A technician approaches a transmitting antenna while measuring a field.",
+          "teachingIdea": "Work a field-exposure scenario and distinguish estimated exposure from assumed harm.",
+          "assessmentPrompt": "You may ask students to estimate a field or exposure for a stated setup and explain when comparison with IEEE C95.1 is appropriate."
+        },
+        {
+          "dimension": "Safety",
+          "consideration": "Measurement setup or high-field operation can expose technicians to hazards.",
+          "implication": "Define separation and shutdown procedures for testing.",
+          "standards": [
+            "IEEE|C95.3-2021"
+          ],
+          "example": "A measurement is attempted before the transmitter is isolated.",
+          "teachingIdea": "Discuss a safe field-measurement plan near energized equipment.",
+          "assessmentPrompt": "You may ask students to propose separation, shutdown, and verification steps for an antenna measurement."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Site placement and equipment energy use may affect the surrounding area.",
+          "implication": "Compare placement and power choices for the application.",
+          "standards": [
+            "ITU-R|P.1411-13"
+          ],
+          "example": "Two antenna locations have different power demand and local siting effects.",
+          "teachingIdea": "Compare sites using coverage and operating-energy assumptions.",
+          "assessmentPrompt": "You may ask students to compare two site choices and justify one using propagation, energy, and local environmental effects."
+        },
+        {
+          "dimension": "Global",
+          "consideration": "Radio systems may cross borders or share internationally allocated bands.",
+          "implication": "State the operating band and interoperability assumption.",
+          "standards": [
+            "ETSI|EN 300 328 V2.2.2"
+          ],
+          "example": "A radio device designed for one band is proposed for use in another country.",
+          "teachingIdea": "Compare band and equipment assumptions in two deployment settings.",
+          "assessmentPrompt": "You may ask students to explain why a radio design cannot automatically be deployed unchanged under a different band allocation."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Coverage gaps may affect access to a useful radio service.",
+          "implication": "Map coverage for affected users or locations.",
+          "standards": [
+            "ITU-R|P.1812-8"
+          ],
+          "example": "A street-level coverage gap affects one neighborhood more than another.",
+          "teachingIdea": "Use a simple propagation map to identify who lacks service.",
+          "assessmentPrompt": "You may ask students to identify affected users on a coverage map and propose one engineering change to improve service."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Propagation loss can reduce service availability.",
+          "implication": "Set a link margin for the expected environment.",
+          "standards": [
+            "ITU-R|P.525-5"
+          ],
+          "example": "Rain or path loss reduces the margin of a radio link.",
+          "teachingIdea": "Build a link budget for two propagation conditions.",
+          "assessmentPrompt": "You may ask students to calculate a link margin and explain how a low margin affects service availability."
+        }
+      ],
+      "stakeholderTeachingIdea": "Sketch an antenna site and ask who is affected by exposure, coverage, measurement work, and spectrum use.",
+      "stakeholderAssessmentPrompt": "You may ask students to identify four stakeholders around a proposed antenna site and derive one distinct concern for each."
+    },
+    {
+      "code": "EE 351",
+      "title": "Communication Systems",
+      "rationale": "Use a broadcast or mobile link to examine who receives service, who shares spectrum, and how reliability is evidenced.",
+      "stakeholders": [
+        {
+          "name": "End users",
+          "need": "Available and understandable communication service",
+          "why": "They depend on coverage, usable data rates, and continuity of communication."
+        },
+        {
+          "name": "Broadcasters",
+          "need": "Coverage and signal quality",
+          "why": "They need predictable signal quality for their audience."
+        },
+        {
+          "name": "Mobile and network operators",
+          "need": "Reliable capacity and manageable deployment",
+          "why": "They plan capacity and must keep service available at manageable cost."
+        },
+        {
+          "name": "Spectrum regulators",
+          "need": "Responsible use of assigned bands",
+          "why": "They allocate spectrum and manage interference among services."
+        },
+        {
+          "name": "Equipment manufacturers",
+          "need": "Interoperable radio interfaces",
+          "why": "They build radios that must interoperate with network interfaces."
+        },
+        {
+          "name": "Emergency services",
+          "need": "Communications during disruptions",
+          "why": "They may depend on communication when other infrastructure fails."
+        },
+        {
+          "name": "Nearby spectrum users",
+          "need": "Avoidance of harmful interference",
+          "why": "They lose service when another transmitter causes harmful interference."
+        },
+        {
+          "name": "Communities receiving service",
+          "need": "Coverage and fair access",
+          "why": "They experience both coverage and gaps in access to the service."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Public Health",
+          "consideration": "RF exposure may matter for an installation or operating scenario.",
+          "implication": "Identify when an exposure assessment is needed; do not assume one for every link.",
+          "standards": [],
+          "example": "A rooftop base station raises an exposure question for nearby people and workers.",
+          "teachingIdea": "Discuss when an RF exposure estimate is needed, distinguishing it from a coverage calculation.",
+          "assessmentPrompt": "You may ask students to identify the operating facts needed before deciding whether an RF exposure assessment is relevant."
+        },
+        {
+          "dimension": "Safety",
+          "consideration": "Unreliable emergency communication or harmful interference can affect safety.",
+          "implication": "Define a service-availability or interference constraint.",
+          "standards": [
+            "ITU-R|SM.329-13"
+          ],
+          "example": "Interference interrupts an emergency radio link during a local incident.",
+          "teachingIdea": "Use a short outage case to discuss failure and interference paths.",
+          "assessmentPrompt": "You may ask students to propose an interference or availability requirement for emergency communication and explain who it protects."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Coverage and network reliability influence continuity of communication.",
+          "implication": "Set a coverage and outage target for the intended users.",
+          "standards": [
+            "3GPP|TS 38.300"
+          ],
+          "example": "A coverage gap leaves users without a dependable mobile service.",
+          "teachingIdea": "Compare a coverage map with a network availability target.",
+          "assessmentPrompt": "You may ask students to set a coverage or outage criterion and explain its consequence for a named user group."
+        },
+        {
+          "dimension": "Global",
+          "consideration": "Spectrum allocation and radio interfaces have international context.",
+          "implication": "Record band and interoperability assumptions.",
+          "standards": [
+            "ITU-R|M.1036-8",
+            "3GPP|TS 38.211"
+          ],
+          "example": "A wireless system uses a band assigned differently in another country.",
+          "teachingIdea": "Compare spectrum allocation and interface assumptions across two countries.",
+          "assessmentPrompt": "You may ask students to explain why a wireless system designed for one frequency allocation cannot automatically be deployed unchanged in another country, and identify affected stakeholders."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Coverage gaps can deepen digital exclusion.",
+          "implication": "Compare service reach across affected communities.",
+          "standards": [
+            "ITU-R|P.1411-13"
+          ],
+          "example": "An outlying community receives weaker service than a central district.",
+          "teachingIdea": "Discuss a map of coverage and the everyday activities affected by a gap.",
+          "assessmentPrompt": "You may ask students to compare service reach for two communities and propose one engineering option to reduce the gap."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Spectrum efficiency and infrastructure cost constrain deployment.",
+          "implication": "Compare capacity, equipment, and deployment cost.",
+          "standards": [
+            "ITU-R|M.2150-3"
+          ],
+          "example": "A high-capacity site serves more users but costs more to install and operate.",
+          "teachingIdea": "Compare two network layouts using capacity and cost estimates.",
+          "assessmentPrompt": "You may ask students to choose between a new tower and smaller cells using capacity, deployment, and operating cost."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Transmitters and base stations use energy and create equipment waste.",
+          "implication": "Estimate energy demand and equipment replacement over service life.",
+          "standards": [],
+          "example": "Two base-station designs deliver similar coverage with different power demand.",
+          "teachingIdea": "Estimate annual site energy for two equipment options.",
+          "assessmentPrompt": "You may ask students to compare site energy and equipment replacement over a stated service life."
+        },
+        {
+          "dimension": "Cultural",
+          "consideration": "Language and local communication habits may affect service acceptance.",
+          "implication": "Test an interface or message format with intended users.",
+          "standards": [],
+          "example": "An emergency message is technically delivered but misunderstood in the local language.",
+          "teachingIdea": "Compare message wording or interface choices with intended users.",
+          "assessmentPrompt": "You may ask students to revise an emergency alert for a specified community and propose a way to test comprehension."
+        },
+        {
+          "dimension": "Socioeconomic",
+          "consideration": "Service affordability and rural/urban infrastructure differ.",
+          "implication": "Compare coverage and cost for groups with different access constraints.",
+          "standards": [],
+          "example": "A rural area has sparse towers and lower customer density than an urban area.",
+          "teachingIdea": "Compare the infrastructure needed to serve two locations.",
+          "assessmentPrompt": "You may ask students to propose a coverage plan for rural and urban groups and explain how affordability and infrastructure change the engineering decision."
+        }
+      ],
+      "stakeholderTeachingIdea": "Draw a shared-spectrum communication network and label users, operators, regulators, emergency services, and neighboring systems.",
+      "stakeholderAssessmentPrompt": "You may ask students to identify four stakeholders in a radio deployment and derive a different coverage, interference, or reliability requirement from each concern."
+    },
+    {
+      "code": "EE 403",
+      "title": "Power Systems",
+      "rationale": "Use a grid or distribution decision to examine public service, fault response, cost, and uneven impacts.",
+      "stakeholders": [
+        {
+          "name": "Electricity customers",
+          "need": "Reliable and affordable service",
+          "why": "They rely on affordable electricity and experience outages directly."
+        },
+        {
+          "name": "Utility operators",
+          "need": "Observable and controllable grid conditions",
+          "why": "They make switching and restoration decisions under changing conditions."
+        },
+        {
+          "name": "Line and substation workers",
+          "need": "Safe isolation and fault response",
+          "why": "They face hazards from energized lines, faults, and incorrect isolation."
+        },
+        {
+          "name": "Facility owners",
+          "need": "Power quality for their equipment",
+          "why": "They may lose production when power quality deteriorates."
+        },
+        {
+          "name": "Distributed-generation owners",
+          "need": "Predictable connection requirements",
+          "why": "They need predictable technical conditions for connecting generation."
+        },
+        {
+          "name": "Communities near infrastructure",
+          "need": "Reasonable local impacts and communication",
+          "why": "They experience local siting effects and service outcomes."
+        },
+        {
+          "name": "Regulators",
+          "need": "Evidence of dependable system operation",
+          "why": "They need evidence that grid operation meets applicable obligations."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Safety",
+          "consideration": "Faults and energized infrastructure create risks to workers and the public.",
+          "implication": "Define protection and isolation behavior for a fault case.",
+          "standards": [
+            "IEEE|C37.113-2025"
+          ],
+          "example": "A feeder fault leaves a line energized while a crew is preparing repair work.",
+          "teachingIdea": "Trace protection and isolation on a one-line diagram.",
+          "assessmentPrompt": "You may ask students to identify a fault-clearing and isolation requirement that protects workers and the public."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Outages and poor power quality affect essential services.",
+          "implication": "Set continuity and power-quality criteria.",
+          "standards": [
+            "IEEE|1159-2019"
+          ],
+          "example": "A clinic loses power during a distribution outage.",
+          "teachingIdea": "Connect a reliability metric to an essential service rather than treating it as an abstract number.",
+          "assessmentPrompt": "You may ask students to set an interruption limit for a feeder serving a clinic and explain what happens when the limit is exceeded."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "Transmission losses and equipment choices influence resource use.",
+          "implication": "Compare loss and equipment lifecycle impacts.",
+          "standards": [
+            "IEEE|738-2023"
+          ],
+          "example": "A network reinforcement option lowers line losses but uses additional equipment.",
+          "teachingIdea": "Compare expected losses and equipment lifecycle effects.",
+          "assessmentPrompt": "You may ask students to compare two network options using energy losses and material or replacement impacts."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Capital and maintenance costs affect long-term utility decisions.",
+          "implication": "Compare alternatives using lifecycle cost.",
+          "standards": [
+            "IEEE|3002.3-2018"
+          ],
+          "example": "A substation upgrade costs more initially but avoids repeated repair and outage expense.",
+          "teachingIdea": "Build a simple lifecycle-cost comparison.",
+          "assessmentPrompt": "You may ask students to choose between two investment options using capital, maintenance, and outage cost over a stated horizon."
+        },
+        {
+          "dimension": "Socioeconomic",
+          "consideration": "Outage burden and affordability may differ across customer groups.",
+          "implication": "Examine who benefits from a proposed investment and who bears its costs.",
+          "standards": [],
+          "example": "A remote community has fewer network alternatives and higher reinforcement cost per customer.",
+          "teachingIdea": "Compare urban and remote service options with the same reliability target.",
+          "assessmentPrompt": "You may ask students to compare network-reinforcement options for an urban and a remote community and discuss how cost, reliability, and infrastructure availability affect the engineering decision."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Infrastructure changes can affect nearby communities and service expectations.",
+          "implication": "Identify a communication and feedback need for affected residents.",
+          "standards": [],
+          "example": "A new line route passes near homes while improving service elsewhere.",
+          "teachingIdea": "Map beneficiaries and nearby affected residents.",
+          "assessmentPrompt": "You may ask students to identify who gains and who bears local effects from a proposed route and propose one communication or design response."
+        },
+        {
+          "dimension": "Global",
+          "consideration": "Grid-connected resources may depend on interoperable technical practices.",
+          "implication": "State the connection and verification requirements.",
+          "standards": [
+            "IEEE|1547-2018"
+          ],
+          "example": "Distributed generation must connect without destabilizing a shared grid.",
+          "teachingIdea": "Read a connection scenario and identify interface assumptions.",
+          "assessmentPrompt": "You may ask students to derive one interconnection test or constraint for a proposed distributed resource."
+        }
+      ],
+      "stakeholderTeachingIdea": "Use a feeder diagram to ask who is affected by a fault, an outage, or an investment decision.",
+      "stakeholderAssessmentPrompt": "You may ask students to identify customers, workers, operators, and a nearby community for a feeder project and derive one requirement from each concern."
+    },
+    {
+      "code": "EE 490",
+      "title": "Senior Design Project",
+      "rationale": "Start with the actual project and identify affected parties before deciding which contextual dimensions apply. Connect each selected concern to a requirement, relevant standard, and evidence.",
+      "stakeholders": [
+        {
+          "name": "Client or sponsor",
+          "need": "A solution that addresses the agreed problem",
+          "why": "They define the problem and decide whether the delivered solution is useful."
+        },
+        {
+          "name": "End users",
+          "need": "Useful, accessible, and dependable operation",
+          "why": "They live with the design's usability, accessibility, and reliability."
+        },
+        {
+          "name": "Operators",
+          "need": "Clear controls and safe procedures",
+          "why": "They control the system in ordinary and abnormal conditions."
+        },
+        {
+          "name": "Maintenance personnel",
+          "need": "Service access and fault diagnosis",
+          "why": "They maintain the solution after the project team has moved on."
+        },
+        {
+          "name": "Manufacturers",
+          "need": "Feasible parts and production methods",
+          "why": "They determine whether the design can be built and sourced repeatedly."
+        },
+        {
+          "name": "Regulators",
+          "need": "Evidence for applicable constraints",
+          "why": "They may set constraints or require evidence for the intended application."
+        },
+        {
+          "name": "Surrounding community",
+          "need": "Consideration of local impacts",
+          "why": "They may experience site, noise, access, or other local effects."
+        },
+        {
+          "name": "Future users",
+          "need": "Sustainable operation and support",
+          "why": "They depend on support, repair, and adaptability over time."
+        },
+        {
+          "name": "Project team",
+          "need": "Clear responsibilities, risks, and verification evidence",
+          "why": "They must turn concerns into requirements and evidence within available time."
+        }
+      ],
+      "factors": [
+        {
+          "dimension": "Public Health",
+          "consideration": "Could normal use or foreseeable misuse affect human health?",
+          "implication": "Define an exposure or health-related limit if the project warrants one.",
+          "standards": [
+            "IEEE|16085-2020"
+          ],
+          "example": "A wearable prototype uses a battery near the body for long periods.",
+          "teachingIdea": "Ask teams to identify a plausible health exposure before choosing a test.",
+          "assessmentPrompt": "You may ask students to identify a health concern in their project and write a measurable limit or verification method if the concern applies."
+        },
+        {
+          "dimension": "Safety",
+          "consideration": "What hazardous states, faults, or failures could harm people or property?",
+          "implication": "Record a safe-state requirement and verification evidence.",
+          "standards": [
+            "IEEE|16085-2020",
+            "IEEE|1012-2024"
+          ],
+          "example": "A small robot could move unexpectedly after a sensor failure.",
+          "teachingIdea": "Run a brief hazard walk-through of a project prototype.",
+          "assessmentPrompt": "You may ask students to define a safe state after one credible fault and show how they would test it."
+        },
+        {
+          "dimension": "Welfare",
+          "consideration": "Who depends on availability, accessibility, or reliable operation?",
+          "implication": "Set usability and service-continuity requirements.",
+          "standards": [
+            "IEEE|29148-2018"
+          ],
+          "example": "An assistive device stops working when its battery is depleted.",
+          "teachingIdea": "Trace the user activity that depends on the prototype.",
+          "assessmentPrompt": "You may ask students to set an availability or low-battery warning requirement tied to a named user need."
+        },
+        {
+          "dimension": "Global",
+          "consideration": "Will the solution cross borders, suppliers, or technical interfaces?",
+          "implication": "State interoperability and lifecycle assumptions.",
+          "standards": [
+            "IEEE|15288-2023"
+          ],
+          "example": "A module from one supplier must integrate with hardware built elsewhere.",
+          "teachingIdea": "Map interfaces and supply assumptions for two component sources.",
+          "assessmentPrompt": "You may ask students to identify an interoperability or supply-chain risk and derive a design constraint."
+        },
+        {
+          "dimension": "Cultural",
+          "consideration": "Could language, practice, or local expectations change acceptance?",
+          "implication": "Test a user-facing choice with the intended community.",
+          "standards": [
+            "IEEE|7000-2021"
+          ],
+          "example": "A user interface uses language or conventions unfamiliar to intended users.",
+          "teachingIdea": "Test a prototype message with a representative user or peer role.",
+          "assessmentPrompt": "You may ask students to revise one project interface for a specified user group and propose a comprehension test."
+        },
+        {
+          "dimension": "Social",
+          "consideration": "Could the design change access, inclusion, work, or community experience?",
+          "implication": "Record affected groups and a feedback method.",
+          "standards": [
+            "IEEE|7000-2021"
+          ],
+          "example": "A public kiosk is difficult to use for people with limited mobility or access.",
+          "teachingIdea": "Map who can and cannot use a proposed prototype.",
+          "assessmentPrompt": "You may ask students to identify an excluded user group and derive one accessible design requirement."
+        },
+        {
+          "dimension": "Environmental",
+          "consideration": "What energy, material, waste, or site effects occur over the lifecycle?",
+          "implication": "Compare lifecycle impacts of design alternatives.",
+          "standards": [
+            "IEEE|15288-2023"
+          ],
+          "example": "A disposable battery pack creates recurring waste.",
+          "teachingIdea": "Compare two powering options across the prototype lifecycle.",
+          "assessmentPrompt": "You may ask students to compare battery replacement, energy use, and disposal for two project alternatives."
+        },
+        {
+          "dimension": "Economic",
+          "consideration": "Can the solution be built, operated, repaired, and replaced affordably?",
+          "implication": "Estimate total cost across the expected service life.",
+          "standards": [
+            "IEEE|29148-2018"
+          ],
+          "example": "A low-cost prototype needs expensive maintenance after deployment.",
+          "teachingIdea": "Build a bill-of-materials plus service-cost comparison.",
+          "assessmentPrompt": "You may ask students to estimate total ownership cost and justify one design change that reduces long-term expense."
+        },
+        {
+          "dimension": "Socioeconomic",
+          "consideration": "Could costs and benefits fall unevenly across groups or locations?",
+          "implication": "Identify affordability and access constraints for affected groups.",
+          "standards": [
+            "IEEE|7000-2021"
+          ],
+          "example": "A solution works technically but is unaffordable where it is most needed.",
+          "teachingIdea": "Compare access, infrastructure, and cost for two user groups.",
+          "assessmentPrompt": "You may ask students to identify who receives the benefit and who bears the cost, then derive an affordability or access constraint."
+        }
+      ],
+      "stakeholderTeachingIdea": "Map the chain: Stakeholder → Need / Concern → Contextual Factor → Engineering Implication → Requirement / Constraint → Standard → Evidence.",
+      "stakeholderAssessmentPrompt": "You may ask students to identify at least four stakeholders for their project and derive one testable engineering requirement or constraint from the concern of each stakeholder."
+    }
+  ]
+}
