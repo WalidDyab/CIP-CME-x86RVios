@@ -15,9 +15,9 @@
 <body>
   <div id="header-placeholder"></div>
   <main class="wrap">
-    <section class="hero">
+    <section class="hero about-hero">
       <span class="kicker">Curriculum Intelligence Portal</span>
-      <h2>About the Portal</h2>
+      <h1>About the Portal</h1>
       <p class="muted">A central interface supporting Electrical Engineering curricula information, assessment, review, accreditation-related documentation, and continuous improvement.</p>
     </section>
 
@@ -36,19 +36,108 @@
       </div>
     </section>
 
-    <section class="section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq">
-        <details><summary>What is the source of curriculum information shown in the portal?</summary><p>The approved Undergraduate EE curriculum dataset is the canonical source used by the dashboards and generators.</p></details>
-        <details><summary>Does generating a proposed CLO or reference change modify the approved curriculum?</summary><p>No. Proposal generation is separate from approval and from updates to the canonical curriculum data.</p></details>
-        <details><summary>What is the difference between curriculum mappings and the program assessment plan?</summary><p>Curriculum mappings describe course-level CLO relationships to SOs and PIs. The assessment plan identifies when outcomes are assessed and the officially selected courses used to collect program-assessment evidence.</p></details>
-        <details><summary>How are CLO modifications reviewed and approved?</summary><p>Faculty may generate a review report documenting proposed changes. The proposal then follows the applicable academic and curriculum approval process.</p></details>
-        <details><summary>How are textbook or reference changes proposed?</summary><p>Faculty can open a course, compare approved references with proposed book entries, provide a justification, and generate a change request for Curriculum Committee review.</p></details>
-        <details><summary>What are generated reports intended for?</summary><p>They provide consistent, reviewable documentation for faculty, committees, assessment, and accreditation-support activities.</p></details>
-        <details><summary>Where do SO and PI mappings come from?</summary><p>They come from the approved curriculum mapping data displayed by the portal, not from generated proposals.</p></details>
-        <details><summary>How is the portal updated?</summary><p>Approved data and portal features are updated through the repository's controlled review and publication workflow.</p></details>
-        <details><summary>What should faculty do if information appears incorrect?</summary><p>Document the issue and send it through the program's established faculty or committee review channel before the canonical record is changed.</p></details>
+    <section class="section governance-section" aria-labelledby="governance-title">
+      <span class="kicker">BSc EE Curriculum Governance</span>
+      <h2 id="governance-title">Curriculum Governance &amp; Release Cycle</h2>
+      <p class="governance-intro">The Curriculum Committee normally runs two BSc EE curriculum-review cycles each academic year so approved updates can be incorporated before faculty prepare for the following semester.</p>
+
+      <div class="review-windows">
+        <article class="review-window">
+          <h3>Fall Semester Review Cycle</h3>
+          <p>Fall faculty proposals are considered for the following Spring semester.</p>
+          <dl>
+            <div><dt>Call for Curriculum Modifications</dt><dd>Normally around mid-October</dd></div>
+            <div><dt>Faculty Submission Window</dt><dd>Approximately two weeks; follow the announced deadline.</dd></div>
+            <div class="review-result"><dt>Outcome</dt><dd>CIP Release for the Following Spring Semester</dd></div>
+          </dl>
+        </article>
+        <article class="review-window">
+          <h3>Spring Semester Review Cycle</h3>
+          <p>Spring faculty proposals are considered for the following Fall semester.</p>
+          <dl>
+            <div><dt>Call for Curriculum Modifications</dt><dd>Normally around mid-March</dd></div>
+            <div><dt>Faculty Submission Window</dt><dd>Approximately two weeks; follow the announced deadline.</dd></div>
+            <div class="review-result"><dt>Outcome</dt><dd>CIP Release for the Following Fall Semester</dd></div>
+          </dl>
+        </article>
       </div>
+
+      <div class="governance-path">
+        <h3>One Common Governance Path</h3>
+        <p>Both semester review windows follow the same academic process.</p>
+        <ol class="cycle-steps">
+          <li><h4>Faculty Proposal</h4><p>Faculty submit corrections, updates, proposed modifications, and improvement suggestions during the announced window.</p></li>
+          <li><h4>Curriculum Committee Review &amp; Consolidation</h4><p>The Committee reviews rationale, combines related proposals, checks consistency and prerequisites, considers CLO/SO/PI and assessment effects where relevant, seeks clarification when needed, and prepares recommendations.</p></li>
+          <li><h4>Department Council Approval</h4><p>Recommended modifications proceed through the established academic approval process.</p></li>
+          <li><h4>Canonical Curriculum Update</h4><p>Only approved changes are incorporated into official curriculum information.</p></li>
+          <li><h4>QA</h4><p>Updated data, mappings, pages, reports, and affected relationships are checked before release.</p></li>
+          <li><h4>CIP Release for the Following Semester</h4><p>The approved release is made available before or around the following semester so faculty can prepare syllabi, teaching materials, assessments, and course documentation.</p></li>
+        </ol>
+      </div>
+      <p class="cycle-note"><strong>A faculty submission is a proposal, not an approved curriculum change.</strong> Only changes that complete academic approval enter canonical curriculum information. A CIP release represents an approved curriculum state.</p>
+    </section>
+
+    <section class="section faq-section" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <p class="faq-intro"><strong>BSc EE curriculum questions.</strong> These answers and the governance section above apply to the undergraduate Electrical Engineering curriculum; Purpose and Key Features describe the shared portal.</p>
+
+      <section class="faq-group" aria-labelledby="faq-information-title">
+        <h3 id="faq-information-title">Understanding BSc EE Information</h3>
+        <div class="faq">
+          <details><summary>Which BSc EE information is approved curriculum data, and which is instructor guidance?</summary><p>Released course information, approved course learning outcomes (CLOs), Student Outcome (SO) and Performance Indicator (PI) mappings, assessment-plan information, and current textbooks and references are approved records. Standards &amp; Codes course relevance and priority, Stakeholders &amp; Design Context suggestions, teaching examples, and assessment prompts are instructor guidance. Guidance does not change approved curriculum mappings.</p></details>
+          <details><summary>How do CLOs, SOs, and PIs relate to one another?</summary><p>A CLO states what students should learn in a course. An SO describes a broader capability expected of graduates, and a PI identifies a more specific aspect of that SO. Approved course mappings connect CLOs to the SOs and PIs they support.</p></details>
+          <details><summary>What is the difference between curriculum mappings and the program assessment plan?</summary><p>Mappings show where CLOs support SOs and PIs across the curriculum. The assessment plan identifies when outcomes are formally assessed and which courses provide evidence for program evaluation. A mapped course is not automatically assessed in every semester.</p></details>
+          <details><summary>What do Introduced, Practiced, and Mastered mean in the program heatmaps?</summary><p>I, P, and M show the intended progression of a PI across courses: students first encounter it, then develop it through practice, then demonstrate it at a more advanced level. The labels describe curriculum progression, not an attainment score.</p></details>
+        </div>
+      </section>
+
+      <section class="faq-group" aria-labelledby="faq-reviewing-title">
+        <h3 id="faq-reviewing-title">Reviewing Courses and Outcomes</h3>
+        <div class="faq">
+          <details><summary>Does a mapped CLO in the SO Leader Dashboard mean that the outcome has been assessed?</summary><p>No. A mapping shows how a course contributes to an outcome. Formal assessment follows the program assessment plan and requires actual student evidence; mapping alone does not establish attainment.</p></details>
+          <details><summary>Where can I check the approved teaching and assessment methods for my course?</summary><p>Use the Course Dashboard to review the methods recorded for a selected course. Teaching &amp; Assessment shows the approved general pools and the course-specific exceptions for EE 490 and EE 492, alongside professional ethics guidance. Teaching examples are resources to use selectively, not additional approved course requirements.</p></details>
+          <details><summary>What should faculty do if curriculum information appears incorrect?</summary><p>Note the course and item, document the discrepancy, and submit it through the established Curriculum Committee review channel. Include it in the faculty submission during the modification cycle; urgent factual errors can be reported to the Committee outside that cycle for review.</p></details>
+        </div>
+      </section>
+
+      <section class="faq-group" aria-labelledby="faq-proposals-title">
+        <h3 id="faq-proposals-title">Proposals and Curriculum Changes</h3>
+        <div class="faq">
+          <details><summary>Does generating a proposed CLO or reference change modify the approved curriculum?</summary><p>No. A generated proposal or review report documents a suggested change. It does not approve the change or update approved curriculum records.</p></details>
+          <details><summary>What happens after I generate a CLO review report?</summary><p>The report records the proposed change for review by relevant faculty and the Curriculum Committee. It remains a proposal; an accepted change enters a future approved release only after the required academic review and approval.</p></details>
+          <details><summary>How are textbook or reference changes proposed?</summary><p>In the Course Dashboard, compare current approved entries with proposed book entries, select the changes, and provide a justification. Generate a change-request PDF for Curriculum Committee review. The request itself does not approve or apply the changes.</p></details>
+          <details><summary>What can I print or export from the BSc EE portal?</summary><p>Current-information outputs include course reports and the program-wide textbook and reference list. Stakeholders &amp; Design Context can print or save a teaching guide or customized analysis. CLO, SO-mapping, and reference review tools generate proposal reports. Printing or exporting does not change approved data.</p></details>
+        </div>
+      </section>
+
+      <section class="faq-group" aria-labelledby="faq-cycle-title">
+        <h3 id="faq-cycle-title">Review Windows &amp; Approved Releases</h3>
+        <div class="faq">
+          <details><summary>When can faculty propose curriculum modifications?</summary><p>CIP normally has two BSc EE review windows: around mid-October in the Fall semester and around mid-March in the Spring semester. Each call normally remains open for approximately two weeks; the Curriculum Committee announces the exact deadline.</p></details>
+          <details><summary>What happens after I submit a proposed curriculum modification?</summary><p>The Curriculum Committee reviews the rationale, consolidates related proposals, checks curriculum dependencies and relevant mapping or assessment effects, and may ask for clarification. It then recommends changes for Department Council consideration, following the governance path above.</p></details>
+          <details><summary>When does a curriculum modification become official in CIP?</summary><p>A submission or Committee recommendation remains a proposal. It becomes official in CIP only after academic approval, incorporation into canonical curriculum information, QA, and inclusion in a new approved release.</p></details>
+          <details><summary>Which CIP release should I use when preparing my syllabus and course materials?</summary><p>Use the approved release prepared for the semester you are about to teach. The Fall review cycle feeds the following Spring release; the Spring review cycle feeds the following Fall release.</p></details>
+        </div>
+      </section>
+
+      <section class="faq-group" aria-labelledby="faq-standards-title">
+        <h3 id="faq-standards-title">Standards &amp; Professional Practice</h3>
+        <div class="faq">
+          <details><summary>Does a standard listed for my course have to be taught in full?</summary><p>No. Standards &amp; Codes provides curated professional references for teaching. Core, Useful, and Advanced describe suggested teaching relevance, not a new curriculum requirement. Use the clauses, definitions, procedures, examples, or design constraints that fit the activity.</p></details>
+          <details><summary>Where can I obtain a listed standard, and what do the access labels mean?</summary><p>Standards &amp; Codes links to official sources. “Free — IEEE GET” means no-cost access through IEEE GET; “Free — ITU-R,” “Free — ETSI,” and “Free — 3GPP” point to those organizations’ official sources. “Subscription / purchase” may require institutional access or purchase. The ethics codes also have official links and packaged PDFs.</p></details>
+          <details><summary>How should I use the IEEE Code of Ethics and the Saudi Council of Engineers’ Engineer’s Charter in a course activity?</summary><p>Standards &amp; Codes holds the formal code records and source links; Teaching &amp; Assessment explains their teaching role. In a short case study, students might compare two engineering decisions, identify affected stakeholders and professional responsibilities, then justify an action using a relevant code principle and its likely consequences.</p></details>
+        </div>
+      </section>
+
+      <section class="faq-group" aria-labelledby="faq-context-title">
+        <h3 id="faq-context-title">Stakeholders &amp; Engineering Context</h3>
+        <div class="faq">
+          <details><summary>Are the stakeholder and design-context suggestions approved CLO, SO, or PI mappings?</summary><p>No. They are prompts for instructor consideration, separate from approved curriculum mappings. Selecting or adapting them does not change the CLO, SO, or PI relationships recorded for a course.</p></details>
+          <details><summary>Must I use every stakeholder and contextual factor shown for my course?</summary><p>No. Choose what matters to the particular engineering problem, laboratory, assignment, project, or design activity. The suggestions help reveal possibilities; not every factor applies in every situation.</p></details>
+          <details><summary>How can I use Stakeholders &amp; Design Context to teach and assess these ideas?</summary><p>The page pairs plain-language definitions with course interpretations, examples, teaching ideas, assessment prompts, and relevant standards where appropriate. Prompts such as “You may ask students to…” invite application: for example, students could compare two solutions and explain how service reliability affects the people who depend on them.</p></details>
+          <details><summary>What does “Customize for this course” do?</summary><p>The default view is a teaching guide. Customize opens fields to adapt stakeholders, concerns, teaching and assessment ideas, requirements, evidence, and standards for an activity. Choices stay on the page until it is reloaded; print or save as PDF to keep a copy. Customization does not change approved curriculum data.</p></details>
+        </div>
+      </section>
     </section>
 
     <section id="responsible-ai-use" class="section policy-note" aria-labelledby="responsible-ai-title">

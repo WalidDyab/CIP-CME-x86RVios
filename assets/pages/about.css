@@ -1,8 +1,47 @@
 .about-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
-    .feature-list { margin:0; padding-left:20px; line-height:1.7; }
-    .faq { display:grid; gap:10px; }
-    .faq details { padding:15px 17px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
-    .faq summary { cursor:pointer; color:var(--cyan); font-weight:800; }
-    .faq p { margin:10px 0 0; color:var(--muted); line-height:1.65; }
-    .policy-note { border-left:4px solid var(--orange); }
-    @media(max-width:760px){.about-grid{grid-template-columns:1fr}.section{padding:20px}}
+.about-hero h1 { font-size:clamp(30px,5vw,58px); line-height:1; margin:10px 0; }
+.feature-list { margin:0; padding-left:20px; line-height:1.7; }
+.faq-section > h2 { margin:0; }
+.faq-intro { max-width:78ch; margin:10px 0 0; color:var(--muted); line-height:1.6; }
+.faq-intro strong { color:var(--text); }
+.faq-group { margin-top:28px; }
+.faq-group + .faq-group { padding-top:24px; border-top:1px solid var(--line); }
+.faq-group > h3 { margin:0 0 14px; font-size:20px; }
+.faq { display:grid; gap:10px; }
+.faq details { min-width:0; padding:15px 17px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
+.faq details[open] { background:var(--panel2); }
+.faq summary { cursor:pointer; color:var(--cyan); font-weight:800; line-height:1.5; }
+.faq summary:focus-visible { outline:2px solid var(--cyan); outline-offset:4px; border-radius:4px; }
+.faq p { max-width:88ch; margin:10px 0 0; color:var(--muted); line-height:1.65; }
+.governance-section { border-color:rgba(121,215,255,.22); background:linear-gradient(135deg,rgba(20,61,102,.25),rgba(255,255,255,.025)); }
+.governance-section > h2 { margin:10px 0; }
+.governance-intro { max-width:82ch; margin:0; color:var(--muted); line-height:1.65; }
+.review-windows { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:22px; }
+.review-window { min-width:0; padding:20px; border:1px solid var(--line); border-radius:16px; background:var(--panel); }
+.review-window h3 { margin:0; color:var(--cyan); font-size:18px; }
+.review-window > p { margin:8px 0 0; color:var(--muted); font-size:13px; line-height:1.55; }
+.review-window dl { display:grid; gap:10px; margin:16px 0 0; }
+.review-window dl div { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding-top:10px; border-top:1px solid var(--line); }
+.review-window dt { font-size:12px; font-weight:800; line-height:1.45; }
+.review-window dd { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+.review-window .review-result dd { color:#ffd59b; font-weight:800; }
+.governance-path { margin-top:25px; }
+.governance-path h3 { margin:0; font-size:19px; }
+.governance-path > p { margin:5px 0 0; color:var(--muted); font-size:13px; line-height:1.55; }
+.cycle-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:16px 0 0; padding:0; list-style:none; counter-reset:cycle; }
+.cycle-steps li { position:relative; min-width:0; padding:12px 14px 12px 55px; border:1px solid var(--line); border-radius:12px; background:rgba(255,255,255,.04); counter-increment:cycle; }
+.cycle-steps li::before { content:counter(cycle); position:absolute; top:13px; left:12px; display:grid; place-items:center; width:32px; height:32px; border:1px solid rgba(121,215,255,.48); border-radius:50%; background:#10263a; color:var(--cyan); font-weight:800; }
+.cycle-steps h4 { margin:0; font-size:15px; line-height:1.4; }
+.cycle-steps p { margin:4px 0 0; color:var(--muted); font-size:13px; line-height:1.55; }
+.cycle-note { max-width:88ch; margin:20px 0 0; padding:13px 15px; border-left:3px solid var(--orange); background:rgba(242,162,58,.08); color:var(--muted); line-height:1.65; }
+.cycle-note strong { color:var(--text); }
+.policy-note { border-left:4px solid var(--orange); }
+@media(max-width:1000px) { .review-windows { grid-template-columns:1fr; } .cycle-steps { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:760px) {
+  .about-grid { grid-template-columns:1fr; }
+  .section { padding:20px; }
+}
+@media(max-width:620px) {
+  .cycle-steps { grid-template-columns:1fr; }
+  .review-window dl div { grid-template-columns:1fr; gap:3px; }
+}
