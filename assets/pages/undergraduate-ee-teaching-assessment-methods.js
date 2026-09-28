@@ -1,6 +1,33 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const root = byId('assessmentPlan');
     try {
+      const { standards } = await portal.loadJSON('../data/ee-standards.json');
+      const byKey = new Map(standards.map(item => [`${item.organization}|${item.identifier}`, item]));
+      document.querySelectorAll('.ethics-card[data-standard-key]').forEach(card => {
+        const standard = byKey.get(card.dataset.standardKey);
+        if (!standard) throw new Error(`Missing ethics code: ${card.dataset.standardKey}`);
+        const clean = portal.esc;
+        card.querySelector('.ethics-identity').innerHTML = `<h3>${clean(standard.title)}</h3>
+          <p class="ethics-org">${clean(standard.issuingOrganization)}</p>
+          <div class="label">Classification</div><p class="ethics-value">${clean(standard.classification)}</p>
+          <div class="label">Citation</div><p class="ethics-citation">${clean(standard.citation)}</p>`;
+        if (standard.language) {
+          card.querySelector('.ethics-summary').insertAdjacentHTML('afterend',
+            `<p class="ethics-language">Official document language: ${clean(standard.language)}</p>`);
+        }
+        const standardsUrl = `standards-and-codes.html?organization=${encodeURIComponent(standard.organization)}&standard=${encodeURIComponent(standard.identifier)}`;
+        card.querySelector('.ethics-actions').innerHTML = `
+          <a class="btn primary" href="${clean(standard.documentUrl)}" target="_blank" rel="noopener" aria-label="View packaged document for ${clean(standard.title)} (PDF, opens in a new tab)">View Document <span class="file-type">PDF</span></a>
+          <a class="btn" href="${clean(standard.officialUrl)}" target="_blank" rel="noopener noreferrer" aria-label="Open official source for ${clean(standard.title)} (opens in a new tab)">Official ${clean(standard.organization)} Source <span aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="${standardsUrl}">View in Standards &amp; Codes</a>`;
+      });
+    } catch (error) {
+      document.querySelectorAll('.ethics-identity').forEach(element => {
+        element.innerHTML = '<p class="alert">The ethics code details could not be loaded.</p>';
+      });
+      console.error('Failed to load ethics codes:', error);
+    }
+    try {
       const [plan, curriculum] = await Promise.all([
         portal.loadJSON('../data/ee-assessment.json'),
         portal.loadJSON('../data/ee_curriculum.json')

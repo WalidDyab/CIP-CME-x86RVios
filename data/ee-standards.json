@@ -1908,6 +1908,63 @@
           "teachingUse": "Compare LTE OFDMA/SC-FDMA physical-channel design with 5G NR."
         }
       ]
+    },
+    {
+      "organization": "IEEE",
+      "identifier": "Code of Ethics (2020)",
+      "title": "IEEE Code of Ethics",
+      "issuingOrganization": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "classification": "International / discipline-specific professional ethics reference for Electrical and Electronics Engineering",
+      "citation": "Institute of Electrical and Electronics Engineers (IEEE), “IEEE Code of Ethics,” IEEE, revised and adopted by the IEEE Board of Directors, June 2020.",
+      "accessType": "Free — official source and packaged PDF",
+      "status": "Revised and adopted June 2020",
+      "officialUrl": "https://events.ieee.org/planning-basics/general-guidelines/ethical-guidelines-and-policies/",
+      "documentUrl": "references/ieee-code-of-ethics-2020.pdf",
+      "getUrl": "",
+      "sourceGroup": "Professional ethics",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Useful",
+          "teachingUse": "Use discipline-specific ethics principles to discuss public welfare, stakeholders, conflicts of interest, and informed design judgments in SO4 activities."
+        },
+        {
+          "courseCode": "EE 492",
+          "courseTitle": "Cooperative Training",
+          "priority": "Useful",
+          "teachingUse": "Use professional ethics scenarios from workplace practice to discuss integrity, competence, safety, and accountability."
+        }
+      ]
+    },
+    {
+      "organization": "SCE",
+      "identifier": "Engineer’s Charter (2025)",
+      "title": "Engineer’s Charter (ميثاق المهندس)",
+      "issuingOrganization": "Saudi Council of Engineers (SCE) / الهيئة السعودية للمهندسين",
+      "classification": "Saudi national professional engineering ethics reference",
+      "citation": "Saudi Council of Engineers (SCE), “Engineer’s Charter (ميثاق المهندس),” Saudi Council of Engineers, Saudi Arabia, 2025.",
+      "accessType": "Free — official source and packaged PDF",
+      "status": "2025",
+      "officialUrl": "https://saudieng.sa/Admin/Documents/EngineerCharter2025-Ar.pdf",
+      "documentUrl": "references/sce-engineers-charter-2025-ar.pdf",
+      "language": "Arabic",
+      "getUrl": "",
+      "sourceGroup": "Professional ethics",
+      "courses": [
+        {
+          "courseCode": "EE 490",
+          "courseTitle": "Senior Design Project",
+          "priority": "Useful",
+          "teachingUse": "Compare national professional obligations with the IEEE code when assessing ethical decisions in senior design."
+        },
+        {
+          "courseCode": "EE 492",
+          "courseTitle": "Cooperative Training",
+          "priority": "Useful",
+          "teachingUse": "Discuss Saudi professional practice, honesty, trustworthiness, and fulfillment of obligations in workplace learning."
+        }
+      ]
     }
   ]
 }

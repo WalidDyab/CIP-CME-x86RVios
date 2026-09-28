@@ -27,6 +27,7 @@
 .standard-access.access-free { color: var(--green); }
 .standard-access.access-subscription { color: var(--muted); }
 .standard-card h4 { margin: 12px 0 8px; font-size: 16px; line-height: 1.45; }
+.standard-issuer { margin: -3px 0 9px; color: var(--cyan); font-size: 12px; line-height: 1.5; }
 .standard-use { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .standard-use strong { color: var(--text); }
 .standards-access-note { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; }

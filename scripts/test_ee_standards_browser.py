@@ -29,7 +29,7 @@ def main():
                 page.goto(origin + '/undergraduate-ee/standards-and-codes.html')
                 page.locator('.standard-card').first.wait_for()
                 assert page.locator('.standard-card').count() == len(mappings)
-                assert page.locator('.standards-course').count() == 14
+                assert page.locator('.standards-course').count() == len({m['courseCode'] for _, m in mappings})
                 assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), width
                 assert page.locator('.standard-links .btn').evaluate_all('links => links.every(link => link.target === "_blank" && link.rel.includes("noopener") && link.rel.includes("noreferrer"))')
                 displayed = page.locator('.standards-course').evaluate_all('sections => sections.map(section => ({code: section.querySelector(".code").textContent, cards: [...section.querySelectorAll(".standard-card")].map(card => ({id: card.querySelector(".standard-id").textContent, priority: card.querySelector(".standard-priority").textContent, title: card.querySelector("h4").textContent, url: card.querySelector(".standard-links .btn").href, access: card.querySelector(".standard-access").textContent}))}))')
@@ -58,6 +58,27 @@ def main():
                 page.locator('#standardsSearch').fill('TS 36.211')
                 assert page.locator('.standard-card').count() == 1
                 assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), width
+                page.goto(origin + '/undergraduate-ee/index.html')
+                main = page.locator('.page-section[aria-labelledby="explore-title"] > .explore-grid > .explore-card')
+                support = page.locator('.support-grid > .support-card')
+                assert main.locator('h3').all_text_contents() == [
+                    'Program Overview', 'Course Dashboard', 'SO Leader Dashboard', 'Teaching & Assessment']
+                assert support.locator('h3').all_text_contents() == [
+                    'Standards & Codes', 'Stakeholders & Design Context']
+                assert main.count() == 4 and support.count() == 2
+                assert all(page.request.get(origin + '/undergraduate-ee/' + href).ok for href in
+                           main.evaluate_all('cards => cards.map(card => card.getAttribute("href"))') +
+                           support.evaluate_all('cards => cards.map(card => card.getAttribute("href"))'))
+                main_boxes = main.evaluate_all('cards => cards.map(card => card.getBoundingClientRect().toJSON())')
+                support_boxes = support.evaluate_all('cards => cards.map(card => card.getBoundingClientRect().toJSON())')
+                if width == 1280:
+                    assert max(box['top'] for box in main_boxes) - min(box['top'] for box in main_boxes) < 2
+                if width > 620:
+                    assert abs(support_boxes[0]['top'] - support_boxes[1]['top']) < 2
+                else:
+                    assert support_boxes[1]['top'] > support_boxes[0]['bottom']
+                assert support_boxes[0]['top'] > max(box['bottom'] for box in main_boxes)
+                assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), width
                 page.close()
                 print(f'PASS standards page at {width}px')
 
@@ -74,6 +95,23 @@ def main():
             link.wait_for()
             assert link.get_attribute('href') == 'standards-and-codes.html?course=EE%20351'
             assert '32 relevant standards' in link.locator('xpath=..').text_content()
+            page.goto(origin + '/undergraduate-ee/teaching-assessment-methods.html')
+            page.locator('.ethics-card h3').first.wait_for()
+            assert page.locator('.ethics-card h3').all_text_contents() == [
+                'IEEE Code of Ethics', 'Engineer’s Charter (ميثاق المهندس)']
+            assert 'SO4 learning activities' in page.locator('.ethics-note').inner_text()
+            for standard in standards[-2:]:
+                card = page.locator(f'.ethics-card[data-standard-key="{standard["organization"]}|{standard["identifier"]}"]')
+                assert card.locator('.ethics-org').inner_text() == standard['issuingOrganization']
+                assert card.locator('.ethics-actions a').nth(0).get_attribute('href') == standard['documentUrl']
+                assert card.locator('.ethics-actions a').nth(1).get_attribute('href') == standard['officialUrl']
+                assert page.request.get(origin + '/undergraduate-ee/' + standard['documentUrl']).ok
+                page.goto(origin + '/undergraduate-ee/' + card.locator('.ethics-actions a').nth(2).get_attribute('href'))
+                page.locator('.standard-card').first.wait_for()
+                assert page.locator('.standard-card').count() == len(standard['courses'])
+                assert page.locator('#standardsOrganization').input_value() == standard['organization']
+                page.goto(origin + '/undergraduate-ee/teaching-assessment-methods.html')
+                page.locator('.ethics-card h3').first.wait_for()
             browser.close()
         assert not errors, errors
         print('PASS links, source data, filters, priorities, navigation, and browser errors')

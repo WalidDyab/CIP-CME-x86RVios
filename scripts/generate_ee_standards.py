@@ -95,6 +95,16 @@ def main():
     assert set(standards) == ieee_master | telecom_master, (
         f'Matrix only: {set(standards) - ieee_master - telecom_master}; '
         f'Master only: {(ieee_master | telecom_master) - set(standards)}')
+    # Preserve approved codes maintained directly in the canonical inventory.
+    # The workbook remains the source for the IEEE/telecom course matrices only.
+    if OUTPUT.exists():
+        current = json.loads(OUTPUT.read_text(encoding='utf-8'))
+        for item in current['standards']:
+            if item.get('sourceGroup') != 'Professional ethics':
+                continue
+            key = (item['organization'], item['identifier'])
+            assert key not in standards, key
+            standards[key] = item
     output = {'sourceWorkbook': SOURCE.relative_to(ROOT).as_posix(),
               'standards': list(standards.values())}
     OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
