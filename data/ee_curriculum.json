@@ -4293,13 +4293,17 @@
         "prerequisite_text": "Senior level standing (completion of 90 credit hours)",
         "corequisites": [],
         "corequisite_text": null,
-        "course_objectives": [],
+        "course_objectives": [
+          "Introduce the fundamental architectures, protocols, and data communication principles used in modern wired and wireless networks.",
+          "Develop students' ability to formulate, solve, implement, and evaluate networking problems using appropriate analytical, computational, and networking tools.",
+          "Prepare students to apply networking technologies to IoT-enabled smart systems and to independently explore emerging networking standards and technologies."
+        ],
         "textbooks": [
           "Kurose, J. F., & Ross, K. W. (2021). Computer Networking: A Top-Down Approach, 8th ed. Pearson."
         ],
         "references": [
           "Tanenbaum, A. S., Feamster, N., & Wetherall, D. J. (2021). Computer Networks, 6th ed. Pearson.",
-          "Fall, K. R., & Stevens, W. R. (2011). TCP/IP Illustrated, Volume 1: The Protocols, 2nd ed. Addison-Wesley Professional."
+          "McMillan, T. (2015). Cisco Networking Essentials, 2nd ed. Wiley."
         ],
         "course_topics": [
           {
@@ -4319,7 +4323,7 @@
           },
           {
             "topic_number": 4,
-            "topic_title": "IP addressing and internetworking: IPv4/IPv6 concepts; subnetting and CIDR; datagrams; routers; forwarding; ICMP and basic network configuration.",
+            "topic_title": "IP addressing and internetworking: IPv4/IPv6 concepts; subnetting and CIDR; datagrams; routers; forwarding; ICMP; basic router and switch configuration.",
             "contact_hours": 5
           },
           {
@@ -4344,7 +4348,7 @@
           },
           {
             "topic_number": 9,
-            "topic_title": "Network performance, tools, and emerging technologies: delay, loss, throughput and traffic metrics; Wireshark and simulation/configuration tools; performance investigation; emerging networking standards and technologies.",
+            "topic_title": "Network performance, tools, and emerging technologies: delay, loss, throughput and traffic metrics; Wireshark, Packet Tracer, and simulation/configuration tools; performance investigation; emerging networking standards and technologies.",
             "contact_hours": 5
           }
         ],
