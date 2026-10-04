@@ -4146,12 +4146,12 @@
           {
             "clo_number": 1.1,
             "nqf_domain": "Knowledge",
-            "clo_text": "Understand basic data communication and network concepts and protocols",
+            "clo_text": "Identify network architectures, devices, protocol layers, and technical requirements in data communication network scenarios.",
             "mapped_sos": [
               "SO1"
             ],
             "pi_codes": [
-              "PI13"
+              "PI11"
             ],
             "teaching_strategy": [
               "Interactive Lectures",
@@ -4160,14 +4160,54 @@
             "assessment_methods": [
               "Quizzes",
               "Homework and Classwork Assignments",
-              "Major and Final Exams",
-              "Simulation/Computational Assignments"
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 1.2,
+            "nqf_domain": "Knowledge",
+            "clo_text": "Explain data communication principles involving transmission media, data encoding, framing, synchronization, and error control using appropriate technical terminology and engineering representations.",
+            "mapped_sos": [
+              "SO3"
+            ],
+            "pi_codes": [
+              "PI31",
+              "PI32"
+            ],
+            "teaching_strategy": [
+              "Interactive Lectures",
+              "Technical Communication Activities"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation",
+              "Major and Final Exams"
             ]
           },
           {
             "clo_number": 2.1,
             "nqf_domain": "Skills",
-            "clo_text": "Implement and evaluate middle-layer data access protocols",
+            "clo_text": "Formulate networking problems involving addressing, medium access, routing, transport mechanisms, and network performance parameters.",
+            "mapped_sos": [
+              "SO1"
+            ],
+            "pi_codes": [
+              "PI12"
+            ],
+            "teaching_strategy": [
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Simulation/Computational Assignments",
+              "Major and Final Exams"
+            ]
+          },
+          {
+            "clo_number": 2.2,
+            "nqf_domain": "Skills",
+            "clo_text": "Solve network configuration and protocol-performance problems using appropriate analytical and computational methods.",
             "mapped_sos": [
               "SO1"
             ],
@@ -4175,21 +4215,19 @@
               "PI13"
             ],
             "teaching_strategy": [
-              "Laboratory Experimentation",
-              "Simulation and Computer-Based Learning",
-              "Design- and Project-Based Learning"
+              "Guided Problem Solving and Tutorials",
+              "Simulation and Computer-Based Learning"
             ],
             "assessment_methods": [
-              "Laboratory Practical Assessment",
               "Simulation/Computational Assignments",
-              "Design Project Assignment",
-              "Prototype/System Demonstration"
+              "Homework and Classwork Assignments",
+              "Major and Final Exams"
             ]
           },
           {
-            "clo_number": 2.2,
+            "clo_number": 2.3,
             "nqf_domain": "Skills",
-            "clo_text": "Integrate Smart Systems with cloud-based networking solutions",
+            "clo_text": "Implement networked smart-system solutions using application and middleware protocols for IoT and cloud-connected environments.",
             "mapped_sos": [
               "SO2"
             ],
@@ -4198,14 +4236,55 @@
             ],
             "teaching_strategy": [
               "Design- and Project-Based Learning",
-              "Simulation and Computer-Based Learning",
-              "Laboratory Experimentation"
+              "Simulation and Computer-Based Learning"
             ],
             "assessment_methods": [
               "Design Project Assignment",
               "Simulation/Computational Assignments",
-              "Prototype/System Demonstration",
-              "Laboratory Practical Assessment"
+              "Prototype/System Demonstration"
+            ]
+          },
+          {
+            "clo_number": 2.4,
+            "nqf_domain": "Skills",
+            "clo_text": "Evaluate network performance using traffic, delay, loss, and throughput measurements obtained with appropriate networking tools.",
+            "mapped_sos": [
+              "SO6"
+            ],
+            "pi_codes": [
+              "PI62",
+              "PI63",
+              "PI64"
+            ],
+            "teaching_strategy": [
+              "Laboratory Experimentation",
+              "Simulation and Computer-Based Learning"
+            ],
+            "assessment_methods": [
+              "Laboratory Practical Assessment",
+              "Laboratory Reports",
+              "Simulation/Computational Assignments"
+            ]
+          },
+          {
+            "clo_number": 3.1,
+            "nqf_domain": "Values",
+            "clo_text": "Apply emerging networking standards and technologies to data communication applications using appropriate self-directed learning resources.",
+            "mapped_sos": [
+              "SO7"
+            ],
+            "pi_codes": [
+              "PI71",
+              "PI72"
+            ],
+            "teaching_strategy": [
+              "Independent/Self-Directed Learning",
+              "Case-Based Learning and Technical Discussion"
+            ],
+            "assessment_methods": [
+              "Homework and Classwork Assignments",
+              "Oral Technical Presentation",
+              "Design Project Assignment"
             ]
           }
         ],
@@ -4215,15 +4294,75 @@
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [],
-        "textbooks": [],
-        "references": [],
-        "course_topics": [],
-        "total_topic_contact_hours": null,
+        "textbooks": [
+          "Kurose, J. F., & Ross, K. W. (2021). Computer Networking: A Top-Down Approach, 8th ed. Pearson."
+        ],
+        "references": [
+          "Tanenbaum, A. S., Feamster, N., & Wetherall, D. J. (2021). Computer Networks, 6th ed. Pearson.",
+          "Fall, K. R., & Stevens, W. R. (2011). TCP/IP Illustrated, Volume 1: The Protocols, 2nd ed. Addison-Wesley Professional."
+        ],
+        "course_topics": [
+          {
+            "topic_number": 1,
+            "topic_title": "Network architectures and protocol models: network components and devices; LAN/WAN concepts; packet switching; OSI and TCP/IP models; encapsulation and protocol layering.",
+            "contact_hours": 5
+          },
+          {
+            "topic_number": 2,
+            "topic_title": "Data communication fundamentals: transmission media; data encoding and modulation fundamentals; synchronous and asynchronous transmission; framing and synchronization.",
+            "contact_hours": 5
+          },
+          {
+            "topic_number": 3,
+            "topic_title": "Data-link reliability and medium access: error detection and correction; flow/error control; Ethernet; multiple-access protocols; switched LANs and VLAN concepts.",
+            "contact_hours": 5
+          },
+          {
+            "topic_number": 4,
+            "topic_title": "IP addressing and internetworking: IPv4/IPv6 concepts; subnetting and CIDR; datagrams; routers; forwarding; ICMP and basic network configuration.",
+            "contact_hours": 5
+          },
+          {
+            "topic_number": 5,
+            "topic_title": "Network-layer routing: routing principles; link-state and distance-vector algorithms; intra- and inter-network routing; introduction to Internet routing and BGP.",
+            "contact_hours": 5
+          },
+          {
+            "topic_number": 6,
+            "topic_title": "Transport-layer protocols: UDP and TCP; reliable data transfer; connection management; flow control; congestion control and transport performance.",
+            "contact_hours": 5
+          },
+          {
+            "topic_number": 7,
+            "topic_title": "Application, IoT, and middleware protocols: application-layer services; HTTP/DNS concepts; MQTT and CoAP; real-time data exchange; IoT-enabled smart systems and cloud connectivity.",
+            "contact_hours": 5
+          },
+          {
+            "topic_number": 8,
+            "topic_title": "Wireless and mobile networking: WLAN/IEEE 802.11; wireless medium access; mobility principles; cellular and low-power networking concepts for IoT and smart-system applications.",
+            "contact_hours": 5
+          },
+          {
+            "topic_number": 9,
+            "topic_title": "Network performance, tools, and emerging technologies: delay, loss, throughput and traffic metrics; Wireshark and simulation/configuration tools; performance investigation; emerging networking standards and technologies.",
+            "contact_hours": 5
+          }
+        ],
+        "total_topic_contact_hours": 45,
         "course_id": 31,
         "instructor": "Dr. Moustafa Nasralla",
         "pi_levels": {
+          "PI11": "M",
+          "PI31": "M",
+          "PI32": "M",
+          "PI12": "M",
           "PI13": "M",
-          "PI21": "M"
+          "PI21": "M",
+          "PI62": "M",
+          "PI63": "M",
+          "PI64": "M",
+          "PI71": "M",
+          "PI72": "M"
         }
       },
       {
