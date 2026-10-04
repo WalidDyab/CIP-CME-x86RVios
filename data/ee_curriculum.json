@@ -329,10 +329,10 @@
         ],
         "course_description": "This module provides a comprehensive introduction to both DC and AC circuit principles. Students will begin by reviewing fundamental concepts, including current, voltage, and power. The course then explores series and parallel circuits and delves into Ohm’s Law, Kirchhoff’s Laws, source transformations, bridge networks, and delta/star transformations. Key analysis methods and network theorems are also covered. Additionally, the module revisits inductors and capacitors, introduces sinusoidal sources and the concept of phasors, and details methods for analyzing AC circuits. Practical experience is emphasized through hands-on use of electrical measurement tools such as voltmeters, ammeters, wattmeters, function generators, and oscilloscopes.",
         "prerequisites": [
-          "PHYS 205",
+          "PHY 205",
           "MATH 113"
         ],
-        "prerequisite_text": "PHYS 205, Math113",
+        "prerequisite_text": "PHY 205, Math113",
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [
@@ -1617,9 +1617,9 @@
         "prerequisites": [
           "EE 211",
           "EE 221",
-          "CEE 201"
+          "CEE 205"
         ],
-        "prerequisite_text": "EE 211, EE 221, CEE 201",
+        "prerequisite_text": "EE 211, EE 221, CEE 205",
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [
@@ -3299,9 +3299,9 @@
         "course_description": "Project groups deliver their products that have progressed through the design, analysis, testing and evaluation stages. The project teams produce a polished professional report that describes the design process, implementation and testing, verification and validation, and a critical appraisal of the project. An oral presentation and graphic works are complementary project deliverables",
         "prerequisites": [
           "ENG 301",
-          "CEE 201"
+          "CEE 205"
         ],
-        "prerequisite_text": "ENG 301, CEE 201, Completion of 90 Credit Hours",
+        "prerequisite_text": "ENG 301, CEE 205, Completion of 90 Credit Hours",
         "corequisites": [
           "ETHC 305"
         ],
@@ -3495,7 +3495,7 @@
         ],
         "course_description": "Cooperative Education is a planned learning experience, for which credits are earned, that integrates classroom theory and learning experiences at a workplace. The experience enables students to apply and refine the knowledge and skills acquired in a related curriculum course. The Co-op is a supervised work experience in a position in the government or the private sector which aimed to assist students in making the transition from the classroom to industry. Students are required to finish 28 weeks on the job to earn 10-credit hours for the course",
         "prerequisites": [],
-        "prerequisite_text": "Compltion of 128 Credit Hours",
+        "prerequisite_text": "Completion of 128 Credit Hours",
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [
@@ -3974,7 +3974,7 @@
         "required_or_elective": "Elective",
         "year": "4",
         "level": "7",
-        "credit_hours": "",
+        "credit_hours": "3",
         "clos": [
           {
             "clo_number": 1.1,
@@ -5537,7 +5537,7 @@
         "required_or_elective": "Elective",
         "year": "4",
         "level": "7",
-        "credit_hours": "",
+        "credit_hours": "3",
         "clos": [
           {
             "clo_number": 1.1,
