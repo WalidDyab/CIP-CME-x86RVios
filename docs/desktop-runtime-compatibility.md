@@ -23,6 +23,7 @@ Audited all 22 full portal pages, both shared HTML fragments, and allowlisted CS
 ```text
 about.html
 assets/footer.html
+assets/program-prerequisites-export.js
 assets/program-prerequisites.css
 assets/program-prerequisites.js
 assets/program-structure.js
@@ -290,3 +291,11 @@ All changes remain unstaged and uncommitted on `codex-feature/desktop-runtime-co
 ## 15. Safety confirmation
 
 No commit, push, merge, publication, branch creation/switch, reset or history rewrite. No academic/curriculum data changes, CSP weakening, separate desktop site, build architecture changes, or modifications to cip-desktop. Only this repository was edited. Test-generated changes to the pre-existing tracked Python cache were restored to their original bytes.
+
+## 15. Addendum — prerequisite flow redesign and PNG export
+
+The Program Overview prerequisite flow was redesigned (journey/map views, focus chains, elective bank, PNG export). Runtime impact:
+
+- New runtime file: `assets/program-prerequisites-export.js` (listed in `packaging/desktop-runtime-files.json`). It paints a snapshot of the board onto a 2D canvas and returns a PNG blob; the page then saves it through a temporary object-URL download link, the same download pattern the heatmap PNG export uses. It loads no image, font or network resource, so it works offline and under the unchanged CSP (which allows no `data:`/`blob:` images).
+- `assets/program-prerequisites.js` and `assets/program-prerequisites.css` were rewritten. Placement and sizing now come from numeric CSSOM custom properties (`--x`, `--y`, `--w`, `--h`, `--pf-cw`, `--pf-ch`, `--pf-w1..3`) and a numeric `transform`/`width`/`height` on the scaled board, replacing the earlier grid-column/row writes. They are written individually with `style.setProperty`, never as style text, `setAttribute('style')` or `cssText`, so the "Six intentional numeric CSSOM assignment sites" count in section 4–6 no longer applies to this file. No CSP relaxation is needed and no inline style or script was added.
+- `scripts/smoke_runtime_compatibility.py` now asserts the redesigned structure (four year bands, eight semester headers, routed traces, selectable course) and the PNG export.

@@ -6,7 +6,6 @@
  * conditions, corequisites, and the elective selection rule. No relationship is
  * hard-coded in this file — the graph is built from the recorded data, and any
  * prerequisite that cannot be resolved is reported rather than invented. The
- * Open Day narration is generated from that same graph.
  *
  * Structure: courses keep their literal semester column. Courses that take part
  * in a prerequisite or co-requisite link form the technical spine; courses with
@@ -22,7 +21,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const host = document.getElementById('prerequisite-flow-body');
   if (!host) return;
-  const section = host.closest('.program-prereq') || host;
 
   const SVG_NS = 'http://www.w3.org/2000/svg';
 
@@ -608,25 +606,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     shell.dataset.focus = 'both';
     fragment.append(shell);
 
-    // ------------------------------------------------- Presentation bar ----
-    const presbar = el('div', 'pf-presbar');
-    presbar.setAttribute('role', 'group');
-    presbar.setAttribute('aria-label', 'Open Day presentation controls');
-    const caption = el('p', 'pf-caption');
-    caption.setAttribute('aria-live', 'polite');
-    const presControls = el('div', 'pf-prescontrols');
-    const presBtn = (label, text, handler) => {
-      const button = el('button', 'pf-presbtn', text);
-      button.type = 'button';
-      button.setAttribute('aria-label', label);
-      button.addEventListener('click', handler);
-      return button;
-    };
-    const stepCounter = el('span', 'pf-stepcount');
-    stepCounter.setAttribute('aria-hidden', 'true');
-    presbar.append(caption, presControls);
-    shell.append(presbar);
-
     // ----------------------------------------------------------- Toolbar ----
     const toolbar = el('div', 'pf-toolbar');
 
@@ -671,11 +650,40 @@ document.addEventListener('DOMContentLoaded', async () => {
     bankBtn.textContent = `Elective bank · ${electiveCourses.length}`;
     bankBtn.hidden = !electiveCourses.length;
 
-    const presentBtn = el('button', 'btn primary pf-presentbtn', 'Open Day mode');
-    presentBtn.type = 'button';
-    presentBtn.setAttribute('aria-pressed', 'false');
+    // ------------------------------------------------------- Export menu ----
+    const exportWrap = el('div', 'pf-export');
+    const exportBtn = el('button', 'btn pf-exportbtn', 'Export');
+    exportBtn.type = 'button';
+    exportBtn.id = 'pf-export-button';
+    exportBtn.setAttribute('aria-haspopup', 'menu');
+    exportBtn.setAttribute('aria-expanded', 'false');
+    exportBtn.setAttribute('aria-controls', 'pf-export-menu');
+    const exportMenu = el('div', 'pf-menu');
+    exportMenu.id = 'pf-export-menu';
+    exportMenu.setAttribute('role', 'menu');
+    exportMenu.setAttribute('aria-labelledby', 'pf-export-button');
+    exportMenu.hidden = true;
+    const menuItem = (role, text) => {
+      const item = el('button', 'pf-menu-item', text);
+      item.type = 'button';
+      item.setAttribute('role', role);
+      item.tabIndex = -1;
+      return item;
+    };
+    const exportFull = menuItem('menuitem', 'Full map (PNG)');
+    const exportCurrent = menuItem('menuitem', 'Current view (PNG)');
+    const exportHi = menuItem('menuitemcheckbox', 'High resolution (2×)');
+    exportHi.setAttribute('aria-checked', 'false');
+    const menuRule = el('div', 'pf-menu-rule');
+    menuRule.setAttribute('role', 'separator');
+    exportMenu.append(exportFull, exportCurrent, menuRule, exportHi);
+    exportWrap.append(exportBtn, exportMenu);
+    const exportStatus = el('span', 'pf-export-status');
+    exportStatus.setAttribute('role', 'status');
 
-    toolbar.append(search, viewGroup, bankBtn, presentBtn);
+    const viewWrap = el('div', 'pf-viewwrap');
+    viewWrap.append(el('span', 'pf-view-label', 'View'), viewGroup);
+    toolbar.append(search, viewWrap, bankBtn, exportStatus, exportWrap);
     shell.append(toolbar);
 
     // ------------------------------------------------------------ Legend ----
@@ -1083,7 +1091,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // ----------------------------------------------------------- Fitting ----
     const MIN_SCALE = 0.62;
-    let presenting = false;
     let scale = 1;
     const fit = () => {
       if (isStacked()) {
@@ -1093,12 +1100,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
       }
       const availW = stage.clientWidth;
-      if (presenting) {
-        const availH = stage.clientHeight;
-        scale = Math.min(availW / M.width, availH / M.height, 1.4);
-      } else {
-        scale = Math.max(MIN_SCALE, Math.min(availW / M.width, 1));
-      }
+      scale = Math.max(MIN_SCALE, Math.min(availW / M.width, 1));
       if (!Number.isFinite(scale) || scale <= 0) scale = 1;
       canvas.style.setProperty('transform', `scale(${scale})`);
       // Keep traces a legible thickness on screen whatever the fit scale is.
@@ -1115,7 +1117,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     let focusIndex = 0;
     let focusMode = 'both';
     let bankOpen = false;
-    let revealYear = Infinity;
 
     const order = columns.map((_, col) => [...spineByCol[col], ...railByCol[col]]);
 
@@ -1126,8 +1127,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       focusIndex = index;
       node.element.tabIndex = 0;
       if (moveFocus) {
-        node.element.focus({ preventScroll: presenting });
-        if (!presenting) node.element.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        node.element.focus();
+        node.element.scrollIntoView({ block: 'nearest', inline: 'nearest' });
       }
     };
 
@@ -1609,9 +1610,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (!node) return;
       const moves = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] };
       if (moves[event.key]) {
-        // While presenting, plain Left/Right step the presentation; Shift+Arrow
-        // still moves between courses.
-        if (presenting && !event.shiftKey && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) return;
         const next = neighbour(node, moves[event.key][0], moves[event.key][1]);
         if (next) {
           event.preventDefault();
@@ -1740,205 +1738,257 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
 
-    // ------------------------------------------------- Open Day sequence ----
-    /* The sequence is built from the live graph: the gateway, the deep chain and
-       the credit-hour example are chosen from the data, never named here. */
-    const longestChain = (() => {
-      const depth = new Map();
-      const visit = node => {
-        if (depth.has(node)) return depth.get(node);
-        const value = 1 + Math.max(0, ...node.incoming.map(edge => visit(edge.from)));
-        depth.set(node, value);
-        return value;
+    // ------------------------------------------------------------ Export ----
+    /* The board is exported by handing a plain-data snapshot — the routed
+       geometry plus the exact highlight state on screen — to
+       assets/program-prerequisites-export.js, which paints it onto a canvas. */
+    const FOCUS_LABEL = {
+      both: 'Prerequisites and unlocks',
+      reach: 'How do I reach this?',
+      unlock: 'What does this unlock?'
+    };
+    const fileStem = text => str(text).replace(/[^A-Za-z0-9]+/g, '').slice(0, 24) || 'course';
+    const todayStamp = () => new Date().toISOString().slice(0, 10);
+    let exportHighRes = false;
+
+    const currentExportLabel = () => {
+      if (selected) return `Selected path — ${selected.displayCode}, ${FOCUS_LABEL[focusMode]} (PNG)`;
+      return shell.dataset.view === 'board' ? 'Current view — prerequisite map (PNG)' : 'Current view — degree journey (PNG)';
+    };
+
+    const exportItems = () => [exportFull, exportCurrent, exportHi];
+    const closeExportMenu = restoreFocus => {
+      if (exportMenu.hidden) return;
+      exportMenu.hidden = true;
+      exportBtn.setAttribute('aria-expanded', 'false');
+      if (restoreFocus) exportBtn.focus();
+    };
+    const openExportMenu = () => {
+      exportCurrent.textContent = currentExportLabel();
+      exportMenu.hidden = false;
+      exportBtn.setAttribute('aria-expanded', 'true');
+      exportFull.focus();
+    };
+
+    const buildSnapshot = mode => {
+      const current = mode === 'current';
+      const target = current ? selected : null;
+      const view = current ? shell.dataset.view : 'board';
+      const mapMode = target ? focusMode : 'both';
+      const bankShown = current && bankOpen && electiveCourses.length > 0;
+      const stateOf = node => {
+        if (!target) return {};
+        const classes = node.element.classList;
+        const marker = node.element.querySelector('.pf-reltag');
+        return {
+          selected: classes.contains('is-selected'),
+          up: classes.contains('is-up'),
+          down: classes.contains('is-down'),
+          direct: classes.contains('is-direct'),
+          coreq: classes.contains('is-coreq'),
+          dim: classes.contains('is-dim'),
+          reltag: marker.hidden ? '' : marker.textContent
+        };
       };
-      let winner = null;
-      for (const node of nodes) {
-        const length = visit(node);
-        const reach = hops(node, 'up').size;
-        if (!winner || length > winner.length || (length === winner.length && reach > winner.reach)) {
-          winner = { node, length, reach };
-        }
+      const edgeState = edge => {
+        if (!target || !edge.group.classList.contains('is-hot')) return 'rest';
+        if (edge.group.classList.contains('is-co')) return 'co';
+        return edge.group.classList.contains('is-up') ? 'up' : 'down';
+      };
+      const number = (element, name) => Number.parseFloat(element.style.getPropertyValue(name)) || 0;
+
+      const degree = str(data?.program_summary?.degree_awarded) || 'Bachelor of Science in Electrical Engineering';
+      const subtitleParts = [degree, `${columns.length} semesters`, `${totalCredits} credit hours`,
+        view === 'board' ? 'Prerequisite map' : 'Degree journey'];
+      if (bankShown) subtitleParts.push('Elective bank open');
+
+      let focus = null;
+      let filename = view === 'board' ? 'EE-curriculum-flow.png' : 'EE-curriculum-journey.png';
+      if (target) {
+        const recorded = [];
+        if (target.prerequisiteText) recorded.push(`Prerequisites as recorded: ${target.prerequisiteText}`);
+        if (target.corequisiteText) recorded.push(`Co-requisite: ${target.corequisiteText}`);
+        focus = {
+          code: target.displayCode,
+          modeLabel: target.isPlaceholder ? 'Elective slot' : FOCUS_LABEL[mapMode],
+          subtitle: [target.title, `Year ${target.year}`, target.semesterLabel, `${target.credits} credits`].join(' · '),
+          recorded: recorded.join('   ·   ')
+        };
+        const stem = fileStem(target.isPlaceholder ? target.code : target.displayCode);
+        filename = mapMode === 'reach' ? `${stem}-prerequisite-path.png`
+          : mapMode === 'unlock' ? `${stem}-unlocks.png` : `${stem}-curriculum-path.png`;
       }
-      return winner;
-    })();
-    const conditionExample = nodes.find(node => node.categoryId === 'capstone_project' && node.conditions.length) ||
-      nodes.find(node => !node.isPlaceholder && node.conditions.length && !node.rail) || null;
-    const spanOf = node => {
-      const found = [...hops(node, 'up').keys()];
-      return new Set(found.map(item => item.col)).size + 1;
+
+      const viaPoints = [...viaLayer.children].map(circle =>
+        [Number(circle.getAttribute('cx')), Number(circle.getAttribute('cy'))]);
+
+      return {
+        filename,
+        width: M.width,
+        height: M.height,
+        view,
+        focusActive: Boolean(target),
+        focus,
+        subtitle: subtitleParts.join(' · '),
+        date: todayStamp(),
+        fonts: {
+          sans: getComputedStyle(canvas).fontFamily || 'sans-serif',
+          mono: getComputedStyle(nodes[0].element.querySelector('.pf-code')).fontFamily || 'monospace'
+        },
+        zones: zones.map(({ zone, year }) => ({ x: number(zone, '--x'), w: number(zone, '--w'), year })),
+        years: yearBands.map(({ band }) => ({
+          x: number(band, '--x'),
+          w: number(band, '--w'),
+          name: band.querySelector('.pf-year-name').textContent,
+          total: band.querySelector('.pf-year-total').textContent,
+          summary: band.querySelector('.pf-year-sum').textContent
+        })),
+        sems: semHeads.map(({ head }) => ({
+          x: number(head, '--x'),
+          w: number(head, '--w'),
+          level: head.querySelector('.pf-sem-level').textContent,
+          name: head.querySelector('.pf-sem-name').textContent,
+          total: head.querySelector('.pf-sem-total').textContent,
+          milestones: [...head.querySelectorAll('.pf-milestone')].map(chipEl => ({
+            text: chipEl.textContent, hot: Boolean(target) && chipEl.classList.contains('is-hot')
+          }))
+        })),
+        rail: { y: M.railTop, name: 'Support rail', note: railLabel.querySelector('.pf-rail-note').textContent },
+        nodes: nodes.map(node => ({
+          x: node.x, y: node.y, w: node.w, h: node.h,
+          code: node.displayCode,
+          title: node.title,
+          tag: tagFor(node.categoryId, node.categoryName),
+          categoryId: node.categoryId,
+          rail: node.rail,
+          slot: node.isPlaceholder,
+          gateway: isGateway(node),
+          unlocks: node.outgoing.length,
+          hasIn: node.incoming.length > 0,
+          hasOut: node.outgoing.length > 0,
+          hasCo: node.partners.length > 0,
+          conditionChip: !node.isPlaceholder && node.conditions.length ? `≥ ${shortCondition(node.conditions[0])}` : '',
+          socketNote: node.isPlaceholder ? `Pick 1 of ${electiveCourses.length}` : '',
+          state: stateOf(node)
+        })),
+        edges: edges.map(edge => ({
+          d: edge.d,
+          head: edge.head ? edge.head.getAttribute('d') : null,
+          kind: edge.kind,
+          state: edgeState(edge),
+          direct: Boolean(target) && edge.group.classList.contains('is-direct'),
+          caps: edge.kind === 'coreq' ? [edge.points[0], edge.points[edge.points.length - 1]] : null
+        })),
+        vias: viaPoints,
+        bank: bankShown ? {
+          open: true,
+          x: number(bank, '--x'), y: number(bank, '--y'), w: number(bank, '--w'), h: number(bank, '--h'),
+          title: 'Elective bank',
+          rule: selectionRule
+            ? `Choose ${selectionRule.courses_to_select} of ${electiveCourses.length} · ${selectionRule.credits_per_course} cr each · ${selectionRule.total_credits} cr`
+            : '',
+          condition: electiveEligibility
+            ? { chip: `≥ ${shortCondition(electiveEligibility)}`, text: `${electiveEligibility} — a completion rule, not a course.` }
+            : null,
+          items: bankItems.map(({ course, button }) => ({
+            code: str(course.display_code || course.course_code),
+            name: str(course.course_title),
+            selected: button.classList.contains('is-selected')
+          }))
+        } : null,
+        legend: {
+          categories: requirementCategories
+            .filter(category => nodes.some(node => node.categoryId === category.category_id))
+            .map(category => ({
+              id: category.category_id,
+              tag: tagFor(category.category_id, category.category_name),
+              name: category.category_name || category.category_id
+            }))
+        }
+      };
     };
 
-    const reveal = year => {
-      revealYear = year;
-      for (const node of nodes) node.element.classList.toggle('is-unrevealed', node.year > year);
-      for (const edge of edges) {
-        edge.group.classList.toggle('is-unrevealed', edge.from.year > year || edge.to.year > year);
+    let statusTimer = 0;
+    const announce = message => {
+      exportStatus.textContent = message;
+      clearTimeout(statusTimer);
+      statusTimer = setTimeout(() => { exportStatus.textContent = ''; }, 9000);
+    };
+
+    const downloadBlob = (blob, filename) => {
+      const url = URL.createObjectURL(blob);
+      const link = el('a');
+      link.href = url;
+      link.download = filename;
+      document.body.append(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 15000);
+    };
+
+    const runExport = async mode => {
+      const api = window.CIPFlowExport;
+      closeExportMenu(false);
+      if (!api) {
+        announce('Export is unavailable because the export module did not load.');
+        return;
       }
-      for (const { band, year: y } of yearBands) band.classList.toggle('is-unrevealed', y > year);
-      for (const { head, year: y } of semHeads) head.classList.toggle('is-unrevealed', y > year);
-      for (const { zone, year: y } of zones) zone.classList.toggle('is-unrevealed', y > year);
-      shell.classList.toggle('is-partial', Number.isFinite(year));
-      bank.classList.toggle('is-unrevealed', year < Math.max(...columns.map(c => c.year)));
-    };
-
-    const yearSummary = year => {
-      const members = nodes.filter(node => node.year === year);
-      const credits = members.reduce((sum, node) => sum + node.credits, 0);
-      return { count: members.length, credits };
-    };
-
-    const steps = [];
-    steps.push({
-      title: 'Degree journey',
-      caption: () => `Four years, ${columns.length} semesters, ${totalCredits} credit hours — one path to the degree.`,
-      apply: () => { reveal(Infinity); setBank(false); select(null); setView('journey'); showPanel(); }
-    });
-    for (const { year } of yearBands) {
-      steps.push({
-        title: `Year ${year}`,
-        caption: () => {
-          const info = yearSummary(year);
-          return `Year ${year}: ${info.count} courses, ${info.credits} credit hours` +
-            `${year > 1 ? ' — building on everything revealed so far.' : '.'}`;
-        },
-        apply: () => { setBank(false); select(null); reveal(year); setView('board'); showPanel(); }
-      });
-    }
-    steps.push({
-      title: 'Complete board',
-      caption: () => `The complete prerequisite board: ${prereqEdges.length} prerequisite links across ${nodes.length} courses.`,
-      apply: () => { setBank(false); select(null); reveal(Infinity); setView('board'); showPanel(); }
-    });
-    if (gateways.length) {
-      const gate = gateways[0];
-      steps.push({
-        title: `Gateway · ${gate.displayCode}`,
-        caption: () => {
-          const further = hops(gate, 'down').size - gate.outgoing.length;
-          return `${gate.displayCode} is a gateway: ${gate.outgoing.length} courses build directly on it` +
-            `${further > 0 ? `, and ${further} more further downstream` : ''}.`;
-        },
-        apply: () => { setBank(false); reveal(Infinity); setView('board'); focusNode(gate, false); select(gate, 'unlock'); }
-      });
-    }
-    if (longestChain && longestChain.length > 2) {
-      const deep = longestChain.node;
-      steps.push({
-        title: `Deep chain · ${deep.displayCode}`,
-        caption: () => `${deep.displayCode} rests on ${longestChain.reach} earlier courses — a chain of ${longestChain.length} courses spanning ${spanOf(deep)} semesters.`,
-        apply: () => { setBank(false); reveal(Infinity); setView('board'); focusNode(deep, false); select(deep, 'reach'); }
-      });
-    }
-    if (conditionExample) {
-      const target = conditionExample;
-      steps.push({
-        title: `${target.displayCode} and its condition`,
-        caption: () => {
-          const courses = target.incoming.map(edge => edge.from.displayCode);
-          const parts = [];
-          if (courses.length) parts.push(`requires ${courses.join(', ')}`);
-          parts.push(...target.conditions.map(condition => condition.charAt(0).toLowerCase() + condition.slice(1)));
-          const co = target.partners.map(partner => partner.displayCode);
-          return `${target.displayCode} ${parts.join(' and ')}${co.length ? `, with ${co.join(', ')} taken alongside` : ''} — the credit-hour condition is a completion rule, not a course.`;
-        },
-        apply: () => { setBank(false); reveal(Infinity); setView('board'); focusNode(target, false); select(target); }
-      });
-    }
-    if (electiveCourses.length) {
-      steps.push({
-        title: 'Elective bank',
-        caption: () => `${electiveCourses.length} approved electives${selectionRule ? `; students choose ${selectionRule.courses_to_select}` : ''} to fill the two Year 4 elective slots.`,
-        apply: () => { reveal(Infinity); select(null); setView('board'); setBank(true); showPanel(); }
-      });
-    }
-    steps.push({
-      title: 'Full map',
-      caption: () => 'Back to the full map — select any course to trace where it comes from and what it opens up.',
-      apply: () => { setBank(false); select(null); reveal(Infinity); setView('board'); showPanel(); }
-    });
-
-    let stepIndex = 0;
-    const goToStep = index => {
-      stepIndex = Math.max(0, Math.min(steps.length - 1, index));
-      const step = steps[stepIndex];
-      step.apply();
-      caption.textContent = step.caption();
-      stepCounter.textContent = `${stepIndex + 1} / ${steps.length}`;
-      prevBtn.disabled = stepIndex === 0;
-      nextBtn.disabled = stepIndex === steps.length - 1;
-      stepTitle.textContent = step.title;
-    };
-
-    const stepTitle = el('span', 'pf-steptitle');
-    stepTitle.setAttribute('aria-hidden', 'true');
-    const prevBtn = presBtn('Previous step', '‹', () => goToStep(stepIndex - 1));
-    const nextBtn = presBtn('Next step', '›', () => goToStep(stepIndex + 1));
-    const fullBtn = presBtn('Toggle full screen', 'Full screen', () => {
-      if (document.fullscreenElement) document.exitFullscreen?.();
-      else section.requestFullscreen?.().catch(() => {});
-    });
-    fullBtn.classList.add('pf-presbtn-wide');
-    const exitBtn = presBtn('Exit Open Day mode', 'Exit', () => exitPresentation());
-    exitBtn.classList.add('pf-presbtn-wide');
-    presControls.append(stepTitle, prevBtn, stepCounter, nextBtn, fullBtn, exitBtn);
-
-    let restoreView = 'journey';
-    function enterPresentation() {
-      if (presenting || isStacked()) return;
-      presenting = true;
-      restoreView = shell.dataset.view;
-      section.classList.add('is-presenting');
-      document.documentElement.classList.add('pf-presenting');
-      presentBtn.setAttribute('aria-pressed', 'true');
-      closeResults();
-      fit();
-      goToStep(0);
-      requestAnimationFrame(() => { fit(); nextBtn.focus({ preventScroll: true }); });
-    }
-    function exitPresentation() {
-      if (!presenting) return;
-      presenting = false;
-      if (document.fullscreenElement) document.exitFullscreen?.();
-      section.classList.remove('is-presenting');
-      document.documentElement.classList.remove('pf-presenting');
-      presentBtn.setAttribute('aria-pressed', 'false');
-      reveal(Infinity);
-      setBank(false);
-      select(null);
-      setView(restoreView);
-      showPanel();
-      fit();
-      presentBtn.focus({ preventScroll: true });
-    }
-    presentBtn.addEventListener('click', () => (presenting ? exitPresentation() : enterPresentation()));
-
-    document.addEventListener('keydown', event => {
-      const inField = event.target instanceof HTMLElement && event.target.matches('input, textarea, select');
-      if (presenting && !inField) {
-        if (event.key === 'ArrowRight' || event.key === 'PageDown' || (event.key === ' ' && !event.target.closest?.('button, a'))) {
-          if (event.target.closest?.('.pf-node') && event.key === 'ArrowRight' && event.shiftKey) return;
-          event.preventDefault();
-          goToStep(stepIndex + 1);
-          return;
-        }
-        if (event.key === 'ArrowLeft' || event.key === 'PageUp') {
-          if (event.target.closest?.('.pf-node') && event.shiftKey) return;
-          event.preventDefault();
-          goToStep(stepIndex - 1);
-          return;
-        }
-        if (event.key === 'Home') { if (event.target.closest?.('.pf-node')) return; event.preventDefault(); goToStep(0); return; }
-        if (event.key === 'End') { if (event.target.closest?.('.pf-node')) return; event.preventDefault(); goToStep(steps.length - 1); return; }
-        if (event.key === 'f' || event.key === 'F') {
-          event.preventDefault();
-          fullBtn.click();
-          return;
-        }
+      exportBtn.disabled = true;
+      exportBtn.textContent = 'Exporting…';
+      try {
+        const snapshot = buildSnapshot(mode);
+        const result = await api.renderPng(snapshot, { scale: exportHighRes ? 2 : 0 });
+        downloadBlob(result.blob, snapshot.filename);
+        host.dataset.exportStatus = 'complete';
+        host.dataset.exportFilename = snapshot.filename;
+        host.dataset.exportWidth = String(result.width);
+        host.dataset.exportHeight = String(result.height);
+        announce(`Saved ${snapshot.filename} (${result.width} × ${result.height} px).`);
+      } catch (error) {
+        console.error('Prerequisite flow export failed:', error);
+        host.dataset.exportStatus = 'failed';
+        announce(`Export failed: ${error.message}`);
+      } finally {
+        exportBtn.disabled = false;
+        exportBtn.textContent = 'Export';
       }
+    };
+
+    exportBtn.addEventListener('click', () => (exportMenu.hidden ? openExportMenu() : closeExportMenu(true)));
+    exportFull.addEventListener('click', () => runExport('full'));
+    exportCurrent.addEventListener('click', () => runExport('current'));
+    exportHi.addEventListener('click', () => {
+      exportHighRes = !exportHighRes;
+      exportHi.setAttribute('aria-checked', String(exportHighRes));
+    });
+    exportMenu.addEventListener('keydown', event => {
+      const items = exportItems();
+      const at = items.indexOf(document.activeElement);
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        event.preventDefault();
+        items[(at + (event.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length].focus();
+      } else if (event.key === 'Home' || event.key === 'End') {
+        event.preventDefault();
+        items[event.key === 'Home' ? 0 : items.length - 1].focus();
+      } else if (event.key === 'Tab') {
+        closeExportMenu(false);
+      }
+    });
+    document.addEventListener('click', event => {
+      if (!exportMenu.hidden && !exportWrap.contains(event.target)) closeExportMenu(false);
+    });
+
+    // Escape steps back one layer: menu, then elective bank, then the selection.
+    host.addEventListener('keydown', event => {
       if (event.key !== 'Escape') return;
+      if (!exportMenu.hidden) {
+        event.preventDefault();
+        closeExportMenu(true);
+        return;
+      }
       if (bankOpen) {
         event.preventDefault();
-        if (selectedBankCode) selectBankItem(null); else setBank(false, !presenting);
+        if (selectedBankCode) selectBankItem(null); else setBank(false, true);
         return;
       }
       if (selected) {
@@ -1946,20 +1996,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         const previous = selected;
         select(null);
         focusNode(previous);
-        return;
-      }
-      if (presenting) {
-        event.preventDefault();
-        exitPresentation();
       }
     });
-
-    document.addEventListener('fullscreenchange', () => { requestAnimationFrame(fit); });
 
     // ------------------------------------------------------------- Boot -----
     showPanel();
     setView('journey');
-    reveal(Infinity);
     fit();
 
     if (typeof ResizeObserver === 'function') {
@@ -1973,14 +2015,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       observer.observe(document.documentElement);
     }
     window.addEventListener('resize', fit);
-    stackQuery.addEventListener?.('change', () => {
-      if (isStacked() && presenting) exitPresentation();
-      fit();
-    });
+    stackQuery.addEventListener?.('change', fit);
     if (document.fonts?.ready) document.fonts.ready.then(fit).catch(() => {});
 
-    // Test and review hook: read-only access to the routed geometry.
-    host.dataset.traces = String(prereqEdges.length);
   } catch (error) {
     console.error('Could not load the prerequisite flow:', error);
     failure('The prerequisite flow is currently unavailable. The rest of this page is unaffected.');

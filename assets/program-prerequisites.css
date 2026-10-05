@@ -161,7 +161,7 @@
 }
 
 .program-prereq .pf-bankbtn,
-.program-prereq .pf-presentbtn {
+.program-prereq .pf-exportbtn {
   padding: 8px 13px;
   font-size: 12.5px;
   cursor: pointer;
@@ -172,7 +172,95 @@
   background: rgba(185, 140, 255, .16);
 }
 
-.program-prereq .pf-presentbtn { margin-left: auto; }
+.program-prereq .pf-viewwrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.program-prereq .pf-view-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Export menu */
+
+.program-prereq .pf-export {
+  position: relative;
+  margin-left: auto;
+}
+
+.program-prereq .pf-exportbtn::after {
+  content: "";
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: 2px;
+  border: 4px solid transparent;
+  border-top-color: currentColor;
+}
+
+.program-prereq .pf-exportbtn[aria-expanded="true"] {
+  border-color: rgba(121, 215, 255, .6);
+  color: var(--text);
+}
+
+.program-prereq .pf-exportbtn:disabled { opacity: .6; cursor: progress; }
+
+.program-prereq .pf-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 40;
+  min-width: 330px;
+  max-width: calc(100vw - 40px);
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 12px;
+  background: #0b1424;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .55);
+}
+
+.program-prereq .pf-menu[hidden] { display: none; }
+
+.program-prereq .pf-menu-item {
+  display: block;
+  width: 100%;
+  padding: 9px 11px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.program-prereq .pf-menu-item:hover,
+.program-prereq .pf-menu-item:focus-visible {
+  background: rgba(121, 215, 255, .14);
+  outline: none;
+}
+
+.program-prereq .pf-menu-item[aria-checked="true"]::before { content: "✓ "; color: var(--green); }
+.program-prereq .pf-menu-item[aria-checked="false"]::before { content: "○ "; color: var(--muted); }
+
+.program-prereq .pf-menu-rule {
+  height: 1px;
+  margin: 4px 6px;
+  background: rgba(255, 255, 255, .14);
+}
+
+.program-prereq .pf-export-status {
+  align-self: center;
+  font-size: 12px;
+  color: var(--green);
+}
+
+.program-prereq .pf-export-status:empty { display: none; }
 
 /* --------------------------------------------------------------- Legend */
 
@@ -884,17 +972,6 @@
   to { opacity: 1; }
 }
 
-/* Open Day reveal: courses of later years are held back as faint outlines. */
-.program-prereq .pf-node.is-unrevealed {
-  opacity: .06;
-  pointer-events: none;
-}
-
-.program-prereq .pf-edge.is-unrevealed { opacity: 0; }
-.program-prereq .pf-year.is-unrevealed,
-.program-prereq .pf-sem.is-unrevealed { opacity: .18; }
-.program-prereq .pf-zone.is-unrevealed { opacity: .35; }
-
 /* ------------------------------------------------------- Elective bank */
 
 .program-prereq .pf-bank {
@@ -923,8 +1000,6 @@
   transform: none;
   transition: opacity .28s ease, transform .28s ease, visibility 0s;
 }
-
-.program-prereq .pf-bank.is-unrevealed { opacity: 0; visibility: hidden; }
 
 .program-prereq .pf-bank-head {
   display: flex;
@@ -1295,222 +1370,20 @@
   overflow-wrap: anywhere;
 }
 
-/* -------------------------------------------------- Open Day presentation */
-
-.program-prereq .pf-presbar { display: none; }
-
-html.pf-presenting,
-html.pf-presenting body { overflow: hidden; }
-
-.program-prereq.is-presenting {
-  position: fixed;
-  inset: 0;
-  z-index: 3000;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: #04080f;
-  overflow: hidden;
-}
-
-.program-prereq.is-presenting > h2,
-.program-prereq.is-presenting > .pf-intro,
-.program-prereq.is-presenting > noscript { display: none; }
-
-.program-prereq.is-presenting #prerequisite-flow-body {
-  flex: 1 1 auto;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.program-prereq.is-presenting .pf-shell {
-  flex: 1 1 auto;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.program-prereq.is-presenting .pf-presbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex: 0 0 auto;
-  min-height: 46px;
-  padding: 6px 18px;
-  border-bottom: 1px solid rgba(150, 190, 235, .14);
-  background: #070d18;
-}
-
-.program-prereq .pf-caption {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.3;
-  color: rgba(255, 255, 255, .92);
-}
-
-.program-prereq .pf-prescontrols {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: .5;
-  transition: opacity .25s ease;
-}
-
-.program-prereq .pf-presbar:hover .pf-prescontrols,
-.program-prereq .pf-presbar:focus-within .pf-prescontrols { opacity: 1; }
-
-.program-prereq .pf-steptitle {
-  margin-right: 6px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  white-space: nowrap;
-}
-
-.program-prereq .pf-stepcount {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--muted);
-  min-width: 42px;
-  text-align: center;
-}
-
-.program-prereq .pf-presbtn {
-  min-width: 34px;
-  padding: 4px 10px;
-  border: 1px solid rgba(255, 255, 255, .25);
-  border-radius: 8px;
-  background: transparent;
-  color: var(--text);
-  font: inherit;
-  font-size: 18px;
-  line-height: 1.2;
-  cursor: pointer;
-}
-
-.program-prereq .pf-presbtn-wide { font-size: 12px; }
-
-.program-prereq .pf-presbtn:hover:not(:disabled) { background: rgba(255, 255, 255, .1); }
-.program-prereq .pf-presbtn:disabled { opacity: .35; cursor: default; }
-
-.program-prereq .pf-presbtn:focus-visible {
-  outline: 2px solid var(--cyan);
-  outline-offset: 2px;
-}
-
-.program-prereq.is-presenting .pf-toolbar,
-.program-prereq.is-presenting .pf-hint,
-.program-prereq.is-presenting .pf-issue { display: none; }
-
-.program-prereq.is-presenting .pf-legend {
-  flex: 0 0 auto;
-  margin: 0;
-  padding: 5px 18px;
-  border: 0;
-  border-bottom: 1px solid rgba(150, 190, 235, .08);
-  border-radius: 0;
-  background: transparent;
-}
-
-.program-prereq.is-presenting .pf-stage {
-  flex: 1 1 auto;
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-}
-
-.program-prereq.is-presenting .pf-sizer { flex: 0 0 auto; }
-
-.program-prereq.is-presenting .pf-panel {
-  flex: 0 0 auto;
-  height: 168px;
-  min-height: 0;
-  margin: 0;
-  padding: 8px 18px;
-  overflow-y: auto;
-  border-width: 1px 0 0;
-  border-radius: 0;
-  background: #070d18;
-}
-
-/* In the dock the identity and actions sit on the left and the relationships
-   fill the right, so the whole detail fits a short strip. */
-.program-prereq.is-presenting .pf-detail {
-  display: grid;
-  grid-template-columns: minmax(300px, .8fr) minmax(0, 2fr);
-  gap: 4px 18px;
-  align-items: start;
-}
-
-.program-prereq.is-presenting .pf-detail > .pf-panel-head {
-  grid-column: 1;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-}
-
-.program-prereq.is-presenting .pf-detail > .pf-panel-chips { grid-column: 1; margin: 0; }
-
-.program-prereq.is-presenting .pf-detail > .pf-panel-columns {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  margin-top: 0;
-  gap: 10px;
-}
-
-.program-prereq.is-presenting .pf-panel-lead { font-size: 14px; margin-bottom: 6px; }
-.program-prereq.is-presenting .pf-panel-code { font-size: 22px; }
-.program-prereq.is-presenting .pf-panel-title { font-size: 17px; }
-.program-prereq.is-presenting .pf-panel-columns { margin-top: 6px; }
-.program-prereq.is-presenting .pf-panel-chips { margin-top: 4px; }
-
-@media (max-height: 820px) {
-  .program-prereq.is-presenting .pf-panel { height: 146px; padding: 6px 16px; }
-  .program-prereq.is-presenting .pf-key,
-  .program-prereq.is-presenting .pf-legend-name { display: none; }
-  .program-prereq.is-presenting .pf-legend-list { flex-wrap: nowrap; }
-  .program-prereq.is-presenting .pf-panel-section { padding: 6px 10px; }
-  .program-prereq.is-presenting .pf-panel-section h4 { margin-bottom: 4px; }
-  .program-prereq.is-presenting .pf-action { padding: 4px 10px; font-size: 12px; }
-  .program-prereq.is-presenting .pf-presbar { min-height: 40px; padding: 4px 16px; }
-  .program-prereq.is-presenting .pf-caption { font-size: 15px; }
-  .program-prereq.is-presenting .pf-legend { padding: 3px 16px; }
-  .program-prereq.is-presenting .pf-panel-lead { font-size: 12.5px; margin-bottom: 4px; }
-  .program-prereq.is-presenting .pf-stats { display: none; }
-  .program-prereq.is-presenting .pf-panel-code { font-size: 18px; }
-  .program-prereq.is-presenting .pf-panel-title { font-size: 15px; }
-  .program-prereq.is-presenting .pf-panel-note { margin-top: 4px; font-size: 12px; }
-  .program-prereq.is-presenting .pf-panel-section .pf-panel-note { display: none; }
-  .program-prereq.is-presenting .pf-recorded { display: none; }
-}
-
 /* ------------------------------------------------------------ Responsive */
 
 @media (max-width: 980px) {
   .program-prereq .pf-panel-columns { grid-template-columns: minmax(0, 1fr); }
-  .program-prereq .pf-presentbtn { margin-left: 0; }
+  .program-prereq .pf-toolbar { position: relative; }
+  .program-prereq .pf-export { position: static; margin-left: 0; }
+  .program-prereq .pf-menu { left: 0; right: auto; min-width: min(330px, 100%); }
 }
 
 /* Below this width the map stacks semester by semester: the drawn traces are
    replaced by the prerequisite text each node already carries, so nothing is
    lost and the page never scrolls sideways. */
 @media (max-width: 820px) {
-  .program-prereq .pf-presentbtn,
-  .program-prereq .pf-seg,
-  .program-prereq .pf-presbar,
+  .program-prereq .pf-viewwrap,
   .program-prereq .pf-zones,
   .program-prereq .pf-svg,
   .program-prereq .pf-railbar,
@@ -1618,7 +1491,6 @@ html.pf-presenting body { overflow: hidden; }
   .program-prereq .pf-rel-next { color: rgba(121, 215, 255, .78); }
 
   .program-prereq .pf-node.is-dim { opacity: .45; }
-  .program-prereq .pf-node.is-unrevealed { opacity: 1; pointer-events: auto; }
 
   .program-prereq .pf-reltag {
     position: static;

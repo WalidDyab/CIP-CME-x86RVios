@@ -159,6 +159,10 @@ def main():
                     page.locator('.pf-seg-btn[data-view="board"]').click()
                     page.locator('.pf-node').first.click()
                     assert page.locator('.pf-node.is-selected').count() == 1
+                    page.locator('.pf-exportbtn').click()
+                    download(page, '.pf-menu-item:has-text("Selected path")', 'png')
+                    page.locator('.pf-exportbtn').click()
+                    download(page, '.pf-menu-item:has-text("Full map")', 'png')
                 elif name == 'undergraduate-ee/clo-methods-review.html':
                     assert page.locator('#review tbody tr').count() > 0
                     page.fill('#search', 'EE 351')
