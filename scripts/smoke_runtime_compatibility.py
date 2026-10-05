@@ -152,8 +152,13 @@ def main():
                     assert page.locator('.ps-bar-seg').count() > 0
                     assert page.locator('.pf-node').count() > 0
                     assert page.locator('.ps-bar-seg').first.evaluate('(e) => e.getBoundingClientRect().width') > 0
-                    assert page.locator('.pf-year').first.evaluate('(e) => getComputedStyle(e).gridRowStart') == '1'
-                    assert page.locator('.pf-sem').first.evaluate('(e) => getComputedStyle(e).gridRowStart') == '2'
+                    assert page.locator('.pf-year').count() == 4
+                    assert page.locator('.pf-sem').count() == 8
+                    assert page.locator('.pf-edge-prereq').count() > 0
+                    assert page.locator('.pf-edge-line').first.evaluate('(e) => e.getTotalLength()') > 0
+                    page.locator('.pf-seg-btn[data-view="board"]').click()
+                    page.locator('.pf-node').first.click()
+                    assert page.locator('.pf-node.is-selected').count() == 1
                 elif name == 'undergraduate-ee/clo-methods-review.html':
                     assert page.locator('#review tbody tr').count() > 0
                     page.fill('#search', 'EE 351')
