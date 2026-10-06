@@ -16,9 +16,13 @@
   <link rel="stylesheet" href="../assets/program-prerequisites.css?v=prereq-3">
   <script defer src="../assets/program-prerequisites-export.js?v=prereq-3"></script>
   <script defer src="../assets/program-prerequisites.js?v=prereq-3"></script>
-  <script defer src="../assets/reference-management.js?v=refs-1"></script>
+  <script defer src="../assets/reference-management.js?v=refs-4"></script>
   <link rel="stylesheet" href="../assets/program-references.css?v=refs-1">
   <script defer src="../assets/program-references.js?v=refs-1"></script>
+  <script defer src="../assets/vendor/jszip.min.js"></script>
+  <script defer src="../assets/ncaaa-cs-generator.js"></script>
+  <link rel="stylesheet" href="../assets/textbook-order.css?v=tbo-1">
+  <script defer src="../assets/textbook-order-generator.js?v=tbo-4"></script>
   <script src="../assets/vendor/jspdf.umd.min.js" integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="../assets/vendor/jspdf.plugin.autotable.min.js" integrity="sha512-QLh0AACvI+3C+bmn3QdH6blN0NWBxwGvBDgV67TvKV5Q2knO9+/+lguVL23JQ9DR7CnfuOSYUBURlXjmJeK11Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="../assets/pages/undergraduate-ee-program-overview.css">
@@ -78,10 +82,12 @@
       </section>
       <section class="space-top-14 card">
         <h2>Textbooks &amp; References</h2>
-        <p class="muted">Review the current program-wide list of main textbooks and additional references used across Undergraduate EE courses, or export the same list as a PDF.</p>
+        <p class="muted">Review the current program-wide list of main textbooks and additional references used across Undergraduate EE courses, export the same list as a PDF, or prepare the Library Required Textbooks order form (Word) from the main textbooks.</p>
         <div class="pref-actions">
           <button id="viewTextbookList" class="btn primary" type="button">View Textbooks &amp; References</button>
           <button id="generateTextbookList" class="btn" type="button">Generate PDF</button>
+          <button id="generateRequiredTextbooks" class="btn" type="button">Required Textbooks (Word)</button>
+          <button id="generateAlternativeTextbooks" class="btn" type="button">Alternative Textbooks (Word)</button>
         </div>
         <span id="textbookListStatus" class="muted overview-tool-status" aria-live="polite"></span>
         <div id="textbookListError"></div>

@@ -141,7 +141,28 @@
         "textbooks": [
           "E Balagurusamy, \"Problem Solving and Python Programming\", McGraw Hill Education, 2018."
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "title": "Problem Solving and Python Programming",
+            "edition": "1st",
+            "author": "E. Balagurusamy",
+            "isbn_print": "978-93-87067-01-1",
+            "publisher": "McGraw Hill Education",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Tony Gaddis, \"Starting Out with Python\", 5th Global Edition, Pearson Education Ltd, 2021."
+        ],
+        "reference_details": [
+          {
+            "title": "Starting Out with Python",
+            "edition": "5th Global Edition",
+            "author": "Tony Gaddis",
+            "isbn_print": "978-1-292-40863-7",
+            "publisher": "Pearson Education Ltd"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -343,7 +364,24 @@
         "textbooks": [
           "Robert L. Boylestad - Introductory Circuit Analysis (2016, Pearson), 13th Edition"
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "isbn_print": "978-1-292-09895-1",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Charles K. Alexander, Matthew N. O. Sadiku, \"Fundamentals of Electric Circuits\", 7th edition, McGraw-Hill Education, 2021."
+        ],
+        "reference_details": [
+          {
+            "title": "Fundamentals of Electric Circuits",
+            "edition": "7th",
+            "author": "Charles K. Alexander, Matthew N. O. Sadiku",
+            "isbn_print": "978-1-260-22640-9",
+            "publisher": "McGraw-Hill Education"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -541,7 +579,23 @@
         "textbooks": [
           "Electronic Devices (Conventional Current Version): Pearson New International Edition, Author(s): Floyd, Thomas L., Publisher: Pearson (Intl), Edition: 9th, Pages: 952, Print ISBN: 9781292025643, 1292025646eText ISBN: 9781292038070"
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Albert Malvino, David J. Bates, Patrick Hoppe, \"Electronic Principles\", 9th edition, McGraw Hill, 2021."
+        ],
+        "reference_details": [
+          {
+            "title": "Electronic Principles",
+            "edition": "9th",
+            "author": "Albert Malvino, David J. Bates, Patrick Hoppe",
+            "isbn_print": "978-1-259-85269-5",
+            "publisher": "McGraw Hill"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -777,7 +831,23 @@
         "textbooks": [
           "Digital Systems: Principles and Applications, 12/E, 2017, Neal Widmer, Greg Moss, Ronald J. Tocci. ISBN-10: 0135103827, ISBN 13: 978-0-13-422013-0, Publisher: Prentice Hall"
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "M. Morris Mano, Michael D. Ciletti, \"Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog\", 6th edition, Pearson, 2018."
+        ],
+        "reference_details": [
+          {
+            "title": "Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog",
+            "edition": "6th",
+            "author": "M. Morris Mano, Michael D. Ciletti",
+            "isbn_print": "978-0-13-454989-7",
+            "publisher": "Pearson"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -989,7 +1059,23 @@
         "textbooks": [
           "Signals, Systems, & Transforms (5th Global Edition), Phillips, Charles; Parr, John; Riskin, Published by Pearson Education (2014). ISBN: 9781292015286"
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "B. P. Lathi, Roger Green, \"Linear Systems and Signals\", 3rd edition, Oxford University Press, 2017."
+        ],
+        "reference_details": [
+          {
+            "title": "Linear Systems and Signals",
+            "edition": "3rd",
+            "author": "B. P. Lathi, Roger Green",
+            "isbn_print": "978-0-19-020017-6",
+            "publisher": "Oxford University Press"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -1171,7 +1257,17 @@
           "Knowledge of frequency response and filter circuits."
         ],
         "textbooks": [
-          "Ravish R. Singh, \"Electrical Networks\" Tata McGraw-Hill Education, July 2009."
+          "Ravish R. Singh, \"Electrical Networks\", McGraw Hill Education (India), 2017."
+        ],
+        "textbook_details": [
+          {
+            "title": "Electrical Networks",
+            "edition": "(1st)",
+            "author": "Ravish R. Singh",
+            "isbn_print": "978-0-07-026096-2",
+            "publisher": "McGraw Hill Education (India)",
+            "access_code": "No"
+          }
         ],
         "references": [
           "Alexander C.K and Sadiku MNO (2014). Fundamentals of Electric Circuits. 11th Edition, McGraw-Hill.",
@@ -1337,6 +1433,12 @@
         ],
         "textbooks": [
           "Robert L. Boylestad Louis Nashelsky, ‘Electronic Devices and Circuit Theory”, Eleventh Edition, Pearson, 2013."
+        ],
+        "textbook_details": [
+          {
+            "isbn_print": "978-1-292-02563-6",
+            "access_code": "No"
+          }
         ],
         "references": [
           "T. L. Floyd, Electronic Devices, Ninth Edition, publisher: Prentice Hall.",
@@ -1630,7 +1732,25 @@
         "textbooks": [
           "David Harris and Sarah Harris, “Digital Design and Computer Architecture” RISC-V Edition, Elsevier 2021"
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "edition": "RISC-V Edition",
+            "isbn_print": "978-0-12-820064-3",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "David A. Patterson, John L. Hennessy, \"Computer Organization and Design RISC-V Edition\", 2nd edition (RISC-V Edition), Morgan Kaufmann (Elsevier), 2020."
+        ],
+        "reference_details": [
+          {
+            "title": "Computer Organization and Design RISC-V Edition",
+            "edition": "2nd (RISC-V Edition)",
+            "author": "David A. Patterson, John L. Hennessy",
+            "isbn_print": "978-0-12-820331-6",
+            "publisher": "Morgan Kaufmann (Elsevier)"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -1846,7 +1966,24 @@
         "textbooks": [
           "W.H. Hayt, Jr. and J.A. Buck, “Engineering Electromagnetics,” 9th edition, McGraw Hill, 2018"
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "isbn_print": "1260084566",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Fawwaz T. Ulaby, Umberto Ravaioli, \"Fundamentals of Applied Electromagnetics\", 8th edition, Pearson, 2020."
+        ],
+        "reference_details": [
+          {
+            "title": "Fundamentals of Applied Electromagnetics",
+            "edition": "8th",
+            "author": "Fawwaz T. Ulaby, Umberto Ravaioli",
+            "isbn_print": "978-0-13-668158-8",
+            "publisher": "Pearson"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -2046,7 +2183,26 @@
         "textbooks": [
           "Modern Control Modern Control Engineering, (5th Edition) By: Katsuhiko Ogata."
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "title": "Modern Control Engineering",
+            "isbn_print": "9780136156734",
+            "publisher": "Pearson",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Norman S. Nise, \"Control Systems Engineering\", 8th edition, Wiley, 2019."
+        ],
+        "reference_details": [
+          {
+            "title": "Control Systems Engineering",
+            "edition": "8th",
+            "author": "Norman S. Nise",
+            "isbn_print": "978-1-119-47422-7",
+            "publisher": "Wiley"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -2306,7 +2462,26 @@
         "textbooks": [
           "Lathi, Modern Digital and Analog Communication Systems, Fifth Edition, Oxford University Press, 2018."
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "title": "Modern Digital and Analog Communication Systems",
+            "author": "B. P. Lathi, Zhi Ding",
+            "isbn_print": "0190686847",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "John G. Proakis, Masoud Salehi, \"Fundamentals of Communication Systems\", 2nd Global Edition, Pearson Education Ltd, 2014."
+        ],
+        "reference_details": [
+          {
+            "title": "Fundamentals of Communication Systems",
+            "edition": "2nd Global Edition",
+            "author": "John G. Proakis, Masoud Salehi",
+            "isbn_print": "978-1-292-01568-2",
+            "publisher": "Pearson Education Ltd"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -2557,9 +2732,30 @@
           "To connect the dots between power electronics and various energy sectors e.g. industrial, electric grid, renewable energy, microgrid, electric vehicle etc."
         ],
         "textbooks": [
-          "Rashid M.H., ‘Power Electronics Handbook’, Academic Press, 2001."
+          "Muhammad H. Rashid, \"Power Electronics Handbook\", 5th edition, Butterworth-Heinemann (Elsevier), 2023."
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "title": "Power Electronics Handbook",
+            "edition": "5th",
+            "author": "Muhammad H. Rashid",
+            "isbn_print": "978-0-323-99216-9",
+            "publisher": "Butterworth-Heinemann (Elsevier)",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Muhammad H. Rashid, \"Power Electronics: Devices, Circuits, and Applications\", 4th International Edition, Pearson Education Ltd, 2014."
+        ],
+        "reference_details": [
+          {
+            "title": "Power Electronics: Devices, Circuits, and Applications",
+            "edition": "4th International Edition",
+            "author": "Muhammad H. Rashid",
+            "isbn_print": "978-0-273-76908-8",
+            "publisher": "Pearson Education Ltd"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -2759,7 +2955,17 @@
           "Describe the operation of, and factors affecting output power, torque, speed and direction of rotation of DC, AC motors."
         ],
         "textbooks": [
-          "BL Theraja, \" A Textbook of Electrical Technology - Volume II\", S. Chand, 2023."
+          "B. L. Theraja and A. K. Theraja, \"A Textbook of Electrical Technology - Volume II: AC and DC Machines\", S. Chand, 2025."
+        ],
+        "textbook_details": [
+          {
+            "title": "A Textbook of Electrical Technology - Volume II: AC and DC Machines",
+            "edition": "(1st)",
+            "author": "B. L. Theraja, A. K. Theraja",
+            "isbn_print": "978-93-5501-825-0",
+            "publisher": "S. Chand",
+            "access_code": "No"
+          }
         ],
         "references": [
           "Electric Machines by Nagrath and Kothari | 5th Edition, McGrawHill, 2017",
@@ -3009,7 +3215,26 @@
         "textbooks": [
           "D. P. Kothari, I. J. Nagrath, Power System Engineering, 2019, 3rd edition, McGraw-Hill Education"
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "title": "Power System Engineering",
+            "author": "D. P. Kothari, I. J. Nagrath",
+            "isbn_print": "9353165113",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "J. Duncan Glover, Mulukutla S. Sarma, Thomas J. Overbye, Adam Birchfield, \"Power System Analysis and Design\", 7th edition, Cengage Learning, 2023."
+        ],
+        "reference_details": [
+          {
+            "title": "Power System Analysis and Design",
+            "edition": "7th",
+            "author": "J. Duncan Glover, Mulukutla S. Sarma, Thomas J. Overbye, Adam Birchfield",
+            "isbn_print": "978-0-357-67618-9",
+            "publisher": "Cengage Learning"
+          }
+        ],
         "course_topics": [
           {
             "topic_number": 1,
@@ -3312,9 +3537,30 @@
           "Evaluate design outcomes with consideration for ethical, environmental, societal, and economic factors, and present the final product through comprehensive technical documentation and oral presentations."
         ],
         "textbooks": [
-          "Exploring Engineering: An Introduction to Engineering and Design / Philip Kosky, ISBN 978-0-12-374723-5"
+          "Philip Kosky, Robert Balmer, William Keat and George Wise, \"Exploring Engineering: An Introduction to Engineering and Design\", 6th edition, Elsevier, 2024."
         ],
-        "references": [],
+        "textbook_details": [
+          {
+            "title": "Exploring Engineering: An Introduction to Engineering and Design",
+            "edition": "6th",
+            "author": "Philip Kosky, Robert Balmer, William Keat, George Wise",
+            "isbn_print": "978-0-443-13541-5",
+            "publisher": "Elsevier",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Clive L. Dym, Patrick Little, Elizabeth Orwin, \"Engineering Design: A Project-Based Introduction\", 4th edition, Wiley, 2013."
+        ],
+        "reference_details": [
+          {
+            "title": "Engineering Design: A Project-Based Introduction",
+            "edition": "4th",
+            "author": "Clive L. Dym, Patrick Little, Elizabeth Orwin",
+            "isbn_print": "978-1-118-32458-5",
+            "publisher": "Wiley"
+          }
+        ],
         "course_topics": [],
         "total_topic_contact_hours": null,
         "course_id": 25,
@@ -3944,8 +4190,31 @@
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [],
-        "textbooks": [],
-        "references": [],
+        "textbooks": [
+          "David Harris, James Stine, Sarah Harris and Rose Thompson, \"RISC-V System-on-Chip Design\", 1st edition, Elsevier, 2026."
+        ],
+        "textbook_details": [
+          {
+            "title": "RISC-V System-on-Chip Design",
+            "edition": "1st",
+            "author": "David Harris, James Stine, Sarah Harris, Rose Thompson",
+            "isbn_print": "978-0-323-99498-9",
+            "publisher": "Elsevier",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Neil H. E. Weste, David Money Harris, \"CMOS VLSI Design: A Circuits and Systems Perspective\", 4th edition, Addison-Wesley (Pearson), 2011."
+        ],
+        "reference_details": [
+          {
+            "title": "CMOS VLSI Design: A Circuits and Systems Perspective",
+            "edition": "4th",
+            "author": "Neil H. E. Weste, David Money Harris",
+            "isbn_print": "978-0-321-54774-3",
+            "publisher": "Addison-Wesley (Pearson)"
+          }
+        ],
         "course_topics": [],
         "total_topic_contact_hours": null,
         "course_id": 29,
@@ -4117,8 +4386,31 @@
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [],
-        "textbooks": [],
-        "references": [],
+        "textbooks": [
+          "Behzad Razavi, \"RF Microelectronics\", 2nd edition, Prentice Hall, 2011."
+        ],
+        "textbook_details": [
+          {
+            "title": "RF Microelectronics",
+            "edition": "2nd",
+            "author": "Behzad Razavi",
+            "isbn_print": "978-0-13-713473-1",
+            "publisher": "Prentice Hall",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Louis E. Frenzel Jr., \"Principles of Electronic Communication Systems\", 5th edition, McGraw Hill, 2022."
+        ],
+        "reference_details": [
+          {
+            "title": "Principles of Electronic Communication Systems",
+            "edition": "5th",
+            "author": "Louis E. Frenzel Jr.",
+            "isbn_print": "978-1-259-93279-3",
+            "publisher": "McGraw Hill"
+          }
+        ],
         "course_topics": [],
         "total_topic_contact_hours": null,
         "course_id": 30,
@@ -4301,6 +4593,13 @@
         "textbooks": [
           "Kurose, J. F., & Ross, K. W. (2021). Computer Networking: A Top-Down Approach, 8th ed. Pearson."
         ],
+        "textbook_details": [
+          {
+            "edition": "8th Global Edition",
+            "isbn_print": "978-1-292-40546-9",
+            "access_code": "No"
+          }
+        ],
         "references": [
           "Tanenbaum, A. S., Feamster, N., & Wetherall, D. J. (2021). Computer Networks, 6th ed. Pearson.",
           "McMillan, T. (2015). Cisco Networking Essentials, 2nd ed. Wiley."
@@ -4470,8 +4769,31 @@
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [],
-        "textbooks": [],
-        "references": [],
+        "textbooks": [
+          "B. P. Lathi and Zhi Ding, \"Modern Digital and Analog Communication Systems\", Fifth Edition, Oxford University Press, 2018."
+        ],
+        "textbook_details": [
+          {
+            "title": "Modern Digital and Analog Communication Systems",
+            "edition": "Fifth",
+            "author": "B. P. Lathi, Zhi Ding",
+            "isbn_print": "0190686847",
+            "publisher": "Oxford University Press",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Bernard Sklar, Fredric J. Harris, \"Digital Communications: Fundamentals and Applications\", 3rd edition, Pearson, 2021."
+        ],
+        "reference_details": [
+          {
+            "title": "Digital Communications: Fundamentals and Applications",
+            "edition": "3rd",
+            "author": "Bernard Sklar, Fredric J. Harris",
+            "isbn_print": "978-0-13-458856-8",
+            "publisher": "Pearson"
+          }
+        ],
         "course_topics": [],
         "total_topic_contact_hours": null,
         "course_id": 32,
@@ -4582,8 +4904,31 @@
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [],
-        "textbooks": [],
-        "references": [],
+        "textbooks": [
+          "Andrea Goldsmith, \"Wireless Communications\", Cambridge University Press, 2005."
+        ],
+        "textbook_details": [
+          {
+            "title": "Wireless Communications",
+            "edition": "(1st)",
+            "author": "Andrea Goldsmith",
+            "isbn_print": "978-0-521-83716-3",
+            "publisher": "Cambridge University Press",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Andreas F. Molisch, \"Wireless Communications: From Fundamentals to Beyond 5G\", 3rd edition, Wiley-IEEE Press, 2022."
+        ],
+        "reference_details": [
+          {
+            "title": "Wireless Communications: From Fundamentals to Beyond 5G",
+            "edition": "3rd",
+            "author": "Andreas F. Molisch",
+            "isbn_print": "978-1-119-11720-9",
+            "publisher": "Wiley-IEEE Press"
+          }
+        ],
         "course_topics": [],
         "total_topic_contact_hours": null,
         "course_id": 33,
@@ -4756,8 +5101,31 @@
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [],
-        "textbooks": [],
-        "references": [],
+        "textbooks": [
+          "Constantine A. Balanis, \"Antenna Theory: Analysis and Design\", 4th edition, Wiley, 2016."
+        ],
+        "textbook_details": [
+          {
+            "title": "Antenna Theory: Analysis and Design",
+            "edition": "4th",
+            "author": "Constantine A. Balanis",
+            "isbn_print": "978-1-118-64206-1",
+            "publisher": "Wiley",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Warren L. Stutzman, Gary A. Thiele, \"Antenna Theory and Design\", 3rd edition, Wiley, 2012."
+        ],
+        "reference_details": [
+          {
+            "title": "Antenna Theory and Design",
+            "edition": "3rd",
+            "author": "Warren L. Stutzman, Gary A. Thiele",
+            "isbn_print": "978-0-470-57664-9",
+            "publisher": "Wiley"
+          }
+        ],
         "course_topics": [],
         "total_topic_contact_hours": null,
         "course_id": 34,
@@ -5519,8 +5887,31 @@
         "corequisites": [],
         "corequisite_text": null,
         "course_objectives": [],
-        "textbooks": [],
-        "references": [],
+        "textbooks": [
+          "John G. Proakis and Dimitris G. Manolakis, \"Digital Signal Processing\", 4th edition, Pearson, 2006."
+        ],
+        "textbook_details": [
+          {
+            "title": "Digital Signal Processing",
+            "edition": "4th",
+            "author": "John G. Proakis, Dimitris G. Manolakis",
+            "isbn_print": "978-0-13-187374-2",
+            "publisher": "Pearson",
+            "access_code": "No"
+          }
+        ],
+        "references": [
+          "Sanjit K. Mitra, \"Digital Signal Processing: A Computer-Based Approach\", 4th edition, McGraw-Hill, 2011."
+        ],
+        "reference_details": [
+          {
+            "title": "Digital Signal Processing: A Computer-Based Approach",
+            "edition": "4th",
+            "author": "Sanjit K. Mitra",
+            "isbn_print": "978-0-07-338049-0",
+            "publisher": "McGraw-Hill"
+          }
+        ],
         "course_topics": [],
         "total_topic_contact_hours": null,
         "course_id": 39,

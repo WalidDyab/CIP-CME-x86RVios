@@ -354,7 +354,8 @@
     CLO_SLOT_BY_CODE, FES_CLO_SLOT_BY_CODE, ValidationError, ExcludedCourse, cleanList, cloCode,
     normalizedCourseCode, filenameForCourse, isCoop, documentKindForCourse, contactHours,
     validateAndBuildValues, validateAndBuildFesValues, fieldName, patchDocumentXml,
-    templateUrlForCourse, generateDocxBlob, generateAndDownload
+    templateUrlForCourse, generateDocxBlob, generateAndDownload,
+    FIXED_VALUES, DOCX_MIME, downloadBlob
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   global.ncaaaCsGenerator = api;

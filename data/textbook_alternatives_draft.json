@@ -1,0 +1,205 @@
+{
+  "_status": "DRAFT - proposed alternatives pending faculty review. Not approved curriculum data; keep separate from ee_curriculum.json until approved.",
+  "_source": "research/ee-textbook-alternatives.md (bibliographic verification pass 2026-10-06); research/ee-textbook-alternatives-faculty-review.md",
+  "_decision": "The department accepted every verified recommendation (all three review categories) as the working list; faculty may modify it offline in the generated Word sheet. Open edition/market choices are listed in the faculty-review file (EE 201, 221, 312, 341, 423, 101, 305).",
+  "alternatives": {
+    "EE 101": [
+      {
+        "title": "Starting Out with Python",
+        "edition": "5th Global Edition",
+        "author": "Tony Gaddis",
+        "isbn_print": "978-1-292-40863-7",
+        "publisher": "Pearson Education Ltd"
+      }
+    ],
+    "EE 201": [
+      {
+        "title": "Fundamentals of Electric Circuits",
+        "edition": "7th",
+        "author": "Charles K. Alexander, Matthew N. O. Sadiku",
+        "isbn_print": "978-1-260-22640-9",
+        "publisher": "McGraw-Hill Education"
+      }
+    ],
+    "EE 211": [
+      {
+        "title": "Electronic Principles",
+        "edition": "9th",
+        "author": "Albert Malvino, David J. Bates, Patrick Hoppe",
+        "isbn_print": "978-1-259-85269-5",
+        "publisher": "McGraw Hill"
+      }
+    ],
+    "EE 221": [
+      {
+        "title": "Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog",
+        "edition": "6th",
+        "author": "M. Morris Mano, Michael D. Ciletti",
+        "isbn_print": "978-0-13-454989-7",
+        "publisher": "Pearson"
+      }
+    ],
+    "EE 231": [
+      {
+        "title": "Linear Systems and Signals",
+        "edition": "3rd",
+        "author": "B. P. Lathi, Roger Green",
+        "isbn_print": "978-0-19-020017-6",
+        "publisher": "Oxford University Press"
+      }
+    ],
+    "EE 202": [
+      {
+        "title": "Electric Circuits",
+        "edition": "12th",
+        "author": "James W. Nilsson, Susan A. Riedel",
+        "isbn_print": "978-0-13-764837-5",
+        "publisher": "Pearson"
+      }
+    ],
+    "EE 312": [
+      {
+        "title": "Microelectronic Circuits",
+        "edition": "8th",
+        "author": "Adel S. Sedra, Kenneth C. Smith, Tony Chan Carusone, Vincent Gaudet",
+        "isbn_print": "978-0-19-085346-4",
+        "publisher": "Oxford University Press"
+      }
+    ],
+    "EE 322": [
+      {
+        "title": "Computer Organization and Design RISC-V Edition",
+        "edition": "2nd (RISC-V Edition)",
+        "author": "David A. Patterson, John L. Hennessy",
+        "isbn_print": "978-0-12-820331-6",
+        "publisher": "Morgan Kaufmann (Elsevier)"
+      }
+    ],
+    "EE 341": [
+      {
+        "title": "Fundamentals of Applied Electromagnetics",
+        "edition": "8th",
+        "author": "Fawwaz T. Ulaby, Umberto Ravaioli",
+        "isbn_print": "978-0-13-668158-8",
+        "publisher": "Pearson"
+      }
+    ],
+    "EE 332": [
+      {
+        "title": "Control Systems Engineering",
+        "edition": "8th",
+        "author": "Norman S. Nise",
+        "isbn_print": "978-1-119-47422-7",
+        "publisher": "Wiley"
+      }
+    ],
+    "EE 351": [
+      {
+        "title": "Fundamentals of Communication Systems",
+        "edition": "2nd Global Edition",
+        "author": "John G. Proakis, Masoud Salehi",
+        "isbn_print": "978-1-292-01568-2",
+        "publisher": "Pearson Education Ltd"
+      }
+    ],
+    "EE 305": [
+      {
+        "title": "Power Electronics: Devices, Circuits, and Applications",
+        "edition": "4th International Edition",
+        "author": "Muhammad H. Rashid",
+        "isbn_print": "978-0-273-76908-8",
+        "publisher": "Pearson Education Ltd"
+      }
+    ],
+    "EE 304": [
+      {
+        "title": "Electric Machinery Fundamentals",
+        "edition": "5th",
+        "author": "Stephen J. Chapman",
+        "isbn_print": "978-0-07-352954-7",
+        "publisher": "McGraw-Hill"
+      }
+    ],
+    "EE 403": [
+      {
+        "title": "Power System Analysis and Design",
+        "edition": "7th",
+        "author": "J. Duncan Glover, Mulukutla S. Sarma, Thomas J. Overbye, Adam Birchfield",
+        "isbn_print": "978-0-357-67618-9",
+        "publisher": "Cengage Learning"
+      }
+    ],
+    "EE 490": [
+      {
+        "title": "Engineering Design: A Project-Based Introduction",
+        "edition": "4th",
+        "author": "Clive L. Dym, Patrick Little, Elizabeth Orwin",
+        "isbn_print": "978-1-118-32458-5",
+        "publisher": "Wiley"
+      }
+    ],
+    "EE 416": [
+      {
+        "title": "CMOS VLSI Design: A Circuits and Systems Perspective",
+        "edition": "4th",
+        "author": "Neil H. E. Weste, David Money Harris",
+        "isbn_print": "978-0-321-54774-3",
+        "publisher": "Addison-Wesley (Pearson)"
+      }
+    ],
+    "EE 417": [
+      {
+        "title": "Principles of Electronic Communication Systems",
+        "edition": "5th",
+        "author": "Louis E. Frenzel Jr.",
+        "isbn_print": "978-1-259-93279-3",
+        "publisher": "McGraw Hill"
+      }
+    ],
+    "EE 423": [
+      {
+        "title": "Data and Computer Communications",
+        "edition": "10th",
+        "author": "William Stallings",
+        "isbn_print": "978-0-13-350648-8",
+        "publisher": "Pearson / Prentice Hall"
+      }
+    ],
+    "EE 424": [
+      {
+        "title": "Digital Communications: Fundamentals and Applications",
+        "edition": "3rd",
+        "author": "Bernard Sklar, Fredric J. Harris",
+        "isbn_print": "978-0-13-458856-8",
+        "publisher": "Pearson"
+      }
+    ],
+    "EE 425": [
+      {
+        "title": "Wireless Communications: From Fundamentals to Beyond 5G",
+        "edition": "3rd",
+        "author": "Andreas F. Molisch",
+        "isbn_print": "978-1-119-11720-9",
+        "publisher": "Wiley-IEEE Press"
+      }
+    ],
+    "EE 426": [
+      {
+        "title": "Antenna Theory and Design",
+        "edition": "3rd",
+        "author": "Warren L. Stutzman, Gary A. Thiele",
+        "isbn_print": "978-0-470-57664-9",
+        "publisher": "Wiley"
+      }
+    ],
+    "EE 442": [
+      {
+        "title": "Digital Signal Processing: A Computer-Based Approach",
+        "edition": "4th",
+        "author": "Sanjit K. Mitra",
+        "isbn_print": "978-0-07-338049-0",
+        "publisher": "McGraw-Hill"
+      }
+    ]
+  }
+}

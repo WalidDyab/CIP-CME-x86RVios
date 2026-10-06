@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', async () => {
           byId('viewTextbookList').hidden = true;
           byId('textbookListError').innerHTML = '<div class="alert">The textbooks and references view is unavailable.</div>';
         }
+        if (window.textbookOrderGenerator) {
+          window.textbookOrderGenerator.mount({ courses, trigger: byId('generateRequiredTextbooks'), errorTarget: byId('textbookListError'), templateUrl: '../templates/EE-Required-Textbooks-Template.docx', estimatesUrl: '../data/textbook_order_estimates.json' });
+          window.textbookOrderGenerator.mount({ courses, kind: 'alternatives', trigger: byId('generateAlternativeTextbooks'), errorTarget: byId('textbookListError'), templateUrl: '../templates/EE-Alternative-Textbooks-Template.docx' });
+        } else {
+          byId('generateRequiredTextbooks').hidden = true;
+          byId('generateAlternativeTextbooks').hidden = true;
+        }
         byId('generateTextbookList').addEventListener('click', () => {
           const status = byId('textbookListStatus');
           try {

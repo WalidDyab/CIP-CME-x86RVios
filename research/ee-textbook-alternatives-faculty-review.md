@@ -1,0 +1,52 @@
+# Faculty review: alternative main textbooks (DRAFT)
+
+Derived from the verified research in `ee-textbook-alternatives.md` (verification pass 2026-10-06). **Nothing here is in CIP.** No curriculum data, `textbook_alternatives` field or Alternatives form has been created. All ISBNs are print ISBNs with valid checksums.
+
+## 1. Verified and ready for approval (12)
+
+| Course | Current Textbook | Recommended Alternative | Edition | Author | Print ISBN | Publisher | Reason for Recommendation | Decision Needed |
+|---|---|---|---|---|---|---|---|---|
+| EE 201 Introduction to Circuits | Boylestad, *Introductory Circuit Analysis* (13th) | *Fundamentals of Electric Circuits* | 7th | Alexander, Sadiku | 978-1-260-22640-9 | McGraw-Hill Education | Same DC/AC scope; more worked examples and problems, somewhat more mathematical | **Approve, and choose the release.** The publisher page now shows a "7th Edition (2026 Release)" with different ISBNs (print-rental 978-1-266-02040-7, loose-leaf 978-1-265-42677-4). The original 7th-edition hardcover above is proposed |
+| EE 202 Circuit Analysis | Singh, *Electrical Networks* | *Electric Circuits* | 12th | Nilsson, Riedel | 978-0-13-764837-5 | Pearson | Matches RL/RC/RLC, Laplace, filters, three-phase and two-port scope; Nilsson was also used for this course in Term 241 | Approve |
+| EE 211 Electronic Fundamentals | Floyd, *Electronic Devices (Conventional Current)* (9th) | *Electronic Principles* | 9th | Malvino, Bates, Hoppe | 978-1-259-85269-5 | McGraw Hill | Same diode/BJT/amplifier level; more practical and current devices | Approve. Note: a newer Floyd edition (10th) exists; that would be an update of the current book, not an alternative |
+| EE 221 Logic Design | Tocci et al., *Digital Systems* (12th) | *Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog* | 6th | Mano, Ciletti | 978-0-13-454989-7 | Pearson | Same Boolean/K-map/combinational/sequential scope, plus HDL | **Approve, and confirm the edition.** Pearson sells the 6th edition as a 2017-update hardcover (© 2018, used here) and as a 2021 eText (978-0-13-750198-4, not orderable in print) |
+| EE 231 Signals and Systems | Phillips/Parr/Riskin, *Signals, Systems, and Transforms* (5th Global) | *Linear Systems and Signals* | 3rd | Lathi, Green | 978-0-19-020017-6 | Oxford University Press | CT/DT LTI systems, Fourier, Laplace, z-transform, sampling; more worked examples and MATLAB | Approve |
+| EE 304 Electrical Machines | Theraja & Theraja, *Textbook of Electrical Technology Vol. II* | *Electric Machinery Fundamentals* | 5th | Chapman | 978-0-07-352954-7 | McGraw-Hill | Transformers, DC and AC machines with clear examples; standard English-language text | Approve |
+| EE 312 Electronic Engineering | Boylestad & Nashelsky, *Electronic Devices and Circuit Theory* (11th) | *Microelectronic Circuits* | 8th | Sedra, Smith, Chan Carusone, Gaudet | 978-0-19-085346-4 (hardcover) | Oxford University Press | Multistage BJT/FET/MOSFET, frequency response, filters, oscillators, CMOS; deeper and more current | **Approve, and choose the binding:** hardcover (above, Nov 2019) or paperback 978-0-19-085350-1 (Jan 2020) |
+| EE 332 Control Systems | Ogata, *Modern Control Engineering* (5th) | *Control Systems Engineering* | 8th | Nise | 978-1-119-47422-7 | Wiley | Same modeling, time/frequency response, stability and lead/lag design; more undergraduate-friendly with MATLAB | Approve |
+| EE 341 Electromagnetics Fundamental | Hayt & Buck, *Engineering Electromagnetics* (9th) | *Fundamentals of Applied Electromagnetics* | 8th | Ulaby, Ravaioli | 978-0-13-668158-8 | Pearson | Same static-field coverage; application-focused with more modules and fewer derivations | **Approve, and confirm the printing.** The ISBN is Pearson's print "2020 update"; one catalog labels it a rental edition. The eText ISBN (978-0-13-520044-5) is not orderable in print |
+| EE 403 Power Systems | Kothari & Nagrath, *Power System Engineering* (3rd) | *Power System Analysis and Design* | 7th | Glover, Sarma, Overbye, Birchfield | 978-0-357-67618-9 | Cengage | Generation, networks, per-unit, load flow; includes PowerWorld simulation | Approve (publication year is 2023 per Cengage, 2022 in the catalog) |
+| EE 423 Data Communication Networks | Kurose & Ross, *Computer Networking* (8th Global) | *Data and Computer Communications* | 10th | Stallings | 978-0-13-350648-8 | Pearson / Prentice Hall | Stronger on transmission, encoding and protocols, the first half of the course | **Approve, and choose the market:** US print (above) or the international printings 978-1-292-01438-8 / 978-1-292-01439-5 |
+| EE 424 Digital Communications | Lathi & Ding, *Modern Digital and Analog Communication Systems* (5th) | *Digital Communications: Fundamentals and Applications* | 3rd | Sklar, Harris | 978-0-13-458856-8 (hardcover) | Pearson | Covers information theory, source/channel coding and modulation, which the course description targets; the current book is a general analog+digital text | Approve |
+
+## 2. Needs faculty academic review (7)
+
+Bibliographic data is verified for all seven. The academic fit is the open question.
+
+| Course | Current Textbook | Recommended Alternative | Edition | Author | Print ISBN | Publisher | Reason for Recommendation | Decision Needed |
+|---|---|---|---|---|---|---|---|---|
+| EE 101 Computer Programming for Engineering | Balagurusamy, *Problem Solving and Python Programming* (1st) | *Starting Out with Python* | Global Edition (5th) | Gaddis | 978-1-292-40863-7 | Pearson Education Ltd | Controlled, example-driven first-year Python; covers I/O, operators, functions, strings, tuples | **Confirm level fit and edition.** The 6th edition exists only as eText/Revel (no print ISBN found), so the 5th Global Edition is proposed |
+| EE 305 Power Electronics | Rashid, *Power Electronics Handbook* (5th) | *Power Electronics: Devices, Circuits, and Applications* | 4th, International Edition | Rashid | 978-0-273-76908-8 | Pearson Education Ltd | The current book is a reference handbook; this is the same author's teaching text (devices, rectifiers, converters, PWM) | **Decide handbook vs teaching text**, and note that only the International Edition is confirmed; the US 4th-edition ISBN could not be confirmed |
+| EE 322 Microprocessors Design | Harris & Harris, *Digital Design and Computer Architecture, RISC-V Edition* | *Computer Organization and Design RISC-V Edition* | 2nd (RISC-V Edition) | Patterson, Hennessy | 978-0-12-820331-6 | Morgan Kaufmann (Elsevier) | Rigorous RISC-V processor and ISA coverage | **Subject expert to confirm scope.** The course is embedded-systems oriented; this book covers computer organization, not microcontroller programming and interfacing |
+| EE 416 VLSI Circuits Design | Harris et al., *RISC-V System-on-Chip Design* (1st) | *CMOS VLSI Design: A Circuits and Systems Perspective* | 4th | Weste, Harris | 978-0-321-54774-3 | Addison-Wesley (Pearson) | The standard VLSI circuits text; closer to a "circuits design" course than a SoC/architecture book | **Decide scope:** circuits-level VLSI (this book) or SoC/architecture (current book). Pearson's 2022 "update" ID is digital; the 2010 print is proposed |
+| EE 417 Communication Electronics | Razavi, *RF Microelectronics* (2nd) | *Principles of Electronic Communication Systems* | 5th | Frenzel | 978-1-259-93279-3 (hardcover) | McGraw Hill | First-course coverage of modulation, receivers and transmission lines | **Course description is empty in CIP**, so equivalence cannot be judged. Instructor to state the course content and level; Frenzel is much more elementary than the current RF text. The publisher page also shows a 2026 release label against 2022 in the catalog |
+| EE 425 Wireless Communications Systems | Goldsmith, *Wireless Communications* | *Wireless Communications: From Fundamentals to Beyond 5G* | 3rd | Molisch | 978-1-119-11720-9 (paperback) | Wiley-IEEE Press | Current (2022) coverage of channels, cellular, modulation, MIMO/OFDM and 5G | **Confirm choice.** Changed from Rappaport (2nd ed., 2001), which is dated; Rappaport remains the more undergraduate-friendly fallback |
+| EE 490 Senior Design Project | Kosky et al., *Exploring Engineering* (6th) | *Engineering Design: A Project-Based Introduction* | 4th | Dym, Little, Orwin | 978-1-118-32458-5 | Wiley | Covers the design process, teamwork and reporting; an optional reference only | **Decide whether to list any alternative at all.** A capstone has no true textbook substitute, and this is the one case where leaving the alternative blank is reasonable |
+
+## 3. Current textbook remains preferable (3)
+
+The alternative is bibliographically verified, but the current book is a standard text and replacing it is not recommended. Listing the alternative is optional.
+
+| Course | Current Textbook | Recommended Alternative | Edition | Author | Print ISBN | Publisher | Reason for Recommendation | Decision Needed |
+|---|---|---|---|---|---|---|---|---|
+| EE 351 Communication Systems | Lathi & Ding, *Modern Digital and Analog Communication Systems* (5th) | *Fundamentals of Communication Systems* | 2nd, Global Edition | Proakis, Salehi | 978-1-292-01568-2 | Pearson Education Ltd | Comparable depth in analog modulation then digital basics | Keep the current book. Decide whether to register this as an alternative. Only the Global Edition print ISBN is confirmed; the US print ISBN is not |
+| EE 426 Antenna and wave propagation | Balanis, *Antenna Theory: Analysis and Design* (4th) | *Antenna Theory and Design* | 3rd | Stutzman, Thiele | 978-0-470-57664-9 | Wiley | Same fundamentals, methods and arrays; somewhat shorter | Keep the current book. Decide whether to register this as an alternative |
+| EE 442 Digital Signal Processing | Proakis & Manolakis, *Digital Signal Processing* (4th) | *Digital Signal Processing: A Computer-Based Approach* | 4th | Mitra | 978-0-07-338049-0 | McGraw-Hill | Comparable depth with MATLAB-based treatment | Keep the current book. Decide whether to register this as an alternative |
+
+## Decisions needed at a glance
+
+| Type | Courses |
+|---|---|
+| Edition/market/release choice | EE 201 (release), EE 221 (edition), EE 312 (binding), EE 341 (printing), EE 423 (market), EE 101 (edition), EE 305 (US vs International) |
+| Subject-expert scope decision | EE 322, EE 416, EE 417, EE 425, EE 305 |
+| Whether to list an alternative at all | EE 490 (and EE 351, 426, 442, where the current book stays) |

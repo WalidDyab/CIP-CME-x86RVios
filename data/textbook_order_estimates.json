@@ -1,0 +1,18 @@
+{
+  "_source": "Textbooks Template Term 241- Required (1).docx (approved Term 241 Library order form)",
+  "_note": "Historical Required Quantity per course, used only to pre-fill the Required Textbooks form as an editable estimate. Not curriculum data; confirm against current enrolment before ordering.",
+  "quantities": {
+    "EE 101": 20,
+    "EE 201": 3,
+    "EE 202": 3,
+    "EE 211": 5,
+    "EE 231": 5,
+    "EE 304": 10,
+    "EE 305": 5,
+    "EE 312": 3,
+    "EE 332": 10,
+    "EE 341": 8,
+    "EE 351": 8,
+    "EE 403": 10
+  }
+}
