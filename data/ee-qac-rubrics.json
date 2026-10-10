@@ -1,0 +1,2207 @@
+{
+  "schema_version": "1.0",
+  "program": "Electrical Engineering",
+  "description": "Official Quality Assurance Committee (QAC) SO/PI assessment rubrics extracted verbatim from the byte-preserved QAC Excel templates. Contains no suggested assignments, CLO interpretation or instructional guidance. SO and PI identifiers refer to abet.student_outcomes and abet.performance_indicators in ee_curriculum.json, which remain the single source of truth; SO/PI descriptions are not duplicated here (only the QAC criterion label is kept, for fidelity).",
+  "authority": {
+    "issuer": "Quality Assurance Committee (QAC)",
+    "authoritative_sheets": "The visible rubric sheet(s) of each workbook (see rubrics[].source). Hidden legacy sheets are not extracted.",
+    "text_policy": "All text fields are verbatim cell values (including non-breaking spaces, bullets and typographical errors). Nothing is corrected."
+  },
+  "curriculum_reference": {
+    "file": "data/ee_curriculum.json",
+    "so_path": "abet.student_outcomes",
+    "pi_path": "abet.performance_indicators"
+  },
+  "templates_manifest": "data/ee-qac-templates.json",
+  "checklist_contexts": {
+    "team_evidence": "Checklist items under \"Team assessment (Report):\" (group/team evidence).",
+    "individual_verification": "Checklist items under \"Individual Assessment:\" (individual verification, e.g. oral or exam question).",
+    "exam_written": "Checklist column for exam/written assessment.",
+    "unspecified": "Checklist text without a Team/Individual heading."
+  },
+  "rubrics": [
+    {
+      "rubric_id": "qac-so1-ver01-rubric",
+      "so": "SO1",
+      "pis": [
+        "PI11",
+        "PI12",
+        "PI13"
+      ],
+      "template_id": "qac-so1-ver01",
+      "workbook_variant": null,
+      "source": {
+        "workbook": "PI-SO1 Assessment-EExxx-T2xx ver01.xlsx",
+        "sheet": "Rubric",
+        "sheet_state": "visible",
+        "dimension": "A1:G994",
+        "merged_ranges": [
+          "G2:G3",
+          "A1:G1",
+          "A7:G7",
+          "A2:A3",
+          "F2:F3",
+          "B2:B3",
+          "C2:C3",
+          "D2:D3",
+          "E2:E3"
+        ],
+        "workbook_version_label": "ver01"
+      },
+      "title": {
+        "cell": "A1",
+        "text": "Assessment Rubric"
+      },
+      "item_header": {
+        "cell": "A2",
+        "text": "Assessment item"
+      },
+      "performance_levels": {
+        "scale": [
+          {
+            "key": "above",
+            "score": 3,
+            "header_cell": "B2"
+          },
+          {
+            "key": "meet",
+            "score": 2,
+            "header_cell": "C2"
+          },
+          {
+            "key": "developing",
+            "score": 1,
+            "header_cell": "D2"
+          },
+          {
+            "key": "below",
+            "score": 0,
+            "header_cell": "E2"
+          }
+        ],
+        "headers": {
+          "above": {
+            "cell": "B2",
+            "text": "Above Expectation (3)"
+          },
+          "meet": {
+            "cell": "C2",
+            "text": "Meet Expectation (2)"
+          },
+          "developing": {
+            "cell": "D2",
+            "text": "Developing Expectation (1)"
+          },
+          "below": {
+            "cell": "E2",
+            "text": "Below Expectation (0)"
+          }
+        }
+      },
+      "checklist_columns": [
+        {
+          "checklist_id": "project",
+          "column": "F",
+          "role": "project",
+          "header_cell": "F2",
+          "header": "Checklist for Assessment (Project)"
+        },
+        {
+          "checklist_id": "exam",
+          "column": "G",
+          "role": "exam",
+          "header_cell": "G2",
+          "header": "Checklist for Assessment\n(Exam/Written)"
+        }
+      ],
+      "criteria": [
+        {
+          "criterion_id": "PI11.C1",
+          "so": "SO1",
+          "pi": "PI11",
+          "order_in_pi": 1,
+          "label": "PI11 Identify the key requirements, interacting variables, and technical issues of a complex engineering problem",
+          "label_cell": "A4",
+          "source_row": 4,
+          "cip_pi_statement_comparison": "punctuation_or_case_only",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B4",
+              "text": "Correctly identifies the key requirements, interacting variables, and relevant technical issues, and clearly demonstrates their significance to the engineering problem."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C4",
+              "text": "Correctly identifies the key requirements, main interacting variables, and relevant technical issues of the engineering problem."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D4",
+              "text": "Identifies some relevant requirements, variables, or technical issues, but important elements are missing, unclear, or incorrectly identified."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E4",
+              "text": "Key requirements, interacting variables, and technical issues are missing, incorrect, or not relevant to the engineering problem."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "project",
+              "role": "project",
+              "cell": "F4",
+              "text": "Team assessment (Report):\n• Are the key requirements, interacting variables, and relevant technical issues identified?\n• Are important interactions between variables explained?\n• Are the identified technical issues relevant to the engineering problem?\nIndividual Assessment:\n• Identify one important interaction between variables and one key technical issue, and explain their significance to the problem.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are the key requirements, interacting variables, and relevant technical issues identified?\n• Are important interactions between variables explained?\n• Are the identified technical issues relevant to the engineering problem?\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Identify one important interaction between variables and one key technical issue, and explain their significance to the problem.",
+                  "context": "individual_verification"
+                }
+              ]
+            },
+            {
+              "checklist_id": "exam",
+              "role": "exam",
+              "cell": "G4",
+              "text": "Does the student identify the key requirements, interacting variables, and relevant technical issues of the complex engineering problem?",
+              "segments": [
+                {
+                  "audience": "unspecified",
+                  "heading": null,
+                  "text": "Does the student identify the key requirements, interacting variables, and relevant technical issues of the complex engineering problem?",
+                  "context": "exam_written"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI12.C1",
+          "so": "SO1",
+          "pi": "PI12",
+          "order_in_pi": 1,
+          "label": "PI12  Formulate an engineering or mathematical model of a complex engineering problem using appropriate assumptions, parameters, and governing relationships.",
+          "label_cell": "A5",
+          "source_row": 5,
+          "cip_pi_statement_comparison": "exact",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B5",
+              "text": "Formulates a complete and coherent engineering or mathematical model using appropriate assumptions, parameters, and governing relationships, and clearly justifies key modeling choices."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C5",
+              "text": "Formulates an appropriate engineering or mathematical model using relevant assumptions, parameters, and governing relationships sufficient to represent the engineering problem."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D5",
+              "text": "Formulates a partial model, but important assumptions, parameters, or governing relationships are missing, unclear, or incorrectly represented."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E5",
+              "text": "An appropriate engineering or mathematical model is missing, incorrect, or does not adequately represent the engineering problem."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "project",
+              "role": "project",
+              "cell": "F5",
+              "text": "Team assessment (Report):\n• Is an appropriate engineering or mathematical model formulated?\n• Are the important assumptions, parameters, and governing relationships identified?\n• Do the governing relationships represent the important behavior/interactions in the problem?\nIndividual Assessment:\n• Explain one important assumption, parameter, or governing relationship in the model and why it is appropriate.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Is an appropriate engineering or mathematical model formulated?\n• Are the important assumptions, parameters, and governing relationships identified?\n• Do the governing relationships represent the important behavior/interactions in the problem?\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Explain one important assumption, parameter, or governing relationship in the model and why it is appropriate.",
+                  "context": "individual_verification"
+                }
+              ]
+            },
+            {
+              "checklist_id": "exam",
+              "role": "exam",
+              "cell": "G5",
+              "text": "Does the student formulate an appropriate engineering or mathematical model using suitable assumptions, parameters, and governing relationships?",
+              "segments": [
+                {
+                  "audience": "unspecified",
+                  "heading": null,
+                  "text": "Does the student formulate an appropriate engineering or mathematical model using suitable assumptions, parameters, and governing relationships?",
+                  "context": "exam_written"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI13.C1",
+          "so": "SO1",
+          "pi": "PI13",
+          "order_in_pi": 1,
+          "label": "PI13  Solve the formulated complex engineering problem by applying appropriate principles of engineering, science, and mathematics using suitable analytical, computational, or experimental methods.",
+          "label_cell": "A6",
+          "source_row": 6,
+          "cip_pi_statement_comparison": "exact",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B6",
+              "text": "Correctly applies appropriate engineering, science, and mathematics principles using a suitable analytical, computational, or experimental method to obtain a valid solution, and demonstrates sound engineering judgment in applying and interpreting the solution method."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C6",
+              "text": "Correctly applies appropriate engineering, science, and mathematics principles using a suitable analytical, computational, or experimental method to obtain a valid solution."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D6",
+              "text": "Applies some appropriate principles or methods, but the solution is incomplete or contains significant errors in method, calculations, implementation, or interpretation."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E6",
+              "text": "Appropriate engineering, science, and mathematics principles are not applied, the selected method is inappropriate, or no valid solution is obtained."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "project",
+              "role": "project",
+              "cell": "F6",
+              "text": "Team assessment (Report):\n• Are appropriate engineering, science, and mathematics principles applied?\n• Is a suitable analytical, computational, or experimental method used?\n• Is the solution technically correct and sufficiently complete?\nIndividual Assessment:\n• Explain the method used to solve the problem, why it was appropriate, and one important step in obtaining the solution.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are appropriate engineering, science, and mathematics principles applied?\n• Is a suitable analytical, computational, or experimental method used?\n• Is the solution technically correct and sufficiently complete?\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Explain the method used to solve the problem, why it was appropriate, and one important step in obtaining the solution.",
+                  "context": "individual_verification"
+                }
+              ]
+            },
+            {
+              "checklist_id": "exam",
+              "role": "exam",
+              "cell": "G6",
+              "text": "Does the student correctly apply appropriate engineering, science, and mathematics principles and a suitable analytical, computational, or experimental method to obtain a valid solution?",
+              "segments": [
+                {
+                  "audience": "unspecified",
+                  "heading": null,
+                  "text": "Does the student correctly apply appropriate engineering, science, and mathematics principles and a suitable analytical, computational, or experimental method to obtain a valid solution?",
+                  "context": "exam_written"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment_note": {
+        "cell": "A7",
+        "text": "Assessment Note: \n• Team-based assessment is based on team evidence (e.g., final report).\n• Individual attainment may be verified through structured oral questions or individual exam questions.\n• Use the checklist column(s) applicable to the selected assessment method; non-applicable checklist items may be left unused.\n• For project-based assessment with oral individual verification, use the project checklist. For project-based assessment with individual exam verification, use both the project and exam checklists. For exam-only assessment, use the exam checklist."
+      },
+      "weights": null,
+      "weights_note": "No criterion or PI weights are defined on this rubric sheet or in the workbook; the Results sheet averages scores without weights."
+    },
+    {
+      "rubric_id": "qac-so2-ver02-group-so2-pi21-rubric",
+      "so": "SO2",
+      "pis": [
+        "PI21"
+      ],
+      "template_id": "qac-so2-ver02-group",
+      "workbook_variant": "Group",
+      "source": {
+        "workbook": "PI-SO2 Assessment-EExxx-T2xx ver02 - Group.xlsx",
+        "sheet": "SO2-PI21 Rubric",
+        "sheet_state": "visible",
+        "dimension": "A1:F970",
+        "merged_ranges": [
+          "C2:C3",
+          "D2:D3",
+          "E2:E3",
+          "A12:F12",
+          "A1:F1",
+          "A2:A3",
+          "F2:F3",
+          "B2:B3"
+        ],
+        "workbook_version_label": "ver02"
+      },
+      "title": {
+        "cell": "A1",
+        "text": "PI21 Assessment Rubric"
+      },
+      "item_header": {
+        "cell": "A2",
+        "text": "Assessment item"
+      },
+      "performance_levels": {
+        "scale": [
+          {
+            "key": "above",
+            "score": 3,
+            "header_cell": "B2"
+          },
+          {
+            "key": "meet",
+            "score": 2,
+            "header_cell": "C2"
+          },
+          {
+            "key": "developing",
+            "score": 1,
+            "header_cell": "D2"
+          },
+          {
+            "key": "below",
+            "score": 0,
+            "header_cell": "E2"
+          }
+        ],
+        "headers": {
+          "above": {
+            "cell": "B2",
+            "text": "Above Expectation (3)"
+          },
+          "meet": {
+            "cell": "C2",
+            "text": "Meet Expectation (2)"
+          },
+          "developing": {
+            "cell": "D2",
+            "text": "Developing Expectation (1)"
+          },
+          "below": {
+            "cell": "E2",
+            "text": "Below Expectation (0)"
+          }
+        }
+      },
+      "checklist_columns": [
+        {
+          "checklist_id": "checklist",
+          "column": "F",
+          "role": "unspecified",
+          "header_cell": "F2",
+          "header": "Checklist for Assessment"
+        }
+      ],
+      "criteria": [
+        {
+          "criterion_id": "PI21.C1",
+          "so": "SO2",
+          "pi": "PI21",
+          "order_in_pi": 1,
+          "label": "1. Problem, Needs & Requirements",
+          "label_cell": "A4",
+          "source_row": 4,
+          "cip_pi_statement_comparison": "not_applicable",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B4",
+              "text": "Clearly defines the problem, needs, requirements, and relevant stakeholders."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C4",
+              "text": "Defines the problem, needs, requirements, and relevant stakeholders."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D4",
+              "text": "Defines some elements, but they are incomplete or unclear."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E4",
+              "text": "Problem, needs, requirements, or stakeholders are missing or incorrect."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F4",
+              "text": "Team assessment (Report):\n• Is the problem clearly defined?\n• Are the needs, requirements, and relevant stakeholders identified?\n\nIndividual Assessment:\n• Explain the main problem and identify one key requirement that influenced the design.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Is the problem clearly defined?\n• Are the needs, requirements, and relevant stakeholders identified?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Explain the main problem and identify one key requirement that influenced the design.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI21.C2",
+          "so": "SO2",
+          "pi": "PI21",
+          "order_in_pi": 2,
+          "label": "2. System / Component / Process Design",
+          "label_cell": "A5",
+          "source_row": 5,
+          "cip_pi_statement_comparison": "not_applicable",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B5",
+              "text": "Develops a clear and well-structured design that fully addresses the requirements."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C5",
+              "text": "Develops an appropriate design that addresses the main requirements."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D5",
+              "text": "Develops a partial or unclear design with limited connection to requirements."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E5",
+              "text": "Design is incomplete, inappropriate, or does not address the requirements."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F5",
+              "text": "Team assessment (Report):\n• Is an appropriate system, component, or process designed?\n• Does the design address the specified requirements?\n\nIndividual Assessment:\n• Explain one important design decision and why it was selected.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Is an appropriate system, component, or process designed?\n• Does the design address the specified requirements?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Explain one important design decision and why it was selected.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI21.C3",
+          "so": "SO2",
+          "pi": "PI21",
+          "order_in_pi": 3,
+          "label": "3. Alternatives & Creativity",
+          "label_cell": "A6",
+          "source_row": 6,
+          "cip_pi_statement_comparison": "not_applicable",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B6",
+              "text": "Develops and compares multiple feasible alternatives and clearly justifies the selected solution."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C6",
+              "text": "Develops feasible alternatives and provides justification for the selected solution."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D6",
+              "text": "Considers limited alternatives with weak comparison or justification."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E6",
+              "text": "No meaningful alternatives are considered."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F6",
+              "text": "Team assessment (Report):\n• Are feasible alternatives considered and compared?\n• Is the selected solution justified?\n\nIndividual Assessment:\n• Identify one alternative considered and explain why it was not selected.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are feasible alternatives considered and compared?\n• Is the selected solution justified?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Identify one alternative considered and explain why it was not selected.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI21.C4",
+          "so": "SO2",
+          "pi": "PI21",
+          "order_in_pi": 4,
+          "label": "4. Application of Engineering, Science & Mathematics",
+          "label_cell": "A7",
+          "source_row": 7,
+          "cip_pi_statement_comparison": "not_applicable",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B7",
+              "text": "Correctly applies relevant engineering, science, and mathematics principles and clearly uses the results to support design decisions."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C7",
+              "text": "Correctly applies relevant engineering, science, and mathematics principles to support the design."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D7",
+              "text": "Applies some relevant principles, but with gaps or limited connection to the design."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E7",
+              "text": "Principles are missing, incorrect, or not meaningfully applied."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F7",
+              "text": "Team assessment (Report):\n• Are relevant engineering, science, and mathematics principles correctly applied?\n• Are the results used to support the design?\n\nIndividual Assessment (Oral Discussion):\n• Explain one principle used in the design and how it supported a design decision.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are relevant engineering, science, and mathematics principles correctly applied?\n• Are the results used to support the design?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment (Oral Discussion):",
+                  "text": "Individual Assessment (Oral Discussion):\n• Explain one principle used in the design and how it supported a design decision.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI21.C5",
+          "so": "SO2",
+          "pi": "PI21",
+          "order_in_pi": 5,
+          "label": "5. Analysis & System Integration",
+          "label_cell": "A8",
+          "source_row": 8,
+          "cip_pi_statement_comparison": "not_applicable",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B8",
+              "text": "Performs appropriate analysis and clearly demonstrates how system elements work together."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C8",
+              "text": "Performs appropriate analysis and shows how the main system elements work together."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D8",
+              "text": "Analysis or integration is limited or only partially demonstrated."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E8",
+              "text": "Analysis is inadequate or system integration is not demonstrated."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F8",
+              "text": "Team assessment (Report):\n• Is appropriate analysis performed?\n• Is it clear how the main elements work together?\n\nIndividual Assessment:\n• Explain how one part of the design interacts with or affects another part.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Is appropriate analysis performed?\n• Is it clear how the main elements work together?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Explain how one part of the design interacts with or affects another part.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI21.C6",
+          "so": "SO2",
+          "pi": "PI21",
+          "order_in_pi": 6,
+          "label": "6. Evaluation Against Requirements",
+          "label_cell": "A9",
+          "source_row": 9,
+          "cip_pi_statement_comparison": "not_applicable",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B9",
+              "text": "Evaluates the design against the requirements and clearly explains results, limitations, or unmet requirements."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C9",
+              "text": "Evaluates the design against the main requirements."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D9",
+              "text": "Evaluates only some requirements or provides limited evidence."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E9",
+              "text": "The design is not meaningfully evaluated against the requirements."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F9",
+              "text": "Team assessment (Report):\n• Is the design evaluated against the specified requirements?\n• Are results or limitations discussed?\n\nIndividual Assessment:\n• Identify one requirement and explain how the design was evaluated against it.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Is the design evaluated against the specified requirements?\n• Are results or limitations discussed?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Identify one requirement and explain how the design was evaluated against it.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI21.C7",
+          "so": "SO2",
+          "pi": "PI21",
+          "order_in_pi": 7,
+          "label": "7. Risks & Trade-offs",
+          "label_cell": "A10",
+          "source_row": 10,
+          "cip_pi_statement_comparison": "not_applicable",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B10",
+              "text": "Identifies relevant risks and clearly explains important trade-offs and their influence on design decisions."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C10",
+              "text": "Identifies relevant risks and considers important trade-offs in the design."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D10",
+              "text": "Identifies some risks or trade-offs, but discussion is limited."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E10",
+              "text": "Risks and trade-offs are missing or not considered."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F10",
+              "text": "Team assessment (Report):\n• Are relevant risks identified?\n• Are important trade-offs considered in design decisions?\n\nIndividual Assessment:\n• Identify one risk or trade-off and explain how it affected the design.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are relevant risks identified?\n• Are important trade-offs considered in design decisions?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Identify one risk or trade-off and explain how it affected the design.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI21.C8",
+          "so": "SO2",
+          "pi": "PI21",
+          "order_in_pi": 8,
+          "label": "8. Iteration & Improvement",
+          "label_cell": "A11",
+          "source_row": 11,
+          "cip_pi_statement_comparison": "not_applicable",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B11",
+              "text": "Uses evaluation, testing, or feedback to make and clearly justify meaningful design improvements."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C11",
+              "text": "Uses evaluation, testing, or feedback to improve the design."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D11",
+              "text": "Makes limited improvements with weak connection to evaluation, testing, or feedback."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E11",
+              "text": "No meaningful design iteration or improvement is demonstrated."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F11",
+              "text": "Team assessment (Report):\n• Is the design improved based on evaluation, testing, or feedback?\n• Are the improvements justified?\n\nIndividual Assessment:\n• Describe one change made to the design and explain why it was made.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Is the design improved based on evaluation, testing, or feedback?\n• Are the improvements justified?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Describe one change made to the design and explain why it was made.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment_note": {
+        "cell": "A12",
+        "text": "Assessment Note: \n• Team-based assessment is based on team evidence (e.g., final report).\n• Individual attainment may be verified through structured oral questions or individual exam questions."
+      },
+      "weights": null,
+      "weights_note": "No criterion or PI weights are defined on this rubric sheet or in the workbook; the Results sheet averages scores without weights."
+    },
+    {
+      "rubric_id": "qac-so2-ver02-group-so2-pi22-pi23-pi24-rubric",
+      "so": "SO2",
+      "pis": [
+        "PI22",
+        "PI23",
+        "PI24"
+      ],
+      "template_id": "qac-so2-ver02-group",
+      "workbook_variant": "Group",
+      "source": {
+        "workbook": "PI-SO2 Assessment-EExxx-T2xx ver02 - Group.xlsx",
+        "sheet": "SO2-PI22,PI23&PI24 Rubric",
+        "sheet_state": "visible",
+        "dimension": "A1:F994",
+        "merged_ranges": [
+          "A7:F7",
+          "A1:F1",
+          "A2:A3",
+          "F2:F3",
+          "B2:B3",
+          "C2:C3",
+          "D2:D3",
+          "E2:E3"
+        ],
+        "workbook_version_label": "ver02"
+      },
+      "title": {
+        "cell": "A1",
+        "text": "PI22, PI23, and PI24 Assessment Rubric"
+      },
+      "item_header": {
+        "cell": "A2",
+        "text": "Assessment item"
+      },
+      "performance_levels": {
+        "scale": [
+          {
+            "key": "above",
+            "score": 3,
+            "header_cell": "B2"
+          },
+          {
+            "key": "meet",
+            "score": 2,
+            "header_cell": "C2"
+          },
+          {
+            "key": "developing",
+            "score": 1,
+            "header_cell": "D2"
+          },
+          {
+            "key": "below",
+            "score": 0,
+            "header_cell": "E2"
+          }
+        ],
+        "headers": {
+          "above": {
+            "cell": "B2",
+            "text": "Above Expectation (3)"
+          },
+          "meet": {
+            "cell": "C2",
+            "text": "Meet Expectation (2)"
+          },
+          "developing": {
+            "cell": "D2",
+            "text": "Developing Expectation (1)"
+          },
+          "below": {
+            "cell": "E2",
+            "text": "Below Expectation (0)"
+          }
+        }
+      },
+      "checklist_columns": [
+        {
+          "checklist_id": "checklist",
+          "column": "F",
+          "role": "unspecified",
+          "header_cell": "F2",
+          "header": "Checklist for Assessment"
+        }
+      ],
+      "criteria": [
+        {
+          "criterion_id": "PI22.C1",
+          "so": "SO2",
+          "pi": "PI22",
+          "order_in_pi": 1,
+          "label": "PI22 Design Solutions that consider public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors",
+          "label_cell": "A4",
+          "source_row": 4,
+          "cip_pi_statement_comparison": "punctuation_or_case_only",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B4",
+              "text": "The design considers relevant factors such as public health, safety, welfare, global, cultural, social, environmental, and economic factors, and clearly explains how they influence design decisions."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C4",
+              "text": "The design considers relevant factors such as public health, safety, welfare, global, cultural, social, environmental, and economic factors."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D4",
+              "text": "Considers some relevant factors, but their connection to the design is limited or unclear."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E4",
+              "text": "Relevant factors are not adequately considered in the design."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F4",
+              "text": "Team assessment (Report):\n• Does the design consider relevant factors such as public health, safety, welfare, global, cultural, social, environmental, and economic factors?\n• Does the report explain how the relevant factors influence design decisions?\nIndividual Assessment:\n• Identify one relevant factor considered in the design and explain how it influenced a design decision.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Does the design consider relevant factors such as public health, safety, welfare, global, cultural, social, environmental, and economic factors?\n• Does the report explain how the relevant factors influence design decisions?\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Identify one relevant factor considered in the design and explain how it influenced a design decision.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI23.C1",
+          "so": "SO2",
+          "pi": "PI23",
+          "order_in_pi": 1,
+          "label": "PI23 Identifies and justifies multiple realistic constraints relevant to the project design",
+          "label_cell": "A5",
+          "source_row": 5,
+          "cip_pi_statement_comparison": "differs",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B5",
+              "text": "Identifies and justifies multiple relevant constraints and clearly explains their impact on design decisions and trade-offs."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C5",
+              "text": "Identifies relevant constraints and explains their impact on key design decisions."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D5",
+              "text": "Identifies some constraints, but justification or connection to design decisions is limited."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E5",
+              "text": "Constraints are missing, incorrect, or not linked to design decisions."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F5",
+              "text": "Team assessment (Report):\n• Are relevant constraints identified and, where appropriate, quantified?\n• Do the constraints influence design decisions or trade-offs?\nIndividual assessment:\n• Identify one important constraint and explain how it affected a specific design decision.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are relevant constraints identified and, where appropriate, quantified?\n• Do the constraints influence design decisions or trade-offs?\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual assessment:",
+                  "text": "Individual assessment:\n• Identify one important constraint and explain how it affected a specific design decision.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI24.C1",
+          "so": "SO2",
+          "pi": "PI24",
+          "order_in_pi": 1,
+          "label": "PI 24 Identifies and applies appropriate engineering standards and codes relevant to the project design",
+          "label_cell": "A6",
+          "source_row": 6,
+          "cip_pi_statement_comparison": "differs",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B6",
+              "text": "Identifies relevant standards/codes, applies them to the design, and clearly explains how they guide design decisions."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C6",
+              "text": "Identifies relevant standards/codes and applies them to the design."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D6",
+              "text": "Identifies some standards/codes, but their application to the design is limited."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E6",
+              "text": "Relevant standards/codes are missing, incorrect, or not applied to the design."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "checklist",
+              "role": "unspecified",
+              "cell": "F6",
+              "text": "Team assessment (Report):\n•Are relevant standards/codes identified?\n•Are they applied to guide design decisions or parameters?\nIndividual assessment:\n• Identify one standard/code used and explain how it affected a specific design decision or parameter.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n•Are relevant standards/codes identified?\n•Are they applied to guide design decisions or parameters?\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual assessment:",
+                  "text": "Individual assessment:\n• Identify one standard/code used and explain how it affected a specific design decision or parameter.",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment_note": {
+        "cell": "A7",
+        "text": "Assessment Note: \n• Team-based assessment is based on team evidence (e.g., final report).\n• Individual attainment may be verified through structured oral questions,  individual exam questions, individual reflection.\n"
+      },
+      "weights": null,
+      "weights_note": "No criterion or PI weights are defined on this rubric sheet or in the workbook; the Results sheet averages scores without weights."
+    },
+    {
+      "rubric_id": "qac-so3-ver01-rubric",
+      "so": "SO3",
+      "pis": [
+        "PI31",
+        "PI32",
+        "PI33"
+      ],
+      "template_id": "qac-so3-ver01",
+      "workbook_variant": null,
+      "source": {
+        "workbook": "PI-SO3 Assessment-EExxx-T2xx ver01.xlsx",
+        "sheet": "Rubric",
+        "sheet_state": "visible",
+        "dimension": "A1:F7",
+        "merged_ranges": [
+          "A1:F1",
+          "A2:A3",
+          "B2:B3",
+          "C2:C3",
+          "D2:D3",
+          "E2:E3",
+          "F2:F3",
+          "A7:F7"
+        ],
+        "workbook_version_label": "ver01"
+      },
+      "title": {
+        "cell": "A1",
+        "text": "Assessment Rubric"
+      },
+      "item_header": {
+        "cell": "A2",
+        "text": "Assessment item"
+      },
+      "performance_levels": {
+        "scale": [
+          {
+            "key": "above",
+            "score": 3,
+            "header_cell": "B2"
+          },
+          {
+            "key": "meet",
+            "score": 2,
+            "header_cell": "C2"
+          },
+          {
+            "key": "developing",
+            "score": 1,
+            "header_cell": "D2"
+          },
+          {
+            "key": "below",
+            "score": 0,
+            "header_cell": "E2"
+          }
+        ],
+        "headers": {
+          "above": {
+            "cell": "B2",
+            "text": "Above Expectation (3)"
+          },
+          "meet": {
+            "cell": "C2",
+            "text": "Meet Expectation (2)"
+          },
+          "developing": {
+            "cell": "D2",
+            "text": "Developing Expectation (1)"
+          },
+          "below": {
+            "cell": "E2",
+            "text": "Below Expectation (0)"
+          }
+        }
+      },
+      "checklist_columns": [
+        {
+          "checklist_id": "project",
+          "column": "F",
+          "role": "project",
+          "header_cell": "F2",
+          "header": "Checklist for Assessment (Project)"
+        }
+      ],
+      "criteria": [
+        {
+          "criterion_id": "PI31.C1",
+          "so": "SO3",
+          "pi": "PI31",
+          "order_in_pi": 1,
+          "label": " PI31 – Communicate engineering information using appropriate technical content",
+          "label_cell": "A4",
+          "source_row": 4,
+          "cip_pi_statement_comparison": "punctuation_or_case_only",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B4",
+              "text": "Communicates relevant and sufficient engineering information with appropriate technical content, explanation, and supporting evidence."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C4",
+              "text": "Communicates generally relevant engineering information with sufficient technical content and explanation."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D4",
+              "text": "Communicates limited or incomplete engineering information; important technical content or explanation is missing."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E4",
+              "text": "Communicates little or no meaningful engineering information."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "project",
+              "role": "project",
+              "cell": "F4",
+              "text": "Team assessment (Report):\n• Is the essential engineering information included? \n• Are key concepts/results explained? \n• Is the technical detail sufficient? Is terminology appropriate? \nAre conclusions supported by evidence/results?\n\nIndividual Assessment:\n• Does the student clearly explain his/her assigned technical content?\n• Can the student answer related technical questions?\n",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Is the essential engineering information included? \n• Are key concepts/results explained? \n• Is the technical detail sufficient? Is terminology appropriate? \nAre conclusions supported by evidence/results?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Does the student clearly explain his/her assigned technical content?\n• Can the student answer related technical questions?\n",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI32.C1",
+          "so": "SO3",
+          "pi": "PI32",
+          "order_in_pi": 1,
+          "label": "PI32 – Use appropriate communication methods and engineering representations to effectively convey information..",
+          "label_cell": "A5",
+          "source_row": 5,
+          "cip_pi_statement_comparison": "punctuation_or_case_only",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B5",
+              "text": "Selects and effectively uses appropriate communication methods (presentation, report, poster, demo, etc.) and engineering representations (figures, tables, Schematics, block diagrams, plots, flowchart, etc.) that clearly enhance understanding of the information."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C5",
+              "text": "Uses appropriate communication forms and engineering representations that adequately convey the information."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D5",
+              "text": "Uses limited, unclear, or poorly selected communication forms or engineering representations."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E5",
+              "text": "Fails to use appropriate communication forms or engineering representations, making the information difficult to understand."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "project",
+              "role": "project",
+              "cell": "F5",
+              "text": "Team assessment (Report):\n• Are the chosen forms appropriate? Are plots/figures/schematics/tables suitable and readable? \n• Are axes, units, legends, and captions provided where needed? \n• Are visuals referenced/explained? Do the representations improve understanding?\n\nIndividual Assessment:\n• Does the student effectively use and explain the representations in his/her assigned part?\n• Are the selected visuals/representations appropriate for the information being presented?\n",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are the chosen forms appropriate? Are plots/figures/schematics/tables suitable and readable? \n• Are axes, units, legends, and captions provided where needed? \n• Are visuals referenced/explained? Do the representations improve understanding?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Does the student effectively use and explain the representations in his/her assigned part?\n• Are the selected visuals/representations appropriate for the information being presented?\n",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI33.C1",
+          "so": "SO3",
+          "pi": "PI33",
+          "order_in_pi": 1,
+          "label": "PI33 – Adapt communication to the knowledge and needs of different audiences",
+          "label_cell": "A6",
+          "source_row": 6,
+          "cip_pi_statement_comparison": "punctuation_or_case_only",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B6",
+              "text": "Communication is well adapted to the intended audience through appropriate terminology, technical depth, explanations, examples, and visuals."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C6",
+              "text": "Communication is generally appropriate for the intended audience, with suitable terminology and technical depth."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D6",
+              "text": "Communication shows limited adaptation; some terminology, detail, or explanation is inappropriate for the intended audience."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E6",
+              "text": "Communication shows little or no consideration of the intended audience."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "project",
+              "role": "project",
+              "cell": "F6",
+              "text": "Team assessment (Report):\n• Is the intended audience clear? Is terminology suitable? \n• Is technical depth appropriate? Are unfamiliar concepts explained?\n • Are examples/visuals and emphasis appropriate for what this audience needs to understand?\n\nIndividual Assessment:\n• Does the student explain his/her assigned part at a level • • suitable for the non-technical audience?\n• Does the student explain unfamiliar technical terms when • needed?\n",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Is the intended audience clear? Is terminology suitable? \n• Is technical depth appropriate? Are unfamiliar concepts explained?\n • Are examples/visuals and emphasis appropriate for what this audience needs to understand?\n\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Does the student explain his/her assigned part at a level • • suitable for the non-technical audience?\n• Does the student explain unfamiliar technical terms when • needed?\n",
+                  "context": "individual_verification"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment_note": {
+        "cell": "A7",
+        "text": "Assessment Note: \n• Team-based assessment is based on team evidence (e.g., final report).\n• Individual attainment may be verified through structured oral questions."
+      },
+      "weights": null,
+      "weights_note": "No criterion or PI weights are defined on this rubric sheet or in the workbook; the Results sheet averages scores without weights."
+    },
+    {
+      "rubric_id": "qac-so4-ver02-rubric",
+      "so": "SO4",
+      "pis": [
+        "PI41",
+        "PI42"
+      ],
+      "template_id": "qac-so4-ver02",
+      "workbook_variant": null,
+      "source": {
+        "workbook": "PI-SO4 Assessment-EExxx-T2xx ver02 (1) (1).xlsx",
+        "sheet": " Rubric",
+        "sheet_state": "visible",
+        "dimension": "A1:G993",
+        "merged_ranges": [
+          "A1:G1",
+          "G2:G3",
+          "A6:G6",
+          "A2:A3",
+          "F2:F3",
+          "B2:B3",
+          "C2:C3",
+          "D2:D3",
+          "E2:E3"
+        ],
+        "workbook_version_label": "ver02"
+      },
+      "title": {
+        "cell": "A1",
+        "text": " Assessment Rubric"
+      },
+      "item_header": {
+        "cell": "A2",
+        "text": "Assessment item"
+      },
+      "performance_levels": {
+        "scale": [
+          {
+            "key": "above",
+            "score": 3,
+            "header_cell": "B2"
+          },
+          {
+            "key": "meet",
+            "score": 2,
+            "header_cell": "C2"
+          },
+          {
+            "key": "developing",
+            "score": 1,
+            "header_cell": "D2"
+          },
+          {
+            "key": "below",
+            "score": 0,
+            "header_cell": "E2"
+          }
+        ],
+        "headers": {
+          "above": {
+            "cell": "B2",
+            "text": "Above Expectation (3)"
+          },
+          "meet": {
+            "cell": "C2",
+            "text": "Meet Expectation (2)"
+          },
+          "developing": {
+            "cell": "D2",
+            "text": "Developing Expectation (1)"
+          },
+          "below": {
+            "cell": "E2",
+            "text": "Below Expectation (0)"
+          }
+        }
+      },
+      "checklist_columns": [
+        {
+          "checklist_id": "project",
+          "column": "F",
+          "role": "project",
+          "header_cell": "F2",
+          "header": "Checklist for Assessment (Project)"
+        },
+        {
+          "checklist_id": "exam",
+          "column": "G",
+          "role": "exam",
+          "header_cell": "G2",
+          "header": "Checklist for Assessment (Exam)"
+        }
+      ],
+      "criteria": [
+        {
+          "criterion_id": "PI41.C1",
+          "so": "SO4",
+          "pi": "PI41",
+          "order_in_pi": 1,
+          "label": "PI41 – Recognize ethical and professional responsibilities in engineering situations",
+          "label_cell": "A4",
+          "source_row": 4,
+          "cip_pi_statement_comparison": "exact",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B4",
+              "text": "Clearly identifies and explains relevant ethical and professional responsibilities and their implications in the engineering situation."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C4",
+              "text": "Identifies and explains relevant ethical and professional responsibilities in the engineering situation."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D4",
+              "text": "Identifies an ethical or professional responsibility, but the explanation or connection to the engineering situation is limited."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E4",
+              "text": "Fails to identify relevant ethical or professional responsibilities or misinterprets them."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "project",
+              "role": "project",
+              "cell": "F4",
+              "text": "Team assessment (Report):\n• Are relevant ethical and professional responsibilities identified?\n• Are they connected to the engineering situation or decision?\nIndividual Assessment:\n• Identify one ethical or professional responsibility and explain how it relates to an engineering decision.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are relevant ethical and professional responsibilities identified?\n• Are they connected to the engineering situation or decision?\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual Assessment:",
+                  "text": "Individual Assessment:\n• Identify one ethical or professional responsibility and explain how it relates to an engineering decision.",
+                  "context": "individual_verification"
+                }
+              ]
+            },
+            {
+              "checklist_id": "exam",
+              "role": "exam",
+              "cell": "G4",
+              "text": "• Does the student identify the relevant ethical and/or professional responsibility in the engineering situation? \n• Does the student explain how it relates to an engineering decision, action, or consequence?",
+              "segments": [
+                {
+                  "audience": "unspecified",
+                  "heading": null,
+                  "text": "• Does the student identify the relevant ethical and/or professional responsibility in the engineering situation? \n• Does the student explain how it relates to an engineering decision, action, or consequence?",
+                  "context": "exam_written"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "criterion_id": "PI42.C1",
+          "so": "SO4",
+          "pi": "PI42",
+          "order_in_pi": 1,
+          "label": "PI42 – Make informed judgments considering the impact of engineering solutions in global, societal, economic, and environmental contexts",
+          "label_cell": "A5",
+          "source_row": 5,
+          "cip_pi_statement_comparison": "exact",
+          "descriptors": {
+            "above": {
+              "score": 3,
+              "cell": "B5",
+              "text": "Makes a clear, well-justified informed judgment by analyzing relevant impacts in applicable global, societal, economic, and/or environmental contexts."
+            },
+            "meet": {
+              "score": 2,
+              "cell": "C5",
+              "text": "Makes an appropriate informed judgment by considering and explaining the main relevant impacts in applicable contexts."
+            },
+            "developing": {
+              "score": 1,
+              "cell": "D5",
+              "text": "Makes a limited judgment; some relevant impacts are identified, but analysis or justification is incomplete."
+            },
+            "below": {
+              "score": 0,
+              "cell": "E5",
+              "text": "Does not make a meaningful informed judgment; relevant impacts are missing, incorrect, or not connected to the judgment."
+            }
+          },
+          "checklists": [
+            {
+              "checklist_id": "project",
+              "role": "project",
+              "cell": "F5",
+              "text": "Team assessment (Report):\n• Are the applicable global, societal, economic, and/or environmental impacts identified and considered?\n• Does the analysis support a clear engineering judgment or decision?\nIndividual assessment:\n• Identify one relevant impact and explain how it influenced an engineering judgment or decision.",
+              "segments": [
+                {
+                  "audience": "team",
+                  "heading": "Team assessment (Report):",
+                  "text": "Team assessment (Report):\n• Are the applicable global, societal, economic, and/or environmental impacts identified and considered?\n• Does the analysis support a clear engineering judgment or decision?\n",
+                  "context": "team_evidence"
+                },
+                {
+                  "audience": "individual",
+                  "heading": "Individual assessment:",
+                  "text": "Individual assessment:\n• Identify one relevant impact and explain how it influenced an engineering judgment or decision.",
+                  "context": "individual_verification"
+                }
+              ]
+            },
+            {
+              "checklist_id": "exam",
+              "role": "exam",
+              "cell": "G5",
+              "text": "• Does the student identify and consider one or more relevant global, societal, economic, and/or environmental impacts? \n• Does the student use these impacts to justify an engineering judgment or decision?",
+              "segments": [
+                {
+                  "audience": "unspecified",
+                  "heading": null,
+                  "text": "• Does the student identify and consider one or more relevant global, societal, economic, and/or environmental impacts? \n• Does the student use these impacts to justify an engineering judgment or decision?",
+                  "context": "exam_written"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment_note": {
+        "cell": "A6",
+        "text": "Assessment Note: \n• Team-based assessment is based on team evidence (e.g., final report).\n• Individual attainment may be verified through structured oral questions or individual exam questions.\n• Use the checklist column(s) applicable to the selected assessment method; non-applicable checklist items may be left unused.\n• For project-based assessment with oral individual verification, use the project checklist. For project-based assessment with individual exam verification, use both the project and exam checklists. For exam-only assessment, use the exam checklist."
+      },
+      "weights": null,
+      "weights_note": "No criterion or PI weights are defined on this rubric sheet or in the workbook; the Results sheet averages scores without weights."
+    }
+  ],
+  "scoring_rules": [
+    {
+      "template_id": "qac-so1-ver01",
+      "so": "SO1",
+      "source": {
+        "workbook": "PI-SO1 Assessment-EExxx-T2xx ver01.xlsx",
+        "sheet": "SO1 Assessment Results",
+        "sheet_state": "visible",
+        "sheet_protected": false
+      },
+      "scale_scores": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "weights": null,
+      "score_entry_instruction": {
+        "cell": "A2",
+        "text": "*Add score 0-3 for each item"
+      },
+      "pi_columns": [
+        {
+          "column": "E",
+          "header_cell": "E3",
+          "header": "PI11"
+        },
+        {
+          "column": "F",
+          "header_cell": "F3",
+          "header": "PI12"
+        },
+        {
+          "column": "G",
+          "header_cell": "G3",
+          "header": "PI13"
+        }
+      ],
+      "formulas": {
+        "student_pi_average": {
+          "cell": "H4",
+          "formula": "IF(COUNT(E4:G4)=0,\"\",AVERAGE(E4:G4))"
+        },
+        "student_attainment": {
+          "cell": "I4",
+          "formula": "IF(H4=\"\",\"\",IF(H4<1,\"BE\",IF(H4<2,\"DE\",IF(H4<3,\"ME\",\"AE\"))))"
+        },
+        "class_pi_percentage": [
+          {
+            "cell": "E18",
+            "formula": "IFERROR(TEXT((COUNTIF(E4:E17,2)+COUNTIF(E4:E17,3))/COUNT(E4:E17),\"0%\"),\"\")"
+          },
+          {
+            "cell": "F18",
+            "formula": "IFERROR(TEXT((COUNTIF(F4:F17,2)+COUNTIF(F4:F17,3))/COUNT(F4:F17),\"0%\"),\"\")"
+          },
+          {
+            "cell": "G18",
+            "formula": "IFERROR(TEXT((COUNTIF(G4:G17,2)+COUNTIF(G4:G17,3))/COUNT(G4:G17),\"0%\"),\"\")"
+          }
+        ],
+        "so_result": {
+          "cell": "I18",
+          "formula": "IFERROR(TEXT((COUNTIF(I4:I17,\"AE\")+COUNTIF(I4:I17,\"ME\"))/(COUNTIF(I4:I17,\"AE\")+COUNTIF(I4:I17,\"ME\")+COUNTIF(I4:I17,\"DE\")+COUNTIF(I4:I17,\"BE\")),\"0%\"),\"\")"
+        }
+      },
+      "student_rows": {
+        "first": 4,
+        "last": 17
+      },
+      "notes": {
+        "cell": "A19",
+        "text": "Notes: \n-PI results are calculated as the percentage of students who achieved a score of 2 or 3. \n-The SO result is calculated as the percentage of students whose average PI score is 2.0 or higher.\n-When both project and individual assessments are used, the final PI score is determined based on the combined evidence (average) from both assessments."
+      },
+      "attainment_thresholds": {
+        "derived_from": "I4",
+        "rule": "student PI average <1 = BE; <2 = DE; <3 = ME; otherwise AE",
+        "bands": [
+          {
+            "code": "BE",
+            "min_inclusive": 0,
+            "max_exclusive": 1
+          },
+          {
+            "code": "DE",
+            "min_inclusive": 1,
+            "max_exclusive": 2
+          },
+          {
+            "code": "ME",
+            "min_inclusive": 2,
+            "max_exclusive": 3
+          },
+          {
+            "code": "AE",
+            "min_inclusive": 3,
+            "max_exclusive": null
+          }
+        ],
+        "satisfactory_threshold": 2
+      }
+    },
+    {
+      "template_id": "qac-so2-ver02-group",
+      "so": "SO2",
+      "source": {
+        "workbook": "PI-SO2 Assessment-EExxx-T2xx ver02 - Group.xlsx",
+        "sheet": "SO2 Assessment Results",
+        "sheet_state": "visible",
+        "sheet_protected": true
+      },
+      "scale_scores": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "weights": null,
+      "score_entry_instruction": {
+        "cell": "A2",
+        "text": "*Add score 0-3 for each item"
+      },
+      "pi_groups": [
+        {
+          "pi": "PI21",
+          "element_score_cells": "E6:L6",
+          "element_header_cells": "E5:L5",
+          "element_headers": [
+            1.1,
+            1.2,
+            1.3,
+            1.4,
+            1.5,
+            1.6,
+            1.7,
+            1.8
+          ],
+          "group_average_cell": "M6",
+          "individual_cell": "N6",
+          "average_cell": "O6"
+        },
+        {
+          "pi": "PI22",
+          "group_cell": "P6",
+          "individual_cell": "Q6",
+          "average_cell": "R6"
+        },
+        {
+          "pi": "PI23",
+          "group_cell": "S6",
+          "individual_cell": "T6",
+          "average_cell": "U6"
+        },
+        {
+          "pi": "PI24",
+          "group_cell": "V6",
+          "individual_cell": "W6",
+          "average_cell": "X6"
+        }
+      ],
+      "column_headers": {
+        "M": "Group  Avg",
+        "N": "Individual",
+        "O": "Avg",
+        "P": "Group",
+        "Q": "Individual",
+        "R": "Avg",
+        "S": "Group",
+        "T": "Individual",
+        "U": "Avg",
+        "V": "Group",
+        "W": "Individual",
+        "X": "Avg"
+      },
+      "group_headers": {
+        "E": "PI21 Engineering Design",
+        "P": "PI22 Design Factors",
+        "S": "PI23 Constraints",
+        "V": "PI24 Standards",
+        "Y": "PIs Avg",
+        "Z": "Attainment",
+        "AA": "Comments: add comment on the team and individual student performance"
+      },
+      "formulas": {
+        "pi21_group_average": {
+          "cell": "M6",
+          "formula": "IF(COUNT(E6:L6)=0,\"\",AVERAGE(E6:L6))"
+        },
+        "pi21_average": {
+          "cell": "O6",
+          "formula": "IF(COUNT(M6:N6)=0,\"\",AVERAGE(M6:N6))"
+        },
+        "pi22_average": {
+          "cell": "R6",
+          "formula": "IF(COUNT(P6:Q6)=0,\"\",AVERAGE(P6:Q6))"
+        },
+        "pi23_average": {
+          "cell": "U6",
+          "formula": "IF(COUNT(S6:T6)=0,\"\",AVERAGE(S6:T6))"
+        },
+        "pi24_average": {
+          "cell": "X6",
+          "formula": "IF(COUNT(V6:W6)=0,\"\",AVERAGE(V6:W6))"
+        },
+        "student_pi_average": {
+          "cell": "Y6",
+          "formula": "IF(COUNT(M6:V6)=0,\"\",AVERAGE(M6:V6))"
+        },
+        "student_attainment": {
+          "cell": "Z6",
+          "formula": "IF(Y6=\"\",\"\",IF(Y6<1,\"BE\",IF(Y6<2,\"DE\",IF(Y6<3,\"ME\",\"AE\"))))"
+        },
+        "class_pi_percentage": [
+          {
+            "cell": "O20",
+            "formula": "IFERROR(TEXT(COUNTIF(O6:O19,\">=2\")/COUNT(O6:O19),\"0%\"),\"\")"
+          },
+          {
+            "cell": "R20",
+            "formula": "IFERROR(TEXT(COUNTIF(R6:R19,\">=2\")/COUNT(R6:R19),\"0%\"),\"\")"
+          },
+          {
+            "cell": "U20",
+            "formula": "IFERROR(TEXT(COUNTIF(U6:U19,\">=2\")/COUNT(U6:U19),\"0%\"),\"\")"
+          },
+          {
+            "cell": "X20",
+            "formula": "IFERROR(TEXT(COUNTIF(X6:X19,\">=2\")/COUNT(X6:X19),\"0%\"),\"\")"
+          }
+        ],
+        "so_result": {
+          "cell": "Z20",
+          "formula": "IFERROR(TEXT((COUNTIF(Z6:Z19,\"AE\")+COUNTIF(Z6:Z19,\"ME\"))/(COUNTIF(Z6:Z19,\"AE\")+COUNTIF(Z6:Z19,\"ME\")+COUNTIF(Z6:Z19,\"DE\")+COUNTIF(Z6:Z19,\"BE\")),\"0%\"),\"\")"
+        }
+      },
+      "student_rows": {
+        "first": 6,
+        "last": 19
+      },
+      "notes": {
+        "cell": "A21",
+        "text": "Notes: \n-PI results are calculated as the percentage of students who achieved a score of 2 or higher.\n-The SO result is calculated as the percentage of students whose average PI score is 2.0 or higher.\n-Group assessment is based on group work, such as a project report, demonstration, presentation, etc.\n-Individual assessment is based on each student’s individual performance, such as an oral discussion, individual reflection, exam question, etc."
+      },
+      "attainment_thresholds": {
+        "derived_from": "Z6",
+        "rule": "student PI average <1 = BE; <2 = DE; <3 = ME; otherwise AE",
+        "bands": [
+          {
+            "code": "BE",
+            "min_inclusive": 0,
+            "max_exclusive": 1
+          },
+          {
+            "code": "DE",
+            "min_inclusive": 1,
+            "max_exclusive": 2
+          },
+          {
+            "code": "ME",
+            "min_inclusive": 2,
+            "max_exclusive": 3
+          },
+          {
+            "code": "AE",
+            "min_inclusive": 3,
+            "max_exclusive": null
+          }
+        ],
+        "satisfactory_threshold": 2
+      }
+    },
+    {
+      "template_id": "qac-so3-ver01",
+      "so": "SO3",
+      "source": {
+        "workbook": "PI-SO3 Assessment-EExxx-T2xx ver01.xlsx",
+        "sheet": "SO3 Assessment Results",
+        "sheet_state": "visible",
+        "sheet_protected": false
+      },
+      "scale_scores": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "weights": null,
+      "score_entry_instruction": {
+        "cell": "A2",
+        "text": "*Add score 0-3 for each item"
+      },
+      "pi_columns": [
+        {
+          "column": "E",
+          "header_cell": "E3",
+          "header": "PI31"
+        },
+        {
+          "column": "F",
+          "header_cell": "F3",
+          "header": "PI32"
+        },
+        {
+          "column": "G",
+          "header_cell": "G3",
+          "header": "PI33"
+        }
+      ],
+      "formulas": {
+        "student_pi_average": {
+          "cell": "H4",
+          "formula": "IF(COUNT(E4:G4)=0,\"\",AVERAGE(E4:G4))"
+        },
+        "student_attainment": {
+          "cell": "I4",
+          "formula": "IF(H4=\"\",\"\",IF(H4<1,\"BE\",IF(H4<2,\"DE\",IF(H4<3,\"ME\",\"AE\"))))"
+        },
+        "class_pi_percentage": [
+          {
+            "cell": "E18",
+            "formula": "IFERROR(TEXT((COUNTIF(E4:E17,2)+COUNTIF(E4:E17,3))/COUNT(E4:E17),\"0%\"),\"\")"
+          },
+          {
+            "cell": "F18",
+            "formula": "<shared:3>"
+          },
+          {
+            "cell": "G18",
+            "formula": "<shared:3>"
+          }
+        ],
+        "so_result": {
+          "cell": "I18",
+          "formula": "IFERROR(TEXT((COUNTIF(I4:I14,\"AE\")+COUNTIF(I4:I14,\"ME\"))/(COUNTIF(I4:I14,\"AE\")+COUNTIF(I4:I14,\"ME\")+COUNTIF(I4:I14,\"DE\")+COUNTIF(I4:I14,\"BE\")),\"0%\"),\"\")"
+        }
+      },
+      "student_rows": {
+        "first": 4,
+        "last": 17
+      },
+      "notes": {
+        "cell": "A19",
+        "text": "Notes: \n-PI results are calculated as the percentage of students who achieved a score of 2 or 3. \n-The SO result is calculated as the percentage of students whose average PI score is 2.0 or higher."
+      },
+      "attainment_thresholds": {
+        "derived_from": "I4",
+        "rule": "student PI average <1 = BE; <2 = DE; <3 = ME; otherwise AE",
+        "bands": [
+          {
+            "code": "BE",
+            "min_inclusive": 0,
+            "max_exclusive": 1
+          },
+          {
+            "code": "DE",
+            "min_inclusive": 1,
+            "max_exclusive": 2
+          },
+          {
+            "code": "ME",
+            "min_inclusive": 2,
+            "max_exclusive": 3
+          },
+          {
+            "code": "AE",
+            "min_inclusive": 3,
+            "max_exclusive": null
+          }
+        ],
+        "satisfactory_threshold": 2
+      }
+    },
+    {
+      "template_id": "qac-so4-ver02",
+      "so": "SO4",
+      "source": {
+        "workbook": "PI-SO4 Assessment-EExxx-T2xx ver02 (1) (1).xlsx",
+        "sheet": "SO4 -Assessment Results",
+        "sheet_state": "visible",
+        "sheet_protected": false
+      },
+      "scale_scores": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "weights": null,
+      "score_entry_instruction": {
+        "cell": "A2",
+        "text": "*Add score 0-3 for each item"
+      },
+      "pi_columns": [
+        {
+          "column": "E",
+          "header_cell": "E3",
+          "header": "PI41\nRecognize"
+        },
+        {
+          "column": "F",
+          "header_cell": "F3",
+          "header": "PI42\nJudgment"
+        }
+      ],
+      "formulas": {
+        "student_pi_average": {
+          "cell": "G4",
+          "formula": "IF(COUNT(E4:F4)=0,\"\",AVERAGE(E4:F4))"
+        },
+        "student_attainment": {
+          "cell": "H4",
+          "formula": "IF(G4=\"\",\"\",IF(G4<1,\"BE\",IF(G4<2,\"DE\",IF(G4<3,\"ME\",\"AE\"))))"
+        },
+        "class_pi_percentage": [
+          {
+            "cell": "E18",
+            "formula": "IFERROR(TEXT((COUNTIF(E4:E17,2)+COUNTIF(E4:E17,3))/COUNT(E4:E17),\"0%\"),\"\")"
+          },
+          {
+            "cell": "F18",
+            "formula": "IFERROR(TEXT((COUNTIF(F4:F17,2)+COUNTIF(F4:F17,3))/COUNT(F4:F17),\"0%\"),\"\")"
+          }
+        ],
+        "so_result": {
+          "cell": "H18",
+          "formula": "IFERROR(TEXT((COUNTIF(H4:H17,\"AE\")+COUNTIF(H4:H17,\"ME\"))/(COUNTIF(H4:H17,\"AE\")+COUNTIF(H4:H17,\"ME\")+COUNTIF(H4:H17,\"DE\")+COUNTIF(H4:H17,\"BE\")),\"0%\"),\"\")"
+        }
+      },
+      "student_rows": {
+        "first": 4,
+        "last": 17
+      },
+      "notes": {
+        "cell": "A19",
+        "text": "Notes:\n-PI results are calculated as the percentage of students who achieved a score of 2 or 3. \n-The SO result is calculated as the percentage of students whose average PI score is 2.0 or higher.\n-When both project and individual assessments are used, the final PI score is determined based on the combined evidence (average) from both assessments."
+      },
+      "attainment_thresholds": {
+        "derived_from": "H4",
+        "rule": "student PI average <1 = BE; <2 = DE; <3 = ME; otherwise AE",
+        "bands": [
+          {
+            "code": "BE",
+            "min_inclusive": 0,
+            "max_exclusive": 1
+          },
+          {
+            "code": "DE",
+            "min_inclusive": 1,
+            "max_exclusive": 2
+          },
+          {
+            "code": "ME",
+            "min_inclusive": 2,
+            "max_exclusive": 3
+          },
+          {
+            "code": "AE",
+            "min_inclusive": 3,
+            "max_exclusive": null
+          }
+        ],
+        "satisfactory_threshold": 2
+      }
+    }
+  ],
+  "index": {
+    "by_so": {
+      "SO1": [
+        "qac-so1-ver01-rubric"
+      ],
+      "SO2": [
+        "qac-so2-ver02-group-so2-pi21-rubric",
+        "qac-so2-ver02-group-so2-pi22-pi23-pi24-rubric"
+      ],
+      "SO3": [
+        "qac-so3-ver01-rubric"
+      ],
+      "SO4": [
+        "qac-so4-ver02-rubric"
+      ]
+    },
+    "by_pi": {
+      "PI11": [
+        "PI11.C1"
+      ],
+      "PI12": [
+        "PI12.C1"
+      ],
+      "PI13": [
+        "PI13.C1"
+      ],
+      "PI21": [
+        "PI21.C1",
+        "PI21.C2",
+        "PI21.C3",
+        "PI21.C4",
+        "PI21.C5",
+        "PI21.C6",
+        "PI21.C7",
+        "PI21.C8"
+      ],
+      "PI22": [
+        "PI22.C1"
+      ],
+      "PI23": [
+        "PI23.C1"
+      ],
+      "PI24": [
+        "PI24.C1"
+      ],
+      "PI31": [
+        "PI31.C1"
+      ],
+      "PI32": [
+        "PI32.C1"
+      ],
+      "PI33": [
+        "PI33.C1"
+      ],
+      "PI41": [
+        "PI41.C1"
+      ],
+      "PI42": [
+        "PI42.C1"
+      ]
+    },
+    "by_criterion": {
+      "PI11.C1": "qac-so1-ver01-rubric",
+      "PI12.C1": "qac-so1-ver01-rubric",
+      "PI13.C1": "qac-so1-ver01-rubric",
+      "PI21.C1": "qac-so2-ver02-group-so2-pi21-rubric",
+      "PI21.C2": "qac-so2-ver02-group-so2-pi21-rubric",
+      "PI21.C3": "qac-so2-ver02-group-so2-pi21-rubric",
+      "PI21.C4": "qac-so2-ver02-group-so2-pi21-rubric",
+      "PI21.C5": "qac-so2-ver02-group-so2-pi21-rubric",
+      "PI21.C6": "qac-so2-ver02-group-so2-pi21-rubric",
+      "PI21.C7": "qac-so2-ver02-group-so2-pi21-rubric",
+      "PI21.C8": "qac-so2-ver02-group-so2-pi21-rubric",
+      "PI22.C1": "qac-so2-ver02-group-so2-pi22-pi23-pi24-rubric",
+      "PI23.C1": "qac-so2-ver02-group-so2-pi22-pi23-pi24-rubric",
+      "PI24.C1": "qac-so2-ver02-group-so2-pi22-pi23-pi24-rubric",
+      "PI31.C1": "qac-so3-ver01-rubric",
+      "PI32.C1": "qac-so3-ver01-rubric",
+      "PI33.C1": "qac-so3-ver01-rubric",
+      "PI41.C1": "qac-so4-ver02-rubric",
+      "PI42.C1": "qac-so4-ver02-rubric"
+    },
+    "by_checklist_context": {
+      "team_evidence": [
+        "PI11.C1",
+        "PI12.C1",
+        "PI13.C1",
+        "PI21.C1",
+        "PI21.C2",
+        "PI21.C3",
+        "PI21.C4",
+        "PI21.C5",
+        "PI21.C6",
+        "PI21.C7",
+        "PI21.C8",
+        "PI22.C1",
+        "PI23.C1",
+        "PI24.C1",
+        "PI31.C1",
+        "PI32.C1",
+        "PI33.C1",
+        "PI41.C1",
+        "PI42.C1"
+      ],
+      "individual_verification": [
+        "PI11.C1",
+        "PI12.C1",
+        "PI13.C1",
+        "PI21.C1",
+        "PI21.C2",
+        "PI21.C3",
+        "PI21.C4",
+        "PI21.C5",
+        "PI21.C6",
+        "PI21.C7",
+        "PI21.C8",
+        "PI22.C1",
+        "PI23.C1",
+        "PI24.C1",
+        "PI31.C1",
+        "PI32.C1",
+        "PI33.C1",
+        "PI41.C1",
+        "PI42.C1"
+      ],
+      "exam_written": [
+        "PI11.C1",
+        "PI12.C1",
+        "PI13.C1",
+        "PI41.C1",
+        "PI42.C1"
+      ]
+    }
+  }
+}

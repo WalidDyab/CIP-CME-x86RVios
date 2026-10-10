@@ -1,0 +1,580 @@
+{
+  "schema_version": "1.0",
+  "status_values": {
+    "open": "Awaiting QAC/academic decision.",
+    "partially_resolved": "A decision covers part of the item; remainder stays open.",
+    "resolved_by_decision": "Settled by an owner decision; the QAC template itself is unchanged."
+  },
+  "description": "Inconsistencies, ambiguities and questions found while ingesting the QAC workbooks. Recorded for possible QAC review; no template or rubric text was corrected.",
+  "issues": [
+    {
+      "id": "QAC-01",
+      "severity": "question",
+      "category": "rubric_authority",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Hidden legacy \"SO4 Rubric\" sheet duplicates an SO4 rubric with different wording",
+      "observed": "Every workbook contains a hidden sheet \"SO4 Rubric\" with #REF! headers and sample student comments/scores. In the SO4 workbook its PI41/PI42 descriptors differ from the visible \" Rubric\" sheet. The visible sheets were treated as authoritative; hidden sheets were not extracted.",
+      "question_for_qac": "Confirm that the visible rubric sheet is the only authoritative rubric per workbook and that the hidden legacy sheets can be retired.",
+      "impact_on_future_phases": "None while only visible sheets are used. A wrong authority assumption would change SO4 descriptors.",
+      "evidence": [
+        {
+          "template_id": "qac-so4-ver02",
+          "sheet": "SO4 Rubric",
+          "cell": "B4",
+          "contains": "Identifies the ethical responsibilities and references at least one applicable professional code"
+        },
+        {
+          "template_id": "qac-so4-ver02",
+          "sheet": " Rubric",
+          "cell": "B4",
+          "contains": "Clearly identifies and explains relevant ethical and professional responsibilities"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-02",
+      "severity": "info",
+      "category": "rubric_authority",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Hidden legacy sheets SO4-SO8, Student work Description, SO4 Assessment Results, Lookup Tables",
+      "observed": "Nine hidden sheets are carried in every workbook. They describe other programs' KPIs (e.g. \"computing practice\", cybersecurity SO8), contain #REF! formulas, or are lookups. Hidden sheet contents differ in a few workbooks (e.g. SO3 Lookup Tables, SO8, hidden SO4 Rubric).",
+      "question_for_qac": "Confirm none of the hidden sheets is intended for instructors.",
+      "impact_on_future_phases": "Preserved unchanged in exports; not parsed.",
+      "evidence": [
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "SO4",
+          "cell": "B4",
+          "contains": "4. Recognize professional responsibilities and make informed judgments in computing practice"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-03",
+      "severity": "question",
+      "category": "rubric_structure",
+      "templates": [
+        "qac-so2-ver02-group"
+      ],
+      "title": "SO2 PI21 rubric has eight design-element criteria; PI22-PI24 have one each; no weights",
+      "observed": "PI21 is scored through eight criteria (rubric rows 4-11) whose Results columns are numbered 1.1-1.8 (E5:L5); the PI21 group average M6 is an unweighted AVERAGE(E6:L6). No weights are defined anywhere. The numbering 1.1-1.8 is matched to rubric criteria 1-8 only by order.",
+      "question_for_qac": "Confirm criteria-to-result-column correspondence (1.1-1.8 = criteria 1-8) and that criteria are intentionally unweighted.",
+      "impact_on_future_phases": "Needed before any score/attainment logic; Phase 1 only records the structure.",
+      "evidence": [
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "SO2 Assessment Results",
+          "cell": "M6",
+          "contains": null
+        },
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "SO2 Assessment Results",
+          "cell": "E5",
+          "contains": null
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-04",
+      "severity": "defect",
+      "category": "formula",
+      "templates": [
+        "qac-so2-ver02-group"
+      ],
+      "title": "SO2 student PI average formula spans derived columns and omits PI24 individual score",
+      "observed": "Y6 is =IF(COUNT(M6:V6)=0,\"\",AVERAGE(M6:V6)). M6:V6 includes the derived average columns O, R and U and excludes W (PI24 individual) and X (PI24 average), which conflicts with the note that the SO result is based on the student's average PI score.",
+      "question_for_qac": "Confirm the intended range for the student PI average.",
+      "impact_on_future_phases": "Do not reuse the formula as a scoring specification until clarified.",
+      "evidence": [
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "SO2 Assessment Results",
+          "cell": "Y6",
+          "contains": "AVERAGE(M6:V6)"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-05",
+      "severity": "defect",
+      "category": "template_content",
+      "templates": [
+        "qac-so2-ver02-group"
+      ],
+      "title": "Test data left in SO2 Results sheet",
+      "observed": "B6 contains \"fsdfsa\" and C6 contains \"asdf\" (student name and ID cells in the first data row of the protected results sheet).",
+      "question_for_qac": "Confirm these are leftovers and should be removed from the template.",
+      "impact_on_future_phases": "Exports would carry the dummy student row.",
+      "evidence": [
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "SO2 Assessment Results",
+          "cell": "B6",
+          "contains": "fsdfsa"
+        },
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "SO2 Assessment Results",
+          "cell": "C6",
+          "contains": "asdf"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-06",
+      "severity": "question",
+      "category": "versioning",
+      "templates": [
+        "qac-so2-ver02-group"
+      ],
+      "title": "Only the SO2 workbook declares a version/date on Main, and the date is in 2028",
+      "observed": "Main A11 \"Verion\" / C11 = 2 and A12 \"Date of update\" / C12 = serial date 28-Sep-2028. The other workbooks carry no version cells; versions are otherwise visible only in file names (ver01, ver02) and file properties.",
+      "question_for_qac": "Confirm the date (2028 vs 2026) and whether all templates should declare version/date on Main.",
+      "impact_on_future_phases": "Version tracking in CIP relies on file names + checksums until clarified.",
+      "evidence": [
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "Main",
+          "cell": "A11",
+          "contains": "Verion"
+        },
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "Main",
+          "cell": "A12",
+          "contains": "Date of update"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-07",
+      "severity": "defect",
+      "category": "formula",
+      "templates": [
+        "qac-so3-ver01"
+      ],
+      "title": "SO3 SO-result formula covers rows 4-14 while class PI formulas cover rows 4-17",
+      "observed": "SO3 Results I18 counts I4:I14; the corresponding SO1/SO4 formulas count rows 4-17 (14 student rows).",
+      "question_for_qac": "Confirm that the SO3 range should be I4:I17.",
+      "impact_on_future_phases": "Do not reuse the formula as a scoring specification until clarified.",
+      "evidence": [
+        {
+          "template_id": "qac-so3-ver01",
+          "sheet": "SO3 Assessment Results",
+          "cell": "I18",
+          "contains": "COUNTIF(I4:I14"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-08",
+      "severity": "question",
+      "category": "individual_group",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Individual vs Group treatment differs by workbook and has no dedicated Main-sheet field",
+      "observed": "Only the SO2 (\"ver02 - Group\") Results sheet has separate Group and Individual score columns per PI. SO1 and SO4 Results sheets hold one score per PI per student and say that combined project and individual evidence is averaged; SO3 states neither. In every rubric the checklist cell separates \"Team assessment (Report)\" from \"Individual Assessment\". On Main, team/individual is only expressed in the free-text instrument cell.",
+      "question_for_qac": "Should SO1, SO3 and SO4 also have Group variants (as the SO2 file name suggests), and how should team/individual be recorded on Main?",
+      "impact_on_future_phases": "Determines how Phase 2+ classifies each assessment and which checklist segments apply.",
+      "evidence": [
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "SO2 Assessment Results",
+          "cell": "M4",
+          "contains": "Group"
+        },
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "SO1 Assessment Results",
+          "cell": "A19",
+          "contains": "combined evidence (average)"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-09",
+      "severity": "info",
+      "category": "terminology",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Performance-level labels differ between rubric sheets and hidden Lookup Tables",
+      "observed": "Rubric headers use \"Above Expectation (3)\", \"Meet Expectation (2)\", \"Developing Expectation (1)\", \"Below Expectation (0)\". Hidden Lookup Tables labels level 3 as \"Accomplished Expectations\" (AE) and level 2 as \"Meets Expectations\". The hidden \"Section's Satisfaction\" table text (ME = \"70% to 79%\" with upper bound 84; AE \"90% or more\" with bound 100) is internally inconsistent.",
+      "question_for_qac": "Confirm the official level names and that the Section's Satisfaction table is unused.",
+      "impact_on_future_phases": "Level names in CIP rubric JSON follow the rubric sheet headers.",
+      "evidence": [
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Lookup Tables",
+          "cell": "F12",
+          "contains": "Accomplished Expectations"
+        },
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Lookup Tables",
+          "cell": "F21",
+          "contains": "70% to 79%"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-10",
+      "severity": "question",
+      "category": "main_sheet",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Main row 6 is pre-filled with SO4 text that is not from the CIP curriculum",
+      "observed": "All four workbooks pre-fill Main row 6 with SO4, its PI list, and the CLO text \"3.1 Recognize the engineering profession and the importance of ethical and legal factors in professional duties\". No CIP course CLO has this wording. In the SO4 workbook rows 5 and 6 both carry SO4.",
+      "question_for_qac": "Please remove the pre-filled row 6 in a future template version (owner decision: it is an error).",
+      "impact_on_future_phases": "Generated copies must clear row 6; see decision D2 and cleared_rows in the mapping.",
+      "evidence": [
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Main",
+          "cell": "A6",
+          "contains": "SO4"
+        },
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Main",
+          "cell": "J6",
+          "contains": "3.1 Recognize the engineering profession"
+        },
+        {
+          "template_id": "qac-so4-ver02",
+          "sheet": "Main",
+          "cell": "A5",
+          "contains": "SO4"
+        }
+      ],
+      "status": "resolved_by_decision",
+      "resolution": {
+        "decision": "D2",
+        "summary": "Each workbook is dedicated to one SO; the pre-filled row 6 is an error. The exporter clears the whole of Main row 6 (contents and formulas) in every generated copy; the templates stay unchanged."
+      }
+    },
+    {
+      "id": "QAC-11",
+      "severity": "question",
+      "category": "main_sheet",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Mapped-PI text is static, lists the whole SO, and uses inconsistent separators",
+      "observed": "F5/F6 hold fixed text for the template's SO; they do not follow the SO drop-down in A5/A6 (only B5/B6 are formulas). Separators vary (\"PI11 Identify\", \"PI31 – Communicate\", \"PI41. Recognize\", \"PI 24 Identify\"). Whether the cell should list all PIs of the SO or only PIs mapped to the course is not stated.",
+      "question_for_qac": "Should \"Mapped PIs\" list all PIs of the SO or only those mapped to the course, and which separator format is required?",
+      "impact_on_future_phases": "Defines the transformation of CIP PI data into F5/F6.",
+      "evidence": [
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Main",
+          "cell": "F5",
+          "contains": "PI11"
+        },
+        {
+          "template_id": "qac-so3-ver01",
+          "sheet": "Main",
+          "cell": "F5",
+          "contains": "PI31 – Communicate"
+        },
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "Main",
+          "cell": "F5",
+          "contains": "PI 24 Identify"
+        }
+      ],
+      "status": "resolved_by_decision",
+      "resolution": {
+        "decision": "D3",
+        "summary": "Mapped PIs list only instructor-selected PIs validly mapped to the selected CLOs and the workbook SO, deduplicated across activities, with assessment-to-PI traceability kept. The separator style is still not specified by QAC."
+      }
+    },
+    {
+      "id": "QAC-12",
+      "severity": "question",
+      "category": "main_sheet",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "SO drop-down comments and merged regions (rows 3 and 7) are unclear",
+      "observed": "Comments on A5 and A6 say to select the last empty list cell to avoid selecting an SO, but A5:A6 validate against Lookup Tables L1:L7 (no empty entry). A7 has a validation list L1:L8 (L8 is empty) yet row 7 is merged across A7:J7, so it cannot hold a third SO row. B3:E3 is a merged empty region.",
+      "question_for_qac": "Is a third SO row intended? What is B3:E3 for? Should rows 5-6 allow an empty selection?",
+      "impact_on_future_phases": "Limits the number of SOs per workbook that can be populated; multi-SO courses may need several workbooks.",
+      "evidence": [
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Main",
+          "cell": "A5",
+          "contains": null
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-13",
+      "severity": "question",
+      "category": "main_sheet",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Main sheet has a single assessment row; multiple assessments per SO share three free-text cells",
+      "observed": "Assessment inputs are A10:B10 (instruments), C10:E10 (context) and F10:J10 (PI justification) in one row with a 409.5 pt height. There is no per-assessment row, ID, CLO link or Individual/Group field. The SO2 placeholder only says to name which project covered which factors.",
+      "question_for_qac": "What is the expected convention for several assessments (separate labelled paragraphs? one workbook per assessment?) and for the capacity of the 409.5 pt row?",
+      "impact_on_future_phases": "Central design question for Phase 4+ population.",
+      "evidence": [
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "Main",
+          "cell": "C10",
+          "contains": "more than one project"
+        }
+      ],
+      "status": "partially_resolved",
+      "resolution": {
+        "decision": "D1",
+        "summary": "At most five assessment activities per session in total. How several activities are delimited inside A10/C10/F10 and whether they fit the 409.5 pt row remain to be defined in the exporter phase."
+      }
+    },
+    {
+      "id": "QAC-14",
+      "severity": "info",
+      "category": "main_sheet",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Template wording errors and copy-over text (not corrected)",
+      "observed": "Examples: \"Verion\"; \"mapaped\"; \"characterstics\"; \"chacractersitc\"; \"individaul assssment\"; unmatched \"}\" in A10; \"Justifymultiple\" in SO2 F5. The SO1 workbook's F9 heading says \"...PIs of the SO2\" and its example justification labels PI12 as \"PI 22\". The bracketed guidance text and radar-project examples in A10/C10/F10 are placeholders whose replacement rule is not stated.",
+      "question_for_qac": "Please correct the templates in a future QAC version; confirm placeholders are replaced, not appended to.",
+      "impact_on_future_phases": "Exports keep the QAC wording unless QAC issues a new version.",
+      "evidence": [
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Main",
+          "cell": "F9",
+          "contains": "PIs of the SO2"
+        },
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Main",
+          "cell": "A10",
+          "contains": "individaul assssment"
+        },
+        {
+          "template_id": "qac-so2-ver02-group",
+          "sheet": "Main",
+          "cell": "F5",
+          "contains": "Justifymultiple"
+        }
+      ],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-15",
+      "severity": "info",
+      "category": "curriculum_consistency",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "QAC wording of SOs/PIs differs from the CIP curriculum text",
+      "observed": "PI31 in the SO3 rubric differed in substance from the CIP statement; CIP now adopts the rubric wording plus a final period (decision D4; the SO3 Main sheet text also ends with a period). PI23/PI24 in the SO2 rubric use third-person verbs; punctuation or case differs for PI11, PI22, PI32, PI33. Hidden Lookup Tables SO statements for SO3 and SO6 differ from CIP only by a final period. CIP remains authoritative; nothing was changed. Each criterion records its comparison result in cip_pi_statement_comparison.",
+      "question_for_qac": "Confirm whether QAC or CIP wording is current for PI31 and the other flagged PIs.",
+      "impact_on_future_phases": "Documents prepared from CIP text may disagree with the workbook rubric labels.",
+      "evidence": [
+        {
+          "template_id": "qac-so3-ver01",
+          "sheet": "Rubric",
+          "cell": "A4",
+          "contains": "Communicate engineering information using appropriate technical content"
+        }
+      ],
+      "status": "partially_resolved",
+      "resolution": {
+        "decision": "D4",
+        "summary": "PI31 in CIP now carries the QAC rubric wording plus a final period (data/ee_curriculum.json). PI23/PI24 verb forms and punctuation-only differences remain."
+      }
+    },
+    {
+      "id": "QAC-16",
+      "severity": "info",
+      "category": "workbook_structure",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Broken external link in defined names",
+      "observed": "Defined names OutcomesList and Percentage point at \"[1]Lookups Tables\" in the external file C:\\21752_Rachid.xlsx. Excel may prompt to update links when a workbook is opened.",
+      "question_for_qac": "Confirm the names are unused and can be removed in a future version.",
+      "impact_on_future_phases": "Exports inherit the link and prompt.",
+      "evidence": [],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-17",
+      "severity": "info",
+      "category": "tooling",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so4-ver02",
+        "qac-so3-ver01"
+      ],
+      "title": "Spreadsheet libraries cannot round-trip these workbooks safely",
+      "observed": "SO1, SO2 and SO4 Main sheets store their SO drop-downs as x14 data-validation extensions, and all Main sheets carry cell comments, VML drawings and an external-link part. openpyxl reports \"Data Validation extension is not supported and will be removed\". SO3 is a Google Sheets export with a different package layout.",
+      "question_for_qac": "None (informational).",
+      "impact_on_future_phases": "The future export must patch Main-sheet cell values directly in the package XML (or equivalent) to preserve everything else.",
+      "evidence": [],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-18",
+      "severity": "question",
+      "category": "naming",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "No confirmed output naming convention",
+      "observed": "Template names end in \"EExxx-T2xx ver01/ver02\". CIP stores codes as \"EE 322\" and the active term as \"T261\". The SO4 file name carries a \"(1) (1)\" download suffix; sheet names include a leading space (\" Rubric\") and a stray hyphen (\"SO4 -Assessment Results\").",
+      "question_for_qac": "Confirm the file-name pattern (e.g. EE322-T261), term format on Main, and whether the template names should be normalised in a new version.",
+      "impact_on_future_phases": "Needed for the download step. Stored assets keep the supplied names.",
+      "evidence": [],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-19",
+      "severity": "info",
+      "category": "results_sheet",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Results sheets have fixed capacity (14 student rows) and 0-3 score entry only",
+      "observed": "Student formulas and class/SO summary formulas cover 14 rows (SO1/SO3/SO4 rows 4-17; SO2 rows 6-19). Attainment bands from the formulas: <1 BE, <2 DE, <3 ME, otherwise AE; PI and SO results count scores/averages ≥ 2. Student results and attainment are out of scope for this tool.",
+      "question_for_qac": "None (informational).",
+      "impact_on_future_phases": "Not used before any attainment work.",
+      "evidence": [],
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "QAC-20",
+      "severity": "question",
+      "category": "main_sheet",
+      "templates": [
+        "qac-so1-ver01",
+        "qac-so2-ver02-group",
+        "qac-so3-ver01",
+        "qac-so4-ver02"
+      ],
+      "title": "Clearing only A6 would leave the B6 VLOOKUP returning #N/A (superseded: whole row cleared)",
+      "observed": "B6 is =VLOOKUP(A6,'Lookup Tables'!$L$1:$M$7,2,FALSE). If A6 alone were cleared, the lookup would find no match and B6 would show #N/A. Decision D2 avoids this by clearing the entire row 6, including the B6 formula, in generated copies.",
+      "question_for_qac": "None (resolved by decision).",
+      "impact_on_future_phases": "Exporter must also drop the B6 entry from calcChain.xml.",
+      "evidence": [
+        {
+          "template_id": "qac-so1-ver01",
+          "sheet": "Main",
+          "cell": "B6",
+          "contains": "VLOOKUP(A6"
+        }
+      ],
+      "status": "resolved_by_decision",
+      "resolution": {
+        "decision": "D2",
+        "summary": "Row 6 is cleared completely, including the B6 lookup formula; A6 is never populated, so no #N/A cell remains."
+      }
+    },
+    {
+      "id": "QAC-21",
+      "severity": "question",
+      "category": "curriculum_consistency",
+      "templates": [
+        "qac-so3-ver01"
+      ],
+      "title": "ee_alignment_evidence.json PI31 profile paraphrases the superseded PI31 wording",
+      "observed": "The PI31 evidence profile (\"relevant, accurate and sufficient for the purpose\"; rubric_criteria on accuracy and sufficiency) was written for the previous CIP statement. It is analysis guidance, not a curriculum mapping; it has since been revised to the adopted wording.",
+      "question_for_qac": "None (resolved by decision).",
+      "impact_on_future_phases": "Alignment-analysis text for PI31 matches the adopted statement.",
+      "evidence": [
+        {
+          "template_id": "qac-so3-ver01",
+          "sheet": "Rubric",
+          "cell": "B4",
+          "contains": "appropriate technical content"
+        }
+      ],
+      "status": "resolved_by_decision",
+      "resolution": {
+        "decision": "D4",
+        "summary": "The PI31 profile in data/ee_alignment_evidence.json was revised to the adopted wording (demonstrates, relationship, rubric criteria, attainment methodology); no mapping changed."
+      }
+    }
+  ]
+}

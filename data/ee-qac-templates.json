@@ -1,0 +1,632 @@
+{
+  "schema_version": "1.0",
+  "description": "Versioned manifest of the original QAC SO assessment workbooks. The workbooks are stored byte-for-byte as supplied (never edited, re-saved or renamed) and are the only inputs to the future export, which must copy a workbook, fill the Main-sheet input cells listed in ee-qac-main-sheet-mapping.json and leave every other part of the package untouched.",
+  "asset_root": "templates/qac-so-assessment",
+  "preservation_rules": [
+    "Do not modify, correct, re-save, reorder or rename the stored workbooks.",
+    "Populate copies only; edit the package XML in place (cell values on the Main sheet) rather than loading and re-saving through a spreadsheet library, which would drop data-validation extensions, comments and external-link parts.",
+    "Record any inconsistency in data/ee-qac-review-issues.json for QAC instead of fixing the template."
+  ],
+  "output_naming": {
+    "status": "unresolved",
+    "note": "QAC file names use the placeholders \"EExxx-T2xx\". A concrete convention for generated files (course code spacing, term format, suffixes) has not been confirmed; see issue QAC-18.",
+    "template_placeholder_pattern": "PI-SO<n> Assessment-EExxx-T2xx ver<nn>.xlsx"
+  },
+  "templates": [
+    {
+      "template_id": "qac-so1-ver01",
+      "so": "SO1",
+      "version_label": "ver01",
+      "variant": null,
+      "workbook_declared_version": null,
+      "asset_path": "templates/qac-so-assessment/so1-ver01/PI-SO1 Assessment-EExxx-T2xx ver01.xlsx",
+      "original_file_name": "PI-SO1 Assessment-EExxx-T2xx ver01.xlsx",
+      "size_bytes": 93669,
+      "sha256": "71bdd44cfb3c1274d00b4b19a7df9bd987c5b1c0a918173c948192663d8aba51",
+      "core_properties": {
+        "creator": "Nermeen El Hakim",
+        "lastModifiedBy": "Maged",
+        "created": "2012-02-27T07:54:13Z",
+        "modified": "2026-09-10T09:47:16Z"
+      },
+      "main_sheet": "Main",
+      "rubric_sheets": [
+        "Rubric"
+      ],
+      "results_sheet": "SO1 Assessment Results",
+      "sheet_order": [
+        "Main",
+        "Rubric",
+        "SO4 Rubric",
+        "SO1 Assessment Results",
+        "SO4 Assessment Results",
+        "Student work Description",
+        "SO4",
+        "SO5",
+        "SO6",
+        "SO7",
+        "SO8",
+        "Lookup Tables"
+      ],
+      "sheets": [
+        {
+          "name": "Main",
+          "state": "visible",
+          "role": "main",
+          "dimension": "A1:J998",
+          "protected": false,
+          "note": "Instructor data-entry sheet."
+        },
+        {
+          "name": "Rubric",
+          "state": "visible",
+          "role": "authoritative_rubric",
+          "dimension": "A1:G994",
+          "protected": false,
+          "note": "Official QAC rubric for SO1."
+        },
+        {
+          "name": "SO4 Rubric",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:AH1000",
+          "protected": false,
+          "note": "Hidden. Contains an SO4 rubric with #REF! student headers and sample student comments/scores; copied into all four workbooks."
+        },
+        {
+          "name": "SO1 Assessment Results",
+          "state": "visible",
+          "role": "results",
+          "dimension": "A1:J972",
+          "protected": false,
+          "note": "Student scoring/attainment sheet (formulas); out of scope for Phase 1 population."
+        },
+        {
+          "name": "SO4 Assessment Results",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:M1000",
+          "protected": false,
+          "note": "Hidden. Legacy SO4 results sheet present in every workbook."
+        },
+        {
+          "name": "Student work Description",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:W1000",
+          "protected": false,
+          "note": "Hidden. All cells are #REF! formulas."
+        },
+        {
+          "name": "SO4",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy computing-program KPI rubric (\"computing practice\") for SO4."
+        },
+        {
+          "name": "SO5",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy teamwork KPI rubric for SO5."
+        },
+        {
+          "name": "SO6",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy sheet for SO6."
+        },
+        {
+          "name": "SO7",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy sheet for SO7."
+        },
+        {
+          "name": "SO8",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "B1:G1000",
+          "protected": false,
+          "note": "Hidden. Legacy cybersecurity (CYS-SO) rubric for SO8."
+        },
+        {
+          "name": "Lookup Tables",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "C1:M1000",
+          "protected": false,
+          "note": "Hidden. Supporting lookup (SO statements, level codes, drop-down lists); not a rubric."
+        }
+      ],
+      "external_links": [
+        "file:///C:\\21752_Rachid.xlsx"
+      ],
+      "defined_names": [
+        {
+          "name": "OutcomesList",
+          "ref": "'[1]Lookups Tables'!$J$3:$J$12"
+        },
+        {
+          "name": "Percentage",
+          "ref": "'[1]Lookups Tables'!$L$4:$L$23"
+        },
+        {
+          "name": "_xlnm.Print_Area",
+          "ref": "'SO1 Assessment Results'!$A$1:$J$19"
+        }
+      ],
+      "authoritative_notes": "Visible sheet \"Rubric\" is the SO1 rubric (PI11-PI13)."
+    },
+    {
+      "template_id": "qac-so2-ver02-group",
+      "so": "SO2",
+      "version_label": "ver02",
+      "variant": "Group",
+      "workbook_declared_version": {
+        "cell": "C11",
+        "value": 2
+      },
+      "asset_path": "templates/qac-so-assessment/so2-ver02-group/PI-SO2 Assessment-EExxx-T2xx ver02 - Group.xlsx",
+      "original_file_name": "PI-SO2 Assessment-EExxx-T2xx ver02 - Group.xlsx",
+      "size_bytes": 114129,
+      "sha256": "f0146379afea2fda551d6fec8ad4b0823f519aedb9eed192b86ab509a398c6ea",
+      "core_properties": {
+        "creator": "Nermeen El Hakim",
+        "lastModifiedBy": "Maged",
+        "created": "2012-02-27T07:54:13Z",
+        "modified": "2026-09-28T18:59:03Z"
+      },
+      "main_sheet": "Main",
+      "rubric_sheets": [
+        "SO2-PI21 Rubric",
+        "SO2-PI22,PI23&PI24 Rubric"
+      ],
+      "results_sheet": "SO2 Assessment Results",
+      "sheet_order": [
+        "Main",
+        "SO2-PI21 Rubric",
+        "SO2-PI22,PI23&PI24 Rubric",
+        "SO4 Rubric",
+        "SO2 Assessment Results",
+        "SO4 Assessment Results",
+        "Student work Description",
+        "SO4",
+        "SO5",
+        "SO6",
+        "SO7",
+        "SO8",
+        "Lookup Tables"
+      ],
+      "sheets": [
+        {
+          "name": "Main",
+          "state": "visible",
+          "role": "main",
+          "dimension": "A1:J998",
+          "protected": false,
+          "note": "Instructor data-entry sheet."
+        },
+        {
+          "name": "SO2-PI21 Rubric",
+          "state": "visible",
+          "role": "authoritative_rubric",
+          "dimension": "A1:F970",
+          "protected": false,
+          "note": "Official QAC rubric for SO2."
+        },
+        {
+          "name": "SO2-PI22,PI23&PI24 Rubric",
+          "state": "visible",
+          "role": "authoritative_rubric",
+          "dimension": "A1:F994",
+          "protected": false,
+          "note": "Official QAC rubric for SO2."
+        },
+        {
+          "name": "SO4 Rubric",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:AH1000",
+          "protected": false,
+          "note": "Hidden. Contains an SO4 rubric with #REF! student headers and sample student comments/scores; copied into all four workbooks."
+        },
+        {
+          "name": "SO2 Assessment Results",
+          "state": "visible",
+          "role": "results",
+          "dimension": "A1:AD974",
+          "protected": true,
+          "note": "Student scoring/attainment sheet (formulas); out of scope for Phase 1 population."
+        },
+        {
+          "name": "SO4 Assessment Results",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:M1000",
+          "protected": false,
+          "note": "Hidden. Legacy SO4 results sheet present in every workbook."
+        },
+        {
+          "name": "Student work Description",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:W1000",
+          "protected": false,
+          "note": "Hidden. All cells are #REF! formulas."
+        },
+        {
+          "name": "SO4",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy computing-program KPI rubric (\"computing practice\") for SO4."
+        },
+        {
+          "name": "SO5",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy teamwork KPI rubric for SO5."
+        },
+        {
+          "name": "SO6",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy sheet for SO6."
+        },
+        {
+          "name": "SO7",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy sheet for SO7."
+        },
+        {
+          "name": "SO8",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "B1:G1000",
+          "protected": false,
+          "note": "Hidden. Legacy cybersecurity (CYS-SO) rubric for SO8."
+        },
+        {
+          "name": "Lookup Tables",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "C1:M1000",
+          "protected": false,
+          "note": "Hidden. Supporting lookup (SO statements, level codes, drop-down lists); not a rubric."
+        }
+      ],
+      "external_links": [
+        "file:///C:\\21752_Rachid.xlsx"
+      ],
+      "defined_names": [
+        {
+          "name": "OutcomesList",
+          "ref": "'[1]Lookups Tables'!$J$3:$J$12"
+        },
+        {
+          "name": "Percentage",
+          "ref": "'[1]Lookups Tables'!$L$4:$L$23"
+        },
+        {
+          "name": "_xlnm.Print_Area",
+          "ref": "'SO2 Assessment Results'!$A$1:$AA$21"
+        }
+      ],
+      "authoritative_notes": "Two visible rubric sheets: PI21 (8 design-element criteria) and PI22/PI23/PI24 (one criterion each)."
+    },
+    {
+      "template_id": "qac-so3-ver01",
+      "so": "SO3",
+      "version_label": "ver01",
+      "variant": null,
+      "workbook_declared_version": null,
+      "asset_path": "templates/qac-so-assessment/so3-ver01/PI-SO3 Assessment-EExxx-T2xx ver01.xlsx",
+      "original_file_name": "PI-SO3 Assessment-EExxx-T2xx ver01.xlsx",
+      "size_bytes": 85648,
+      "sha256": "5a1036d635d909f06c3204d640ed12dae96cb28ff5fb5271e824295f9ae346e3",
+      "core_properties": {
+        "creator": "Nermeen El Hakim",
+        "created": "2012-02-27T07:54:13Z"
+      },
+      "main_sheet": "Main",
+      "rubric_sheets": [
+        "Rubric"
+      ],
+      "results_sheet": "SO3 Assessment Results",
+      "sheet_order": [
+        "Main",
+        "Rubric",
+        "SO4 Rubric",
+        "SO3 Assessment Results",
+        "SO4 Assessment Results",
+        "Student work Description",
+        "SO4",
+        "SO5",
+        "SO6",
+        "SO7",
+        "SO8",
+        "Lookup Tables"
+      ],
+      "sheets": [
+        {
+          "name": "Main",
+          "state": "visible",
+          "role": "main",
+          "dimension": "A1:J10",
+          "protected": false,
+          "note": "Instructor data-entry sheet."
+        },
+        {
+          "name": "Rubric",
+          "state": "visible",
+          "role": "authoritative_rubric",
+          "dimension": "A1:F7",
+          "protected": false,
+          "note": "Official QAC rubric for SO3."
+        },
+        {
+          "name": "SO4 Rubric",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:AH10",
+          "protected": false,
+          "note": "Hidden. Contains an SO4 rubric with #REF! student headers and sample student comments/scores; copied into all four workbooks."
+        },
+        {
+          "name": "SO3 Assessment Results",
+          "state": "visible",
+          "role": "results",
+          "dimension": "A1:J19",
+          "protected": false,
+          "note": "Student scoring/attainment sheet (formulas); out of scope for Phase 1 population."
+        },
+        {
+          "name": "SO4 Assessment Results",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:M34",
+          "protected": false,
+          "note": "Hidden. Legacy SO4 results sheet present in every workbook."
+        },
+        {
+          "name": "Student work Description",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:W15",
+          "protected": false,
+          "note": "Hidden. All cells are #REF! formulas."
+        },
+        {
+          "name": "SO4",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:G7",
+          "protected": false,
+          "note": "Hidden. Legacy computing-program KPI rubric (\"computing practice\") for SO4."
+        },
+        {
+          "name": "SO5",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:G9",
+          "protected": false,
+          "note": "Hidden. Legacy teamwork KPI rubric for SO5."
+        },
+        {
+          "name": "SO6",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:G9",
+          "protected": false,
+          "note": "Hidden. Legacy sheet for SO6."
+        },
+        {
+          "name": "SO7",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:G9",
+          "protected": false,
+          "note": "Hidden. Legacy sheet for SO7."
+        },
+        {
+          "name": "SO8",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:G13",
+          "protected": false,
+          "note": "Hidden. Legacy cybersecurity (CYS-SO) rubric for SO8."
+        },
+        {
+          "name": "Lookup Tables",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:M22",
+          "protected": false,
+          "note": "Hidden. Supporting lookup (SO statements, level codes, drop-down lists); not a rubric."
+        }
+      ],
+      "external_links": [
+        "file:///C:\\21752_Rachid.xlsx"
+      ],
+      "defined_names": [
+        {
+          "name": "OutcomesList",
+          "ref": "'[1]Lookups Tables'!$J$3:$J$12"
+        },
+        {
+          "name": "Percentage",
+          "ref": "'[1]Lookups Tables'!$L$4:$L$23"
+        }
+      ],
+      "authoritative_notes": "Visible sheet \"Rubric\" is the SO3 rubric (PI31-PI33)."
+    },
+    {
+      "template_id": "qac-so4-ver02",
+      "so": "SO4",
+      "version_label": "ver02",
+      "variant": null,
+      "workbook_declared_version": null,
+      "asset_path": "templates/qac-so-assessment/so4-ver02/PI-SO4 Assessment-EExxx-T2xx ver02 (1) (1).xlsx",
+      "original_file_name": "PI-SO4 Assessment-EExxx-T2xx ver02 (1) (1).xlsx",
+      "size_bytes": 95059,
+      "sha256": "d1f7cd01cf05f85a3e4eb950d4cefb7c92e92bae24843c90ca2f7a0fd1786af9",
+      "core_properties": {
+        "creator": "Nermeen El Hakim",
+        "lastModifiedBy": "Maged",
+        "created": "2012-02-27T07:54:13Z",
+        "modified": "2026-09-05T18:57:50Z"
+      },
+      "main_sheet": "Main",
+      "rubric_sheets": [
+        " Rubric"
+      ],
+      "results_sheet": "SO4 -Assessment Results",
+      "sheet_order": [
+        "Main",
+        " Rubric",
+        "SO4 Rubric",
+        "SO4 -Assessment Results",
+        "SO4 Assessment Results",
+        "Student work Description",
+        "SO4",
+        "SO5",
+        "SO6",
+        "SO7",
+        "SO8",
+        "Lookup Tables"
+      ],
+      "sheets": [
+        {
+          "name": "Main",
+          "state": "visible",
+          "role": "main",
+          "dimension": "A1:J998",
+          "protected": false,
+          "note": "Instructor data-entry sheet."
+        },
+        {
+          "name": " Rubric",
+          "state": "visible",
+          "role": "authoritative_rubric",
+          "dimension": "A1:G993",
+          "protected": false,
+          "note": "Official QAC rubric for SO4."
+        },
+        {
+          "name": "SO4 Rubric",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:AH1000",
+          "protected": false,
+          "note": "Hidden. Contains an SO4 rubric with #REF! student headers and sample student comments/scores; copied into all four workbooks."
+        },
+        {
+          "name": "SO4 -Assessment Results",
+          "state": "visible",
+          "role": "results",
+          "dimension": "A1:I972",
+          "protected": false,
+          "note": "Student scoring/attainment sheet (formulas); out of scope for Phase 1 population."
+        },
+        {
+          "name": "SO4 Assessment Results",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:M1000",
+          "protected": false,
+          "note": "Hidden. Legacy SO4 results sheet present in every workbook."
+        },
+        {
+          "name": "Student work Description",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:W1000",
+          "protected": false,
+          "note": "Hidden. All cells are #REF! formulas."
+        },
+        {
+          "name": "SO4",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy computing-program KPI rubric (\"computing practice\") for SO4."
+        },
+        {
+          "name": "SO5",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy teamwork KPI rubric for SO5."
+        },
+        {
+          "name": "SO6",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy sheet for SO6."
+        },
+        {
+          "name": "SO7",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "A1:Z1000",
+          "protected": false,
+          "note": "Hidden. Legacy sheet for SO7."
+        },
+        {
+          "name": "SO8",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "B1:G1000",
+          "protected": false,
+          "note": "Hidden. Legacy cybersecurity (CYS-SO) rubric for SO8."
+        },
+        {
+          "name": "Lookup Tables",
+          "state": "hidden",
+          "role": "legacy_hidden",
+          "dimension": "C1:M1000",
+          "protected": false,
+          "note": "Hidden. Supporting lookup (SO statements, level codes, drop-down lists); not a rubric."
+        }
+      ],
+      "external_links": [
+        "file:///C:\\21752_Rachid.xlsx"
+      ],
+      "defined_names": [
+        {
+          "name": "OutcomesList",
+          "ref": "'[1]Lookups Tables'!$J$3:$J$12"
+        },
+        {
+          "name": "Percentage",
+          "ref": "'[1]Lookups Tables'!$L$4:$L$23"
+        },
+        {
+          "name": "_xlnm.Print_Area",
+          "ref": "'SO4 -Assessment Results'!$A$1:$I$19"
+        }
+      ],
+      "authoritative_notes": "Visible sheet \" Rubric\" (leading space in the sheet name) is the SO4 rubric (PI41-PI42)."
+    }
+  ]
+}

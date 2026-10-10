@@ -1,0 +1,2122 @@
+{
+  "schema_version": "1.0",
+  "decisions": {
+    "D1": {
+      "title": "Maximum assessment activities",
+      "requirement": "A course preparation session holds at most five assessment activities in total (not per SO). One activity may cover several CLOs, SOs and PIs.",
+      "status": "requirement_for_later_phases",
+      "consequence": "An activity that addresses several SOs appears in the workbook of each SO it covers, so up to five activities may share the single assessment row (A10, C10, F10) of one workbook; fit within the 409.5 pt row must be verified when the exporter is built."
+    },
+    "D2": {
+      "title": "Main row 6 cleared; one SO per workbook",
+      "requirement": "Each QAC workbook is dedicated to one Student Outcome. The pre-filled row 6 (SO4, its PI list and CLO text, and the B6 lookup formula) is an error. The future exporter clears the entire row 6 of Main in every generated copy, for all four SO templates.",
+      "status": "requirement_for_later_phases",
+      "generated_copy_rule": "After verifying the worksheet structure (see cleared_rows in each template), remove the contents and formulas of every cell in row 6, including the B6 lookup, in the copy only. Never populate A6. Keep merged ranges, styles, validation, comments, all other cells and all other worksheets; drop the B6 entry from calcChain.xml if present. A generated workbook contains information only for its own SO and the selected, validly mapped PIs. The stored templates stay unchanged.",
+      "supersedes": "Earlier D2 text (clear or replace A6, F6, J6 and keep B6); QAC-20 is resolved by this decision."
+    },
+    "D3": {
+      "title": "Mapped PI selection",
+      "requirement": "Mapped PIs on a generated Main sheet contain only PIs explicitly selected by the instructor that are validly mapped to the selected CLOs and to the workbook's SO. Never list all PIs of an SO automatically.",
+      "status": "requirement_for_later_phases",
+      "derivation": [
+        "For each assessment activity, take the instructor-selected PIs.",
+        "Keep a PI only if its SO is the workbook's SO (abet.performance_indicators[PI].so) and it is in pi_codes of at least one CLO selected for that activity whose mapped_sos includes that SO.",
+        "Across activities combine the kept PIs without duplicates (ordered by PI id).",
+        "Preserve assessment-to-PI traceability in the preparation record (PI -> activity ids) and in the per-PI justification text; the Main cell shows each PI once."
+      ]
+    },
+    "D4": {
+      "title": "PI31 authoritative wording",
+      "requirement": "The exact PI31 wording of the visible QAC SO3 rubric is CIP's authoritative PI31 statement.",
+      "status": "applied",
+      "original": "Communicate relevant, accurate, and sufficient engineering information.",
+      "replacement": "Communicate engineering information using appropriate technical content.",
+      "location": "data/ee_curriculum.json -> abet.performance_indicators.PI31.statement",
+      "note": "Rubric label text plus the final period (owner-specified). Dependent guidance updated: data/ee_alignment_evidence.json -> pi_evidence_profiles.PI31 (demonstrates, relationship, rubric_criteria, attainment_methodology). Approved mappings untouched."
+    }
+  },
+  "preparation_limits": {
+    "max_assessment_activities_per_session": 5,
+    "scope": "total across all SOs, not per SO",
+    "activity_may_cover": [
+      "multiple CLOs",
+      "multiple SOs",
+      "multiple PIs"
+    ],
+    "decision": "D1"
+  },
+  "description": "Machine-readable map of the Main-sheet cells each QAC workbook expects an instructor (or the future export) to complete. Layouts are compared cell-by-cell in the tests; fields whose intent is unclear carry issue ids (see data/ee-qac-review-issues.json) instead of a guessed mapping. This file does not populate anything.",
+  "vocabulary": {
+    "entry_mode": {
+      "cip_derived": "Value should come from the CIP curriculum database (user may confirm or override).",
+      "instructor_entry": "Free text supplied by the instructor; no CIP source.",
+      "selector": "Drop-down list in the template.",
+      "workbook_formula": "Computed by the workbook; must not be overwritten.",
+      "template_metadata": "QAC-maintained version information."
+    },
+    "requirement": {
+      "mandatory": "Needed for a complete Main sheet.",
+      "optional": "May be left as in the template.",
+      "not_applicable": "Not an input."
+    },
+    "current_content.kind": {
+      "empty": "Cell empty in the template.",
+      "placeholder_guidance": "Bracketed guidance/example text meant to be replaced (replacement rule to be confirmed by QAC, QAC-14).",
+      "prefilled": "Static text already in the template.",
+      "formula": "Workbook formula."
+    }
+  },
+  "cip_sources": {
+    "curriculum": "data/ee_curriculum.json",
+    "assessment_plan": "data/ee-assessment.json"
+  },
+  "templates": [
+    {
+      "template_id": "qac-so1-ver01",
+      "so": "SO1",
+      "main_sheet": "Main",
+      "header_fields": [
+        {
+          "field_id": "course_name",
+          "description": "Course title",
+          "label": {
+            "cell": "A1",
+            "text": "Course Name:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C1",
+            "range": "C1:E1",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].course_title",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [],
+          "requirement_rules": [],
+          "notes": null
+        },
+        {
+          "field_id": "course_code",
+          "description": "Course code",
+          "label": {
+            "cell": "A2",
+            "text": "Course Code:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C2",
+            "range": "C2:E2",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].course_code",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [
+            "QAC-18"
+          ],
+          "requirement_rules": [],
+          "notes": "CIP stores codes with a space (\"EE 322\"); the QAC file name uses \"EExxx\". Display format not specified by QAC."
+        },
+        {
+          "field_id": "semester",
+          "description": "Term / semester",
+          "label": {
+            "cell": "F1",
+            "text": "Semester: "
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "H1",
+            "range": "H1:J1",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee-assessment.json",
+            "path": "active_term",
+            "transform": null,
+            "note": "Default only; the term of the assessment is chosen by the user. Format of the value in this cell is not specified."
+          },
+          "data_validation": null,
+          "flags": [
+            "QAC-18"
+          ],
+          "requirement_rules": [],
+          "notes": null
+        },
+        {
+          "field_id": "instructor",
+          "description": "Instructor name",
+          "label": {
+            "cell": "F2",
+            "text": "Instructor: "
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "H2",
+            "range": "H2:J2",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].instructor",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [],
+          "requirement_rules": [],
+          "notes": "CIP stores one instructor string per course; the user may override it."
+        }
+      ],
+      "so_rows": [
+        {
+          "row": 5,
+          "requirement": "mandatory",
+          "fields": [
+            {
+              "field_id": "so_id_row5",
+              "description": "Student Outcome of this workbook (pre-selected; the workbook is dedicated to one SO)",
+              "label": {
+                "cell": "A4",
+                "text": "SO                                          "
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "A5",
+                "range": "A5",
+                "merged": false
+              },
+              "entry_mode": "selector",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "prefilled",
+                "text_sha256": "2c0cc2c67d273289e0a131e7e069d5d55ee97e323087763c75692265633954dd",
+                "preview": "SO1"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.student_outcomes (key)",
+                "note": "Must equal the workbook SO (SO1). Which SO workbooks a course needs: data/ee-assessment.json -> so_course_selection."
+              },
+              "data_validation": {
+                "type": "list",
+                "source": "'Lookup Tables'!$L$1:$L$7",
+                "sqref": "A5:A6",
+                "extension_element": true
+              },
+              "flags": [
+                "QAC-12"
+              ],
+              "requirement_rules": [],
+              "notes": "Cell comment on the template: \"====== ID#AAABw60pAaI Maged    (2025-12-02 17:57:03) -Select the Assessed SO in the course from the drop list.  -Select the last empty cell from the drop list to avoid selecting an SO\""
+            },
+            {
+              "field_id": "so_statement_row5",
+              "description": "SO statement (QAC lookup, derived)",
+              "label": {
+                "cell": "A4",
+                "text": "SO                                          "
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "B5",
+                "range": "B5:E5",
+                "merged": true
+              },
+              "entry_mode": "workbook_formula",
+              "requirement": "not_applicable",
+              "editable": false,
+              "current_content": {
+                "kind": "formula",
+                "formula": "VLOOKUP(A5,'Lookup Tables'!$L$1:$M$7,2,FALSE)"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.student_outcomes.<SO>.statement",
+                "note": "Reference only. Do not write this cell: it is a VLOOKUP into the hidden Lookup Tables sheet, which holds QAC copies of the SO statements."
+              },
+              "data_validation": null,
+              "flags": [
+                "QAC-15"
+              ],
+              "requirement_rules": [],
+              "notes": null
+            },
+            {
+              "field_id": "mapped_pis_row5",
+              "description": "PIs of the SO selected for assessment and validly mapped to the selected CLOs",
+              "label": {
+                "cell": "F4",
+                "text": "Mapped PIs"
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "F5",
+                "range": "F5:I5",
+                "merged": true
+              },
+              "entry_mode": "cip_derived",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "prefilled",
+                "text_sha256": "1acb7a52e3bd2e76eeb87e72da09b64f08aa65cc28d282c274fa055d229847e8",
+                "preview": "PI11 – Identify the key requirements, interacting variables, and technical issue"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.performance_indicators[<PI>].statement for instructor-selected PIs that are in curriculum.courses[course_code == <course>].clos[].pi_codes of selected CLOs mapped to <SO>",
+                "transform": "PI id + statement, one PI per line"
+              },
+              "data_validation": null,
+              "flags": [
+                "QAC-11",
+                "QAC-15"
+              ],
+              "requirement_rules": [
+                "D3"
+              ],
+              "notes": "Template text is static and lists every PI of the SO with inconsistent separators. Generated copies follow decision D3: only instructor-selected, validly mapped PIs, deduplicated across activities; the template text is replaced."
+            },
+            {
+              "field_id": "mapped_clos_row5",
+              "description": "CLOs of the course mapped to the SO and selected for assessment",
+              "label": {
+                "cell": "J4",
+                "text": "Mapped CLO"
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "J5",
+                "range": "J5",
+                "merged": false
+              },
+              "entry_mode": "cip_derived",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "placeholder_guidance",
+                "text_sha256": "d1c51193de7ebe621f0899b7aa2f2710a3eadc8be9f2ea2a647c24b2bc2a85e7",
+                "preview": "Add the CLO mapaped to this SO"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "curriculum.courses[course_code == <course>].clos[] selected, where <SO> in mapped_sos",
+                "transform": "\"<clo_number> <clo_text>\" per CLO"
+              },
+              "data_validation": null,
+              "flags": [],
+              "requirement_rules": [],
+              "notes": null
+            }
+          ]
+        }
+      ],
+      "cleared_rows": [
+        {
+          "row": 6,
+          "decision": "D2",
+          "action": "clear_row",
+          "scope": "Every cell of Main row 6 (A6:J6): contents and formulas, including the B6 VLOOKUP.",
+          "cells_with_template_content": [
+            {
+              "cell": "A6",
+              "range": "A6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "2ad38526efc408439d5aff8a6ffe16968b13221fcb89318acf5d5cf0570320e7",
+                "preview": "SO4"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "B6",
+              "range": "B6:E6",
+              "template_content": {
+                "kind": "formula",
+                "formula": "VLOOKUP(A6,'Lookup Tables'!$L$1:$M$7,2,FALSE)"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "F6",
+              "range": "F6:I6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "e3c59e33f415544ad32360bc014bc045cf75b246af9ff2d3be55ecde984f6d24",
+                "preview": "PI41 Recognize ethical and professional responsibilities in engineering situatio"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "J6",
+              "range": "J6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "39e07c3ba87a9657f54d0013230a998785b6616d7df64efbf64a01afc16fa91e",
+                "preview": "3.1 Recognize the engineering profession and the importance of ethical and legal"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            }
+          ],
+          "precondition": "Verify the template structure first: row 6 holds exactly these cells with these content hashes, row 5 holds the workbook SO.",
+          "preserve": [
+            "merged ranges",
+            "cell styles and row height",
+            "data validation and comments",
+            "all other Main cells",
+            "all other worksheets"
+          ],
+          "package_notes": [
+            "Remove the B6 entry from xl/calcChain.xml when that part exists (otherwise Excel reports a corrupt calc chain).",
+            "Shared-string entries made unused by the clearing may remain."
+          ],
+          "rationale": "Each QAC workbook is dedicated to one Student Outcome; the pre-filled SO4 row is an error."
+        }
+      ],
+      "assessment_block": {
+        "row": 10,
+        "column_headings": {
+          "instruments": {
+            "cell": "A9",
+            "text": "Assessment type"
+          },
+          "context": {
+            "cell": "C9",
+            "text": "Complex problem characterstics"
+          },
+          "justification": {
+            "cell": "F9",
+            "text": "Justification of the assessment selection (mention how it is related the PIs of the SO2)"
+          }
+        },
+        "capacity": "One row only (row 10, height 409.5 pt in the template); all assessment activities for the SO (at most five per session in total, decision D1) share these three cells.",
+        "max_activities_per_session": 5,
+        "fields": [
+          {
+            "field_id": "assessment_instruments",
+            "description": "All assessment instruments used for this SO, stating which are team-based and which individual",
+            "label": {
+              "cell": "A9",
+              "text": "Assessment type"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "A10",
+              "range": "A10:B10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "57ff78475190cc1f309ad1f41acd2e4f17d8170145936f8159614f110f90e1c0",
+              "preview": "[List all assessment instruments used to assess the students for this SO. Mentio"
+            },
+            "cip_source": {
+              "file": "data/ee_curriculum.json",
+              "path": "curriculum.courses[course_code == <course>].clos[].assessment_methods",
+              "note": "Approved assessment methods constrain which instruments may be listed; the descriptive text is instructor-written."
+            },
+            "data_validation": null,
+            "flags": [
+              "QAC-08",
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Individual/Group classification has no discrete cell; it is expressed inside this free-text cell (and the template examples use \"Team based:\" / \"individual assessment:\" headings)."
+          },
+          {
+            "field_id": "complex_problem_characteristics",
+            "description": "Complex engineering problem characteristic(s) considered in the assessment",
+            "label": {
+              "cell": "C9",
+              "text": "Complex problem characterstics"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "C10",
+              "range": "C10:E10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "593b9ce2f094086bfec1888f1a8160128f7014ab4257e0aaed37674bfb5aee1b",
+              "preview": "[List which chacractersitc(s) ofcomplex engineering problem considered in this a"
+            },
+            "cip_source": null,
+            "data_validation": null,
+            "flags": [
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Heading text of this column is SO-specific. No CIP source exists."
+          },
+          {
+            "field_id": "pi_assessment_justification",
+            "description": "Justification of the assessment selection: how the assessment addresses each PI",
+            "label": {
+              "cell": "F9",
+              "text": "Justification of the assessment selection (mention how it is related the PIs of the SO2)"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "F10",
+              "range": "F10:J10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "6c4dd33ea90f3396fe70df27616fccddc364b94a5d6f494802893d844f8ef3a2",
+              "preview": "[Add brief description for how the assessment addressed each PI. See the example"
+            },
+            "cip_source": null,
+            "data_validation": null,
+            "flags": [
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Template example text (radar project) is guidance to be replaced; it is not a CIP-derived value."
+          }
+        ]
+      },
+      "template_metadata_fields": [],
+      "static_cells": [
+        {
+          "cell": "A4",
+          "range": "A4:E4",
+          "role": "column heading \"SO\"",
+          "text": "SO                                          "
+        },
+        {
+          "cell": "F4",
+          "range": "F4:I4",
+          "role": "column heading \"Mapped PIs\"",
+          "text": "Mapped PIs"
+        },
+        {
+          "cell": "J4",
+          "role": "column heading \"Mapped CLO\"",
+          "text": "Mapped CLO"
+        },
+        {
+          "cell": "A8",
+          "range": "A8:J8",
+          "role": "instruction banner",
+          "text": "Please provide the information below to support the preparation of the Student Outcome assessment report."
+        }
+      ],
+      "unresolved_regions": [
+        {
+          "range": "B3:E3",
+          "merged": true,
+          "content": "empty",
+          "flags": [
+            "QAC-12"
+          ],
+          "note": "Merged empty region between the course rows and the SO table; purpose not stated."
+        },
+        {
+          "range": "A7:J7",
+          "merged": true,
+          "content": "empty",
+          "flags": [
+            "QAC-12"
+          ],
+          "note": "Merged empty row below the SO table that still carries a drop-down (Lookup Tables L1:L8) on A7."
+        }
+      ]
+    },
+    {
+      "template_id": "qac-so2-ver02-group",
+      "so": "SO2",
+      "main_sheet": "Main",
+      "header_fields": [
+        {
+          "field_id": "course_name",
+          "description": "Course title",
+          "label": {
+            "cell": "A1",
+            "text": "Course Name:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C1",
+            "range": "C1:E1",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].course_title",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [],
+          "requirement_rules": [],
+          "notes": null
+        },
+        {
+          "field_id": "course_code",
+          "description": "Course code",
+          "label": {
+            "cell": "A2",
+            "text": "Course Code:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C2",
+            "range": "C2:E2",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].course_code",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [
+            "QAC-18"
+          ],
+          "requirement_rules": [],
+          "notes": "CIP stores codes with a space (\"EE 322\"); the QAC file name uses \"EExxx\". Display format not specified by QAC."
+        },
+        {
+          "field_id": "semester",
+          "description": "Term / semester",
+          "label": {
+            "cell": "F1",
+            "text": "Semester:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "H1",
+            "range": "H1:J1",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee-assessment.json",
+            "path": "active_term",
+            "transform": null,
+            "note": "Default only; the term of the assessment is chosen by the user. Format of the value in this cell is not specified."
+          },
+          "data_validation": null,
+          "flags": [
+            "QAC-18"
+          ],
+          "requirement_rules": [],
+          "notes": null
+        },
+        {
+          "field_id": "instructor",
+          "description": "Instructor name",
+          "label": {
+            "cell": "F2",
+            "text": "Instructor: "
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "H2",
+            "range": "H2:J2",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].instructor",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [],
+          "requirement_rules": [],
+          "notes": "CIP stores one instructor string per course; the user may override it."
+        }
+      ],
+      "so_rows": [
+        {
+          "row": 5,
+          "requirement": "mandatory",
+          "fields": [
+            {
+              "field_id": "so_id_row5",
+              "description": "Student Outcome of this workbook (pre-selected; the workbook is dedicated to one SO)",
+              "label": {
+                "cell": "A4",
+                "text": "SO                                          "
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "A5",
+                "range": "A5",
+                "merged": false
+              },
+              "entry_mode": "selector",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "prefilled",
+                "text_sha256": "49011feef676f14ce6e4c18ed4f68a6c7d3c748cd28606cf30b7a6dc033872a3",
+                "preview": "SO2"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.student_outcomes (key)",
+                "note": "Must equal the workbook SO (SO2). Which SO workbooks a course needs: data/ee-assessment.json -> so_course_selection."
+              },
+              "data_validation": {
+                "type": "list",
+                "source": "'Lookup Tables'!$L$1:$L$7",
+                "sqref": "A5:A6",
+                "extension_element": true
+              },
+              "flags": [
+                "QAC-12"
+              ],
+              "requirement_rules": [],
+              "notes": "Cell comment on the template: \"====== ID#AAABw60pAaI Maged    (2025-12-02 17:57:03) -Select the Assessed SO in the course from the drop list.  -Select the last empty cell from the drop list to avoid selecting an SO\""
+            },
+            {
+              "field_id": "so_statement_row5",
+              "description": "SO statement (QAC lookup, derived)",
+              "label": {
+                "cell": "A4",
+                "text": "SO                                          "
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "B5",
+                "range": "B5:E5",
+                "merged": true
+              },
+              "entry_mode": "workbook_formula",
+              "requirement": "not_applicable",
+              "editable": false,
+              "current_content": {
+                "kind": "formula",
+                "formula": "VLOOKUP(A5,'Lookup Tables'!$L$1:$M$7,2,FALSE)"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.student_outcomes.<SO>.statement",
+                "note": "Reference only. Do not write this cell: it is a VLOOKUP into the hidden Lookup Tables sheet, which holds QAC copies of the SO statements."
+              },
+              "data_validation": null,
+              "flags": [
+                "QAC-15"
+              ],
+              "requirement_rules": [],
+              "notes": null
+            },
+            {
+              "field_id": "mapped_pis_row5",
+              "description": "PIs of the SO selected for assessment and validly mapped to the selected CLOs",
+              "label": {
+                "cell": "F4",
+                "text": "Mapped PIs"
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "F5",
+                "range": "F5:I5",
+                "merged": true
+              },
+              "entry_mode": "cip_derived",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "prefilled",
+                "text_sha256": "873590c169555760494cadeb1273b3ec06fa3f6653d03329a752f407163c0ed6",
+                "preview": "PI21 Apply engineering design to produce a solution that meets specified needs\nP"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.performance_indicators[<PI>].statement for instructor-selected PIs that are in curriculum.courses[course_code == <course>].clos[].pi_codes of selected CLOs mapped to <SO>",
+                "transform": "PI id + statement, one PI per line"
+              },
+              "data_validation": null,
+              "flags": [
+                "QAC-11",
+                "QAC-15"
+              ],
+              "requirement_rules": [
+                "D3"
+              ],
+              "notes": "Template text is static and lists every PI of the SO with inconsistent separators. Generated copies follow decision D3: only instructor-selected, validly mapped PIs, deduplicated across activities; the template text is replaced."
+            },
+            {
+              "field_id": "mapped_clos_row5",
+              "description": "CLOs of the course mapped to the SO and selected for assessment",
+              "label": {
+                "cell": "J4",
+                "text": "Mapped CLO"
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "J5",
+                "range": "J5",
+                "merged": false
+              },
+              "entry_mode": "cip_derived",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "placeholder_guidance",
+                "text_sha256": "d1c51193de7ebe621f0899b7aa2f2710a3eadc8be9f2ea2a647c24b2bc2a85e7",
+                "preview": "Add the CLO mapaped to this SO"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "curriculum.courses[course_code == <course>].clos[] selected, where <SO> in mapped_sos",
+                "transform": "\"<clo_number> <clo_text>\" per CLO"
+              },
+              "data_validation": null,
+              "flags": [],
+              "requirement_rules": [],
+              "notes": null
+            }
+          ]
+        }
+      ],
+      "cleared_rows": [
+        {
+          "row": 6,
+          "decision": "D2",
+          "action": "clear_row",
+          "scope": "Every cell of Main row 6 (A6:J6): contents and formulas, including the B6 VLOOKUP.",
+          "cells_with_template_content": [
+            {
+              "cell": "A6",
+              "range": "A6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "2ad38526efc408439d5aff8a6ffe16968b13221fcb89318acf5d5cf0570320e7",
+                "preview": "SO4"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "B6",
+              "range": "B6:E6",
+              "template_content": {
+                "kind": "formula",
+                "formula": "VLOOKUP(A6,'Lookup Tables'!$L$1:$M$7,2,FALSE)"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "F6",
+              "range": "F6:I6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "e3c59e33f415544ad32360bc014bc045cf75b246af9ff2d3be55ecde984f6d24",
+                "preview": "PI41 Recognize ethical and professional responsibilities in engineering situatio"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "J6",
+              "range": "J6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "39e07c3ba87a9657f54d0013230a998785b6616d7df64efbf64a01afc16fa91e",
+                "preview": "3.1 Recognize the engineering profession and the importance of ethical and legal"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            }
+          ],
+          "precondition": "Verify the template structure first: row 6 holds exactly these cells with these content hashes, row 5 holds the workbook SO.",
+          "preserve": [
+            "merged ranges",
+            "cell styles and row height",
+            "data validation and comments",
+            "all other Main cells",
+            "all other worksheets"
+          ],
+          "package_notes": [
+            "Remove the B6 entry from xl/calcChain.xml when that part exists (otherwise Excel reports a corrupt calc chain).",
+            "Shared-string entries made unused by the clearing may remain."
+          ],
+          "rationale": "Each QAC workbook is dedicated to one Student Outcome; the pre-filled SO4 row is an error."
+        }
+      ],
+      "assessment_block": {
+        "row": 10,
+        "column_headings": {
+          "instruments": {
+            "cell": "A9",
+            "text": "Assessment type"
+          },
+          "context": {
+            "cell": "C9",
+            "text": "Design factors"
+          },
+          "justification": {
+            "cell": "F9",
+            "text": "Justification of the assessment selection (mention how it is related the PIs of the SO2)"
+          }
+        },
+        "capacity": "One row only (row 10, height 409.5 pt in the template); all assessment activities for the SO (at most five per session in total, decision D1) share these three cells.",
+        "max_activities_per_session": 5,
+        "fields": [
+          {
+            "field_id": "assessment_instruments",
+            "description": "All assessment instruments used for this SO, stating which are team-based and which individual",
+            "label": {
+              "cell": "A9",
+              "text": "Assessment type"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "A10",
+              "range": "A10:B10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "57ff78475190cc1f309ad1f41acd2e4f17d8170145936f8159614f110f90e1c0",
+              "preview": "[List all assessment instruments used to assess the students for this SO. Mentio"
+            },
+            "cip_source": {
+              "file": "data/ee_curriculum.json",
+              "path": "curriculum.courses[course_code == <course>].clos[].assessment_methods",
+              "note": "Approved assessment methods constrain which instruments may be listed; the descriptive text is instructor-written."
+            },
+            "data_validation": null,
+            "flags": [
+              "QAC-08",
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Individual/Group classification has no discrete cell; it is expressed inside this free-text cell (and the template examples use \"Team based:\" / \"individual assessment:\" headings)."
+          },
+          {
+            "field_id": "design_factors",
+            "description": "Design factors actually addressed by students in the project(s)",
+            "label": {
+              "cell": "C9",
+              "text": "Design factors"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "C10",
+              "range": "C10:E10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "fb777e7158bc3fade9a2b8e7bc6d0da43b7ddc48e9d68dcbe113f75b39b0abbb",
+              "preview": "[List all relevant design factors considered by the students in the project. Inc"
+            },
+            "cip_source": null,
+            "data_validation": null,
+            "flags": [
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Heading text of this column is SO-specific. No CIP source exists."
+          },
+          {
+            "field_id": "pi_assessment_justification",
+            "description": "Justification of the assessment selection: how the assessment addresses each PI",
+            "label": {
+              "cell": "F9",
+              "text": "Justification of the assessment selection (mention how it is related the PIs of the SO2)"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "F10",
+              "range": "F10:J10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "828ae0b70c6c19ef04930bed1d33a3041179921e11566ef028ae7f78661864b0",
+              "preview": "[Add brief description for how the assessment addressed each PI. See the example"
+            },
+            "cip_source": null,
+            "data_validation": null,
+            "flags": [
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Template example text (radar project) is guidance to be replaced; it is not a CIP-derived value."
+          }
+        ]
+      },
+      "template_metadata_fields": [
+        {
+          "field_id": "template_version",
+          "description": "Template version as declared on Main",
+          "label": {
+            "cell": "A11",
+            "text": "Verion"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C11",
+            "range": "C11",
+            "merged": false
+          },
+          "entry_mode": "template_metadata",
+          "requirement": "not_applicable",
+          "editable": false,
+          "current_content": {
+            "kind": "prefilled",
+            "text_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+            "preview": "2"
+          },
+          "cip_source": null,
+          "data_validation": null,
+          "flags": [
+            "QAC-06"
+          ],
+          "requirement_rules": [],
+          "notes": "Maintained by QAC. Not an instructor input."
+        },
+        {
+          "field_id": "template_date_of_update",
+          "description": "Date of update as declared on Main",
+          "label": {
+            "cell": "A12",
+            "text": "Date of update"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C12",
+            "range": "C12",
+            "merged": false
+          },
+          "entry_mode": "template_metadata",
+          "requirement": "not_applicable",
+          "editable": false,
+          "current_content": {
+            "kind": "prefilled",
+            "text_sha256": "7c900145712e2ed004e5bbd75d2b07047906eb5599ba2a355edefbec52518ad2",
+            "preview": "47024"
+          },
+          "cip_source": null,
+          "data_validation": null,
+          "flags": [
+            "QAC-06"
+          ],
+          "requirement_rules": [],
+          "notes": "Maintained by QAC; stored value is a serial date in the year 2028."
+        }
+      ],
+      "static_cells": [
+        {
+          "cell": "A4",
+          "range": "A4:E4",
+          "role": "column heading \"SO\"",
+          "text": "SO                                          "
+        },
+        {
+          "cell": "F4",
+          "range": "F4:I4",
+          "role": "column heading \"Mapped PIs\"",
+          "text": "Mapped PIs"
+        },
+        {
+          "cell": "J4",
+          "role": "column heading \"Mapped CLO\"",
+          "text": "Mapped CLO"
+        },
+        {
+          "cell": "A8",
+          "range": "A8:J8",
+          "role": "instruction banner",
+          "text": "Please provide the information below to support the preparation of the Student Outcome assessment report."
+        }
+      ],
+      "unresolved_regions": [
+        {
+          "range": "B3:E3",
+          "merged": true,
+          "content": "empty",
+          "flags": [
+            "QAC-12"
+          ],
+          "note": "Merged empty region between the course rows and the SO table; purpose not stated."
+        },
+        {
+          "range": "A7:J7",
+          "merged": true,
+          "content": "empty",
+          "flags": [
+            "QAC-12"
+          ],
+          "note": "Merged empty row below the SO table that still carries a drop-down (Lookup Tables L1:L8) on A7."
+        }
+      ]
+    },
+    {
+      "template_id": "qac-so3-ver01",
+      "so": "SO3",
+      "main_sheet": "Main",
+      "header_fields": [
+        {
+          "field_id": "course_name",
+          "description": "Course title",
+          "label": {
+            "cell": "A1",
+            "text": "Course Name:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C1",
+            "range": "C1:E1",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].course_title",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [],
+          "requirement_rules": [],
+          "notes": null
+        },
+        {
+          "field_id": "course_code",
+          "description": "Course code",
+          "label": {
+            "cell": "A2",
+            "text": "Course Code:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C2",
+            "range": "C2:E2",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].course_code",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [
+            "QAC-18"
+          ],
+          "requirement_rules": [],
+          "notes": "CIP stores codes with a space (\"EE 322\"); the QAC file name uses \"EExxx\". Display format not specified by QAC."
+        },
+        {
+          "field_id": "semester",
+          "description": "Term / semester",
+          "label": {
+            "cell": "F1",
+            "text": "Semester: "
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "H1",
+            "range": "H1:J1",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee-assessment.json",
+            "path": "active_term",
+            "transform": null,
+            "note": "Default only; the term of the assessment is chosen by the user. Format of the value in this cell is not specified."
+          },
+          "data_validation": null,
+          "flags": [
+            "QAC-18"
+          ],
+          "requirement_rules": [],
+          "notes": null
+        },
+        {
+          "field_id": "instructor",
+          "description": "Instructor name",
+          "label": {
+            "cell": "F2",
+            "text": "Instructor: "
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "H2",
+            "range": "H2:J2",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].instructor",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [],
+          "requirement_rules": [],
+          "notes": "CIP stores one instructor string per course; the user may override it."
+        }
+      ],
+      "so_rows": [
+        {
+          "row": 5,
+          "requirement": "mandatory",
+          "fields": [
+            {
+              "field_id": "so_id_row5",
+              "description": "Student Outcome of this workbook (pre-selected; the workbook is dedicated to one SO)",
+              "label": {
+                "cell": "A4",
+                "text": "SO                                          "
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "A5",
+                "range": "A5",
+                "merged": false
+              },
+              "entry_mode": "selector",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "prefilled",
+                "text_sha256": "00a8bf3a5589efab581bd4594effcb001b76f60c240ee4a8a91dc50a45541a84",
+                "preview": "SO3"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.student_outcomes (key)",
+                "note": "Must equal the workbook SO (SO3). Which SO workbooks a course needs: data/ee-assessment.json -> so_course_selection."
+              },
+              "data_validation": {
+                "type": "list",
+                "source": "'Lookup Tables'!$L$1:$L$7",
+                "sqref": "A5:A6",
+                "extension_element": false
+              },
+              "flags": [
+                "QAC-12"
+              ],
+              "requirement_rules": [],
+              "notes": "Cell comment on the template: \"====== ID#AAABw60pAaI Maged    (2025-12-02 17:57:03) -Select the Assessed SO in the course from the drop list.  -Select the last empty cell from the drop list to avoid selecting an SO\""
+            },
+            {
+              "field_id": "so_statement_row5",
+              "description": "SO statement (QAC lookup, derived)",
+              "label": {
+                "cell": "A4",
+                "text": "SO                                          "
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "B5",
+                "range": "B5:E5",
+                "merged": true
+              },
+              "entry_mode": "workbook_formula",
+              "requirement": "not_applicable",
+              "editable": false,
+              "current_content": {
+                "kind": "formula",
+                "formula": "VLOOKUP(A5,'Lookup Tables'!$L$1:$M$7,2,FALSE)"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.student_outcomes.<SO>.statement",
+                "note": "Reference only. Do not write this cell: it is a VLOOKUP into the hidden Lookup Tables sheet, which holds QAC copies of the SO statements."
+              },
+              "data_validation": null,
+              "flags": [
+                "QAC-15"
+              ],
+              "requirement_rules": [],
+              "notes": null
+            },
+            {
+              "field_id": "mapped_pis_row5",
+              "description": "PIs of the SO selected for assessment and validly mapped to the selected CLOs",
+              "label": {
+                "cell": "F4",
+                "text": "Mapped PIs"
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "F5",
+                "range": "F5:I5",
+                "merged": true
+              },
+              "entry_mode": "cip_derived",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "prefilled",
+                "text_sha256": "1cb2ed12d78a056a350b972fc7c9e677420a7f467fe3af2d7c3be08cdfef07b3",
+                "preview": "PI31 – Communicate engineering information using appropriate technical content.\n"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.performance_indicators[<PI>].statement for instructor-selected PIs that are in curriculum.courses[course_code == <course>].clos[].pi_codes of selected CLOs mapped to <SO>",
+                "transform": "PI id + statement, one PI per line"
+              },
+              "data_validation": null,
+              "flags": [
+                "QAC-11",
+                "QAC-15"
+              ],
+              "requirement_rules": [
+                "D3"
+              ],
+              "notes": "Template text is static and lists every PI of the SO with inconsistent separators. Generated copies follow decision D3: only instructor-selected, validly mapped PIs, deduplicated across activities; the template text is replaced."
+            },
+            {
+              "field_id": "mapped_clos_row5",
+              "description": "CLOs of the course mapped to the SO and selected for assessment",
+              "label": {
+                "cell": "J4",
+                "text": "Mapped CLO"
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "J5",
+                "range": "J5",
+                "merged": false
+              },
+              "entry_mode": "cip_derived",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "placeholder_guidance",
+                "text_sha256": "d1c51193de7ebe621f0899b7aa2f2710a3eadc8be9f2ea2a647c24b2bc2a85e7",
+                "preview": "Add the CLO mapaped to this SO"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "curriculum.courses[course_code == <course>].clos[] selected, where <SO> in mapped_sos",
+                "transform": "\"<clo_number> <clo_text>\" per CLO"
+              },
+              "data_validation": null,
+              "flags": [],
+              "requirement_rules": [],
+              "notes": null
+            }
+          ]
+        }
+      ],
+      "cleared_rows": [
+        {
+          "row": 6,
+          "decision": "D2",
+          "action": "clear_row",
+          "scope": "Every cell of Main row 6 (A6:J6): contents and formulas, including the B6 VLOOKUP.",
+          "cells_with_template_content": [
+            {
+              "cell": "A6",
+              "range": "A6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "2ad38526efc408439d5aff8a6ffe16968b13221fcb89318acf5d5cf0570320e7",
+                "preview": "SO4"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "B6",
+              "range": "B6:E6",
+              "template_content": {
+                "kind": "formula",
+                "formula": "VLOOKUP(A6,'Lookup Tables'!$L$1:$M$7,2,FALSE)"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "F6",
+              "range": "F6:I6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "e3c59e33f415544ad32360bc014bc045cf75b246af9ff2d3be55ecde984f6d24",
+                "preview": "PI41 Recognize ethical and professional responsibilities in engineering situatio"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "J6",
+              "range": "J6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "39e07c3ba87a9657f54d0013230a998785b6616d7df64efbf64a01afc16fa91e",
+                "preview": "3.1 Recognize the engineering profession and the importance of ethical and legal"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            }
+          ],
+          "precondition": "Verify the template structure first: row 6 holds exactly these cells with these content hashes, row 5 holds the workbook SO.",
+          "preserve": [
+            "merged ranges",
+            "cell styles and row height",
+            "data validation and comments",
+            "all other Main cells",
+            "all other worksheets"
+          ],
+          "package_notes": [
+            "Remove the B6 entry from xl/calcChain.xml when that part exists (otherwise Excel reports a corrupt calc chain).",
+            "Shared-string entries made unused by the clearing may remain."
+          ],
+          "rationale": "Each QAC workbook is dedicated to one Student Outcome; the pre-filled SO4 row is an error."
+        }
+      ],
+      "assessment_block": {
+        "row": 10,
+        "column_headings": {
+          "instruments": {
+            "cell": "A9",
+            "text": "Assessment type"
+          },
+          "context": {
+            "cell": "C9",
+            "text": "mention the audience"
+          },
+          "justification": {
+            "cell": "F9",
+            "text": "Justification of the assessment selection (mention how it is related the PIs of the SO3)"
+          }
+        },
+        "capacity": "One row only (row 10, height 409.5 pt in the template); all assessment activities for the SO (at most five per session in total, decision D1) share these three cells.",
+        "max_activities_per_session": 5,
+        "fields": [
+          {
+            "field_id": "assessment_instruments",
+            "description": "All assessment instruments used for this SO, stating which are team-based and which individual",
+            "label": {
+              "cell": "A9",
+              "text": "Assessment type"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "A10",
+              "range": "A10:B10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "9876fc8e2f3c6e672cf7967d313c916e3fc1f3b73088c0fc852f36d886dedb5a",
+              "preview": "[List all assessment instruments used to assess the students for this SO. Mentio"
+            },
+            "cip_source": {
+              "file": "data/ee_curriculum.json",
+              "path": "curriculum.courses[course_code == <course>].clos[].assessment_methods",
+              "note": "Approved assessment methods constrain which instruments may be listed; the descriptive text is instructor-written."
+            },
+            "data_validation": null,
+            "flags": [
+              "QAC-08",
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Individual/Group classification has no discrete cell; it is expressed inside this free-text cell (and the template examples use \"Team based:\" / \"individual assessment:\" headings)."
+          },
+          {
+            "field_id": "audience",
+            "description": "Audience of the communication assessment",
+            "label": {
+              "cell": "C9",
+              "text": "mention the audience"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "C10",
+              "range": "C10:E10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "29fe5fff5accad6ea31a43a7d5d948581c1e137fbd2fd3bcee1093695bf30c53",
+              "preview": "[who is the audience. Select from the list below or add ]. \ne.g., \n•Electrical e"
+            },
+            "cip_source": null,
+            "data_validation": null,
+            "flags": [
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Heading text of this column is SO-specific. No CIP source exists."
+          },
+          {
+            "field_id": "pi_assessment_justification",
+            "description": "Justification of the assessment selection: how the assessment addresses each PI",
+            "label": {
+              "cell": "F9",
+              "text": "Justification of the assessment selection (mention how it is related the PIs of the SO3)"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "F10",
+              "range": "F10:J10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "1416d354b5e7edce4b1ae8698b60bf7b6d47bc1fae7f0fdd59856a9c6adcf134",
+              "preview": "[Add brief description for how the assessment addressed each PI. See the example"
+            },
+            "cip_source": null,
+            "data_validation": null,
+            "flags": [
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Template example text (radar project) is guidance to be replaced; it is not a CIP-derived value."
+          }
+        ]
+      },
+      "template_metadata_fields": [],
+      "static_cells": [
+        {
+          "cell": "A4",
+          "range": "A4:E4",
+          "role": "column heading \"SO\"",
+          "text": "SO                                          "
+        },
+        {
+          "cell": "F4",
+          "range": "F4:I4",
+          "role": "column heading \"Mapped PIs\"",
+          "text": "Mapped PIs"
+        },
+        {
+          "cell": "J4",
+          "role": "column heading \"Mapped CLO\"",
+          "text": "Mapped CLO"
+        },
+        {
+          "cell": "A8",
+          "range": "A8:J8",
+          "role": "instruction banner",
+          "text": "Please provide the information below to support the preparation of the Student Outcome assessment report."
+        }
+      ],
+      "unresolved_regions": [
+        {
+          "range": "B3:E3",
+          "merged": true,
+          "content": "empty",
+          "flags": [
+            "QAC-12"
+          ],
+          "note": "Merged empty region between the course rows and the SO table; purpose not stated."
+        },
+        {
+          "range": "A7:J7",
+          "merged": true,
+          "content": "empty",
+          "flags": [
+            "QAC-12"
+          ],
+          "note": "Merged empty row below the SO table that still carries a drop-down (Lookup Tables L1:L8) on A7."
+        }
+      ]
+    },
+    {
+      "template_id": "qac-so4-ver02",
+      "so": "SO4",
+      "main_sheet": "Main",
+      "header_fields": [
+        {
+          "field_id": "course_name",
+          "description": "Course title",
+          "label": {
+            "cell": "A1",
+            "text": "Course Name:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C1",
+            "range": "C1:E1",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].course_title",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [],
+          "requirement_rules": [],
+          "notes": null
+        },
+        {
+          "field_id": "course_code",
+          "description": "Course code",
+          "label": {
+            "cell": "A2",
+            "text": "Course Code:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "C2",
+            "range": "C2:E2",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].course_code",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [
+            "QAC-18"
+          ],
+          "requirement_rules": [],
+          "notes": "CIP stores codes with a space (\"EE 322\"); the QAC file name uses \"EExxx\". Display format not specified by QAC."
+        },
+        {
+          "field_id": "semester",
+          "description": "Term / semester",
+          "label": {
+            "cell": "F1",
+            "text": "Semester:"
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "H1",
+            "range": "H1:J1",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee-assessment.json",
+            "path": "active_term",
+            "transform": null,
+            "note": "Default only; the term of the assessment is chosen by the user. Format of the value in this cell is not specified."
+          },
+          "data_validation": null,
+          "flags": [
+            "QAC-18"
+          ],
+          "requirement_rules": [],
+          "notes": null
+        },
+        {
+          "field_id": "instructor",
+          "description": "Instructor name",
+          "label": {
+            "cell": "F2",
+            "text": "Instructor: "
+          },
+          "target": {
+            "sheet": "Main",
+            "anchor": "H2",
+            "range": "H2:J2",
+            "merged": true
+          },
+          "entry_mode": "cip_derived",
+          "requirement": "mandatory",
+          "editable": true,
+          "current_content": {
+            "kind": "empty"
+          },
+          "cip_source": {
+            "file": "data/ee_curriculum.json",
+            "path": "curriculum.courses[course_code == <course>].instructor",
+            "transform": null
+          },
+          "data_validation": null,
+          "flags": [],
+          "requirement_rules": [],
+          "notes": "CIP stores one instructor string per course; the user may override it."
+        }
+      ],
+      "so_rows": [
+        {
+          "row": 5,
+          "requirement": "mandatory",
+          "fields": [
+            {
+              "field_id": "so_id_row5",
+              "description": "Student Outcome of this workbook (pre-selected; the workbook is dedicated to one SO)",
+              "label": {
+                "cell": "A4",
+                "text": "SO                                          "
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "A5",
+                "range": "A5",
+                "merged": false
+              },
+              "entry_mode": "selector",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "prefilled",
+                "text_sha256": "2ad38526efc408439d5aff8a6ffe16968b13221fcb89318acf5d5cf0570320e7",
+                "preview": "SO4"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.student_outcomes (key)",
+                "note": "Must equal the workbook SO (SO4). Which SO workbooks a course needs: data/ee-assessment.json -> so_course_selection."
+              },
+              "data_validation": {
+                "type": "list",
+                "source": "'Lookup Tables'!$L$1:$L$7",
+                "sqref": "A5:A6",
+                "extension_element": true
+              },
+              "flags": [
+                "QAC-12"
+              ],
+              "requirement_rules": [],
+              "notes": "Cell comment on the template: \"====== ID#AAABw60pAaI Maged    (2025-12-02 17:57:03) -Select the Assessed SO in the course from the drop list.  -Select the last empty cell from the drop list to avoid selecting an SO\""
+            },
+            {
+              "field_id": "so_statement_row5",
+              "description": "SO statement (QAC lookup, derived)",
+              "label": {
+                "cell": "A4",
+                "text": "SO                                          "
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "B5",
+                "range": "B5:E5",
+                "merged": true
+              },
+              "entry_mode": "workbook_formula",
+              "requirement": "not_applicable",
+              "editable": false,
+              "current_content": {
+                "kind": "formula",
+                "formula": "VLOOKUP(A5,'Lookup Tables'!$L$1:$M$7,2,FALSE)"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.student_outcomes.<SO>.statement",
+                "note": "Reference only. Do not write this cell: it is a VLOOKUP into the hidden Lookup Tables sheet, which holds QAC copies of the SO statements."
+              },
+              "data_validation": null,
+              "flags": [
+                "QAC-15"
+              ],
+              "requirement_rules": [],
+              "notes": null
+            },
+            {
+              "field_id": "mapped_pis_row5",
+              "description": "PIs of the SO selected for assessment and validly mapped to the selected CLOs",
+              "label": {
+                "cell": "F4",
+                "text": "Mapped PIs"
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "F5",
+                "range": "F5:I5",
+                "merged": true
+              },
+              "entry_mode": "cip_derived",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "prefilled",
+                "text_sha256": "13e331cf813c6b7542acc0258445ef8c0ef8ee8c7247cac5059d3465ba0ffc68",
+                "preview": "PI41. Recognize ethical and professional responsibilities in engineering situati"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "abet.performance_indicators[<PI>].statement for instructor-selected PIs that are in curriculum.courses[course_code == <course>].clos[].pi_codes of selected CLOs mapped to <SO>",
+                "transform": "PI id + statement, one PI per line"
+              },
+              "data_validation": null,
+              "flags": [
+                "QAC-11",
+                "QAC-15"
+              ],
+              "requirement_rules": [
+                "D3"
+              ],
+              "notes": "Template text is static and lists every PI of the SO with inconsistent separators. Generated copies follow decision D3: only instructor-selected, validly mapped PIs, deduplicated across activities; the template text is replaced."
+            },
+            {
+              "field_id": "mapped_clos_row5",
+              "description": "CLOs of the course mapped to the SO and selected for assessment",
+              "label": {
+                "cell": "J4",
+                "text": "Mapped CLO"
+              },
+              "target": {
+                "sheet": "Main",
+                "anchor": "J5",
+                "range": "J5",
+                "merged": false
+              },
+              "entry_mode": "cip_derived",
+              "requirement": "mandatory",
+              "editable": true,
+              "current_content": {
+                "kind": "placeholder_guidance",
+                "text_sha256": "d1c51193de7ebe621f0899b7aa2f2710a3eadc8be9f2ea2a647c24b2bc2a85e7",
+                "preview": "Add the CLO mapaped to this SO"
+              },
+              "cip_source": {
+                "file": "data/ee_curriculum.json",
+                "path": "curriculum.courses[course_code == <course>].clos[] selected, where <SO> in mapped_sos",
+                "transform": "\"<clo_number> <clo_text>\" per CLO"
+              },
+              "data_validation": null,
+              "flags": [],
+              "requirement_rules": [],
+              "notes": null
+            }
+          ]
+        }
+      ],
+      "cleared_rows": [
+        {
+          "row": 6,
+          "decision": "D2",
+          "action": "clear_row",
+          "scope": "Every cell of Main row 6 (A6:J6): contents and formulas, including the B6 VLOOKUP.",
+          "cells_with_template_content": [
+            {
+              "cell": "A6",
+              "range": "A6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "2ad38526efc408439d5aff8a6ffe16968b13221fcb89318acf5d5cf0570320e7",
+                "preview": "SO4"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "B6",
+              "range": "B6:E6",
+              "template_content": {
+                "kind": "formula",
+                "formula": "VLOOKUP(A6,'Lookup Tables'!$L$1:$M$7,2,FALSE)"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "F6",
+              "range": "F6:I6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "e3c59e33f415544ad32360bc014bc045cf75b246af9ff2d3be55ecde984f6d24",
+                "preview": "PI41 Recognize ethical and professional responsibilities in engineering situatio"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            },
+            {
+              "cell": "J6",
+              "range": "J6",
+              "template_content": {
+                "kind": "prefilled",
+                "text_sha256": "39e07c3ba87a9657f54d0013230a998785b6616d7df64efbf64a01afc16fa91e",
+                "preview": "3.1 Recognize the engineering profession and the importance of ethical and legal"
+              },
+              "clear": "cell value and formula; keep the cell style and merged range"
+            }
+          ],
+          "precondition": "Verify the template structure first: row 6 holds exactly these cells with these content hashes, row 5 holds the workbook SO.",
+          "preserve": [
+            "merged ranges",
+            "cell styles and row height",
+            "data validation and comments",
+            "all other Main cells",
+            "all other worksheets"
+          ],
+          "package_notes": [
+            "Remove the B6 entry from xl/calcChain.xml when that part exists (otherwise Excel reports a corrupt calc chain).",
+            "Shared-string entries made unused by the clearing may remain."
+          ],
+          "rationale": "Each QAC workbook is dedicated to one Student Outcome; the pre-filled SO4 row is an error."
+        }
+      ],
+      "assessment_block": {
+        "row": 10,
+        "column_headings": {
+          "instruments": {
+            "cell": "A9",
+            "text": "Assessment Method and Evidence Source"
+          },
+          "context": {
+            "cell": "C9",
+            "text": "Relevant SO4 Considerations"
+          },
+          "justification": {
+            "cell": "F9",
+            "text": "Explain how the assessment addresses each PI "
+          }
+        },
+        "capacity": "One row only (row 10, height 409.5 pt in the template); all assessment activities for the SO (at most five per session in total, decision D1) share these three cells.",
+        "max_activities_per_session": 5,
+        "fields": [
+          {
+            "field_id": "assessment_instruments",
+            "description": "All assessment instruments used for this SO, stating which are team-based and which individual",
+            "label": {
+              "cell": "A9",
+              "text": "Assessment Method and Evidence Source"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "A10",
+              "range": "A10:B10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "ba3dea57a6a546441a915d667867ce764a936850e462c9dfdbfc290456988981",
+              "preview": "List all SO4 assessment instruments and indicate whether each provides team-base"
+            },
+            "cip_source": {
+              "file": "data/ee_curriculum.json",
+              "path": "curriculum.courses[course_code == <course>].clos[].assessment_methods",
+              "note": "Approved assessment methods constrain which instruments may be listed; the descriptive text is instructor-written."
+            },
+            "data_validation": null,
+            "flags": [
+              "QAC-08",
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Individual/Group classification has no discrete cell; it is expressed inside this free-text cell (and the template examples use \"Team based:\" / \"individual assessment:\" headings)."
+          },
+          {
+            "field_id": "so4_considerations",
+            "description": "Global/societal/economic/environmental contexts considered in the assessment",
+            "label": {
+              "cell": "C9",
+              "text": "Relevant SO4 Considerations"
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "C10",
+              "range": "C10:E10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "e4bb097353e5aaea8d4fc7741c2d00d9c233179f47a2fde6d52feb2a8b0be63a",
+              "preview": "[List all relevant contexts (considerations) that will be considered in the asse"
+            },
+            "cip_source": null,
+            "data_validation": null,
+            "flags": [
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Heading text of this column is SO-specific. No CIP source exists."
+          },
+          {
+            "field_id": "pi_assessment_justification",
+            "description": "Justification of the assessment selection: how the assessment addresses each PI",
+            "label": {
+              "cell": "F9",
+              "text": "Explain how the assessment addresses each PI "
+            },
+            "target": {
+              "sheet": "Main",
+              "anchor": "F10",
+              "range": "F10:J10",
+              "merged": true
+            },
+            "entry_mode": "instructor_entry",
+            "requirement": "mandatory",
+            "editable": true,
+            "current_content": {
+              "kind": "placeholder_guidance",
+              "text_sha256": "33eb302477aca827e50c5e3655bc66be41b739e37392ee287bf986dccb62a33f",
+              "preview": "[Add brief description for how the assessment addressed each PI. See the example"
+            },
+            "cip_source": null,
+            "data_validation": null,
+            "flags": [
+              "QAC-13",
+              "QAC-14"
+            ],
+            "requirement_rules": [],
+            "notes": "Template example text (radar project) is guidance to be replaced; it is not a CIP-derived value."
+          }
+        ]
+      },
+      "template_metadata_fields": [],
+      "static_cells": [
+        {
+          "cell": "A4",
+          "range": "A4:E4",
+          "role": "column heading \"SO\"",
+          "text": "SO                                          "
+        },
+        {
+          "cell": "F4",
+          "range": "F4:I4",
+          "role": "column heading \"Mapped PIs\"",
+          "text": "Mapped PIs"
+        },
+        {
+          "cell": "J4",
+          "role": "column heading \"Mapped CLO\"",
+          "text": "Mapped CLO"
+        },
+        {
+          "cell": "A8",
+          "range": "A8:J8",
+          "role": "instruction banner",
+          "text": "Please provide the information below to support the preparation of the Student Outcome assessment report."
+        }
+      ],
+      "unresolved_regions": [
+        {
+          "range": "B3:E3",
+          "merged": true,
+          "content": "empty",
+          "flags": [
+            "QAC-12"
+          ],
+          "note": "Merged empty region between the course rows and the SO table; purpose not stated."
+        },
+        {
+          "range": "A7:J7",
+          "merged": true,
+          "content": "empty",
+          "flags": [
+            "QAC-12"
+          ],
+          "note": "Merged empty row below the SO table that still carries a drop-down (Lookup Tables L1:L8) on A7."
+        }
+      ]
+    }
+  ]
+}

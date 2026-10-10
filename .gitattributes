@@ -1,3 +1,5 @@
 # Preserve the LF bytes required by these vendored assets' SRI hashes.
 /assets/vendor/jspdf.umd.min.js text eol=lf
 /assets/vendor/jspdf.plugin.autotable.min.js text eol=lf
+# QAC workbooks must stay byte-identical to the supplied originals.
+/templates/qac-so-assessment/** -text -diff

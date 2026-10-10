@@ -688,8 +688,8 @@
         "experimentation",
         "design"
       ],
-      "demonstrates": "the student conveys engineering information that is relevant, accurate and sufficient for the purpose",
-      "relationship": "PI31 is the substance half of SO3: correct and complete technical content, independently of how well it is delivered.",
+      "demonstrates": "the student communicates engineering information using appropriate technical content",
+      "relationship": "PI31 is the substance half of SO3: engineering information conveyed with appropriate technical content, independently of how well it is delivered.",
       "primary_artifacts": [
         "written_report",
         "oral_presentation"
@@ -704,10 +704,10 @@
         "Keep the graded communication artifact, not only the mark, as the evidence record."
       ],
       "rubric_criteria": [
-        "Presents technically accurate engineering information.",
-        "Includes the information the audience needs, without material omissions or padding."
+        "Includes the essential engineering information, with appropriate technical content.",
+        "Explains key concepts and results with sufficient technical detail and supporting evidence."
       ],
-      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the content-accuracy and sufficiency criterion.",
+      "attainment_methodology": "Percentage of assessed students meeting the defined rubric level on the appropriate-technical-content criterion.",
       "evidence_note": "This indicator carries an ABET rubric in the program framework."
     },
     "PI32": {
